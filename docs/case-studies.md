@@ -1,6 +1,6 @@
 Across three complete cohorts, plain rewriting lowered GPTZero's displayed AI confidence in **0 of 15 answers**. Across the two cohorts that also compared each fixed answer with one relevant asker quotation, confidence decreased in **5 of 10 comparisons**. These are observed counts from small convenience samples, not a validated success rate. Every unchanged result remains in the [results dataset](../studies/results.json).
 
-Evidence-first Writing packages this experimental workflow as `discussion-answer-polish`. The cases below document what happened during development on September 5–6, 2026. They do not establish that the current skill reliably lowers detector scores.
+Anti-Detection Writing Skill packages the workflow as `anti-detection-writing`. The development studies used its earlier, discussion-focused form, `discussion-answer-polish`. The cases below document what happened during development on September 5–6, 2026. They do not establish that the current skill reliably lowers detector scores.
 
 | Complete cohort | Plain revisions with lower AI confidence | Fixed-body quotation comparisons with lower AI confidence |
 | --- | --- | --- |

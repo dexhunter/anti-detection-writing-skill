@@ -8,7 +8,7 @@ Checked September 6, 2026. These checks assess packaging and saved evidence cons
 | Fixed-body comparisons | All ten quoted inputs retain their plain answer body exactly |
 | Offline Python tests | 20 passed, including corrupted text, stale UI, mismatched scores, unsafe artifact paths, omitted failures, optional thresholds, and command-line exit codes |
 | Skill structure | Skill-creator validator passed |
-| CLI discovery | `skills` 1.5.23 discovered exactly `discussion-answer-polish` |
+| CLI discovery | `skills` 1.5.23 discovered exactly `anti-detection-writing` after the publication rename |
 | Isolated project installation | Copy installation for Codex succeeded; all six packaged skill files present |
 | Local documentation links | No missing file targets |
 | Public export hygiene | No detected personal filesystem paths, detector document URLs, or token/private-key patterns; documentation independently reviewed for private data |
@@ -21,3 +21,7 @@ A separate writer agent followed the packaged skill on one synthetic email-retry
 The larger historical study received a separate LLM audit of its raw saved evidence. That audit confirmed the primary counts and the distinction between legacy editor capture and later submitted-text records. It did not rerun GPTZero or supply independent human ratings. Raw private audit files are not included in this public package.
 
 The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) adds 18 exact prepared Markdown files, whose hashes and protected spans were checked separately. All twelve candidate answers passed blind technical review; clarity preference was revised 2, current 1, equivalent 3. The skill structure validator and lint passed after the two instruction additions. Its detector measurements remain unrun, and the earlier 44 scan records are unchanged.
+
+Before publication as `anti-detection-writing-skill`, the packaged skill was renamed to `anti-detection-writing` and its wording broadened to replies, emails, articles, and documentation. The 20 tests, evidence checker, skill validator, and Ruff passed again. An isolated project copy installation with `skills` 1.5.23 for Codex discovered one skill and matched all six packaged files byte-for-byte. A separate publication reviewer checked the repository and its two prior commits for private material, reconciled the saved evidence, and found no publication blockers.
+
+A fresh writer followed the renamed skill to edit a synthetic workshop email. It preserved the room change and reason, both session times, the entrance instructions, the no-action condition for existing bookings, and the Thursday step-free-access deadline. The coordinator checked the result against those supplied facts. No detector scan ran. This is one behavior check for a general writing format, not a readability benchmark or evidence of lower detector scores. Historical study inputs, scores, and frozen skill versions remain unchanged.

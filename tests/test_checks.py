@@ -20,7 +20,7 @@ def load(name, path):
     return module
 
 
-receipt_checker = load("receipt_checker", ROOT / "skills/discussion-answer-polish/scripts/validate_receipt.py")
+receipt_checker = load("receipt_checker", ROOT / "skills/anti-detection-writing/scripts/validate_receipt.py")
 study_checker = load("study_checker", ROOT / "scripts/check_studies.py")
 
 
@@ -62,7 +62,7 @@ class ReceiptChecks(unittest.TestCase):
 
     def test_cli_returns_distinct_consistency_and_threshold_outcomes(self):
         self.check()
-        command = [sys.executable, str(ROOT / "skills/discussion-answer-polish/scripts/validate_receipt.py"),
+        command = [sys.executable, str(ROOT / "skills/anti-detection-writing/scripts/validate_receipt.py"),
                    str(self.answer), str(self.receipt_path)]
         result = subprocess.run(command, capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, 0, result.stderr)

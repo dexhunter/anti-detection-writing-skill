@@ -1,0 +1,10 @@
+TLS uses the configured `connect` timeout separately from TCP connection establishment. In httpcore 1.0.9, each operation receives the full value, so total setup can exceed it. Configured connection retries can add more time.
+
+DNS behavior depends on the network backend:
+
+- The [AnyIO backend](https://github.com/encode/httpcore/blob/1.0.9/httpcore/_backends/anyio.py) wraps its connection operation, including resolution, in `anyio.fail_after(timeout)`. This bounds the async operation's wait without promising to stop every underlying resolver activity.
+- The synchronous backend uses `socket.create_connection()`. CPython resolves the hostname before applying the socket timeout to connection attempts, so that setting does not reliably bound a blocking resolver.
+
+Custom backends can differ too. HTTPX exposes no separate DNS timeout in its [timeout configuration](https://www.python-httpx.org/advanced/timeouts/). An overall deadline must account for the chosen backend and every setup stage; the connect value is not one shared end-to-end timer.
+
+These behaviors were inspected in source, without measuring a stalled DNS server or TLS handshake.

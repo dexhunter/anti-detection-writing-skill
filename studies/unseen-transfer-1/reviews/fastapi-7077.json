@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "revised": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "36051d2812a6ebb7aa64237ac4368e113513d68b27f7ae7738c3c184d7747508",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Needs a separate diagnosis retains the draft\u2019s refusal to assign an unsupported cause to the later follow-up."
+      ]
+    },
+    "current": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "1e3da82fd839f68cdae35551396dbf6a64be8b64a155e4e578f2771eb264b170",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Before assigning a cause is explicit; the same diagnostic boundary is clear in X."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "equivalent",
+    "reason": "Both lead with the same response-object fix, immediately show the identical code, and clearly separate the later authorize follow-up; Y\u2019s expanded opening adds no necessary step absent from X.",
+    "original_blinded_selection": "EQUIVALENT"
+  }
+}

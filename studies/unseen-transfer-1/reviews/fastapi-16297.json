@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "current": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "8769a5dd67f6ab30599f69ccd493de9740ac2a1db23f271d5d5e07cb39f40c23",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Moving queue submission earlier retains its prerequisite and keeps recovery configuration adjacent to the recommendation."
+      ]
+    },
+    "revised": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "80b84eafb1e91b361f5a117346f542f49dc05b731da4c873bf16053299c5bd2c",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Starting with existing behavior is also accurate; the worker recommendation and queue conditions remain connected across adjacent paragraphs."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "current",
+    "reason": "X puts the conditional worker recommendation, successful-submission requirement, and recovery caveat together at the start, directly answering the architectural choice before explaining the existing code.",
+    "original_blinded_selection": "X"
+  }
+}

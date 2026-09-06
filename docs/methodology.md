@@ -2,6 +2,8 @@
 
 This is a retrospective record of developing an answer-editing workflow on September 5–6, 2026. The packaged skill is a portable consolidation of lessons, not the unchanged intervention used in every trial. No new detector scans were run to prepare this repository.
 
+This document describes the original 44-scan study. The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) keeps its inputs and outcomes separate; its GPTZero measurements are pending available scan allowance.
+
 ## Included observations
 
 `studies/results.json` includes 19 questions and 44 valid scans. Each scan points to an exact UTF-8 effective-editor input and its SHA-256. The first three cohorts cover all 15 preselected questions and all their baseline/plain pairs. Two of those cohorts add ten fixed-body quotation comparisons. Four later new answers have only a final-text observation.

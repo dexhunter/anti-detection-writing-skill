@@ -1,0 +1,7 @@
+The nested schemas explain these six outcomes. A local check with Pydantic 2.13.4 and pydantic-core 2.46.4 reproduced them, though it did not reproduce your Windows/Python 3.11.9 environment.
+
+For input `0`, both before-validator arrangements change the input to `1` before the relevant `lt=1` check, so both fail. With the wrap and after validators, placing `Field(lt=1)` after the validator makes the constraint check the returned `1`, which fails. Placing the field constraint first lets it accept `0`; the later validator then returns `1` without that constraint running again.
+
+A numeric constraint can attach directly to an integer schema. Outside a function wrapper, it can instead become an after-validation check. Inspect `TypeAdapter(...).core_schema` and the [versioned implementation](https://github.com/pydantic/pydantic/blob/v2.13.4/pydantic/_internal/_known_annotated_metadata.py) for your actual annotation.
+
+The maintainer's accepted reply warns that annotation interactions are inconsistent. These reproduced examples do not establish a stable, global ordering rule for every constraint or combination of metadata.

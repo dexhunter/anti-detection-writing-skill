@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "revised": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "ea3c069c03c18ca8be54b6cc3e20a9be39a623edc8a62a09c72d7486b721e074",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "The two backend cases become parallel bullets; all cancellation and timing limits remain."
+      ]
+    },
+    "current": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "6846b6f693a5fa2abef49604416efa7e29ad1c681f51b836abb71a2177ba3513",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Separate timeout scopes is explicit in the first paragraph; the same condition is already present in X."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "equivalent",
+    "reason": "Both answer TLS first and preserve the decisive AnyIO-versus-sync DNS contrast and deadline limits; bullets in X versus paragraphs in Y do not change the practical guidance.",
+    "original_blinded_selection": "EQUIVALENT"
+  }
+}

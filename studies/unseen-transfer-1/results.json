@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-09-06T09:42:06.167616+00:00",
+  "design": "Two frozen skill versions, same six source-grounded drafts; no added quotations. Separate fresh writer agents of the same configured model. One first pass per arm, with evidence-supported corrections retained.",
+  "measurement_status": "pending_available_scan_allowance",
+  "completed_gptzero_scans": 0,
+  "planned_gptzero_scans": 12,
+  "quality_status": "complete_blinded_first_pass_review",
+  "provenance": "Markdown files are prepared answer texts, not captured detector editor inputs. No detector scores have been observed for this cohort.",
+  "scope": "Six questions absent from the previous19-question primary dataset. This does not establish absence from model pretraining. Already answered threads are used as offline writing cases, not new posting opportunities.",
+  "cases": [
+    {
+      "key": "pydantic-13585",
+      "discussion_url": "https://github.com/pydantic/pydantic/discussions/13585",
+      "files": {
+        "draft": {
+          "path": "inputs/pydantic-13585/draft.md",
+          "sha256": "ac4f78c2afe38809130100b7a71d4ba7f8ad6943c9d424df316e41629256574f",
+          "rough_whitespace_words": 160
+        },
+        "current": {
+          "path": "inputs/pydantic-13585/current.md",
+          "sha256": "f358e091a5b5c73356e36944060430811ea5b86b516a554e7d79dee27ae88bfc",
+          "rough_whitespace_words": 144
+        },
+        "revised": {
+          "path": "inputs/pydantic-13585/revised.md",
+          "sha256": "70c70fb42e943f7158a5ad3ba1bc62bbaf7104b07799dfbdaa8524d740e4be04",
+          "rough_whitespace_words": 145
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "f358e091a5b5c73356e36944060430811ea5b86b516a554e7d79dee27ae88bfc",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "70c70fb42e943f7158a5ad3ba1bc62bbaf7104b07799dfbdaa8524d740e4be04",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [],
+        "protected_inline_code": [
+          "`0`",
+          "`1`",
+          "`lt=1`",
+          "`Field(lt=1)`",
+          "`1`",
+          "`0`",
+          "`1`",
+          "`TypeAdapter(...).core_schema`"
+        ],
+        "protected_urls": [
+          "https://github.com/pydantic/pydantic/blob/v2.13.4/pydantic/_internal/_known_annotated_metadata.py"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": [
+          "Added the source-packet qualification that the local reproduction did not reproduce the asker's Windows/Python environment."
+        ]
+      },
+      "quality_preference": "revised",
+      "review_file": "reviews/pydantic-13585.json"
+    },
+    {
+      "key": "pytest-14190",
+      "discussion_url": "https://github.com/pytest-dev/pytest/discussions/14190",
+      "files": {
+        "draft": {
+          "path": "inputs/pytest-14190/draft.md",
+          "sha256": "85415446a9d59490f54e0649a2ea4a382cda9e82a177913f65a108e9498db686",
+          "rough_whitespace_words": 148
+        },
+        "current": {
+          "path": "inputs/pytest-14190/current.md",
+          "sha256": "8daee027792ce6d493398e7c14e4f818250146a2897fa5949d7c633a99553536",
+          "rough_whitespace_words": 140
+        },
+        "revised": {
+          "path": "inputs/pytest-14190/revised.md",
+          "sha256": "992d2a298f034226d9492c3d944275f53e7d1f5249cbaf2b3fe2a38de533fa88",
+          "rough_whitespace_words": 135
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "8daee027792ce6d493398e7c14e4f818250146a2897fa5949d7c633a99553536",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "992d2a298f034226d9492c3d944275f53e7d1f5249cbaf2b3fe2a38de533fa88",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [
+          "```python\ndef test_debug(caplog):\n    caplog.set_level(logging.DEBUG)\n    logging.debug(\"debug marker\")\n    assert \"debug marker\" in caplog.text\n```"
+        ],
+        "protected_inline_code": [
+          "`caplog`",
+          "`log_level = INFO`",
+          "`caplog.set_level(logging.DEBUG)`",
+          "`propagate = False`"
+        ],
+        "protected_urls": [
+          "https://github.com/pytest-dev/pytest/blob/9.0.2/src/_pytest/logging.py"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": []
+      },
+      "quality_preference": "equivalent",
+      "review_file": "reviews/pytest-14190.json"
+    },
+    {
+      "key": "httpx-3630",
+      "discussion_url": "https://github.com/encode/httpx/discussions/3630",
+      "files": {
+        "draft": {
+          "path": "inputs/httpx-3630/draft.md",
+          "sha256": "e68d03bc5bdd75e97bfa162b2b906ed6d828671c83916c180a4c82bf46b4b5ac",
+          "rough_whitespace_words": 162
+        },
+        "current": {
+          "path": "inputs/httpx-3630/current.md",
+          "sha256": "73b8c303211083fe098e6869b36f109efafaa0d023e0a5d8a4331b600f5b65a6",
+          "rough_whitespace_words": 143
+        },
+        "revised": {
+          "path": "inputs/httpx-3630/revised.md",
+          "sha256": "8dd31c4777473d3f2af3c1f5760e908546a6df42ce43385b4a3950063e107fc8",
+          "rough_whitespace_words": 149
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "73b8c303211083fe098e6869b36f109efafaa0d023e0a5d8a4331b600f5b65a6",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "8dd31c4777473d3f2af3c1f5760e908546a6df42ce43385b4a3950063e107fc8",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [],
+        "protected_inline_code": [
+          "`PoolTimeout`"
+        ],
+        "protected_urls": [
+          "https://www.python-httpx.org/advanced/timeouts/#fine-tuning-the-configuration",
+          "https://github.com/encode/httpx/blob/0.28.1/httpx/_client.py"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": [
+          "Qualified the pool timeout as bounding each acquisition wait and explicitly retained internal reacquisition and uncertain401 cause from the evidence packet."
+        ]
+      },
+      "quality_preference": "revised",
+      "review_file": "reviews/httpx-3630.json"
+    },
+    {
+      "key": "httpx-3164",
+      "discussion_url": "https://github.com/encode/httpx/discussions/3164",
+      "files": {
+        "draft": {
+          "path": "inputs/httpx-3164/draft.md",
+          "sha256": "4586a02007bbe8ea559a9793f1ab35f5e950c52ac35c1d03c7a96074e6e7e77b",
+          "rough_whitespace_words": 159
+        },
+        "current": {
+          "path": "inputs/httpx-3164/current.md",
+          "sha256": "6846b6f693a5fa2abef49604416efa7e29ad1c681f51b836abb71a2177ba3513",
+          "rough_whitespace_words": 144
+        },
+        "revised": {
+          "path": "inputs/httpx-3164/revised.md",
+          "sha256": "ea3c069c03c18ca8be54b6cc3e20a9be39a623edc8a62a09c72d7486b721e074",
+          "rough_whitespace_words": 146
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "6846b6f693a5fa2abef49604416efa7e29ad1c681f51b836abb71a2177ba3513",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "ea3c069c03c18ca8be54b6cc3e20a9be39a623edc8a62a09c72d7486b721e074",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [],
+        "protected_inline_code": [
+          "`connect`",
+          "`anyio.fail_after(timeout)`",
+          "`socket.create_connection()`"
+        ],
+        "protected_urls": [
+          "https://github.com/encode/httpcore/blob/1.0.9/httpcore/_backends/anyio.py",
+          "https://www.python-httpx.org/advanced/timeouts/"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": []
+      },
+      "quality_preference": "equivalent",
+      "review_file": "reviews/httpx-3164.json"
+    },
+    {
+      "key": "fastapi-7077",
+      "discussion_url": "https://github.com/fastapi/fastapi/discussions/7077",
+      "files": {
+        "draft": {
+          "path": "inputs/fastapi-7077/draft.md",
+          "sha256": "2daa44e67c95aa7f4af5d59220007945d2d4b66b804b2d4eb5579d04204f98f3",
+          "rough_whitespace_words": 136
+        },
+        "current": {
+          "path": "inputs/fastapi-7077/current.md",
+          "sha256": "1e3da82fd839f68cdae35551396dbf6a64be8b64a155e4e578f2771eb264b170",
+          "rough_whitespace_words": 133
+        },
+        "revised": {
+          "path": "inputs/fastapi-7077/revised.md",
+          "sha256": "36051d2812a6ebb7aa64237ac4368e113513d68b27f7ae7738c3c184d7747508",
+          "rough_whitespace_words": 126
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "1e3da82fd839f68cdae35551396dbf6a64be8b64a155e4e578f2771eb264b170",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "36051d2812a6ebb7aa64237ac4368e113513d68b27f7ae7738c3c184d7747508",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [
+          "```python\n@app.get(\"/cookiefail\")\ndef cookie_fail():\n    response = RedirectResponse(\"/\")\n    response.set_cookie(key=\"works\", value=\"here is your data\")\n    return response\n```"
+        ],
+        "protected_inline_code": [
+          "`RedirectResponse`",
+          "`Response`",
+          "`response_class=RedirectResponse`",
+          "`127.0.0.1`",
+          "`/authorize`",
+          "`Set-Cookie`",
+          "`Cookie`"
+        ],
+        "protected_urls": [
+          "https://fastapi.tiangolo.com/advanced/response-cookies/#return-a-response-directly"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": []
+      },
+      "quality_preference": "equivalent",
+      "review_file": "reviews/fastapi-7077.json"
+    },
+    {
+      "key": "fastapi-16297",
+      "discussion_url": "https://github.com/fastapi/fastapi/discussions/16297",
+      "files": {
+        "draft": {
+          "path": "inputs/fastapi-16297/draft.md",
+          "sha256": "ca316aa01191d4a2342eeb6c58c050528e8bf8b4290882033012e4ce0b1232aa",
+          "rough_whitespace_words": 160
+        },
+        "current": {
+          "path": "inputs/fastapi-16297/current.md",
+          "sha256": "8769a5dd67f6ab30599f69ccd493de9740ac2a1db23f271d5d5e07cb39f40c23",
+          "rough_whitespace_words": 150
+        },
+        "revised": {
+          "path": "inputs/fastapi-16297/revised.md",
+          "sha256": "80b84eafb1e91b361f5a117346f542f49dc05b731da4c873bf16053299c5bd2c",
+          "rough_whitespace_words": 149
+        }
+      },
+      "variants": {
+        "current": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "8769a5dd67f6ab30599f69ccd493de9740ac2a1db23f271d5d5e07cb39f40c23",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        },
+        "revised": {
+          "quality": {
+            "technical": "PASS",
+            "reviewed_sha256": "80b84eafb1e91b361f5a117346f542f49dc05b731da4c873bf16053299c5bd2c",
+            "material_unrecorded_cuts": 0,
+            "unsupported_additions": 0
+          },
+          "scan": {
+            "status": "not_run",
+            "service": "GPTZero",
+            "mode": "Basic Scan",
+            "model": null,
+            "ai_percent": null,
+            "mixed_percent": null,
+            "human_percent": null,
+            "observed_at": null
+          }
+        }
+      },
+      "protected_spans": {
+        "protected_code_blocks": [],
+        "protected_inline_code": [
+          "`BackgroundTasks`",
+          "`def`",
+          "`time.sleep(120)`"
+        ],
+        "protected_urls": [
+          "https://fastapi.tiangolo.com/tutorial/background-tasks/#caveat",
+          "https://docs.celeryq.dev/en/stable/userguide/tasks.html"
+        ]
+      },
+      "protected_span_check": "PASS_both_variants",
+      "recorded_changes": {
+        "current": [],
+        "revised": []
+      },
+      "quality_preference": "current",
+      "review_file": "reviews/fastapi-16297.json"
+    }
+  ],
+  "quality_summary": {
+    "technical_pass": 12,
+    "technical_fail": 0,
+    "revised_preferred": 2,
+    "current_preferred": 1,
+    "equivalent": 3,
+    "material_unrecorded_cuts": 0,
+    "unsupported_additions": 0,
+    "required_corrections": 0,
+    "reviewer_type": "one_separate_llm_agent",
+    "limit": "Small qualitative comparison; not independent human ratings or a detector-performance result."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "current": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "73b8c303211083fe098e6869b36f109efafaa0d023e0a5d8a4331b600f5b65a6",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Cannot keep the timestamp fresh is slightly broader wording than cannot guarantee freshness. In context it describes the hook\u2019s inability to guarantee timing, not a claim that every signed request expires. Optional precision edit: use cannot guarantee that the timestamp remains fresh until server receipt. No material incorrect action or total-deadline guarantee found."
+      ]
+    },
+    "revised": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "8dd31c4777473d3f2af3c1f5760e908546a6df42ce43385b4a3950063e107fc8",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [
+        "Adds internal reacquisition to operations that can extend elapsed time; directly supported by the evidence packet\u2019s httpcore reacquisition loop.",
+        "Explicitly says the explanation does not establish the cause of the reported401s, consistent with the source-only evidence qualification."
+      ],
+      "notes": [
+        "Each wait and internal reacquisition preserve a finer timeout boundary than the shared draft. Fresh attempt does not assert that merely reusing a Request object necessarily leaves a stale signature."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "revised",
+    "reason": "Y places retry safety before the retry action and explicitly says each pool wait, preventing an accidental total-deadline reading while preserving the direct explanation.",
+    "original_blinded_selection": "Y"
+  }
+}

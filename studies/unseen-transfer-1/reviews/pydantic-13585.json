@@ -1,0 +1,39 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "current": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "f358e091a5b5c73356e36944060430811ea5b86b516a554e7d79dee27ae88bfc",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "The phrase local reproduction does not claim a Windows reproduction. Omission of an explicit platform comparison is a clarity difference, not a material false claim."
+      ]
+    },
+    "revised": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "70c70fb42e943f7158a5ad3ba1bc62bbaf7104b07799dfbdaa8524d740e4be04",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [
+        "Explicitly states that the local check did not reproduce the asker\u2019s Windows/Python3.11.9 environment; supported by the evidence packet and retained reproduction provenance."
+      ],
+      "notes": [
+        "The platform qualification is a supported addition relative to the shared draft; the nested-schema explanation remains scoped to these numeric examples."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "revised",
+    "reason": "Y explicitly separates the reproduced library behavior from the asker\u2019s Windows/Python environment, making the evidence boundary clearer without obscuring the six outcomes.",
+    "original_blinded_selection": "Y"
+  }
+}

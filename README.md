@@ -10,6 +10,8 @@ An experimental agent skill for writing concise, source-grounded technical answe
 - [Case studies](docs/case-studies.md) covering successful, unchanged, and rejected outcomes; [methodology](docs/methodology.md) and [44 exact editor inputs](studies/results.json) for the complete cohorts and new answers.
 - An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
 
+The latest revision adds explicit prerequisite/exception placement and a final claim reconciliation, informed by [four other writing skills](docs/related-skills.md). In a [six-question comparison](studies/unseen-transfer-1/README.md), one separate LLM reviewer preferred the revision twice, the original once, and judged three equivalent; all twelve answers passed technical review. GPTZero measurement is pending available scan allowance. The historical results below do not establish the additions' detector effect.
+
 The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs access to the question and relevant sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
 
 ## Install

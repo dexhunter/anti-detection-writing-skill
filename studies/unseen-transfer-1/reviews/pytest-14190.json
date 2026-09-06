@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-09-06T09:44:49.036500+00:00",
+  "reviewer": "Separate LLM agent; not an independent human rater.",
+  "blinding": "Case-specific X/Y labels; arm mapping and detector scores withheld until reviews frozen.",
+  "first_pass": true,
+  "variants": {
+    "current": {
+      "blinded_label": "X",
+      "technical": "PASS",
+      "reviewed_sha256": "8daee027792ce6d493398e7c14e4f818250146a2897fa5949d7c633a99553536",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "The interpretation is moved directly after the code; all diagnosis conditions remain."
+      ]
+    },
+    "revised": {
+      "blinded_label": "Y",
+      "technical": "PASS",
+      "reviewed_sha256": "992d2a298f034226d9492c3d944275f53e7d1f5249cbaf2b3fe2a38de533fa88",
+      "material_unrecorded_cuts": 0,
+      "unsupported_additions": 0,
+      "claim_preservation": "All material shared-draft claims and necessary evidence qualifications retained.",
+      "source_grounded_additions": [],
+      "notes": [
+        "Does not reconfigure is more direct than the draft\u2019s does not imply a change; the verified fixture implementation supports this wording."
+      ]
+    }
+  },
+  "preference": {
+    "selection": "equivalent",
+    "reason": "Both distinguish the two logging outputs before the test and retain the same assertion-driven diagnosis and propagation exception; rearranging the interpretation provides no clear actionability advantage.",
+    "original_blinded_selection": "EQUIVALENT"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "selected_at": "2026-09-06T09:27:25.358010+00:00",
+  "selection_basis": "Six technical questions from the recent updated-discussion listings across four repositories, selected for distinct technical mechanisms before reading detector scores. Convenience sample, not random. Unseen means unused in our prior writing trials, not absent from model pretraining.",
+  "design": "Prospective current-skill versus revised-skill plain-prose comparison on shared source-grounded drafts. No added quotations. One frozen output per arm, independent quality review without detector scores, one Basic Scan per final eligible output if quota is available. Retain every failure and unscanned case.",
+  "planned_scans": 12,
+  "current_skill_commit": "95d82a866f96bb37eeb2a886ef2515a0bb43aeaa",
+  "current_skill_sha256": "8876f3526b914fc1860b53c4aaa01f69f9c2d0ac00b4a421f9db59aab884bf84",
+  "revised_skill_sha256": "985ed59d74478fd974eb2ea4a5aab87006df80309c98a4151950fcbc01f31f48",
+  "heldout_definition": "The six question URLs are absent from the19-question primary dataset and contain no owned reply. This is not a claim about pretraining contamination.",
+  "shared_draft_protocol": "Each pair receives the same newly authored, source-grounded initial draft and claim inventory. Never use another participant's answer as the draft. Protect code/identifiers/numbers/citations/qualifications. No added quotes in either arm.",
+  "quality_protocol": "Unlabeled randomized pairs reviewed by a separate LLM agent without detector scores. Keep all first outputs and corrections. At most one technical correction per arm before freezing scans; no detector-guided retries. Log missing/failed outcomes.",
+  "score_protocol": "Twelve planned Basic Scans; same displayed model, one per frozen final text. Randomize arm order percase. Record AI/Mixed/Human, exact source/submitted/editor bytes, freshness, warnings and timestamps. Do not combine with old3cohortsummary.",
+  "treatment": "Two added writer steps: dependency-ordered action/prerequisite/exception placement, and explicit final claim/protected-span reconciliation. This tests the combined revision, not isolated attribution to either addition.",
+  "shared_safeguards": "Same primary evidence, initial draft, exact protected spans and material claim inventory for both arms; identical independent technical-review checks. No invented anecdotes, forced rhythm, padding or quotation additions.",
+  "measurement_status": "pending_available_scan_allowance",
+  "scope": "Offline writing evaluation. No discussion posts or repository push.",
+  "cases": [
+    {
+      "key": "pydantic-13585",
+      "discussion_url": "https://github.com/pydantic/pydantic/discussions/13585",
+      "prior_primary_dataset_overlap": false
+    },
+    {
+      "key": "pytest-14190",
+      "discussion_url": "https://github.com/pytest-dev/pytest/discussions/14190",
+      "prior_primary_dataset_overlap": false
+    },
+    {
+      "key": "httpx-3630",
+      "discussion_url": "https://github.com/encode/httpx/discussions/3630",
+      "prior_primary_dataset_overlap": false
+    },
+    {
+      "key": "httpx-3164",
+      "discussion_url": "https://github.com/encode/httpx/discussions/3164",
+      "prior_primary_dataset_overlap": false
+    },
+    {
+      "key": "fastapi-7077",
+      "discussion_url": "https://github.com/fastapi/fastapi/discussions/7077",
+      "prior_primary_dataset_overlap": false
+    },
+    {
+      "key": "fastapi-16297",
+      "discussion_url": "https://github.com/fastapi/fastapi/discussions/16297",
+      "prior_primary_dataset_overlap": false
+    }
+  ]
+}

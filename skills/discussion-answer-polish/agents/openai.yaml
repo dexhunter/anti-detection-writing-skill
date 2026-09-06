@@ -1,0 +1,4 @@
+interface:
+  display_name: "Discussion Answer Polish"
+  short_description: "Polish technical replies and check their evidence"
+  default_prompt: "Use $discussion-answer-polish to improve this technical answer, verify its claims, and review the final wording."

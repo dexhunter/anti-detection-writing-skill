@@ -1,0 +1,23 @@
+Create General Section as one knowledge base, then use directories for Section 1, Section 2, and their subsections. Open WebUI v0.11.3 supports this nesting.
+
+Open the knowledge base and choose **New directory** from its [add-content menu](https://github.com/open-webui/open-webui/blob/v0.11.3/src/lib/components/workspace/Knowledge/KnowledgeBase/AddContentMenu.svelte#L59-L72). Open a directory to create another inside it, and put the documents at the appropriate level:
+
+```text
+
+General Section (knowledge base)
+
+├── Section 1/
+
+│   └── documents
+
+└── Section 2/
+
+    └── subsection/
+
+        └── documents
+
+```
+
+These sections all belong to the same knowledge base. They are nested directories, not separate knowledge bases nested inside each other, which matters if you need separate access permissions or independently attachable collections.
+
+If your installed version only offers flat collections, upgrade to a release that includes directory support.

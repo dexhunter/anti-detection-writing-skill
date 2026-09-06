@@ -1,0 +1,37 @@
+Both adk web and adk run create the session and Runner for your root_agent.
+
+- adk web starts a local FastAPI server and the developer UI. It loads your agent and provides the browser controls for sessions, messages, events, and state inspection.
+
+- adk run loads a selected agent and runs the conversation through the terminal. The CLI creates a session and a Runner, sends your messages through it, and prints the resulting events/responses.
+
+For this layout:
+
+```text
+
+project/
+
+└── my_agent/
+
+    ├── __init__.py
+
+    ├── agent.py
+
+    └── .env
+
+```
+
+Run either command from project/:
+
+```sh
+
+adk web
+
+# Or, for the terminal:
+
+adk run my_agent
+
+```
+
+Both execute the same agent logic. Whether they share a stored conversation depends on the configured session service.
+
+Write your own Runner setup when integrating the agent into an application. The CLI's [session creation and interactive execution](https://github.com/google/adk-python/blob/a119dd7751082dbbd9a65f71e359abdc2be659cc/src/google/adk/cli/cli.py#L499-L518) are already provided for adk run.

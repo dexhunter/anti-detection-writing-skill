@@ -1,0 +1,21 @@
+To turn off tool-approval notifications, set this in ~/.qwen/settings.json:
+
+```json
+
+{
+
+  "general": {
+
+    "notificationMode": "task-complete"
+
+  }
+
+}
+
+```
+
+This keeps task-completion notifications and suppresses approval notifications while the terminal is unfocused. To turn off all built-in terminal/desktop notifications, set general.terminalBell to false. Merge the setting into your existing general object.
+
+Both settings are in the current [settings schema](https://github.com/QwenLM/qwen-code/blob/e133150ed18d891e4c7694cdbae650b95c358289/packages/cli/src/config/settingsSchema.ts#L649-L675); the approval-notification hook checks them before sending a notification.
+
+If the window still takes focus, check your terminal's bell/attention settings or custom notification hooks. Qwen's settings only control its own notification trigger.

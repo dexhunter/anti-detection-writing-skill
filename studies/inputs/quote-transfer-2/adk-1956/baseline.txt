@@ -1,0 +1,25 @@
+In the current Python API, retrieve the session and read its events field:
+
+```python
+
+session = await session_service.get_session(
+
+    app_name=app_name,
+
+    user_id=user_id,
+
+    session_id=session_id,
+
+)
+
+if session is not None:
+
+    for event in session.events:
+
+        print(event)
+
+```
+
+To limit the history, pass config=GetSessionConfig(num_recent_events=20) to get_session(), importing GetSessionConfig from google.adk.sessions.base_session_service. It also supports after_timestamp.
+
+[BaseSessionService](https://github.com/google/adk-python/blob/a119dd7751082dbbd9a65f71e359abdc2be659cc/src/google/adk/sessions/base_session_service.py) does not define list_events(). The screenshot shows a different interface; it doesn't establish whether the method was formally deprecated. list_sessions() returns summaries without event history, so use get_session() to read the events.

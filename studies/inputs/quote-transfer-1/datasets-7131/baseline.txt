@@ -1,0 +1,41 @@
+Current imagefolder supports multiple metadata rows referring to the same image. I checked this with datasets==5.0.1: two image files and your four question/answer records produce four dataset rows.
+
+Use this layout:
+
+```text
+
+data/
+
+├── a.jpg
+
+├── b.jpg
+
+└── metadata.jsonl
+
+```
+
+```jsonl
+
+{"file_name":"a.jpg","question":"what is this?","answer":"Animal"}
+
+{"file_name":"a.jpg","question":"what is this?","answer":"Vertebrate"}
+
+{"file_name":"a.jpg","question":"what is this?","answer":"Cow"}
+
+{"file_name":"b.jpg","question":"what is tasty?","answer":"Grass"}
+
+```
+
+```python
+
+from datasets import load_dataset
+
+ds = load_dataset("imagefolder", data_dir="data", split="train")
+
+print(len(ds))  # 4
+
+```
+
+Upload the image files and metadata.jsonl to the dataset repository, preserving those relative paths. This uses the [supported ImageFolder metadata format](https://huggingface.co/docs/datasets/image_dataset#imagefolder), so no custom loading script is needed. Your CSV sample also appears to be missing the comma between each question and answer; JSONL avoids that ambiguity.
+
+This keeps only one source copy of each image in the repository. It does not guarantee deduplication in the viewer's generated Parquet files. If the hosted viewer still shows two rows with this layout, the repository URL would be needed to investigate its conversion separately from the local loader.

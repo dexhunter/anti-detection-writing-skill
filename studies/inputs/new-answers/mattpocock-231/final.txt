@@ -1,0 +1,7 @@
+> I still want to know if Matt's skills would include a canonical solution to this problem.
+
+The repo now includes [/wayfinder](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/wayfinder/SKILL.md) for planning work that spans multiple sessions. Its map keeps the high-level destination and the possibilities you haven't explored yet.
+
+Questions you can already state become decision tickets. Less-defined, in-scope possibilities stay in **Not yet specified**, then become tickets as earlier decisions clarify them. **Decisions so far** links to the resolved tickets, while **Out of scope** records what you've deliberately excluded.
+
+Start with /wayfinder and a bounded goal, then invoke it with the same map's URL to continue, normally one decision per session. Once the map is clear, the [documented handoff](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/docs/engineering/wayfinder.md#common-questions) is /to-spec followed by /to-tickets. That gives you the persistent planning context you were missing, with a separate spec when you're ready to build.

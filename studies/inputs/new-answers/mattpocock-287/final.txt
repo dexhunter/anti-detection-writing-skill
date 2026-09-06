@@ -1,0 +1,9 @@
+> Is the loop intended to terminate at design + docs (CONTEXT.md/ADRs), leaving implementation as a fully separate, manual step?
+
+Yes. The current docs explicitly give the next steps: /to-spec, then /to-tickets, then /implement. See [What happens after you pick one](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/docs/engineering/improve-codebase-architecture.md#what-happens-after-you-pick-one).
+
+The architecture skill can update CONTEXT.md and offer an ADR during the design conversation. Creating the spec and implementation tickets is a separate action you initiate; the repository's [invocation rules](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/.agents/invocation.md) prevent one user-invoked skill from invoking another.
+
+For an accepted candidate, run /to-spec with the agreed design. That [publishes the spec to your configured issue tracker](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/to-spec/SKILL.md), and /to-tickets can then break it into implementable work.
+
+The next-steps note you suggested now exists in the human-facing docs, although SKILL.md itself still ends at the grilling loop.

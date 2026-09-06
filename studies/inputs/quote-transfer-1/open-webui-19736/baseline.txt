@@ -1,0 +1,25 @@
+Open WebUI v0.11.3 supports nested directories inside a knowledge base.
+
+For your example, create one knowledge base called General Section, open it, and use its [add-content menu](https://github.com/open-webui/open-webui/blob/v0.11.3/src/lib/components/workspace/Knowledge/KnowledgeBase/AddContentMenu.svelte#L59-L72) to choose New directory to create Section 1, Section 2, and so on. You can open a directory and create another directory inside it, then place the relevant documents there.
+
+This gives you:
+
+```text
+
+General Section (knowledge base)
+
+├── Section 1/
+
+│   └── documents
+
+└── Section 2/
+
+    └── subsection/
+
+        └── documents
+
+```
+
+These are directories within one knowledge base, rather than separate knowledge bases nested under each other. That distinction matters if you need separate access permissions or independently attachable collections.
+
+Directory creation carries a parent_id for nesting. If your installed version only shows flat collections, upgrade to a release with this feature.

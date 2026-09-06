@@ -1,0 +1,23 @@
+Use ClassLabel for your cat/dog mapping. The rows keep integer IDs, and the feature metadata holds the shared class names:
+
+```python
+
+from datasets import ClassLabel, Dataset
+
+ds = Dataset.from_dict({"label": [0, 1, 0]})
+
+ds = ds.cast_column("label", ClassLabel(names=["cat", "dog"]))
+
+labels = ds.features["label"]
+
+print(labels.int2str(0))   # cat
+
+print(labels.str2int("dog"))  # 1
+
+print(ds[0]["label"])     # 0
+
+```
+
+Here, the order of names gives cat ID 0 and dog ID 1. Reuse that same list for train/validation/test; inferring each split's classes separately can give different mappings when a class is missing.
+
+You can retrieve the whole list with ds.features["label"].names, without repeating it in every row. The mapping survives save_to_disk()/load_from_disk() and sharing through push_to_hub(). This is already supported by the [ClassLabel feature](https://huggingface.co/docs/datasets/about_dataset_features#classlabel).

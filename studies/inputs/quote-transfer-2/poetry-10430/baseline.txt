@@ -1,0 +1,21 @@
+If you're using Bash, put the PATH change in ~/.bashrc so each new interactive terminal loads it. With Poetry's official installer on Raspberry Pi/Linux, add this line once:
+
+```sh
+
+export PATH="$HOME/.local/bin:$PATH"
+
+```
+
+Then reload the file and check:
+
+```sh
+
+source ~/.bashrc
+
+command -v poetry
+
+poetry --version
+
+```
+
+An export typed only at the terminal applies to that shell and its children; it doesn't configure future terminals. If you use Zsh, put the line in ~/.zshrc instead. If you installed with a custom POETRY_HOME, add its bin directory rather than ~/.local/bin. Poetry documents the install locations in [Add Poetry to your PATH](https://python-poetry.org/docs/#installing-with-the-official-installer).

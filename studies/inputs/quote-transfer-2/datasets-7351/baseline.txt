@@ -1,0 +1,23 @@
+Yes: use a ClassLabel feature. It stores integer IDs in the column and keeps the shared ID-to-name mapping in the dataset's feature metadata.
+
+```python
+
+from datasets import ClassLabel, Dataset
+
+ds = Dataset.from_dict({"label": [0, 1, 0]})
+
+ds = ds.cast_column("label", ClassLabel(names=["cat", "dog"]))
+
+labels = ds.features["label"]
+
+print(labels.int2str(0))   # cat
+
+print(labels.str2int("dog"))  # 1
+
+print(ds[0]["label"])     # 0
+
+```
+
+The order of names defines the IDs, so reuse the same list across train/validation/test splits. Do not independently infer the classes in each split, since a class may be absent from one split.
+
+The mapping is preserved when using save_to_disk()/load_from_disk() and when sharing the dataset with push_to_hub(). You can recover the full list from ds.features["label"].names; it does not need to be repeated in every row. See the [ClassLabel feature documentation](https://huggingface.co/docs/datasets/about_dataset_features#classlabel).

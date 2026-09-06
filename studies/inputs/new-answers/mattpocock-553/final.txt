@@ -1,0 +1,7 @@
+> why is the spec ticket no. 4 labeled with ready-for-agent?
+
+[/to-spec explicitly applies that label](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/to-spec/SKILL.md). It marks a fully specified brief; it doesn't distinguish a parent spec from an implementation ticket.
+
+Your four steps match the [documented Wayfinder handoff](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/docs/engineering/wayfinder.md#common-questions): resolve the decision tickets, consolidate their linked decisions into a spec, then split that spec into implementation tickets. The closed Wayfinder tickets record what was decided; the new tickets describe what to build.
+
+You can skip /to-spec because [/to-tickets also accepts a plan or conversation](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/to-tickets/SKILL.md), but you lose the separate consolidated spec. It also explicitly leaves the parent issue unchanged, including its label. If Sandcastle queues everything with that label, remove it from the parent spec after splitting and dispatch only unblocked implementation tickets. That queue cleanup is a workflow adjustment, not something /to-tickets currently does.

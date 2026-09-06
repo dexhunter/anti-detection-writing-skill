@@ -1,0 +1,7 @@
+> I don't think openspec is locking the developer in specific process, unlike the methods above
+
+OpenSpec's [current README](https://github.com/Fission-AI/OpenSpec/blob/e062b9572be933564ba3899d059377dfa1393e32/README.md#why-openspec) supports that point: it keeps proposal, specs, design and tasks for each change, while allowing you to revise artifacts without rigid phase gates.
+
+Matt's repo provides [editable, composable skills](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/README.md) for interviewing, domain modeling, TDD and implementation. There is overlap: /to-spec [publishes a spec to your configured tracker](https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/to-spec/SKILL.md), and /to-tickets breaks work down, so those steps cover some of the same ground as OpenSpec's proposal and task generation.
+
+If OpenSpec already works for you, keep its artifacts as the authoritative plan. Use /grill-with-docs to clarify decisions, carry those decisions into your OpenSpec proposal/design, then continue its implementation and archive workflow. You can adopt selected skills without maintaining a second competing set of specs and tickets. That handoff is something you arrange explicitly.

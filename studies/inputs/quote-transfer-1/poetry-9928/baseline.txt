@@ -1,0 +1,15 @@
+Yes, this is expected. Your configuration defines one installable distribution, my-project, which contains three import packages: x, y, and z. The packages list controls which code belongs to that distribution; it doesn't create three separately installed distributions.
+
+poetry show lists packages from the dependency lock file, so it omits the root project itself. The [implementation reads the locked repository](https://github.com/python-poetry/poetry/blob/23535b72b269cd1c1a22bc066000ccab33abc0bd/src/poetry/console/commands/show.py#L149-L167). pip list lists installed distributions, which is why you see my-project there.
+
+Your layout is supported. In package mode, poetry install installs the root project in editable mode too; the package selection isn't limited to poetry build. See the [packages setting](https://python-poetry.org/docs/pyproject/#packages).
+
+For VS Code, select the interpreter printed by poetry env info --executable. Then check the imports with:
+
+```sh
+
+poetry run python -c "import x, y, z; print(x.__file__, y.__file__, z.__file__)"
+
+```
+
+That separates an import problem from editor discovery. Missing entries in poetry show don't establish that the imports are unavailable.

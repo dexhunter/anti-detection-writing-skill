@@ -1,0 +1,13 @@
+The MIT License covers the original instructions, code, documentation, and
+original answer prose in this repository. It does not relicense third-party
+excerpts, quotations, trademarks, or linked upstream documentation and code.
+
+Some study inputs contain short quotations from public GitHub Discussion
+participants. Each case's discussion_url in studies/results.json attributes
+its source. These excerpts are included to document the exact input used in
+a reported measurement. Upstream examples and technical references are
+linked in the answer text where applicable; their original rights remain.
+
+This repository is independent of GitHub and GPTZero. No affiliation,
+endorsement, authenticated detector export, or human-authorship certification
+is claimed.

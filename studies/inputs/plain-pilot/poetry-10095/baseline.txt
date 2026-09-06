@@ -1,0 +1,23 @@
+Use a separate pyproject.toml and poetry.lock in each component. virtualenvs.in-project = true supports this: the environments can be api/.venv and ui/.venv.
+
+If the first environment is still activated, the second component can reuse it. Poetry [reuses an activated virtual environment](https://python-poetry.org/docs/configuration/#virtualenvscreate), and changing directories doesn't deactivate it. Leave poetry shell with exit, or use deactivate if you sourced an activation script, before setting up the second component.
+
+From the myproject directory, in a shell with no virtual environment activated:
+
+```sh
+
+poetry -C api config virtualenvs.in-project true --local
+
+poetry -C api install
+
+poetry -C ui config virtualenvs.in-project true --local
+
+poetry -C ui install
+
+poetry -C api run python -c "import sys; print(sys.prefix)"
+
+poetry -C ui run python -c "import sys; print(sys.prefix)"
+
+```
+
+Each component's pyproject.toml can contain [tool.poetry] with package-mode = false. Use poetry -C api run ... or poetry -C ui run ... to select a component explicitly. Each Docker image can then copy and install only that component's files and dependencies.

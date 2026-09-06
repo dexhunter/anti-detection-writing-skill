@@ -1,0 +1,35 @@
+Yes. Current Qwen Code supports permissions.allow and permissions.deny rules in ~/.qwen/settings.json or the project's .qwen/settings.json.
+
+For example:
+
+```json
+
+{
+
+  "permissions": {
+
+    "allow": [
+
+      "Bash(git status)",
+
+      "Bash(git diff *)"
+
+    ],
+
+    "deny": [
+
+      "Bash(rm -rf *)"
+
+    ]
+
+  }
+
+}
+
+```
+
+In normal approval mode, matching allow rules skip the confirmation prompt. Matching deny rules block the command, including in YOLO mode. The rule priority is **deny → ask → allow**; permissions.ask is available if a command should always require a prompt in normal approval mode.
+
+Merge these entries into your existing settings and restart the CLI. Keep patterns narrow: Bash(git *) permits much more than read-only Git inspection, and a single blocked command pattern is not a general sandbox against equivalent commands.
+
+The current [settings schema](https://github.com/QwenLM/qwen-code/blob/e133150ed18d891e4c7694cdbae650b95c358289/packages/cli/src/config/settingsSchema.ts#L2355-L2403) documents these fields. The older tools.allowed and tools.exclude fields are deprecated in favor of them.

@@ -1,0 +1,35 @@
+> Can qwen-code be configured to set a whitelist command, so that qwen-code can execute these commands in a none-YOLO mode?
+
+Use permissions.allow for commands that can run without confirmation in normal approval mode, and permissions.deny to block commands even in YOLO mode. Merge rules like these into ~/.qwen/settings.json or your project's .qwen/settings.json, then restart the CLI:
+
+```json
+
+{
+
+  "permissions": {
+
+    "allow": [
+
+      "Bash(git status)",
+
+      "Bash(git diff *)"
+
+    ],
+
+    "deny": [
+
+      "Bash(rm -rf *)"
+
+    ]
+
+  }
+
+}
+
+```
+
+Rules take priority in the order **deny → ask → allow**. You can also use permissions.ask to require confirmation for a matching command in normal approval mode.
+
+Keep the patterns narrow: Bash(git *) allows much more than read-only inspection. Blocking one command pattern also leaves equivalent commands possible, so a deny list isn't a general sandbox.
+
+The [settings schema](https://github.com/QwenLM/qwen-code/blob/e133150ed18d891e4c7694cdbae650b95c358289/packages/cli/src/config/settingsSchema.ts#L2355-L2403) documents these fields. They replace the deprecated tools.allowed and tools.exclude settings.

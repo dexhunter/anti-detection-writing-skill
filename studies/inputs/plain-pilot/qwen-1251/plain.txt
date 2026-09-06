@@ -1,0 +1,21 @@
+Set general.notificationMode to task-complete in ~/.qwen/settings.json to stop Qwen's approval notifications when the terminal is unfocused:
+
+```json
+
+{
+
+  "general": {
+
+    "notificationMode": "task-complete"
+
+  }
+
+}
+
+```
+
+Merge this into your existing general object. Notifications after long tasks will still work. To disable those as well, set general.terminalBell to false.
+
+The [settings schema](https://github.com/QwenLM/qwen-code/blob/e133150ed18d891e4c7694cdbae650b95c358289/packages/cli/src/config/settingsSchema.ts#L649-L675) defines both options, and the approval-notification handler checks them before sending a bell or desktop notification.
+
+If the terminal still takes focus, check its bell/attention settings and any custom notification hooks. These options control Qwen's built-in notifications; they cannot override how your terminal handles other requests for attention.

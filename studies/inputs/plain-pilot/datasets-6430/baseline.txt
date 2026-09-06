@@ -1,0 +1,17 @@
+set_transform() replaces the active formatter; it does not run before a previously selected Torch formatter. Its result is what __getitem__ returns, so tensor conversion must happen in the transform or later in your data collator.
+
+For random augmentation on every access, keep with_transform() and have the transform return the tensors you need. The transform receives a batch dictionary, even when you retrieve one row. A DataLoader collator is also a good place for batching, padding, and conversion if you want the transform to return ordinary Python/NumPy values.
+
+For preprocessing that should run once, use:
+
+```python
+
+processed = ds.map(preprocess, batched=True, load_from_cache_file=False)
+
+processed = processed.with_format("torch")
+
+```
+
+load_from_cache_file=False recomputes this map() call instead of reusing a cached result. It can still write a new cache file, and it won't rerun on each access or epoch. Use this for deterministic preprocessing; keep random augmentation in the per-access transform.
+
+You do not need to call the internal TorchFormatter directly or wrap the dataset just to achieve either pattern. set_transform](https://github.com/huggingface/datasets/blob/19f69de53015525126e6d3f96859acb90498e364/src/datasets/arrow_dataset.py) selects the custom formatter via set_format("custom", transform=...).

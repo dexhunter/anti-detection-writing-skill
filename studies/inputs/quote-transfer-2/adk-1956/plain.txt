@@ -1,0 +1,23 @@
+Python's [BaseSessionService](https://github.com/google/adk-python/blob/a119dd7751082dbbd9a65f71e359abdc2be659cc/src/google/adk/sessions/base_session_service.py) doesn't define list_events(). That alone doesn't establish whether it was formally deprecated. To read the history, retrieve the session and use session.events:
+
+```python
+
+session = await session_service.get_session(
+
+    app_name=app_name,
+
+    user_id=user_id,
+
+    session_id=session_id,
+
+)
+
+if session is not None:
+
+    for event in session.events:
+
+        print(event)
+
+```
+
+For only the most recent events, pass config=GetSessionConfig(num_recent_events=20) to get_session(). Import GetSessionConfig from google.adk.sessions.base_session_service; it also supports after_timestamp for filtering by time. list_sessions() returns summaries without event history, so it won't provide those events.

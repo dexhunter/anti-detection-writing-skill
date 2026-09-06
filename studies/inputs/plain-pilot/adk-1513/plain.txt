@@ -1,0 +1,35 @@
+You can test your root_agent with adk run without writing a session or Runner setup. The CLI already [creates a session and starts interactive execution](https://github.com/google/adk-python/blob/a119dd7751082dbbd9a65f71e359abdc2be659cc/src/google/adk/cli/cli.py#L499-L518) for you.
+
+adk web starts a local FastAPI server and the developer UI. The server loads your agent and manages its Runner; the browser lets you create sessions, send messages, and inspect events and state. adk run loads the selected agent, creates its Runner, reads your messages in the terminal, and prints the resulting events/responses.
+
+With this layout:
+
+```text
+
+project/
+
+└── my_agent/
+
+    ├── __init__.py
+
+    ├── agent.py
+
+    └── .env
+
+```
+
+Run either command from project/:
+
+```sh
+
+adk web
+
+# Or, for the terminal:
+
+adk run my_agent
+
+```
+
+Both execute the same agent logic. Conversation storage depends on the configured session service, and running the same agent does not by itself reopen the same stored session.
+
+A custom Runner setup is useful when integrating the agent into your own application. The two development commands provide that setup for testing.

@@ -1,0 +1,25 @@
+Changing directories does not switch an active virtual environment. If you activated the api environment before moving to ui, Poetry can [reuse that environment](https://python-poetry.org/docs/configuration/#virtualenvscreate). Leave poetry shell with exit, or use deactivate if you sourced an activation script.
+
+Your two-folder layout works with separate pyproject.toml and poetry.lock files. Keep virtualenvs.in-project = true to use api/.venv and ui/.venv. Since these are non-package projects, set package-mode = false under [tool.poetry] in each component before installing its dependencies.
+
+From myproject, with no virtual environment activated:
+
+```sh
+
+poetry -C api config virtualenvs.in-project true --local
+
+poetry -C api install
+
+poetry -C ui config virtualenvs.in-project true --local
+
+poetry -C ui install
+
+poetry -C api run python -c "import sys; print(sys.prefix)"
+
+poetry -C ui run python -c "import sys; print(sys.prefix)"
+
+```
+
+The last two commands show which environment each component uses. If one already has an environment in Poetry's cache, changing virtualenvs.in-project [does not move it into the project](https://python-poetry.org/docs/configuration/#virtualenvsin-project).
+
+Use poetry -C api run ... or poetry -C ui run ... to run a component explicitly. Each Docker image can copy its component's files and install from that component's lockfile, keeping the dependency sets separate.

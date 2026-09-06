@@ -1,0 +1,23 @@
+Set model in the subagent's Markdown frontmatter, for example in .qwen/agents/image-reader.md:
+
+```markdown
+
+---
+
+name: image-reader
+
+description: Inspect images and explain their contents.
+
+model: your-vision-model-id
+
+---
+
+Inspect the supplied image and answer the user's question about it.
+
+```
+
+Replace your-vision-model-id with a vision-capable model from your configured provider. The main conversation keeps its own model.
+
+The current [subagent model selector](https://github.com/QwenLM/qwen-code/blob/e133150ed18d891e4c7694cdbae650b95c358289/packages/core/src/subagents/types.ts#L101-L108) supports a concrete model ID, authType:model-id for an explicit provider/auth route, and inherit (also the default when omitted).
+
+The provider endpoint must also accept the image input you supply. Reload the agent definitions or restart the CLI after editing the file, then start a new invocation of that subagent.

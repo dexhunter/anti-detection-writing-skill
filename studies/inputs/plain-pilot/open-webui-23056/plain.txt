@@ -1,0 +1,29 @@
+Move the database lookup into a Pipe Function and return the answer from pipe(). A filter's inlet() returns a request body for further processing; it doesn't complete an assistant response.
+
+For a text-only chat with a user message, the Pipe can be:
+
+```python
+
+class Pipe:
+
+    async def pipe(self, body: dict) -> str:
+
+        prompt = next(
+
+            message["content"]
+
+            for message in reversed(body["messages"])
+
+            if message["role"] == "user"
+
+        )
+
+        answer = await lookup_in_database(prompt)
+
+        return answer or "No matching answer was found."
+
+```
+
+Replace lookup_in_database with your existing async lookup function. Create and enable the Pipe under [Admin Panel → Functions](https://docs.openwebui.com/features/extensibility/plugin/functions/), then select its model in the chat.
+
+Returning a string uses Open WebUI's normal completion handling. The [v0.11.3 Pipe handler](https://github.com/open-webui/open-webui/blob/v0.11.3/backend/open_webui/functions.py#L306-L343) sends the answer, a finish event, and [DONE] for a streaming request, allowing the Send/Stop button and chat loading indicator to return to their completed state. You don't need to emit the answer manually or interrupt another model request.

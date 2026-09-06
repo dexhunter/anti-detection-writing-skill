@@ -1,0 +1,17 @@
+set_transform() takes over formatting, so the earlier set_format("torch") will no longer convert its output to tensors. The [implementation](https://github.com/huggingface/datasets/blob/19f69de53015525126e6d3f96859acb90498e364/src/datasets/arrow_dataset.py) calls set_format("custom", transform=...).
+
+For random augmentation on each access, use set_transform() or with_transform() and return a batch dictionary containing the tensors you need. The transform receives a batch dictionary even for ds[0]. You can also return Python/NumPy values and handle tensor conversion, batching, and padding in your DataLoader's [collator](https://docs.pytorch.org/docs/stable/data#working-with-collate-fn).
+
+For deterministic preprocessing, map() followed by Torch formatting works. Starting with an unformatted ds:
+
+```python
+
+processed = ds.map(preprocess, batched=True, load_from_cache_file=False)
+
+processed = processed.with_format("torch")
+
+```
+
+Here, load_from_cache_file=False forces that map() call to recompute the preprocessing. It can still write a cache file. The processed values stay the same on later accesses and epochs, so this won't give you fresh random augmentation each time.
+
+Neither approach requires calling the internal TorchFormatter or wrapping the dataset in a Torch dataset class. Choose the per-access transform for changing augmentations, and map() for preprocessing you want to compute once.

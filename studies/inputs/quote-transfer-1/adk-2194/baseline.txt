@@ -1,0 +1,23 @@
+Yes, keep the collected fields in session state. Have a collection tool validate each new value, merge it into tool_context.state["inputs"], and return the missing field names. The calculation tool should read that state and refuse to run until every required field is present and valid.
+
+After validating the incoming fields, the collection tool can do this:
+
+```python
+
+collected = dict(tool_context.state.get("inputs", {}))
+
+collected.update(validated_fields)
+
+tool_context.state["inputs"] = collected
+
+required = ("arg_1", "arg_2", "arg_3")
+
+missing = [key for key in required if collected.get(key) is None]
+
+return {"collected": collected, "missing": missing}
+
+```
+
+Checking is None avoids treating valid values such as 0 or 0.0 as missing. Reassigning the dictionary through tool_context.state ensures the change is tracked; do not rely on mutating a nested dictionary in place.
+
+Tell the agent to ask for the returned missing fields and clarify ambiguous values. Keep validation and the completeness check in Python, and reuse the same session ID across turns. ADK's [context state](https://github.com/google/adk-python/blob/a119dd7751082dbbd9a65f71e359abdc2be659cc/src/google/adk/agents/context.py) is the supported place for these tool-managed updates.

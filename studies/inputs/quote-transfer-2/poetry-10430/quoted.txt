@@ -1,0 +1,25 @@
+> If I open a new one poetry is not found
+
+Save the PATH change in your shell's startup file. An export entered at the terminal affects that shell and its children, so it won't carry over when you open another terminal.
+
+Poetry's official installer puts the poetry command in ~/.local/bin on Raspberry Pi/Linux. For Bash's usual interactive non-login terminals, add this line once to ~/.bashrc:
+
+```sh
+
+export PATH="$HOME/.local/bin:$PATH"
+
+```
+
+Reload the file and check:
+
+```sh
+
+source ~/.bashrc
+
+command -v poetry
+
+poetry --version
+
+```
+
+For Zsh, use and reload ~/.zshrc instead. If you set a custom POETRY_HOME when installing, use its bin directory in the PATH line. The installer locations are documented in [Add Poetry to your PATH](https://python-poetry.org/docs/#installing-with-the-official-installer).

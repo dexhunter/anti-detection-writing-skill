@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "title": "Evidence-first Writing development observations",
+  "provenance": "Maintainer-recorded visible UI observations; not authenticated service exports. Input hashes establish file integrity, not score authenticity.",
+  "input_representation": "Exact effective editor UTF-8 bytes; original Markdown is not distributed. The original Markdown hash uses surrounding whitespace stripped, as in the historical recorder.",
+  "review_provenance": "Separate LLM agents reviewed technical correctness and prose without detector scores. No independent human ratings or service replication.",
+  "scope": "44 primary observations; exploratory attempts summarized separately in docs/methodology.md. The packaged skill was assembled after these observations.",
+  "cohorts": [
+    {
+      "id": "plain-pilot",
+      "design": "baseline_plain",
+      "case_selection": "Five questions selected before this cohort was scanned.",
+      "development_skill_sha256": "c56a91b7f32a526eac671aba22ce6b5753eeefa6bad58f7c9a1f20935d62ef2a",
+      "cases": [
+        {
+          "key": "qwen-1251",
+          "discussion_url": "https://github.com/QwenLM/qwen-code/discussions/1251",
+          "owned_comment_url": "https://github.com/QwenLM/qwen-code/discussions/1251#discussioncomment-18308351",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/plain-pilot/qwen-1251/baseline.txt",
+              "input_sha256": "cfaab839929c07674981d155f3da6052de3486557c37c65b4703d4e55903443e",
+              "original_markdown_trimmed_sha256": "fc2183fc3dfd4cafae8c0f2fc420ab5945fbdc86c94a791548cef1ee6be4d543",
+              "observed_at": "2026-09-05T21:22:24.532Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 90,
+              "short_text_warning": true,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            },
+            "plain": {
+              "input": "studies/inputs/plain-pilot/qwen-1251/plain.txt",
+              "input_sha256": "b44a2334915fa297d232bc861d6931ade6b9fffc4d0fdc1317db114266983718",
+              "original_markdown_trimmed_sha256": "aaa3a4f8e0001d0c04ac4df9b93f06ddef8126b0712f57dfbbae32841bbdd6ee",
+              "observed_at": "2026-09-05T21:27:03.774Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 99,
+              "short_text_warning": true,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "First-pass candidate held at AI 100; existing answer retained at this stage."
+          }
+        },
+        {
+          "key": "poetry-10095",
+          "discussion_url": "https://github.com/python-poetry/poetry/discussions/10095",
+          "owned_comment_url": "https://github.com/python-poetry/poetry/discussions/10095#discussioncomment-18307946",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/plain-pilot/poetry-10095/baseline.txt",
+              "input_sha256": "561ce4c9f106b888bd36057aec55da39c04a840d85f0e6328b6666fec2fbc993",
+              "original_markdown_trimmed_sha256": "3b91fff5cc1ef6c29dcd941537a9a382a3f3cfcdf07550d13df02ca75be85c15",
+              "observed_at": "2026-09-05T21:24:15.534Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 161,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            },
+            "plain": {
+              "input": "studies/inputs/plain-pilot/poetry-10095/plain.txt",
+              "input_sha256": "2e95d560e213920ff4ebc817006ae0619de7d5080cf9addb637d74caa7a5693f",
+              "original_markdown_trimmed_sha256": "d36180e41478a8736f9b2b015613c353dacc09aabd2cbf845987cbed9855e891",
+              "observed_at": "2026-09-05T21:27:39.780Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 188,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "First-pass candidate held at AI 100; existing answer retained at this stage."
+          }
+        },
+        {
+          "key": "datasets-6430",
+          "discussion_url": "https://github.com/huggingface/datasets/discussions/6430",
+          "owned_comment_url": "https://github.com/huggingface/datasets/discussions/6430#discussioncomment-18308153",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/plain-pilot/datasets-6430/baseline.txt",
+              "input_sha256": "8f58cd7706725c208ddfcea11da9cacaa99913348547f3a9f6cab0812588aae9",
+              "original_markdown_trimmed_sha256": "540dfa81a5ddd757866f57a457afefdb5822c4620ce57709b54683b033ac5a16",
+              "observed_at": "2026-09-05T21:25:27.883Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 171,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            },
+            "plain": {
+              "input": "studies/inputs/plain-pilot/datasets-6430/plain.txt",
+              "input_sha256": "12822fe151daf0afa40c7813e13eae9e87dbe48a2bf9c7fdcad1af41d331c742",
+              "original_markdown_trimmed_sha256": "4c4303ab723e861c53c6a8af92753d83826b25d803fc5b5d877393d147e726af",
+              "observed_at": "2026-09-05T21:28:40.729Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 161,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "First-pass candidate held at AI 100; existing answer retained at this stage."
+          }
+        },
+        {
+          "key": "open-webui-23056",
+          "discussion_url": "https://github.com/open-webui/open-webui/discussions/23056",
+          "owned_comment_url": "https://github.com/open-webui/open-webui/discussions/23056#discussioncomment-18308260",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/plain-pilot/open-webui-23056/baseline.txt",
+              "input_sha256": "23a9f3b2df01628a9c75ea68d0c39bb20ae2352815c47d132f7d51e21f1b2869",
+              "original_markdown_trimmed_sha256": "2b4c237680c0dee25c38bdb332a261f3b5bf10c5c661652f39a95d476cdee44f",
+              "observed_at": "2026-09-05T21:25:54.439Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 156,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            },
+            "plain": {
+              "input": "studies/inputs/plain-pilot/open-webui-23056/plain.txt",
+              "input_sha256": "deb98d1854302999db6dde1b09371a7ccbd96b5bdadd547e1f5787a5ed96e303",
+              "original_markdown_trimmed_sha256": "845bd0fc760ba5d18ca0fda09bd3ccfddf70e852fae0855eb76f143f54004a64",
+              "observed_at": "2026-09-05T21:29:26.222Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 155,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "First-pass candidate held at AI 100; existing answer retained at this stage."
+          }
+        },
+        {
+          "key": "adk-1513",
+          "discussion_url": "https://github.com/google/adk-python/discussions/1513",
+          "owned_comment_url": "https://github.com/google/adk-python/discussions/1513#discussioncomment-18308044",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/plain-pilot/adk-1513/baseline.txt",
+              "input_sha256": "9505317fe71acd125fb6b5aae3e41de9985bb2a255820cd1723a852d2b88c6f9",
+              "original_markdown_trimmed_sha256": "e950df2a69d56f87ed4eefe1f91b6b5a3f03568de1fe1456f3b58a9b1cfd2245",
+              "observed_at": "2026-09-05T21:26:16.285Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 148,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            },
+            "plain": {
+              "input": "studies/inputs/plain-pilot/adk-1513/plain.txt",
+              "input_sha256": "8f78a9e24ebfc75543f1c279433d47fc0c4be68fd796571b74f8238d1f7f53cb",
+              "original_markdown_trimmed_sha256": "84b6cedbda1393c731062275e300dcce425b2e9000363bebd7ca71a2cfbf7166",
+              "observed_at": "2026-09-05T21:30:24.548Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 162,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "legacy_editor_based"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "First-pass candidate held at AI 100; existing answer retained at this stage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "quote-transfer-1",
+      "design": "baseline_plain_fixed_body_quotation",
+      "case_selection": "Five questions selected before this cohort was scanned.",
+      "development_skill_sha256": "49d90bd8a5caee098a457777f4ec436f46b9be5fca396e47557816113678b5c3",
+      "cases": [
+        {
+          "key": "poetry-9928",
+          "discussion_url": "https://github.com/python-poetry/poetry/discussions/9928",
+          "owned_comment_url": "https://github.com/python-poetry/poetry/discussions/9928#discussioncomment-18307933",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-1/poetry-9928/baseline.txt",
+              "input_sha256": "ddc2f491fd5204d8a4a20ae660945ec890b6f0e1bab9473df5299e0cd67e33af",
+              "original_markdown_trimmed_sha256": "cc61f1a7af7db2bbe26c5770ec2d6afa03fe0dfb5eb24e42658b76469b654f5c",
+              "observed_at": "2026-09-05T22:09:43.727Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 150,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-1/poetry-9928/plain.txt",
+              "input_sha256": "4d66a058fbe21f1482550653065f1fa4c57210198c3d682e9fe900df387c57a6",
+              "original_markdown_trimmed_sha256": "a215868ee4366c198444c8e8f57f8c82227041904d16ae3264a2f6387c1ba033",
+              "observed_at": "2026-09-05T22:11:56.395Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 153,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-1/poetry-9928/quoted.txt",
+              "input_sha256": "9473435efe54a3195300f615c3a5532aba6270c4514e439362a6f3d5b0cdf1de",
+              "original_markdown_trimmed_sha256": "043f381f02d23f6597ceb1f7a47b8f7083b5175c68c0cc6d3f10809ebf170679",
+              "observed_at": "2026-09-05T22:12:14.977Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 166,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Kept existing answer"
+          }
+        },
+        {
+          "key": "qwen-1298",
+          "discussion_url": "https://github.com/QwenLM/qwen-code/discussions/1298",
+          "owned_comment_url": "https://github.com/QwenLM/qwen-code/discussions/1298#discussioncomment-18308349",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-1/qwen-1298/baseline.txt",
+              "input_sha256": "773d1050ad21a572b7aad47eb2c0090d5018be4c8d47ee87f785bea7dae925b1",
+              "original_markdown_trimmed_sha256": "729aab21dc762947a9c7e8d2028c6c32039c35e110d28c642f66eec85d781479",
+              "observed_at": "2026-09-05T22:10:01.572Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 108,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-1/qwen-1298/plain.txt",
+              "input_sha256": "a7ea1018ffa4111d8931b52c9f7aed04b26d38c599229591bd52c9252507baa8",
+              "original_markdown_trimmed_sha256": "36b7fc43aee440d2f5809b89b51637d560ec5fa3c54600261cd6195d0219543d",
+              "observed_at": "2026-09-05T22:12:29.887Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 127,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-1/qwen-1298/quoted.txt",
+              "input_sha256": "2e9ee4d52a05b7cb12afed26db5ac8b99c680581633b3831cf43b7b10bc0f535",
+              "original_markdown_trimmed_sha256": "c9f58476b4124e47622d9c58aa32784d72a474e7680925cbec5c78982cc1fa7a",
+              "observed_at": "2026-09-05T22:12:42.889Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 138,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Kept existing answer"
+          }
+        },
+        {
+          "key": "datasets-7131",
+          "discussion_url": "https://github.com/huggingface/datasets/discussions/7131",
+          "owned_comment_url": "https://github.com/huggingface/datasets/discussions/7131#discussioncomment-18308158",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-1/datasets-7131/baseline.txt",
+              "input_sha256": "b93e8a083f58986d61fde4650876d7a9f9e80905570d9991b8070970f9c99d75",
+              "original_markdown_trimmed_sha256": "2e3a2c144336b36303b0af8e5a1ba1b150cf3664ad674b3096b63f0f86e2dd25",
+              "observed_at": "2026-09-05T22:10:19.803Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 164,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-1/datasets-7131/plain.txt",
+              "input_sha256": "136767f5b333ba44e6ad796b00504574ef3329423252aebf194c5eb83a7e7c71",
+              "original_markdown_trimmed_sha256": "f33b3ea51f48f2e64c8fdb4d603d285ad49a9e6fadc9110338172355fd4ab00c",
+              "observed_at": "2026-09-05T22:12:59.404Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 175,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-1/datasets-7131/quoted.txt",
+              "input_sha256": "cbaabd388472aafce6d067dc1783dac8ac3275fe2f61779c5e35b16ef1b12f24",
+              "original_markdown_trimmed_sha256": "1de2b8b01c90d1a32cfa0c00b8f76190659b9f9461ae150d0d4ea1054a89b429",
+              "observed_at": "2026-09-05T22:13:13.642Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 186,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "IMPROVED"
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Kept existing answer"
+          }
+        },
+        {
+          "key": "open-webui-19736",
+          "discussion_url": "https://github.com/open-webui/open-webui/discussions/19736",
+          "owned_comment_url": "https://github.com/open-webui/open-webui/discussions/19736#discussioncomment-18308263",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-1/open-webui-19736/baseline.txt",
+              "input_sha256": "a5e694379fe62d14499d0fd6bb2cde2ef288ea6d7238f1b0447048e3448a99c2",
+              "original_markdown_trimmed_sha256": "1baeeacca5f8ee5668304ae62e1f818a25d79b0edcf5eea4a564aed08fe2c108",
+              "observed_at": "2026-09-05T22:10:33.562Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 130,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-1/open-webui-19736/plain.txt",
+              "input_sha256": "19aef67702f036ad1c80795e46c4de506bc1bccb6f67870b4b7b9ec36e249af9",
+              "original_markdown_trimmed_sha256": "87d9a225f585df9d09a4460256aa68e97bdc94c17dff6a0dbd4ccefa9b7c77c5",
+              "observed_at": "2026-09-05T22:13:27.215Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 120,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-1/open-webui-19736/quoted.txt",
+              "input_sha256": "df2239b87bd51f04bb476cabdf9e434f88e477d84dd56c48a35afc0a3cd1993a",
+              "original_markdown_trimmed_sha256": "cee372f6d8dfe84381809eea3f35b4e008fb72ba39bf3d9dfff6a23b5ba9bca5",
+              "observed_at": "2026-09-05T22:13:39.935Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 93,
+              "mixed_percent": 7,
+              "human_percent": 0,
+              "displayed_words": 139,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "IMPROVED"
+          },
+          "publication": {
+            "variant": "quoted",
+            "decision": "Updated quoted version"
+          }
+        },
+        {
+          "key": "adk-2194",
+          "discussion_url": "https://github.com/google/adk-python/discussions/2194",
+          "owned_comment_url": "https://github.com/google/adk-python/discussions/2194#discussioncomment-18308383",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-1/adk-2194/baseline.txt",
+              "input_sha256": "fb0407b4f94b8d231f7f6be90201443c93644f36cb5018a44973a34f91d4b0b5",
+              "original_markdown_trimmed_sha256": "44dc134063e00a60b0df922b4cc5e2d693d1b97e282df560ef6903fb20b3199c",
+              "observed_at": "2026-09-05T22:10:46.837Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 162,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-1/adk-2194/plain.txt",
+              "input_sha256": "276b464c0efcbca4c71f9894fc2f6631f36769c053f2d670912daf6c1584672c",
+              "original_markdown_trimmed_sha256": "69e5387198ce6657c208d72770a75d85021d7d9a1ebb2e9c96e8a4d46cd48db0",
+              "observed_at": "2026-09-05T22:14:00.381Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 166,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-1/adk-2194/quoted.txt",
+              "input_sha256": "206c9569bbbd3d0ccc00f91c6ab3618b8f2c860097c81ce02b147e30398b51a6",
+              "original_markdown_trimmed_sha256": "f69ab9c93a0a626b724a12817929054e0f695cf8e835996e675fe7ed9c8d0bc6",
+              "observed_at": "2026-09-05T22:14:17.117Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 40,
+              "mixed_percent": 60,
+              "human_percent": 0,
+              "displayed_words": 184,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": "quoted",
+            "decision": "Updated quoted version"
+          }
+        }
+      ]
+    },
+    {
+      "id": "quote-transfer-2",
+      "design": "baseline_plain_fixed_body_quotation",
+      "case_selection": "Five questions selected before this cohort was scanned.",
+      "development_skill_sha256": "6c6ebceb6086c1f0fd9058c3b1f46f759b58a2dd0119b14ae9e87f1709dd3d53",
+      "cases": [
+        {
+          "key": "poetry-10430",
+          "discussion_url": "https://github.com/python-poetry/poetry/discussions/10430",
+          "owned_comment_url": "https://github.com/python-poetry/poetry/discussions/10430#discussioncomment-18307932",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-2/poetry-10430/baseline.txt",
+              "input_sha256": "7a81e91d9b8d2c297a5a92ebb27954ec06d51d123eae2463b743fd863b6019f5",
+              "original_markdown_trimmed_sha256": "11abab923997d2f4c38fc38f7610da0f7cd7443425dd469a8262868c2887a15c",
+              "observed_at": "2026-09-06T06:44:05.303Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 101,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-2/poetry-10430/plain.txt",
+              "input_sha256": "a794e2ac6d5f38e27d3528620d1422f1b20dc6126ca027ba4b7254f8c6815031",
+              "original_markdown_trimmed_sha256": "8f15fedea5fa8bb26b2c28e7cc9b6cf692063c612ac3904fa5f200e0b0904aa0",
+              "observed_at": "2026-09-06T06:50:08.865Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 107,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-2/poetry-10430/quoted.txt",
+              "input_sha256": "15a52f6647261fe87de3227cd3bd5faf2f7218de1886ed82abe62e105e76147b",
+              "original_markdown_trimmed_sha256": "dda3b2dd93373eeb30b6ce7f723996f84b0b6d30fd1b2dd51737346be35ca1b1",
+              "observed_at": "2026-09-06T06:50:20.385Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 118,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Kept existing answer"
+          }
+        },
+        {
+          "key": "qwen-1942",
+          "discussion_url": "https://github.com/QwenLM/qwen-code/discussions/1942",
+          "owned_comment_url": "https://github.com/QwenLM/qwen-code/discussions/1942#discussioncomment-18308350",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-2/qwen-1942/baseline.txt",
+              "input_sha256": "cabeebb008b446e2d860eb052ddb577054d85a0beb9e2fe9b604a33a2178e780",
+              "original_markdown_trimmed_sha256": "9af2ee7cca5bea77f51447a5d4359eeac82f9f057c38f1eb14b5066e1b3ee195",
+              "observed_at": "2026-09-06T06:44:26.660Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 139,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-2/qwen-1942/plain.txt",
+              "input_sha256": "f17f121c50ecb3cc782d5e002f9b4fd290dae3dfae889c9a09625e71739052bc",
+              "original_markdown_trimmed_sha256": "ab8117744cc1f3fca384f5d91bd8d0f834ca18dd2b26f3152f88f9c831b5dbe9",
+              "observed_at": "2026-09-06T06:50:53.918Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 127,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-2/qwen-1942/quoted.txt",
+              "input_sha256": "e15c8664191956f0b0e0d6227a2fcb3d794220d61ab99b3bfc01f7e1731e8792",
+              "original_markdown_trimmed_sha256": "fa936c181f6ba2666c37c79ecafe4932c3241769020bfc1c36a3497f11b87290",
+              "observed_at": "2026-09-06T06:51:08.164Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 1,
+              "mixed_percent": 99,
+              "human_percent": 0,
+              "displayed_words": 148,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "IMPROVED"
+          },
+          "publication": {
+            "variant": "quoted",
+            "decision": "Updated quoted version"
+          }
+        },
+        {
+          "key": "datasets-7351",
+          "discussion_url": "https://github.com/huggingface/datasets/discussions/7351",
+          "owned_comment_url": "https://github.com/huggingface/datasets/discussions/7351#discussioncomment-18308152",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-2/datasets-7351/baseline.txt",
+              "input_sha256": "72ffc5b5a5b092ba21ed5416eda45d2492869264cf5ec81523858791db5eee7d",
+              "original_markdown_trimmed_sha256": "711fdf66c8e89c72859989be4459e759445ee6f503620e28ec723b1cd9eebd90",
+              "observed_at": "2026-09-06T06:44:40.865Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 123,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-2/datasets-7351/plain.txt",
+              "input_sha256": "0eba8af8caf3770516ecdbf136b0b6050ac064b212ae791df7a64a2f298500b5",
+              "original_markdown_trimmed_sha256": "c64e5786cb1cc4b778d2e64c8732a4b2b95ef796d6ebb44c23386c29e00a6557",
+              "observed_at": "2026-09-06T06:53:31.916Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 113,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-2/datasets-7351/quoted.txt",
+              "input_sha256": "072c744cc84d257280602abda66026231f7d89e8d953479de9ed2e14166603aa",
+              "original_markdown_trimmed_sha256": "e154e1243398fc121a13454f9321bd784fa4bc688ca71b00bf82e19f830da893",
+              "observed_at": "2026-09-06T06:53:44.284Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 67,
+              "mixed_percent": 33,
+              "human_percent": 0,
+              "displayed_words": 127,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": "quoted",
+            "decision": "Updated quoted version"
+          }
+        },
+        {
+          "key": "open-webui-20233",
+          "discussion_url": "https://github.com/open-webui/open-webui/discussions/20233",
+          "owned_comment_url": "https://github.com/open-webui/open-webui/discussions/20233#discussioncomment-18308261",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-2/open-webui-20233/baseline.txt",
+              "input_sha256": "f74140439df45831a6a52e765a184f17695b45468aacb2e1e46cfb9dbb78f0a8",
+              "original_markdown_trimmed_sha256": "2b43cc304a12a83ef913170621e3f49bd4af3f30e0c94e2b8e7ee5e140661563",
+              "observed_at": "2026-09-06T06:44:53.949Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 131,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-2/open-webui-20233/plain.txt",
+              "input_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+              "original_markdown_trimmed_sha256": "1bf75dd0d31025f44b2a28cbe0a4b32294e5b34b56e6c8fcd171ed717df58dd3",
+              "observed_at": "2026-09-06T06:53:59.749Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 156,
+              "short_text_warning": false,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-2/open-webui-20233/quoted.txt",
+              "input_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+              "original_markdown_trimmed_sha256": "611e988a2cd9b7edc76ef777117a1687fab62f9e113935d788ef36ae50e0f47e",
+              "observed_at": "2026-09-06T06:54:14.781Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 93,
+              "mixed_percent": 7,
+              "human_percent": 0,
+              "displayed_words": 172,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "EQUIVALENT",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "EQUIVALENT"
+          },
+          "publication": {
+            "variant": "quoted",
+            "decision": "Updated quoted version"
+          }
+        },
+        {
+          "key": "adk-1956",
+          "discussion_url": "https://github.com/google/adk-python/discussions/1956",
+          "owned_comment_url": "https://github.com/google/adk-python/discussions/1956#discussioncomment-18308024",
+          "scans": {
+            "baseline": {
+              "input": "studies/inputs/quote-transfer-2/adk-1956/baseline.txt",
+              "input_sha256": "6044afc323be77ee379fc5b37a4b8cce5401e9eacf7f4b1a08d8d3553785c279",
+              "original_markdown_trimmed_sha256": "52d23a5429f5b5d2ad1e4471d5d1f426f529fd97a8e5385e0f0989e6f81f3da9",
+              "observed_at": "2026-09-06T06:45:12.733Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 82,
+              "short_text_warning": true,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "plain": {
+              "input": "studies/inputs/quote-transfer-2/adk-1956/plain.txt",
+              "input_sha256": "c8890dbac9417c6332075b94abc7cb9e731884fbdc2f02b26c002aa36c40cc37",
+              "original_markdown_trimmed_sha256": "e6cc3b90412994300c74263615696b0279c5fb87b691b0f4a1d0fc103d264ef7",
+              "observed_at": "2026-09-06T06:54:27.921Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 78,
+              "short_text_warning": true,
+              "added_asker_quotation": false,
+              "capture_provenance": "submitted_and_editor"
+            },
+            "quoted": {
+              "input": "studies/inputs/quote-transfer-2/adk-1956/quoted.txt",
+              "input_sha256": "5fb75dfbe8a534fdaae3308377fd593f1d2d1e2a84893e1bd1307249288254da",
+              "original_markdown_trimmed_sha256": "ecbc0aeb57025a9f37b19a9ebeef4e438c60f836cf349a638a899842b04e5a25",
+              "observed_at": "2026-09-06T06:54:42.590Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 84,
+              "short_text_warning": true,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "plain_technical": "PASS",
+            "plain_prose": "IMPROVED",
+            "quoted_technical": "PASS",
+            "quoted_prose": "EQUIVALENT",
+            "quoted_comparator": "plain",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true,
+            "quoted_prose_vs_baseline": "IMPROVED"
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Kept existing answer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new-answers",
+      "design": "unpaired_final_text",
+      "case_selection": "553, 231 and 287 selected before initial scans; 285 added afterward. No original or unquoted control.",
+      "cases": [
+        {
+          "key": "mattpocock-553",
+          "discussion_url": "https://github.com/mattpocock/skills/discussions/553",
+          "owned_comment_url": null,
+          "scans": {
+            "final": {
+              "input": "studies/inputs/new-answers/mattpocock-553/final.txt",
+              "input_sha256": "16a57cffc425fd165412fb078153ea90428ac6358af072fda296d0a7fafea4f8",
+              "original_markdown_trimmed_sha256": "9033ed671ddc1a3742b1fb318cd2fa24ecf7ba10b29c8924990630536e92b482",
+              "observed_at": "2026-09-06T07:05:49.279Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 136,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "final_technical": "PASS",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Held: AI confidence 100%"
+          }
+        },
+        {
+          "key": "mattpocock-231",
+          "discussion_url": "https://github.com/mattpocock/skills/discussions/231",
+          "owned_comment_url": "https://github.com/mattpocock/skills/discussions/231#discussioncomment-18313297",
+          "scans": {
+            "final": {
+              "input": "studies/inputs/new-answers/mattpocock-231/final.txt",
+              "input_sha256": "83ae051eb9e0b9a9847f91273066b4565697ba5f61bd452add878d3d9816acac",
+              "original_markdown_trimmed_sha256": "31afe15d072f037edbcad4bcd68f0d95df1c3ee4df0a3492347f5d639e7fc812",
+              "observed_at": "2026-09-06T07:06:22.016Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 93,
+              "mixed_percent": 7,
+              "human_percent": 0,
+              "displayed_words": 137,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "final_technical": "PASS",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": "final",
+            "decision": "Published and independently verified"
+          }
+        },
+        {
+          "key": "mattpocock-287",
+          "discussion_url": "https://github.com/mattpocock/skills/discussions/287",
+          "owned_comment_url": null,
+          "scans": {
+            "final": {
+              "input": "studies/inputs/new-answers/mattpocock-287/final.txt",
+              "input_sha256": "2b46742d8ed623be6e74c982c58d8c70f154b825a5715c3b418a659f7019d9b8",
+              "original_markdown_trimmed_sha256": "1ce12f4bc3db8bea4776a888c37791249411ca1cb979ddc9d83c9997478057c4",
+              "observed_at": "2026-09-06T07:05:35.853Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 100,
+              "mixed_percent": 0,
+              "human_percent": 0,
+              "displayed_words": 126,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "final_technical": "PASS",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": null,
+            "decision": "Held: AI confidence 100%"
+          }
+        },
+        {
+          "key": "mattpocock-285",
+          "discussion_url": "https://github.com/mattpocock/skills/discussions/285",
+          "owned_comment_url": "https://github.com/mattpocock/skills/discussions/285#discussioncomment-18313327",
+          "scans": {
+            "final": {
+              "input": "studies/inputs/new-answers/mattpocock-285/final.txt",
+              "input_sha256": "64c712c3ad3d3e3bae0b425203f3221ad9077c4bc0e25f4967c03509e5635127",
+              "original_markdown_trimmed_sha256": "58e2e0ccfc2744a29fb018fd11f0ed4e353e63ea033aa3dca3dc19d28f28ff60",
+              "observed_at": "2026-09-06T07:09:52.792Z",
+              "service": "GPTZero",
+              "mode": "Basic Scan",
+              "model": "4.9b",
+              "ai_percent": 11,
+              "mixed_percent": 89,
+              "human_percent": 0,
+              "displayed_words": 140,
+              "short_text_warning": false,
+              "added_asker_quotation": true,
+              "capture_provenance": "submitted_and_editor"
+            }
+          },
+          "quality": {
+            "final_technical": "PASS",
+            "reviewer_type": "separate_llm_agent",
+            "detector_scores_withheld": true
+          },
+          "publication": {
+            "variant": "final",
+            "decision": "Published and independently verified"
+          }
+        }
+      ]
+    }
+  ],
+  "expected_summary": {
+    "questions": 19,
+    "scans": 44,
+    "plain_comparisons": 15,
+    "plain_reductions": 0,
+    "quotation_comparisons": 10,
+    "quotation_reductions": 5,
+    "unpaired_final_texts": 4,
+    "unpaired_below_100": 2,
+    "plain_prose_improved": 8,
+    "plain_prose_equivalent": 7,
+    "short_text_warnings": 5
+  }
+}

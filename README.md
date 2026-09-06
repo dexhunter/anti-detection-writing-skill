@@ -2,15 +2,15 @@
 
 Polish AI-written text for smoother flow, clearer meaning, and a natural voice. Use it for replies, emails, articles, and documentation. When requested, test the edits with GPTZero and work toward lower AI-detection scores while preserving facts, qualifications, and the writer's intended meaning.
 
-**The goals are better readability for people and lower detector scores.** Current evidence is experimental and comes from technical discussion answers: plain rewriting lowered scores in 0 of 15 questions; adding a relevant asker quotation to a fixed answer lowered them in 5 of 10 comparisons. All failures are included. The skill does not guarantee a detector result, and broader writing genres have not been benchmarked.
+**The goals are better readability for people and lower detector scores.** The [showcase](docs/case-studies.md) contains measured reductions with exact before/after inputs. [When the skill may not help](docs/when-it-may-not-help.md) covers unchanged scores, rejected edits, and untested formats. Results are experimental; the skill does not guarantee a detector outcome.
 
 ## What you get
 
 - [`anti-detection-writing`](skills/anti-detection-writing/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
-- [Case studies](docs/case-studies.md) covering successful, unchanged, and rejected outcomes; [methodology](docs/methodology.md) and [44 exact editor inputs](studies/results.json) for the complete cohorts and new answers.
+- A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
 - An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
 
-The discussion-focused development revision added explicit prerequisite/exception placement and a final claim reconciliation, informed by [four other writing skills](docs/related-skills.md). In a [six-question comparison](studies/unseen-transfer-1/README.md), one separate LLM reviewer preferred that revision twice, the original once, and judged three equivalent; all twelve answers passed technical review. GPTZero measurement is pending available scan allowance. This public release broadens the wording to other writing formats; the historical results do not establish its detector effect.
+The editing workflow draws on [four other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately; its detector measurements remain pending.
 
 The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs the text and its intended audience; factual corrections need supporting sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
 
@@ -34,22 +34,23 @@ For a requested measurement, add:
 
 > Also test the original and final text using GPTZero Basic Scan. Aim for lower AI confidence without sacrificing clarity or accuracy. Record all three confidences, the model, exact inputs, and warnings. Keep unchanged and worse results.
 
-## Observed results
+## Showcase
 
-These are small convenience samples from September 5–6, 2026, using GPTZero Basic Scan, displayed Model 4.9b. They document development of the workflow, rather than a prospective benchmark of the packaged skill.
+Five reviewed examples recorded lower GPTZero AI confidence during development. In each pair, one relevant asker quotation was added to the unchanged answer body. Both scans used **Basic Scan, Model 4.9b**.
 
-| Cohort | Questions | Plain-rewrite reductions | Fixed-body quotation reductions | Scans |
-| --- | ---: | ---: | ---: | ---: |
-| Initial plain pilot | 5 | 0/5 | — | 10 |
-| First quotation transfer | 5 | 0/5 | 2/5 | 15 |
-| Second quotation transfer | 5 | 0/5 | 3/5 | 15 |
-| New answers, no baseline | 4 | Not measured | Not measured | 4 |
+| Example | Before AI | After AI |
+| --- | ---: | ---: |
+| [Qwen Code #1942](https://github.com/QwenLM/qwen-code/discussions/1942) | 100% | 1% |
+| [Google ADK #2194](https://github.com/google/adk-python/discussions/2194) | 100% | 40% |
+| [Datasets #7351](https://github.com/huggingface/datasets/discussions/7351) | 100% | 67% |
+| [Open WebUI #19736](https://github.com/open-webui/open-webui/discussions/19736) | 100% | 93% |
+| [Open WebUI #20233](https://github.com/open-webui/open-webui/discussions/20233) | 100% | 93% |
 
-Separate LLM reviews rated 8 of the 15 plain revisions improved and 7 equivalent, with all passing technical review. Four later new answers scored 100, 93, 100, and 11% AI. Two met that user's below-100 condition and were published; those unpaired scores are **not reductions**.
+See the [full showcase](docs/case-studies.md) for exact inputs, all three confidences, and what each example preserves. These are five reductions from ten quotation comparisons, not a general success-rate estimate. The 1% AI result was **99% mixed and 0% human**. All results are maintainer-observed UI measurements; they do not establish human authorship or the effect of rewriting alone.
 
-The largest change was **100% AI → 1% AI, 99% mixed, 0% human** after adding a relevant quotation. Those values describe the detector's document classification confidence, not the proportion written by a person. Adding a quotation changes content and length; these observations establish neither a general success rate nor the cause of the change. A 43% candidate with incorrect advice was rejected; its corrected replacement scored 60%.
+## When the skill may not help
 
-The records are maintainer-observed UI results, not authenticated service exports. Hashes make the distributed input files checkable; they do not independently establish the scores. The work lacks independent human ratings, repeatability estimates, and measurements of answer acceptance. See the [complete limits and exploratory attempts](docs/methodology.md).
+Plain rewriting did not reduce scores in the 15-question development sample, even where separate LLM review found clearer prose. Five of ten quotation comparisons also stayed unchanged. Short technical replies, unsupported factual changes, and formats without paired measurements need particular care. The [limitations guide](docs/when-it-may-not-help.md) provides concrete cases and next steps; the [methodology](docs/methodology.md) and complete dataset retain every result.
 
 ## Local checks
 

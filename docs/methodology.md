@@ -2,7 +2,7 @@
 
 This is a retrospective record of developing an answer-editing workflow on September 5–6, 2026. The packaged skill is a portable consolidation of lessons, not the unchanged intervention used in every trial. No new detector scans were run to prepare this repository.
 
-This document describes the original 44-scan study. The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) keeps its inputs and outcomes separate; its GPTZero measurements are pending available scan allowance.
+This document describes the original 44-scan study. The [showcase](case-studies.md) selects only paired, quality-passing reductions; [when the skill may not help](when-it-may-not-help.md) covers unchanged, rejected, unpaired, and unmeasured outcomes. The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) keeps its inputs and outcomes separate; its GPTZero measurements are pending available scan allowance.
 
 ## Included observations
 
@@ -26,7 +26,7 @@ Raw browser snapshots, account quotas, detector document IDs, local paths, compl
 
 Earlier adaptive work on ADK #1742 produced multiple unchanged prose rewrites. Version 8 scored 43% AI but failed technical review because it overpromised duplicate-email prevention. Version 9 corrected that wording, passed at 60%, and was published. Its source qualifications and optional detail also changed, so this is not a fixed-body quotation test or complete preservation of every earlier claim. No cloud deployment was exercised.
 
-A later follow-up to the initial five-case pilot tested six alternate structures across three questions, one observation-led revision, and two formatting controls; all stayed at 100%. A fixed-body quotation pilot on Poetry #10095 scored 94%, while the reserved ADK #1513 check stayed at 100%. That follow-up recorded eleven valid scans and one invalid input-corruption attempt, which was repaired. Its adaptive design is distinct from the ten fresh quotation-transfer cases. These exploratory inputs are summarized in the case studies but are not included in the 44-file primary dataset. Their exclusion from the primary denominator must not be read as an absence of further failures.
+A later follow-up to the initial five-case pilot tested six alternate structures across three questions, one observation-led revision, and two formatting controls; all stayed at 100%. A fixed-body quotation pilot on Poetry #10095 scored 94%, while the reserved ADK #1513 check stayed at 100%. That follow-up recorded eleven valid scans and one invalid input-corruption attempt, which was repaired. Its adaptive design is distinct from the ten fresh quotation-transfer cases. These exploratory inputs are summarized here but are not included in the 44-file primary dataset or the primary showcase. Their exclusion from the primary denominator must not be read as an absence of further failures.
 
 ## Limits
 

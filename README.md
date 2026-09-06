@@ -4,16 +4,6 @@ Polish AI-written text for smoother flow, clearer meaning, and a natural voice. 
 
 **The goals are better readability for people and lower detector scores.** The [showcase](docs/case-studies.md) contains measured reductions with exact before/after inputs. [When the skill may not help](docs/when-it-may-not-help.md) covers unchanged scores, rejected edits, and untested formats. Results are experimental; the skill does not guarantee a detector outcome.
 
-## What you get
-
-- [`anti-detection-writing`](skills/anti-detection-writing/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
-- A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
-- An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
-
-The editing workflow draws on [four other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately; its detector measurements remain pending.
-
-The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs the text and its intended audience; factual corrections need supporting sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
-
 ## Install
 
 Install from GitHub:
@@ -34,6 +24,16 @@ For a requested measurement, add:
 
 > Also test the original and final text using GPTZero Basic Scan. Aim for lower AI confidence without sacrificing clarity or accuracy. Record all three confidences, the model, exact inputs, and warnings. Keep unchanged and worse results.
 
+## What you get
+
+- [`anti-detection-writing`](skills/anti-detection-writing/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
+- A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
+- An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
+
+The editing workflow draws on [four other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately; its detector measurements remain pending.
+
+The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs the text and its intended audience; factual corrections need supporting sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
+
 ## Showcase
 
 Five reviewed examples recorded lower GPTZero AI confidence during development. In each pair, one relevant asker quotation was added to the unchanged answer body. Both scans used **Basic Scan, Model 4.9b**.
@@ -51,6 +51,14 @@ See the [full showcase](docs/case-studies.md) for exact inputs, all three confid
 ## When the skill may not help
 
 Plain rewriting did not reduce scores in the 15-question development sample, even where separate LLM review found clearer prose. Five of ten quotation comparisons also stayed unchanged. Short technical replies, unsupported factual changes, and formats without paired measurements need particular care. The [limitations guide](docs/when-it-may-not-help.md) provides concrete cases and next steps; the [methodology](docs/methodology.md) and complete dataset retain every result.
+
+## Community
+
+[Start here](https://github.com/dexhunter/anti-detection-writing-skill/discussions/1) for installation and your first example. The [reporting guide](https://github.com/dexhunter/anti-detection-writing-skill/discussions/2) explains how to share a useful writing or detector result.
+
+[Ask a question](https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/q-a), [share a measured success](https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/showcase), or [report where the skill falls short](https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/results-and-limitations). [Ideas](https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/ideas) is the place for a concrete editing improvement or a proposed experiment.
+
+Start with one short text and tell us the intended reader, your agent, and what changed. Detector access is optional for writing feedback. Read [CONTRIBUTING.md](CONTRIBUTING.md) for help choosing the right place and sharing useful evidence.
 
 ## Local checks
 

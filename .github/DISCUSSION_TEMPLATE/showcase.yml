@@ -1,0 +1,50 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share a measured score reduction that preserves accuracy and readability. Include a saved before-text and comparable completed scans of both versions. A low final score alone does not show a reduction.
+
+        Use [Results and limitations](https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/results-and-limitations) for unchanged, worse, rejected, unpaired, or unmeasured outcomes.
+
+        Share only non-sensitive text and evidence you have permission to publish. Do not post credentials or private detector account links. If the scanned text cannot be shared, describe the limitation in Results and limitations instead.
+  - type: textarea
+    id: before
+    attributes:
+      label: Before text
+      description: Paste or link the exact original detector input, including code and quotations. An excerpt from a longer scanned document is not the full input.
+    validations:
+      required: true
+  - type: textarea
+    id: after
+    attributes:
+      label: After text
+      description: Paste or link the exact revised detector input. It must match the version that passed review.
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: What changed, and which skill version did you use?
+      description: Name the skill commit or saved version, writing agent/model, and editing change. Identify added quotations or length changes separately from rewriting. Report every attempt and the number of cases tested.
+    validations:
+      required: true
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Paired scan results
+      description: Use the same service, mode, and displayed model for both completed scans. Include dates, all three confidences, warnings, and shareable evidence with account details removed. If the service does not display a field, say so.
+      placeholder: |
+        Service, mode, and displayed detector model:
+        Before: date/time; AI %; mixed %; human %; displayed length; warnings
+        After: date/time; AI %; mixed %; human %; displayed length; warnings
+        Confirmation that the effective editor text matched each saved input:
+        Evidence and any differences in test conditions:
+    validations:
+      required: true
+  - type: textarea
+    id: review
+    attributes:
+      label: Accuracy and readability review
+      description: Explain which facts, qualifications, code, and meaning were checked and whether readability improved or stayed equivalent. Identify the reviewer as human or LLM, whether they were separate from the writer, and whether they saw detector scores. Record any corrections or omissions.
+    validations:
+      required: true

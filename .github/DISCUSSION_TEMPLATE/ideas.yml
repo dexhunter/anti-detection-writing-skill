@@ -1,0 +1,24 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a concrete improvement to editing, review, measurement, or documentation. Share only non-sensitive excerpts you have permission to publish; leave out credentials and private account links.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Name the reader or workflow affected and give a small example if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you change?
+      description: Describe the editing rule, workflow, or documentation change and how it would help.
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: How could we check whether it helps?
+      description: Optional. Suggest a quality check or a small comparison. Detector testing is not required to propose an idea.

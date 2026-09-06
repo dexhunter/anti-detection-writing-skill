@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Installation and usage questions
+    url: https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/q-a
+    about: Ask the community for help using the skill.
+  - name: Results and limitations
+    url: https://github.com/dexhunter/anti-detection-writing-skill/discussions/categories/results-and-limitations
+    about: Share writing feedback or detector results, including unchanged and unmeasured outcomes.

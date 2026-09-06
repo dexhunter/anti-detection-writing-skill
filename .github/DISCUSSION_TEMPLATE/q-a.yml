@@ -1,0 +1,25 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask about installing or using the skill. Share only non-sensitive excerpts you have permission to publish; leave out credentials and private account links.
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe what you want to do and where you got stuck.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Agent and installation method
+      description: Include the agent, how you installed the skill, and versions if known. Say "not installed yet" if you are getting started.
+      placeholder: "Codex; installed with the skills CLI; version or commit if known"
+    validations:
+      required: true
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What have you tried?
+      description: Optional. Include a small example, relevant command, or error message that helps explain the problem.

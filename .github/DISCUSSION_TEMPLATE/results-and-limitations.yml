@@ -1,0 +1,37 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share what happened when you tried the skill. Unchanged scores, worse results, rejected edits, and readability observations without detector testing are useful here. No scan or paid account is required.
+
+        Share only non-sensitive excerpts you have permission to publish; leave out credentials and private account links. Label excerpts, redactions, and unavailable evidence so readers know what was actually tested.
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What did you observe?
+      options:
+        - "Readability feedback; detector not measured"
+        - "Detector score unchanged"
+        - "Detector score increased"
+        - "Lower score, but quality failed review"
+        - "Unpaired or incomplete measurement"
+        - "Another outcome or limitation"
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: What worked or did not work?
+      description: Describe the writing task, intended reader, and what you noticed. Include the skill version and agent/model if known. Separate observed results from possible explanations.
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Text and editing changes
+      description: Optional. Share the before/after text or a small example, identify what changed, and note any lost meaning or clarity. Keep all attempts if you tried several revisions.
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Detector details, if measured
+      description: Optional. Give the service, mode, displayed model, dates, AI/mixed/human confidences, warnings, and whether scans used comparable conditions. Say when a baseline, field, or exact input is missing. No detector test is needed for readability feedback.

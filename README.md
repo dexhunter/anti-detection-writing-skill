@@ -32,6 +32,8 @@ For a requested measurement, add:
 
 The editing workflow draws on [four other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately; its detector measurements remain pending.
 
+For systematic skill improvement, the [bounded autoresearch workflow](docs/autoresearch.md) separates proposals, candidate selection, quality review and detector confirmation. Its resumable local controller preserves failures and reserves evaluation budget; an active agent supplies subagents and supported browser operations.
+
 The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs the text and its intended audience; factual corrections need supporting sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
 
 ## Showcase

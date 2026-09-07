@@ -28,6 +28,8 @@ Make AI-written prose easier and more natural to read while preserving its meani
 
 Read [measurement instructions](references/measurement.md) before live scanning and [evidence limits](references/evidence.md) before interpreting results. Use the user's requested service, mode, and supported browser tools. This skill supplies no browser controls and does not authorize subscriptions, paid scans, public posting, or new account access.
 
+When the user explicitly asks for an autoresearch workflow to improve this skill, read the [bounded research workflow](references/autoresearch.md). It separates skill proposals, preference-based selection, quality review and measured confirmation; ordinary writing does not need this workflow.
+
 For a comparison, select cases and candidates before seeing scores. Record fresh baseline and candidate scans using the same service, mode, and displayed model. Retain failures and unchanged results. Compare a fixed body with a relevant quotation separately from prose rewriting; track content and length changes. Distinguish first-pass trials from adaptive iterations.
 
 Confirm the effective editor text, completed scan, fresh-result indicator, model, all classification confidences, timestamp, and warnings. Save exact inputs and private visible evidence. A stale displayed number is not a result for changed text. Never omit code or pad a short answer to satisfy a detector.

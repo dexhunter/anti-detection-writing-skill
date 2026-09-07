@@ -14,4 +14,6 @@ The supplied strict receipt checker accepts only verbatim plain-text entry, apar
 
 For a quotation comparison, write and review the plain answer first, choose one short useful excerpt before scores, then hold the body fixed. Record the added words and retain unchanged outcomes. Prose edits and quotations are different interventions. Do not rotate excerpts or add unrelated material to lower a score.
 
+When an isolated decrease drives the next experiment, a bounded repeat of the exact fixed inputs can check an unresolved measurement assumption before another rewrite. Freeze the repeated inputs, order and complete pair budget before scanning, and retain earlier and new observations separately. Matching scores do not distinguish deterministic scoring from caching, establish a success rate, or validate a new skill. Repeating an edit without its original does not repeat the original-to-edit comparison.
+
 Before sharing study artifacts, export only an allowlist of public fields. Remove session/document URLs, account details, credentials, quota UI, local paths, and unnecessary copies of other people's questions. Attribute necessary short excerpts. State whether the scores are observed UI records or authenticated service exports; do not imply one is the other.

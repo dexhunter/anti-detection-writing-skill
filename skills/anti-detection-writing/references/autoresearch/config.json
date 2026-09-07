@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "max_candidates": 3,
+  "max_rounds": 1,
+  "max_detector_calls": 8,
+  "max_detector_words": 1200,
+  "reserved_confirmation_calls": 4,
+  "reserved_confirmation_words": 500,
+  "max_elapsed_seconds": 2700,
+  "min_development_pairs": 2,
+  "min_holdout_pairs": 2,
+  "primary_detector": "gptzero",
+  "min_mean_ai_reduction": 5,
+  "max_case_regression": 0
+}

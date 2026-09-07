@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-07T11:41:42.142209+00:00",
+  "kind": "adaptive same-input detector-repeatability diagnostic",
+  "question": "Do fresh Basic 4.9b observations retain the ordering and scores of the prior 91-percent incumbent and 100-percent rejected candidate?",
+  "selection_limitation": "This case was selected after its prior result was known. The diagnostic assesses two observations per fixed text over time; it does not estimate a stable detector error distribution, causal writing-rule effect, transfer, human authorship, or general success rate.",
+  "detector": {
+    "service": "gptzero",
+    "mode": "Basic Scan",
+    "displayed_model": "4.9b",
+    "session": "user signed-in Chrome"
+  },
+  "inputs": [
+    {
+      "arm": "incumbent",
+      "path": "../autoresearch-controls-1/inputs/python-baseline.txt",
+      "sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89"
+    },
+    {
+      "arm": "rejected_candidate",
+      "path": "../autoresearch-controls-1/inputs/python-candidate.txt",
+      "sha256": "57f26919140f592aa890a3fd7b21f0c4310f3eb3248e2c9bb4e9eb12810e8e07"
+    }
+  ],
+  "order_seed": 5019302939506407517,
+  "frozen_order": [
+    "incumbent",
+    "rejected_candidate"
+  ],
+  "quality_review": "../autoresearch-controls-1/quality-review.json",
+  "quality_review_sha256": "be082d8b71cf4021a12e4030948519e807ed986cae0f34d47fbfd8e376cf8c98",
+  "max_new_calls": 2,
+  "max_new_words": 270,
+  "entry_transform": "Source minus at most one terminal LF; retain literal submission and verify effective editor bytes separately. The prior Code Block wrapper added exactly three LF characters. Stop before submission if the current transform changes substantive text.",
+  "completion_rule": "Complete both scans regardless of the first score. Stop dependent submissions only for hash/quality/mode/model mismatch, insufficient full-pair allowance, account or quota change, or unreconciled failure. A timeout must be reconciled without resubmitting. Preserve every failure and partial pair.",
+  "decision": "This diagnostic cannot promote a writing rule or unlock prior holdouts under any outcome. Use it only to identify whether same-input variation is an unresolved limitation before future adequately funded experiments."
+}

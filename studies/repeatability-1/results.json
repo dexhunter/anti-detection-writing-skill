@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "exact_scores_repeated_for_both_fixed_texts",
+  "observations": [
+    {
+      "arm": "incumbent",
+      "input_sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89",
+      "prior": {
+        "ai": 91,
+        "mixed": 9,
+        "human": 0
+      },
+      "repeat": {
+        "detector": "gptzero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "observed_at": "2026-09-07T11:44:17.764Z",
+        "ai": 91.0,
+        "mixed": 9.0,
+        "human": 0.0,
+        "ai_assisted": null,
+        "input_sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89",
+        "unit": "document_confidence_percent",
+        "label": null,
+        "short_text_warning": false,
+        "warnings": [],
+        "artifact_sha256": "d0214dc63bf969f91c0568d1b14619bb408b77dd54b04242b19a5a8dac1febc7"
+      },
+      "words": 129
+    },
+    {
+      "arm": "rejected_candidate",
+      "input_sha256": "57f26919140f592aa890a3fd7b21f0c4310f3eb3248e2c9bb4e9eb12810e8e07",
+      "prior": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "repeat": {
+        "detector": "gptzero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "observed_at": "2026-09-07T11:45:15.990Z",
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0,
+        "ai_assisted": null,
+        "input_sha256": "57f26919140f592aa890a3fd7b21f0c4310f3eb3248e2c9bb4e9eb12810e8e07",
+        "unit": "document_confidence_percent",
+        "label": null,
+        "short_text_warning": false,
+        "warnings": [],
+        "artifact_sha256": "80b4f5caabe6b3c6abbb7e75f3c9129f65a523364f36dd4889da507c862da9a2"
+      },
+      "words": 125
+    }
+  ],
+  "new_calls": 2,
+  "new_words": 254,
+  "difference_incumbent_minus_candidate": -9,
+  "writing_skill_promoted": false,
+  "holdouts_opened": false,
+  "claim": "Two observations per fixed text agree; no new writing-rule improvement, general reliability, or transfer is established."
+}

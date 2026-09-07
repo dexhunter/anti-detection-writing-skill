@@ -1,0 +1,268 @@
+{
+  "review_type": "Separate score-blind LLM reviews, not human preference",
+  "main": {
+    "reviewer": "round2-quality-judge",
+    "detector_scores_withheld": true,
+    "cases": [
+      {
+        "id": "github-actions-concurrency",
+        "answers": {
+          "A": {
+            "sha256": "0da35c24dde21161b031817be59dc97c333ffd56b482a8e357d8d0eaed0b54f1",
+            "pass": true,
+            "claims_preserved": true,
+            "protected_preserved": true,
+            "findings": [
+              "G-C1: Active-run protection is expressly limited to the concurrency setting. G-C2: The default single pending slot and replacement on arrival are preserved. G-C3: The same-group and same-repository scope is explicit in the opening paragraph.",
+              "G-C4: The maximum queue holds 100 pending runs and rejects further arrivals by cancellation. G-C5: Retained runs are processed by when they started waiting; dispatch order is not promised. G-C6: The recommended maximum queue retains false, and maximum queue plus true is identified as a validation error.",
+              "G-C7: The default-queue paragraph explains cancellation of the active run with true. G-C8: The answer explicitly denies a guarantee that every waiting run executes. Explicit false is recommended in the user's existing configuration without claiming omission is invalid.",
+              "Actual action: use queue: max while retaining cancel-in-progress: false for this shared group. Limits: repository and group scope, 100 pending runs, cancellation beyond capacity, and waiting-start order. Every protected span retains its exact bytes and at least the original occurrence count. No factual objection, unsupported addition, excessive certainty, or meaningful regression from the original. The answer is relevant, readable, and professional."
+            ]
+          },
+          "B": {
+            "sha256": "d38191b03bd724e00e5e1085658c796f8d2cfc9c821b6d3287133b15741ea8e1",
+            "pass": true,
+            "claims_preserved": true,
+            "protected_preserved": true,
+            "findings": [
+              "G-C1: Protection concerns cancellation by a new arrival under this setting, without promising general completion. G-C2: The default single pending slot and replacement on arrival are preserved. G-C3: The same-group and same-repository condition appears in the opening clause.",
+              "G-C4: The maximum queue holds 100 pending runs and cancels arrivals when full. G-C5: Retained queued runs are processed by when they begin waiting; dispatch order can differ. G-C6: The maximum-queue action retains false and directly explains the validation failure with true.",
+              "G-C7: Active-run cancellation with true is explicitly limited to the default queue. G-C8: The answer immediately says that false does not guarantee every waiting run executes. Keeping explicit false is a valid recommendation, not a claim that omission is invalid.",
+              "Actual action: set queue: max and keep cancel-in-progress: false for this shared group. Limits: repository and group scope, 100 pending runs, cancellation beyond capacity, and waiting-start order. Every protected span retains its exact bytes and original occurrence count. No factual objection, unsupported addition, excessive certainty, or meaningful regression from the original. The answer is relevant, readable, and professional."
+            ]
+          }
+        },
+        "preference": "tie",
+        "reason": "Both answers make the same configuration and operational limits easy to recover. B puts the scope and lack of a guarantee earlier and separates ordering into its own paragraph; A clearly separates active-run behavior from pending-run behavior and explicitly limits protection to this setting. Each keeps the compatible settings together and names retained runs unambiguously. These are equally useful organizational alternatives; neither has a concrete meaningful advantage in usability, readability, or precision."
+      },
+      {
+        "id": "python-taskgroup",
+        "answers": {
+          "A": {
+            "sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89",
+            "pass": true,
+            "claims_preserved": true,
+            "protected_preserved": true,
+            "findings": [
+              "P-C1: An ordinary child failure cancels the remaining children. P-C2: All children finish before non-cancellation failures are raised together, using ExceptionGroup when all are ordinary exceptions. Cancellation is not postponed until that reporting step.",
+              "P-C3: Cleanup belongs in child try/finally blocks, and CancelledError arrives at the next opportunity. P-C4: Explicitly caught cancellation should generally be re-raised after cleanup; interference from swallowing it is preserved without an absolute prohibition. P-C5: The exception to sibling cancellation is specifically a child's CancelledError alone.",
+              "P-C6: BaseExceptionGroup is retained when required. P-C7: KeyboardInterrupt and SystemExit cause cancellation and waiting, followed by re-raising the original exception. P-C8: No new tasks may be added after the first non-cancellation failure. P-C9: Python 3.11 or later appears with the API introduction.",
+              "Actual action: use TaskGroup on Python 3.11 or later and put child cleanup in try/finally, generally propagating caught cancellation afterward. Limits: cancellation is delivered at the next opportunity, errors are raised only after children finish, individual child cancellation is not the failure trigger, and special base exceptions are re-raised. Every protected span retains its exact bytes and original occurrence count. No guaranteed deadline, unsupported addition, factual objection, or meaningful regression from the original. The answer is relevant, readable, and professional."
+            ]
+          },
+          "B": {
+            "sha256": "57f26919140f592aa890a3fd7b21f0c4310f3eb3248e2c9bb4e9eb12810e8e07",
+            "pass": true,
+            "claims_preserved": true,
+            "protected_preserved": true,
+            "findings": [
+              "P-C1: An ordinary child failure requests cancellation of the remaining children. P-C2: Every child finishes before the collected non-cancellation failures are raised to the caller, using ExceptionGroup when all are ordinary exceptions. Requesting cancellation and later reporting failures remain distinct.",
+              "P-C3: CancelledError arrives at the next opportunity and each child's cleanup belongs in try/finally. P-C4: Explicitly caught cancellation should generally be re-raised after cleanup; swallowing it can interfere with the group. The qualification generally remains. P-C5: A child's CancelledError alone is explicitly excluded as a sibling-cancellation trigger.",
+              "P-C6: BaseExceptionGroup is retained when required. P-C7: KeyboardInterrupt and SystemExit cause cancellation and waiting, followed by re-raising the original exception. P-C8: No tasks can be added after the first non-cancellation failure. P-C9: Python 3.11 or later appears with the API introduction.",
+              "Actual action: use TaskGroup on Python 3.11 or later and put child cleanup in try/finally, generally propagating caught cancellation afterward. Limits: cancellation is requested and delivered at the next opportunity, errors are raised only after children finish, individual child cancellation is not the failure trigger, and special base exceptions are re-raised. Every protected span retains its exact bytes and original occurrence count. No guaranteed deadline, unsupported addition, factual objection, or meaningful regression from the original. The answer is relevant, readable, and professional."
+            ]
+          }
+        },
+        "preference": "tie",
+        "reason": "Both answers put the Python prerequisite, failure trigger, and child-cancellation exception together; both distinguish cleanup from later error reporting. B's requests cancellation is slightly more explicit in isolation, but A immediately supplies the same next-opportunity qualification in the cleanup paragraph. A's two reporting sentences and B's single reporting sentence are equally clear. Both make the same action and limits recoverable without a concrete meaningful difference in usability, readability, or precision."
+      }
+    ]
+  },
+  "main_label_mapping": {
+    "github-actions-concurrency": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "python-taskgroup": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  "diagnostic": {
+    "reviewer": "round2-quality-judge",
+    "review_type": "separate LLM source-to-edit diagnostic",
+    "diagnostic_only": true,
+    "does_not_amend_round_verdict": true,
+    "detector_scores_withheld": true,
+    "case_id": "python-taskgroup",
+    "original_pass": true,
+    "final_pass": true,
+    "original_sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+    "final_sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89",
+    "original_claims_preserved": true,
+    "final_claims_preserved": true,
+    "original_protected_preserved": true,
+    "final_protected_preserved": true,
+    "claim_checks": [
+      {
+        "id": "P-C1",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both state that an ordinary child failure such as ValueError causes cancellation of the remaining children."
+      },
+      {
+        "id": "P-C2",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both report ordinary non-cancellation failures together in ExceptionGroup after all children finish. In the original, This refers to failure reporting in the preceding sentence; it is indirect but does not establish a factual error. The final names waiting before reporting explicitly."
+      },
+      {
+        "id": "P-C3",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both place cleanup in child try/finally and say CancelledError is raised at the next opportunity; the cleanup paragraph is unchanged."
+      },
+      {
+        "id": "P-C4",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both preserve generally re-raise after cleanup and the warning that swallowing cancellation can interfere with TaskGroup. Neither turns the recommendation into an absolute ban."
+      },
+      {
+        "id": "P-C5",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both limit the exception to a child's CancelledError alone, without generalizing it to external group cancellation. The final places this qualification beside the ordinary-failure trigger."
+      },
+      {
+        "id": "P-C6",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both retain BaseExceptionGroup when the collected failures require it. The final places the group types together."
+      },
+      {
+        "id": "P-C7",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both preserve cancellation and waiting followed by re-raising the original KeyboardInterrupt or SystemExit instead of grouping it."
+      },
+      {
+        "id": "P-C8",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both prohibit adding new tasks after the first non-cancellation failure. The final places this condition with the failure trigger."
+      },
+      {
+        "id": "P-C9",
+        "original_pass": true,
+        "final_pass": true,
+        "finding": "Both give the exact minimum-version requirement Python 3.11 or later. The final puts it alongside the first API mention."
+      }
+    ],
+    "protected_span_checks": [
+      {
+        "text": "`asyncio.TaskGroup`",
+        "original_byte_start": 0,
+        "original_byte_end_exclusive": 19,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`ValueError`",
+        "original_byte_start": 103,
+        "original_byte_end_exclusive": 115,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`ExceptionGroup`",
+        "original_byte_start": 175,
+        "original_byte_end_exclusive": 191,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`async with`",
+        "original_byte_start": 254,
+        "original_byte_end_exclusive": 266,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`try/finally`",
+        "original_byte_start": 327,
+        "original_byte_end_exclusive": 340,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`asyncio.CancelledError`",
+        "original_byte_start": 390,
+        "original_byte_end_exclusive": 414,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 2,
+        "original_occurrences": 2,
+        "final_occurrences": 2
+      },
+      {
+        "text": "`asyncio.CancelledError`",
+        "original_byte_start": 590,
+        "original_byte_end_exclusive": 614,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 2,
+        "original_occurrences": 2,
+        "final_occurrences": 2
+      },
+      {
+        "text": "`BaseExceptionGroup`",
+        "original_byte_start": 660,
+        "original_byte_end_exclusive": 680,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`KeyboardInterrupt`",
+        "original_byte_start": 729,
+        "original_byte_end_exclusive": 748,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      },
+      {
+        "text": "`SystemExit`",
+        "original_byte_start": 753,
+        "original_byte_end_exclusive": 765,
+        "original_exact": true,
+        "final_exact": true,
+        "required_occurrences": 1,
+        "original_occurrences": 1,
+        "final_occurrences": 1
+      }
+    ],
+    "protected_value_checks": [
+      {
+        "text": "Python 3.11 or later",
+        "original_exact": true,
+        "final_exact": true
+      }
+    ],
+    "original_factual_inaccuracies": [],
+    "final_factual_objections": [],
+    "operational_qualification_check": "Both distinguish the child-failure trigger from cancellation delivery at the next opportunity and from later error reporting. Both retain generally, the child-only cancellation qualification, and special base-exception handling. Neither promises a completion deadline or adds unsupported operational behavior.",
+    "preference": "final",
+    "reason": "The final has a concrete readability advantage: it replaces the original's indirect This happens timing reference with an explicit wait-before-reporting statement, puts the requested Python prerequisite at the first API mention, and places the child-cancellation exception beside the failure trigger. These changes reduce reference resolution and backtracking while preserving all nine claims and protected spans. The original is factually acceptable; its weaknesses are organization and clarity.",
+    "earlier_masked_review_sha256_unchanged": "723aa67477b20d82301cd267764176c88f19cbc8ad2bb88147901279612e16e3"
+  }
+}

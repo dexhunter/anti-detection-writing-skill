@@ -1,0 +1,5 @@
+`asyncio.TaskGroup` requires Python 3.11 or later. When a child raises an ordinary exception such as `ValueError`, the group cancels the remaining children. A child's `asyncio.CancelledError` alone does not trigger sibling cancellation. After the first non-cancellation failure, no new tasks can be added.
+
+Put cleanup in `try/finally` inside the child coroutines. Cancellation raises `asyncio.CancelledError` at the next opportunity. If you catch it explicitly, generally re-raise it after cleanup; swallowing it can interfere with the task group's cancellation machinery.
+
+The `async with` block waits for every child to finish before reporting the non-cancellation failures together. These are raised in an `ExceptionGroup` if they are all ordinary exceptions, or a `BaseExceptionGroup` when required. `KeyboardInterrupt` and `SystemExit` are special: the group cancels and waits for the remaining children, then re-raises the original exception.

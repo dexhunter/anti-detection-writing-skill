@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "Reused synthetic development fixtures; official documentation verified September 7, 2026. No runtime tests.",
+  "cases": [
+    {
+      "id": "github-actions-concurrency",
+      "question": "A deployment workflow uses a shared concurrency group with cancel-in-progress: false. If more runs arrive while one is active, will every waiting run execute? How can I keep several runs waiting, and what order can I rely on?",
+      "claims": [
+        "With cancel-in-progress: false, a new run does not cancel the running workflow through this concurrency setting, but it can replace a pending run. Qualification: The group and repository scope is given later in the original; this is not a guarantee against unrelated cancellation.",
+        "queue: single is the default and permits one pending run per concurrency group; a new arrival cancels and replaces that pending run.",
+        "The described contention operates among runs sharing a concurrency group in the same repository.",
+        "queue: max retains up to 100 pending runs in a group and cancels additional arrivals once the queue is full.",
+        "Queued runs are processed in the order they start waiting on the concurrency group; workflow dispatch order is not guaranteed. Qualification: They means retained waiting runs, not the rejected arrivals immediately before this sentence.",
+        "Keeping cancel-in-progress: false is compatible with queue: max; combining queue: max and cancel-in-progress: true causes workflow validation to fail. Qualification: Explicit false is a valid configuration choice, not a claim that the property must be written when omitted.",
+        "With the default queue, cancel-in-progress: true also cancels the currently running workflow in the concurrency group.",
+        "Disabling cancellation of in-progress runs alone does not guarantee execution of every waiting run. Qualification: Inference from pending replacement and the bounded queue; protects refers only to cancellation by this setting."
+      ],
+      "protected": [
+        "`cancel-in-progress: false`",
+        "`queue: single`",
+        "`queue: max`",
+        "`cancel-in-progress: true`",
+        "100"
+      ],
+      "sources": [
+        "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#concurrency",
+        "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency"
+      ]
+    },
+    {
+      "id": "python-taskgroup",
+      "question": "A Python worker batch should cancel its other workers when one child raises ValueError, while still allowing cleanup to finish. How does asyncio.TaskGroup report failures to the caller, and should a worker suppress CancelledError during cleanup? Please include the minimum Python version.",
+      "claims": [
+        "An ordinary child exception such as ValueError causes TaskGroup to cancel the remaining children.",
+        "Non-cancellation failures consisting entirely of ordinary exceptions are reported together in an ExceptionGroup after all child tasks finish. Qualification: This means reporting the failures after waiting, not postponing the cancellation request. The special KeyboardInterrupt/SystemExit behavior is retained later.",
+        "Child coroutines should place cleanup in try/finally; cancellation raises asyncio.CancelledError at the next opportunity.",
+        "Explicitly caught CancelledError should generally be propagated after cleanup; swallowing it can interfere with TaskGroup behavior. Qualification: Generally must be preserved; the advice is not an absolute ban on every intentional suppression use case.",
+        "A child's CancelledError alone does not trigger cancellation of siblings. Qualification: Applies to the individual child cancellation trigger; it does not claim external cancellation of the group cannot cancel other tasks.",
+        "BaseExceptionGroup is used when the collected failures require that group type.",
+        "For KeyboardInterrupt or SystemExit, TaskGroup cancels and waits for the remaining children, then re-raises the initial exception instead of grouping it.",
+        "Further tasks cannot be added after the first non-cancellation failure.",
+        "TaskGroup requires Python 3.11 or later."
+      ],
+      "protected": [
+        "`asyncio.TaskGroup`",
+        "`ValueError`",
+        "`ExceptionGroup`",
+        "`async with`",
+        "`try/finally`",
+        "`asyncio.CancelledError`",
+        "`BaseExceptionGroup`",
+        "`KeyboardInterrupt`",
+        "`SystemExit`",
+        "Python 3.11 or later"
+      ],
+      "sources": [
+        "https://docs.python.org/3.14/library/asyncio-task.html#task-groups",
+        "https://docs.python.org/3.14/library/asyncio-task.html#task-cancellation"
+      ]
+    }
+  ]
+}

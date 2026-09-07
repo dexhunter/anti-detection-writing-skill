@@ -1,0 +1,7 @@
+For runs sharing a concurrency group in the same repository, `cancel-in-progress: false` lets the active workflow continue without being cancelled by a new arrival. It does not guarantee that every waiting run will execute. In the default `queue: single` mode, the group has room for one pending run. A new arrival cancels that pending run and takes its place. With the default queue, `cancel-in-progress: true` also cancels the active workflow.
+
+Set `queue: max` to retain multiple waiting runs, keeping `cancel-in-progress: false`. Combining `queue: max` with `cancel-in-progress: true` fails workflow validation. GitHub allows up to 100 pending runs in the group and cancels further arrivals when the queue is full.
+
+The retained queued runs are processed in the order they begin waiting on the concurrency group. That order can differ from workflow dispatch order.
+
+

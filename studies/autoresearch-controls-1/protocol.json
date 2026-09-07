@@ -1,0 +1,144 @@
+{
+  "frozen_before_generation": true,
+  "config": {
+    "schema_version": 1,
+    "max_candidates": 3,
+    "max_rounds": 1,
+    "max_detector_calls": 8,
+    "max_detector_words": 1200,
+    "reserved_confirmation_calls": 4,
+    "reserved_confirmation_words": 500,
+    "max_elapsed_seconds": 2700,
+    "min_development_pairs": 2,
+    "min_holdout_pairs": 2,
+    "primary_detector": "gptzero",
+    "min_mean_ai_reduction": 5,
+    "max_case_regression": 0
+  },
+  "proposal_process": "One improver authored three distinct proposals; a separate inference-only selector ranked all three before candidate generation. These are not independent model samples.",
+  "proposals": [
+    {
+      "id": "control_boundaries",
+      "title": "Explain how related controls differ and interact",
+      "rationale": "A source-defined separation of responsibilities can explain why one setting or operation does not settle the reader's whole requirement. This tests an explanation built from interacting controls, rather than a timeline of the supplied scenario.",
+      "difference_from_failed_directions": "This replaces the initially drafted walkthrough after the coordinator disclosed a prior 0/4 scenario/action/consequence result. The intervention models separate responsibilities and their interaction; it asks for neither a new scenario nor a sequence of parallel condition/outcome clauses. It also goes beyond moving prerequisites or correcting ambiguous references.",
+      "expected_drafting_change": "The prose identifies which operation controls each relevant behavior and explains their interaction, so the reader can attach the advice to the right part of the mechanism.",
+      "fidelity_risks": [
+        "Inventing independent controls where the sources do not establish them",
+        "Forcing an artificial two-part taxonomy",
+        "Explaining responsibilities without stating the actual observable operation"
+      ],
+      "mitigations": [
+        "Require a distinction relevant to the question and supported by the sources",
+        "Do not force a fixed number of controls or headings",
+        "Retain exact operation, scope, timing and the full claim inventory"
+      ],
+      "sha256": "bc2214a9829ed3a3c3b0d3272759673226baa5d9eac7ea672d582883c6aa4f18"
+    },
+    {
+      "id": "decision_justification",
+      "title": "Explain why the reader's next choice works",
+      "rationale": "Organizing the prose around reasons for a practical choice can produce a reply shaped by the reader's purpose. This tests whether explicit warrants for advice improve the answer beyond a taxonomy of feature behavior.",
+      "difference_from_failed_directions": "The drafting unit is a recommendation plus its source-supported reason and limit, rather than a chronological trace, a property-by-property explanation, or smaller local clarity edits. Unlike the prior parallel condition/outcome rule, it requires the mechanism that makes the advice useful.",
+      "expected_drafting_change": "Each recommended choice is explained in relation to the reader's stated outcome, with exact operational effects and residual limits rather than generic reassurance.",
+      "fidelity_risks": [
+        "Attributing an unspoken misconception to the asker",
+        "Treating a compatible configuration as mandatory",
+        "Turning generally applicable advice into an absolute requirement"
+      ],
+      "mitigations": [
+        "Tie every reason to the supplied goal and documented mechanism",
+        "Address unsupported inferences conditionally without assigning beliefs",
+        "Keep exact compatibility, scope and uncertainty from the claim inventory"
+      ],
+      "sha256": "3b0b622ae631fb88db5e7f991128830ffe4249ac885fdd30952486cf537eb21f"
+    },
+    {
+      "id": "boundary_case",
+      "title": "Demonstrate the limit with a supported case",
+      "rationale": "A small supported case can make the reason for a qualification apparent before the general rule. This tests explanatory contrast grounded in a reader's actual question, not a rhetorical contrast added for style.",
+      "difference_from_failed_directions": "This starts from a single proposition in the question and a source-supported limiting case. It is neither a full event walkthrough nor a recommendation-first justification, and it explicitly avoids repeating the previous symmetrical condition/outcome structure. It adds no detector-motivated vocabulary, quotation or format rule.",
+      "expected_drafting_change": "The reply establishes one concrete boundary, derives the usable rule, and preserves the remaining required behavior and exceptions without inflating the illustration into a reported test.",
+      "fidelity_risks": [
+        "Inventing a concrete failure from a general warning",
+        "Overstating possibility as certainty",
+        "Repeating condition/outcome formatting despite the different intent",
+        "Forcing a counterexample into a purely descriptive question"
+      ],
+      "mitigations": [
+        "Require a limiting case already supported by the sources",
+        "Keep conditional language and original uncertainty",
+        "Use one relevant case and restore the full required rule",
+        "Fall back to the actual reader decision when no relevant proposition exists"
+      ],
+      "sha256": "fbc70060efb56e42b36e34f052830a0640d003299b5cd34fc9070b22bd668482"
+    }
+  ],
+  "ranking": {
+    "ranked_ids": [
+      "control_boundaries",
+      "decision_justification",
+      "boundary_case"
+    ],
+    "reason": "Choose control_boundaries for the next experiment. Both development questions combine operations with distinct effects: active-run cancellation versus pending-run retention, and cancellation requests versus cleanup, completion and caller-facing exception raising. Its proposed behavior directly fits both questions while preserving the full answer contract within approximately the original length. This is a modest inference-only preference, finalized before candidate generation or current detector scores. The manifest reports unchanged detector results for generic restructuring and targeted clarity work, plus zero reductions in four scenario/action/consequence cases. Those measured failures outweigh an appealing story about alternative framing; they justify testing only one bounded, distinguishable intervention, not treating it as an improvement. The reported TaskGroup quality loss also makes explicit raising and waiting language a priority. All three proposals retain that safeguard. Budget context is 1200 words total, with 500 reserved for confirmation and no more than 700 actual words across the four complete development outputs. Preserve all qualifications and protected spans; replace explanation rather than adding an example, summary or padding.",
+    "pairwise": [
+      {
+        "preferred": "control_boundaries",
+        "other": "decision_justification",
+        "reason": "Control boundaries makes the experimental change more concrete across both cases: identify what each operation governs and explain its interaction with the others. Decision justification fits the GitHub configuration choice well, but TaskGroup also asks for descriptive propagation semantics and special exceptions, which are not all next-choice justifications. Its continuous current-behavior/change/effect path also overlaps more with the previously unsuccessful action/consequence direction. Control boundaries wins narrowly on consistent applicability and experimental distinction; its main risk is reproducing the incumbent's existing component/action mapping with little actual output change."
+      },
+      {
+        "preferred": "control_boundaries",
+        "other": "boundary_case",
+        "reason": "The GitHub fixture supplies a clear limiting event: a new arrival replaces the existing pending run under the default queue. The TaskGroup fixture supplies only a general warning that swallowing cancellation can interfere, without a concrete failure trace. Boundary_case therefore has uneven support across the pair and may either invent specificity or fall back toward the incumbent. Control boundaries can use documented request, wait and raise distinctions without adding an illustration or overstating the warning. That is a better use of the constrained full-answer budget."
+      },
+      {
+        "preferred": "decision_justification",
+        "other": "boundary_case",
+        "reason": "Both fixtures contain supported practical choices: queue settings and cleanup propagation. Decision justification can connect those choices to documented effects while retaining capacity, ordering, compatibility and exception qualifications. Boundary_case offers a potentially more distinct opening, but asking a short reply to establish a limiting case and then restore all general behavior adds length and omission pressure. Its TaskGroup application is weaker because a possible interference warning does not establish a specific outcome. The tie-break favors preserving complete short answers over the more novel framing."
+      }
+    ],
+    "uncertainty": "No candidate outputs, current measurements, holdouts, run state or browser were inspected. The ranking relies on the frozen incumbent, three proposed full skills, manifest history and the two development cases only. The manifest supplies historical measurements as summaries, not independently checked receipts. All proposals originate from one improver and may converge to similar prose under the same preservation and length constraints. None has validated detector benefit, and repeated historical null results make another unchanged result plausible. The selected treatment must first pass separate quality review on exact outputs; any later measured benefit is limited to the compared texts and conditions."
+  },
+  "incumbent_entrypoint_sha256": "22fcf2ac709b81a8ac5d96ce52667c9d0965eb2af9ae5249cea3671476ce5d17",
+  "candidate_entrypoint_sha256": "bc2214a9829ed3a3c3b0d3272759673226baa5d9eac7ea672d582883c6aa4f18",
+  "baseline_tree_sha256": "b4789bd33d86ed9655f623667019bcc35b46a7ad06009b83a4155d31cfad4d60",
+  "candidate_tree_sha256": "e668b0123f1936e21f6e295d539cc12cc9381b414d661ccc51fcdd1cfc38b17d",
+  "common_operator_sha256": "ebc717fabfb2ac1518649207cf2173f9e7954ecb04d495351d8cf73a5ce25904",
+  "generation": {
+    "model": "same inherited parent runtime; exact model identifier not exposed",
+    "settings": "same inherited settings; no overrides",
+    "operator_sha256": "ebc717fabfb2ac1518649207cf2173f9e7954ecb04d495351d8cf73a5ce25904",
+    "context": "fresh"
+  },
+  "measurement_order": [
+    {
+      "case": "github-actions-concurrency",
+      "arm": "baseline",
+      "phase": "preselected_skill_comparison"
+    },
+    {
+      "case": "python-taskgroup",
+      "arm": "candidate",
+      "phase": "preselected_skill_comparison"
+    },
+    {
+      "case": "github-actions-concurrency",
+      "arm": "candidate",
+      "phase": "preselected_skill_comparison"
+    },
+    {
+      "case": "python-taskgroup",
+      "arm": "baseline",
+      "phase": "preselected_skill_comparison"
+    },
+    {
+      "case": "python-taskgroup",
+      "arm": "original",
+      "phase": "adaptive_original_check"
+    }
+  ],
+  "entry_transform": "Source minus exactly one terminal LF, if present; Code Block effective editor equals submitted text plus exactly three LF characters. Before and after editor bytes matched.",
+  "collection": "Each scan completed before selecting the Basic Scan view; no subscription or rescan. A browser timeout during the first click was reconciled to the completed result without resubmission.",
+  "accounting": "The closed round used four calls and 525 words. A separate adaptive diagnostic added one call and 134 words, for a total of five calls and 659 words. The 500-word reserve remains unspent within the 1,200-word cap; only three of eight overall calls remain, so four-call confirmation capacity is not retained. The rejected round never unlocked its holdouts."
+}

@@ -1,0 +1,20 @@
+{
+  "admitted_at": "2026-09-07T15:48:37.809577+00:00",
+  "quality": "both pass; tie",
+  "exact_inputs": {
+    "A": {
+      "arm": "baseline",
+      "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+      "path": "outputs/baseline/final.txt"
+    },
+    "B": {
+      "arm": "candidate",
+      "sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+      "path": "outputs/candidate/repaired.txt"
+    }
+  },
+  "candidate_first_pass_scan_admitted": false,
+  "candidate_repairs": 1,
+  "method": "reader dialogue plus one pre-score clarity repair",
+  "no_scan_before_review": true
+}

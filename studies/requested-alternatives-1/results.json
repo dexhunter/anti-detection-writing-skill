@@ -1,0 +1,420 @@
+{
+  "study": "requested-alternatives-1",
+  "date": "2026-09-06",
+  "status": "complete",
+  "question_count": 4,
+  "distinct_inputs_and_observations": 8,
+  "mode": "Basic Scan",
+  "model": "4.9b",
+  "planned_before_scores": true,
+  "design": "Adaptive instruction-development pilot, four synthetic documentation cases; full variant plus scenario/action/consequence framing prompt compared with neutral-task originals.",
+  "current_arm": "All four frozen current-skill outputs are byte-identical keeps. Each shares its original observation; no duplicate independent measurement claimed.",
+  "skill_hashes": {
+    "current": "37359c04d00552a00fc04e7f2295b8eeb63cde6e3419b1aaef17676d97731638",
+    "variant": "b857af7d358a2b060363f19fc24671e4e781a9b928b3b2ae4730898aa22889b6"
+  },
+  "scan_order": [
+    {
+      "id": "git-tracked-ignore",
+      "arm": "original"
+    },
+    {
+      "id": "git-tracked-ignore",
+      "arm": "alternative"
+    },
+    {
+      "id": "docker-expose-local",
+      "arm": "original"
+    },
+    {
+      "id": "docker-expose-local",
+      "arm": "alternative"
+    },
+    {
+      "id": "kubernetes-probe-roles",
+      "arm": "alternative"
+    },
+    {
+      "id": "kubernetes-probe-roles",
+      "arm": "original"
+    },
+    {
+      "id": "postgresql-snapshot-scope",
+      "arm": "alternative"
+    },
+    {
+      "id": "postgresql-snapshot-scope",
+      "arm": "original"
+    }
+  ],
+  "scan_order_seed": 2026090602,
+  "quality_review": "Separate LLM reviewer, randomized X/Y labels, no scores or arm mapping; official docs inspected, runtime behavior not reproduced.",
+  "limitations": [
+    "Small synthetic convenience sample, fresh relative to prior local detector cases only.",
+    "Variant proposed after observing current-skill keep behavior; not an untouched holdout.",
+    "Baseline author had read the skill; not a context-isolated skill-naive control.",
+    "One writer output per condition, same model family, no human ratings or ordinary-editing control.",
+    "Additional framing prompt is part of the intervention; no isolated sentence effect.",
+    "Content order and length changed; quality judgments are separate from scores.",
+    "Maintainer-observed UI receipts, not authenticated service exports or independent remeasurement.",
+    "Strict verbatim receipt checker not used; effective editor text adds exactly three LF."
+  ],
+  "cases": [
+    {
+      "id": "git-tracked-ignore",
+      "reader_question": "I added /config.local.json to the root .gitignore, but Git still shows changes to this already committed file. How do I stop tracking it while keeping my local copy?",
+      "reader_context": "Git 2.50.0, normal checkout, commands run from the repository root. The file has no staged content changes. The project intends to stop versioning this file; this is not a request to hide local changes to a file everyone should keep tracking.",
+      "scope_class": "short_direct_question",
+      "sources": [
+        {
+          "title": "gitignore manual",
+          "url": "https://git-scm.com/docs/gitignore/2.42.0",
+          "version": "Manual version 2.42.0; site records no changes through 2.51.2, encompassing Git 2.50.0.",
+          "section": "DESCRIPTION and NOTES",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        },
+        {
+          "title": "git-rm manual",
+          "url": "https://git-scm.com/docs/git-rm/2.50.0",
+          "version": "Git manual 2.50.0",
+          "section": "DESCRIPTION and --cached",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        }
+      ],
+      "quality": {
+        "original": "PASS",
+        "alternative": "PASS",
+        "material_quality_loss": false,
+        "material_claim_or_scope_change": false,
+        "preference": "original",
+        "preference_strength": "slight editorial preference",
+        "preference_reason": "Y answers why the ignore rule failed before giving the commands. X is also clear and useful; its explicit repeat of the existing ignore pattern is optional in this context.",
+        "claim_preservation_note": "Both preserve cached-only removal, the local copy, the ignore rule and commit, and the repository tracking effect. Neither needs staged-content caveats already resolved by the supplied context."
+      },
+      "measurements": {
+        "original": {
+          "observed_at": "2026-09-06T17:45:18.154Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 78,
+          "ui_characters": 539,
+          "short_text_warning": true,
+          "source_sha256": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9",
+          "submitted_sha256": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9",
+          "effective_sha256": "f20da30d99efca5f3c5518e6e324004161ef05bf46d0ef5eb2c5f636d79225a5",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/git-tracked-ignore/original.md",
+          "submitted_file": "inputs/git-tracked-ignore/original-submitted.txt",
+          "effective_file": "inputs/git-tracked-ignore/original-effective.txt",
+          "quality_review_sha256": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9"
+        },
+        "alternative": {
+          "observed_at": "2026-09-06T17:46:01.503Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 83,
+          "ui_characters": 588,
+          "short_text_warning": true,
+          "source_sha256": "67903cf528279330276d9cd2b733da91de7fd6adeb829c1b81e3a9ffeaeffcd1",
+          "submitted_sha256": "67903cf528279330276d9cd2b733da91de7fd6adeb829c1b81e3a9ffeaeffcd1",
+          "effective_sha256": "86428e7cd3b6c4ca34a0b94f8630db80b0f969bb6fadd2cf1f33de8951a6e0d4",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/git-tracked-ignore/alternative.md",
+          "submitted_file": "inputs/git-tracked-ignore/alternative-submitted.txt",
+          "effective_file": "inputs/git-tracked-ignore/alternative-effective.txt",
+          "quality_review_sha256": "67903cf528279330276d9cd2b733da91de7fd6adeb829c1b81e3a9ffeaeffcd1"
+        }
+      }
+    },
+    {
+      "id": "docker-expose-local",
+      "reader_question": "My Dockerfile contains EXPOSE 8080. Does that make http://127.0.0.1:8080 work on the host, or what docker run command do I need? I only want host-local access.",
+      "reader_context": "Docker Engine 28.0.0 or later on Linux, default bridge/NAT networking and default routing settings. The already-built image is demo-web. Its HTTP server is already listening on 0.0.0.0:8080 inside the container. Host port 8080 is free.",
+      "scope_class": "short_direct_question",
+      "sources": [
+        {
+          "title": "Dockerfile reference: EXPOSE",
+          "url": "https://docs.docker.com/reference/dockerfile/#expose",
+          "version": "Rolling official documentation observed on the access date; no immutable release pin supplied by this page.",
+          "section": "EXPOSE",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        },
+        {
+          "title": "Port publishing and mapping",
+          "url": "https://docs.docker.com/engine/network/port-publishing/",
+          "version": "Rolling official documentation observed on the access date; scenario explicitly targets Engine 28.0.0+.",
+          "section": "Publishing ports; localhost warning; default bind address",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        }
+      ],
+      "quality": {
+        "original": "PASS",
+        "alternative": "PASS",
+        "material_quality_loss": false,
+        "material_claim_or_scope_change": false,
+        "preference": "original",
+        "preference_strength": "slight editorial preference",
+        "preference_reason": "X immediately answers the EXPOSE question, then gives the command and its scope. Y supplies the same useful answer with the explanation at the end; neither has a material quality deficit.",
+        "claim_preservation_note": "Both preserve the exact loopback command and URL, EXPOSE limitation, listening-server assumption, Engine 28+ default bridge scope, and the warning about omitting the host address."
+      },
+      "measurements": {
+        "original": {
+          "observed_at": "2026-09-06T17:46:51.732Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 85,
+          "ui_characters": 635,
+          "short_text_warning": true,
+          "source_sha256": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c",
+          "submitted_sha256": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c",
+          "effective_sha256": "8fa29b36da2fdc01c8a7c7f98f245a8a95885baede6247d56e2605faf37be1e1",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/docker-expose-local/original.md",
+          "submitted_file": "inputs/docker-expose-local/original-submitted.txt",
+          "effective_file": "inputs/docker-expose-local/original-effective.txt",
+          "quality_review_sha256": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c"
+        },
+        "alternative": {
+          "observed_at": "2026-09-06T17:47:27.858Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 90,
+          "ui_characters": 663,
+          "short_text_warning": true,
+          "source_sha256": "bbbb67a72e4e4e94216fa559d251cb4de140d9ab679b7816c7c1182025f2b660",
+          "submitted_sha256": "bbbb67a72e4e4e94216fa559d251cb4de140d9ab679b7816c7c1182025f2b660",
+          "effective_sha256": "63ed29563b5d42081b93121f46de8da5f8b11bc38834e097aed94d3fef2d7626",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/docker-expose-local/alternative.md",
+          "submitted_file": "inputs/docker-expose-local/alternative-submitted.txt",
+          "effective_file": "inputs/docker-expose-local/alternative-effective.txt",
+          "quality_review_sha256": "bbbb67a72e4e4e94216fa559d251cb4de140d9ab679b7816c7c1182025f2b660"
+        }
+      }
+    },
+    {
+      "id": "kubernetes-probe-roles",
+      "reader_question": "Our HTTP service can take up to two minutes to start. After startup, it sometimes temporarily cannot serve requests but recovers by itself; a deadlock instead needs a restart. How should startup, readiness and liveness probes divide these jobs, and what would be a reasonable initial startup budget?",
+      "reader_context": "Kubernetes v1.34 Deployment, restartPolicy Always. Traffic uses a normal Kubernetes Service. The application team can implement appropriate HTTP health endpoints; no particular path or existing probe implementation is assumed.",
+      "scope_class": "causal_explanation",
+      "sources": [
+        {
+          "title": "Liveness, Readiness, and Startup Probes",
+          "url": "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+          "version": "Kubernetes v1.34 archived static documentation.",
+          "section": "Liveness probe; Readiness probe; Startup probe",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        },
+        {
+          "title": "Configure Liveness, Readiness and Startup Probes",
+          "url": "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "version": "Kubernetes v1.34 archived static documentation.",
+          "section": "Protect slow starting containers; Define readiness probes; Configure Probes",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        }
+      ],
+      "quality": {
+        "original": "PASS",
+        "alternative": "PASS",
+        "material_quality_loss": false,
+        "material_claim_or_scope_change": false,
+        "preference": "original",
+        "preference_strength": "slight editorial preference",
+        "preference_reason": "Y follows startup, readiness, then liveness in the service lifecycle. X moves endpoint implementation to the opening, which is valid but slightly less direct for the requested division of jobs.",
+        "claim_preservation_note": "Both preserve every probe role, threshold-based restarts under Always, readiness recovery, independence, approximate timing and endpoint semantics. Y uses ordinary probe names in prose rather than camel-case field names; no configuration or meaning is changed."
+      },
+      "measurements": {
+        "original": {
+          "observed_at": "2026-09-06T17:49:47.092Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 164,
+          "ui_characters": 1349,
+          "short_text_warning": false,
+          "source_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+          "submitted_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+          "effective_sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/kubernetes-probe-roles/original.md",
+          "submitted_file": "inputs/kubernetes-probe-roles/original-submitted.txt",
+          "effective_file": "inputs/kubernetes-probe-roles/original-effective.txt",
+          "quality_review_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c"
+        },
+        "alternative": {
+          "observed_at": "2026-09-06T17:48:39.399Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 158,
+          "ui_characters": 1313,
+          "short_text_warning": false,
+          "source_sha256": "db1b9d65cd10d8611408a3705711fa87f0e17dc86370a8514b37d4d5de7e1636",
+          "submitted_sha256": "db1b9d65cd10d8611408a3705711fa87f0e17dc86370a8514b37d4d5de7e1636",
+          "effective_sha256": "8f0eda42a1b743343672752f6a55afe38b2ca7528f8817fe66e567b2cbb1f825",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/kubernetes-probe-roles/alternative.md",
+          "submitted_file": "inputs/kubernetes-probe-roles/alternative-submitted.txt",
+          "effective_file": "inputs/kubernetes-probe-roles/alternative-effective.txt",
+          "quality_review_sha256": "db1b9d65cd10d8611408a3705711fa87f0e17dc86370a8514b37d4d5de7e1636"
+        }
+      }
+    },
+    {
+      "id": "postgresql-snapshot-scope",
+      "reader_question": "In PostgreSQL 17, our report runs two ordinary SELECT queries in one explicit transaction while other sessions update the tables. Can the queries see different committed data under Read Committed? Please explain how Repeatable Read changes snapshot timing, how to start it, and what to do if we later add an UPDATE and hit a concurrent-update serialization failure. Does Repeatable Read guarantee a result equivalent to serial execution?",
+      "reader_context": "Ordinary table queries without FOR UPDATE/SHARE, sequence operations, or application writes in the initial reporting example. Read Committed is the selected/default isolation level. The proposed later UPDATE is a separate extension of the example.",
+      "scope_class": "causal_explanation",
+      "sources": [
+        {
+          "title": "Transaction Isolation",
+          "url": "https://www.postgresql.org/docs/17/transaction-iso.html",
+          "version": "PostgreSQL 17 documentation branch observed on access date.",
+          "section": "13.2.1 Read Committed and 13.2.2 Repeatable Read",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        },
+        {
+          "title": "SET TRANSACTION",
+          "url": "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+          "version": "PostgreSQL 17 documentation branch observed on access date.",
+          "section": "Synopsis; Description; Notes",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        },
+        {
+          "title": "Serialization Failure Handling",
+          "url": "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+          "version": "PostgreSQL 17 documentation branch observed on access date.",
+          "section": "13.5 Serialization Failure Handling",
+          "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+          "verification": "Official documentation inspected through web retrieval; no local execution."
+        }
+      ],
+      "quality": {
+        "original": "PASS",
+        "alternative": "PASS",
+        "material_quality_loss": false,
+        "material_claim_or_scope_change": false,
+        "preference": "alternative",
+        "preference_strength": "slight editorial preference",
+        "preference_reason": "Y puts the serial-equivalence limitation directly after the stable-snapshot explanation, keeping that distinction together before the conditional UPDATE extension. X is also complete and readable.",
+        "claim_preservation_note": "Both preserve all six mandatory claims and the three qualifications. The later UPDATE remains explicitly conditional, and the retry includes decision logic. Moving the serial-equivalence paragraph does not change its meaning."
+      },
+      "measurements": {
+        "original": {
+          "observed_at": "2026-09-06T17:50:53.088Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 180,
+          "ui_characters": 1407,
+          "short_text_warning": false,
+          "source_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+          "submitted_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+          "effective_sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/postgresql-snapshot-scope/original.md",
+          "submitted_file": "inputs/postgresql-snapshot-scope/original-submitted.txt",
+          "effective_file": "inputs/postgresql-snapshot-scope/original-effective.txt",
+          "quality_review_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd"
+        },
+        "alternative": {
+          "observed_at": "2026-09-06T17:50:20.012Z",
+          "mode": "Basic Scan",
+          "model": "4.9b",
+          "status": "Text up-to-date",
+          "scores": {
+            "ai": 100,
+            "mixed": 0,
+            "human": 0
+          },
+          "ui_words": 167,
+          "ui_characters": 1331,
+          "short_text_warning": false,
+          "source_sha256": "d3bfbe479814d4e09efb6926b355bd674d5f147fa5ed81e31f622460b3db4dd1",
+          "submitted_sha256": "d3bfbe479814d4e09efb6926b355bd674d5f147fa5ed81e31f622460b3db4dd1",
+          "effective_sha256": "ab4a9c9b4550e54df5489b6c3d75655c9d67c5ebc5501fb8c510bb9f0ad83da9",
+          "editor_unchanged_after_scan": true,
+          "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+          "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+          "source_file": "inputs/postgresql-snapshot-scope/alternative.md",
+          "submitted_file": "inputs/postgresql-snapshot-scope/alternative-submitted.txt",
+          "effective_file": "inputs/postgresql-snapshot-scope/alternative-effective.txt",
+          "quality_review_sha256": "d3bfbe479814d4e09efb6926b355bd674d5f147fa5ed81e31f622460b3db4dd1"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "alternative_lower": 0,
+    "tied": 4,
+    "alternative_higher": 0,
+    "alternative_under_100": 0,
+    "short_warning_observations": 4,
+    "quality_preferences": {
+      "original": 3,
+      "alternative": 1
+    },
+    "first_pass_quality_failures": 0
+  }
+}

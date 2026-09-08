@@ -1,0 +1,77 @@
+{
+  "frozen_at": "2026-09-06T19:48:43.117563+00:00",
+  "cases": [
+    "git-tracked-ignore",
+    "docker-expose-local",
+    "kubernetes-probe-roles",
+    "postgresql-snapshot-scope"
+  ],
+  "selection": "All four failed requested-alternatives-1 development cases; two also failed HIP quality review. This is reuse, not held-out transfer.",
+  "skill_sha256": "84680e93a824b5f093c867f8f5073fedb696483794ed2771eae69524a8bd2491",
+  "arms": {
+    "original": "Exact original texts, fresh service control.",
+    "direct": "Fresh writer applies frozen updated skill to original plus question and source ledger. One explicitly requested measured alternative per case.",
+    "rebuild": "Separate fresh writer sees frozen updated skill, question and factual ledger with protected code/URLs, but not original prose. Writes an answer from that inventory. One output per case."
+  },
+  "hypothesis": "Removing original prose from the writer context may reduce anchoring on its wording while keeping factual coverage. Compare workflow as a whole; this does not isolate any sentence in SKILL.md.",
+  "sample_limit": "No authentic user writing sample supplied, so the conditional voice instruction is inactive. No invented sample will be substituted.",
+  "quality_gate": "Separate score-blind reviewer compares all8 candidates against sources and originals for correctness, relevance, clarity, qualifiers, code and useful coverage. Repair factual defects once if necessary, record both versions; never repair in response to scores during this batch.",
+  "measurement": "Up to12 distinct full texts. Fresh paired GPTZero Basic in signed-in Chrome, same displayed model. Deduplicate byte-identical inputs before scanning. Save actual editor transforms and UI warnings. No padding, quotations, advanced mode or purchase.",
+  "stop": "Complete the fixed batch, retain all outcomes. No post-score candidate selection or new cycles without a distinct hypothesis.",
+  "scan_order": [
+    [
+      "kubernetes-probe-roles",
+      "direct"
+    ],
+    [
+      "postgresql-snapshot-scope",
+      "rebuild"
+    ],
+    [
+      "postgresql-snapshot-scope",
+      "direct"
+    ],
+    [
+      "git-tracked-ignore",
+      "direct"
+    ],
+    [
+      "kubernetes-probe-roles",
+      "rebuild"
+    ],
+    [
+      "docker-expose-local",
+      "original"
+    ],
+    [
+      "docker-expose-local",
+      "rebuild"
+    ],
+    [
+      "docker-expose-local",
+      "direct"
+    ],
+    [
+      "postgresql-snapshot-scope",
+      "original"
+    ],
+    [
+      "kubernetes-probe-roles",
+      "original"
+    ],
+    [
+      "git-tracked-ignore",
+      "original"
+    ],
+    [
+      "git-tracked-ignore",
+      "rebuild"
+    ]
+  ],
+  "original_sha256": {
+    "git-tracked-ignore": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9",
+    "docker-expose-local": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c",
+    "kubernetes-probe-roles": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+    "postgresql-snapshot-scope": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd"
+  }
+}

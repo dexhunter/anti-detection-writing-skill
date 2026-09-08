@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "status": "PRE_EDIT_PLAN_SAVED_BEFORE_ANY_OUTPUT_EDIT",
+  "saved_utc": "2026-09-08T09:56:05.224523+00:00",
+  "actual_context_count": 1,
+  "case_ids_in_same_context": [
+    "b20-confirm-notice-01",
+    "b20-confirm-rules-02"
+  ],
+  "input_manifest": [
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162",
+      "bytes": 9975
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "bbae9534d1a825dbd02705a93d0e6a0ba3e1548dfeee669cd8ce961947ea9dda",
+      "bytes": 7323
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "5f629246ba2ba01230883fb27f137b4f7ddccc6c9edc95397473fdd29632fd00",
+      "bytes": 1273
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c38e969c1888ba331238ee8d9cd6827c5846030e346f12ed2fa4c23313c1dd09",
+      "bytes": 355
+    },
+    {
+      "path": "stages/confirmation/repaired/b20-confirm-notice-01.txt",
+      "sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+      "bytes": 986
+    },
+    {
+      "path": "stages/confirmation/repaired/b20-confirm-rules-02.txt",
+      "sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+      "bytes": 824
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c2e4164830cb4179781d66fe20552c158a263360c5e28927ac4f8c28001e4f74",
+      "bytes": 65716
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c81e4c72bb19084d6650b1b6ded6fd0bd3e172d36073d840041d191be725671d",
+      "bytes": 6605
+    }
+  ],
+  "verified_stage_B_status": "PASS, exact text hashes and word counts match supplied Stage B ledger and trace",
+  "cases": [
+    {
+      "id": "b20-confirm-notice-01",
+      "reader": "Visitors considering the invented family workshop",
+      "requested_answer_or_decision": "Understand whether the workshop suits the family and how to book and attend, including cancellation and alternative-visit conditions.",
+      "current_lead": "Fictional notice - Hawthorn Museum Family Workshop\n\nA map workshop for children and adults is hosted at the Hawthorn Museum. It is intended for children aged eight to twelve; every child must attend with an adult.",
+      "concrete_defects": [
+        {
+          "id": "N-D1",
+          "defect": "The session date and time follow the age and accompaniment conditions; put the event schedule immediately after its identification to establish the attendance decision before eligibility."
+        },
+        {
+          "id": "N-D2",
+          "defect": "Arrival and access details intervene between the booking deadline and the cancellation condition referring to this booking deadline; the cancellation notice sentence is detached into the following paragraph."
+        },
+        {
+          "id": "N-D3",
+          "defect": "The long opening paragraph merges identification, eligibility and booking. Separate the visitor decision from booking instructions; keep the permanent-gallery alternative in its own closing paragraph."
+        }
+      ],
+      "planned_unit_order": [
+        "title",
+        "event_identity",
+        "schedule",
+        "eligibility_and_accompaniment",
+        "child_capacity",
+        "booking_deadline_and_location",
+        "payment_confirmation_and_booking_price",
+        "cancellation_condition_and_consequences",
+        "cancellation_email",
+        "materials",
+        "arrival_and_entrance",
+        "access_and_interpreter_exception",
+        "galleries_and_charge"
+      ],
+      "planned_paragraph_groups": [
+        [
+          "title"
+        ],
+        [
+          "event_identity",
+          "schedule",
+          "eligibility_and_accompaniment"
+        ],
+        [
+          "child_capacity",
+          "booking_deadline_and_location",
+          "payment_confirmation_and_booking_price"
+        ],
+        [
+          "cancellation_condition_and_consequences",
+          "cancellation_email"
+        ],
+        [
+          "materials",
+          "arrival_and_entrance",
+          "access_and_interpreter_exception"
+        ],
+        [
+          "galleries_and_charge"
+        ]
+      ],
+      "wording_edits_planned": [],
+      "preservation_constraints": "Move only intact sentences, including all semicolon or condition-plus-claim units. Preserve every word and all actor, modality, qualification, and protected literal content."
+    },
+    {
+      "id": "b20-confirm-rules-02",
+      "reader": "First-time players of the invented game",
+      "requested_answer_or_decision": "Learn the objective, setup, turn order and legal turn choices with every exception in a concise numbered quick-start guide.",
+      "current_lead": "1. Lantern Trail is invented for two to four players.\n2. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+      "concrete_defects": [
+        {
+          "id": "L-D1",
+          "defect": "The winning objective appears after movement edge cases; move the objective beside game identification."
+        },
+        {
+          "id": "L-D2",
+          "defect": "No-dice information is separated from game identification and setup; initial pawn placement, token allocation and shared-space permission are dispersed across separate numbered entries."
+        },
+        {
+          "id": "L-D3",
+          "defect": "The normal move, its token-limit alternative and its space-12 limit are dispersed; the paid option and its overshoot exception are in separate numbered entries. Group dependent rules in one numbered item for each turn option."
+        }
+      ],
+      "planned_unit_order": [
+        "game_identity",
+        "winning_condition",
+        "no_dice",
+        "track_and_pawn_start",
+        "initial_token",
+        "shared_spaces",
+        "turn_order",
+        "normal_choice",
+        "token_cap_and_collection_prohibition",
+        "normal_move_end_condition",
+        "paid_move_option_and_payment_first",
+        "paid_move_overshoot_and_nonrefund"
+      ],
+      "planned_numbered_groups": [
+        [
+          "game_identity",
+          "winning_condition",
+          "no_dice"
+        ],
+        [
+          "track_and_pawn_start",
+          "initial_token",
+          "shared_spaces"
+        ],
+        [
+          "turn_order"
+        ],
+        [
+          "normal_choice",
+          "token_cap_and_collection_prohibition",
+          "normal_move_end_condition"
+        ],
+        [
+          "paid_move_option_and_payment_first",
+          "paid_move_overshoot_and_nonrefund"
+        ]
+      ],
+      "wording_edits_planned": [],
+      "preservation_constraints": "Reorder intact original numbered-item bodies, then join the related bodies under five consecutive numbers. Preserve every sentence, including both sentences of the paid-move unit; no replacement wording."
+    }
+  ],
+  "scope": {
+    "development_reuse_clause": "inactive per parent; frozen fresh confirmation",
+    "browsing": false,
+    "other_files_read": false,
+    "scores_read": false,
+    "factual_repairs_authorized": false,
+    "new_generation_or_selection": false,
+    "post_self_check_edits_allowed": false
+  }
+}

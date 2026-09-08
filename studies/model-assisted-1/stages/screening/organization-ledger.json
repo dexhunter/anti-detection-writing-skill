@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "method_id": "r20",
+  "stage": "C",
+  "cases_in_context": 2,
+  "offset_convention": "zero-based Unicode code-point offsets; end exclusive",
+  "plan_path": "stages/screening/organization-plan.json",
+  "plan_sha256": "24a759f505a237b86781cde2d6e70a3f42c5ff3f15c8f4bc1baaad5a7ca54c38",
+  "created_at_utc": "2026-09-08T08:51:19.624512+00:00",
+  "cases": [
+    {
+      "case_id": "wm4-dev-technical-01",
+      "stage_b_input_path": "stages/screening/repaired/wm4-dev-technical-01.txt",
+      "stage_b_input_sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+      "operations": [
+        {
+          "index": 1,
+          "kind": "movement",
+          "before": "ETag enables receiving applications to validate whether cached representations may be reused. A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body and the server returns 304 Not Modified with no response body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds. Still, this validation includes sending a request. An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "after": "ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request. A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body and the server returns 304 Not Modified with no response body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds. An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "reason": "Place the intact request-limit answer beside the validation-purpose lead.",
+          "plan_defect_ids": [
+            "T1"
+          ],
+          "claim_ids": [
+            "DTC5"
+          ],
+          "input_sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+          "output_sha256": "76a0ab4527d5d9ac4be1a847bc52c62b7e0a81ca9e752bbb98d02fc6544c7481",
+          "retained_intermediate_path": "stages/screening/intermediates/wm4-dev-technical-01.operation-1.txt",
+          "details": {
+            "moved_unit": "Still, this validation includes sending a request.",
+            "stage_b_span": {
+              "text": "Still, this validation includes sending a request.",
+              "start": 546,
+              "end": 596
+            },
+            "destination": "Immediately after DTC1; all other sentence order retained."
+          }
+        },
+        {
+          "index": 2,
+          "kind": "movement",
+          "before": "ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request. A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body and the server returns 304 Not Modified with no response body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds. An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "after": "ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request. A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds. An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "reason": "Describe the server response before the dependent cached-body reuse, while retaining the governing condition and intact clauses.",
+          "plan_defect_ids": [
+            "T2"
+          ],
+          "claim_ids": [
+            "DTC3"
+          ],
+          "input_sha256": "76a0ab4527d5d9ac4be1a847bc52c62b7e0a81ca9e752bbb98d02fc6544c7481",
+          "output_sha256": "f59af0e30c90e4492feba8b9f9e5188f5ccbdd422469b89f61f0cefabd23daf9",
+          "retained_intermediate_path": "stages/screening/intermediates/wm4-dev-technical-01.operation-2.txt",
+          "details": {
+            "unit_before": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body and the server returns 304 Not Modified with no response body.",
+            "unit_after": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body.",
+            "semantic_mapping": [
+              {
+                "before": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, ",
+                "after": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, ",
+                "preserved": "Otherwise-successful GET scope and matching selected-representation tag condition govern both clauses."
+              },
+              {
+                "before": "the server returns 304 Not Modified with no response body",
+                "after": "the server returns 304 Not Modified with no response body",
+                "preserved": "Server returns 304 Not Modified without a response body."
+              },
+              {
+                "before": "the client can reuse its cached body",
+                "after": "the client can reuse its cached body",
+                "preserved": "Client can reuse its cached body; permission modality retained."
+              }
+            ],
+            "wording_changed": false
+          }
+        },
+        {
+          "index": 3,
+          "kind": "joining",
+          "before": "ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request. A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds. An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "after": "ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request.\n\nA server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds.\n\nAn application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.\n",
+          "reason": "Separate purpose/request answer, conditional-GET mechanics, and freshness permission with its adjacent exception.",
+          "plan_defect_ids": [
+            "T1"
+          ],
+          "claim_ids": [
+            "DTC1",
+            "DTC2",
+            "DTC3",
+            "DTC4",
+            "DTC5",
+            "DTC6",
+            "DTC7"
+          ],
+          "input_sha256": "f59af0e30c90e4492feba8b9f9e5188f5ccbdd422469b89f61f0cefabd23daf9",
+          "output_sha256": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f",
+          "retained_intermediate_path": "answers/screening/r20/wm4-dev-technical-01.txt",
+          "details": {
+            "only_paragraph_boundaries_changed": true,
+            "paragraph_claim_groups": [
+              [
+                "DTC1",
+                "DTC5"
+              ],
+              [
+                "DTC2",
+                "DTC3",
+                "DTC4"
+              ],
+              [
+                "DTC6",
+                "DTC7"
+              ]
+            ]
+          }
+        }
+      ],
+      "stage_c_raw_path": "answers/screening/r20/wm4-dev-technical-01.txt",
+      "output_path": "answers/screening/r20/wm4-dev-technical-01.txt",
+      "output_sha256": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f",
+      "word_count": 147,
+      "no_op": false,
+      "bounded_method_viable": true,
+      "factual_correction_performed": false,
+      "unsupported_additions": [],
+      "output_frozen_at_utc": "2026-09-08T08:51:19.625336+00:00",
+      "claim_support_for_check": {
+        "DTC1": "ETag enables receiving applications to validate whether cached representations may be reused.",
+        "DTC2": "A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+        "DTC3": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body.",
+        "DTC4": "If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds.",
+        "DTC5": "Still, this validation includes sending a request.",
+        "DTC6": "An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules.",
+        "DTC7": "However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds."
+      }
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "stage_b_input_path": "stages/screening/repaired/wm4-dev-business-01.txt",
+      "stage_b_input_sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+      "operations": [
+        {
+          "index": 1,
+          "kind": "movement",
+          "before": "Progress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed. Titles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change. Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents. Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents. Progress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed. Titles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change. Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "reason": "Lead with the sponsor decision and deadline; preserve all supporting sentence order.",
+          "plan_defect_ids": [
+            "B1"
+          ],
+          "claim_ids": [
+            "DBC9"
+          ],
+          "input_sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+          "output_sha256": "c168e10caa2d7186e8d5655654b41835cda8f74bf1b020e171b2517557a7a11a",
+          "retained_intermediate_path": "stages/screening/intermediates/wm4-dev-business-01.operation-1.txt",
+          "details": {
+            "moved_unit": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+            "stage_b_span": {
+              "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+              "start": 640,
+              "end": 748
+            },
+            "destination": "First sentence; other sentence order retained."
+          }
+        },
+        {
+          "index": 2,
+          "kind": "joining",
+          "before": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents. Progress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed. Titles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change. Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.\n\nProgress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed.\n\nTitles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change.\n\nReview of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "reason": "Group article progress with incomplete review, search with fix/test and conditional pilot, and feedback with rollout non-commitment.",
+          "plan_defect_ids": [
+            "B1"
+          ],
+          "claim_ids": [
+            "DBC1",
+            "DBC2",
+            "DBC3",
+            "DBC4",
+            "DBC5",
+            "DBC6",
+            "DBC7",
+            "DBC8",
+            "DBC9",
+            "DBC10",
+            "DBC11"
+          ],
+          "input_sha256": "c168e10caa2d7186e8d5655654b41835cda8f74bf1b020e171b2517557a7a11a",
+          "output_sha256": "384c41dde3e0d12b46842bc1d0519ae30fa4c6861d24eba12fb1c04f43f9b650",
+          "retained_intermediate_path": "stages/screening/intermediates/wm4-dev-business-01.operation-2.txt",
+          "details": {
+            "only_paragraph_boundaries_changed": true,
+            "paragraph_claim_groups": [
+              [
+                "DBC9"
+              ],
+              [
+                "DBC1",
+                "DBC2",
+                "DBC3",
+                "DBC4"
+              ],
+              [
+                "DBC5",
+                "DBC6",
+                "DBC7",
+                "DBC8"
+              ],
+              [
+                "DBC10",
+                "DBC11"
+              ]
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "kind": "wording",
+          "before": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.\n\nProgress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed.\n\nTitles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change.\n\nReview of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide five volunteer support agents.\n\nProgress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed.\n\nTitles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change.\n\nReview of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "reason": "Resolve the reference exposed by moving the request before the pilot description, using the exact supplied agent role.",
+          "plan_defect_ids": [
+            "B2"
+          ],
+          "claim_ids": [
+            "DBC9",
+            "DBC7"
+          ],
+          "input_sha256": "384c41dde3e0d12b46842bc1d0519ae30fa4c6861d24eba12fb1c04f43f9b650",
+          "output_sha256": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67",
+          "retained_intermediate_path": "answers/screening/r20/wm4-dev-business-01.txt",
+          "details": {
+            "phrase_before": "the five agents",
+            "phrase_after": "five volunteer support agents",
+            "clause_before": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+            "clause_after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide five volunteer support agents.",
+            "semantic_mapping": [
+              {
+                "before": "Sponsor confirmation is requested by 9 September",
+                "after": "Sponsor confirmation is requested by 9 September",
+                "preserved": "Pending sponsor confirmation and 9 September deadline."
+              },
+              {
+                "before": "whether the support team can provide the five agents",
+                "after": "whether the support team can provide five volunteer support agents",
+                "preserved": "Pending support-team staffing question and five-agent count. The supplied role from DBC7 resolves the previously definite reference without changing the agent group.",
+                "source_span": "If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September."
+              }
+            ],
+            "new_fact": false
+          }
+        }
+      ],
+      "stage_c_raw_path": "answers/screening/r20/wm4-dev-business-01.txt",
+      "output_path": "answers/screening/r20/wm4-dev-business-01.txt",
+      "output_sha256": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67",
+      "word_count": 150,
+      "no_op": false,
+      "bounded_method_viable": true,
+      "factual_correction_performed": false,
+      "unsupported_additions": [],
+      "output_frozen_at_utc": "2026-09-08T08:51:19.625959+00:00",
+      "claim_support_for_check": {
+        "DBC1": "Progress in the migration of the Atlas help centre",
+        "DBC2": "completion of copying of all 180 articles",
+        "DBC3": "the content team has reviewed 60 articles without identifying any missing sections.",
+        "DBC4": "Reviews are still incomplete: the remaining articles have not yet been reviewed.",
+        "DBC5": "Titles containing apostrophes are currently omitted from searches.",
+        "DBC6": "Nia is due to deliver a fix on 10 September and Omar will test it after delivery.",
+        "DBC7": "If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+        "DBC8": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+        "DBC9": "Sponsor confirmation is requested by 9 September as to whether the support team can provide five volunteer support agents.",
+        "DBC10": "Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout.",
+        "DBC11": "No schedule has as yet been committed for full rollout."
+      }
+    }
+  ],
+  "source_plan_sha256": "afc4bb68c4e1e2c380cd2aca5cad504d46a62140f3caff06bab7a51e49cf28ed"
+}

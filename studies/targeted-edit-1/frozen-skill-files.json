@@ -1,0 +1,37 @@
+{
+  "SKILL.txt": {
+    "sha256": "270a0f25d6dc5fddea6fc5b554eeb44b88eab530ca5353efd42cbe11e782832d",
+    "bytes": 7853,
+    "installed_relative_path": "SKILL.md"
+  },
+  "agents/openai.yaml": {
+    "sha256": "1a655d0a68dbbc03bb4224ac22f530431a912c2f419f1fc11d51fc6983693e43",
+    "bytes": 300,
+    "installed_relative_path": "agents/openai.yaml"
+  },
+  "scripts/validate_receipt.py": {
+    "sha256": "3cb2d27c558a1d3eb0b3b160ee135fdd97c3404b1a80b9898ee3641ba80dd780",
+    "bytes": 5696,
+    "installed_relative_path": "scripts/validate_receipt.py"
+  },
+  "references/evidence.md": {
+    "sha256": "794dcab7bebe12ec3071aaa0da64af78396efd517bbabce096aa466d5ece02dd",
+    "bytes": 4065,
+    "installed_relative_path": "references/evidence.md"
+  },
+  "references/detector-research.md": {
+    "sha256": "51b71b295602088fad3dd58bd38d4f88109239c541cdda96e2d55fb912a5e5f5",
+    "bytes": 9854,
+    "installed_relative_path": "references/detector-research.md"
+  },
+  "references/measurement.md": {
+    "sha256": "697fb2d74fb1eb6cc8b4c17d10ce8335957d90a84c4d9d1064bc1bdbbdcb2b1d",
+    "bytes": 7780,
+    "installed_relative_path": "references/measurement.md"
+  },
+  "references/receipt-format.md": {
+    "sha256": "3542b0c32edcff25fccc09ec4e36241cc2d53e6dbcce6d60dafe5e94af68f140",
+    "bytes": 3010,
+    "installed_relative_path": "references/receipt-format.md"
+  }
+}

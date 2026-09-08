@@ -1,0 +1,217 @@
+{
+  "topic": "Python asyncio.TaskGroup failure, sibling cancellation, cleanup, and grouped exceptions",
+  "reader_purpose": "Choose TaskGroup for a failing worker batch and understand cleanup, propagated failures, and the minimum Python version.",
+  "sources": [
+    {
+      "id": "P1",
+      "url": "https://docs.python.org/3.14/library/asyncio-task.html#task-groups",
+      "title": "Coroutines and tasks: Task groups",
+      "version": "Python 3.14.7 documentation as displayed at access; TaskGroup introduced in Python 3.11",
+      "accessed_at_utc": "2026-09-06T21:19:43Z",
+      "inspection": "Official documentation read through web browsing; behavior was not executed locally",
+      "access_time_precision": "Nearby tool-clock sample from the successful source-reading batch; exact request start was not separately logged. Relevant sections were checked again in the next browsing call."
+    },
+    {
+      "id": "P2",
+      "url": "https://docs.python.org/3.14/library/asyncio-task.html#task-cancellation",
+      "title": "Coroutines and tasks: Task cancellation",
+      "version": "Python 3.14.7 documentation as displayed at access",
+      "accessed_at_utc": "2026-09-06T21:19:43Z",
+      "inspection": "Official documentation read through web browsing; behavior was not executed locally",
+      "access_time_precision": "Nearby tool-clock sample from the successful source-reading batch; exact request start was not separately logged. Relevant sections were checked again in the next browsing call."
+    }
+  ],
+  "claims": [
+    {
+      "id": "P-C1",
+      "exact_claim": "An ordinary child exception such as ValueError causes TaskGroup to cancel the remaining children.",
+      "original_anchor": "`asyncio.TaskGroup` cancels the remaining children when one child raises an ordinary exception such as `ValueError`.",
+      "sources": [
+        "P1"
+      ]
+    },
+    {
+      "id": "P-C2",
+      "exact_claim": "Non-cancellation failures consisting entirely of ordinary exceptions are reported together in an ExceptionGroup after all child tasks finish.",
+      "original_anchor": "The non-cancellation failures are reported together in an `ExceptionGroup` when they are all ordinary exceptions. This happens after the `async with` block has waited for every child to finish.",
+      "sources": [
+        "P1"
+      ],
+      "qualification": "This means reporting the failures after waiting, not postponing the cancellation request. The special KeyboardInterrupt/SystemExit behavior is retained later."
+    },
+    {
+      "id": "P-C3",
+      "exact_claim": "Child coroutines should place cleanup in try/finally; cancellation raises asyncio.CancelledError at the next opportunity.",
+      "original_anchor": "Put cleanup in `try/finally` inside the child coroutines. Cancellation raises `asyncio.CancelledError` at the next opportunity.",
+      "sources": [
+        "P2"
+      ]
+    },
+    {
+      "id": "P-C4",
+      "exact_claim": "Explicitly caught CancelledError should generally be propagated after cleanup; swallowing it can interfere with TaskGroup behavior.",
+      "original_anchor": "If you catch it explicitly, generally re-raise it after cleanup; swallowing it can interfere with the task group's cancellation machinery.",
+      "sources": [
+        "P2"
+      ],
+      "qualification": "Generally must be preserved; the advice is not an absolute ban on every intentional suppression use case."
+    },
+    {
+      "id": "P-C5",
+      "exact_claim": "A child's CancelledError alone does not trigger cancellation of siblings.",
+      "original_anchor": "A child's `asyncio.CancelledError` alone does not trigger sibling cancellation.",
+      "sources": [
+        "P1"
+      ],
+      "qualification": "Applies to the individual child cancellation trigger; it does not claim external cancellation of the group cannot cancel other tasks."
+    },
+    {
+      "id": "P-C6",
+      "exact_claim": "BaseExceptionGroup is used when the collected failures require that group type.",
+      "original_anchor": "`BaseExceptionGroup` is used when the collected failures require it.",
+      "sources": [
+        "P1"
+      ]
+    },
+    {
+      "id": "P-C7",
+      "exact_claim": "For KeyboardInterrupt or SystemExit, TaskGroup cancels and waits for the remaining children, then re-raises the initial exception instead of grouping it.",
+      "original_anchor": "`KeyboardInterrupt` and `SystemExit` are special: the group cancels and waits for the remaining children, then re-raises the original exception.",
+      "sources": [
+        "P1"
+      ]
+    },
+    {
+      "id": "P-C8",
+      "exact_claim": "Further tasks cannot be added after the first non-cancellation failure.",
+      "original_anchor": "No new tasks can be added after the first non-cancellation failure.",
+      "sources": [
+        "P1"
+      ]
+    },
+    {
+      "id": "P-C9",
+      "exact_claim": "TaskGroup requires Python 3.11 or later.",
+      "original_anchor": "This API requires Python 3.11 or later.",
+      "sources": [
+        "P1"
+      ]
+    }
+  ],
+  "concrete_clarity_defects": [
+    {
+      "id": "P-D1",
+      "anchor": "This happens after the `async with` block has waited for every child to finish.",
+      "defect": "This does not explicitly name reporting the exception group, even though cancellation and reporting have different timing in the same paragraph.",
+      "small_edit_opportunity": "Name raising the exception group and preserve the wait-before-raise relationship."
+    },
+    {
+      "id": "P-D2",
+      "anchor": "This API requires Python 3.11 or later.",
+      "defect": "The requested version prerequisite arrives after all behavior and cleanup instructions; This API also uses an indirect reference.",
+      "small_edit_opportunity": "Put Python 3.11 or later beside the first introduction of asyncio.TaskGroup."
+    },
+    {
+      "id": "P-D3",
+      "anchor": "A child's `asyncio.CancelledError` alone does not trigger sibling cancellation.",
+      "defect": "The exception to the sibling-cancellation trigger is separated from the opening trigger discussion by the cleanup paragraph.",
+      "small_edit_opportunity": "Place this qualification next to the opening trigger claim while retaining the cleanup guidance."
+    }
+  ],
+  "protected_identifiers": [
+    "asyncio.TaskGroup",
+    "ValueError",
+    "ExceptionGroup",
+    "async with",
+    "try/finally",
+    "asyncio.CancelledError",
+    "BaseExceptionGroup",
+    "KeyboardInterrupt",
+    "SystemExit"
+  ],
+  "protected_values": [
+    "Python 3.11 or later"
+  ],
+  "scope_cuts": [
+    "Nested groups, simultaneous external cancellation, and exceptions raised by the async-with body are outside this child-failure question.",
+    "Intentional cancellation suppression and uncancel() details are omitted because the answer retains the documented generally qualification and recommends propagation."
+  ],
+  "source_notes": [
+    "The numbered 3.14 documentation is used rather than the development 3.16 documentation. No runtime experiment or deployment claim is made."
+  ],
+  "fixture_label": "synthetic editing fixtures with deliberately introduced clarity problems",
+  "synthetic_question": true,
+  "synthetic_original": true,
+  "construction_note": "Constructed from official documentation with the listed clarity defects deliberately introduced. Original frozen on first creation; no detector outputs supplied or consulted.",
+  "original_file": "original.md",
+  "original_sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+  "original_word_count_whitespace": 134,
+  "word_count_method": "len(original.split()), counting the exact UTF-8 Markdown answer body",
+  "original_utf8_bytes": 982,
+  "frozen_at_utc": "2026-09-06T21:23:24.870335+00:00",
+  "protected_spans": [
+    {
+      "text": "`asyncio.TaskGroup`",
+      "utf8_byte_start": 0,
+      "utf8_byte_end_exclusive": 19,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`ValueError`",
+      "utf8_byte_start": 103,
+      "utf8_byte_end_exclusive": 115,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`ExceptionGroup`",
+      "utf8_byte_start": 175,
+      "utf8_byte_end_exclusive": 191,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`async with`",
+      "utf8_byte_start": 254,
+      "utf8_byte_end_exclusive": 266,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`try/finally`",
+      "utf8_byte_start": 327,
+      "utf8_byte_end_exclusive": 340,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`asyncio.CancelledError`",
+      "utf8_byte_start": 390,
+      "utf8_byte_end_exclusive": 414,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`asyncio.CancelledError`",
+      "utf8_byte_start": 590,
+      "utf8_byte_end_exclusive": 614,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`BaseExceptionGroup`",
+      "utf8_byte_start": 660,
+      "utf8_byte_end_exclusive": 680,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`KeyboardInterrupt`",
+      "utf8_byte_start": 729,
+      "utf8_byte_end_exclusive": 748,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`SystemExit`",
+      "utf8_byte_start": 753,
+      "utf8_byte_end_exclusive": 765,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    }
+  ],
+  "code_blocks": [],
+  "detector_measurements": [],
+  "review_status": "Fixture-author factual self-check only; no separate final-candidate review performed by this agent."
+}

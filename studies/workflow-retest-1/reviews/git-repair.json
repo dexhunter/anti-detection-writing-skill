@@ -1,0 +1,11 @@
+{
+  "case": "git-tracked-ignore",
+  "candidate": "A",
+  "sha256": "b41341804e4ec061b26cd6973c1c1182186199f41b771b73b3806b80c2e3afcb",
+  "hash_verified": true,
+  "verdict": "PASS",
+  "changed_issue": "Resolved: the repaired text explicitly says keeping the ignore rule prevents ordinary git add from adding the file again.",
+  "coverage": "All useful original claims, required qualifications, exact commands, and source URL are retained. The staging/commit explanation, local-copy protection, and repository tracking consequence remain clear and correct.",
+  "material_issues": [],
+  "scope": "Only masked/git-tracked-ignore-repaired.json was read for this repair review; no scores or other files were consulted."
+}

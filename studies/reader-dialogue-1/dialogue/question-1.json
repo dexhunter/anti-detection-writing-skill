@@ -1,0 +1,6 @@
+{
+  "question": "Why would continuing requests that cannot be accommodated support considering more rooms only after staff coverage and booking reliability meet the proposed conditions?",
+  "relevant_claim_ids": ["C09", "C18", "C20"],
+  "relevant_fact_ids": ["F12", "F20", "F21", "F22", "F24"],
+  "why_it_matters": "This connects the three decision conditions and clarifies why evidence of unaccommodated requests must be assessed alongside whether the booking process works reliably."
+}

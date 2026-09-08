@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "split": "development",
+      "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case.",
+      "original": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.\n\nThis validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+      "claims": [
+        "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+        "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+        "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+        "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+        "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+        "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+        "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval."
+      ],
+      "protected": [
+        "ETag",
+        "GET",
+        "If-None-Match",
+        "304 Not Modified",
+        "200 OK",
+        "Cache-Control: max-age=60",
+        "60 seconds"
+      ],
+      "sources": [
+        "{\"id\": \"http-semantics\", \"kind\": \"authoritative_specification\", \"quotes\": [{\"section\": \"8.8.3\", \"text\": \"An entity tag is an opaque validator\"}, {\"section\": \"6.4\", \"text\": \"304 (Not Modified) responses do not include content.\"}], \"sections\": [\"8.8.3\", \"13.1.2\", \"15.3.1\", \"15.4.5\"], \"title\": \"RFC 9110: HTTP Semantics\", \"url\": \"https://www.rfc-editor.org/rfc/rfc9110.html\", \"verification\": \"Read current RFC Editor document with web tool.\", \"verified_at\": \"2026-09-07\"}",
+        "{\"id\": \"http-caching\", \"kind\": \"authoritative_specification\", \"quotes\": [{\"section\": \"4.2\", \"text\": \"without contacting the origin server\"}, {\"section\": \"4.2\", \"text\": \"not likely to change in a semantically significant way\"}], \"sections\": [\"4\", \"4.2\", \"4.3\", \"5.2.2.1\"], \"title\": \"RFC 9111: HTTP Caching\", \"url\": \"https://www.rfc-editor.org/rfc/rfc9111.html\", \"verification\": \"Read current RFC Editor document with web tool.\", \"verified_at\": \"2026-09-07\"}"
+      ]
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "split": "development",
+      "question": "In the invented Atlas scenario, write a concise update for the project sponsor covering progress, what still blocks rollout, the pilot proposal, and the decision needed from the sponsor. Use only the supplied synthetic facts.",
+      "original": "Atlas help-centre migration.\n\nAll 180 articles have been copied, and the content team has checked 60 without finding missing sections. The remaining articles have not yet been reviewed, so the content check is still incomplete.\n\nSearch currently omits titles containing apostrophes. Nia is due to deliver the fix on 10 September, after which Omar will test it. I recommend opening the pilot to five volunteer support agents on 11 September if that test passes. The existing help centre will remain available during the pilot, and customer-facing links will not change.\n\nPlease confirm by 9 September whether the support team can provide those five agents. We will review pilot feedback on 14 September before deciding whether to schedule the full rollout. A full rollout date has therefore not been committed.",
+      "claims": [
+        "DBC1: The update concerns Atlas help-centre migration. Strength: topic_identification. Scope: Entire update.",
+        "DBC2: All 180 articles are copied. Strength: completed_status. Scope: Atlas transfer. The copying actor is unspecified in the authoritative source.",
+        "DBC3: Review found no missing sections in 60 articles. Strength: bounded_observation. Scope: Only the reviewed set.",
+        "DBC4: Remaining articles are unreviewed; content review is incomplete. Strength: current_status. Scope: Not an assurance about all 180.",
+        "DBC5: Search omits titles containing apostrophes. Strength: known_issue. Scope: Current search behavior.",
+        "DBC6: Nia plans fix delivery on 10 September; Omar tests afterward. Strength: planned_sequence. Scope: Future work.",
+        "DBC7: Recommend five-volunteer pilot on 11 September if the test passes. Strength: conditional_proposal. Scope: Not a confirmed start.",
+        "DBC8: Existing help centre and customer-facing links remain available/unchanged. Strength: pilot_plan. Scope: During the pilot.",
+        "DBC9: Sponsor must confirm five-agent availability by 9 September. Strength: requested_decision. Scope: Staffing not yet confirmed.",
+        "DBC10: Review feedback on 14 September before considering rollout scheduling. Strength: planned_decision_sequence. Scope: Does not promise a rollout.",
+        "DBC11: No full rollout date is committed. Strength: current_non_commitment. Scope: Full rollout only."
+      ],
+      "protected": [
+        "Atlas",
+        "180",
+        "60",
+        "Nia",
+        "Omar",
+        "10 September",
+        "five",
+        "11 September",
+        "9 September",
+        "14 September"
+      ],
+      "sources": [
+        "{\"facts\": [\"This is an invented internal Atlas help-centre migration scenario, not an account of a real project.\", \"All 180 articles have been copied.\", \"The content team checked 60 articles and found no missing sections in that reviewed set; the remaining articles have not yet been reviewed.\", \"Search currently omits titles containing apostrophes.\", \"Nia is due to deliver a search fix on 10 September; delivery is a plan, not a completed event.\", \"Omar will test the fix after delivery.\", \"The proposed pilot starts on 11 September with five volunteer support agents, conditional on that search test passing.\", \"The existing help centre will stay available during the pilot; customer-facing links will not change during it.\", \"The sponsor needs to confirm by 9 September whether the support team can provide the five agents; staffing is not yet confirmed.\", \"Pilot feedback is due to be reviewed on 14 September, before deciding whether to schedule full rollout; no full rollout date is committed.\"], \"id\": \"atlas-brief\", \"kind\": \"provided_synthetic_facts\", \"quotes\": [{\"fact_index\": 1, \"text\": \"All 180 articles have been copied.\"}, {\"fact_index\": 3, \"text\": \"Search currently omits titles containing apostrophes.\"}], \"title\": \"Invented Atlas scenario fact sheet\", \"url\": null, \"verification\": \"Draft reconciled against this author-supplied synthetic fact sheet; no external factual assertion.\", \"verified_at\": \"2026-09-07\"}"
+      ]
+    }
+  ]
+}

@@ -2,11 +2,11 @@
   "schema_version": 1,
   "prepared_at": "2026-09-06T09:42:06.167616+00:00",
   "design": "Two frozen skill versions, same six source-grounded drafts; no added quotations. Separate fresh writer agents of the same configured model. One first pass per arm, with evidence-supported corrections retained.",
-  "measurement_status": "pending_available_scan_allowance",
-  "completed_gptzero_scans": 0,
+  "measurement_status": "complete_observed_ui",
+  "completed_gptzero_scans": 12,
   "planned_gptzero_scans": 12,
   "quality_status": "complete_blinded_first_pass_review",
-  "provenance": "Markdown files are prepared answer texts, not captured detector editor inputs. No detector scores have been observed for this cohort.",
+  "provenance": "Prepared Markdown and review hashes remain frozen. Exact submitted and effective-editor UTF-8 files are exported separately, with source-final-LF removal and three editor-added LF characters recorded. Scores are maintainer-recorded completed, fresh GPTZero UI observations; local byte/UI checks do not authenticate the service or constitute independent remeasurement. The strict receipt checker was not used.",
   "scope": "Six questions absent from the previous19-question primary dataset. This does not establish absence from model pretraining. Already answered threads are used as offline writing cases, not new posting opportunities.",
   "cases": [
     {
@@ -38,14 +38,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:26:52.778Z",
+            "displayed_words": 144,
+            "displayed_characters": 1105,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "f358e091a5b5c73356e36944060430811ea5b86b516a554e7d79dee27ae88bfc",
+            "submitted": {
+              "path": "measurements/pydantic-13585/current-submitted.txt",
+              "sha256": "0decd3b7e83899e8ce6bcc1bc079d09fa63996f9dc78cbbc385dc17e36dc7787"
+            },
+            "effective_editor": {
+              "path": "measurements/pydantic-13585/current-effective.txt",
+              "sha256": "2871e4df1be53434fb2c501fdf76ca78196f9e2f623ab506a7acae76d1f82431"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -56,14 +74,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:29:23.455Z",
+            "displayed_words": 145,
+            "displayed_characters": 1129,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "70c70fb42e943f7158a5ad3ba1bc62bbaf7104b07799dfbdaa8524d740e4be04",
+            "submitted": {
+              "path": "measurements/pydantic-13585/revised-submitted.txt",
+              "sha256": "4f789122fc69a879821d91b0c66410acfcc54ef13ff1a587ab63ae370824cd05"
+            },
+            "effective_editor": {
+              "path": "measurements/pydantic-13585/revised-effective.txt",
+              "sha256": "bd2dee8a7956586a2d7078df1a181a2c7ae1a99f904c6a371c53be7c1aacb287"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -122,14 +158,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:30:17.480Z",
+            "displayed_words": 140,
+            "displayed_characters": 1095,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "8daee027792ce6d493398e7c14e4f818250146a2897fa5949d7c633a99553536",
+            "submitted": {
+              "path": "measurements/pytest-14190/current-submitted.txt",
+              "sha256": "05fd80dbdf1548ef818ce7ca87d785f619a1af423dad07816c1fd011b187806a"
+            },
+            "effective_editor": {
+              "path": "measurements/pytest-14190/current-effective.txt",
+              "sha256": "b7e74c7c330cd7510d216f7df793861785d178f00e381cd0882c54594e849c9d"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -140,14 +194,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:31:15.270Z",
+            "displayed_words": 135,
+            "displayed_characters": 1083,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "992d2a298f034226d9492c3d944275f53e7d1f5249cbaf2b3fe2a38de533fa88",
+            "submitted": {
+              "path": "measurements/pytest-14190/revised-submitted.txt",
+              "sha256": "ee63e85660f92e92e4445e15bd16b722073f23a19ada7d4117ba1d419ce331bd"
+            },
+            "effective_editor": {
+              "path": "measurements/pytest-14190/revised-effective.txt",
+              "sha256": "19e66968b29698f1beb68bc2354a79b4978b8a047b26cba3ef0870894be3c48d"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -202,14 +274,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:32:47.539Z",
+            "displayed_words": 143,
+            "displayed_characters": 1092,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "73b8c303211083fe098e6869b36f109efafaa0d023e0a5d8a4331b600f5b65a6",
+            "submitted": {
+              "path": "measurements/httpx-3630/current-submitted.txt",
+              "sha256": "8d8a996391f276cbe2edd04a648ec7060342de597d8d5515f155613c62278d4c"
+            },
+            "effective_editor": {
+              "path": "measurements/httpx-3630/current-effective.txt",
+              "sha256": "a96fa910e04122172a03c60a6184605fe88de49c2bd81f63d7093a051e17f7e0"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -220,14 +310,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:32:03.981Z",
+            "displayed_words": 149,
+            "displayed_characters": 1114,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "8dd31c4777473d3f2af3c1f5760e908546a6df42ce43385b4a3950063e107fc8",
+            "submitted": {
+              "path": "measurements/httpx-3630/revised-submitted.txt",
+              "sha256": "f983ab0bb2b6bb6b3225e45feb53124811911f9c0049f7d66e6902fa0e63fb74"
+            },
+            "effective_editor": {
+              "path": "measurements/httpx-3630/revised-effective.txt",
+              "sha256": "8ba4b235a84579f84e44b6c1108c2b9e71be1fb2887ab8258172c5651d6d8393"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -280,14 +388,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:33:28.450Z",
+            "displayed_words": 144,
+            "displayed_characters": 1142,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "6846b6f693a5fa2abef49604416efa7e29ad1c681f51b836abb71a2177ba3513",
+            "submitted": {
+              "path": "measurements/httpx-3164/current-submitted.txt",
+              "sha256": "4824492981dc47bf510a4c7962a0b35ca178712f8724b3b19bee6c24b105290e"
+            },
+            "effective_editor": {
+              "path": "measurements/httpx-3164/current-effective.txt",
+              "sha256": "cdc7680ac99fe05d199f0c7d3d118ddb3b218690ce5634c5150650687c642d9a"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -298,14 +424,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:35:17.480Z",
+            "displayed_words": 146,
+            "displayed_characters": 1148,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "ea3c069c03c18ca8be54b6cc3e20a9be39a623edc8a62a09c72d7486b721e074",
+            "submitted": {
+              "path": "measurements/httpx-3164/revised-submitted.txt",
+              "sha256": "ed03fceec94627a5d24dd9eb2c8668b3379db7633c49164bd8ac856eb37274fc"
+            },
+            "effective_editor": {
+              "path": "measurements/httpx-3164/revised-effective.txt",
+              "sha256": "edf9021c9e91a589aedbe64b0ddb21e75d656b6bec908e08b4bcd31200d50094"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -358,14 +502,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:36:50.842Z",
+            "displayed_words": 133,
+            "displayed_characters": 1103,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "1e3da82fd839f68cdae35551396dbf6a64be8b64a155e4e578f2771eb264b170",
+            "submitted": {
+              "path": "measurements/fastapi-7077/current-submitted.txt",
+              "sha256": "8dfdb24b71418ffbf1a024c5782792d38ead9ae5cb3e2d916676a2bb4ff1dd5f"
+            },
+            "effective_editor": {
+              "path": "measurements/fastapi-7077/current-effective.txt",
+              "sha256": "d701e77704b76b0f3a1f749ce1c2f05b39c73a9768879c9c850bb8659317861d"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -376,14 +538,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:35:53.052Z",
+            "displayed_words": 126,
+            "displayed_characters": 1051,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "36051d2812a6ebb7aa64237ac4368e113513d68b27f7ae7738c3c184d7747508",
+            "submitted": {
+              "path": "measurements/fastapi-7077/revised-submitted.txt",
+              "sha256": "945cbe7173312e09f1388c06b5f1974a484402a80b8cfaa54750feb5ed034bbb"
+            },
+            "effective_editor": {
+              "path": "measurements/fastapi-7077/revised-effective.txt",
+              "sha256": "534a7ce68137540cf16dc4a60f4bcd44721b45ebb6d6c213f691ad50be64186b"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -441,14 +621,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:38:19.021Z",
+            "displayed_words": 150,
+            "displayed_characters": 1120,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "8769a5dd67f6ab30599f69ccd493de9740ac2a1db23f271d5d5e07cb39f40c23",
+            "submitted": {
+              "path": "measurements/fastapi-16297/current-submitted.txt",
+              "sha256": "e1f4ddea67900068f05f4e43af60d6dfe0570a7b763a029dfd1cc095f8a0fe97"
+            },
+            "effective_editor": {
+              "path": "measurements/fastapi-16297/current-effective.txt",
+              "sha256": "067e25750584cb75362a86a33b2f86ed85256c05bb485ddf1268dd98d7be4401"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         },
         "revised": {
@@ -459,14 +657,32 @@
             "unsupported_additions": 0
           },
           "scan": {
-            "status": "not_run",
+            "status": "complete",
             "service": "GPTZero",
             "mode": "Basic Scan",
-            "model": null,
-            "ai_percent": null,
-            "mixed_percent": null,
-            "human_percent": null,
-            "observed_at": null
+            "model": "4.9b",
+            "ai_percent": 100,
+            "mixed_percent": 0,
+            "human_percent": 0,
+            "observed_at": "2026-09-06T16:37:33.149Z",
+            "displayed_words": 149,
+            "displayed_characters": 1128,
+            "short_text_warning": false,
+            "text_up_to_date": true,
+            "editor_unchanged_after_scan": true,
+            "source_sha256": "80b84eafb1e91b361f5a117346f542f49dc05b731da4c873bf16053299c5bd2c",
+            "submitted": {
+              "path": "measurements/fastapi-16297/revised-submitted.txt",
+              "sha256": "9b210324bd58f7ffced0a55b0c9f44732d313a7d730aa0aa2b0792123a7a51f7"
+            },
+            "effective_editor": {
+              "path": "measurements/fastapi-16297/revised-effective.txt",
+              "sha256": "c63366ab64353570bded9cd8337730661399ebfdd4f5a0fd07bd21a685adb42d"
+            },
+            "entry_representation": "Literal Markdown in a code block; source and editor transformations recorded separately.",
+            "source_to_submitted": "remove_one_final_lf",
+            "submitted_to_effective": "append_three_lf",
+            "strict_receipt_checker_used": false
           }
         }
       },
@@ -502,5 +718,113 @@
     "required_corrections": 0,
     "reviewer_type": "one_separate_llm_agent",
     "limit": "Small qualitative comparison; not independent human ratings or a detector-performance result."
+  },
+  "measurement_completed_at": "2026-09-06T16:38:19.021Z",
+  "measurement_summary": {
+    "paired_cases": 6,
+    "revised_lower_ai": 0,
+    "same_ai": 6,
+    "revised_higher_ai": 0,
+    "short_text_warnings": 0,
+    "supplemental_observations": 1,
+    "limit": "Completes the older frozen two-snapshot comparison; not validation of later literature-informed instructions. Separate from the original 19-question, 44-scan dataset."
+  },
+  "supplemental_observations": [
+    {
+      "case": "pydantic-13585",
+      "arm": "current",
+      "kind": "unplanned_repeat",
+      "included_in_planned_comparison": false,
+      "service": "GPTZero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-06T16:28:14.581Z",
+      "text_up_to_date": true,
+      "ai_percent": 100,
+      "mixed_percent": 0,
+      "human_percent": 0,
+      "effective_editor": {
+        "path": "measurements/pydantic-13585/current-effective.txt",
+        "sha256": "2871e4df1be53434fb2c501fdf76ca78196f9e2f623ab506a7acae76d1f82431"
+      },
+      "exclusion_reason": "Additional observation of the same frozen arm, not a new prespecified arm or a replacement for its first result.",
+      "identical_effective_input": true,
+      "exact_editor_readback_at": "2026-09-06T16:43:41.610Z",
+      "input_identity_basis": "A later read-only reopening of the original repeat document recovered exact editor bytes matching the referenced primary effective input; this was not another scan."
+    }
+  ],
+  "scan_order": {
+    "prerecorded_before_first_scan": true,
+    "seed": "unseen-transfer-1-basic-arm-order-2026-09-06-v1",
+    "method": "Keep plan case order. Sort six case keys by SHA256(seed + |balanced-first-arm| + key), ascending hex. First three keys use current then revised; remaining keys revised then current. This balances first arms 3/3 without any scores.",
+    "preparation_record_sha256": "71779e98f4dba30b92ea928a35e72e437146971d6ce211862b4eda3c349fc443",
+    "first_arm_counts": {
+      "current": 3,
+      "revised": 3
+    },
+    "observed_order_matches_plan": true,
+    "order": [
+      {
+        "position": 1,
+        "case": "pydantic-13585",
+        "arm": "current"
+      },
+      {
+        "position": 2,
+        "case": "pydantic-13585",
+        "arm": "revised"
+      },
+      {
+        "position": 3,
+        "case": "pytest-14190",
+        "arm": "current"
+      },
+      {
+        "position": 4,
+        "case": "pytest-14190",
+        "arm": "revised"
+      },
+      {
+        "position": 5,
+        "case": "httpx-3630",
+        "arm": "revised"
+      },
+      {
+        "position": 6,
+        "case": "httpx-3630",
+        "arm": "current"
+      },
+      {
+        "position": 7,
+        "case": "httpx-3164",
+        "arm": "current"
+      },
+      {
+        "position": 8,
+        "case": "httpx-3164",
+        "arm": "revised"
+      },
+      {
+        "position": 9,
+        "case": "fastapi-7077",
+        "arm": "revised"
+      },
+      {
+        "position": 10,
+        "case": "fastapi-7077",
+        "arm": "current"
+      },
+      {
+        "position": 11,
+        "case": "fastapi-16297",
+        "arm": "revised"
+      },
+      {
+        "position": 12,
+        "case": "fastapi-16297",
+        "arm": "current"
+      }
+    ]
   }
 }

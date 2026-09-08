@@ -1,0 +1,404 @@
+{
+  "study": "workflow-retest-1",
+  "service": "GPTZero Basic",
+  "displayed_model": "4.9b",
+  "summary": {
+    "cases": 4,
+    "initial_candidate_quality_passes": 7,
+    "initial_candidate_quality_failures": 1,
+    "final_candidate_quality_passes": 8,
+    "quality_repairs": 1,
+    "distinct_completed_scans": 12,
+    "direct_reductions": 0,
+    "rebuild_reductions": 0,
+    "direct_ties": 4,
+    "rebuild_ties": 4,
+    "short_warnings": 6,
+    "ui_word_cost": 1664
+  },
+  "skill_sha256": "84680e93a824b5f093c867f8f5073fedb696483794ed2771eae69524a8bd2491",
+  "selection": "All four failed requested-alternatives-1 development cases; two also failed HIP quality review. This is reuse, not held-out transfer.",
+  "quality_preferences": {
+    "git-tracked-ignore": "original",
+    "docker-expose-local": "original",
+    "kubernetes-probe-roles": "direct",
+    "postgresql-snapshot-scope": "direct"
+  },
+  "review_label_map": {
+    "git-tracked-ignore": {
+      "A": "rebuild",
+      "B": "direct"
+    },
+    "docker-expose-local": {
+      "A": "direct",
+      "B": "rebuild"
+    },
+    "kubernetes-probe-roles": {
+      "A": "rebuild",
+      "B": "direct"
+    },
+    "postgresql-snapshot-scope": {
+      "A": "rebuild",
+      "B": "direct"
+    }
+  },
+  "records": [
+    {
+      "case": "kubernetes-probe-roles",
+      "arm": "direct",
+      "observed_at": "2026-09-06T19:56:27.246Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 181,
+      "ui_characters": 1464,
+      "short_text_warning": false,
+      "source_sha256": "16b8ce6f9d84faca445483c298c6e87818796f5681cefa4aa3a5c6fad51b8c85",
+      "submitted_sha256": "a7394870c63b62bcc81f2b856e1d884508dc1e9f48b24458ab4892a2d95f588d",
+      "effective_sha256": "f105149fe2ed40b78cb7ba728824f03b2fb14a3d0199e02f077d163da023a966",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/kubernetes-probe-roles/direct.md",
+        "submitted": "inputs/kubernetes-probe-roles/direct-submitted.txt",
+        "effective": "inputs/kubernetes-probe-roles/direct-effective.txt"
+      }
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "arm": "rebuild",
+      "observed_at": "2026-09-06T19:57:29.942Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 206,
+      "ui_characters": 1635,
+      "short_text_warning": false,
+      "source_sha256": "39f5dd8b8b5d782bc02d5b824081828083c02cb72ea6fc3f44c454e9025d6139",
+      "submitted_sha256": "c27bd1904329b235c32b48246bd8e6c4d31a0ac3deb7ead7681fd727e58e4cf3",
+      "effective_sha256": "7b4b1c7d8cc9006edfdb888dcf075f740cf9fcb01d6fc466f5fef9e6e06c9c40",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/postgresql-snapshot-scope/rebuild.md",
+        "submitted": "inputs/postgresql-snapshot-scope/rebuild-submitted.txt",
+        "effective": "inputs/postgresql-snapshot-scope/rebuild-effective.txt"
+      }
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "arm": "direct",
+      "observed_at": "2026-09-06T19:59:25.765Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 178,
+      "ui_characters": 1413,
+      "short_text_warning": false,
+      "source_sha256": "0d6853531ea7ada8109ad0801c98da05cf030b7b553f4840e18931e5ac425aef",
+      "submitted_sha256": "5ecf16fb00328bd4ddc1e91c8cd58dd7052a2361b300242401417e0c32d33c30",
+      "effective_sha256": "e8558e023c1a3471d4a0436787f9f10e7b0ecde2f46007c7c6fd84c98735bbba",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/postgresql-snapshot-scope/direct.md",
+        "submitted": "inputs/postgresql-snapshot-scope/direct-submitted.txt",
+        "effective": "inputs/postgresql-snapshot-scope/direct-effective.txt"
+      }
+    },
+    {
+      "case": "git-tracked-ignore",
+      "arm": "direct",
+      "observed_at": "2026-09-06T20:00:25.016Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 90,
+      "ui_characters": 605,
+      "short_text_warning": true,
+      "source_sha256": "9a92006599467030652a70403aa64fd547920b13477854500e37eefd655f7d08",
+      "submitted_sha256": "80c462abb43e8f9c7f7569fe530718db80830b34ed1451cace3aa1ee2a363c96",
+      "effective_sha256": "d164f40fefb747a0fe540b10ae8519834d07f3f2fa5c6d750f67b6c2aca49bfe",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/git-tracked-ignore/direct.md",
+        "submitted": "inputs/git-tracked-ignore/direct-submitted.txt",
+        "effective": "inputs/git-tracked-ignore/direct-effective.txt"
+      }
+    },
+    {
+      "case": "kubernetes-probe-roles",
+      "arm": "rebuild",
+      "observed_at": "2026-09-06T20:00:54.561Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 210,
+      "ui_characters": 1675,
+      "short_text_warning": false,
+      "source_sha256": "25600aafbe5a8022fca2f2ed3c884e8abada1e24b465771e49eb28172705b8e5",
+      "submitted_sha256": "66fa74bc2864f3cafd36fa67322eebf7c133b4f750a6a1f49c59c5ad48bd9f86",
+      "effective_sha256": "55393dac1f00e7133e43ceefeaba47333b1397313af0ff195aa1b2aff888edf6",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/kubernetes-probe-roles/rebuild.md",
+        "submitted": "inputs/kubernetes-probe-roles/rebuild-submitted.txt",
+        "effective": "inputs/kubernetes-probe-roles/rebuild-effective.txt"
+      }
+    },
+    {
+      "case": "docker-expose-local",
+      "arm": "original",
+      "observed_at": "2026-09-06T20:02:03.197Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 85,
+      "ui_characters": 635,
+      "short_text_warning": true,
+      "source_sha256": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c",
+      "submitted_sha256": "648dc3009f17b853184f3af3df4e9de5ef559fe3ea57c24e84740c445835181c",
+      "effective_sha256": "8fa29b36da2fdc01c8a7c7f98f245a8a95885baede6247d56e2605faf37be1e1",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/docker-expose-local/original.md",
+        "submitted": "inputs/docker-expose-local/original-submitted.txt",
+        "effective": "inputs/docker-expose-local/original-effective.txt"
+      }
+    },
+    {
+      "case": "docker-expose-local",
+      "arm": "rebuild",
+      "observed_at": "2026-09-06T20:02:46.305Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 96,
+      "ui_characters": 678,
+      "short_text_warning": true,
+      "source_sha256": "a1df29550889f336c63d1492f7120f3f818491c95149cabaf2656880b60fe042",
+      "submitted_sha256": "4933814fd040f4d6b8b578765f34260d31f1cec72a62f24b35b57d593abef282",
+      "effective_sha256": "1fd492258f77d4ea0363d8b3fc4519cbba840fcdd8733eaaceb0025e73923d08",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/docker-expose-local/rebuild.md",
+        "submitted": "inputs/docker-expose-local/rebuild-submitted.txt",
+        "effective": "inputs/docker-expose-local/rebuild-effective.txt"
+      }
+    },
+    {
+      "case": "docker-expose-local",
+      "arm": "direct",
+      "observed_at": "2026-09-06T20:03:12.063Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 99,
+      "ui_characters": 699,
+      "short_text_warning": true,
+      "source_sha256": "11016dd2000bdb3452ce95ffca29212c0ed0929878f6e72743308492f54f6e1f",
+      "submitted_sha256": "b806dd6ce45768560fa81ff60b1797efbc0be568855bf662e1dd4742bdf6e690",
+      "effective_sha256": "ab20cc298b98e07588b0c7abb61ab9a0dc6264931d7b6cfb55706c1ee148b1ab",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/docker-expose-local/direct.md",
+        "submitted": "inputs/docker-expose-local/direct-submitted.txt",
+        "effective": "inputs/docker-expose-local/direct-effective.txt"
+      }
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "arm": "original",
+      "observed_at": "2026-09-06T20:04:07.408Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 180,
+      "ui_characters": 1407,
+      "short_text_warning": false,
+      "source_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "submitted_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "effective_sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/postgresql-snapshot-scope/original.md",
+        "submitted": "inputs/postgresql-snapshot-scope/original-submitted.txt",
+        "effective": "inputs/postgresql-snapshot-scope/original-effective.txt"
+      }
+    },
+    {
+      "case": "kubernetes-probe-roles",
+      "arm": "original",
+      "observed_at": "2026-09-06T20:04:37.388Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 164,
+      "ui_characters": 1349,
+      "short_text_warning": false,
+      "source_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "submitted_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "effective_sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/kubernetes-probe-roles/original.md",
+        "submitted": "inputs/kubernetes-probe-roles/original-submitted.txt",
+        "effective": "inputs/kubernetes-probe-roles/original-effective.txt"
+      }
+    },
+    {
+      "case": "git-tracked-ignore",
+      "arm": "original",
+      "observed_at": "2026-09-06T20:05:05.487Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 78,
+      "ui_characters": 539,
+      "short_text_warning": true,
+      "source_sha256": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9",
+      "submitted_sha256": "c391e9ae6b65940aae550856218a714b21683558fa72c031b5d21b898909b1d9",
+      "effective_sha256": "f20da30d99efca5f3c5518e6e324004161ef05bf46d0ef5eb2c5f636d79225a5",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": false,
+      "files": {
+        "source": "inputs/git-tracked-ignore/original.md",
+        "submitted": "inputs/git-tracked-ignore/original-submitted.txt",
+        "effective": "inputs/git-tracked-ignore/original-effective.txt"
+      }
+    },
+    {
+      "case": "git-tracked-ignore",
+      "arm": "rebuild",
+      "observed_at": "2026-09-06T20:05:35.182Z",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "Text up-to-date",
+      "scores": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "ui_words": 97,
+      "ui_characters": 630,
+      "short_text_warning": true,
+      "source_sha256": "b41341804e4ec061b26cd6973c1c1182186199f41b771b73b3806b80c2e3afcb",
+      "submitted_sha256": "9dc846065e6734fcb01df3b78a0108d10f85994a21b9d82ed62d879f52b30cdc",
+      "effective_sha256": "5b5b7d5fad239b13acbb840c14416f03dbbc1f9341c390ca416e8013921fd496",
+      "editor_unchanged_after_scan": true,
+      "entry_representation": "Literal Markdown in Code Block; one final source LF removed if present; effective exactly submitted plus three LF. Strict receipt checker not used.",
+      "scan_workflow": "Initial scan followed by completed Basic view; no subscription or upgrade.",
+      "quality": "PASS",
+      "quality_repair": true,
+      "files": {
+        "source": "inputs/git-tracked-ignore/rebuild.md",
+        "submitted": "inputs/git-tracked-ignore/rebuild-submitted.txt",
+        "effective": "inputs/git-tracked-ignore/rebuild-effective.txt"
+      }
+    }
+  ],
+  "limitations": [
+    "Reused development cases, not held-out data.",
+    "One output per writer/workflow/case; different writer instances confound isolated attribution.",
+    "Facts-only Git required one pre-score coverage repair; first attempt retained and unmeasured.",
+    "No authentic writing sample; conditional voice instruction inactive.",
+    "Observed UI results, not authenticated service exports; independent LLM quality review, not human ratings.",
+    "One initial PostgreSQL direct scan did not complete after immediate navigation; retried once on the same document. All12 final observations match the visible1664-word quota difference.",
+    "No post-score text changes. Later workflow notes were not part of this frozen tested skill."
+  ]
+}

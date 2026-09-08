@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-06T19:55:40.234114+00:00",
+  "case": "git-tracked-ignore",
+  "arm": "rebuild",
+  "reason": "Separate reviewer found a useful original claim absent from the prepared fact packet: ignore rule prevents ordinary re-addition. Restored that explanation before any scan.",
+  "before_sha256": "74fd2b88651f932e9a4264578a2d1a89ada8260eee30c9b2b64cabe226d7b0a7",
+  "after_sha256": "b41341804e4ec061b26cd6973c1c1182186199f41b771b73b3806b80c2e3afcb",
+  "replaced": "Keep the ignore rule; the `git add` step stages it so you can commit it together with the tracking removal.",
+  "replacement": "Keep the ignore rule to prevent ordinary `git add` from adding the file again. The command above stages the rule for a commit with the tracking removal.",
+  "detector_feedback_used": false
+}

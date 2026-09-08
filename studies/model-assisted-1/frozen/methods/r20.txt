@@ -1,0 +1,50 @@
+---
+name: anti-detection-writing
+description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability. Preserve meaning and factual accuracy; when requested, test revisions with GPTZero or another detector and work toward lower AI-detection scores.
+---
+
+# Anti-detection writing
+
+Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. When detector testing is requested, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship or permission to publish.
+
+## Establish the purpose and facts
+
+1. Save the original text. Identify its reader, purpose, format, and requested tone or length from the supplied context. For a discussion reply, also read the question and existing replies. For public participation, respect the destination's rules, explicit objections to AI-assisted work, and disclosure requirements.
+2. Treat supplied facts as the starting point for a self-contained edit. Verify substantive factual corrections against relevant sources; for technical advice, inspect official documentation or implementation and record the version when it matters. Distinguish source inspection, local tests, and deployment verification. Flag unsupported claims instead of adding invented evidence.
+3. Inventory the substantive claims, commands, code, conditions, uncertainty, and reported symptoms. For each claim record whether it is preserved, corrected, or removed, and why. Identify what the reader needs to understand, decide, or do.
+
+## Write and review
+
+- Use the exact two frozen local-paraphraser intermediates and provenance already specified by r09 for the two development cases. The coordinator supplies each raw intermediate to its corresponding case, without any r09 edited answer, review, score or hidden material. Save the exact raw bytes/hash and the original generation record. This development test intentionally reuses the same defective raw source to diagnose the repair-policy change; do not describe it as fresh paraphraser generation. If the declared raw intermediate or provenance is unavailable, record unsupported. A future confirmation requires a separately frozen fresh-generation protocol and untouched cases.
+- Stage B is one fresh editor invocation with the question, complete source contract, protected list and raw intermediate. Inventory factual and grammatical discrepancies. Repair only concrete omissions, incorrect facts, actor identity, conditions, negation, literals, ungrammatical constructions and unclear references. Preserve supported fluent wording and its order wherever possible; restore a missing fact at its nearest relevant location. Save the complete repaired text, every before/after edit with reason, exact claim map and self-check. Do not browse, select another paraphrase or regenerate the whole answer. If a complete factual repair is impossible within this bounded pass, retain the failed intermediate and stop; Stage C is not a second factual repair attempt.
+- Stage C is a separate fresh editor invocation starting from the exact Stage B artifact and its full contract. First save a reader-purpose plan identifying the requested answer/decision, the current lead and any concrete grouping or continuity defect. Move intact sentences or condition-plus-claim units to put that answer or decision first; group directly related supporting units in dependency order. Keep prerequisites with their dependent actions and exceptions beside the claims they limit. Preserve already clear wording.
+- After those moves, make only fluency edits required by the identified organization or a specific remaining reading defect: resolve a reference using its supplied entity name, remove repeated setup while preserving each distinct proposition, adjust a connective to the supported relation, or split/fuse clauses to attach their governing condition clearly. A changed substantive clause needs an explicit readability reason and full before/after semantic mapping. Do not swap synonyms for variety, add explanation, reconstruct the entire draft, or introduce a new factual correction. Save the pre-edit plan and an operation ledger distinguishing movement, joining and wording edits. If essentially all supported clauses require replacement, mark this bounded method not viable rather than silently performing unrestricted generation.
+- Freeze Stage C once and perform the complete final fidelity check. This is a relaxation of r09's preserve-order/editor-scope constraint before independent review; it does not authorize repairs after review. If Stage C has no justified organization or fluency edit, preserve Stage B exactly and label that stage a no-op. Retain raw, repaired and organized artifacts even if the final answer fails.
+
+### Common fidelity, evidence and review obligations
+
+- Honor the frozen common operator: one final concise professional answer per case, at most 180 words, UTF-8 with terminal LF, every required claim and protected literal preserved, no scope cuts. Use only supplied facts and source notes. Preserve actors including unspecified agency, modality, conditionality, negation, cause, scope, dates, numbers, commands and uncertainty. Never add unsupported observations, tests, commitments, personal experience, identity, human authorship, quotations, mistakes, invisible characters or filler.
+- Save every actual intermediate, exact input/output hash, generation identity, exposed settings, finish status and actual cost. Record unavailable usage as unavailable. Do not simulate separate stages in a retrospective narrative, overwrite a failed artifact, select between outputs, retry a failed stage, browse, publish, or read detector results, other arms or hidden cases. These are complete workflow variants; additional generation or repair cost belongs to the treatment.
+- Compare the exact final answer directly with the complete factual contract and protected list. Map every claim to an exact supporting span; check additions as well as omissions. Keep all failed outputs. Give a separate reviewer the reader's purpose, full sources and claim contract, original, paired final answers and exact hashes without method identity, stage history or detector scores. The writer's self-check does not replace this review. No post-review repair is allowed in this round.
+
+## Measure only when requested
+
+Read [measurement instructions](references/measurement.md) before live scanning and [evidence limits](references/evidence.md) before interpreting results. Use the user's requested service, mode, and supported browser tools. This skill supplies no browser controls and does not authorize subscriptions, paid scans, public posting, or new account access.
+
+When explaining detector mechanisms or planning another batch after unchanged results, read [detector research](references/detector-research.md).
+
+When the user explicitly asks for an autoresearch workflow to improve this skill, read the [bounded research workflow](references/autoresearch.md). It separates skill proposals, preference-based selection, quality review and measured confirmation; ordinary writing does not need this workflow.
+
+For a comparison, select cases and candidates before seeing scores. Record fresh baseline and candidate scans using the same service, mode, and displayed model. Retain failures and unchanged results. Compare a fixed body with a relevant quotation separately from prose rewriting; track content and length changes. Distinguish first-pass trials from adaptive iterations. Record an unchanged candidate as a no-op. Comparing it with a separately rewritten baseline measures preservation versus that rewrite, not a benefit from edits the candidate did not make.
+
+Confirm the effective editor text, completed scan, fresh-result indicator, model, native result labels and metrics, timestamp, and warnings. Save exact inputs and private visible evidence. A stale displayed number is not a result for changed text. Never omit code or pad a short answer to satisfy a detector.
+
+The optional checker in `scripts/validate_receipt.py` checks strict plain-text receipt consistency. Its [receipt format](references/receipt-format.md) rejects unrecorded editor changes; it does not support rendered-Markdown transformations or authenticate the service. A valid receipt can record 100% AI. Apply a numeric threshold only when the user explicitly requests one.
+
+## Publish and report
+
+Honor existing user authorization; do not invent authorization or ask again for an already authorized action. For a public reply, refresh the discussion before posting and reassess if context changed. Match the final body to the reviewed version and, when required, its scan and requested threshold. Update the owned answer when editing, then independently read back its author, exact body, and URL. Do not post a duplicate or claim an answer was accepted without checking.
+
+Report the actual quality findings, scores and warnings when measured, and edit or keep decisions. Missing required review or measurement leaves a candidate unpublished. A detector threshold applies only if requested. A successful local receipt check never authorizes publication.
+
+For a showcase, include only quality-passing candidates with a measured decrease against a saved before-text using comparable completed scans. Link exact inputs, identify the intervention and tested version, and keep the full comparison denominator visible. Put unchanged, worse, rejected, unpaired, and unmeasured outcomes in a separate limitations section while retaining all records. A quotation effect is not a rewriting effect, and an untested skill revision is not an established improvement. If a case does not improve, document when the approach may not help or test a specific new edit within a bounded experiment.

@@ -10,6 +10,8 @@ The active agent is the coordinator. It dispatches fresh subagents and supported
 
 Default to one on-demand bounded round unless the user requests recurring execution. Honor an explicit batch or spending limit. Inspect live free allowance before choosing the config; saved quotas can be stale. Existing account access and publication authorization remain governed by the task. This workflow never grants credit purchases or public posting.
 
+For local detector diagnostics, use the separate [local detector CLI](local-detector.md). It can exercise a pinned open model without commercial scan credits, but its output is not a browser receipt and cannot satisfy this controller's GPTZero conditions. The initial Desklib diagnostic disagreed with known Pangram classifications; do not assume that optimizing its score improves the commercial endpoint.
+
 From the skill directory, initialize a private run:
 
 ```sh

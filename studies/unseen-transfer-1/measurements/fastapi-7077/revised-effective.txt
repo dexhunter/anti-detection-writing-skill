@@ -1,0 +1,17 @@
+Set the cookie on the `RedirectResponse` you return:
+
+```python
+@app.get("/cookiefail")
+def cookie_fail():
+    response = RedirectResponse("/")
+    response.set_cookie(key="works", value="here is your data")
+    return response
+```
+
+The injected `Response` is a separate object. FastAPI copies its headers when it builds a response from ordinary returned data; returning a response instance bypasses that step.
+
+This [direct-response approach](https://fastapi.tiangolo.com/advanced/response-cookies/#return-a-response-directly) needs neither `response_class=RedirectResponse` nor a hard-coded domain. Omitting the domain avoids tying the cookie to `127.0.0.1`, though normal cookie matching rules still apply. Cookies are separate from localStorage.
+
+The newer `/authorize` example already sets the cookie on the returned redirect, so it needs a separate diagnosis. Check the redirect's `Set-Cookie` header, the following request's `Cookie` header, the actual hosts and the test client's cookie handling. The browser behavior has not been reproduced here.
+
+

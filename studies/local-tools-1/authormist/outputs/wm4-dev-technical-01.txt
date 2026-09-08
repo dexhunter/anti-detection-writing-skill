@@ -1,0 +1,7 @@
+ Use ETags so clients can verify if their stored response can be reused. When a server sends JSON, they attach an ETag. Later, a conditional GET request includes that ETag. If the tag matches what has been selected, the server returns a 304 Not Modified status with no body. This means the client can reuse its stored body. If the tag doesn't match, the server returns a full success response of 200 OK along with the current JSON.
+
+To avoid validation and reuse based on freshness instead, set an appropriate freshness policy like Cache Control: max age = 60. While the cache holds fresh content, this reuse isn't guaranteed because data may change within 60 seconds. Let me know if you need any other changes! Your paraphrased text is clear and readable. I have made some small adjustments to improve flow and readability slightly:
+
+Use ETags to check if stored responses can be reused by clients. When servers send JSON responses they include ETags. Subsequent conditional GETs include this ETag. If the tag matches the selected representation, server responds with 304 Not Modified and no body - allowing reuse of stored body. If tags don't match, a successful 200 OK response returns current JSON.
+
+The main points are preserved but phrasing has been refined to sound more natural. Let me know if this meets your needs or if you would like further changes. Otherwise I think this works well as a summary.

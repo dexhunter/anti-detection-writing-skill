@@ -1,0 +1,9 @@
+Give each probe a separate job:
+
+- **Startup:** allow initialization to finish before readiness or liveness checks begin. For your two-minute startup, `failureThreshold: 30` with `periodSeconds: 5` gives an initial allowance of about 150 seconds, with some margin. This is a starting budget, not an exact restart deadline. If the startup probe keeps failing through its threshold, the container restarts under your `Always` policy.
+- **Readiness:** check whether the service can handle requests now. Failure makes the Pod unready and stops normal Service traffic, while leaving the container running so it can recover. When the temporary problem clears, the Pod can become ready again.
+- **Liveness:** detect the deadlock that requires a restart. Consecutive failures reaching the configured threshold restart the container.
+
+After startup succeeds, readiness and liveness run independently. An unready Pod still receives liveness checks, so readiness failure does not prevent a deadlocked container from being restarted.
+
+The application needs HTTP health endpoints that reflect those conditions. Giving a probe a name does not make it recognize initialization, temporary unavailability, or deadlock. See the [probe concepts](https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/) and [configuration guidance](https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).

@@ -1,0 +1,141 @@
+{
+  "stage": "C",
+  "saved_before_final_composition": true,
+  "scope": "One bounded organization and required fluency pass, then one complete self-check per case; no factual repair or retry.",
+  "context_count_actual": 1,
+  "case_count_actual": 2,
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "reader": "App developer repeatedly fetching the same JSON.",
+      "requested_answer_or_decision": "Explain ETag validation and the matching/nonmatching successful GET cases, and answer whether an ETag eliminates the request; distinguish freshness-based reuse.",
+      "current_lead": "ETag enables receiving applications to validate whether cached representations may be reused.",
+      "identified_defects": [
+        {
+          "id": "T1",
+          "defect": "The direct answer that validation still sends a request is fifth, after the response branches.",
+          "planned_operation": "Move the complete fifth sentence immediately after the lead, then group the protocol mechanism and its two branches in a separate paragraph."
+        },
+        {
+          "id": "T2",
+          "defect": "In the matching branch, client reuse is stated before the server response that permits it.",
+          "planned_operation": "Within the intact matching condition, put the server response and no-body unit before the client-reuse unit; adjust joining punctuation only."
+        },
+        {
+          "id": "T3",
+          "defect": "The moved request sentence has a fronted Still followed by this validation, making the relation to the lead less direct.",
+          "planned_operation": "Move still inside the clause so This validation directly picks up the lead; preserve the request claim."
+        },
+        {
+          "id": "T4",
+          "defect": "The freshness sentence marks the same header as illustrative twice, with such as and as an example.",
+          "planned_operation": "Remove only as an example; preserve such as, the exact header, fresh-reuse permission and the other-caching-rules condition."
+        },
+        {
+          "id": "T5",
+          "defect": "The introductory However in the final qualification is not separated from its subject.",
+          "planned_operation": "Add the separating comma; keep the full qualification adjacent to freshness reuse."
+        }
+      ],
+      "sentence_order_before": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sentence_order_after": [
+        1,
+        5,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "paragraph_groups_after": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "preserve": "All other supported wording, actors, conditions, uncertainty and protected literals; no new technical facts."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "reader": "Project sponsor in the invented Atlas scenario.",
+      "requested_answer_or_decision": "Provide progress, remaining rollout blockers and the conditional pilot proposal; foreground confirmation by 9 September of whether the support team can supply five volunteer support agents.",
+      "current_lead": "Progress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections.",
+      "identified_defects": [
+        {
+          "id": "B1",
+          "defect": "The sponsor staffing decision appears in sentence seven, after all pilot details.",
+          "planned_operation": "Move that intact decision sentence to the lead; keep copied/reviewed progress together, then the search issue, fix, test, conditional pilot and continuity plan, then feedback and rollout non-commitment."
+        },
+        {
+          "id": "B2",
+          "defect": "Moving the decision sentence to the lead leaves the five agents without its earlier volunteer-support-agent referent.",
+          "planned_operation": "Resolve the moved reference as five volunteer support agents using only the supplied entity description."
+        },
+        {
+          "id": "B3",
+          "defect": "One paragraph mixes staffing, progress, prerequisites, pilot continuity and the later rollout decision.",
+          "planned_operation": "Use paragraph boundaries for the staffing decision, current progress, the search-to-pilot dependency chain and continuity plan, and the feedback-to-rollout decision sequence."
+        }
+      ],
+      "sentence_order_before": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sentence_order_after": [
+        7,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "paragraph_groups_after": [
+        [
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "preserve": "All other wording, including the unspecified copying actor, incomplete review, planned fix, testing prerequisite, conditional proposal and uncommitted rollout."
+    }
+  ]
+}

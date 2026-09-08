@@ -1,0 +1,829 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Development-only relation-map writer input",
+  "method_source": "../methods/proposal-1-relation-map.md",
+  "conventions": {
+    "empty_fields": "unspecified",
+    "order": "subject grouping; not answer outline",
+    "relations": "required",
+    "evidence_access": "baseline prose and source quotes retained separately for independent reviewer"
+  },
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "title": "ETag validation versus cache freshness",
+      "split": "development",
+      "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case.",
+      "reader_context": [
+        "application developer",
+        "repeated JSON retrieval",
+        "ordinary successful GET"
+      ],
+      "protected_literals": [
+        {
+          "id": "DTP1",
+          "literal": "ETag"
+        },
+        {
+          "id": "DTP2",
+          "literal": "GET"
+        },
+        {
+          "id": "DTP3",
+          "literal": "If-None-Match"
+        },
+        {
+          "id": "DTP4",
+          "literal": "304 Not Modified"
+        },
+        {
+          "id": "DTP5",
+          "literal": "200 OK"
+        },
+        {
+          "id": "DTP6",
+          "literal": "Cache-Control: max-age=60"
+        },
+        {
+          "id": "DTP7",
+          "literal": "60 seconds"
+        }
+      ],
+      "sources": [
+        {
+          "id": "http-semantics",
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "sections": [
+            "8.8.3",
+            "13.1.2",
+            "15.3.1",
+            "15.4.5"
+          ]
+        },
+        {
+          "id": "http-caching",
+          "title": "RFC 9111: HTTP Caching",
+          "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+          "sections": [
+            "4",
+            "4.2",
+            "4.3",
+            "5.2.2.1"
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "DTR01",
+          "claim_ids": [
+            "DTC1"
+          ],
+          "subject": "ETag",
+          "action": "enable",
+          "object": "client validation of stored response",
+          "condition": "",
+          "timing": "",
+          "scope": "stored response",
+          "modality": "capability",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP1"
+          ]
+        },
+        {
+          "id": "DTR02",
+          "claim_ids": [
+            "DTC2"
+          ],
+          "subject": "server",
+          "action": "send",
+          "object": "ETag with JSON response",
+          "condition": "",
+          "timing": "initial response",
+          "scope": "described exchange",
+          "modality": "mechanism",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP1"
+          ]
+        },
+        {
+          "id": "DTR03",
+          "claim_ids": [
+            "DTC2"
+          ],
+          "subject": "client",
+          "action": "include",
+          "object": "received ETag value in If-None-Match",
+          "condition": "",
+          "timing": "later conditional GET",
+          "scope": "described exchange",
+          "modality": "mechanism",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP1",
+            "DTP2",
+            "DTP3"
+          ]
+        },
+        {
+          "id": "DTR04",
+          "claim_ids": [
+            "DTC3"
+          ],
+          "subject": "server",
+          "action": "return",
+          "object": "304 Not Modified",
+          "condition": "tag matches selected representation; otherwise successful GET",
+          "timing": "conditional response",
+          "scope": "described GET",
+          "modality": "conditional requirement",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP2",
+            "DTP4"
+          ]
+        },
+        {
+          "id": "DTR05",
+          "claim_ids": [
+            "DTC3"
+          ],
+          "subject": "304 response",
+          "action": "contain",
+          "object": "no response body",
+          "condition": "DTR04",
+          "timing": "",
+          "scope": "described response",
+          "modality": "absence",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP4"
+          ]
+        },
+        {
+          "id": "DTR06",
+          "claim_ids": [
+            "DTC3"
+          ],
+          "subject": "client",
+          "action": "reuse",
+          "object": "stored body",
+          "condition": "DTR04",
+          "timing": "",
+          "scope": "validated stored response",
+          "modality": "permission",
+          "exception": "",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DTR07",
+          "claim_ids": [
+            "DTC4"
+          ],
+          "subject": "server",
+          "action": "return",
+          "object": "200 OK with current JSON",
+          "condition": "tag nonmatch; successful GET",
+          "timing": "",
+          "scope": "described GET",
+          "modality": "conditional behavior",
+          "exception": "other response outcomes outside success scope",
+          "source_ids": [
+            "http-semantics"
+          ],
+          "protected_span_ids": [
+            "DTP2",
+            "DTP5"
+          ]
+        },
+        {
+          "id": "DTR08",
+          "claim_ids": [
+            "DTC5"
+          ],
+          "subject": "conditional validation",
+          "action": "involve",
+          "object": "request",
+          "condition": "",
+          "timing": "",
+          "scope": "described validation",
+          "modality": "necessity",
+          "exception": "",
+          "source_ids": [
+            "http-caching"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DTR09",
+          "claim_ids": [
+            "DTC6"
+          ],
+          "subject": "developer",
+          "action": "configure",
+          "object": "appropriate freshness policy; example Cache-Control: max-age=60",
+          "condition": "goal: reuse without validation",
+          "timing": "",
+          "scope": "other caching rules applicable",
+          "modality": "recommendation; illustrative setting",
+          "exception": "no unconditional reuse permission",
+          "source_ids": [
+            "http-caching"
+          ],
+          "protected_span_ids": [
+            "DTP6"
+          ]
+        },
+        {
+          "id": "DTR10",
+          "claim_ids": [
+            "DTC6",
+            "DTC7"
+          ],
+          "subject": "cached response",
+          "action": "reuse",
+          "object": "stored response without validation",
+          "condition": "fresh; other caching rules permit",
+          "timing": "",
+          "scope": "described cache",
+          "modality": "permission",
+          "exception": "",
+          "source_ids": [
+            "http-caching"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DTR11",
+          "claim_ids": [
+            "DTC7"
+          ],
+          "subject": "freshness policy",
+          "action": "guarantee",
+          "object": "unchanged underlying data",
+          "condition": "negated",
+          "timing": "",
+          "scope": "illustrative 60 seconds",
+          "modality": "non-guarantee",
+          "exception": "",
+          "source_ids": [
+            "http-caching"
+          ],
+          "protected_span_ids": [
+            "DTP7"
+          ]
+        }
+      ],
+      "guard_notes": [
+        {
+          "id": "DTG1",
+          "relation_ids": [
+            "DTR07"
+          ],
+          "fragments": [
+            "successful GET scope",
+            "no universal 200 promise"
+          ]
+        },
+        {
+          "id": "DTG2",
+          "relation_ids": [
+            "DTR09",
+            "DTR10",
+            "DTR11"
+          ],
+          "fragments": [
+            "other caching rules",
+            "60-second example",
+            "freshness versus origin immutability"
+          ]
+        }
+      ],
+      "reconciliation": {
+        "claim_ids": [
+          "DTC1",
+          "DTC2",
+          "DTC3",
+          "DTC4",
+          "DTC5",
+          "DTC6",
+          "DTC7"
+        ],
+        "claim_to_relation_ids": {
+          "DTC1": [
+            "DTR01"
+          ],
+          "DTC2": [
+            "DTR02",
+            "DTR03"
+          ],
+          "DTC3": [
+            "DTR04",
+            "DTR05",
+            "DTR06"
+          ],
+          "DTC4": [
+            "DTR07"
+          ],
+          "DTC5": [
+            "DTR08"
+          ],
+          "DTC6": [
+            "DTR09",
+            "DTR10"
+          ],
+          "DTC7": [
+            "DTR10",
+            "DTR11"
+          ]
+        },
+        "missing_claim_ids": [],
+        "unknown_claim_ids": [],
+        "source_contract_reconciled": true,
+        "original_reconciled": true,
+        "scope_cuts": [],
+        "original_prose_included": false,
+        "prose_claim_ledger_included": false,
+        "source_quotes_included": false
+      }
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "title": "Atlas help-centre pilot readiness",
+      "split": "development",
+      "question": "In the invented Atlas scenario, write a concise update for the project sponsor covering progress, what still blocks rollout, the pilot proposal, and the decision needed from the sponsor. Use only the supplied synthetic facts.",
+      "reader_context": [
+        "project sponsor",
+        "invented Atlas project",
+        "progress and launch readiness",
+        "pilot and staffing decision"
+      ],
+      "protected_literals": [
+        {
+          "id": "DBP2",
+          "literal": "Atlas"
+        },
+        {
+          "id": "DBP3",
+          "literal": "180"
+        },
+        {
+          "id": "DBP4",
+          "literal": "60"
+        },
+        {
+          "id": "DBP5",
+          "literal": "Nia"
+        },
+        {
+          "id": "DBP6",
+          "literal": "Omar"
+        },
+        {
+          "id": "DBP7",
+          "literal": "10 September"
+        },
+        {
+          "id": "DBP8",
+          "literal": "five"
+        },
+        {
+          "id": "DBP9",
+          "literal": "11 September"
+        },
+        {
+          "id": "DBP10",
+          "literal": "9 September"
+        },
+        {
+          "id": "DBP11",
+          "literal": "14 September"
+        }
+      ],
+      "sources": [
+        {
+          "id": "atlas-brief",
+          "title": "Invented Atlas scenario fact sheet",
+          "url": null,
+          "kind": "provided_synthetic_facts"
+        }
+      ],
+      "relations": [
+        {
+          "id": "DBR01",
+          "claim_ids": [
+            "DBC1"
+          ],
+          "subject": "Atlas help-centre migration",
+          "action": "identify",
+          "object": "project update",
+          "condition": "",
+          "timing": "",
+          "scope": "whole update",
+          "modality": "topic identification",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP2"
+          ]
+        },
+        {
+          "id": "DBR02",
+          "claim_ids": [
+            "DBC2"
+          ],
+          "subject": "migration team",
+          "action": "copy",
+          "object": "all 180 articles",
+          "condition": "",
+          "timing": "completed",
+          "scope": "content transfer",
+          "modality": "completed status",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP3"
+          ]
+        },
+        {
+          "id": "DBR03",
+          "claim_ids": [
+            "DBC3"
+          ],
+          "subject": "content team",
+          "action": "review",
+          "object": "60 articles; no missing sections found",
+          "condition": "",
+          "timing": "completed",
+          "scope": "reviewed set only",
+          "modality": "bounded observation",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP4"
+          ]
+        },
+        {
+          "id": "DBR04",
+          "claim_ids": [
+            "DBC4"
+          ],
+          "subject": "remaining articles",
+          "action": "review",
+          "object": "not yet reviewed",
+          "condition": "",
+          "timing": "current",
+          "scope": "articles outside reviewed 60",
+          "modality": "incomplete status",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP4"
+          ]
+        },
+        {
+          "id": "DBR05",
+          "claim_ids": [
+            "DBC4"
+          ],
+          "subject": "content check",
+          "action": "complete",
+          "object": "false",
+          "condition": "DBR04",
+          "timing": "current",
+          "scope": "whole content review",
+          "modality": "status",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DBR06",
+          "claim_ids": [
+            "DBC5"
+          ],
+          "subject": "search",
+          "action": "omit",
+          "object": "titles containing apostrophes",
+          "condition": "",
+          "timing": "current",
+          "scope": "title search",
+          "modality": "known issue",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DBR07",
+          "claim_ids": [
+            "DBC6"
+          ],
+          "subject": "Nia",
+          "action": "deliver",
+          "object": "search fix",
+          "condition": "",
+          "timing": "10 September",
+          "scope": "DBR06",
+          "modality": "due; planned",
+          "exception": "delivery not completed",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP5",
+            "DBP7"
+          ]
+        },
+        {
+          "id": "DBR08",
+          "claim_ids": [
+            "DBC6"
+          ],
+          "subject": "Omar",
+          "action": "test",
+          "object": "search fix",
+          "condition": "delivery",
+          "timing": "after DBR07",
+          "scope": "DBR06",
+          "modality": "planned",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP6"
+          ]
+        },
+        {
+          "id": "DBR09",
+          "claim_ids": [
+            "DBC7"
+          ],
+          "subject": "author",
+          "action": "recommend",
+          "object": "pilot with five volunteer support agents",
+          "condition": "DBR08 test passes",
+          "timing": "11 September",
+          "scope": "pilot opening",
+          "modality": "conditional proposal",
+          "exception": "start not confirmed",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP8",
+            "DBP9"
+          ]
+        },
+        {
+          "id": "DBR10",
+          "claim_ids": [
+            "DBC8"
+          ],
+          "subject": "existing help centre",
+          "action": "remain",
+          "object": "available",
+          "condition": "",
+          "timing": "during pilot",
+          "scope": "existing service",
+          "modality": "plan",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DBR11",
+          "claim_ids": [
+            "DBC8"
+          ],
+          "subject": "customer-facing links",
+          "action": "change",
+          "object": "false",
+          "condition": "",
+          "timing": "during pilot",
+          "scope": "customer-facing links",
+          "modality": "plan",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DBR12",
+          "claim_ids": [
+            "DBC9"
+          ],
+          "subject": "project sponsor",
+          "action": "confirm",
+          "object": "support team availability: five agents",
+          "condition": "",
+          "timing": "by 9 September",
+          "scope": "pilot staffing",
+          "modality": "requested decision",
+          "exception": "staffing not yet confirmed",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP8",
+            "DBP10"
+          ]
+        },
+        {
+          "id": "DBR13",
+          "claim_ids": [
+            "DBC10"
+          ],
+          "subject": "project team",
+          "action": "review",
+          "object": "pilot feedback",
+          "condition": "",
+          "timing": "14 September",
+          "scope": "pilot feedback",
+          "modality": "planned",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": [
+            "DBP11"
+          ]
+        },
+        {
+          "id": "DBR14",
+          "claim_ids": [
+            "DBC10"
+          ],
+          "subject": "project team",
+          "action": "decide",
+          "object": "whether to schedule full rollout",
+          "condition": "DBR13 completed",
+          "timing": "after DBR13",
+          "scope": "full rollout scheduling",
+          "modality": "future decision",
+          "exception": "rollout not promised",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        },
+        {
+          "id": "DBR15",
+          "claim_ids": [
+            "DBC11"
+          ],
+          "subject": "full rollout date",
+          "action": "commit",
+          "object": "false",
+          "condition": "",
+          "timing": "current",
+          "scope": "full rollout only",
+          "modality": "non-commitment",
+          "exception": "",
+          "source_ids": [
+            "atlas-brief"
+          ],
+          "protected_span_ids": []
+        }
+      ],
+      "guard_notes": [
+        {
+          "id": "DBG1",
+          "relation_ids": [
+            "DBR03",
+            "DBR04",
+            "DBR05"
+          ],
+          "fragments": [
+            "60 reviewed",
+            "no all-article quality assurance"
+          ]
+        },
+        {
+          "id": "DBG2",
+          "relation_ids": [
+            "DBR07",
+            "DBR08",
+            "DBR09",
+            "DBR12"
+          ],
+          "fragments": [
+            "planned delivery",
+            "conditional pilot",
+            "staffing unconfirmed"
+          ]
+        },
+        {
+          "id": "DBG3",
+          "relation_ids": [
+            "DBR13",
+            "DBR14",
+            "DBR15"
+          ],
+          "fragments": [
+            "feedback before scheduling decision",
+            "no rollout date commitment"
+          ]
+        }
+      ],
+      "reconciliation": {
+        "claim_ids": [
+          "DBC1",
+          "DBC2",
+          "DBC3",
+          "DBC4",
+          "DBC5",
+          "DBC6",
+          "DBC7",
+          "DBC8",
+          "DBC9",
+          "DBC10",
+          "DBC11"
+        ],
+        "claim_to_relation_ids": {
+          "DBC1": [
+            "DBR01"
+          ],
+          "DBC2": [
+            "DBR02"
+          ],
+          "DBC3": [
+            "DBR03"
+          ],
+          "DBC4": [
+            "DBR04",
+            "DBR05"
+          ],
+          "DBC5": [
+            "DBR06"
+          ],
+          "DBC6": [
+            "DBR07",
+            "DBR08"
+          ],
+          "DBC7": [
+            "DBR09"
+          ],
+          "DBC8": [
+            "DBR10",
+            "DBR11"
+          ],
+          "DBC9": [
+            "DBR12"
+          ],
+          "DBC10": [
+            "DBR13",
+            "DBR14"
+          ],
+          "DBC11": [
+            "DBR15"
+          ]
+        },
+        "missing_claim_ids": [],
+        "unknown_claim_ids": [],
+        "source_contract_reconciled": true,
+        "original_reconciled": true,
+        "scope_cuts": [],
+        "original_prose_included": false,
+        "prose_claim_ledger_included": false,
+        "source_quotes_included": false,
+        "pre_freeze_adjustment": "DBC1 changed from benchmark-label disclosure to project identification; DBR01 updated; no project-fact removal."
+      }
+    }
+  ]
+}

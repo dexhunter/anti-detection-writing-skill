@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-09-06T19:35:42.005242+00:00",
+  "hypothesis": "The released HIP base-model adapter may produce a faithful alternative where ordinary prompt rewriting plateaued. Local research only; it is not an adopted skill mechanism.",
+  "cases": [
+    "kubernetes-probe-roles",
+    "postgresql-snapshot-scope"
+  ],
+  "selection": "Both long answers from prior requested-alternatives-1 batch; selected before model output. Reused development cases, not unseen or held-out.",
+  "base": "Qwen/Qwen3-0.6B-Base",
+  "base_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+  "adapter": "YixuanEvenXu/Qwen3-0.6B-Base-HIP-adapter",
+  "adapter_revision": "98a907f41440e10aafedd10364b41c32bb5fbf6a",
+  "upstream_code_revision": "44062ee8531141e35225335ff98439b9ccd54da5",
+  "rounds": 1,
+  "seed": 2026090604,
+  "max_input_tokens": 1024,
+  "max_new_tokens": 1024,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 0,
+  "repetition_penalty": 1.0,
+  "trust_remote_code": false,
+  "quality_gate": "Separate reviewer checks exact source claims, qualifiers, numbers, advice, code, URLs and readable final prose. Any material change, missing protected span, incomplete output or large unexplained length shift rejects the candidate before scanning. No repairs/resampling in this two-case pilot.",
+  "measurement": "Only quality-passing candidates eligible for fresh paired Chrome GPTZero Basic scan; reject means unmeasured, never score zero. All outputs retained. No publication of rewritten answers.",
+  "departures_from_upstream": "One round instead of ten, two technical Markdown answers rather than benchmark prose, explicit top_k=0 instead of inherited generation_config, max_new_tokens1024 instead of sample YAML512, no input truncation, MPS BF16 if available rather than CUDA. This is an implementation pilot, not paper reproduction.",
+  "input_sha256": {
+    "kubernetes-probe-roles": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+    "postgresql-snapshot-scope": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd"
+  }
+}

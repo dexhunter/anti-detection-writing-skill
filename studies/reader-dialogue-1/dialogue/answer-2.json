@@ -1,0 +1,7 @@
+{
+  "notes": [
+    "F17: Reminders and simple cancellation are intended to help residents release reservations they no longer need; effectiveness has not been measured.",
+    "F21: The proposed 85% condition accepts either use or cancellation before the reservation starts. Timely release therefore satisfies this condition without counting as room use.",
+    "F17/F21: A cancellation records a released reservation, not attendance. Whether someone subsequently books or uses that slot remains unresolved."
+  ]
+}

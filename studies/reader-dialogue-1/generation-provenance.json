@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-07T15:35:46.675723+00:00",
+  "common_operator_sha256": "9b45347bd53506cfc0b904806924f0d5dd5dd5ecaf5c64c8137785ee91a9f3ed",
+  "writers": [
+    {
+      "arm": "baseline",
+      "fork_turns": "none",
+      "additional_interaction": false,
+      "model_override": null,
+      "reasoning_override": null,
+      "settings": "Inherited parent defaults; full model identifier not exposed",
+      "case_id": "wm5-community-library-room-booking-pilot"
+    },
+    {
+      "arm": "candidate",
+      "fork_turns": "none",
+      "additional_interaction": "Reader question and response-dependent follow-up before composition",
+      "model_override": null,
+      "reasoning_override": null,
+      "settings": "Inherited parent defaults; full model identifier not exposed",
+      "case_id": "wm5-community-library-room-booking-pilot"
+    },
+    {
+      "arm": "reader",
+      "fork_turns": "none",
+      "original_withheld": true,
+      "model_override": null,
+      "reasoning_override": null,
+      "settings": "Inherited parent defaults; full model identifier not exposed",
+      "case_id": "wm5-community-library-room-booking-pilot"
+    }
+  ]
+}

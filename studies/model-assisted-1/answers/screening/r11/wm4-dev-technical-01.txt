@@ -1,0 +1,5 @@
+My recommendation is to use an ETag to validate a stored response and, to permit reuse without validation, configure an appropriate freshness policy such as Cache-Control: max-age=60, subject to the other caching rules.
+
+The server sends an ETag with the JSON response. A later conditional GET sends that value in If-None-Match. For an otherwise successful GET, a tag matching the selected representation produces 304 Not Modified with no response body, so the client can reuse its stored body. A nonmatching tag produces 200 OK with the current JSON.
+
+ETag validation still involves a request. With an appropriate freshness policy, the cached response can be reused while fresh without validation; this does not promise that the underlying data will stay unchanged for 60 seconds.

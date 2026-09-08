@@ -1,0 +1,24 @@
+{
+  "wm4-dev-technical-01": {
+    "DTC1": "An ETag lets the client validate its stored JSON response.",
+    "DTC2": "The server supplies the ETag with the response, and the client sends that value in If-None-Match on a later conditional GET.",
+    "DTC3": "If the tag matches the selected representation, the server returns 304 Not Modified with no response body, so the client can reuse its stored body.",
+    "DTC4": "If it does not match, an otherwise successful GET returns 200 OK with the current JSON.",
+    "DTC5": "That validation still sends a request.",
+    "DTC6": "To permit reuse without validation while the response is fresh, configure an appropriate freshness policy, for example Cache-Control: max-age=60, subject to the other caching rules.",
+    "DTC7": "Fresh reuse does not guarantee that the underlying data will stay unchanged for 60 seconds."
+  },
+  "wm4-dev-business-01": {
+    "DBC1": "All 180 articles have been copied for the Atlas help-centre migration.",
+    "DBC2": "All 180 articles have been copied for the Atlas help-centre migration.",
+    "DBC3": "The content team found no missing sections in the 60 articles checked",
+    "DBC4": "the remaining articles are unreviewed, so content review is still incomplete.",
+    "DBC5": "Search still omits titles containing apostrophes.",
+    "DBC6": "Nia is due to deliver the fix on 10 September, and Omar will test it afterward.",
+    "DBC7": "If that test passes, I recommend opening the pilot to five volunteer support agents on 11 September.",
+    "DBC8": "The existing help centre will remain available during the pilot, with customer-facing links unchanged.",
+    "DBC9": "Please confirm by 9 September whether the support team can provide the five agents.",
+    "DBC10": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout",
+    "DBC11": "no full rollout date is committed."
+  }
+}

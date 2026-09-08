@@ -1,0 +1,46 @@
+{
+  "wm4-dev-technical-01": {
+    "A": {
+      "arm": "core-expansion",
+      "sha256": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc",
+      "path": "outputs/core-expansion/wm4-dev-technical-01.txt"
+    },
+    "B": {
+      "arm": "relation-map",
+      "sha256": "68e137a2296ec35c454f4adaaa35462b71625b96d0e821e0b9e4466a5ebd9c77",
+      "path": "outputs/relation-map/wm4-dev-technical-01.txt"
+    },
+    "C": {
+      "arm": "baseline",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "path": "outputs/baseline/wm4-dev-technical-01.txt"
+    },
+    "D": {
+      "arm": "topic-continuity",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "path": "outputs/topic-continuity/wm4-dev-technical-01.txt"
+    }
+  },
+  "wm4-dev-business-01": {
+    "A": {
+      "arm": "core-expansion",
+      "sha256": "d2f012fa6d29935cd5369a7f1244acbbb5983c3519772200a27e7fbe7a9c89c9",
+      "path": "outputs/core-expansion/wm4-dev-business-01.txt"
+    },
+    "B": {
+      "arm": "relation-map",
+      "sha256": "ae67f0b3f2801e5c965438e7c5925170dfa1675800dd4c79a9bc7e1591887f30",
+      "path": "outputs/relation-map/wm4-dev-business-01.txt"
+    },
+    "C": {
+      "arm": "baseline",
+      "sha256": "13edfb9d4e685d6f5cf6e6c46cfea69b0dc75089d1c79b84d6462f94fbef7ef0",
+      "path": "outputs/baseline/wm4-dev-business-01.txt"
+    },
+    "D": {
+      "arm": "topic-continuity",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "path": "outputs/topic-continuity/wm4-dev-business-01.txt"
+    }
+  }
+}

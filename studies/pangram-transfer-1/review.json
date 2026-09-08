@@ -1,0 +1,53 @@
+{
+  "study": "pangram-transfer-1",
+  "audited_at": "2026-09-06T20:44:53.516327+00:00",
+  "reviewer": "Separate LLM subagent, not a human reviewer",
+  "status": "PASS_WITH_DISPLAY_NORMALIZATION_AND_ACCOUNTING_DIFFERENCES",
+  "private_audit_sha256": "750307b033f25d2bdc1a21dfdf37d7b67b32f3c3e822f2f491ae7895737cce7b",
+  "public_results_sha256": "dfc019f7862c9e7f9bfd15a8ff2a6e64bb5a38660542926a2fb86e7ac7770541",
+  "summary": {
+    "planned_inputs": 6,
+    "audited_inputs": 6,
+    "screenshots_visually_inspected": 12,
+    "submitted_input_hashes_match_plan": 6,
+    "textarea_inputs_byte_identical": 6,
+    "exact_display_transform_matches": 6,
+    "protected_code_and_urls_preserved": 6,
+    "classification_counts": {
+      "AI Generated": 5,
+      "AI Assisted": 1
+    },
+    "short_text_warnings": 3,
+    "human_written_labels": 0,
+    "human_written_percentages": "Not displayed; null for all six, not numeric zero",
+    "pair_findings": {
+      "kubernetes-probe-roles": "Both AI Generated, 100% displayed AI text. Before Medium confidence with short-text limit; after High without short-text warning.",
+      "postgresql-snapshot-scope": "Before AI Generated, 100% displayed AI text, High confidence. After AI Assisted, 100% displayed AI Assisted text, Medium confidence. Neither short-text warning.",
+      "qwen-1942": "Both AI Generated, 100% displayed AI text; both Medium confidence with short-text limitation. The historical GPTZero quotation reduction did not recur as a Pangram category reduction."
+    },
+    "first_observed_at": "2026-09-06T20:36:54.536Z",
+    "last_observed_at": "2026-09-06T20:41:33.572Z",
+    "frozen_order_matches_observed_timestamps": true,
+    "qwen_rendered_answer_body_equal_after_removing_exact_quote_line": true,
+    "actual_observed_total_credits": 12,
+    "total_ui_credit_estimates": 15,
+    "total_whitespace_words": 978,
+    "total_preview_ui_words": 1129,
+    "total_result_ui_words": 1134
+  },
+  "verified_display_transform": {
+    "description": "Split the submitted UTF-8 text on LF; strip leading/trailing ASCII space, tab and CR from each line; discard resulting empty lines; join retained lines with one LF, without a final LF. This exactly equals every saved rendered-result file.",
+    "scope": "Observed result-display transformation only. Internal request payload, service preprocessing and actual detector model input are not observed."
+  },
+  "caveats": [
+    "Pangram 4.0 is visible on each saved overview. Classification and percentage labels are recorded as displayed; PostgreSQL after is AI Assisted, not AI Generated or human-written.",
+    "Null percentages mean not shown. The AI-assisted document badge reads Mixed, but this must not be equated with GPTZero mixed confidence.",
+    "All frozen historical effective bytes were entered unchanged, but rendered results differ. The audit establishes observed display normalization, not internal model-input normalization.",
+    "For these specific artifacts, inline code/URLs are exact, both SQL blocks are exact, and Qwen JSON parses to equal objects. This does not establish that arbitrary whitespace-sensitive code or Markdown survives such a display transform.",
+    "Three inputs display short-text limits. Medium and High are separate qualitative segment-confidence labels, not the displayed text proportions.",
+    "Credit estimates total 15 while balance deductions total 12. Each actual observed deduction is 2; do not infer a billing formula from these six inputs.",
+    "Input preview, result UI, and whitespace word counts differ. Preserve each as recorded; no text change was found in the textarea.",
+    "The first partial audit referenced earlier receipt serialization before explicit null-category fields were added. This completed audit rehashes every current receipt and verifies aggregate parity.",
+    "Quality evidence is historical LLM review, not a fresh rewrite review or human preference rating. Saved UI evidence is not an authenticated service export or independent detector remeasurement."
+  ]
+}

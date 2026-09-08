@@ -1,0 +1,4 @@
+Dataset label: synthetic editing fixtures with deliberately introduced clarity problems.
+This constructed question is not a real user report.
+
+A deployment workflow uses a shared concurrency group with cancel-in-progress: false. If more runs arrive while one is active, will every waiting run execute? How can I keep several runs waiting, and what order can I rely on?

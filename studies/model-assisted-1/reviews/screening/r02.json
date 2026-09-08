@@ -1,0 +1,125 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "977301ad4e805d1ee8ae1acb2a1e29c2ae672e01151fe7ab599cd4dd99b9b605",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response.",
+            "DTC2 preserved: server supplies the tag and the client sends that value in If-None-Match on a later conditional GET.",
+            "DTC3 preserved: a matching selected representation returns 304 Not Modified without a body and permits stored-body reuse; the question supplies the otherwise-successful GET scope.",
+            "DTC4 preserved: the nonmatching successful GET returns 200 OK with current JSON.",
+            "DTC5 preserved: validation still involves a request.",
+            "DTC6 preserved: an appropriate illustrative freshness policy permits reuse without validation subject to other caching rules.",
+            "DTC7 preserved: fresh reuse does not promise unchanged underlying data for 60 seconds.",
+            "All seven protected literals are intact. All source content is retained without unsupported additions. Professional, clear prose; 122 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response and can avoid downloading the unchanged body.",
+            "DTC2 preserved: server supplies the tag and the client returns it in If-None-Match on a later conditional GET.",
+            "DTC3 preserved: a matching selected representation produces 304 Not Modified without a body and permits stored-body reuse, explicitly within an otherwise-successful GET.",
+            "DTC4 preserved: the nonmatching branch returns 200 OK with current JSON within the same successful GET scope.",
+            "DTC5 preserved: conditional validation still sends a request.",
+            "DTC6 preserved: the illustrative freshness policy permits reuse without origin contact subject to other caching rules; the added validation-requirements qualification is supported by the source notes.",
+            "DTC7 preserved: this permission does not guarantee unchanged underlying data for 60 seconds.",
+            "All seven protected literals are intact. All source content is retained with supported additions only. Professional, clear prose; 129 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both fully answer the scoped question and clearly distinguish body-saving validation from fresh reuse that can avoid contacting the origin. B makes the successful-GET scope and validation caveat explicit, but A already preserves both in context. The remaining ordering and phrasing differences do not create a meaningful clarity or correctness advantage."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "6a474d79785971593ee5dce92d975918dcc590e19acb61dcb32229dcfdfbe40a",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: Atlas help-centre migration is identified.",
+            "DBC2 preserved: all 180 articles have been copied without inventing a copying actor.",
+            "DBC3 preserved: the content team found no missing sections in the 60 reviewed articles.",
+            "DBC4 preserved: remaining articles are unreviewed and content checking is incomplete.",
+            "DBC5 preserved: search currently omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September, followed by Omar testing it.",
+            "DBC7 preserved: the 11 September pilot with five volunteer support agents is a recommendation conditional on that test passing.",
+            "DBC8 preserved: the existing help centre remains available and customer-facing links remain unchanged during the pilot.",
+            "DBC9 preserved: sponsor confirmation of whether the support team can provide the five agents is requested by 9 September.",
+            "DBC10 preserved: feedback review on 14 September precedes deciding whether to schedule full rollout.",
+            "DBC11 preserved: a full rollout date has not been committed.",
+            "All ten protected literals are intact. All supplied source content is retained without unsupported additions. Professional and understandable; 129 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: Atlas help-centre migration is identified in the opening request.",
+            "DBC2 preserved: all 180 articles have been copied without assigning an unsupported copying actor.",
+            "DBC3 preserved: the content team found no missing sections in the 60 reviewed articles.",
+            "DBC4 preserved: remaining articles are unreviewed and content review is incomplete.",
+            "DBC5 preserved: search currently omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September, and Omar tests afterward.",
+            "DBC7 preserved: the proposed pilot requires five volunteer support agents, with opening on 11 September recommended only if Omar's test passes.",
+            "DBC8 preserved: the existing help centre remains available and customer-facing links stay unchanged during the pilot.",
+            "DBC9 preserved: sponsor confirmation of the support team's ability to provide five agents is requested by 9 September; staffing is not presented as confirmed.",
+            "DBC10 preserved: feedback review on 14 September precedes deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date is committed.",
+            "All ten protected literals are intact. All supplied source content is retained without unsupported additions. Professional, clear prose; 119 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "B",
+      "reason": "B makes the sponsor's required decision and deadline immediately visible, which materially helps this recipient act on the update. It also states the lack of a committed rollout date in a direct standalone sentence instead of A's compressed final relative clause. It retains all progress, blockers, conditions, actors, and dates in fewer words."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "977301ad4e805d1ee8ae1acb2a1e29c2ae672e01151fe7ab599cd4dd99b9b605",
+        "public_text_paths": [
+          "answers/screening/r02/wm4-dev-technical-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "6a474d79785971593ee5dce92d975918dcc590e19acb61dcb32229dcfdfbe40a",
+        "public_text_paths": [
+          "answers/screening/r02/wm4-dev-business-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      }
+    }
+  }
+}

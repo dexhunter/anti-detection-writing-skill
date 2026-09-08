@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-09-07T12:30:59.100703+00:00",
+  "supersedes_conclusion_in": "frozen/relation-audit.json",
+  "scope": "Business relation DBR02 subject",
+  "finding": "Original passive statement supplies no copying actor. Preparer added migration team as actor, and output rendered it as an attribution. Root pre-generation audit incorrectly accepted this unsupported addition. Independent business reviewer caught it before any scan.",
+  "classification": "preparer error plus coordinator audit miss; writer inherited unsupported input",
+  "action": "Exclude relation-map under frozen zero-repair rule. Preserve frozen inputs and failed answer unchanged. Do not infer that relation maps inherently reduce fidelity or detector scores.",
+  "candidate_lesson": "Leave agent of a passive source statement unspecified unless evidence identifies it; preserve passive voice when necessary. Audit populated table fields for added facts, not only claim coverage."
+}

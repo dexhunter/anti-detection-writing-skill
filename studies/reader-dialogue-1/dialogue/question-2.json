@@ -1,0 +1,6 @@
+{
+  "question": "Why does releasing an unneeded reservation count toward the reliability condition, and how is that different from evidence of room use?",
+  "prompted_by": "The second note groups used reservations and timely cancellations in the 85% condition.",
+  "relevant_claim_ids": ["C14", "C18"],
+  "relevant_fact_ids": ["F17", "F21"]
+}

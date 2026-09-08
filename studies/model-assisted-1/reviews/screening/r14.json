@@ -1,0 +1,125 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "16af80a5baa4330cb838e97a81e7ee228e7b53ed1890322380306d202c3c6cd8",
+          "pass": true,
+          "claims": [
+            "DTC1: Stored-response validation preserved.",
+            "DTC2: Server/client roles preserved.",
+            "DTC3: Selected-representation match, 304, bodylessness, reuse preserved.",
+            "DTC4: Successful-GET scope preserved.",
+            "DTC5: Request requirement explicit.",
+            "DTC6: Qualified freshness example preserved.",
+            "DTC7: Non-guarantee preserved.",
+            "All protected literals preserved; 126 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1: Stored-response validation preserved.",
+            "DTC2: Server/client roles preserved.",
+            "DTC3: Selected-representation match, 304, bodylessness, reuse preserved.",
+            "DTC4: Successful-GET scope preserved.",
+            "DTC5: Request requirement explicit.",
+            "DTC6: Qualified freshness example preserved.",
+            "DTC7: Non-guarantee preserved.",
+            "All protected literals preserved; 129 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "B",
+      "reason": "Explicit origin-contact avoidance and validation requirements clarify when freshness can eliminate a request."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1: Atlas identified.",
+            "DBC2: Copying complete; actor unspecified.",
+            "DBC3: Observation bounded.",
+            "DBC4: Review incomplete.",
+            "DBC5: Search defect preserved.",
+            "DBC6: Planned sequence preserved.",
+            "DBC7: Pilot conditional.",
+            "DBC8: Pilot safeguards preserved.",
+            "DBC9: Staffing decision explicit.",
+            "DBC10: Feedback precedes scheduling decision.",
+            "DBC11: Rollout uncommitted.",
+            "All protected literals preserved; 119 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "da0250890c8057b66d0a1bc28f9016056e36b02176f9e4d152d30a4943c387bf",
+          "pass": true,
+          "claims": [
+            "DBC1: Atlas identified.",
+            "DBC2: Copying complete; actor unspecified.",
+            "DBC3: Observation bounded.",
+            "DBC4: Review incomplete.",
+            "DBC5: Search defect preserved.",
+            "DBC6: Planned sequence preserved.",
+            "DBC7: Pilot conditional.",
+            "DBC8: Pilot safeguards preserved.",
+            "DBC9: Staffing decision explicit.",
+            "DBC10: Feedback precedes scheduling decision.",
+            "DBC11: Rollout uncommitted.",
+            "All protected literals preserved; 125 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both make progress, blockers, pilot conditions, and sponsor action clear; ordering creates no material advantage."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "16af80a5baa4330cb838e97a81e7ee228e7b53ed1890322380306d202c3c6cd8",
+        "public_text_paths": [
+          "answers/screening/r14/wm4-dev-technical-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "da0250890c8057b66d0a1bc28f9016056e36b02176f9e4d152d30a4943c387bf",
+        "public_text_paths": [
+          "answers/screening/r14/wm4-dev-business-01.txt"
+        ]
+      }
+    }
+  }
+}

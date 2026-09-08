@@ -1,8 +1,8 @@
 # Methodology and provenance
 
-This is a retrospective record of developing an answer-editing workflow on September 5–6, 2026. The packaged skill is a portable consolidation of lessons, not the unchanged intervention used in every trial. No new detector scans were run to prepare this repository.
+This is a retrospective record of developing an answer-editing workflow on September 5–6, 2026. The packaged skill is a portable consolidation of lessons, not the unchanged intervention used in every trial. No new detector scans were run for the initial repository export of that historical study.
 
-This document describes the original 44-scan study. The [showcase](case-studies.md) selects only paired, quality-passing reductions; [when the skill may not help](when-it-may-not-help.md) covers unchanged, rejected, unpaired, and unmeasured outcomes. The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) keeps its inputs and outcomes separate; its GPTZero measurements are pending available scan allowance.
+This document describes the original 44-scan study. The [showcase](case-studies.md) selects only paired, quality-passing reductions; [when the skill may not help](when-it-may-not-help.md) covers unchanged, rejected, unpaired, and unmeasured outcomes. The subsequent [six-question comparison](../studies/unseen-transfer-1/README.md) keeps its inputs and outcomes separate. Its 12 planned Basic Scan / Model 4.9b observations were completed on September 6, 2026; all scored 100% AI / 0% mixed / 0% human, giving six tied pairs. Its exact submitted/effective inputs, trailing-newline transformations, and one supplemental repeat are documented with that cohort. This completes the older frozen comparison and does not validate later literature-informed instructions.
 
 ## Included observations
 

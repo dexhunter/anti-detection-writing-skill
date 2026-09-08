@@ -1,0 +1,12 @@
+{
+  "variants": [
+    {
+      "id": "reference-card",
+      "method": "Recast the answer as a compact lookup reference: a short direct answer followed by labeled fields or concise bullets for the conditional exchange and freshness. Use complete meaningful phrases; no invented wire transcript or extra values. Each qualifier stays with its governing claim. This tests reference structure, not random word substitution."
+    },
+    {
+      "id": "mini-faq",
+      "method": "Organize the full answer into two short reader questions: what ETag saves and how to avoid contacting the origin while fresh. Place the complete protocol exchange under the first and the freshness rule and non-guarantee under the second. Reuse exact identifiers and keep the conversational questions directly relevant; no extra claims or scope cuts."
+    }
+  ]
+}

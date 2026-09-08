@@ -1,0 +1,201 @@
+{
+  "study": "writing-methods-1",
+  "recorded_at": "2026-09-07T12:39:16.159829+00:00",
+  "phase": "development_complete",
+  "selected_method": "topic-continuity",
+  "actual_intervention": "Both selected outputs preserve complete original text except terminal newline; no sentence-topic edits were made.",
+  "generation_count": 8,
+  "quality_pass_count": 7,
+  "quality_failure": "Relation-map business answer adds unsupported copying actor; preparer-origin error missed by coordinator, caught by independent reviewer.",
+  "quality_vs_baseline": "All six candidate-versus-baseline readability comparisons tied; fidelity assessed separately.",
+  "unselected_methods": {
+    "relation-map": "Excluded on quality, no detector scans.",
+    "core-expansion": "Quality pass, lost simplicity tie-break, no detector scans."
+  },
+  "primary_comparisons": [
+    {
+      "case": "technical",
+      "baseline_label": "AI Generated",
+      "candidate_label": "AI Generated",
+      "baseline_ai_text_percent": 100.0,
+      "candidate_ai_text_percent": 100.0,
+      "reduction_pp": 0.0,
+      "label_improved": false,
+      "regression": false
+    },
+    {
+      "case": "business",
+      "baseline_label": "AI Generated",
+      "candidate_label": "AI Generated",
+      "baseline_ai_text_percent": 100.0,
+      "candidate_ai_text_percent": 100.0,
+      "reduction_pp": 0.0,
+      "label_improved": false,
+      "regression": false
+    }
+  ],
+  "primary_advance": false,
+  "holdout_released": false,
+  "holdout_count": 2,
+  "promotion": "No detector-reduction rule promoted.",
+  "secondary": {
+    "case": "wm4-dev-technical-01",
+    "baseline": {
+      "ai": 100,
+      "mixed": 0,
+      "human": 0
+    },
+    "candidate": {
+      "ai": 100,
+      "mixed": 0,
+      "human": 0
+    },
+    "ai_reduction_pp": 0
+  },
+  "usage": {
+    "pangram": {
+      "calls": 4,
+      "credits": 8
+    },
+    "gptzero": {
+      "calls": 2,
+      "words": 243
+    }
+  },
+  "measurements": [
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-07T12:35:46.848Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "1c82dd9789a54ca6c12b41e2fe7248801b86c628e644bcb26481ae880d7b55ff",
+      "measurement": "gptzero-baseline"
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-07T12:37:04.468Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "6965304849046dde32d6a2a289f6ace429fef1b1894f33d9deeb264ac0c1c2fb",
+      "measurement": "gptzero-candidate"
+    },
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:37:40.710Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "13edfb9d4e685d6f5cf6e6c46cfea69b0dc75089d1c79b84d6462f94fbef7ef0",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "1a9de99cde3c4515b7a6ada140a2d31b60c5280221a887c0d397c9f3ae9a099b",
+      "measurement": "pangram-business-baseline"
+    },
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:36:21.521Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "e85c3d5c20c6beefa5d38d546478b6b6cba213424bae713bdbc3f725d39f0e99",
+      "measurement": "pangram-business-candidate"
+    },
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:34:21.367Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "60edac32e8c03bba3f8c152e3df092666d4ef2e6ba5f727ecea2453c483a8267",
+      "measurement": "pangram-technical-baseline"
+    },
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:35:17.295Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "29f5ae8f8edb0f4a651f3fa9b0cc64be7e31a438661be78a30e07f507ca70947",
+      "measurement": "pangram-technical-candidate"
+    }
+  ],
+  "limitations": [
+    "Two synthetic development cases; no human-authored control or independent human quality panel.",
+    "Selected method made no edits; observations compare preservation with a current-skill rewrite, not the effect of sentence-topic edits.",
+    "Other two candidate methods were not detector-tested.",
+    "Pangram displayed short-text warnings and medium segment confidence for all four inputs.",
+    "Pangram text proportions and GPTZero document confidences are different units.",
+    "Same inherited model/settings used across fresh writer contexts; exact runtime model identifier unexposed.",
+    "Installed entrypoint snapshot differs from published main due to pre-existing pending local work.",
+    "Relation rows removed prose templates but largely retained conceptual order.",
+    "No holdout performance measured; no general detector efficacy established."
+  ],
+  "evidence_note": "Raw browser snapshots, screenshots, exact input/editor/rendering representations and receipts remain in private workspace. Native receipt adapter validated all six; receipt hashes below identify that evidence, not independent service authentication."
+}

@@ -1,0 +1,65 @@
+{
+  "study": "core-followup",
+  "status": "complete",
+  "selection": "Adaptive follow-up after main round stopped; candidate generation and masked quality review preceded all scores.",
+  "case": "wm4-dev-technical-01",
+  "quality": "Both pass all claims/literals; readability tie.",
+  "measurements": [
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:45:40.214Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "44ad631b4c38d728c275fe33c10e00b3f5f5035fdd0197505dd5742b3965c1a1",
+      "arm": "baseline"
+    },
+    {
+      "detector": "pangram",
+      "mode": "Free text detection",
+      "model": "4.0",
+      "observed_at": "2026-09-07T12:46:49.653Z",
+      "ai": 100.0,
+      "mixed": null,
+      "human": null,
+      "ai_assisted": null,
+      "input_sha256": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc",
+      "label": "AI Generated",
+      "unit": "displayed_text_proportion_percent",
+      "segment_confidence_labels": [
+        "medium"
+      ],
+      "short_text_warning": true,
+      "warnings": [
+        "Confidence limited \u2014 short text"
+      ],
+      "artifact_sha256": "8f5fff5443409a26afef52fd32038cae948bf549b8cae10559203797a5954024",
+      "arm": "core-expansion"
+    }
+  ],
+  "ai_text_reduction_pp": 0.0,
+  "label_improved": false,
+  "success": false,
+  "interpretation": "No measured reduction in this exact Pangram pair. No GPTZero result for core expansion. One reused development case is not general evidence of failure.",
+  "usage": {
+    "calls": 2,
+    "credits": 4
+  },
+  "confirmation": "Not allowed in this branch; no holdout access.",
+  "promotion": false,
+  "frozen_rule_note": "Independent review identified an OR-condition ambiguity if native label and fraction disagree. They do not disagree in this observed pair; both labels and fractions tie, so success is false under either interpretation.",
+  "evidence": "Both private native receipts validated; raw account UI/screenshots omitted from local export."
+}

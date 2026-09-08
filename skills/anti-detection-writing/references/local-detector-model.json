@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model_id": "desklib/ai-text-detector-v1.01",
+  "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+  "files": {
+    ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "README.md": "a9d2aee79852340b6420838fe2af0864f16245c950a128c428f842bca41181ff",
+    "added_tokens.json": "dc046d04c9b0ada7ae6f1dc89c465801799acdf0c9a6aab8c15a1b2d5ca4e91f",
+    "config.json": "a9512ad54a256ca2e26bb16336cfcaa7c93d071a8667c659044003ef3973a9e2",
+    "model.safetensors": "c024a1704c65f5a4bffeda58745c58fc0ed67d6ca07b158b068a257238815265",
+    "special_tokens_map.json": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9",
+    "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+    "tokenizer.json": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+    "tokenizer_config.json": "e6c4c771911c211618a2d46488dc7e9e499f051773cd4ff4faeca6fe55fdf569"
+  },
+  "license": "MIT declared by the pinned model card; weights downloaded separately, not bundled",
+  "model_card": "https://huggingface.co/desklib/ai-text-detector-v1.01/blob/5fdea974cd4287c61674951ec78803aa274e2fb7/README.md",
+  "max_input_tokens": 768,
+  "label_mapping": "sigmoid(single logit), higher is AI; local uncalibrated model output, not a commercial detector confidence"
+}

@@ -1,0 +1,540 @@
+{
+  "case_id": "wm4-dev-technical-01",
+  "review_type": "independent_masked_quality_review",
+  "inputs": [
+    "frozen/judge-operator.txt",
+    "reviews/wm4-dev-technical-01-masked.json"
+  ],
+  "review_scope": "Exact answer text including the trailing newline was hashed and judged against the question, original, seven supplied claims, protected literals, and the packet-provided authoritative source facts. No other experiment files, candidate identities, methods, detector data, scans, rewrites, or public actions were used.",
+  "evidence_limitations": "Normative review using the supplied verified source facts; no browser, server, or caching behavior was exercised.",
+  "answers": [
+    {
+      "answer_label": "A",
+      "sha256": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc",
+      "hash_matches_packet": true,
+      "verdict": "pass",
+      "claim_checks": [
+        {
+          "claim_id": "DTC1",
+          "verdict": "pass",
+          "evidence": "An ETag lets the client validate its stored JSON response.",
+          "finding": "Stored-response validation is stated directly."
+        },
+        {
+          "claim_id": "DTC2",
+          "verdict": "pass",
+          "evidence": "The server supplies the ETag with the response, and the client sends that value in If-None-Match on a later conditional GET.",
+          "finding": "Preserves the server-to-client validator exchange and later conditional GET."
+        },
+        {
+          "claim_id": "DTC3",
+          "verdict": "pass",
+          "evidence": "If the tag matches the selected representation, the server returns 304 Not Modified with no response body, so the client can reuse its stored body.",
+          "finding": "Preserves the selected-representation condition, status, absence of a body, and permission to reuse the stored body; the question supplies ordinary successful GET scope."
+        },
+        {
+          "claim_id": "DTC4",
+          "verdict": "pass",
+          "evidence": "If it does not match, an otherwise successful GET returns 200 OK with the current JSON.",
+          "finding": "Explicitly retains the successful-GET condition; does not claim every nonmatch necessarily succeeds."
+        },
+        {
+          "claim_id": "DTC5",
+          "verdict": "pass",
+          "evidence": "That validation still sends a request.",
+          "finding": "States that validation does not remove the request."
+        },
+        {
+          "claim_id": "DTC6",
+          "verdict": "pass",
+          "evidence": "To permit reuse without validation while the response is fresh, configure an appropriate freshness policy, for example Cache-Control: max-age=60, subject to the other caching rules.",
+          "finding": "Preserves freshness permission, illustrative max-age, and the other-caching-rules qualification."
+        },
+        {
+          "claim_id": "DTC7",
+          "verdict": "pass",
+          "evidence": "Fresh reuse does not guarantee that the underlying data will stay unchanged for 60 seconds.",
+          "finding": "Explicitly preserves the distinction between freshness permission and unchanged origin data."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "ETag",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "GET",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "If-None-Match",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "304 Not Modified",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "200 OK",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "Cache-Control: max-age=60",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "60 seconds",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        }
+      ],
+      "correctness": {
+        "verdict": "pass",
+        "finding": "All seven useful original claims and their conditions survive. No unsupported addition, altered modality, timing error, or material reference ambiguity identified within the ordinary successful GET scope.",
+        "unsupported_additions": [],
+        "lost_qualifications": [],
+        "source_reference_check": "No added external references or claims require separate verification."
+      },
+      "relevance": {
+        "verdict": "pass",
+        "finding": "Answers both the unchanged-body transfer question and the distinction between conditional validation and reuse while fresh, with no irrelevant material."
+      },
+      "tone": {
+        "verdict": "pass",
+        "finding": "Professional, direct, and appropriately qualified. No invented experience, test claims, guarantees, or irrelevant experiment labels."
+      },
+      "clarity": {
+        "verdict": "pass",
+        "finding": "Two paragraphs follow the protocol exchange and then the freshness distinction. Active server/client subjects make the exchange easy to follow. The freshness-policy sentence has several qualifiers, but their attachment remains clear."
+      },
+      "readability_rank": 1,
+      "required_corrections": []
+    },
+    {
+      "answer_label": "B",
+      "sha256": "68e137a2296ec35c454f4adaaa35462b71625b96d0e821e0b9e4466a5ebd9c77",
+      "hash_matches_packet": true,
+      "verdict": "pass",
+      "claim_checks": [
+        {
+          "claim_id": "DTC1",
+          "verdict": "pass",
+          "evidence": "An ETag lets your client validate a stored JSON response and avoid downloading the body again when it is unchanged.",
+          "finding": "Preserves stored-response validation and states its relevant body-transfer benefit; the detailed matching condition follows."
+        },
+        {
+          "claim_id": "DTC2",
+          "verdict": "pass",
+          "evidence": "The server sends an ETag with the initial JSON response. On a later conditional GET, the client puts that value in If-None-Match.",
+          "finding": "Preserves which party supplies the tag, which party echoes it, and when."
+        },
+        {
+          "claim_id": "DTC3",
+          "verdict": "pass",
+          "evidence": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body.",
+          "finding": "Explicitly preserves GET scope, selected representation, status, absent body, and stored-body reuse."
+        },
+        {
+          "claim_id": "DTC4",
+          "verdict": "pass",
+          "evidence": "If the tag does not match, the server returns 200 OK with the current JSON.",
+          "finding": "The immediately preceding ordinary-successful-GET scope applies to this paired nonmatching branch; no unsupported unconditional-success claim."
+        },
+        {
+          "claim_id": "DTC5",
+          "verdict": "pass",
+          "evidence": "Validation still requires a request; the ETag alone does not eliminate it.",
+          "finding": "Directly answers the request-elimination question without weakening the claim."
+        },
+        {
+          "claim_id": "DTC6",
+          "verdict": "pass",
+          "evidence": "To allow reuse without validation, configure an appropriate freshness policy, for example Cache-Control: max-age=60. While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit.",
+          "finding": "Retains the illustrative policy and explicit other-rules condition on reuse while fresh. The without-a-request wording is supported in the cache-reuse context supplied by the question and packet."
+        },
+        {
+          "claim_id": "DTC7",
+          "verdict": "pass",
+          "evidence": "A freshness lifetime of 60 seconds does not guarantee that the underlying data stays unchanged for that period.",
+          "finding": "Retains the full non-guarantee; that period clearly refers to 60 seconds."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "ETag",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 3
+        },
+        {
+          "literal": "GET",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "If-None-Match",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "304 Not Modified",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "200 OK",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "Cache-Control: max-age=60",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "60 seconds",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        }
+      ],
+      "correctness": {
+        "verdict": "pass",
+        "finding": "All seven useful original claims and their conditions survive. No unsupported addition, altered modality, timing error, or material reference ambiguity identified within the ordinary successful GET scope.",
+        "unsupported_additions": [],
+        "lost_qualifications": [],
+        "source_reference_check": "Both added RFC links match the authoritative references supplied in the packet and are relevant to their respective paragraphs."
+      },
+      "relevance": {
+        "verdict": "pass",
+        "finding": "Answers both the unchanged-body transfer question and the distinction between conditional validation and reuse while fresh, with no irrelevant material."
+      },
+      "tone": {
+        "verdict": "pass",
+        "finding": "Professional, direct, and appropriately qualified. No invented experience, test claims, guarantees, or irrelevant experiment labels."
+      },
+      "clarity": {
+        "verdict": "pass",
+        "finding": "The opening answers both parts of the question before the detailed exchange. Three paragraphs separate the overview, validator mechanism, and freshness policy. It is longer than the others because of the overview and two relevant source links, but these do not create a material reading burden."
+      },
+      "readability_rank": 1,
+      "required_corrections": []
+    },
+    {
+      "answer_label": "C",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "hash_matches_packet": true,
+      "verdict": "pass",
+      "claim_checks": [
+        {
+          "claim_id": "DTC1",
+          "verdict": "pass",
+          "evidence": "An ETag lets the client validate a stored JSON response.",
+          "finding": "Preserves the purpose and stored-response scope."
+        },
+        {
+          "claim_id": "DTC2",
+          "verdict": "pass",
+          "evidence": "The server sends the ETag with the response, and the client includes that value in If-None-Match on a later conditional GET.",
+          "finding": "Preserves server supply, client echo, exact header, and later conditional GET."
+        },
+        {
+          "claim_id": "DTC3",
+          "verdict": "pass",
+          "evidence": "For an otherwise successful GET, a tag matching the selected representation produces 304 Not Modified with no response body; the client can reuse its stored body.",
+          "finding": "Preserves the complete matching branch and makes the successful-GET condition explicit."
+        },
+        {
+          "claim_id": "DTC4",
+          "verdict": "pass",
+          "evidence": "If the tag does not match, the server returns 200 OK with the current JSON.",
+          "finding": "The preceding otherwise-successful-GET scope naturally covers this adjacent alternative; the original qualification survives."
+        },
+        {
+          "claim_id": "DTC5",
+          "verdict": "pass",
+          "evidence": "Validation still sends a request.",
+          "finding": "States the request requirement plainly."
+        },
+        {
+          "claim_id": "DTC6",
+          "verdict": "pass",
+          "evidence": "An appropriate freshness policy, such as Cache-Control: max-age=60, can permit reuse without validation, subject to the other caching rules.",
+          "finding": "Preserves conditional permission, illustrative policy, and other-rules qualification; the next sentence specifies reuse while fresh."
+        },
+        {
+          "claim_id": "DTC7",
+          "verdict": "pass",
+          "evidence": "The client can reuse the response while it is fresh; that permission does not guarantee the underlying data will remain unchanged for 60 seconds.",
+          "finding": "Preserves the fresh-reuse interval and non-guarantee. That permission has a clear immediate antecedent."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "ETag",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "GET",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "If-None-Match",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "304 Not Modified",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "200 OK",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "Cache-Control: max-age=60",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "60 seconds",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        }
+      ],
+      "correctness": {
+        "verdict": "pass",
+        "finding": "All seven useful original claims and their conditions survive. No unsupported addition, altered modality, timing error, or material reference ambiguity identified within the ordinary successful GET scope.",
+        "unsupported_additions": [],
+        "lost_qualifications": [],
+        "source_reference_check": "No added external references or claims require separate verification."
+      },
+      "relevance": {
+        "verdict": "pass",
+        "finding": "Answers both the unchanged-body transfer question and the distinction between conditional validation and reuse while fresh, with no irrelevant material."
+      },
+      "tone": {
+        "verdict": "pass",
+        "finding": "Professional, direct, and appropriately qualified. No invented experience, test claims, guarantees, or irrelevant experiment labels."
+      },
+      "clarity": {
+        "verdict": "pass",
+        "finding": "Two paragraphs separate validation from freshness. The otherwise-successful-GET scope appears immediately before the paired outcomes. The semicolon links the 304 response to stored-body reuse clearly; the final reference to that permission is explicit."
+      },
+      "readability_rank": 1,
+      "required_corrections": []
+    },
+    {
+      "answer_label": "D",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "hash_matches_packet": true,
+      "verdict": "pass",
+      "claim_checks": [
+        {
+          "claim_id": "DTC1",
+          "verdict": "pass",
+          "evidence": "Use an ETag to let the client check whether its stored response can be reused.",
+          "finding": "Preserves stored-response validation in plain language."
+        },
+        {
+          "claim_id": "DTC2",
+          "verdict": "pass",
+          "evidence": "The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match.",
+          "finding": "Preserves the server-supplied tag and its inclusion in the later conditional GET. The client is clear from the preceding sentence."
+        },
+        {
+          "claim_id": "DTC3",
+          "verdict": "pass",
+          "evidence": "If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body.",
+          "finding": "Preserves matching condition, status, body omission, and reuse; ordinary successful GET scope is supplied by the question."
+        },
+        {
+          "claim_id": "DTC4",
+          "verdict": "pass",
+          "evidence": "If it does not match, a successful GET returns 200 OK with the current JSON.",
+          "finding": "Explicitly retains the successful-GET qualification."
+        },
+        {
+          "claim_id": "DTC5",
+          "verdict": "pass",
+          "evidence": "This validation still involves a request.",
+          "finding": "Preserves the request requirement."
+        },
+        {
+          "claim_id": "DTC6",
+          "verdict": "pass",
+          "evidence": "To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules.",
+          "finding": "Preserves the recommendation, illustrative directive, and other-rules condition; the next sentence specifies reuse while fresh."
+        },
+        {
+          "claim_id": "DTC7",
+          "verdict": "pass",
+          "evidence": "The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+          "finding": "Preserves fresh reuse and the non-guarantee. This unambiguously refers to the preceding freshness permission in context."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "ETag",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "GET",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 2
+        },
+        {
+          "literal": "If-None-Match",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "304 Not Modified",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "200 OK",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "Cache-Control: max-age=60",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        },
+        {
+          "literal": "60 seconds",
+          "verdict": "pass",
+          "exact_spelling_present": true,
+          "occurrences": 1
+        }
+      ],
+      "correctness": {
+        "verdict": "pass",
+        "finding": "All seven useful original claims and their conditions survive. No unsupported addition, altered modality, timing error, or material reference ambiguity identified within the ordinary successful GET scope.",
+        "unsupported_additions": [],
+        "lost_qualifications": [],
+        "source_reference_check": "No added external references or claims require separate verification."
+      },
+      "relevance": {
+        "verdict": "pass",
+        "finding": "Answers both the unchanged-body transfer question and the distinction between conditional validation and reuse while fresh, with no irrelevant material."
+      },
+      "tone": {
+        "verdict": "pass",
+        "finding": "Professional, direct, and appropriately qualified. No invented experience, test claims, guarantees, or irrelevant experiment labels."
+      },
+      "clarity": {
+        "verdict": "pass",
+        "finding": "Two paragraphs give the exchange and then the freshness distinction. The opening uses plain language for validation. References such as that value, it, and this are clear from nearby antecedents; the passive wording of the later GET does not obscure the mechanism."
+      },
+      "readability_rank": 1,
+      "required_corrections": []
+    }
+  ],
+  "readability_ranking": [
+    {
+      "rank": 1,
+      "answers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "relationship": "tie",
+      "rationale": "All four are clear, professional, complete explanations. Minor differences in concision, explicitness, paragraph arrangement, and source presentation balance out; no overall readability preference is sufficiently supported to break the tie."
+    }
+  ],
+  "pairwise_readability": [
+    {
+      "answer_1": "A",
+      "answer_2": "B",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "A moves directly from the tag exchange to That validation still sends a request. B puts the same request limitation in an upfront overview and then explains the exchange. A is more compact; B makes both requested conclusions visible earlier. Both sequences are easy to follow, and the relevant RFC links in B do not materially impede reading."
+    },
+    {
+      "answer_1": "A",
+      "answer_2": "C",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "A states If the tag matches and uses so to connect the 304 response to reuse. C places For an otherwise successful GET before the branches and uses a semicolon for the same connection. C divides freshness permission and fresh reuse into separate sentences, whereas A integrates them into its policy sentence. These are clear alternative constructions with no consequential reading difference."
+    },
+    {
+      "answer_1": "A",
+      "answer_2": "D",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "A says validate its stored JSON response and explicitly makes the client the subject of sends that value. D says check whether its stored response can be reused and makes the later GET the subject of includes. D uses more everyday wording in the opening; A names the actor more explicitly. Both then give the same straightforward matching/nonmatching sequence and clear freshness qualification."
+    },
+    {
+      "answer_1": "B",
+      "answer_2": "C",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "B starts with the practical benefit and request limitation, then separates mechanism and freshness into paragraphs. C reaches the same points in two compact paragraphs, beginning with the mechanism. B offers an explicit overview and C avoids repeating the purpose of validation. Both attach the successful-GET scope and other-caching-rules condition clearly; neither structure is materially easier to read overall."
+    },
+    {
+      "answer_1": "B",
+      "answer_2": "D",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "B answers whether the ETag eliminates the request in its opening; D answers that immediately after describing the conditional exchange. B gives freshness and its other-rules condition in separate sentences; D integrates the condition into its policy sentence. B is longer but uses a clear overview and relevant links, while D is compact and coherent. Neither requires material extra effort to understand."
+    },
+    {
+      "answer_1": "C",
+      "answer_2": "D",
+      "answer_1_readability_relative_to_answer_2": "tie",
+      "material_difference": false,
+      "materially_less_readable_answer": null,
+      "evidence": "C uses validate a stored JSON response and that permission; D uses check whether its stored response can be reused and this does not promise. C has somewhat more explicit terminology and referents, while D uses natural plain-language phrasing. Both preserve a clear two-paragraph mechanism/freshness sequence, and the nearby antecedents in D are unambiguous."
+    }
+  ],
+  "conclusion": {
+    "all_answers_pass": true,
+    "materially_less_readable_answers": [],
+    "summary": "A, B, C, and D retain all seven claims, all protected literal spellings, and all material qualifications. No factual correction is required. All four tie on overall readability; no pair contains a materially less readable answer."
+  }
+}

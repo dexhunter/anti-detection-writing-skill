@@ -1,0 +1,129 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response.",
+            "DTC2 preserved: server supplies the ETag and client echoes it in If-None-Match on conditional GET.",
+            "DTC3 preserved: selected-representation match on otherwise successful GET yields 304 Not Modified, no body, and stored-body reuse.",
+            "DTC4 preserved: nonmatch yields 200 OK and current JSON within the ordinary successful GET scope.",
+            "DTC5 preserved: validation sends a request.",
+            "DTC6 preserved: illustrative Cache-Control: max-age=60 permits fresh reuse without origin contact, subject to other caching rules and validation requirements.",
+            "DTC7 preserved: fresh reuse does not guarantee unchanged underlying data for 60 seconds.",
+            "All protected literals preserved; 129 words; no invented observation or runtime test."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "d322c66fbb1a423c399b1958d3826156fb11031f472d9f3806b676f7b382ff4a",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag enables validation of cached representations for reuse.",
+            "DTC2 preserved: server sends the ETag and client includes it in If-None-Match for conditional GET.",
+            "DTC3 preserved: matching selected representation yields 304 Not Modified without a body and permits cached-body reuse in the question's successful GET scope.",
+            "DTC4 preserved: nonmatch on otherwise successful GET yields 200 OK and current JSON.",
+            "DTC5 preserved: conditional validation still sends a request.",
+            "DTC6 preserved: illustrative Cache-Control: max-age=60 permits fresh reuse without validation, subject to other caching rules.",
+            "DTC7 preserved: fresh reuse does not guarantee unchanged underlying data for 60 seconds.",
+            "All protected literals preserved; 133 words; no invented observation or runtime test."
+          ],
+          "concerns": [
+            "Nonblocking clarity: 'Still this includes sending a request' and 'reuse according to this' use vague references where the reader needs a clear distinction between validation and fresh reuse."
+          ]
+        }
+      },
+      "preference": "A",
+      "reason": "Both preserve the required facts and qualifications. A states the answer to whether ETag eliminates the request immediately, then separates validation from freshness and explicitly connects freshness to avoiding origin contact. This makes the reader's central decision materially easier to understand."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: Atlas help-centre migration is identified.",
+            "DBC2 preserved: all 180 articles copied; no copying actor invented.",
+            "DBC3 preserved: content team checked 60 and found no missing sections in that set.",
+            "DBC4 preserved: remaining articles unreviewed and content review incomplete.",
+            "DBC5 preserved: search currently omits titles containing apostrophes.",
+            "DBC6 preserved: Nia due to deliver on 10 September; Omar tests afterward.",
+            "DBC7 preserved: proposed five-volunteer support-agent pilot on 11 September depends on Omar's test passing.",
+            "DBC8 preserved: existing help centre remains available and customer-facing links stay unchanged during the pilot.",
+            "DBC9 preserved: sponsor asked to confirm support-team provision of five agents by 9 September.",
+            "DBC10 preserved: review pilot feedback on 14 September before deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date committed.",
+            "All protected literals, actors, conditions and dates preserved; 119 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "c5e3fd14240712214e7e31cd93d14583d50bfbe7d28dfd136a82041ab4ecf4cd",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: Atlas help-centre migration is identified.",
+            "DBC2 preserved: copying of 180 articles complete; no copying actor invented.",
+            "DBC3 preserved: content team reviewed 60 without finding missing sections.",
+            "DBC4 preserved: remaining articles unreviewed and content review incomplete.",
+            "DBC5 preserved: titles containing apostrophes currently omitted from search.",
+            "DBC6 preserved: Nia due to deliver on 10 September; Omar tests afterward.",
+            "DBC7 preserved: suggested five-volunteer support-agent pilot on 11 September is conditional on the test passing.",
+            "DBC8 preserved: existing help centre remains available and customer-facing links unchanged during the pilot.",
+            "DBC9 preserved: sponsor confirmation of five-agent availability requested by 9 September.",
+            "DBC10 preserved: pilot feedback review on 14 September precedes deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout schedule committed.",
+            "All protected literals, actors, conditions and dates preserved; 146 words."
+          ],
+          "concerns": [
+            "Nonblocking clarity: the dense paragraph and nominal phrases such as 'completion of copying' and 'Sponsor confirmation is requested ... as to whether' make the sponsor's requested action harder to locate."
+          ]
+        }
+      },
+      "preference": "A",
+      "reason": "Both are factually complete and preserve all conditional plans. A puts the sponsor's decision and deadline first and groups progress and pilot planning into readable paragraphs, making the update more actionable while retaining every required fact."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "d322c66fbb1a423c399b1958d3826156fb11031f472d9f3806b676f7b382ff4a",
+        "public_text_paths": [
+          "answers/screening/r09/wm4-dev-technical-01.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "c5e3fd14240712214e7e31cd93d14583d50bfbe7d28dfd136a82041ab4ecf4cd",
+        "public_text_paths": [
+          "answers/screening/r09/wm4-dev-business-01.txt"
+        ]
+      }
+    }
+  }
+}

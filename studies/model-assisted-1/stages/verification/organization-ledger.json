@@ -1,0 +1,510 @@
+{
+  "stage": "C",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "operations": [
+        {
+          "sequence": 1,
+          "kind": "sentence_movement_and_paragraph_grouping",
+          "plan_defects": [
+            "T1"
+          ],
+          "before": "ETag enables receiving applications to validate whether cached representations may be reused. A server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body. If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET. Still this validation includes sending a request. An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules. However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.\n",
+          "after": "ETag enables receiving applications to validate whether cached representations may be reused. Still this validation includes sending a request.\n\nA server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body. If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET.\n\nAn application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules. However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.\n",
+          "reason": "Put the answer about a request immediately after the validation lead, then group mechanism and response branches, then freshness with its qualification.",
+          "before_order": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "after_order": [
+            1,
+            5,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "paragraph_groups": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "intact_unit_map": [
+            {
+              "sentence": 1,
+              "before_span": {
+                "text": "ETag enables receiving applications to validate whether cached representations may be reused.",
+                "start": 0,
+                "end": 93
+              },
+              "after_span": {
+                "text": "ETag enables receiving applications to validate whether cached representations may be reused.",
+                "start": 0,
+                "end": 93
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 2,
+              "before_span": {
+                "text": "A server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+                "start": 94,
+                "end": 240
+              },
+              "after_span": {
+                "text": "A server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+                "start": 145,
+                "end": 291
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 3,
+              "before_span": {
+                "text": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+                "start": 241,
+                "end": 397
+              },
+              "after_span": {
+                "text": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+                "start": 292,
+                "end": 448
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 4,
+              "before_span": {
+                "text": "If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET.",
+                "start": 398,
+                "end": 502
+              },
+              "after_span": {
+                "text": "If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET.",
+                "start": 449,
+                "end": 553
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 5,
+              "before_span": {
+                "text": "Still this validation includes sending a request.",
+                "start": 503,
+                "end": 552
+              },
+              "after_span": {
+                "text": "Still this validation includes sending a request.",
+                "start": 94,
+                "end": 143
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 6,
+              "before_span": {
+                "text": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+                "start": 553,
+                "end": 768
+              },
+              "after_span": {
+                "text": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+                "start": 555,
+                "end": 770
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 7,
+              "before_span": {
+                "text": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+                "start": 769,
+                "end": 893
+              },
+              "after_span": {
+                "text": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+                "start": 771,
+                "end": 895
+              },
+              "semantic_change": "none"
+            }
+          ],
+          "wording_change": false
+        },
+        {
+          "sequence": 2,
+          "kind": "wording",
+          "plan_defects": [
+            "T3"
+          ],
+          "source_sentence": 5,
+          "before": "Still this validation includes sending a request.",
+          "after": "This validation still includes sending a request.",
+          "reason": "After movement beside the lead, place still within the clause so This validation directly refers to the validation just introduced.",
+          "full_semantic_mapping": [
+            {
+              "before": "this validation",
+              "after": "This validation",
+              "meaning": "The same described ETag validation."
+            },
+            {
+              "before": "Still",
+              "after": "still",
+              "meaning": "The request remains necessary for that validation."
+            },
+            {
+              "before": "includes sending a request",
+              "after": "includes sending a request",
+              "meaning": "Request transmission is preserved."
+            }
+          ],
+          "movement_input_span": {
+            "text": "Still this validation includes sending a request.",
+            "start": 94,
+            "end": 143
+          },
+          "final_span": {
+            "text": "This validation still includes sending a request.",
+            "start": 94,
+            "end": 143
+          }
+        },
+        {
+          "sequence": 3,
+          "kind": "joining_and_clause_movement",
+          "plan_defects": [
+            "T2"
+          ],
+          "source_sentence": 3,
+          "before": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+          "after": "If the cached ETag matches the selected representation, the server returns 304 Not Modified, with no response body, and the client can reuse the cached body.",
+          "reason": "State the server response before the reuse it permits, under the original matching condition; only reposition the intact response and reuse units and adjust their joining punctuation.",
+          "full_semantic_mapping": [
+            {
+              "before": "If the cached ETag matches the selected representation",
+              "after": "If the cached ETag matches the selected representation",
+              "meaning": "Same matching condition and selected-representation scope govern both claims."
+            },
+            {
+              "before": "the server returns 304 Not Modified, with no response body",
+              "after": "the server returns 304 Not Modified, with no response body",
+              "meaning": "Same server actor, response status and no-body condition; moved first."
+            },
+            {
+              "before": "the client can reuse the cached body",
+              "after": "the client can reuse the cached body",
+              "meaning": "Same client actor and reuse permission; moved after the response."
+            }
+          ],
+          "movement_input_span": {
+            "text": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+            "start": 292,
+            "end": 448
+          },
+          "final_span": {
+            "text": "If the cached ETag matches the selected representation, the server returns 304 Not Modified, with no response body, and the client can reuse the cached body.",
+            "start": 292,
+            "end": 449
+          }
+        },
+        {
+          "sequence": 4,
+          "kind": "wording_repeated_setup_removal",
+          "plan_defects": [
+            "T4"
+          ],
+          "source_sentence": 6,
+          "before": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+          "after": "An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+          "reason": "Remove the repeated example marker as an example; such as already preserves the header as illustrative.",
+          "full_semantic_mapping": [
+            {
+              "before": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example",
+              "after": "An application may employ a freshness policy such as Cache-Control: max-age=60",
+              "meaning": "Same optional freshness policy and illustrative protected header; no distinct proposition removed."
+            },
+            {
+              "before": "in which case the cached response can be reused while fresh without a validation request, subject to other caching rules",
+              "after": "in which case the cached response can be reused while fresh without a validation request, subject to other caching rules",
+              "meaning": "Same conditional permission, freshness interval and other-caching-rules limitation."
+            }
+          ],
+          "movement_input_span": {
+            "text": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+            "start": 555,
+            "end": 770
+          },
+          "final_span": {
+            "text": "An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+            "start": 556,
+            "end": 757
+          }
+        },
+        {
+          "sequence": 5,
+          "kind": "wording_punctuation",
+          "plan_defects": [
+            "T5"
+          ],
+          "source_sentence": 7,
+          "before": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+          "after": "However, reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+          "reason": "Separate the introductory qualification connective from its subject with a comma.",
+          "full_semantic_mapping": [
+            {
+              "before": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+              "after": "However, reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+              "meaning": "Entire substantive qualification, negation, data reference and interval unchanged."
+            }
+          ],
+          "movement_input_span": {
+            "text": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+            "start": 771,
+            "end": 895
+          },
+          "final_span": {
+            "text": "However, reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+            "start": 758,
+            "end": 883
+          }
+        }
+      ]
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "operations": [
+        {
+          "sequence": 1,
+          "kind": "sentence_movement_and_paragraph_grouping",
+          "plan_defects": [
+            "B1",
+            "B3"
+          ],
+          "before": "Progress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete; the remaining articles have not yet been reviewed. Titles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test this after delivery. If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change. Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents. Feedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.\n\nProgress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete; the remaining articles have not yet been reviewed.\n\nTitles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test this after delivery. If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change.\n\nFeedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout. No schedule has as yet been committed for full rollout.\n",
+          "reason": "Put the staffing decision first, then group progress, the search-fix-test-pilot dependency chain and continuity plan, then feedback and rollout non-commitment.",
+          "before_order": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "after_order": [
+            7,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "paragraph_groups": [
+            [
+              7
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "intact_unit_map": [
+            {
+              "sentence": 1,
+              "before_span": {
+                "text": "Progress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections.",
+                "start": 0,
+                "end": 185
+              },
+              "after_span": {
+                "text": "Progress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections.",
+                "start": 110,
+                "end": 295
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 2,
+              "before_span": {
+                "text": "Reviews are still incomplete; the remaining articles have not yet been reviewed.",
+                "start": 186,
+                "end": 266
+              },
+              "after_span": {
+                "text": "Reviews are still incomplete; the remaining articles have not yet been reviewed.",
+                "start": 296,
+                "end": 376
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 3,
+              "before_span": {
+                "text": "Titles containing apostrophes are currently omitted from searches.",
+                "start": 267,
+                "end": 333
+              },
+              "after_span": {
+                "text": "Titles containing apostrophes are currently omitted from searches.",
+                "start": 378,
+                "end": 444
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 4,
+              "before_span": {
+                "text": "Nia is due to deliver a fix on 10 September and Omar will test this after delivery.",
+                "start": 334,
+                "end": 417
+              },
+              "after_span": {
+                "text": "Nia is due to deliver a fix on 10 September and Omar will test this after delivery.",
+                "start": 445,
+                "end": 528
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 5,
+              "before_span": {
+                "text": "If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+                "start": 418,
+                "end": 524
+              },
+              "after_span": {
+                "text": "If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+                "start": 529,
+                "end": 635
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 6,
+              "before_span": {
+                "text": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+                "start": 525,
+                "end": 634
+              },
+              "after_span": {
+                "text": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+                "start": 636,
+                "end": 745
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 7,
+              "before_span": {
+                "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+                "start": 635,
+                "end": 743
+              },
+              "after_span": {
+                "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+                "start": 0,
+                "end": 108
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 8,
+              "before_span": {
+                "text": "Feedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout.",
+                "start": 744,
+                "end": 860
+              },
+              "after_span": {
+                "text": "Feedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout.",
+                "start": 747,
+                "end": 863
+              },
+              "semantic_change": "none"
+            },
+            {
+              "sentence": 9,
+              "before_span": {
+                "text": "No schedule has as yet been committed for full rollout.",
+                "start": 861,
+                "end": 916
+              },
+              "after_span": {
+                "text": "No schedule has as yet been committed for full rollout.",
+                "start": 864,
+                "end": 919
+              },
+              "semantic_change": "none"
+            }
+          ],
+          "wording_change": false
+        },
+        {
+          "sequence": 2,
+          "kind": "wording_reference_resolution",
+          "plan_defects": [
+            "B2"
+          ],
+          "source_sentence": 7,
+          "before": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide five volunteer support agents.",
+          "reason": "The decision now leads the update, so replace its backward reference the five agents with the supplied complete entity description.",
+          "full_semantic_mapping": [
+            {
+              "before": "Sponsor confirmation is requested by 9 September as to whether the support team can provide",
+              "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide",
+              "meaning": "Same sponsor request, deadline, support-team actor and unconfirmed availability."
+            },
+            {
+              "before": "the five agents",
+              "after": "five volunteer support agents",
+              "meaning": "Same group described by the retained pilot sentence; explicit reference only, without adding staffing or commitment."
+            }
+          ],
+          "movement_input_span": {
+            "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+            "start": 0,
+            "end": 108
+          },
+          "final_span": {
+            "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide five volunteer support agents.",
+            "start": 0,
+            "end": 122
+          }
+        }
+      ]
+    }
+  ]
+}

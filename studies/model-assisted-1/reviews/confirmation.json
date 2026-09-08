@@ -1,0 +1,385 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "b20-confirm-notice-01",
+      "arms": {
+        "A": {
+          "sha256": "86919cfaa0ae8166a1e62060bc16bfa00b00adebe43619e918bb77389e7e963b",
+          "pass": true,
+          "claims": [
+            {
+              "id": "HC1",
+              "pass": true,
+              "check": "Fictional framing identifies the supplied invented museum workshop; no real-event assertion."
+            },
+            {
+              "id": "HC2",
+              "pass": true,
+              "check": "18 November, 14:00 to 15:30, and the ground-floor studio are preserved."
+            },
+            {
+              "id": "HC3",
+              "pass": true,
+              "check": "Intended ages eight to twelve and an adult accompanying every child are preserved."
+            },
+            {
+              "id": "HC4",
+              "pass": true,
+              "check": "One booking covers one child and one adult for the combined £6 price."
+            },
+            {
+              "id": "HC5",
+              "pass": true,
+              "check": "Capacity remains twelve child places, without confusing it with total attendees."
+            },
+            {
+              "id": "HC6",
+              "pass": true,
+              "check": "Booking remains at the museum reception desk by 16 November; payment is necessary for confirmation."
+            },
+            {
+              "id": "HC7",
+              "pass": true,
+              "check": "Materials are provided."
+            },
+            {
+              "id": "HC8",
+              "pass": true,
+              "check": "Arrival ten minutes early and use of the courtyard entrance are preserved."
+            },
+            {
+              "id": "HC9",
+              "pass": true,
+              "check": "Step-free studio access and absence of a sign-language interpreter for the workshop are preserved."
+            },
+            {
+              "id": "HC10",
+              "pass": true,
+              "check": "Fewer than six paid child places by the booking deadline requires museum cancellation and full refunds."
+            },
+            {
+              "id": "HC11",
+              "pass": true,
+              "check": "Cancellation notices use the email address supplied at booking."
+            },
+            {
+              "id": "HC12",
+              "pass": true,
+              "check": "Permanent galleries remain open that afternoon with the usual entry charge applying."
+            },
+            {
+              "id": "protected_literals",
+              "pass": true,
+              "check": "Every exact protected literal is present: Hawthorn Museum, 18 November, 14:00, 15:30, eight to twelve, £6, twelve, 16 November, ten minutes, courtyard entrance, six."
+            },
+            {
+              "id": "length_and_format",
+              "pass": true,
+              "check": "144 whitespace-delimited words, including heading or list markers; within 180 words. Appropriate public-notice format."
+            },
+            {
+              "id": "fidelity_and_usefulness",
+              "pass": true,
+              "check": "No unsupported substantive additions, omitted conditions, altered obligations, actors, negation, uncertainty, or irrelevant material. The supplied reader question is answered professionally."
+            }
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+          "pass": true,
+          "claims": [
+            {
+              "id": "HC1",
+              "pass": true,
+              "check": "Fictional framing identifies the supplied invented museum workshop; no real-event assertion."
+            },
+            {
+              "id": "HC2",
+              "pass": true,
+              "check": "18 November, 14:00 to 15:30, and the ground-floor studio are preserved."
+            },
+            {
+              "id": "HC3",
+              "pass": true,
+              "check": "Intended ages eight to twelve and an adult accompanying every child are preserved."
+            },
+            {
+              "id": "HC4",
+              "pass": true,
+              "check": "One booking covers one child and one adult for the combined £6 price."
+            },
+            {
+              "id": "HC5",
+              "pass": true,
+              "check": "Capacity remains twelve child places, without confusing it with total attendees."
+            },
+            {
+              "id": "HC6",
+              "pass": true,
+              "check": "Booking remains at the museum reception desk by 16 November; payment is necessary for confirmation."
+            },
+            {
+              "id": "HC7",
+              "pass": true,
+              "check": "Materials are provided."
+            },
+            {
+              "id": "HC8",
+              "pass": true,
+              "check": "Arrival ten minutes early and use of the courtyard entrance are preserved."
+            },
+            {
+              "id": "HC9",
+              "pass": true,
+              "check": "Step-free studio access and absence of a sign-language interpreter for the workshop are preserved."
+            },
+            {
+              "id": "HC10",
+              "pass": true,
+              "check": "Fewer than six paid child places by the booking deadline requires museum cancellation and full refunds."
+            },
+            {
+              "id": "HC11",
+              "pass": true,
+              "check": "Cancellation notices use the email address supplied at booking."
+            },
+            {
+              "id": "HC12",
+              "pass": true,
+              "check": "Permanent galleries remain open that afternoon with the usual entry charge applying."
+            },
+            {
+              "id": "protected_literals",
+              "pass": true,
+              "check": "Every exact protected literal is present: Hawthorn Museum, 18 November, 14:00, 15:30, eight to twelve, £6, twelve, 16 November, ten minutes, courtyard entrance, six."
+            },
+            {
+              "id": "length_and_format",
+              "pass": true,
+              "check": "162 whitespace-delimited words, including heading or list markers; within 180 words. Appropriate public-notice format."
+            },
+            {
+              "id": "fidelity_and_usefulness",
+              "pass": true,
+              "check": "No unsupported substantive additions, omitted conditions, altered obligations, actors, negation, uncertainty, or irrelevant material. The supplied reader question is answered professionally."
+            }
+          ],
+          "concerns": [
+            "Minor readability concern only: “Session day is,” repeated museum/studio references, and “Notifications of cancellations” make otherwise complete advice sound stiffer than necessary. This does not change any supplied fact."
+          ]
+        }
+      },
+      "preference": "A",
+      "reason": "A gives the event details directly, groups attendance and booking conditions coherently, and places practical arrival information before cancellation. B is accurate but its repeated location references and phrases such as “Session day is” make the notice less natural."
+    },
+    {
+      "id": "b20-confirm-rules-02",
+      "arms": {
+        "A": {
+          "sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+          "pass": true,
+          "claims": [
+            {
+              "id": "LC1",
+              "pass": true,
+              "check": "Lantern Trail is expressly invented and remains for two to four players."
+            },
+            {
+              "id": "LC2",
+              "pass": true,
+              "check": "The track runs from 1 to 12 and every pawn starts on space 1."
+            },
+            {
+              "id": "LC3",
+              "pass": true,
+              "check": "Every player starts with one lantern token."
+            },
+            {
+              "id": "LC4",
+              "pass": true,
+              "check": "The youngest player starts and turns proceed clockwise."
+            },
+            {
+              "id": "LC5",
+              "pass": true,
+              "check": "Each turn permits a normal one-space forward move or staying in place to collect one token."
+            },
+            {
+              "id": "LC6",
+              "pass": true,
+              "check": "Holdings are capped at three tokens; staying to collect is prohibited when already holding three."
+            },
+            {
+              "id": "LC7",
+              "pass": true,
+              "check": "The alternative paid move costs two tokens for three spaces forward, with payment before movement."
+            },
+            {
+              "id": "LC8",
+              "pass": true,
+              "check": "A paid move that would pass space 12 leaves the pawn in place and forfeits the spent tokens."
+            },
+            {
+              "id": "LC9",
+              "pass": true,
+              "check": "Reaching space 12 ends the game immediately, so a normal one-space move cannot pass it."
+            },
+            {
+              "id": "LC10",
+              "pass": true,
+              "check": "Pawns may share a space."
+            },
+            {
+              "id": "LC11",
+              "pass": true,
+              "check": "The first player to reach space 12 wins."
+            },
+            {
+              "id": "LC12",
+              "pass": true,
+              "check": "No dice are used."
+            },
+            {
+              "id": "protected_literals",
+              "pass": true,
+              "check": "Every exact protected literal is present: Lantern Trail, two to four, 1, 12, clockwise, youngest, one, three, two."
+            },
+            {
+              "id": "length_and_format",
+              "pass": true,
+              "check": "146 whitespace-delimited words, including heading or list markers; within 180 words. Concise numbered quick-start guide."
+            },
+            {
+              "id": "fidelity_and_usefulness",
+              "pass": true,
+              "check": "No unsupported substantive additions, omitted conditions, altered obligations, actors, negation, uncertainty, or irrelevant material. The supplied reader question is answered professionally."
+            }
+          ],
+          "concerns": [
+            "Minor readability concern only: step 4 combines several different rules, and passive setup wording is less direct for first-time players. Capitalizing “Lantern Token” is inconsistent with the source but does not introduce a different token or mechanic."
+          ]
+        },
+        "B": {
+          "sha256": "21a99aff94f3078903268ed5bbd69d89cd7b559c6ed99beed2e0b2be7e4c9a11",
+          "pass": true,
+          "claims": [
+            {
+              "id": "LC1",
+              "pass": true,
+              "check": "Lantern Trail is expressly invented and remains for two to four players."
+            },
+            {
+              "id": "LC2",
+              "pass": true,
+              "check": "The track runs from 1 to 12 and every pawn starts on space 1."
+            },
+            {
+              "id": "LC3",
+              "pass": true,
+              "check": "Every player starts with one lantern token."
+            },
+            {
+              "id": "LC4",
+              "pass": true,
+              "check": "The youngest player starts and turns proceed clockwise."
+            },
+            {
+              "id": "LC5",
+              "pass": true,
+              "check": "Each turn permits a normal one-space forward move or staying in place to collect one token."
+            },
+            {
+              "id": "LC6",
+              "pass": true,
+              "check": "Holdings are capped at three tokens; staying to collect is prohibited when already holding three."
+            },
+            {
+              "id": "LC7",
+              "pass": true,
+              "check": "The alternative paid move costs two tokens for three spaces forward, with payment before movement."
+            },
+            {
+              "id": "LC8",
+              "pass": true,
+              "check": "A paid move that would pass space 12 leaves the pawn in place and forfeits the spent tokens."
+            },
+            {
+              "id": "LC9",
+              "pass": true,
+              "check": "Reaching space 12 ends the game immediately, so a normal one-space move cannot pass it."
+            },
+            {
+              "id": "LC10",
+              "pass": true,
+              "check": "Pawns may share a space."
+            },
+            {
+              "id": "LC11",
+              "pass": true,
+              "check": "The first player to reach space 12 wins."
+            },
+            {
+              "id": "LC12",
+              "pass": true,
+              "check": "No dice are used."
+            },
+            {
+              "id": "protected_literals",
+              "pass": true,
+              "check": "Every exact protected literal is present: Lantern Trail, two to four, 1, 12, clockwise, youngest, one, three, two."
+            },
+            {
+              "id": "length_and_format",
+              "pass": true,
+              "check": "142 whitespace-delimited words, including heading or list markers; within 180 words. Concise numbered quick-start guide."
+            },
+            {
+              "id": "fidelity_and_usefulness",
+              "pass": true,
+              "check": "No unsupported substantive additions, omitted conditions, altered obligations, actors, negation, uncertainty, or irrelevant material. The supplied reader question is answered professionally."
+            }
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "B",
+      "reason": "B uses direct setup instructions and shorter numbered steps, then states the winning condition together with immediate game termination. A is accurate, but its fourth step combines turn choices, the token cap, and the end-of-game exception in a denser block."
+    }
+  ],
+  "decoded_mapping": {
+    "b20-confirm-notice-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "86919cfaa0ae8166a1e62060bc16bfa00b00adebe43619e918bb77389e7e963b",
+        "public_text_paths": [
+          "answers/confirmation/baseline/b20-confirm-notice-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+        "public_text_paths": [
+          "answers/confirmation/candidate/b20-confirm-notice-01.txt"
+        ]
+      }
+    },
+    "b20-confirm-rules-02": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+        "public_text_paths": [
+          "answers/confirmation/candidate/b20-confirm-rules-02.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "21a99aff94f3078903268ed5bbd69d89cd7b559c6ed99beed2e0b2be7e4c9a11",
+        "public_text_paths": [
+          "answers/confirmation/baseline/b20-confirm-rules-02.txt"
+        ]
+      }
+    }
+  }
+}

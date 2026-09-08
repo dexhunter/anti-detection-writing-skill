@@ -1,0 +1,521 @@
+{
+  "review_type": "independent_source_fidelity_and_writing_quality",
+  "input": "reviews/packet.json",
+  "scope": "The supplied packet alone was read. Each complete answer was assessed against the question, original answer, source facts, scope limitations, claims, and protected literals. No external source lookup or behavior execution was needed.",
+  "hash_verification": {
+    "method": "SHA256 of each decoded JSON answer text, extracted with jq -j and passed directly to shasum -a 256. Leading whitespace and final newlines were retained; no trimming or normalization was applied.",
+    "all_four_match": true
+  },
+  "verdict_policy": "An answer fails overall if it omits required content, changes an operational qualification or protected literal, makes an unsupported substantive assertion, or includes unrelated text. Semantic claim outcomes and exact-literal outcomes are recorded separately. Repetition does not erase an earlier incorrect or unsupported assertion.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "answers": {
+        "A": {
+          "expected_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "verified_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "hash_match": true,
+          "overall": "pass",
+          "dimensions": {
+            "correctness": "pass",
+            "relevance": "pass",
+            "completeness": "pass",
+            "clarity": "pass",
+            "professional_tone": "pass",
+            "source_fidelity": "pass"
+          },
+          "claims": [
+            {
+              "id": "DTC1",
+              "verdict": "pass",
+              "reason": "Identifies ETag as the mechanism for checking whether the client's stored response can be reused."
+            },
+            {
+              "id": "DTC2",
+              "verdict": "pass",
+              "reason": "States that the server supplies the ETag with the JSON and a later conditional GET includes that value in If-None-Match."
+            },
+            {
+              "id": "DTC3",
+              "verdict": "pass",
+              "reason": "Preserves the selected-representation condition, 304 Not Modified, absence of a response body, and permission to reuse the stored body."
+            },
+            {
+              "id": "DTC4",
+              "verdict": "pass",
+              "reason": "Explicitly limits the nonmatching-tag 200 OK outcome to a successful GET and includes the current JSON."
+            },
+            {
+              "id": "DTC5",
+              "verdict": "pass",
+              "reason": "Explicitly states that validation still involves a request."
+            },
+            {
+              "id": "DTC6",
+              "verdict": "pass",
+              "reason": "Presents Cache-Control: max-age=60 as an illustrative freshness policy permitting reuse without validation, subject to other caching rules."
+            },
+            {
+              "id": "DTC7",
+              "verdict": "pass",
+              "reason": "Separates permission to reuse a fresh cached response from any promise that underlying data remains unchanged for 60 seconds."
+            }
+          ],
+          "protected_literals": [
+            {
+              "literal": "ETag",
+              "verdict": "pass"
+            },
+            {
+              "literal": "GET",
+              "verdict": "pass"
+            },
+            {
+              "literal": "If-None-Match",
+              "verdict": "pass"
+            },
+            {
+              "literal": "304 Not Modified",
+              "verdict": "pass"
+            },
+            {
+              "literal": "200 OK",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Cache-Control: max-age=60",
+              "verdict": "pass"
+            },
+            {
+              "literal": "60 seconds",
+              "verdict": "pass"
+            }
+          ],
+          "actors_and_qualifications": {
+            "verdict": "pass",
+            "reason": "Client and server roles remain explicit. The stored-response, ordinary successful GET, selected-representation, other-caching-rules, and non-guarantee qualifications survive. There is no assertion of exercised behavior."
+          },
+          "additional_claims_or_unrelated_text": [],
+          "objections": []
+        },
+        "B": {
+          "expected_sha256": "1de9498944a38ade7afe97c1fe681456c70a94fc0bedf3df34f81edb96df0249",
+          "verified_sha256": "1de9498944a38ade7afe97c1fe681456c70a94fc0bedf3df34f81edb96df0249",
+          "hash_match": true,
+          "overall": "fail",
+          "dimensions": {
+            "correctness": "fail",
+            "relevance": "fail",
+            "completeness": "fail",
+            "clarity": "fail",
+            "professional_tone": "fail",
+            "source_fidelity": "fail"
+          },
+          "claims": [
+            {
+              "id": "DTC1",
+              "verdict": "pass",
+              "reason": "Both explanations connect ETags with checking reuse of a stored response."
+            },
+            {
+              "id": "DTC2",
+              "verdict": "fail",
+              "reason": "Retains server-supplied ETag and a later conditional GET, but never names If-None-Match. The required request-header mechanism is missing from both explanations."
+            },
+            {
+              "id": "DTC3",
+              "verdict": "pass",
+              "reason": "Preserves matching-tag 304 Not Modified, no response body, and stored-body reuse. The first version's vague 'what has been selected' is clarified as 'selected representation' in the repeated version."
+            },
+            {
+              "id": "DTC4",
+              "verdict": "pass",
+              "reason": "Within the question's expressly ordinary successful GET scope, the nonmatching-tag 200 OK response with current JSON is retained. The first version is more categorical than the original; this is not treated as an independent error because the question supplies the successful-GET scope."
+            },
+            {
+              "id": "DTC5",
+              "verdict": "fail",
+              "reason": "A conditional GET request is mentioned, but the answer omits the original's explicit conclusion that validation still requires a request. It therefore leaves the user's direct question about whether an ETag eliminates the request insufficiently answered."
+            },
+            {
+              "id": "DTC6",
+              "verdict": "fail",
+              "reason": "Mentions freshness-based reuse without validation but changes the exact header to 'Cache Control: max age = 60', omits the condition that other caching rules apply, and then misleadingly says fresh reuse is not guaranteed because data may change."
+            },
+            {
+              "id": "DTC7",
+              "verdict": "fail",
+              "reason": "Retains the possibility of data changing within 60 seconds, but attaches the non-guarantee to reuse itself: 'this reuse isn't guaranteed because data may change'. The source distinguishes permitted fresh reuse from a guarantee of unchanged origin data; the answer conflates them."
+            }
+          ],
+          "protected_literals": [
+            {
+              "literal": "ETag",
+              "verdict": "pass",
+              "reason": "The exact singular spelling is present, in addition to plural uses."
+            },
+            {
+              "literal": "GET",
+              "verdict": "pass"
+            },
+            {
+              "literal": "If-None-Match",
+              "verdict": "fail",
+              "reason": "Absent."
+            },
+            {
+              "literal": "304 Not Modified",
+              "verdict": "pass"
+            },
+            {
+              "literal": "200 OK",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Cache-Control: max-age=60",
+              "verdict": "fail",
+              "reason": "Replaced by 'Cache Control: max age = 60', which does not preserve the header-field name or directive syntax."
+            },
+            {
+              "literal": "60 seconds",
+              "verdict": "pass"
+            }
+          ],
+          "actors_and_qualifications": {
+            "verdict": "fail",
+            "reason": "No additional technical participant is introduced. The first selected-entity reference is vague but the repeated explanation identifies it. Material qualifications are nevertheless lost: the other-caching-rules condition, the explicit request-cost conclusion, and the distinction between permitted reuse and unchanged underlying data. There is no assertion of tested server or browser behavior."
+          },
+          "additional_claims_or_unrelated_text": [
+            {
+              "text": "Let me know if you need any other changes!",
+              "verdict": "fail",
+              "reason": "Unrelated editing conversation; not part of the requested technical explanation."
+            },
+            {
+              "text": "Your paraphrased text is clear and readable.",
+              "verdict": "fail",
+              "reason": "Unrequested assessment of a text rather than an answer to the caching question."
+            },
+            {
+              "text": "I have made some small adjustments to improve flow and readability slightly:",
+              "verdict": "fail",
+              "reason": "Introduces an unrelated editing narrative and a second overlapping answer."
+            },
+            {
+              "text": "The main points are preserved but phrasing has been refined to sound more natural.",
+              "verdict": "fail",
+              "reason": "The preservation assurance is contradicted by the missing If-None-Match mechanism, lost caching qualification, and changed freshness explanation; the stylistic commentary is also unrelated."
+            },
+            {
+              "text": "Let me know if this meets your needs or if you would like further changes. Otherwise I think this works well as a summary.",
+              "verdict": "fail",
+              "reason": "Unrelated closing requests and evaluation add no answer to the technical question."
+            }
+          ],
+          "objections": [
+            "Restore the exact If-None-Match mechanism.",
+            "Restore Cache-Control: max-age=60 exactly and retain the other-caching-rules qualification.",
+            "State explicitly that conditional validation still sends a request.",
+            "Explain that permitted reuse while fresh does not promise unchanged underlying data; do not make data stability a prerequisite for freshness-based reuse.",
+            "Provide one complete explanation and remove the duplicated explanation and editing commentary."
+          ]
+        }
+      },
+      "readability_preference": "A",
+      "readability_reason": "A presents the request sequence once, then answers the request-elimination question and explains the freshness qualification. B interrupts a duplicated explanation with unrelated editing commentary and uses an ambiguous freshness sentence."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "answers": {
+        "A": {
+          "expected_sha256": "4b8f565024accc9f10d0c92d427688f8928112cb4896a2b05b434583f654a373",
+          "verified_sha256": "4b8f565024accc9f10d0c92d427688f8928112cb4896a2b05b434583f654a373",
+          "hash_match": true,
+          "overall": "fail",
+          "dimensions": {
+            "correctness": "fail",
+            "relevance": "fail",
+            "completeness": "fail",
+            "clarity": "fail",
+            "professional_tone": "fail",
+            "source_fidelity": "fail"
+          },
+          "claims": [
+            {
+              "id": "DBC1",
+              "verdict": "pass",
+              "reason": "Identifies Atlas help-centre migration as the topic. The separate unsupported 'migration ... is done' assertion is recorded below."
+            },
+            {
+              "id": "DBC2",
+              "verdict": "pass",
+              "reason": "Retains that all 180 articles have been copied in both versions. The added attribution of copying to 'we' is not specified by the source and is recorded separately."
+            },
+            {
+              "id": "DBC3",
+              "verdict": "fail",
+              "reason": "Retains the reviewed count of 60 and identifies the content team in the second version, but changes the precise observed result 'no missing sections' to 'no missing parts' and 'no missing pieces'. Those broader formulations do not preserve the observation's exact scope and can suggest a more comprehensive completeness check."
+            },
+            {
+              "id": "DBC4",
+              "verdict": "pass",
+              "reason": "Both versions explicitly state that the remaining reviews are pending and the review process is incomplete."
+            },
+            {
+              "id": "DBC5",
+              "verdict": "pass",
+              "reason": "Both versions retain the current failure to return search results for titles containing apostrophes."
+            },
+            {
+              "id": "DBC6",
+              "verdict": "pass",
+              "reason": "The first version retains Nia's expected future fix delivery on the same calendar date and Omar's subsequent testing. The second also presents delivery and testing as future work. The exact date spelling requirement fails separately."
+            },
+            {
+              "id": "DBC7",
+              "verdict": "fail",
+              "reason": "Changes the recommended pilot into a stated conditional commitment ('we will open' and 'we'll run'). The first version uses 'five selected support agents' instead of volunteers; the second restores 'five volunteers' but omits their support-agent role. The original single, explicit proposal for five volunteer support agents is not faithfully retained."
+            },
+            {
+              "id": "DBC8",
+              "verdict": "pass",
+              "reason": "Retains existing help-centre availability and unchanged customer-facing links during the pilot in both versions."
+            },
+            {
+              "id": "DBC9",
+              "verdict": "fail",
+              "reason": "Changes the requested sponsor decision from whether the support team can provide five agents to whether support staff can 'manage these five agents' or 'handle these five people'. Managing or supervising people does not establish availability to staff the pilot. The calendar deadline is equivalent, but its protected spelling also changes."
+            },
+            {
+              "id": "DBC10",
+              "verdict": "fail",
+              "reason": "Changes deciding whether to schedule full rollout into deciding when to roll out fully or go full scale, presupposing eventual rollout. The second version additionally changes feedback review from on 14 September to by September 14th, changing the planned date into a deadline."
+            },
+            {
+              "id": "DBC11",
+              "verdict": "pass",
+              "reason": "Both versions explicitly say that no rollout date has yet been set. This preserves the date non-commitment, although the separate 'when' wording incorrectly narrows the later decision to timing."
+            }
+          ],
+          "protected_literals": [
+            {
+              "literal": "Atlas",
+              "verdict": "pass"
+            },
+            {
+              "literal": "180",
+              "verdict": "pass"
+            },
+            {
+              "literal": "60",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Nia",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Omar",
+              "verdict": "pass"
+            },
+            {
+              "literal": "10 September",
+              "verdict": "fail",
+              "reason": "Replaced by 'September 10th'. Same calendar date, but the exact protected literal is absent."
+            },
+            {
+              "literal": "five",
+              "verdict": "pass"
+            },
+            {
+              "literal": "11 September",
+              "verdict": "fail",
+              "reason": "Replaced by 'September 11th'. Same calendar date, but the exact protected literal is absent."
+            },
+            {
+              "literal": "9 September",
+              "verdict": "fail",
+              "reason": "Replaced by 'September 9th'. Same calendar date, but the exact protected literal is absent."
+            },
+            {
+              "literal": "14 September",
+              "verdict": "fail",
+              "reason": "Replaced by 'September 14th'. The second version also changes the event timing from on that date to by that date."
+            }
+          ],
+          "actors_and_qualifications": {
+            "verdict": "fail",
+            "reason": "Nia and Omar retain their planned roles. The source does not identify who copied the articles, whereas both versions attribute copying to 'we'; the first also attributes review to 'we' before the second names the content team. The sponsor's staffing decision becomes a supervision or management question. Voluntary support-agent participation, recommendation strength, the decision whether to schedule rollout, and the exact review date are not consistently retained. No year or weekday is invented, and the body need not restate the scenario's fictional status."
+          },
+          "additional_claims_or_unrelated_text": [
+            {
+              "text": "we have successfully copied all 180 articles and reviewed 60 of them",
+              "verdict": "fail",
+              "reason": "The counts and completed copying status are supported, but the source leaves the copying actor unspecified and assigns review to the content team. The added first-person attribution is not established by the facts."
+            },
+            {
+              "text": "To rephrase the provided text in a more conversational style while retaining its original meaning:",
+              "verdict": "fail",
+              "reason": "Unrelated editing preamble interrupts the sponsor update and introduces a duplicated update. The claim that meaning is retained is also contradicted by the changed sponsor decision and rollout conditions."
+            },
+            {
+              "text": "Migration of Atlas Help Center is done.",
+              "verdict": "fail",
+              "reason": "Declares the whole migration complete. The facts only establish completed article copying; review remains incomplete, search needs fixing, the pilot is proposed, and full rollout is uncommitted."
+            },
+            {
+              "text": "We've copied all 180 articles",
+              "verdict": "fail",
+              "reason": "The copied count and status are supported, but the source does not specify the actor responsible for copying."
+            }
+          ],
+          "objections": [
+            "Remove the unsupported assertion that the migration is done; distinguish completed copying from outstanding review, search repair, pilot testing, and rollout decisions.",
+            "Keep the bounded finding of no missing sections in the 60 reviewed articles, with the content team as the review actor; do not invent a copying actor.",
+            "Retain a recommended, conditional pilot for five volunteer support agents rather than a conditional launch commitment or selected-agent formulation.",
+            "Ask whether the support team can provide the five agents, not whether staff can manage or handle them.",
+            "Retain feedback review on 14 September and a subsequent decision whether to schedule full rollout.",
+            "Restore all four protected date literals exactly.",
+            "Provide a single concise sponsor update and remove the rewriting preamble and duplicate version."
+          ]
+        },
+        "B": {
+          "expected_sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+          "verified_sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+          "hash_match": true,
+          "overall": "pass",
+          "dimensions": {
+            "correctness": "pass",
+            "relevance": "pass",
+            "completeness": "pass",
+            "clarity": "pass",
+            "professional_tone": "pass",
+            "source_fidelity": "pass"
+          },
+          "claims": [
+            {
+              "id": "DBC1",
+              "verdict": "pass",
+              "reason": "Names Atlas help-centre migration without claiming it is complete."
+            },
+            {
+              "id": "DBC2",
+              "verdict": "pass",
+              "reason": "States that all 180 articles have been copied without inventing the copying actor."
+            },
+            {
+              "id": "DBC3",
+              "verdict": "pass",
+              "reason": "Attributes the review to the content team and limits the finding of no missing sections to the 60 checked articles."
+            },
+            {
+              "id": "DBC4",
+              "verdict": "pass",
+              "reason": "Explicitly states that the remaining articles are unreviewed and the content check is incomplete."
+            },
+            {
+              "id": "DBC5",
+              "verdict": "pass",
+              "reason": "Accurately states that search currently omits titles containing apostrophes."
+            },
+            {
+              "id": "DBC6",
+              "verdict": "pass",
+              "reason": "Preserves planned delivery by Nia on 10 September, followed by Omar's test; neither is described as completed."
+            },
+            {
+              "id": "DBC7",
+              "verdict": "pass",
+              "reason": "Preserves recommendation strength, five volunteer support agents, 11 September, and the condition that the search test passes."
+            },
+            {
+              "id": "DBC8",
+              "verdict": "pass",
+              "reason": "Preserves availability of the existing help centre and unchanged customer-facing links during the pilot."
+            },
+            {
+              "id": "DBC9",
+              "verdict": "pass",
+              "reason": "Requests confirmation by 9 September of whether the support team can provide five agents; availability remains unconfirmed."
+            },
+            {
+              "id": "DBC10",
+              "verdict": "pass",
+              "reason": "Preserves feedback review on 14 September before deciding whether to schedule full rollout."
+            },
+            {
+              "id": "DBC11",
+              "verdict": "pass",
+              "reason": "Explicitly states that a full rollout date has not been committed."
+            }
+          ],
+          "protected_literals": [
+            {
+              "literal": "Atlas",
+              "verdict": "pass"
+            },
+            {
+              "literal": "180",
+              "verdict": "pass"
+            },
+            {
+              "literal": "60",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Nia",
+              "verdict": "pass"
+            },
+            {
+              "literal": "Omar",
+              "verdict": "pass"
+            },
+            {
+              "literal": "10 September",
+              "verdict": "pass"
+            },
+            {
+              "literal": "five",
+              "verdict": "pass"
+            },
+            {
+              "literal": "11 September",
+              "verdict": "pass"
+            },
+            {
+              "literal": "9 September",
+              "verdict": "pass"
+            },
+            {
+              "literal": "14 September",
+              "verdict": "pass"
+            }
+          ],
+          "actors_and_qualifications": {
+            "verdict": "pass",
+            "reason": "All named actors and responsibilities match the supplied facts. Copying has no invented actor. Observation scope, incomplete review, planned fix delivery, conditional pilot proposal, unconfirmed staffing, pilot-only availability protections, and the uncommitted rollout decision remain clear. No year, weekday, or completed future work is added; scenario disclosure is appropriately left in the question and provenance."
+          },
+          "additional_claims_or_unrelated_text": [],
+          "objections": []
+        }
+      },
+      "readability_preference": "B",
+      "readability_reason": "B is a single concise sponsor update with clear progress, blockers, pilot conditions, and a precise staffing decision. A repeats the update, interrupts it with editing commentary, and introduces conflicting completion and scheduling language."
+    }
+  ],
+  "summary": {
+    "wm4-dev-technical-01": {
+      "A": "pass",
+      "B": "fail",
+      "readability_preference": "A"
+    },
+    "wm4-dev-business-01": {
+      "A": "fail",
+      "B": "pass",
+      "readability_preference": "B"
+    },
+    "pass_count": 2,
+    "fail_count": 2
+  },
+  "export_note": "Only the private input path was replaced with a relative path; findings and answer hashes unchanged."
+}

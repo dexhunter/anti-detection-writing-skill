@@ -1,0 +1,418 @@
+{
+  "case": {
+    "id": "wm5-community-library-room-booking-pilot",
+    "title": "Extending Juniper Reach Library's Room-Booking Pilot",
+    "question": "Synthetic development case: Using the fictional source brief below, write a short explanatory article or decision memo of approximately 300\u2013350 words for library staff and residents. Explain the mixed pilot feedback, distinguish observations from alternative explanations, and make the reasoning, responsibilities and conditions for extending the pilot before considering expansion clear. Treat all numbers and decision thresholds as invented case facts or proposals. Keep synthetic-provenance labeling in the metadata and task question rather than in the intended article body.",
+    "synthetic_provenance": {
+      "status": "entirely_synthetic",
+      "description": "This independently invented development case describes a fictional institution, observations, feedback, responsibilities and proposed decision criteria. It is not a report of real events and uses no external sources.",
+      "construction_constraints": "The source brief and original were created for this case without reading writing skills, prior studies, detectors, other experiment files or holdouts. No candidate revision or detector scan was produced.",
+      "original_authorship_context": "The original is a complete explanatory draft for a fictional scenario; it claims no firsthand human experience.",
+      "intended_use": "One new development case for a writing-method comparison."
+    },
+    "source_brief": {
+      "status": "invented_case_source",
+      "audience": "Library staff and residents considering how to evaluate the room-booking pilot.",
+      "facts": [
+        {
+          "id": "F01",
+          "kind": "setting",
+          "fact": "Juniper Reach Library is a fictional community library running a room-booking pilot; the review concerns whether to extend that pilot before considering additional rooms."
+        },
+        {
+          "id": "F02",
+          "kind": "observation",
+          "fact": "The pilot has completed its first eight weeks."
+        },
+        {
+          "id": "F03",
+          "kind": "observation",
+          "fact": "The pilot offered two rooms, with free bookings lasting two hours, during staffed opening hours."
+        },
+        {
+          "id": "F04",
+          "kind": "observation",
+          "fact": "There were 160 available booking slots during the first eight weeks; 118 were reserved, 91 of those reservations were used, and 27 reserved slots were unused."
+        },
+        {
+          "id": "F05",
+          "kind": "observation",
+          "fact": "Forty-two people voluntarily submitted feedback; 25 valued having a predictable place for study or small-group work, and the other 17 reported difficulty finding a slot or completing a booking."
+        },
+        {
+          "id": "F06",
+          "kind": "limitation",
+          "fact": "The feedback was voluntary rather than a representative survey, so it does not establish the prevalence of the reported concerns among all residents."
+        },
+        {
+          "id": "F07",
+          "kind": "observation",
+          "fact": "Eighteen of the 27 unused reservations were made by four repeat bookers."
+        },
+        {
+          "id": "F08",
+          "kind": "observation",
+          "fact": "Most of the slots that were never reserved fell before noon on weekdays."
+        },
+        {
+          "id": "F09",
+          "kind": "interpretation",
+          "fact": "The review notes treat the reservation count as evidence of demand, but the current observations do not establish reliable access for residents."
+        },
+        {
+          "id": "F10",
+          "kind": "alternative_explanation",
+          "fact": "The review notes identify cancellation habits as a possible contributor to unused reservations; unused reservations do not by themselves establish the extent of unmet demand."
+        },
+        {
+          "id": "F11",
+          "kind": "alternative_explanation",
+          "fact": "The review notes identify residents' availability at different times of day as a possible contributor to low weekday-morning demand; this explanation has not been tested."
+        },
+        {
+          "id": "F12",
+          "kind": "limitation",
+          "fact": "Adding rooms would not necessarily resolve cancellation habits or a mismatch between residents' availability and the timing of unused slots."
+        },
+        {
+          "id": "F13",
+          "kind": "access_constraint",
+          "fact": "The online booking form requires an email address; telephone bookings can currently be taken only when the front-desk supervisor is available."
+        },
+        {
+          "id": "F14",
+          "kind": "reported_experience",
+          "fact": "Three of the 17 respondents who reported booking difficulties said that the email requirement or supervisor-only telephone coverage had prevented them from completing a booking."
+        },
+        {
+          "id": "F15",
+          "kind": "proposal",
+          "fact": "The review proposal is to extend the pilot for six weeks before deciding whether to add rooms, using the extension to test improvements to access and booking reliability."
+        },
+        {
+          "id": "F16",
+          "kind": "proposal",
+          "fact": "During the proposed extension, any trained desk worker would accept telephone and in-person reservations, and all booking routes would use the same room-slot inventory."
+        },
+        {
+          "id": "F17",
+          "kind": "proposal_and_hypothesis",
+          "fact": "The proposal includes reminders and a simple cancellation option, intended to help residents release reservations they no longer need; their effectiveness has not been measured."
+        },
+        {
+          "id": "F18",
+          "kind": "responsibility",
+          "fact": "The service manager would arrange staff training and publish weekly totals for reservations, attendance, cancellations and requests that could not be accommodated, broken down by booking route and time of day."
+        },
+        {
+          "id": "F19",
+          "kind": "responsibility",
+          "fact": "Desk workers would record requests consistently, including requests received when the rooms were fully booked."
+        },
+        {
+          "id": "F20",
+          "kind": "proposed_decision_criterion",
+          "fact": "An expansion decision would follow the six-week extension, with expansion considered only if trained staff can cover every staffed opening period."
+        },
+        {
+          "id": "F21",
+          "kind": "proposed_decision_criterion",
+          "fact": "A further proposed condition for considering expansion is that at least 85% of reservations during the extension are either used or cancelled before their start time."
+        },
+        {
+          "id": "F22",
+          "kind": "proposed_decision_criterion",
+          "fact": "A further proposed condition for considering expansion is that requests that cannot be accommodated continue to be recorded in at least four of the six extension weeks despite the process changes."
+        },
+        {
+          "id": "F23",
+          "kind": "decision_limit",
+          "fact": "Meeting all three proposed conditions would support considering expansion, but would not establish how many additional rooms are needed."
+        },
+        {
+          "id": "F24",
+          "kind": "proposed_fallback",
+          "fact": "If staff coverage for access or booking reliability remains weak after the extension, the proposal is to revise the booking process and reassess before proceeding with expansion."
+        }
+      ]
+    },
+    "original": "Juniper Reach Library should extend its room-booking pilot for six weeks before deciding whether to add more rooms. The first eight weeks show demand, but they do not yet establish that residents can access the space reliably.\n\nThe pilot offered two rooms for free, two-hour bookings during staffed hours. Of 160 available slots, 118 were reserved and 91 were used. Among 42 feedback respondents, 25 valued a predictable place for study or small-group work, while 17 reported difficulties finding a slot or completing a booking. This voluntary feedback identifies concerns without establishing how common they are among all residents.\n\nTwo details complicate the reservation total. Eighteen of the 27 unused reservations came from four repeat bookers, and most unreserved slots fell before noon on weekdays. Missed bookings may reflect cancellation habits; low daytime use may reflect when residents can attend. More rooms would not necessarily address these possibilities.\n\nAccess needs a practical test. The online form requires an email address, and telephone bookings currently depend on the front-desk supervisor being available. Three respondents said these requirements prevented a booking. During an extension, any trained desk worker should accept telephone or in-person reservations using the same inventory as online bookings. Reminders and a simple cancellation option could help residents release slots they no longer need.\n\nThe service manager should arrange training and publish weekly reservation, attendance, cancellation and unfulfilled-request totals by booking route and time of day. Desk workers should record requests consistently, including those made when rooms are full.\n\nAn expansion decision should follow the six-week extension. The proposed conditions are that trained staff can cover every staffed opening period, at least 85% of reservations are used or cancelled before their start, and unfulfilled requests persist in at least four weeks despite the changes. These conditions would support considering expansion; they would not establish how many rooms are needed. If access coverage or booking reliability remains weak, the next step should be to revise the process and reassess.",
+    "claim_inventory": [
+      {
+        "id": "C01",
+        "original_excerpt": "Juniper Reach Library should extend its room-booking pilot for six weeks before deciding whether to add more rooms.",
+        "type": "recommendation",
+        "source_fact_ids": [
+          "F01",
+          "F15"
+        ],
+        "exact_supporting_source_facts": [
+          "Juniper Reach Library is a fictional community library running a room-booking pilot; the review concerns whether to extend that pilot before considering additional rooms.",
+          "The review proposal is to extend the pilot for six weeks before deciding whether to add rooms, using the extension to test improvements to access and booking reliability."
+        ]
+      },
+      {
+        "id": "C02",
+        "original_excerpt": "The first eight weeks show demand, but they do not yet establish that residents can access the space reliably.",
+        "type": "bounded_interpretation",
+        "source_fact_ids": [
+          "F02",
+          "F04",
+          "F09"
+        ],
+        "exact_supporting_source_facts": [
+          "The pilot has completed its first eight weeks.",
+          "There were 160 available booking slots during the first eight weeks; 118 were reserved, 91 of those reservations were used, and 27 reserved slots were unused.",
+          "The review notes treat the reservation count as evidence of demand, but the current observations do not establish reliable access for residents."
+        ]
+      },
+      {
+        "id": "C03",
+        "original_excerpt": "The pilot offered two rooms for free, two-hour bookings during staffed hours.",
+        "type": "reported_fact",
+        "source_fact_ids": [
+          "F03"
+        ],
+        "exact_supporting_source_facts": [
+          "The pilot offered two rooms, with free bookings lasting two hours, during staffed opening hours."
+        ]
+      },
+      {
+        "id": "C04",
+        "original_excerpt": "Of 160 available slots, 118 were reserved and 91 were used.",
+        "type": "reported_fact",
+        "source_fact_ids": [
+          "F04"
+        ],
+        "exact_supporting_source_facts": [
+          "There were 160 available booking slots during the first eight weeks; 118 were reserved, 91 of those reservations were used, and 27 reserved slots were unused."
+        ]
+      },
+      {
+        "id": "C05",
+        "original_excerpt": "Among 42 feedback respondents, 25 valued a predictable place for study or small-group work, while 17 reported difficulties finding a slot or completing a booking.",
+        "type": "reported_feedback",
+        "source_fact_ids": [
+          "F05"
+        ],
+        "exact_supporting_source_facts": [
+          "Forty-two people voluntarily submitted feedback; 25 valued having a predictable place for study or small-group work, and the other 17 reported difficulty finding a slot or completing a booking."
+        ]
+      },
+      {
+        "id": "C06",
+        "original_excerpt": "This voluntary feedback identifies concerns without establishing how common they are among all residents.",
+        "type": "limitation",
+        "source_fact_ids": [
+          "F05",
+          "F06"
+        ],
+        "exact_supporting_source_facts": [
+          "Forty-two people voluntarily submitted feedback; 25 valued having a predictable place for study or small-group work, and the other 17 reported difficulty finding a slot or completing a booking.",
+          "The feedback was voluntary rather than a representative survey, so it does not establish the prevalence of the reported concerns among all residents."
+        ]
+      },
+      {
+        "id": "C07",
+        "original_excerpt": "Two details complicate the reservation total. Eighteen of the 27 unused reservations came from four repeat bookers, and most unreserved slots fell before noon on weekdays.",
+        "type": "reported_fact_and_interpretive_framing",
+        "source_fact_ids": [
+          "F04",
+          "F07",
+          "F08",
+          "F10",
+          "F11"
+        ],
+        "exact_supporting_source_facts": [
+          "There were 160 available booking slots during the first eight weeks; 118 were reserved, 91 of those reservations were used, and 27 reserved slots were unused.",
+          "Eighteen of the 27 unused reservations were made by four repeat bookers.",
+          "Most of the slots that were never reserved fell before noon on weekdays.",
+          "The review notes identify cancellation habits as a possible contributor to unused reservations; unused reservations do not by themselves establish the extent of unmet demand.",
+          "The review notes identify residents' availability at different times of day as a possible contributor to low weekday-morning demand; this explanation has not been tested."
+        ]
+      },
+      {
+        "id": "C08",
+        "original_excerpt": "Missed bookings may reflect cancellation habits; low daytime use may reflect when residents can attend.",
+        "type": "alternative_explanations",
+        "source_fact_ids": [
+          "F10",
+          "F11"
+        ],
+        "exact_supporting_source_facts": [
+          "The review notes identify cancellation habits as a possible contributor to unused reservations; unused reservations do not by themselves establish the extent of unmet demand.",
+          "The review notes identify residents' availability at different times of day as a possible contributor to low weekday-morning demand; this explanation has not been tested."
+        ]
+      },
+      {
+        "id": "C09",
+        "original_excerpt": "More rooms would not necessarily address these possibilities.",
+        "type": "limitation",
+        "source_fact_ids": [
+          "F12"
+        ],
+        "exact_supporting_source_facts": [
+          "Adding rooms would not necessarily resolve cancellation habits or a mismatch between residents' availability and the timing of unused slots."
+        ]
+      },
+      {
+        "id": "C10",
+        "original_excerpt": "Access needs a practical test.",
+        "type": "recommendation",
+        "source_fact_ids": [
+          "F09",
+          "F13",
+          "F14",
+          "F15"
+        ],
+        "exact_supporting_source_facts": [
+          "The review notes treat the reservation count as evidence of demand, but the current observations do not establish reliable access for residents.",
+          "The online booking form requires an email address; telephone bookings can currently be taken only when the front-desk supervisor is available.",
+          "Three of the 17 respondents who reported booking difficulties said that the email requirement or supervisor-only telephone coverage had prevented them from completing a booking.",
+          "The review proposal is to extend the pilot for six weeks before deciding whether to add rooms, using the extension to test improvements to access and booking reliability."
+        ]
+      },
+      {
+        "id": "C11",
+        "original_excerpt": "The online form requires an email address, and telephone bookings currently depend on the front-desk supervisor being available.",
+        "type": "reported_constraint",
+        "source_fact_ids": [
+          "F13"
+        ],
+        "exact_supporting_source_facts": [
+          "The online booking form requires an email address; telephone bookings can currently be taken only when the front-desk supervisor is available."
+        ]
+      },
+      {
+        "id": "C12",
+        "original_excerpt": "Three respondents said these requirements prevented a booking.",
+        "type": "reported_feedback",
+        "source_fact_ids": [
+          "F14"
+        ],
+        "exact_supporting_source_facts": [
+          "Three of the 17 respondents who reported booking difficulties said that the email requirement or supervisor-only telephone coverage had prevented them from completing a booking."
+        ]
+      },
+      {
+        "id": "C13",
+        "original_excerpt": "During an extension, any trained desk worker should accept telephone or in-person reservations using the same inventory as online bookings.",
+        "type": "proposed_action",
+        "source_fact_ids": [
+          "F16"
+        ],
+        "exact_supporting_source_facts": [
+          "During the proposed extension, any trained desk worker would accept telephone and in-person reservations, and all booking routes would use the same room-slot inventory."
+        ]
+      },
+      {
+        "id": "C14",
+        "original_excerpt": "Reminders and a simple cancellation option could help residents release slots they no longer need.",
+        "type": "proposed_action_and_hypothesis",
+        "source_fact_ids": [
+          "F17"
+        ],
+        "exact_supporting_source_facts": [
+          "The proposal includes reminders and a simple cancellation option, intended to help residents release reservations they no longer need; their effectiveness has not been measured."
+        ]
+      },
+      {
+        "id": "C15",
+        "original_excerpt": "The service manager should arrange training and publish weekly reservation, attendance, cancellation and unfulfilled-request totals by booking route and time of day.",
+        "type": "proposed_responsibility",
+        "source_fact_ids": [
+          "F18"
+        ],
+        "exact_supporting_source_facts": [
+          "The service manager would arrange staff training and publish weekly totals for reservations, attendance, cancellations and requests that could not be accommodated, broken down by booking route and time of day."
+        ]
+      },
+      {
+        "id": "C16",
+        "original_excerpt": "Desk workers should record requests consistently, including those made when rooms are full.",
+        "type": "proposed_responsibility",
+        "source_fact_ids": [
+          "F19"
+        ],
+        "exact_supporting_source_facts": [
+          "Desk workers would record requests consistently, including requests received when the rooms were fully booked."
+        ]
+      },
+      {
+        "id": "C17",
+        "original_excerpt": "An expansion decision should follow the six-week extension.",
+        "type": "proposed_decision_timing",
+        "source_fact_ids": [
+          "F15",
+          "F20"
+        ],
+        "exact_supporting_source_facts": [
+          "The review proposal is to extend the pilot for six weeks before deciding whether to add rooms, using the extension to test improvements to access and booking reliability.",
+          "An expansion decision would follow the six-week extension, with expansion considered only if trained staff can cover every staffed opening period."
+        ]
+      },
+      {
+        "id": "C18",
+        "original_excerpt": "The proposed conditions are that trained staff can cover every staffed opening period, at least 85% of reservations are used or cancelled before their start, and unfulfilled requests persist in at least four weeks despite the changes.",
+        "type": "proposed_decision_criteria",
+        "source_fact_ids": [
+          "F20",
+          "F21",
+          "F22"
+        ],
+        "exact_supporting_source_facts": [
+          "An expansion decision would follow the six-week extension, with expansion considered only if trained staff can cover every staffed opening period.",
+          "A further proposed condition for considering expansion is that at least 85% of reservations during the extension are either used or cancelled before their start time.",
+          "A further proposed condition for considering expansion is that requests that cannot be accommodated continue to be recorded in at least four of the six extension weeks despite the process changes."
+        ]
+      },
+      {
+        "id": "C19",
+        "original_excerpt": "These conditions would support considering expansion; they would not establish how many rooms are needed.",
+        "type": "decision_limit",
+        "source_fact_ids": [
+          "F23"
+        ],
+        "exact_supporting_source_facts": [
+          "Meeting all three proposed conditions would support considering expansion, but would not establish how many additional rooms are needed."
+        ]
+      },
+      {
+        "id": "C20",
+        "original_excerpt": "If access coverage or booking reliability remains weak, the next step should be to revise the process and reassess.",
+        "type": "proposed_fallback",
+        "source_fact_ids": [
+          "F24"
+        ],
+        "exact_supporting_source_facts": [
+          "If staff coverage for access or booking reliability remains weak after the extension, the proposal is to revise the booking process and reassess before proceeding with expansion."
+        ]
+      }
+    ],
+    "protected_literals": [
+      {
+        "literal": "Juniper Reach Library",
+        "reason": "Preserve the fictional institution's name."
+      },
+      {
+        "literal": "85%",
+        "reason": "Preserve the exact proposed booking-reliability threshold."
+      }
+    ],
+    "fact_preservation_note": "All substantive observations, counts, durations, access constraints, responsibilities, uncertainties and decision criteria in the original are covered by the claim inventory. Other numeric facts may be expressed in equivalent words or numerals without changing their value. Proposed actions and hypotheses must remain distinct from completed actions and measured findings.",
+    "word_count": 328,
+    "word_count_method": "Whitespace-delimited words; hyphenated expressions count as one word."
+  },
+  "answers": [
+    {
+      "label": "A",
+      "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+      "text": "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and booking reliability before deciding whether to add rooms.\n\nIn the first eight weeks, two rooms offered free, two-hour bookings during staffed opening hours. Of 160 slots, 118 were reserved and 91 used. Reservations indicate demand without establishing reliable access. Of 42 voluntary feedback respondents, 25 valued predictable space for study or small-group work; 17 struggled to find a slot or complete a booking. These responses cannot establish how common those difficulties are among residents.\n\nFour repeat bookers accounted for 18 of 27 unused reservations; most unreserved slots were before noon on weekdays. Cancellation habits may explain unused reservations; residents\u2019 availability may explain low weekday-morning demand, an untested possibility. Unused reservations alone do not establish the extent of unmet demand. Adding rooms would not necessarily resolve cancellation habits or a mismatch between booking times and residents\u2019 availability.\n\nThe online form requires an email address, while telephone bookings depend on the front-desk supervisor being available. Three of the 17 respondents reporting difficulties said one of these barriers prevented booking. During the extension, any trained desk worker should take telephone and in-person reservations using the same inventory as online bookings. Reminders and a simple cancellation option could help residents release unwanted reservations; their effectiveness is unmeasured.\n\nThe service manager should arrange training and publish weekly totals for reservations, attendance, cancellations and unfulfilled requests, broken down by booking route and time of day. Desk workers should record requests consistently, including when rooms are full.\n\nAfter six weeks, expansion should be considered only if all three proposed conditions are met: trained staff can cover every staffed opening period; at least 85% of extension reservations are used or cancelled before their start time; and unfulfilled requests are recorded in at least four of the six weeks despite the changes. Meeting these conditions would support considering expansion, but would not establish how many additional rooms are needed. If staff coverage or booking reliability remains weak, revise the booking process and reassess before expansion.\n"
+    },
+    {
+      "label": "B",
+      "sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+      "text": "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and reliability before considering more rooms. The first eight weeks show demand, without establishing reliable access.\n\nTwo rooms offered free, two-hour bookings during staffed hours: 118 of 160 slots were reserved, and 91 were used. Of 42 voluntary feedback respondents, 25 valued predictable space for study or small-group work; 17 struggled to find a slot or complete a booking. These responses cannot establish how widespread those difficulties are.\n\nEighteen of 27 unused reservations belonged to four repeat bookers. Most slots never reserved fell before noon on weekdays. Cancellation habits may contribute to unused reservations, while residents\u2019 availability may explain low weekday-morning demand; neither explanation is established. Unused reservations alone do not measure unmet demand, and adding rooms would not necessarily address either problem.\n\nThe online form requires an email address, while telephone bookings depend on the front-desk supervisor\u2019s availability. Three of the 17 respondents reporting difficulties said the email requirement or limited telephone coverage prevented a booking. During the extension, any trained desk worker should accept telephone and in-person reservations, with every route using the same inventory. Reminders and simple cancellation could help release unwanted reservations, though effectiveness remains unmeasured.\n\nThe service manager should arrange training and publish weekly reservation, attendance, cancellation and unaccommodated-request totals by booking route and time of day. Desk workers should record requests consistently, including when rooms are full.\n\nAfter the six-week extension, all three proposed conditions must be met before considering expansion: trained staff can cover every staffed opening period; at least 85% of reservations during the extension are used or cancelled before their start; and unaccommodated requests persist despite the changes in at least four of the six weeks. Timely cancellation counts toward the 85% threshold, but releasing a slot does not establish that someone uses it. Meeting these conditions would support considering expansion, without establishing how many rooms are needed. If coverage or reliability remains weak, revise the process and reassess before expanding.\n"
+    }
+  ]
+}

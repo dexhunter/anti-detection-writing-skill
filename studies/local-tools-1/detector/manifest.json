@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "library-baseline",
+      "path": "texts/library-baseline.txt",
+      "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe"
+    },
+    {
+      "id": "library-revised",
+      "path": "texts/library-revised.txt",
+      "sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca"
+    },
+    {
+      "id": "technical-baseline",
+      "path": "texts/technical-baseline.txt",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951"
+    },
+    {
+      "id": "technical-topic-continuity",
+      "path": "texts/technical-topic-continuity.txt",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442"
+    },
+    {
+      "id": "technical-core-expansion",
+      "path": "texts/technical-core-expansion.txt",
+      "sha256": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc"
+    },
+    {
+      "id": "business-baseline",
+      "path": "texts/business-baseline.txt",
+      "sha256": "13edfb9d4e685d6f5cf6e6c46cfea69b0dc75089d1c79b84d6462f94fbef7ef0"
+    },
+    {
+      "id": "business-topic-continuity",
+      "path": "texts/business-topic-continuity.txt",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84"
+    },
+    {
+      "id": "business-core-expansion",
+      "path": "texts/business-core-expansion.txt",
+      "sha256": "d2f012fa6d29935cd5369a7f1244acbbb5983c3519772200a27e7fbe7a9c89c9"
+    }
+  ]
+}

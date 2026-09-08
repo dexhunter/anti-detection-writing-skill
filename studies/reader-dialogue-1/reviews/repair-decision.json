@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-07T15:44:01.129673+00:00",
+  "first_pass_review": "reviews/quality-review.json",
+  "first_pass_preference": "baseline",
+  "factual_outcome": "both pass all20claims",
+  "initial_scan_admission": false,
+  "reason": "Candidate modestly worse on clarity despite factual pass.",
+  "repair_authorized_by_frozen_protocol": true,
+  "repairs_remaining_after_dispatch": 0,
+  "repair_type": "pre-score clarity repair",
+  "candidate_original_path": "outputs/candidate/final.txt",
+  "candidate_repair_path": "outputs/candidate/repaired.txt",
+  "no_scan_submitted": true,
+  "interpretation": "If repaired candidate later qualifies, the measured treatment is reader dialogue plus one independent-review-informed clarity repair. It is not the first-pass dialogue effect alone."
+}

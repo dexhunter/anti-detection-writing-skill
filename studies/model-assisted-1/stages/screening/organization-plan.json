@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "method_id": "r20",
+  "stage": "C",
+  "saved_before_any_stage_c_edit": true,
+  "created_at_utc": "2026-09-08T08:49:49.864114+00:00",
+  "cases_in_context": 2,
+  "constraints": "Stage B is frozen. One organization and permitted fluency pass, then one complete final fidelity check. No factual repair or post-check revision.",
+  "cases": [
+    {
+      "case_id": "wm4-dev-technical-01",
+      "stage_b_sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+      "reader": "App developer asking about repeated JSON fetches.",
+      "requested_answer_or_decision": "Explain validation and body reuse for ordinary successful conditional GET, and immediately distinguish that validation still requires a request; freshness can permit reuse without validation under other caching rules.",
+      "current_lead": "ETag enables receiving applications to validate whether cached representations may be reused.",
+      "specific_defects": [
+        {
+          "id": "T1",
+          "defect": "The direct answer that validation still sends a request is buried after all response mechanics in a single paragraph.",
+          "operation": "Move its intact sentence directly after the validation-purpose lead. Group server/client mechanics separately, then freshness and its exception together."
+        },
+        {
+          "id": "T2",
+          "defect": "Within the matching-tag condition, cached-body reuse is described before the server response that permits it, making the reader reverse the procedural order.",
+          "operation": "Keep the full condition intact and exchange the intact server-response and client-reuse clauses so response precedes reuse; retain their conjunction and modality."
+        }
+      ],
+      "planned_order": [
+        "DTC1",
+        "DTC5",
+        "paragraph break",
+        "DTC2",
+        "DTC3: condition, server response, client reuse",
+        "DTC4",
+        "paragraph break",
+        "DTC6",
+        "DTC7"
+      ],
+      "wording_permissions": "No lexical substitutions planned; only intact sentence and clause movements plus paragraph grouping.",
+      "viable_before_edit": true,
+      "expected_no_op": false
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "stage_b_sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+      "reader": "Project sponsor for the supplied invented Atlas scenario.",
+      "requested_answer_or_decision": "Confirm by 9 September whether the support team can provide the five volunteer support agents; assess completed copying, incomplete review, search fix/test dependency, conditional pilot and uncommitted rollout.",
+      "current_lead": "Progress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections.",
+      "specific_defects": [
+        {
+          "id": "B1",
+          "defect": "The sponsor decision appears only after progress, the defect, fix/test sequence and pilot details.",
+          "operation": "Move the intact sponsor-request sentence to the lead, preserving the deadline and pending question. Group article progress with the unreviewed remainder, search with fix/test and conditional pilot, and feedback with rollout non-commitment."
+        },
+        {
+          "id": "B2",
+          "defect": "Moving the request first leaves the definite reference the five agents before its supplied role has been introduced.",
+          "operation": "Resolve only the five agents in the moved sentence to five volunteer support agents, the supplied entity description. Leave the later conditional pilot sentence intact."
+        }
+      ],
+      "planned_order": [
+        "DBC9 with resolved agent reference",
+        "paragraph break",
+        "DBC1+DBC2+DBC3",
+        "DBC4",
+        "paragraph break",
+        "DBC5",
+        "DBC6",
+        "DBC7",
+        "DBC8",
+        "paragraph break",
+        "DBC10",
+        "DBC11"
+      ],
+      "wording_permissions": "Only resolve the agent reference made unclear by the move. Preserve all other fluent wording, including passive unspecified copying agency and existing nominal constructions.",
+      "viable_before_edit": true,
+      "expected_no_op": false
+    }
+  ]
+}

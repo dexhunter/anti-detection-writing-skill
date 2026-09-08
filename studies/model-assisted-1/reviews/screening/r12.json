@@ -1,0 +1,127 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response in the GET context.",
+            "DTC2 preserved: the server supplies the ETag and the client sends that value in If-None-Match.",
+            "DTC3 preserved: a selected-representation tag match on an otherwise successful GET yields 304 Not Modified, no body, and reuse of the stored body.",
+            "DTC4 preserved: a nonmatch yields 200 OK with current JSON within the explicitly stated ordinary successful GET scope.",
+            "DTC5 preserved: conditional validation still sends a request.",
+            "DTC6 preserved: an illustrative Cache-Control: max-age=60 freshness policy permits reuse without validation subject to other caching rules.",
+            "DTC7 preserved: fresh reuse does not guarantee unchanged underlying data for 60 seconds.",
+            "All protected literals preserved; 121 words, within the 180-word limit."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response in the GET context.",
+            "DTC2 preserved: the server supplies the ETag and the client sends that value in If-None-Match.",
+            "DTC3 preserved: a selected-representation tag match on an otherwise successful GET yields 304 Not Modified, no body, and reuse of the stored body.",
+            "DTC4 preserved: a nonmatch yields 200 OK with current JSON within the explicitly stated ordinary successful GET scope.",
+            "DTC5 preserved: conditional validation still sends a request.",
+            "DTC6 preserved: an illustrative Cache-Control: max-age=60 freshness policy permits reuse without validation subject to other caching rules.",
+            "DTC7 preserved: fresh reuse does not guarantee unchanged underlying data for 60 seconds.",
+            "All protected literals preserved; 129 words, within the 180-word limit."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both explain server/client roles, conditional response behavior, the remaining validation request, and qualified fresh reuse accurately. B states origin contact and validation requirements more explicitly; A already conveys the same operative distinction clearly. These are minor presentation differences, with no meaningful correctness or reader-purpose advantage."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: the update identifies the Atlas help-centre migration.",
+            "DBC2 preserved: all 180 articles have been copied, without inventing a copying actor.",
+            "DBC3 preserved: the content team found no missing sections in the 60 reviewed articles.",
+            "DBC4 preserved: the remaining articles are unreviewed and content review is incomplete.",
+            "DBC5 preserved: current search omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September and Omar tests afterward.",
+            "DBC7 preserved: the proposed pilot involves five volunteer support agents on 11 September, conditional on Omar's test passing.",
+            "DBC8 preserved: the existing help centre remains available and customer-facing links stay unchanged during the pilot.",
+            "DBC9 preserved: the sponsor is asked to confirm five-agent availability by 9 September; staffing is not treated as confirmed.",
+            "DBC10 preserved: feedback review on 14 September precedes deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date is committed.",
+            "All protected literals preserved; 119 words, within the 180-word limit."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: the update identifies the Atlas help-centre migration.",
+            "DBC2 preserved: all 180 articles have been copied, without inventing a copying actor.",
+            "DBC3 preserved: the content team found no missing sections in the 60 reviewed articles.",
+            "DBC4 preserved: the remaining articles are unreviewed and content review is incomplete.",
+            "DBC5 preserved: current search omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September and Omar tests afterward.",
+            "DBC7 preserved: the proposed pilot involves five volunteer support agents on 11 September, conditional on Omar's test passing.",
+            "DBC8 preserved: the existing help centre remains available and customer-facing links stay unchanged during the pilot.",
+            "DBC9 preserved: the sponsor is asked to confirm five-agent availability by 9 September; staffing is not treated as confirmed.",
+            "DBC10 preserved: feedback review on 14 September precedes deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date is committed.",
+            "All protected literals preserved; 127 words, within the 180-word limit."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both preserve every actor, date, quantity, incomplete status, conditional pilot proposal, sponsor request, and rollout non-commitment. A leads with the sponsor action and B leads with progress; both are clear and professional, and the ordering difference does not create a meaningful quality advantage."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698",
+        "public_text_paths": [
+          "measurements/r12-technical/answer.txt",
+          "answers/screening/r12/wm4-dev-technical-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65",
+        "public_text_paths": [
+          "measurements/r12-business/answer.txt",
+          "answers/screening/r12/wm4-dev-business-01.txt"
+        ]
+      }
+    }
+  }
+}

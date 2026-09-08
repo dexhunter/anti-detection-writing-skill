@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-08T11:03:22.236761+00:00",
+  "study_kind": "one_exposed_case_exploratory_text_comparison",
+  "source_case": "wm4-dev-technical-01",
+  "unseen": false,
+  "existing_baseline_text_fresh_scan": true,
+  "baseline_sha256": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+  "input_hashes": {
+    "methods.json": "a1991db27b7b41956d24b9a82bf8e17ede94bd5222680140b6ce9b5a2cfde106",
+    "SKILL.md": "0757159be597cfc8ad4acab0b74b08764d4f2d199133fcb7f05925db1f7ff04c",
+    "operator.txt": "685f3d56daab79c12eb36939036e0ba65ce37eed13a9e01dc2bd1da80ad5c583",
+    "case.json": "5732d6e4b92451b95bb60437a73404511c366f086a24ca1d6ef6d056f2ead49f"
+  },
+  "method_count": 2,
+  "fresh_writer_contexts": 1,
+  "separate_blind_judge": true,
+  "all_facts_required": true,
+  "max_provider_calls": 3,
+  "max_word_credits": 480,
+  "candidate_word_limit": 160,
+  "scan_mode": "GPTZero Basic Scan",
+  "browser": "signed-in Chrome",
+  "scan_order": [
+    "baseline",
+    "reference-card",
+    "mini-faq"
+  ],
+  "only_scan_quality_passing_candidates_not_preferred_worse_than_baseline": true,
+  "no_post_review_or_score_repairs": true,
+  "no_holdout_access": true,
+  "promotion_claim": false,
+  "end_condition": "One bounded generation/review/scan cycle; all outcomes retained. Any reduction is specific to exact texts on this previously exposed case; no general skill or impossibility claim.",
+  "public_export_note": "Account allowance omitted. The originally requested fresh-context setting was superseded prospectively by context-amendment.json before generation."
+}

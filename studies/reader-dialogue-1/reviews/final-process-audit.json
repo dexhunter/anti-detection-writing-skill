@@ -1,0 +1,15 @@
+{
+  "audited_at": "2026-09-07T15:46:01.735196+00:00",
+  "auditor": "Coordinating process reviewer; not the independent quality judge.",
+  "candidate_sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+  "first_pass_process_audit": "reviews/process-audit.json",
+  "repair_record": "reviews/repair-decision.json",
+  "dialogue_effect_retained": "Timely cancellation counts toward the 85% threshold, but releasing a slot does not establish that someone uses it.",
+  "repair_effect": "Explicit source-condition mapping and extension denominator; cancellation distinction moved beside85% criterion; repetitive because clause removed.",
+  "treatment": "Frozen skill plus reader dialogue plus one pre-score independent-review-informed clarity repair.",
+  "not_isolated": "Adaptive dialogue alone, original-to-rewrite effect, repair effect and additional compute are not separately identified.",
+  "original_and_first_pass_retained": true,
+  "frozen_inputs_unchanged": true,
+  "no_op": false,
+  "quality_verdict": "Pending independent final masked review; process audit is not reader preference."
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scope": "Exported study inputs and review records; results.json is assembled separately from validated native scan receipts.",
+  "exact_copies": {
+    "frozen/common-case.json": "f7cff70618f3794bec7f948792033dbe1f2b629954476f253e7851079bd54e1f",
+    "frozen/reader-case.json": "3e4f11647ecdc900df3de79af89e4d1079d39b803998cf7593fc41bb21e9144a",
+    "frozen/common-operator.txt": "9b45347bd53506cfc0b904806924f0d5dd5dd5ecaf5c64c8137785ee91a9f3ed",
+    "frozen/judge-operator.txt": "a5c296062c31a4123baa8fa21bbd46d72418d1833a940b0d53a9e7fcac6ab620",
+    "frozen/skill/SKILL.md": "0757159be597cfc8ad4acab0b74b08764d4f2d199133fcb7f05925db1f7ff04c",
+    "dialogue/question-1.json": "f6b9132cb703bf93a4afff18d7ed7a47ab5d7871cb47fc32f3f33c3a799364b7",
+    "dialogue/answer-1.json": "127f260b135e4fecc048978536bcf5cc49786b3a91aa56583b45257a5e8a1a02",
+    "dialogue/question-2.json": "d22d977171b528911639df56cfd3efa95d0512017b9c2d1ee39ca68aa7b7d726",
+    "dialogue/answer-2.json": "87bf04252ddfd648b5d5b1521437f32b2317acdc3c0f04575c2efec70eae20e6",
+    "outputs/baseline/final.txt": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+    "outputs/baseline/claims.json": "48e68650a2f9975f8f71398d55302ac6f5d2e8167049b1d18725d5d141ee7ede",
+    "outputs/candidate/final.txt": "c449930999cf361972380f5cc2e073a153d591c170ce0dfc8194dfc0fd8284de",
+    "outputs/candidate/claims.json": "42bec7fe630ebd4a771dba2062d2d399f0d3583922a79d265805563e799bac0c",
+    "outputs/candidate/repaired.txt": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+    "outputs/candidate/repaired-claims.json": "e6dfddcf45d31cbacfccee592412c89ddee18174b32edf3a7c50ffcac5bcc923",
+    "outputs/candidate/repair-notes.json": "ce4c4095ca581c3c658fcb55e2d65ba49d41b30596a8be8c1b0b20dce20e05cf",
+    "reviews/masked-packet.json": "787ca00f2b7df50bba4aef661562cb7470b6be42649332fe8d66fb1ad9b817f2",
+    "reviews/masking-key.json": "9fed585e54c7543c5bfe8f2665edda6c0185504c8adcd51cd06e506a470aa756",
+    "reviews/quality-review.json": "a0d502934133f98f073c56621e90550c252851d01642c9c00218997b8e0a81cf",
+    "reviews/final-masked-packet.json": "72a670781dd9a043fceb00f74d3089bb226f8cdabffaebb840422af8117dfc77",
+    "reviews/final-masking-key.json": "8de66b9dc4e04303734e2717e771257cecedb071b05b6b378dfba5561eba6a25",
+    "reviews/final-quality-review.json": "718a1700fbdbea7077268de197ba73223260fd2cf53bec2c934b05e9072bbc4c",
+    "reviews/repair-decision.json": "3325afdb2c3cc4b0ab1d28b3e238f432acc954b18e175382f443054975e8d1a2",
+    "reviews/admission.json": "a034dd3b2163ba675a979c45691cea16c92f836ef2f4dfc2b9aeafa4927a76b3"
+  },
+  "sanitized_copies": {
+    "frozen/source-audit.json": {
+      "sha256": "4b33f04366cace7486e2c462731241f359c8a4776a3128ea5cb32c97a1d296dc",
+      "changes": "Replaced coordinator identity with process-review role; findings unchanged."
+    },
+    "reviews/process-audit.json": {
+      "sha256": "c08080e8e65190eaf2d4a0a684110c6bcd4413f22f2c8ec053564fb770c1d531",
+      "changes": "Replaced coordinator identity with process-review role; findings unchanged."
+    },
+    "reviews/final-process-audit.json": {
+      "sha256": "a46bd736bfd8068444e7e17e0669c1faf09d6deb6280e0b3d7daf0c4232d3a1a",
+      "changes": "Replaced coordinator identity with process-review role; findings unchanged."
+    },
+    "generation-provenance.json": {
+      "sha256": "85068ed332a97b1279647826dab683bba127952e6ea080ad47019c4a7dc3a4e6",
+      "changes": "Removed internal agent identifiers; roles and observable settings retained."
+    },
+    "frozen/protocol.json": {
+      "sha256": "8fbf685ecb263db95f77641530f713a18d28da7b637d78eb2d0608e2a74b0b27",
+      "changes": "Sanitized copy of the protocol frozen before generation. Renamed the public study and removed private account balances and publication instructions; method, admission, success and stopping conditions are unchanged."
+    },
+    "frozen/method.md": {
+      "sha256": "88e3a749504689cfa1f4ddef293bc3d683c6657f986076831690e5db659112f9",
+      "changes": "Replaced the local-inspection paragraph with a relative prior-study link. The proposed operator and research limitations are unchanged."
+    }
+  },
+  "extracted_texts": {
+    "outputs/original.txt": {
+      "sha256": "d5205018260ad372aed84573421c5ba3ef400e8df20e06358e6cc8471070dd48",
+      "origin": "Exact original string in frozen/common-case.json, without adding a terminal newline."
+    }
+  }
+}

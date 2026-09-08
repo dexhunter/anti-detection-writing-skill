@@ -1,0 +1,1 @@
+An ETag lets the client validate its stored JSON response and reuse the body if the selected representation still matches. That validation still sends a request. To reuse the response without validation while it is fresh, configure a freshness policy, subject to the other caching rules.

@@ -1,0 +1,9 @@
+`BackgroundTasks` runs after sending the response, inside the serving process. It has no persistent queue, so a crash can interrupt a job. For your normal `def` function, Starlette uses a thread pool: `time.sleep(120)` occupies a thread but demonstrates neither CPU-heavy processing nor a blocked event loop. Those threads share the web process's resources.
+
+Choose where the video jobs run based on resource demand and recovery needs; there is no universal duration cutoff. Small jobs whose loss is acceptable can stay in process. Use separate workers for jobs that need recovery after a web-process restart or independent CPU and memory capacity.
+
+An external queue supports that design, with recovery determined by its persistence, acknowledgement and retry settings. Jobs that may run again should tolerate repeat execution. Submit successfully to the queue before returning a job identifier.
+
+This advice follows [FastAPI's caveat](https://fastapi.tiangolo.com/tutorial/background-tasks/#caveat) and [Celery's acknowledgement guidance](https://docs.celeryq.dev/en/stable/userguide/tasks.html); no ECS deployment was exercised.
+
+

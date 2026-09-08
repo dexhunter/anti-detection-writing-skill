@@ -1,0 +1,243 @@
+{
+  "study": "hip-feasibility-1",
+  "reviewed_at": "2026-09-06T19:38:49.879315+00:00",
+  "exported_at": "2026-09-06T19:43:47.616520+00:00",
+  "reviewer_type": "separate LLM agent, withheld detector scores",
+  "review_method": "Read the five linked official version-specific documentation pages through web retrieval. Compared code payloads, links, and exact output bytes. No application execution was performed.",
+  "totals": {
+    "cases": 2,
+    "generations": 2,
+    "quality_passes": 0,
+    "quality_failures": 2,
+    "detector_scans": 0,
+    "detector_reductions": null
+  },
+  "cases": [
+    {
+      "id": "kubernetes-probe-roles",
+      "input_file": "inputs/kubernetes-probe-roles.md",
+      "input_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "output_file": "outputs/kubernetes-probe-roles.md",
+      "output_sha256": "ce3c5db7cb16678deec9ef238121ddf4ab83bf5918eb1a6594ebd5f2fb46283d",
+      "verdict": "FAIL",
+      "dimensions": {
+        "correctness": "FAIL",
+        "relevance": "PARTIAL: retains the topic and budget, but loses the reader's explicit deadlock-versus-temporary-fault distinction",
+        "readability": "FAIL: the opening reverses the protection relationship and later sentences obscure the causal explanation",
+        "protected_literal_preservation": "PASS",
+        "useful_code_accuracy": "PASS"
+      },
+      "claim_coverage": {
+        "K1": "PARTIAL: startup gating and Always restart remain, but application startup becomes 'startup process of Kubernetes' and repeated failure becomes 'fails forever'",
+        "K2": "PASS",
+        "K3": "FAIL: deadlock is replaced by any 'problem'; the consecutive-failure qualification is omitted",
+        "K4": "PASS",
+        "K5": "PASS"
+      },
+      "material_findings": [
+        {
+          "id": "K-F1",
+          "output_line": 3,
+          "excerpt": "The liveness probe will detect a problem in the container and restart.",
+          "kind": "required_distinction_lost_and_certainty_increased",
+          "assessment": "The input assigns liveness to the unrecoverable deadlock. Replacing that condition with an unspecified problem loses the central choice of health behavior, and 'will detect' implies automatic diagnosis. The endpoint must implement the relevant application check.",
+          "affected_requirements": [
+            "K3",
+            "Health endpoints must implement these meanings"
+          ],
+          "source_ids": [
+            "kube-concepts",
+            "kube-config"
+          ]
+        },
+        {
+          "id": "K-F2",
+          "output_line": 5,
+          "excerpt": "Create HTTP endpoints to express the different conditions indicated by the failure threshold.",
+          "kind": "causal_error",
+          "assessment": "A failure threshold counts repeated failed checks; it does not identify the application conditions an endpoint should express. This changes the input's implementation guidance into a false explanation.",
+          "affected_requirements": [
+            "Health endpoints must implement these meanings"
+          ],
+          "source_ids": [
+            "kube-config"
+          ]
+        },
+        {
+          "id": "K-F3",
+          "output_line": 3,
+          "excerpt": "Failed liveness probes restart the container if the `failureThreshold` has been reached.",
+          "kind": "qualification_omitted",
+          "assessment": "The input explicitly requires consecutive failures. The output no longer distinguishes a consecutive run from accumulated intermittent failures.",
+          "affected_requirements": [
+            "K3"
+          ],
+          "source_ids": [
+            "kube-config"
+          ]
+        }
+      ],
+      "exact_preservation": {
+        "input_code_literals_preserved": [
+          "failureThreshold: 30",
+          "periodSeconds: 5",
+          "Always"
+        ],
+        "code_payload_changed": false,
+        "new_inline_code": [
+          "failureThreshold"
+        ],
+        "source_urls_preserved_exactly": true,
+        "link_labels_changed_only": true,
+        "protected_literal_inventory_note": "startupProbe, readinessProbe, and livenessProbe were absent from both the frozen input and output. Their absence is not counted as paraphrase deletion."
+      },
+      "official_sources_checked": [
+        {
+          "id": "kube-concepts",
+          "url": "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+          "sections": [
+            "Liveness probe",
+            "Readiness probe",
+            "Startup probe"
+          ]
+        },
+        {
+          "id": "kube-config",
+          "url": "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "sections": [
+            "Protect slow starting containers with startup probes",
+            "Define readiness probes",
+            "Configure Probes",
+            "HTTP probes"
+          ]
+        }
+      ],
+      "source_file": "sources/kubernetes-probe-roles.json",
+      "exported_source_sha256": "24eba32f149040a215ce775d00264560ab6dc230c7165192a1f0837a996c1582",
+      "detector_status": "not_measured_quality_rejected",
+      "ai_confidence": null,
+      "mixed_confidence": null,
+      "human_confidence": null
+    },
+    {
+      "id": "postgresql-snapshot-scope",
+      "input_file": "inputs/postgresql-snapshot-scope.md",
+      "input_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "output_file": "outputs/postgresql-snapshot-scope.md",
+      "output_sha256": "18136856ea7a4da6b42146821f5c7b4432ae75ff40e606acb90c25566051ed4c",
+      "verdict": "FAIL",
+      "dimensions": {
+        "correctness": "FAIL",
+        "relevance": "PASS: addresses the requested topics and remains within scope",
+        "readability": "FAIL: contradictory snapshot explanation and ambiguous pronouns make the main answer harder to understand",
+        "protected_literal_preservation": "PASS",
+        "useful_code_accuracy": "FAIL: original command survives, but an invalid SQL fragment is added"
+      },
+      "claim_coverage": {
+        "P1": "PARTIAL: different results remain possible, but 'after an ordinary SELECT' misstates or obscures when its snapshot is taken",
+        "P2": "FAIL: explicitly denies acquisition at the first query/data-modification statement; explicit BEGIN-alone qualification is lost",
+        "P3": "PARTIAL: correct BEGIN command preserved alongside an invalid ISOLATION_LEVEL fragment",
+        "P4": "FAIL: replaces the guarantee about earlier own-transaction writes with a statement limited to modifications before the snapshot",
+        "P5": "PARTIAL: complete retry, decision logic, error name and SQLSTATE survive; the triggering condition becomes less precise and more certain",
+        "P6": "PASS",
+        "P8": "PASS: repeated conflicts remain possible"
+      },
+      "material_findings": [
+        {
+          "id": "P-F1",
+          "output_line": 5,
+          "excerpt": "It doesn't have to be the first query or data-modification statement.",
+          "kind": "direct_contradiction",
+          "assessment": "This negates the input and official snapshot timing rule for the stated ordinary-query scenario. Repeatable Read establishes the snapshot at the first query or data-modification statement, not an arbitrary later statement or BEGIN alone.",
+          "affected_requirements": [
+            "P2",
+            "Do not attribute snapshot acquisition to BEGIN alone"
+          ],
+          "source_ids": [
+            "pg-set",
+            "pg-isolation"
+          ]
+        },
+        {
+          "id": "P-F2",
+          "output_line": 3,
+          "excerpt": "ISOLATION_LEVEL REPEATABLE READ",
+          "kind": "invalid_code_added",
+          "assessment": "ISOLATION_LEVEL is not the SQL transaction-mode syntax. The immediately following BEGIN command is correct, but the additional code-formatted instruction is misleading and is absent from the input.",
+          "affected_requirements": [
+            "P3"
+          ],
+          "source_ids": [
+            "pg-set"
+          ]
+        },
+        {
+          "id": "P-F3",
+          "output_line": 5,
+          "excerpt": "They still see information that was modified before the snapshot, even if it was by their own transaction.",
+          "kind": "required_exception_omitted",
+          "assessment": "The input's own-write visibility guarantee includes writes earlier in the same transaction even when made after snapshot acquisition. The paraphrase only discusses pre-snapshot modifications and fails to preserve that exception.",
+          "affected_requirements": [
+            "P4"
+          ],
+          "source_ids": [
+            "pg-isolation"
+          ]
+        }
+      ],
+      "exact_preservation": {
+        "protected_literals_preserved": [
+          "BEGIN ISOLATION LEVEL REPEATABLE READ;",
+          "40001",
+          "serialization_failure"
+        ],
+        "original_executable_command_bytes_preserved": true,
+        "original_code_block_format_preserved": false,
+        "format_note": "The fenced SQL command becomes inline code. That formatting change alone would not fail the gate.",
+        "invalid_new_inline_code": [
+          "ISOLATION_LEVEL REPEATABLE READ"
+        ],
+        "source_urls_preserved_exactly": true,
+        "link_labels_changed_only": true
+      },
+      "official_sources_checked": [
+        {
+          "id": "pg-isolation",
+          "url": "https://www.postgresql.org/docs/17/transaction-iso.html",
+          "sections": [
+            "13.2.1 Read Committed",
+            "13.2.2 Repeatable Read"
+          ]
+        },
+        {
+          "id": "pg-set",
+          "url": "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+          "sections": [
+            "Synopsis",
+            "Description",
+            "Notes"
+          ]
+        },
+        {
+          "id": "pg-retry",
+          "url": "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+          "sections": [
+            "13.5 Serialization Failure Handling"
+          ]
+        }
+      ],
+      "source_file": "sources/postgresql-snapshot-scope.json",
+      "exported_source_sha256": "eac1b0a2d601a7c6e37464e36623e9e7c1dbbedf58cc3ec51efcde4704faae4c",
+      "detector_status": "not_measured_quality_rejected",
+      "ai_confidence": null,
+      "mixed_confidence": null,
+      "human_confidence": null
+    }
+  ],
+  "limits": [
+    "Verdicts apply only to the output SHA256 values recorded here.",
+    "This is a documentation-grounded quality review; no Kubernetes or PostgreSQL runtime behavior was exercised.",
+    "Two reused development cases; not an unseen or held-out comparison.",
+    "Not a paper reproduction or evidence of current-service detector behavior."
+  ]
+}

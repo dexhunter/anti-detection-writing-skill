@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "word_count_method": "whitespace-separated tokens",
+  "cases": {
+    "wm4-dev-technical-01": {
+      "output_path": "outputs/relation-map/wm4-dev-technical-01.txt",
+      "sha256": "68e137a2296ec35c454f4adaaa35462b71625b96d0e821e0b9e4466a5ebd9c77",
+      "word_count": 158,
+      "claims": {
+        "DTC1": {
+          "status": "preserved",
+          "excerpt": "An ETag lets your client validate a stored JSON response and avoid downloading the body again when it is unchanged."
+        },
+        "DTC2": {
+          "status": "preserved",
+          "excerpt": "The server sends an ETag with the initial JSON response. On a later conditional GET, the client puts that value in If-None-Match."
+        },
+        "DTC3": {
+          "status": "preserved",
+          "excerpt": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body."
+        },
+        "DTC4": {
+          "status": "preserved",
+          "excerpt": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body. If the tag does not match, the server returns 200 OK with the current JSON."
+        },
+        "DTC5": {
+          "status": "preserved",
+          "excerpt": "Validation still requires a request; the ETag alone does not eliminate it."
+        },
+        "DTC6": {
+          "status": "preserved",
+          "excerpt": "To allow reuse without validation, configure an appropriate freshness policy, for example Cache-Control: max-age=60. While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit."
+        },
+        "DTC7": {
+          "status": "preserved",
+          "excerpt": "While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit. A freshness lifetime of 60 seconds does not guarantee that the underlying data stays unchanged for that period."
+        }
+      },
+      "relations": {
+        "DTR01": "An ETag lets your client validate a stored JSON response and avoid downloading the body again when it is unchanged.",
+        "DTR02": "The server sends an ETag with the initial JSON response.",
+        "DTR03": "On a later conditional GET, the client puts that value in If-None-Match.",
+        "DTR04": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body.",
+        "DTR05": "the server returns 304 Not Modified with no response body",
+        "DTR06": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body.",
+        "DTR07": "In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body. If the tag does not match, the server returns 200 OK with the current JSON.",
+        "DTR08": "Validation still requires a request; the ETag alone does not eliminate it.",
+        "DTR09": "To allow reuse without validation, configure an appropriate freshness policy, for example Cache-Control: max-age=60. While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit.",
+        "DTR10": "While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit.",
+        "DTR11": "A freshness lifetime of 60 seconds does not guarantee that the underlying data stays unchanged for that period."
+      },
+      "scope_cuts": [],
+      "corrections": []
+    },
+    "wm4-dev-business-01": {
+      "output_path": "outputs/relation-map/wm4-dev-business-01.txt",
+      "sha256": "ae67f0b3f2801e5c965438e7c5925170dfa1675800dd4c79a9bc7e1591887f30",
+      "word_count": 133,
+      "claims": {
+        "DBC1": {
+          "status": "preserved",
+          "excerpt": "The Atlas help-centre migration team has copied all 180 articles."
+        },
+        "DBC2": {
+          "status": "preserved",
+          "excerpt": "The Atlas help-centre migration team has copied all 180 articles."
+        },
+        "DBC3": {
+          "status": "preserved",
+          "excerpt": "The content team reviewed 60 and found no missing sections in that set."
+        },
+        "DBC4": {
+          "status": "preserved",
+          "excerpt": "The remaining articles are still unreviewed, so the content check is incomplete."
+        },
+        "DBC5": {
+          "status": "preserved",
+          "excerpt": "Search also still omits titles containing apostrophes."
+        },
+        "DBC6": {
+          "status": "preserved",
+          "excerpt": "Nia's fix is due on 10 September, and Omar will test it after delivery."
+        },
+        "DBC7": {
+          "status": "preserved",
+          "excerpt": "If that test passes, I recommend opening the pilot to five volunteer support agents on 11 September."
+        },
+        "DBC8": {
+          "status": "preserved",
+          "excerpt": "During the pilot, the existing help centre will remain available and customer-facing links will stay unchanged."
+        },
+        "DBC9": {
+          "status": "preserved",
+          "excerpt": "Please confirm by 9 September whether the support team can provide five agents; staffing is still unconfirmed."
+        },
+        "DBC10": {
+          "status": "preserved",
+          "excerpt": "The project team plans to review pilot feedback on 14 September and then decide whether to schedule the full rollout."
+        },
+        "DBC11": {
+          "status": "preserved",
+          "excerpt": "No full rollout date has been committed."
+        }
+      },
+      "relations": {
+        "DBR01": "The Atlas help-centre migration team has copied all 180 articles.",
+        "DBR02": "The Atlas help-centre migration team has copied all 180 articles.",
+        "DBR03": "The content team reviewed 60 and found no missing sections in that set.",
+        "DBR04": "The remaining articles are still unreviewed, so the content check is incomplete.",
+        "DBR05": "The remaining articles are still unreviewed, so the content check is incomplete.",
+        "DBR06": "Search also still omits titles containing apostrophes.",
+        "DBR07": "Nia's fix is due on 10 September, and Omar will test it after delivery.",
+        "DBR08": "Nia's fix is due on 10 September, and Omar will test it after delivery.",
+        "DBR09": "If that test passes, I recommend opening the pilot to five volunteer support agents on 11 September.",
+        "DBR10": "During the pilot, the existing help centre will remain available and customer-facing links will stay unchanged.",
+        "DBR11": "During the pilot, the existing help centre will remain available and customer-facing links will stay unchanged.",
+        "DBR12": "Please confirm by 9 September whether the support team can provide five agents; staffing is still unconfirmed.",
+        "DBR13": "The project team plans to review pilot feedback on 14 September and then decide whether to schedule the full rollout.",
+        "DBR14": "The project team plans to review pilot feedback on 14 September and then decide whether to schedule the full rollout.",
+        "DBR15": "No full rollout date has been committed."
+      },
+      "scope_cuts": [],
+      "corrections": []
+    }
+  }
+}

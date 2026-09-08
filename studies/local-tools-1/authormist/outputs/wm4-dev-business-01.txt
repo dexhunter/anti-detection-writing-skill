@@ -1,0 +1,15 @@
+ 
+
+Regarding Atlas Help Centre migration, we have successfully copied all 180 articles and reviewed 60 of them with no missing parts found. Reviews of remaining articles are pending, so we haven't completed the review process yet.
+
+Currently searches don't show results with title words containing apostrophes. Nia is expected to release a fix on September 10th and Omar will test it afterwards. If testing succeeds, we will open a pilot for five selected support agents starting September 11th. During this period, the existing help center will remain active and customer facing links won't change.
+
+Could you please confirm by September 9th if support staff can manage these five agents? We will look at feedback from the pilot on September 14th before deciding when to roll out fully. Thus a specific rollout date hasn't yet been set. To rephrase the provided text in a more conversational style while retaining its original meaning:
+
+Migration of Atlas Help Center is done.
+
+We've copied all 180 articles and the content team has looked through 60 of them. No missing pieces were found. Now reviews for the rest are pending. So we're not done reviewing yet.
+
+Currently search results don't return items with article titles that include apostrophes. We expect Nia to push a fix on September 10th and Omar will test it. If successful, we'll run a pilot from September 11th with five volunteers. Meanwhile the current center will stay up and customer facing links won't change.
+
+Could you please confirm by September 9th if support staff will handle these five people? We'll review feedback from the pilot by September 14th before deciding when to go full scale. Hence no rollout date is set yet.

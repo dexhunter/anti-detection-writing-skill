@@ -1,0 +1,7 @@
+Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.
+
+Progress in the migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections. Reviews are still incomplete: the remaining articles have not yet been reviewed.
+
+Titles containing apostrophes are currently omitted from searches. Nia is due to deliver a fix on 10 September and Omar will test it after delivery. If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September. The existing help center will remain available during this pilot while customer-facing links will not change.
+
+Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout. No schedule has as yet been committed for full rollout.

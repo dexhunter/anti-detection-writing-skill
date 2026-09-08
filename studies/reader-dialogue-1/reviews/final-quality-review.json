@@ -1,0 +1,163 @@
+{
+  "case_id": "wm5-community-library-room-booking-pilot",
+  "review_scope": "Independent masked review using only frozen/judge-operator.txt and reviews/final-masked-packet.json. All findings below apply to the exact UTF-8 texts identified by the verified hashes, including their final newlines.",
+  "answers": {
+    "A": {
+      "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+      "hash_verified": true,
+      "word_count": 341,
+      "word_count_method": "Whitespace-delimited; hyphenated expressions count as one word.",
+      "overall": "pass",
+      "protected_literals": {"Juniper Reach Library": "preserved", "85%": "preserved"},
+      "unsupported_claims": [],
+      "missing_claims": []
+    },
+    "B": {
+      "sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+      "hash_verified": true,
+      "word_count": 334,
+      "word_count_method": "Whitespace-delimited; hyphenated expressions count as one word.",
+      "overall": "pass",
+      "protected_literals": {"Juniper Reach Library": "preserved", "85%": "preserved"},
+      "unsupported_claims": [],
+      "missing_claims": []
+    }
+  },
+  "claim_outcomes": [
+    {
+      "id": "C01", "source_fact_ids": ["F01", "F15"],
+      "A": {"outcome": "pass", "finding": "Recommends a six-week extension to test access and booking reliability before deciding whether to add rooms."},
+      "B": {"outcome": "pass", "finding": "Recommends the same six-week access and reliability test before considering more rooms; later specifies the expansion decision conditions."}
+    },
+    {
+      "id": "C02", "source_fact_ids": ["F02", "F04", "F09"],
+      "A": {"outcome": "pass", "finding": "Identifies the first eight weeks and explicitly treats reservations as evidence of demand without establishing reliable access."},
+      "B": {"outcome": "pass", "finding": "States the same bounded conclusion for the first eight weeks, followed by the supporting reservation counts."}
+    },
+    {
+      "id": "C03", "source_fact_ids": ["F03"],
+      "A": {"outcome": "pass", "finding": "Preserves two rooms, free two-hour bookings, and staffed opening hours."},
+      "B": {"outcome": "pass", "finding": "Preserves two rooms, free two-hour bookings, and staffed hours."}
+    },
+    {
+      "id": "C04", "source_fact_ids": ["F04"],
+      "A": {"outcome": "pass", "finding": "Preserves 160 available slots, 118 reserved, and 91 used; the later 27 unused reservations makes the reservation/use relationship consistent."},
+      "B": {"outcome": "pass", "finding": "Preserves 118 reserved out of 160 slots and 91 used; the later 27 unused reservations preserves the same accounting."}
+    },
+    {
+      "id": "C05", "source_fact_ids": ["F05"],
+      "A": {"outcome": "pass", "finding": "Preserves 42 voluntary respondents, 25 valuing predictable study or small-group space, and 17 reporting finding/completion difficulties."},
+      "B": {"outcome": "pass", "finding": "Preserves all three counts, the voluntary respondent denominator, both uses of the space, and both types of booking difficulty."}
+    },
+    {
+      "id": "C06", "source_fact_ids": ["F05", "F06"],
+      "A": {"outcome": "pass", "finding": "Explicitly says voluntary responses cannot establish how common difficulties are among residents."},
+      "B": {"outcome": "pass", "finding": "Voluntary responses cannot establish how widespread difficulties are. The resident population is implicit in the article context; there is no prevalence claim."}
+    },
+    {
+      "id": "C07", "source_fact_ids": ["F04", "F07", "F08", "F10", "F11"],
+      "A": {"outcome": "pass", "finding": "Preserves four repeat bookers accounting for 18 of 27 unused reservations and most never-reserved slots occurring before noon on weekdays."},
+      "B": {"outcome": "pass", "finding": "Preserves the same actors, 18/27 relationship, weekday-morning timing, and distinction between unused reservations and slots never reserved."}
+    },
+    {
+      "id": "C08", "source_fact_ids": ["F10", "F11"],
+      "A": {"outcome": "pass", "finding": "Presents cancellation habits and residents' availability as possibilities, labels the availability explanation untested, and says unused reservations alone do not establish the extent of unmet demand."},
+      "B": {"outcome": "pass", "finding": "Presents both explanations as possible and unestablished; unused reservations alone do not measure unmet demand. No cause is treated as observed."}
+    },
+    {
+      "id": "C09", "source_fact_ids": ["F12"],
+      "A": {"outcome": "pass", "finding": "Explicitly limits the ability of additional rooms to resolve cancellation habits or the timing/availability mismatch."},
+      "B": {"outcome": "pass", "finding": "Says adding rooms would not necessarily address either problem, referring clearly to the two immediately preceding possible explanations."}
+    },
+    {
+      "id": "C10", "source_fact_ids": ["F09", "F13", "F14", "F15"],
+      "A": {"outcome": "pass", "finding": "The opening states the practical access test; existing access constraints and proposed remedies explain its purpose."},
+      "B": {"outcome": "pass", "finding": "The opening and access paragraph preserve the need to test access before expansion, without requiring the original transitional sentence."}
+    },
+    {
+      "id": "C11", "source_fact_ids": ["F13"],
+      "A": {"outcome": "pass", "finding": "Preserves mandatory email for the online form and dependence on the front-desk supervisor for telephone bookings."},
+      "B": {"outcome": "pass", "finding": "Preserves both access constraints and identifies the same responsible role."}
+    },
+    {
+      "id": "C12", "source_fact_ids": ["F14"],
+      "A": {"outcome": "pass", "finding": "Correctly identifies three of the 17 difficulty respondents as reporting that one of the two barriers prevented booking; preserves reported rather than independently verified experience."},
+      "B": {"outcome": "pass", "finding": "Correctly identifies three of the 17 and names the email requirement or limited telephone coverage as the reported barrier."}
+    },
+    {
+      "id": "C13", "source_fact_ids": ["F16"],
+      "A": {"outcome": "pass", "finding": "Proposes that any trained desk worker take telephone and in-person reservations during the extension, sharing inventory with online bookings."},
+      "B": {"outcome": "pass", "finding": "Preserves any trained desk worker, both additional booking routes, the extension timing, and one inventory for every route."}
+    },
+    {
+      "id": "C14", "source_fact_ids": ["F17"],
+      "A": {"outcome": "pass", "finding": "Proposes reminders and a simple cancellation option, describes releasing unwanted reservations as a possible benefit, and explicitly says effectiveness is unmeasured."},
+      "B": {"outcome": "pass", "finding": "Reminders and simple cancellation express the same proposed facility and possible release benefit; effectiveness remains explicitly unmeasured."}
+    },
+    {
+      "id": "C15", "source_fact_ids": ["F18"],
+      "A": {"outcome": "pass", "finding": "Assigns training and publication to the service manager; preserves weekly reservation, attendance, cancellation, and unfulfilled-request totals by route and time of day."},
+      "B": {"outcome": "pass", "finding": "Preserves the manager's responsibilities, weekly frequency, all four measures, and both breakdowns; unaccommodated requests accurately names requests that could not be accommodated."}
+    },
+    {
+      "id": "C16", "source_fact_ids": ["F19"],
+      "A": {"outcome": "pass", "finding": "Assigns consistent request recording to desk workers, including when rooms are full."},
+      "B": {"outcome": "pass", "finding": "Preserves the same responsibility and includes requests received when rooms are full."}
+    },
+    {
+      "id": "C17", "source_fact_ids": ["F15", "F20"],
+      "A": {"outcome": "pass", "finding": "Places consideration of expansion after six weeks, clearly referring to the proposed extension established at the start."},
+      "B": {"outcome": "pass", "finding": "Explicitly places the expansion decision after the six-week extension."}
+    },
+    {
+      "id": "C18", "source_fact_ids": ["F20", "F21", "F22"],
+      "A": {"outcome": "pass", "finding": "Makes all three proposed conditions necessary: trained staff for every staffed opening period; at least 85% of extension reservations used or cancelled before start; unfulfilled requests recorded in at least four of six weeks despite changes."},
+      "B": {"outcome": "pass", "finding": "Preserves all three necessary proposed conditions, the extension-reservation denominator, timely cancellation, and four-of-six-week persistence despite changes. The preceding recording duties make these recorded requests. The added cancellation/use distinction correctly interprets the threshold."}
+    },
+    {
+      "id": "C19", "source_fact_ids": ["F23"],
+      "A": {"outcome": "pass", "finding": "Meeting the conditions supports considering expansion and does not establish the number of additional rooms; no approval or sufficiency guarantee is introduced."},
+      "B": {"outcome": "pass", "finding": "Retains support for considering expansion and the inability to establish room quantity; does not turn the criteria into an automatic expansion decision."}
+    },
+    {
+      "id": "C20", "source_fact_ids": ["F24"],
+      "A": {"outcome": "pass", "finding": "If staff coverage or booking reliability remains weak, requires revising the booking process and reassessing before expansion."},
+      "B": {"outcome": "pass", "finding": "Preserves revision and reassessment before expansion if coverage or reliability remains weak; both refer clearly to the preceding staffing and reservation conditions."}
+    }
+  ],
+  "full_source_support": {
+    "A": {"outcome": "pass", "source_to_claim_omissions": [], "finding": "All substantive facts and qualifications in F01-F24 are retained. The fictional institution is named without inserting provenance or experiment labels into the intended article. No actors, observed effects, measurements, or causal findings are invented."},
+    "B": {"outcome": "pass", "source_to_claim_omissions": [], "finding": "All substantive facts and qualifications in F01-F24 are retained, including through clear paragraph context. The additional sentence about timely cancellation is a logical clarification of F21: a reservation can count through cancellation without establishing subsequent use. It asserts no new observation or measured effect. No provenance or experiment labels appear in the article."}
+  },
+  "quality_assessment": {
+    "A": {
+      "correctness": "pass",
+      "clarity": "pass",
+      "relevance": "pass",
+      "professional_tone": "pass",
+      "concrete_findings": [
+        "Leads with the recommendation and its purpose, then moves from counts and limitations to the access changes, responsibilities, and decision conditions.",
+        "Directly links reservations to evidence of demand and explicitly identifies residents as the population whose difficulty prevalence remains unknown.",
+        "The final paragraph is information-dense, but its semicolons make the three necessary conditions distinguishable."
+      ]
+    },
+    "B": {
+      "correctness": "pass",
+      "clarity": "pass",
+      "relevance": "pass",
+      "professional_tone": "pass",
+      "concrete_findings": [
+        "Uses the same coherent decision sequence and keeps the counts, access changes, and assigned responsibilities understandable.",
+        "Explicitly says neither causal explanation is established and anchors the final decision to the six-week extension.",
+        "The extra cancellation sentence helps distinguish the reliability threshold from actual room use, while adding some weight to an already dense final paragraph. The compound unaccommodated-request is slightly cumbersome but understandable."
+      ]
+    },
+    "length_and_audience": "Both meet the approximately 300-350-word request and use an appropriate explanatory, professional tone for staff and residents. Neither requires technical background."
+  },
+  "final_preference": "tie",
+  "preference_reasons": [
+    "Both texts pass all 20 claims, preserve the protected literals, and support the same informed decision without source omissions or invented factual claims.",
+    "A is somewhat more explicit about the resident population and the link between reservations and demand; B adds a useful explanation of what timely cancellation does and does not establish.",
+    "These are small, balanced clarity differences. Neither text has a material advantage in completeness, readability, relevance, or tone that warrants selecting a winner."
+  ]
+}

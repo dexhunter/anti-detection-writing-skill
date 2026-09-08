@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-08T11:04:47.768655+00:00",
+  "before_any_candidate_generation": true,
+  "config_sha256": "726a27aeae53a28c33caa2ce0adaf8fd1f0f37f76ad95cb16c719dab1441d1e5",
+  "reason": "Fresh writer spawn returned agent thread limit reached. Reuse an existing independent writer context for this exploratory text comparison; do not claim fresh contexts. No outputs or scans yet.",
+  "writer_context": "reused writer context; no previous ETag exposure reported",
+  "judge_context": "separate reused reviewer context; no previous ETag or score exposure reported",
+  "fresh_writer_contexts": 0,
+  "method_changes": false,
+  "all_other_limits_unchanged": true,
+  "inference": "Exact text comparison only; not a skill-level experiment or blind independent random draws."
+}

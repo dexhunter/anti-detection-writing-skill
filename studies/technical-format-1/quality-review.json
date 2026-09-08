@@ -1,0 +1,213 @@
+{
+  "case_id": "wm4-dev-technical-01",
+  "revieweridentity": "separate masked LLM reviewer",
+  "reviewer_type": "independent LLM quality reviewer",
+  "context_reused": true,
+  "prior_exposure": {
+    "etag_case_before_this_packet": false,
+    "etag_answer_variants_before_this_packet": false,
+    "etag_detector_results": false,
+    "note": "The existing review context was reused and contains earlier work on other technical topics. No prior exposure to this ETag case, its answer variants, or its detector results is present in that context. Fresh-context isolation is not claimed."
+  },
+  "current_detector_scores_available": false,
+  "evidence_scope": "Only the supplied case.json and exact A.txt, B.txt, and C.txt were read. Assessment uses the source original, seven claims, protected strings, and source excerpts in the packet. No browsing, scans, publication, outside-file inspection, or method inference.",
+  "source_original_factual_objections": [],
+  "arms": {
+    "A": {
+      "sha256": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+      "pass": true,
+      "claims": [
+        {
+          "id": "DTC1",
+          "pass": true,
+          "finding": "The client checks whether it can reuse its stored response using conditional GET and the ETag."
+        },
+        {
+          "id": "DTC2",
+          "pass": true,
+          "finding": "The server supplies the ETag with JSON; the client sends that value in If-None-Match on a later conditional GET. Actors and direction are correct."
+        },
+        {
+          "id": "DTC3",
+          "pass": true,
+          "finding": "The otherwise-successful-GET condition is explicit. A match is to the selected representation and yields 304 Not Modified with no response body, permitting stored-body reuse."
+        },
+        {
+          "id": "DTC4",
+          "pass": true,
+          "finding": "If the tag does not match, the successful GET returns 200 OK with current JSON. This does not describe every possible response."
+        },
+        {
+          "id": "DTC5",
+          "pass": true,
+          "finding": "The opening explicitly states that conditional validation still sends a request."
+        },
+        {
+          "id": "DTC6",
+          "pass": true,
+          "finding": "An appropriate freshness policy can allow reuse without validation. Cache-Control: max-age=60 is introduced as an example, other caching rules remain applicable, and reuse without origin contact is limited to when the response is fresh."
+        },
+        {
+          "id": "DTC7",
+          "pass": true,
+          "finding": "The closing explicitly denies a guarantee that origin data stays unchanged for 60 seconds. Permission to reuse is not conflated with immutable data."
+        }
+      ],
+      "protected_strings": {
+        "ETag": true,
+        "GET": true,
+        "If-None-Match": true,
+        "304 Not Modified": true,
+        "200 OK": true,
+        "Cache-Control: max-age=60": true,
+        "60 seconds": true
+      },
+      "protected_strings_pass": true,
+      "word_count_whitespace": 133,
+      "word_limit": 160,
+      "form_pass": true,
+      "form_findings": "Under the limit including visible labels or headings. Natural, professional, and directly useful. The presentation preserves complete conditions when read normally.",
+      "actor_qualifier_negation_pass": true,
+      "unsupported_or_excessively_certain_additions": [],
+      "concerns": []
+    },
+    "B": {
+      "sha256": "fc9d84c07478b90a5f53ed3d1ae0019a1c54f62ef21608525a10f64bfb0d5de0",
+      "pass": true,
+      "claims": [
+        {
+          "id": "DTC1",
+          "pass": true,
+          "finding": "The setup item explains conditional validation of the client's stored response using ETag."
+        },
+        {
+          "id": "DTC2",
+          "pass": true,
+          "finding": "The server supplies the ETag and the client includes the same value in If-None-Match on a later conditional GET. Actors and direction are correct."
+        },
+        {
+          "id": "DTC3",
+          "pass": true,
+          "finding": "The matching-tag item specifies the selected representation, otherwise successful GET, 304 Not Modified, no response body, and reuse of the stored body."
+        },
+        {
+          "id": "DTC4",
+          "pass": true,
+          "finding": "The Nonmatching tag label supplies the condition for the sentence stating that a successful GET returns 200 OK with current JSON. Read as a complete list item, the condition is explicit rather than lost."
+        },
+        {
+          "id": "DTC5",
+          "pass": true,
+          "finding": "The opening says ETag validation still sends a request."
+        },
+        {
+          "id": "DTC6",
+          "pass": true,
+          "finding": "The freshness item uses can permit and such as, retains other caching rules, and limits reuse without validation or origin contact to the response being fresh."
+        },
+        {
+          "id": "DTC7",
+          "pass": true,
+          "finding": "The closing explicitly states that this does not guarantee unchanged underlying data for 60 seconds. The negation and interval are intact."
+        }
+      ],
+      "protected_strings": {
+        "ETag": true,
+        "GET": true,
+        "If-None-Match": true,
+        "304 Not Modified": true,
+        "200 OK": true,
+        "Cache-Control: max-age=60": true,
+        "60 seconds": true
+      },
+      "protected_strings_pass": true,
+      "word_count_whitespace": 127,
+      "word_limit": 160,
+      "form_pass": true,
+      "form_findings": "Under the limit including visible labels or headings. Natural, professional, and directly useful. The presentation preserves complete conditions when read normally.",
+      "actor_qualifier_negation_pass": true,
+      "unsupported_or_excessively_certain_additions": [],
+      "concerns": []
+    },
+    "C": {
+      "sha256": "daeb2a2e3ab01ac3cc32f587711e363d9a85e3c774188238e6c716d232ffbaa8",
+      "pass": true,
+      "claims": [
+        {
+          "id": "DTC1",
+          "pass": true,
+          "finding": "The first paragraph says the later conditional GET validates the client's stored response using the ETag."
+        },
+        {
+          "id": "DTC2",
+          "pass": true,
+          "finding": "The server supplies the ETag with the response; the client sends that value in If-None-Match on the later conditional GET. Actors and direction are correct."
+        },
+        {
+          "id": "DTC3",
+          "pass": true,
+          "finding": "The matching tag is tied to the selected representation and an otherwise successful GET; the server returns 304 Not Modified with no response body, allowing stored-body reuse."
+        },
+        {
+          "id": "DTC4",
+          "pass": true,
+          "finding": "If the tag does not match, a successful GET returns 200 OK with current JSON. The successful-GET limitation is preserved."
+        },
+        {
+          "id": "DTC5",
+          "pass": true,
+          "finding": "The first paragraph explicitly says validation still sends a request."
+        },
+        {
+          "id": "DTC6",
+          "pass": true,
+          "finding": "The second question frames avoiding origin contact while fresh. Its answer recommends an appropriate freshness policy, treats Cache-Control: max-age=60 as illustrative, and makes reuse without validation conditional on freshness and other caching rules."
+        },
+        {
+          "id": "DTC7",
+          "pass": true,
+          "finding": "The final sentence explicitly denies any guarantee that underlying data stays unchanged for 60 seconds. The freshness policy is permission to reuse, not a promise of no changes."
+        }
+      ],
+      "protected_strings": {
+        "ETag": true,
+        "GET": true,
+        "If-None-Match": true,
+        "304 Not Modified": true,
+        "200 OK": true,
+        "Cache-Control: max-age=60": true,
+        "60 seconds": true
+      },
+      "protected_strings_pass": true,
+      "word_count_whitespace": 134,
+      "word_limit": 160,
+      "form_pass": true,
+      "form_findings": "Under the limit including visible labels or headings. Natural, professional, and directly useful. The presentation preserves complete conditions when read normally.",
+      "actor_qualifier_negation_pass": true,
+      "unsupported_or_excessively_certain_additions": [],
+      "concerns": []
+    }
+  },
+  "pairwise": [
+    {
+      "left": "A",
+      "right": "B",
+      "preference": "tie",
+      "reason": "Both state the download-versus-request distinction immediately and keep the matching, nonmatching, and freshness conditions explicit. A uses connected paragraphs; B uses labels that make the two response outcomes easy to locate. B's Nonmatching tag label adequately carries the condition. Both are directly usable, and neither has a meaningful reader-quality advantage."
+    },
+    {
+      "left": "A",
+      "right": "C",
+      "preference": "tie",
+      "reason": "A states the remaining-request limitation in its opening; C states it at the end of the validation explanation and then groups freshness guidance under the second user concern. Both clearly answer the two parts of the question and preserve every operational limit. C's headings add navigation without obscuring the mechanism. These are equally useful organizational choices."
+    },
+    {
+      "left": "B",
+      "right": "C",
+      "preference": "tie",
+      "reason": "B makes setup and each response outcome easy to scan. C explains the same sequence in a coherent paragraph and separates freshness into its own question and answer. In both, the ordinary successful GET condition, other caching rules, fresh-only reuse, and no-data-stability guarantee remain clear. The format differences do not create a meaningful advantage or regression."
+    }
+  ],
+  "terminal_review": true,
+  "review_status": "Final one-pass verdict; all outcomes retained; no text edits or repair loop."
+}

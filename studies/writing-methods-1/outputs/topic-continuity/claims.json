@@ -1,0 +1,96 @@
+{
+  "wm4-dev-technical-01": {
+    "DTC1": {
+      "excerpt": "Use an ETag to let the client check whether its stored response can be reused.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC2": {
+      "excerpt": "The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC3": {
+      "excerpt": "If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC4": {
+      "excerpt": "If it does not match, a successful GET returns 200 OK with the current JSON.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC5": {
+      "excerpt": "This validation still involves a request.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC6": {
+      "excerpt": "To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DTC7": {
+      "excerpt": "The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    }
+  },
+  "wm4-dev-business-01": {
+    "DBC1": {
+      "excerpt": "Atlas help-centre migration.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC2": {
+      "excerpt": "All 180 articles have been copied",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC3": {
+      "excerpt": "the content team has checked 60 without finding missing sections.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC4": {
+      "excerpt": "The remaining articles have not yet been reviewed, so the content check is still incomplete.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC5": {
+      "excerpt": "Search currently omits titles containing apostrophes.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC6": {
+      "excerpt": "Nia is due to deliver the fix on 10 September, after which Omar will test it.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC7": {
+      "excerpt": "I recommend opening the pilot to five volunteer support agents on 11 September if that test passes.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC8": {
+      "excerpt": "The existing help centre will remain available during the pilot, and customer-facing links will not change.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC9": {
+      "excerpt": "Please confirm by 9 September whether the support team can provide those five agents.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC10": {
+      "excerpt": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    },
+    "DBC11": {
+      "excerpt": "A full rollout date has therefore not been committed.",
+      "status": "preserved",
+      "reason": "Original wording retained unchanged."
+    }
+  }
+}

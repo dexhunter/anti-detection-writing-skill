@@ -1,0 +1,4 @@
+Dataset label: synthetic editing fixtures with deliberately introduced clarity problems.
+This constructed question is not a real user report.
+
+A Python worker batch should cancel its other workers when one child raises ValueError, while still allowing cleanup to finish. How does asyncio.TaskGroup report failures to the caller, and should a worker suppress CancelledError during cleanup? Please include the minimum Python version.

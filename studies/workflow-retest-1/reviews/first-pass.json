@@ -1,0 +1,287 @@
+{
+  "review_type": "independent masked quality review",
+  "scope": "Only the four named masked packets were read. No detector results, other arms, reports, or label map were consulted. No candidate text was edited.",
+  "basis": "Original text, reader context, factual inventory, and supplied official-source ledger. No additional browsing was necessary.",
+  "verdict_policy": "FAIL for an incorrect or materially misleading claim, missing required qualification/code, or a missing useful original claim. Different prose and omitted optional source-only facts do not cause failure.",
+  "length_method": "Whitespace-delimited token count including code and link markup; characters include any trailing newline. These are descriptive length measures, not prose-quality scores.",
+  "cases": [
+    {
+      "case": "git-tracked-ignore",
+      "preference": "original",
+      "preference_reason": "The original preserves the complete mechanism and instructions in fewer words. B is also complete, but its reordering adds length without a clear readability gain.",
+      "original_length": {
+        "whitespace_words": 78,
+        "characters": 542
+      },
+      "candidates": {
+        "A": {
+          "verdict": "FAIL",
+          "correctness": "PASS",
+          "coverage": "FAIL",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "The commands, local-copy protection, commit instructions, and repository-wide tracking consequence are correct.",
+            "Useful original claim omitted: the retained ignore rule prevents ordinary git add from adding the now-untracked file again. Keeping the rule is instructed, but its preventive effect is no longer explained. This is an original-content preservation failure, not an incorrect-command finding."
+          ],
+          "added_explicit_facts": [],
+          "explicitness_changes": [
+            "Makes the already-present repository-wide consequence more explicit by contrasting it with hiding checkout changes."
+          ],
+          "sha256": "74fd2b88651f932e9a4264578a2d1a89ada8260eee30c9b2b64cabe226d7b0a7",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 90,
+            "characters": 588,
+            "word_delta_from_original": 12,
+            "word_change_percent": 15.4,
+            "character_delta_from_original": 46
+          }
+        },
+        "B": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves all useful original claims, both commands, local-copy protection, the shared tracking change, and ordinary re-addition prevention.",
+            "Action-first ordering is clear; the explanation at the end slightly increases repetition."
+          ],
+          "added_explicit_facts": [],
+          "explicitness_changes": [],
+          "sha256": "9a92006599467030652a70403aa64fd547920b13477854500e37eefd655f7d08",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 90,
+            "characters": 609,
+            "word_delta_from_original": 12,
+            "word_change_percent": 15.4,
+            "character_delta_from_original": 67
+          }
+        }
+      }
+    },
+    {
+      "case": "docker-expose-local",
+      "preference": "original",
+      "preference_reason": "The original answers the yes/no question directly and gives the same complete mapping and access qualification with less prose.",
+      "original_length": {
+        "whitespace_words": 85,
+        "characters": 638
+      },
+      "candidates": {
+        "A": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves EXPOSE semantics, the already-listening prerequisite, exact loopback command, destination URL, version/network scope, and the consequence of omitting the host address.",
+            "The added opening and paragraph transitions make it longer without adding a substantive fact."
+          ],
+          "added_explicit_facts": [],
+          "explicitness_changes": [],
+          "sha256": "11016dd2000bdb3452ce95ffca29212c0ed0929878f6e72743308492f54f6e1f",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 99,
+            "characters": 704,
+            "word_delta_from_original": 14,
+            "word_change_percent": 16.5,
+            "character_delta_from_original": 66
+          }
+        },
+        "B": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves all original claims and code. TCP and the detailed network assumptions agree with the supplied inventory and reader context.",
+            "The final configuration sentence is denser than the original, but remains readable and accurate."
+          ],
+          "added_explicit_facts": [
+            {
+              "fact": "The container mapping is TCP.",
+              "support": "D2; implicit in the original command."
+            }
+          ],
+          "explicitness_changes": [
+            "Spells out Engine 28.0.0 or later, bridge/NAT, and default routing assumptions supplied in the reader context."
+          ],
+          "sha256": "a1df29550889f336c63d1492f7120f3f818491c95149cabaf2656880b60fe042",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 96,
+            "characters": 681,
+            "word_delta_from_original": 11,
+            "word_change_percent": 12.9,
+            "character_delta_from_original": 43
+          }
+        }
+      }
+    },
+    {
+      "case": "kubernetes-probe-roles",
+      "preference": "B",
+      "preference_reason": "The three labeled roles are easy to compare, with the startup budget kept next to its role. All original claims and qualifications remain intact.",
+      "original_length": {
+        "whitespace_words": 164,
+        "characters": 1352
+      },
+      "candidates": {
+        "A": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves the startup gate and restart threshold, approximate budget, recoverable readiness behavior, deadlock restart behavior, and post-startup independence.",
+            "Endpoint responsibility is retained. Added direct-connection and liveness-design explanations are supported, but create the largest length increase in the set."
+          ],
+          "added_explicit_facts": [
+            {
+              "fact": "Readiness does not block every possible direct connection.",
+              "support": "Mandatory qualification; the original limits its claim to normal Service traffic."
+            },
+            {
+              "fact": "A temporary readiness failure should not itself make liveness report deadlock.",
+              "support": "Application of the supplied recoverable-versus-unrecoverable roles and endpoint-semantics qualification."
+            }
+          ],
+          "explicitness_changes": [
+            "Explicitly says the initial budget is not an application measurement; the original already calls it an initial starting budget."
+          ],
+          "sha256": "25600aafbe5a8022fca2f2ed3c884e8abada1e24b465771e49eb28172705b8e5",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 210,
+            "characters": 1680,
+            "word_delta_from_original": 46,
+            "word_change_percent": 28.0,
+            "character_delta_from_original": 328
+          }
+        },
+        "B": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves every useful original fact, all three inline configuration values, HTTP endpoint responsibility, and Service-specific traffic scope.",
+            "The labeled role structure improves scanability; independence is explained once in a separate paragraph."
+          ],
+          "added_explicit_facts": [],
+          "explicitness_changes": [
+            "Explains the consequence of continued liveness checks for a deadlocked, unready Pod; this follows from the original claims."
+          ],
+          "sha256": "16b8ce6f9d84faca445483c298c6e87818796f5681cefa4aa3a5c6fad51b8c85",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 181,
+            "characters": 1468,
+            "word_delta_from_original": 17,
+            "word_change_percent": 10.4,
+            "character_delta_from_original": 116
+          }
+        }
+      }
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "preference": "B",
+      "preference_reason": "B preserves the complete answer while grouping snapshot guarantees and their serial-execution limit before the conditional update/retry extension.",
+      "original_length": {
+        "whitespace_words": 180,
+        "characters": 1412
+      },
+      "candidates": {
+        "A": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves fresh statement snapshots, first-query/data-modification snapshot timing rather than BEGIN, own-write visibility, exact BEGIN command, SQLSTATE, whole-transaction decision-logic retry, possible repeat conflict, and the serial-equivalence limit.",
+            "The explicit sentence denying an assertion about the current read-only report repeats the already-conditional UPDATE framing and makes the prose more cumbersome."
+          ],
+          "added_explicit_facts": [
+            {
+              "fact": "The Read Committed snapshot is obtained at statement start.",
+              "support": "P1; statement timing made explicit beyond the original fresh-snapshot wording."
+            }
+          ],
+          "explicitness_changes": [
+            "Makes explicit that a retry is not guaranteed to succeed and that the conflict example is conditional; both were already conveyed in the original."
+          ],
+          "sha256": "39f5dd8b8b5d782bc02d5b824081828083c02cb72ea6fc3f44c454e9025d6139",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 206,
+            "characters": 1641,
+            "word_delta_from_original": 26,
+            "word_change_percent": 14.4,
+            "character_delta_from_original": 229
+          }
+        },
+        "B": {
+          "verdict": "PASS",
+          "correctness": "PASS",
+          "coverage": "PASS",
+          "qualifications": "PASS",
+          "code": "PASS",
+          "relevance": "PASS",
+          "readability": "PASS",
+          "tone": "PASS",
+          "findings": [
+            "Preserves all useful original facts, exact code and URLs, the conditional UPDATE scenario, complete retry scope including decision logic, and possibility of another conflict.",
+            "The revised order connects stable snapshots directly to their lack of a serial-execution guarantee, then handles the separate write extension."
+          ],
+          "added_explicit_facts": [],
+          "explicitness_changes": [],
+          "sha256": "0d6853531ea7ada8109ad0801c98da05cf030b7b553f4840e18931e5ac425aef",
+          "hash_verified": true,
+          "length": {
+            "whitespace_words": 178,
+            "characters": 1419,
+            "word_delta_from_original": -2,
+            "word_change_percent": -1.1,
+            "character_delta_from_original": 7
+          }
+        }
+      }
+    }
+  ],
+  "overall": {
+    "pass": 7,
+    "fail": 1,
+    "failure_scope": "Git A omits useful original explanation of how the ignore rule prevents ordinary re-addition; its operational answer remains correct."
+  }
+}

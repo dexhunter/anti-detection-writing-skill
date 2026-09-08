@@ -1,0 +1,91 @@
+{
+  "id": "git-tracked-ignore",
+  "reader_question": "I added /config.local.json to the root .gitignore, but Git still shows changes to this already committed file. How do I stop tracking it while keeping my local copy?",
+  "reader_context": "Git 2.50.0, normal checkout, commands run from the repository root. The file has no staged content changes. The project intends to stop versioning this file; this is not a request to hide local changes to a file everyone should keep tracking.",
+  "source_ledger": [
+    {
+      "id": "git-ignore",
+      "title": "gitignore manual",
+      "url": "https://git-scm.com/docs/gitignore/2.42.0",
+      "version": "Manual version 2.42.0; site records no changes through 2.51.2, encompassing Git 2.50.0.",
+      "section": "DESCRIPTION and NOTES",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "Files already tracked by Git are not affected",
+      "excerpt_word_count": 8
+    },
+    {
+      "id": "git-rm",
+      "title": "git-rm manual",
+      "url": "https://git-scm.com/docs/git-rm/2.50.0",
+      "version": "Git manual 2.50.0",
+      "section": "DESCRIPTION and --cached",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "Working tree files, whether modified or not, will be left alone.",
+      "excerpt_word_count": 11
+    }
+  ],
+  "answer_inventory": {
+    "mandatory": [
+      {
+        "id": "G1",
+        "claim": "Ignore rules do not stop tracking a file already in the index.",
+        "source_ids": [
+          "git-ignore"
+        ]
+      },
+      {
+        "id": "G2",
+        "claim": "Run git rm --cached -- config.local.json; it removes this index entry and keeps the working file.",
+        "source_ids": [
+          "git-rm"
+        ]
+      },
+      {
+        "id": "G3",
+        "claim": "Keep the ignore rule; stage .gitignore and commit the tracking removal with that rule.",
+        "source_ids": [
+          "git-ignore",
+          "git-rm"
+        ]
+      }
+    ],
+    "mandatory_qualifications": [
+      "The local copy stays on disk because --cached is present.",
+      "This changes repository tracking, not merely this user's display of changes."
+    ],
+    "optional_source_facts": [
+      {
+        "id": "G4",
+        "claim": "With --cached, indexed content must match HEAD or the working file; the stated context satisfies this check.",
+        "source_ids": [
+          "git-rm"
+        ]
+      },
+      {
+        "id": "G5",
+        "claim": "A leading slash makes the ignore pattern relative to this .gitignore file.",
+        "source_ids": [
+          "git-ignore"
+        ]
+      }
+    ],
+    "out_of_scope": [
+      "History rewriting",
+      "Global ignore configuration",
+      "Recursive index removal",
+      "assume-unchanged and skip-worktree workarounds"
+    ]
+  },
+  "exact_code_in_original": [
+    "`.gitignore`",
+    "```sh\ngit rm --cached -- config.local.json\ngit add .gitignore\n```",
+    "`--cached`",
+    "`git add`"
+  ],
+  "exact_source_urls": [
+    "https://git-scm.com/docs/gitignore/2.42.0#_notes"
+  ],
+  "coverage_instruction": "Retain every mandatory fact and qualification. Optional source facts need not be added unless already present in the original; the reviewer will check against the original. Do not add hypothetical personal experience."
+}

@@ -1,0 +1,10 @@
+{
+  "wm4-dev-technical-01": {
+    "A": "source",
+    "B": "candidate"
+  },
+  "wm4-dev-business-01": {
+    "A": "candidate",
+    "B": "source"
+  }
+}

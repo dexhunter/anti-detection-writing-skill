@@ -1,0 +1,8 @@
+`.gitignore` does not stop Git tracking a file that is already in the index. To remove this file from tracking while keeping your local copy, run these commands from the repository root:
+
+```sh
+git rm --cached -- config.local.json
+git add .gitignore
+```
+
+The `--cached` option leaves your working file on disk. Keep the ignore rule; the `git add` step stages it so you can commit it together with the tracking removal. This changes what the repository tracks, rather than just hiding changes in your checkout. See the [Git ignore notes](https://git-scm.com/docs/gitignore/2.42.0#_notes).

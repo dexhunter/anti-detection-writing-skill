@@ -1,0 +1,103 @@
+{
+  "started_at": "2026-09-06T19:36:03.076911+00:00",
+  "completed_at": "2026-09-06T19:37:08.905720+00:00",
+  "plan_sha256": "8ca90ac8b696519d2bdff173193bc14bed43b2a3f3f7ce96c7a18d10439636b3",
+  "runner_sha256": "ae2d2bc9880df18e64f3c95e923e92d9f86dc28fadfef3fa42aa7f7f31c553ef",
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "peft": "0.18.1",
+    "huggingface-hub": "0.36.2",
+    "safetensors": "0.8.0"
+  },
+  "records": [
+    {
+      "case": "kubernetes-probe-roles",
+      "source_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "prompt_sha256": "6a72d3fcd939b10be9c9c048104951456cdb743719c188bf1c24dd1e134c5322",
+      "candidate_sha256": "ce3c5db7cb16678deec9ef238121ddf4ab83bf5918eb1a6594ebd5f2fb46283d",
+      "raw_sha256": "ae3be3c6341a27e5b567a80ac30900ec9fbc73a7caed4034d8059a54954b0734",
+      "generated_tokens": 322,
+      "ended_on_eos": true,
+      "target_closing_tag": true,
+      "hit_token_limit": false,
+      "source_words": 164,
+      "candidate_words": 207,
+      "protected_before": {
+        "code": [
+          "`failureThreshold: 30`",
+          "`periodSeconds: 5`",
+          "`Always`"
+        ],
+        "urls": [
+          "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+          "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+        ]
+      },
+      "protected_after": {
+        "code": [
+          "`failureThreshold: 30`",
+          "`periodSeconds: 5`",
+          "`Always`",
+          "`failureThreshold`"
+        ],
+        "urls": [
+          "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+          "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+        ]
+      },
+      "seed": 2026090604,
+      "elapsed_seconds": 20.749036916997284,
+      "detector": "not_measured_pending_independent_quality_review"
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "source_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "prompt_sha256": "65b80ce33e328aafdbd7d819db45e01d6849a92995ae8feb448ca44a5dd34884",
+      "candidate_sha256": "18136856ea7a4da6b42146821f5c7b4432ae75ff40e606acb90c25566051ed4c",
+      "raw_sha256": "a1d874f82c5c99539734c66a89b1d7a8675235e69d6a25cca4b0c4eb98bbad72",
+      "generated_tokens": 353,
+      "ended_on_eos": true,
+      "target_closing_tag": true,
+      "hit_token_limit": false,
+      "source_words": 180,
+      "candidate_words": 231,
+      "protected_before": {
+        "code": [
+          "`SELECT`",
+          "```sql\nBEGIN ISOLATION LEVEL REPEATABLE READ;\n```",
+          "`BEGIN`",
+          "`UPDATE`",
+          "`serialization_failure`",
+          "`40001`"
+        ],
+        "urls": [
+          "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+          "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+          "https://www.postgresql.org/docs/17/transaction-iso.html"
+        ]
+      },
+      "protected_after": {
+        "code": [
+          "`SELECT`",
+          "`ISOLATION_LEVEL REPEATABLE READ`",
+          "`BEGIN ISOLATION LEVEL REPEATABLE READ;`",
+          "`UPDATE`",
+          "`serialization_failure`",
+          "`40001`"
+        ],
+        "urls": [
+          "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+          "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+          "https://www.postgresql.org/docs/17/transaction-iso.html"
+        ]
+      },
+      "seed": 2026090605,
+      "elapsed_seconds": 15.85596187505871,
+      "detector": "not_measured_pending_independent_quality_review"
+    }
+  ]
+}

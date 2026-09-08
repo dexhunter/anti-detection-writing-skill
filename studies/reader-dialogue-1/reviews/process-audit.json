@@ -1,0 +1,27 @@
+{
+  "audited_at": "2026-09-07T15:40:53.070586+00:00",
+  "auditor": "Coordinating process reviewer; not the independent quality judge.",
+  "candidate_sha256": "c449930999cf361972380f5cc2e073a153d591c170ce0dfc8194dfc0fd8284de",
+  "dialogue_completed": true,
+  "questions": 2,
+  "analytical_answers": 2,
+  "responsive_followup": "Question2 explicitly references the first answer grouping used reservations and timely cancellations in the85% condition.",
+  "source_grounding": "Questions connect supplied proposal/limitation facts. Notes preserve hypothetical effectiveness and do not equate cancellation with attendance or later reuse. No new people/events introduced.",
+  "candidate_effects": [
+    {
+      "question": 2,
+      "exact_excerpt": "Releasing a slot does not establish that someone uses it.",
+      "assessment": "Directly addresses cancellation-versus-use distinction; supported interpretation of F17/F21, not an observed outcome."
+    },
+    {
+      "question": 1,
+      "exact_excerpt": "Meeting all three would support considering expansion, because continuing requests would be assessed alongside staff coverage and booking reliability.",
+      "assessment": "Makes joint assessment explicit, but partly repeats the criteria. This is not by itself evidence of better explanation; independent quality preference must decide."
+    }
+  ],
+  "structural_limit": "Both versions retain a broadly similar six-paragraph progression; dialogue changed explanatory emphasis rather than demonstrating a new overall structure.",
+  "new_facts_added": false,
+  "no_op": false,
+  "method_dialogue_withheld_from_quality_judge": true,
+  "detector_results_seen": false
+}

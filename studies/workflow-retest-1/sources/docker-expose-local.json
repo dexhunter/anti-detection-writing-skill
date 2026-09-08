@@ -1,0 +1,98 @@
+{
+  "id": "docker-expose-local",
+  "reader_question": "My Dockerfile contains EXPOSE 8080. Does that make http://127.0.0.1:8080 work on the host, or what docker run command do I need? I only want host-local access.",
+  "reader_context": "Docker Engine 28.0.0 or later on Linux, default bridge/NAT networking and default routing settings. The already-built image is demo-web. Its HTTP server is already listening on 0.0.0.0:8080 inside the container. Host port 8080 is free.",
+  "source_ledger": [
+    {
+      "id": "docker-expose",
+      "title": "Dockerfile reference: EXPOSE",
+      "url": "https://docs.docker.com/reference/dockerfile/#expose",
+      "version": "Rolling official documentation observed on the access date; no immutable release pin supplied by this page.",
+      "section": "EXPOSE",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "The EXPOSE instruction doesn't actually publish the port.",
+      "excerpt_word_count": 8
+    },
+    {
+      "id": "docker-publish",
+      "title": "Port publishing and mapping",
+      "url": "https://docs.docker.com/engine/network/port-publishing/",
+      "version": "Rolling official documentation observed on the access date; scenario explicitly targets Engine 28.0.0+.",
+      "section": "Publishing ports; localhost warning; default bind address",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "only the Docker host can access the published container port.",
+      "excerpt_word_count": 10
+    }
+  ],
+  "answer_inventory": {
+    "mandatory": [
+      {
+        "id": "D1",
+        "claim": "EXPOSE documents an intended container port; it does not publish a host port.",
+        "source_ids": [
+          "docker-expose"
+        ]
+      },
+      {
+        "id": "D2",
+        "claim": "Use docker run -p 127.0.0.1:8080:8080 demo-web to publish host loopback port 8080 to container TCP port 8080.",
+        "source_ids": [
+          "docker-publish"
+        ]
+      },
+      {
+        "id": "D3",
+        "claim": "The loopback host address restricts this published port to the host under the stated Engine version and networking assumptions.",
+        "source_ids": [
+          "docker-publish"
+        ]
+      }
+    ],
+    "mandatory_qualifications": [
+      "Do not drop 127.0.0.1 from the command: host-local access is requested.",
+      "The application must already listen on the container port; that prerequisite is supplied in the reader context."
+    ],
+    "optional_source_facts": [
+      {
+        "id": "D4",
+        "claim": "Without an explicit host address, publishing binds all host addresses by default.",
+        "source_ids": [
+          "docker-publish"
+        ]
+      },
+      {
+        "id": "D5",
+        "claim": "-P publishes exposed ports using ephemeral host ports rather than the requested fixed mapping.",
+        "source_ids": [
+          "docker-expose"
+        ]
+      },
+      {
+        "id": "D6",
+        "claim": "Before Engine 28.0.0, other hosts on the same L2 segment could reach localhost-published ports; those versions are excluded here.",
+        "source_ids": [
+          "docker-publish"
+        ]
+      }
+    ],
+    "out_of_scope": [
+      "Swarm publishing",
+      "Custom direct routing",
+      "Application installation",
+      "Docker network internals"
+    ]
+  },
+  "exact_code_in_original": [
+    "`EXPOSE 8080`",
+    "```sh\ndocker run -p 127.0.0.1:8080:8080 demo-web\n```",
+    "`http://127.0.0.1:8080`",
+    "`127.0.0.1`"
+  ],
+  "exact_source_urls": [
+    "http://127.0.0.1:8080",
+    "https://docs.docker.com/engine/network/port-publishing/"
+  ],
+  "coverage_instruction": "Retain every mandatory fact and qualification. Optional source facts need not be added unless already present in the original; the reviewer will check against the original. Do not add hypothetical personal experience."
+}

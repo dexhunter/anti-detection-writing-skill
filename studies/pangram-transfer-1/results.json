@@ -1,0 +1,389 @@
+{
+  "study": "pangram-transfer-1",
+  "date": "2026-09-06",
+  "status": "six_scans_completed",
+  "scope": "Fixed existing-text cross-detector development check. No new writing, no new skill test, no unseen validation.",
+  "evidence_type": "Saved browser UI observations with exact textarea checks; not authenticated service exports.",
+  "plan_frozen_at": "2026-09-06T20:33:46.763972+00:00",
+  "private_plan_sha256": "96d1ad28d9f2699399254055e9be6d2bee5244528c900e49a2537fb054dce2c0",
+  "scan_order": [
+    "kubernetes-probe-roles:before",
+    "qwen-1942:after",
+    "postgresql-snapshot-scope:before",
+    "postgresql-snapshot-scope:after",
+    "qwen-1942:before",
+    "kubernetes-probe-roles:after"
+  ],
+  "pairs": [
+    {
+      "case": "kubernetes-probe-roles",
+      "comparison": "original versus direct edit",
+      "selection_reason": "Longer natural technical answer, no GPTZero short-text warning; direct edit passed masked quality review and was preferred to original, but both scored 100/0/0.",
+      "prior_outcome": "GPTZero tie"
+    },
+    {
+      "case": "postgresql-snapshot-scope",
+      "comparison": "original versus direct edit",
+      "selection_reason": "Longer natural technical answer, no GPTZero short-text warning; direct edit passed masked quality review and was preferred to original, but both scored 100/0/0.",
+      "prior_outcome": "GPTZero tie"
+    },
+    {
+      "case": "qwen-1942",
+      "comparison": "reviewed plain body versus identical body plus existing relevant asker quotation",
+      "selection_reason": "Historical strongest GPTZero quotation reduction with comparable exact saved effective inputs and separate hash-linked reviews; useful stress case, deliberately selected using prior detector outcome.",
+      "prior_outcome": "GPTZero AI confidence 100 to 1; mixed 0 to 99; human 0 to 0"
+    }
+  ],
+  "quality_evidence": {
+    "kind": "Previously completed separate LLM reviews, not new human ratings",
+    "plain_rewrite_reviews": "../workflow-retest-1/reviews/first-pass.json",
+    "quoted_pair_review_summary": "../results.json",
+    "details": "Exact private source/review/receipt links verified before scans; original texts and code were not rewritten for this trial."
+  },
+  "summary": {
+    "pairs": 3,
+    "plain_rewrite_pairs": 2,
+    "quotation_pairs": 1,
+    "ai_generated_to_ai_assisted_pairs": 1,
+    "unchanged_pairs": 2,
+    "human_classified_outputs": 0,
+    "short_warning_scans": 3,
+    "paid_cost": 0,
+    "free_credits_used": 12
+  },
+  "limitations": [
+    "Selected existing development cases, not unseen validation or an estimate of general success.",
+    "One pair adds an existing relevant quotation to an unchanged body; it is not a prose-rewriting effect.",
+    "GPTZero observations are earlier on the same day, not concurrent rescans.",
+    "Pangram text fractions and GPTZero document confidences are not numerically comparable.",
+    "Three Pangram outputs have short-text confidence warnings.",
+    "Result display removes blank lines and indentation; input, rendering and exact transformation are retained. Internal inference input was not observed.",
+    "No rewriting instruction was changed or tested by this batch. Detector-specific measurement instructions were updated afterward."
+  ],
+  "records": [
+    {
+      "id": "kubernetes-probe-roles:before",
+      "case": "kubernetes-probe-roles",
+      "role": "before",
+      "input_path": "../workflow-retest-1/inputs/kubernetes-probe-roles/original-effective.txt",
+      "input_sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+      "submitted_and_textarea_sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/kubernetes-probe-roles-before-rendered.txt",
+      "rendered_sha256": "444cee051f7307c16897a8473bec2801a93fd91de81f7e1c1859f148a4c58992",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:36:54.536Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Generated",
+        "ui_words": 194,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": true,
+        "confidence_note": "Confidence limited — short text",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "medium"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T20:04:37.388Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "ui_words": 164,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 2,
+      "actual_credits_used": 2,
+      "preview_ui_words": 194
+    },
+    {
+      "id": "qwen-1942:after",
+      "case": "qwen-1942",
+      "role": "after",
+      "input_path": "../inputs/quote-transfer-2/qwen-1942/quoted.txt",
+      "input_sha256": "e15c8664191956f0b0e0d6227a2fcb3d794220d61ab99b3bfc01f7e1731e8792",
+      "submitted_and_textarea_sha256": "e15c8664191956f0b0e0d6227a2fcb3d794220d61ab99b3bfc01f7e1731e8792",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/qwen-1942-after-rendered.txt",
+      "rendered_sha256": "3e6fd8fc83830707b41237f8f228c7efc078c2e4c7253723221df852d8230aaf",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:37:36.702Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Generated",
+        "ui_words": 168,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": true,
+        "confidence_note": "Confidence limited — short text",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "medium"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T06:51:08.164Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 1,
+          "mixed": 99,
+          "human": 0
+        },
+        "ui_words": 148,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 2,
+      "actual_credits_used": 2,
+      "preview_ui_words": 166
+    },
+    {
+      "id": "postgresql-snapshot-scope:before",
+      "case": "postgresql-snapshot-scope",
+      "role": "before",
+      "input_path": "../workflow-retest-1/inputs/postgresql-snapshot-scope/original-effective.txt",
+      "input_sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+      "submitted_and_textarea_sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/postgresql-snapshot-scope-before-rendered.txt",
+      "rendered_sha256": "439073401e8707dfeba035404f45a4580483e4ee5d6e59eed35761c5687fddd3",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:39:36.988Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Generated",
+        "ui_words": 210,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": false,
+        "confidence_note": null,
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "high"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T20:04:07.408Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "ui_words": 180,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 3,
+      "actual_credits_used": 2,
+      "preview_ui_words": 210
+    },
+    {
+      "id": "postgresql-snapshot-scope:after",
+      "case": "postgresql-snapshot-scope",
+      "role": "after",
+      "input_path": "../workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt",
+      "input_sha256": "e8558e023c1a3471d4a0436787f9f10e7b0ecde2f46007c7c6fd84c98735bbba",
+      "submitted_and_textarea_sha256": "e8558e023c1a3471d4a0436787f9f10e7b0ecde2f46007c7c6fd84c98735bbba",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/postgresql-snapshot-scope-after-rendered.txt",
+      "rendered_sha256": "6a9eb494f455ef6616b86ea43c34288a410e20da53820ebe41154ae49d416560",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:40:16.104Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Assisted",
+        "ui_words": 209,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": false,
+        "confidence_note": null,
+        "displayed_text_percentages": {
+          "ai_generated": null,
+          "ai_assisted": 100,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI Assisted",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "medium"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T19:59:25.765Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "ui_words": 178,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 3,
+      "actual_credits_used": 2,
+      "preview_ui_words": 208
+    },
+    {
+      "id": "qwen-1942:before",
+      "case": "qwen-1942",
+      "role": "before",
+      "input_path": "../inputs/quote-transfer-2/qwen-1942/plain.txt",
+      "input_sha256": "f17f121c50ecb3cc782d5e002f9b4fd290dae3dfae889c9a09625e71739052bc",
+      "submitted_and_textarea_sha256": "f17f121c50ecb3cc782d5e002f9b4fd290dae3dfae889c9a09625e71739052bc",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/qwen-1942-before-rendered.txt",
+      "rendered_sha256": "6edeb3522a6bb7ad336dbed87276205a58392a5bf78ea99c3a8e9ac30d179806",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:40:43.542Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Generated",
+        "ui_words": 145,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": true,
+        "confidence_note": "Confidence limited — short text",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "medium"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T06:50:53.918Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "ui_words": 127,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 2,
+      "actual_credits_used": 2,
+      "preview_ui_words": 143
+    },
+    {
+      "id": "kubernetes-probe-roles:after",
+      "case": "kubernetes-probe-roles",
+      "role": "after",
+      "input_path": "../workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt",
+      "input_sha256": "f105149fe2ed40b78cb7ba728824f03b2fb14a3d0199e02f077d163da023a966",
+      "submitted_and_textarea_sha256": "f105149fe2ed40b78cb7ba728824f03b2fb14a3d0199e02f077d163da023a966",
+      "exact_frozen_textarea_match": true,
+      "rendered_path": "measurements/kubernetes-probe-roles-after-rendered.txt",
+      "rendered_sha256": "b09cff44cccef214428c5ae6cbe1532c344c4887dcaa7536d27c8cb00c480ec7",
+      "display_transform": "Split on LF, strip each line edge of ASCII spaces/tabs/CR, discard empty lines, join with LF. Exact match verified; no inference about internal preprocessing.",
+      "pangram": {
+        "observed_at": "2026-09-06T20:41:33.572Z",
+        "service": "Pangram",
+        "model": "4.0",
+        "surface": "Free text detection web UI",
+        "label": "AI Generated",
+        "ui_words": 208,
+        "metric": "Displayed proportions of text by classification, not GPTZero document confidence. Null means that class percentage was not displayed.",
+        "short_text_warning": false,
+        "confidence_note": null,
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human_written": null
+        },
+        "exact_percentage_labels": [
+          {
+            "label": "AI",
+            "percent": 100
+          }
+        ],
+        "details_confidence_labels": [
+          "high"
+        ]
+      },
+      "prior_gptzero": {
+        "observed_at": "2026-09-06T19:56:27.246Z",
+        "service": "GPTZero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "metric": "document classification confidence percent",
+        "scores": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "ui_words": 181,
+        "short_text_warning": false
+      },
+      "quoted_scan_credits": 3,
+      "actual_credits_used": 2,
+      "preview_ui_words": 208
+    }
+  ]
+}

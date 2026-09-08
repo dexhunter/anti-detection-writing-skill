@@ -1,0 +1,46 @@
+{
+  "case": "postgresql-snapshot-scope",
+  "source_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+  "prompt_sha256": "65b80ce33e328aafdbd7d819db45e01d6849a92995ae8feb448ca44a5dd34884",
+  "candidate_sha256": "18136856ea7a4da6b42146821f5c7b4432ae75ff40e606acb90c25566051ed4c",
+  "raw_sha256": "a1d874f82c5c99539734c66a89b1d7a8675235e69d6a25cca4b0c4eb98bbad72",
+  "generated_tokens": 353,
+  "ended_on_eos": true,
+  "target_closing_tag": true,
+  "hit_token_limit": false,
+  "source_words": 180,
+  "candidate_words": 231,
+  "protected_before": {
+    "code": [
+      "`SELECT`",
+      "```sql\nBEGIN ISOLATION LEVEL REPEATABLE READ;\n```",
+      "`BEGIN`",
+      "`UPDATE`",
+      "`serialization_failure`",
+      "`40001`"
+    ],
+    "urls": [
+      "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+      "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+      "https://www.postgresql.org/docs/17/transaction-iso.html"
+    ]
+  },
+  "protected_after": {
+    "code": [
+      "`SELECT`",
+      "`ISOLATION_LEVEL REPEATABLE READ`",
+      "`BEGIN ISOLATION LEVEL REPEATABLE READ;`",
+      "`UPDATE`",
+      "`serialization_failure`",
+      "`40001`"
+    ],
+    "urls": [
+      "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+      "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+      "https://www.postgresql.org/docs/17/transaction-iso.html"
+    ]
+  },
+  "seed": 2026090605,
+  "elapsed_seconds": 15.85596187505871,
+  "detector": "not_measured_pending_independent_quality_review"
+}

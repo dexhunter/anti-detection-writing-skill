@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-09-07T16:12:31.533618+00:00",
+  "purpose": "Local-scorer diagnostic on eight existing quality-passing development texts; not independent calibration or new commercial scans. Every text is known AI-origin; no human-control accuracy estimate.",
+  "manifest_sha256": "365151d28b0c28aa7857f9f559ca01e0a3df81ba8e2776e05b5477a0b9193f1a",
+  "cases": 8,
+  "selection": "Three pre-existing technical/business methods and last article pair, selected before local scores; relation-map factual failure excluded.",
+  "commercial_comparison": "Recorded prior native results can show disagreement only. Known 100 AI-text Pangram readings exist for every listed text except business core-expansion, which was unscanned.",
+  "postscore_rewrites": false
+}

@@ -1,0 +1,14 @@
+`caplog` and the failed test's captured-log section use separate handlers, so first identify where the DEBUG messages are missing. A local pytest 9.0.2 check with `log_level = INFO` captured DEBUG after `caplog.set_level(logging.DEBUG)`; the report handler stayed at INFO.
+
+```python
+def test_debug(caplog):
+    caplog.set_level(logging.DEBUG)
+    logging.debug("debug marker")
+    assert "debug marker" in caplog.text
+```
+
+The [fixture implementation](https://github.com/pytest-dev/pytest/blob/9.0.2/src/_pytest/logging.py) changes both the selected logger's level and the fixture's capture-handler level. It does not reconfigure the separate report or live-log handler.
+
+If this assertion passes, the fixture captured the message regardless of the report display. If it fails only in your project, check logger levels, filters, root-handler replacement and propagation. Targeting a named logger does not undo `propagate = False`; records must still reach the capture handler.
+
+This isolated check does not reproduce your project's logging configuration or establish a regression there.

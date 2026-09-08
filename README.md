@@ -29,10 +29,17 @@ For a requested measurement, add:
 - [`anti-detection-writing`](skills/anti-detection-writing/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
 - A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
 - An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
+- An optional [local detector diagnostic](skills/anti-detection-writing/references/local-detector.md) with pinned model verification and full-text checks. Its scores are not a validated substitute for GPTZero or Pangram.
 
-The editing workflow draws on [four other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately; its detector measurements remain pending.
+The editing workflow draws on [other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately. Its 12 completed measurements all scored 100% AI / 0% mixed / 0% human, giving six tied pairs; this completes the older frozen comparison, not a test of later literature-informed instructions.
+
+The later [requested-alternative pilot](studies/requested-alternatives-1/README.md) adds four new source-grounded examples and eight exact scans. All four pairs stayed at 100% AI. The skill now permits an acceptable alternative when explicitly requested, while keeping clear passages intact during ordinary polishing; that change has not demonstrated a detector-score benefit.
+
+A [targeted-edit comparison](studies/targeted-edit-1/README.md) tested two fresh synthetic examples on both GPTZero and Pangram. A separate LLM reviewer preferred both edits for clarity, but neither detector improved in either pair. The full record retains all eight scans and Pangram's short-text warnings.
 
 For systematic skill improvement, the [bounded autoresearch workflow](docs/autoresearch.md) separates proposals, candidate selection, quality review and detector confirmation. Its resumable local controller preserves failures and reserves evaluation budget; an active agent supplies subagents and supported browser operations.
+
+A later [twenty-method search](studies/model-assisted-1/README.md) found a repeated 100% → 0% AI-confidence reduction on one business example using a local trained model plus separate repair and editing. The technical example stayed at 100%, and both unseen candidates lost the readability comparison. The workflow was not promoted; this release adds the evidence and research guidance without claiming a general detector-performance improvement.
 
 The skill has no account credentials, browser automation, paid-service dependency, or automatic posting permission. Basic editing needs the text and its intended audience; factual corrections need supporting sources. Live scanning additionally needs a browser tool supported by your agent and your own detector access. Independent review needs a separate reviewer; the development reviews used LLM agents.
 
@@ -64,7 +71,7 @@ Start with one short text and tell us the intended reader, your agent, and what 
 
 ## Local checks
 
-With Python 3.10+ available through [uv](https://docs.astral.sh/uv/):
+Run the offline checks with [uv](https://docs.astral.sh/uv/) (exercised with Python 3.13.5):
 
 ```sh
 uv run --no-project python scripts/check_studies.py

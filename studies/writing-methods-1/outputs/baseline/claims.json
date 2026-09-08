@@ -1,0 +1,24 @@
+{
+  "wm4-dev-technical-01": {
+    "DTC1": "An ETag lets the client validate a stored JSON response.",
+    "DTC2": "The server sends the ETag with the response, and the client includes that value in If-None-Match on a later conditional GET.",
+    "DTC3": "For an otherwise successful GET, a tag matching the selected representation produces 304 Not Modified with no response body; the client can reuse its stored body.",
+    "DTC4": "For an otherwise successful GET, a tag matching the selected representation produces 304 Not Modified with no response body; the client can reuse its stored body. If the tag does not match, the server returns 200 OK with the current JSON.",
+    "DTC5": "Validation still sends a request.",
+    "DTC6": "An appropriate freshness policy, such as Cache-Control: max-age=60, can permit reuse without validation, subject to the other caching rules.",
+    "DTC7": "The client can reuse the response while it is fresh; that permission does not guarantee the underlying data will remain unchanged for 60 seconds."
+  },
+  "wm4-dev-business-01": {
+    "DBC1": "All 180 articles for the Atlas help-centre migration have been copied.",
+    "DBC2": "All 180 articles for the Atlas help-centre migration have been copied.",
+    "DBC3": "The content team found no missing sections in the 60 articles checked so far;",
+    "DBC4": "the remaining articles are unreviewed, so the content check is incomplete.",
+    "DBC5": "Search currently omits titles containing apostrophes.",
+    "DBC6": "Nia is due to deliver the fix on 10 September, and Omar will test it afterward.",
+    "DBC7": "If Omar's test passes, I recommend starting a pilot with five volunteer support agents on 11 September.",
+    "DBC8": "The existing help centre will remain available during the pilot, with customer-facing links unchanged.",
+    "DBC9": "Please confirm by 9 September whether the support team can provide those five agents.",
+    "DBC10": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout.",
+    "DBC11": "No full rollout date is committed."
+  }
+}

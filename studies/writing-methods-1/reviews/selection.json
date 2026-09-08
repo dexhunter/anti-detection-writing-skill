@@ -1,0 +1,121 @@
+{
+  "study": "writing-methods-4",
+  "selection_status": "selected",
+  "selected_arm": "topic-continuity",
+  "selection_role": "independent_score_blind_method_selector",
+  "inputs_read": [
+    "frozen/protocol.json",
+    "frozen/proposal-1-relation-map.md",
+    "frozen/proposal-2-core-expansion.md",
+    "frozen/proposal-3-topic-continuity.md",
+    "reviews/masking-key.json",
+    "reviews/wm4-dev-technical-01-review.json",
+    "reviews/wm4-dev-business-01-review.json"
+  ],
+  "scope": {
+    "detector_results_seen": false,
+    "output_files_read": false,
+    "held_out_cases_read": false,
+    "measurement_directory_read": false,
+    "other_studies_read": false,
+    "browsing_performed": false,
+    "additional_information": "The coordinator reports that no scans have occurred and that topic-continuity preserved both development originals unchanged except for a terminal newline. The selector did not inspect originals or output files to verify the latter fact."
+  },
+  "frozen_rule_applied": "A method is eligible only when both exact development answers preserve all claims and protected literals, contain no unsupported assertions, and are at least as readable as the baseline in both cases. Among eligible methods, prefer clarity gains across cases, then the simpler method. No repairs are allowed.",
+  "baseline": {
+    "arm": "baseline",
+    "masked_label_both_cases": "C",
+    "technical_verdict": "pass",
+    "business_verdict": "pass",
+    "role": "Reference arm, not a candidate method."
+  },
+  "eligible_arms": [
+    {
+      "arm": "core-expansion",
+      "masked_label_both_cases": "A",
+      "technical_verdict": "pass",
+      "business_verdict": "pass",
+      "technical_readability_vs_baseline": "tie",
+      "business_readability_vs_baseline": "tie",
+      "demonstrated_clarity_gain_over_baseline": false,
+      "reasons": [
+        "The technical reviewer passes all seven claims and protected literals, finds no unsupported additions or lost qualifications, and explicitly ties A with baseline C. Its active server/client subjects and two-paragraph structure are clear, but its alternative constructions do not establish a consequential reading improvement.",
+        "The business reviewer passes all 11 claims and protected literals with no unsupported substantive additions. A is compact and clearly places the test condition before the recommendation, but the reviewer explicitly says this is not a material improvement over the equally clear alternatives, including baseline C."
+      ],
+      "selected": false,
+      "nonselection_reason": "Eligible but tied with topic-continuity on clarity across both cases. Its mandatory saved answer core followed by full-contract integration is more involved than the bounded local cohesion pass with an allowed no-op, so it loses the frozen simplicity tie-break."
+    },
+    {
+      "arm": "topic-continuity",
+      "masked_label_both_cases": "D",
+      "technical_verdict": "pass",
+      "business_verdict": "pass",
+      "technical_readability_vs_baseline": "tie",
+      "business_readability_vs_baseline": "tie",
+      "demonstrated_clarity_gain_over_baseline": false,
+      "reasons": [
+        "The technical reviewer passes all seven claims and protected literals, finds no unsupported additions or lost qualifications, and explicitly ties D with baseline C. It finds the plain-language opening and nearby antecedents clear, with no material disadvantage from the passive wording of the later GET.",
+        "The business reviewer passes all 11 claims and protected literals with no unsupported substantive additions. D clearly preserves the pilot condition, incomplete content review and uncommitted rollout date. Its heading and trailing test condition are explicitly found no harder to read than baseline C's more compressed wording."
+      ],
+      "selected": true,
+      "selection_reason": "Both development answers pass every quality requirement and tie with baseline. Neither eligible method demonstrates a clarity gain in either case. Topic-continuity therefore wins only the frozen simplicity tie-break: it diagnoses repeated sentence topics, permits bounded local edits, keeps substantive order fixed and explicitly permits no-op preservation. Core-expansion requires two saved drafting passes and full-contract reintegration."
+    }
+  ],
+  "rejected_arms": [
+    {
+      "arm": "relation-map",
+      "masked_label_both_cases": "B",
+      "technical_verdict": "pass",
+      "business_verdict": "fail",
+      "technical_readability_vs_baseline": "tie",
+      "business_readability_vs_baseline": "tie",
+      "reason": "The business reviewer identifies an unsupported copying-actor attribution in 'The Atlas help-centre migration team has copied all 180 articles.' The supplied facts establish copying and its total but do not identify who performed it. This independently fails the strict source-fidelity gate even though all inventoried claims and literals survive and readability ties with baseline. The additional project-team attribution for feedback review is qualified by the reviewer but is not needed for rejection. One failed output makes the entire method ineligible, and the frozen repair limit is zero.",
+      "review_reference": "reviews/wm4-dev-business-01-review.json: answer B, unsupported_additions and overall_conclusion"
+    }
+  ],
+  "clarity_comparison": {
+    "technical": "The reviewer assigns a four-way readability tie and finds no materially less readable answer in any pair.",
+    "business": "The reviewer assigns a four-way readability tie; modest sentence and organization differences do not support a reliable ordering. B's fidelity failure is assessed separately.",
+    "decision": "There is no supported clarity winner. The frozen simplicity tie-break selects topic-continuity from the two globally eligible candidates."
+  },
+  "exact_comparison_hashes": [
+    {
+      "development_submission_order": 1,
+      "case_id": "wm4-dev-technical-01",
+      "role": "baseline",
+      "arm": "baseline",
+      "masked_label": "C",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951"
+    },
+    {
+      "development_submission_order": 2,
+      "case_id": "wm4-dev-technical-01",
+      "role": "selected",
+      "arm": "topic-continuity",
+      "masked_label": "D",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442"
+    },
+    {
+      "development_submission_order": 3,
+      "case_id": "wm4-dev-business-01",
+      "role": "selected",
+      "arm": "topic-continuity",
+      "masked_label": "D",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84"
+    },
+    {
+      "development_submission_order": 4,
+      "case_id": "wm4-dev-business-01",
+      "role": "baseline",
+      "arm": "baseline",
+      "masked_label": "C",
+      "sha256": "13edfb9d4e685d6f5cf6e6c46cfea69b0dc75089d1c79b84d6462f94fbef7ef0"
+    }
+  ],
+  "hash_basis": "The four hashes are taken from the masking key and match the corresponding independently reviewed exact answers, including terminal newline. The selector did not open output files.",
+  "limitations": [
+    "Selection establishes quality eligibility and resolves a procedural tie; it does not establish improved clarity or a detector benefit.",
+    "The coordinator reports that the selected method made no substantive changes to either development original, apart from terminal newline. The actual development intervention is therefore preservation/no-op, as explicitly allowed by the proposal. Any later detector difference against the separately rewritten baseline cannot establish that sentence-topic editing improved these texts, because no such editing occurred in these cases.",
+    "Quality judgments concern two synthetic development cases and independent LLM review. They do not establish general efficacy or human authorship."
+  ]
+}

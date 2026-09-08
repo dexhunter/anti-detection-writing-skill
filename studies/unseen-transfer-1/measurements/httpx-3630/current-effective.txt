@@ -1,0 +1,7 @@
+Apply the concurrency limit before entering HTTPX, then sign each attempt. Use a short pool timeout to bound waiting for an available connection. After `PoolTimeout`, create and sign a fresh attempt, provided the operation and request body are safe to repeat.
+
+A request hook alone cannot keep the timestamp fresh until server receipt. In HTTPX 0.28.1, the hook runs before the client passes the request to the transport; httpcore acquires a pooled connection later. The timestamp can age during that wait, as the [client implementation](https://github.com/encode/httpx/blob/0.28.1/httpx/_client.py) shows.
+
+The [pool timeout](https://www.python-httpx.org/advanced/timeouts/#fine-tuning-the-configuration) covers connection acquisition, not the full interval from signing to server receipt. Connection setup, TLS and writes can add time. Signing strictly after pool acquisition would require a service-specific transport design; the public request hook cannot provide that timing. These recommendations follow from source inspection. The reported high-volume 401s have not been reproduced here.
+
+

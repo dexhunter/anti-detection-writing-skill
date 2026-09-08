@@ -1,0 +1,8 @@
+Yes. At Read Committed, each ordinary `SELECT` gets a new snapshot. If another session commits changes between your two queries, the second query can see those changes even though both queries belong to one transaction.
+Start a Repeatable Read transaction before running the report:
+```sql
+BEGIN ISOLATION LEVEL REPEATABLE READ;
+```
+Its snapshot is established by the first query or data-modification statement, not by `BEGIN` alone. Subsequent queries exclude changes committed by other transactions after that snapshot. They still see any earlier writes made by their own transaction. This gives the report a stable view of the table data across its queries. See [transaction setup](https://www.postgresql.org/docs/17/sql-set-transaction.html).
+If you later add an `UPDATE`, a conflicting committed update can cause `serialization_failure` with SQLSTATE `40001`. Abort and retry the whole transaction, including the logic that chose the statements and values; retrying only the failed update is insufficient. A retry can encounter another conflict. See [retry handling](https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html).
+Repeatable Read still permits serialization anomalies. A stable snapshot does not guarantee a result equivalent to running the concurrent transactions one at a time. See the [isolation documentation](https://www.postgresql.org/docs/17/transaction-iso.html).

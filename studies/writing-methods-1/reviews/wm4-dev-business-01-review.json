@@ -1,0 +1,822 @@
+{
+  "case_id": "wm4-dev-business-01",
+  "review_type": "independent_masked_quality_review",
+  "review_scope": {
+    "inputs_read": [
+      "frozen/judge-operator.txt",
+      "reviews/wm4-dev-business-01-masked.json"
+    ],
+    "source_basis": "Only the supplied invented Atlas scenario, original, inventoried claims and protected literals.",
+    "candidate_text_mutated": false,
+    "external_verification_needed": false,
+    "external_verification_reason": "All project facts are explicitly supplied synthetic scenario data."
+  },
+  "judgment_policy": {
+    "source_fidelity": "A pass requires preservation of every inventoried claim and qualification, exact protected literal spellings, and no unsupported factual additions. A narrow unsupported actor attribution can fail this strict criterion even when it does not change project status.",
+    "readability": "Rank reading clarity and effort separately from factual validity. Ties are allowed; slight differences in compression, explicitness or paragraph construction do not themselves establish a material preference."
+  },
+  "answers": [
+    {
+      "label": "A",
+      "sha256": "d2f012fa6d29935cd5369a7f1244acbbb5983c3519772200a27e7fbe7a9c89c9",
+      "hash_verified_from_exact_utf8_text": true,
+      "trailing_newline_included_in_hash": true,
+      "result": "pass",
+      "pass": true,
+      "claim_by_claim_checks": [
+        {
+          "claim_id": "DBC1",
+          "status": "pass",
+          "evidence": "for the Atlas help-centre migration",
+          "finding": "The Atlas help-centre migration is identified in the opening sentence."
+        },
+        {
+          "claim_id": "DBC2",
+          "status": "pass",
+          "evidence": "All 180 articles have been copied",
+          "finding": "All articles are copied; both completion and total are preserved."
+        },
+        {
+          "claim_id": "DBC3",
+          "status": "pass",
+          "evidence": "The content team found no missing sections in the 60 articles checked",
+          "finding": "The absence of missing sections is explicitly bounded to the reviewed set, with the content team retained."
+        },
+        {
+          "claim_id": "DBC4",
+          "status": "pass",
+          "evidence": "the remaining articles are unreviewed, so content review is still incomplete",
+          "finding": "The remaining articles remain unreviewed, and review incompleteness is explicit."
+        },
+        {
+          "claim_id": "DBC5",
+          "status": "pass",
+          "evidence": "Search still omits titles containing apostrophes.",
+          "finding": "The existing search issue and affected titles are preserved."
+        },
+        {
+          "claim_id": "DBC6",
+          "status": "pass",
+          "evidence": "Nia is due to deliver the fix on 10 September, and Omar will test it afterward.",
+          "finding": "Delivery remains due rather than completed; Omar tests after the planned delivery."
+        },
+        {
+          "claim_id": "DBC7",
+          "status": "pass",
+          "evidence": "If that test passes, I recommend opening the pilot to five volunteer support agents on 11 September.",
+          "finding": "The pilot remains a recommendation for five volunteers on the given date, conditional on the search test passing."
+        },
+        {
+          "claim_id": "DBC8",
+          "status": "pass",
+          "evidence": "The existing help centre will remain available during the pilot, with customer-facing links unchanged.",
+          "finding": "The pilot scope explicitly contains both continued help-centre availability and unchanged customer-facing links."
+        },
+        {
+          "claim_id": "DBC9",
+          "status": "pass",
+          "evidence": "Please confirm by 9 September whether the support team can provide the five agents.",
+          "finding": "The sponsor is asked to confirm support staffing by the deadline; whether preserves uncertainty."
+        },
+        {
+          "claim_id": "DBC10",
+          "status": "pass",
+          "evidence": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout",
+          "finding": "The feedback review date and review-before-scheduling-decision sequence survive."
+        },
+        {
+          "claim_id": "DBC11",
+          "status": "pass",
+          "evidence": "no full rollout date is committed.",
+          "finding": "The absence of a committed rollout date is explicit."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "Atlas",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "180",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "60",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Nia",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Omar",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "10 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "five",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 2,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "11 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "9 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "14 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        }
+      ],
+      "unsupported_additions": [],
+      "findings": {
+        "correctness": [
+          "All 11 inventoried claims and their qualifications survive. No unsupported substantive additions found.",
+          "That test has the immediately preceding Omar test as a clear antecedent; afterward follows the planned delivery."
+        ],
+        "relevance": [
+          "Covers copied content, incomplete review, search defect, the conditional pilot, continuity, staffing decision, feedback review and uncommitted rollout date."
+        ],
+        "tone": [
+          "Direct and professional; the recommendation and sponsor request are appropriate to the scenario."
+        ],
+        "clarity": [
+          "Three paragraphs follow progress, test and pilot, then sponsor decision and rollout review.",
+          "The final semicolon joins two closely related scheduling statements without obscuring either."
+        ],
+        "readability": [
+          "Compact and easy to follow. Its explicit test condition before the recommendation is useful, but not a material improvement over the equally clear alternatives."
+        ]
+      },
+      "readability_rank": 1,
+      "readability_tied_with": [
+        "B",
+        "C",
+        "D"
+      ],
+      "failure_scope": null
+    },
+    {
+      "label": "B",
+      "sha256": "ae67f0b3f2801e5c965438e7c5925170dfa1675800dd4c79a9bc7e1591887f30",
+      "hash_verified_from_exact_utf8_text": true,
+      "trailing_newline_included_in_hash": true,
+      "result": "fail",
+      "pass": false,
+      "claim_by_claim_checks": [
+        {
+          "claim_id": "DBC1",
+          "status": "pass",
+          "evidence": "The Atlas help-centre migration team",
+          "finding": "The Atlas help-centre migration topic is explicit."
+        },
+        {
+          "claim_id": "DBC2",
+          "status": "pass",
+          "evidence": "has copied all 180 articles",
+          "finding": "The completion and total are preserved. The copying actor added to this sentence is separately flagged under unsupported additions."
+        },
+        {
+          "claim_id": "DBC3",
+          "status": "pass",
+          "evidence": "The content team reviewed 60 and found no missing sections in that set.",
+          "finding": "The absence of missing sections is explicitly restricted to the 60 articles reviewed by the content team."
+        },
+        {
+          "claim_id": "DBC4",
+          "status": "pass",
+          "evidence": "The remaining articles are still unreviewed, so the content check is incomplete.",
+          "finding": "The remaining articles are unreviewed and the review is explicitly incomplete."
+        },
+        {
+          "claim_id": "DBC5",
+          "status": "pass",
+          "evidence": "Search also still omits titles containing apostrophes.",
+          "finding": "Current omission of titles containing apostrophes is preserved."
+        },
+        {
+          "claim_id": "DBC6",
+          "status": "pass",
+          "evidence": "Nia's fix is due on 10 September, and Omar will test it after delivery.",
+          "finding": "The fix remains due on the given date, and Omar tests after delivery. This does not claim the fix is complete."
+        },
+        {
+          "claim_id": "DBC7",
+          "status": "pass",
+          "evidence": "If that test passes, I recommend opening the pilot to five volunteer support agents on 11 September.",
+          "finding": "The pilot is still a recommendation for five volunteer support agents on the given date, conditional on the search test passing."
+        },
+        {
+          "claim_id": "DBC8",
+          "status": "pass",
+          "evidence": "During the pilot, the existing help centre will remain available and customer-facing links will stay unchanged.",
+          "finding": "Both continuity assurances are explicitly scoped to the pilot."
+        },
+        {
+          "claim_id": "DBC9",
+          "status": "pass",
+          "evidence": "Please confirm by 9 September whether the support team can provide five agents; staffing is still unconfirmed.",
+          "finding": "The deadline, requested five-agent availability decision, and unconfirmed staffing status are explicit; the latter is supplied by the fact sheet."
+        },
+        {
+          "claim_id": "DBC10",
+          "status": "pass",
+          "evidence": "The project team plans to review pilot feedback on 14 September and then decide whether to schedule the full rollout.",
+          "finding": "Review remains planned for the given date and precedes the decision whether to schedule rollout. The project-team attribution is less specific in the source, which says we."
+        },
+        {
+          "claim_id": "DBC11",
+          "status": "pass",
+          "evidence": "No full rollout date has been committed.",
+          "finding": "The absence of a committed rollout date is explicit."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "Atlas",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "180",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "60",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Nia",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Omar",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "10 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "five",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 2,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "11 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "9 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "14 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        }
+      ],
+      "unsupported_additions": [
+        {
+          "severity": "minor_but_fails_strict_source_fidelity",
+          "text": "The Atlas help-centre migration team has copied all 180 articles.",
+          "finding": "The copied total and completed status are supported. Identifying a migration team as the actor is not supplied by the original or fact sheet. It could have been another actor; the packet does not decide that question.",
+          "affected_claim": "DBC2",
+          "material_project_status_change": false
+        },
+        {
+          "severity": "qualification",
+          "text": "The project team plans to review pilot feedback on 14 September",
+          "finding": "The review plan and date are supported. Project team is a plausible interpretation of the original we, but the exact actor is less explicit in the source. The independently sufficient reason for failure is the opening copying-actor attribution.",
+          "affected_claim": "DBC10",
+          "material_project_status_change": false
+        }
+      ],
+      "findings": {
+        "correctness": [
+          "All 11 inventoried claims survive, including bounded review findings, planned delivery, conditional pilot, staffing uncertainty and no rollout commitment.",
+          "The opening attributes copying to an Atlas help-centre migration team. The supplied facts establish that copying occurred but do not establish who performed it. This is a narrow unsupported actor attribution under the use-only-supplied-facts requirement.",
+          "Project team as the feedback-review actor is also more specific than the original we. It is a plausible interpretation of the update author, but it is not an independently established team identity."
+        ],
+        "relevance": [
+          "All requested update topics are covered. Staffing is still unconfirmed repeats the meaning of the preceding confirmation request but is expressly supported by the fact sheet."
+        ],
+        "tone": [
+          "Professional and suitable for a sponsor update. No distracting scenario or experiment labels."
+        ],
+        "clarity": [
+          "Short opening sentences clearly distinguish copying, the checked set and the unchecked remainder.",
+          "After delivery and During the pilot make sequence and scope explicit.",
+          "Staffing is still unconfirmed and the separate final rollout sentence increase explicitness at a small cost in repetition."
+        ],
+        "readability": [
+          "Readable throughout. Minor repetition does not create a material disadvantage; the shorter opening sentences are a compensating benefit. Source fidelity is evaluated separately from readability."
+        ]
+      },
+      "readability_rank": 1,
+      "readability_tied_with": [
+        "A",
+        "C",
+        "D"
+      ],
+      "failure_scope": "Only unsupported actor specificity; all inventoried claims, literals and project-status qualifications are preserved."
+    },
+    {
+      "label": "C",
+      "sha256": "13edfb9d4e685d6f5cf6e6c46cfea69b0dc75089d1c79b84d6462f94fbef7ef0",
+      "hash_verified_from_exact_utf8_text": true,
+      "trailing_newline_included_in_hash": true,
+      "result": "pass",
+      "pass": true,
+      "claim_by_claim_checks": [
+        {
+          "claim_id": "DBC1",
+          "status": "pass",
+          "evidence": "for the Atlas help-centre migration",
+          "finding": "The update explicitly identifies the Atlas help-centre migration."
+        },
+        {
+          "claim_id": "DBC2",
+          "status": "pass",
+          "evidence": "All 180 articles for the Atlas help-centre migration have been copied.",
+          "finding": "The copied total and completed status are preserved."
+        },
+        {
+          "claim_id": "DBC3",
+          "status": "pass",
+          "evidence": "The content team found no missing sections in the 60 articles checked so far",
+          "finding": "The content team and bounded finding for the reviewed 60 articles are retained."
+        },
+        {
+          "claim_id": "DBC4",
+          "status": "pass",
+          "evidence": "the remaining articles are unreviewed, so the content check is incomplete",
+          "finding": "Unreviewed remaining articles and the incomplete content check are both explicit."
+        },
+        {
+          "claim_id": "DBC5",
+          "status": "pass",
+          "evidence": "Search currently omits titles containing apostrophes.",
+          "finding": "The exact current search defect survives."
+        },
+        {
+          "claim_id": "DBC6",
+          "status": "pass",
+          "evidence": "Nia is due to deliver the fix on 10 September, and Omar will test it afterward.",
+          "finding": "Delivery remains due on the specified date and precedes Omar testing the fix."
+        },
+        {
+          "claim_id": "DBC7",
+          "status": "pass",
+          "evidence": "If Omar's test passes, I recommend starting a pilot with five volunteer support agents on 11 September.",
+          "finding": "The test owner is named, and the five-volunteer pilot remains a dated recommendation conditional on a passing test."
+        },
+        {
+          "claim_id": "DBC8",
+          "status": "pass",
+          "evidence": "The existing help centre will remain available during the pilot, with customer-facing links unchanged.",
+          "finding": "The existing help centre remains available and the customer-facing links remain unchanged during the pilot."
+        },
+        {
+          "claim_id": "DBC9",
+          "status": "pass",
+          "evidence": "Please confirm by 9 September whether the support team can provide those five agents.",
+          "finding": "The requested support staffing confirmation, number of agents, and deadline all survive."
+        },
+        {
+          "claim_id": "DBC10",
+          "status": "pass",
+          "evidence": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout.",
+          "finding": "The feedback review date and its position before deciding whether to schedule rollout are preserved."
+        },
+        {
+          "claim_id": "DBC11",
+          "status": "pass",
+          "evidence": "No full rollout date is committed.",
+          "finding": "The lack of a committed rollout date is explicit."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "Atlas",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "180",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "60",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Nia",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Omar",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 2,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "10 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "five",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 2,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "11 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "9 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "14 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        }
+      ],
+      "unsupported_additions": [],
+      "findings": {
+        "correctness": [
+          "All 11 inventoried claims and qualifications survive. No unsupported substantive additions found.",
+          "If Omar's test passes makes the pilot's dependency unambiguous without adding a new condition."
+        ],
+        "relevance": [
+          "Directly covers progress, remaining work, the conditional pilot, operational continuity, the requested staffing decision and rollout scheduling status."
+        ],
+        "tone": [
+          "Concise and professional, with a clear recommendation and sponsor request."
+        ],
+        "clarity": [
+          "Three coherent paragraphs and a separate final sentence keep the uncommitted rollout date visible.",
+          "The semicolon in the opening paragraph links the reviewed finding to the explicitly unreviewed remainder."
+        ],
+        "readability": [
+          "Naming Omar's test and separating the final non-commitment are small clarity benefits. They do not establish a material readability advantage over the other answers, whose references and scheduling statements are already clear."
+        ]
+      },
+      "readability_rank": 1,
+      "readability_tied_with": [
+        "A",
+        "B",
+        "D"
+      ],
+      "failure_scope": null
+    },
+    {
+      "label": "D",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "hash_verified_from_exact_utf8_text": true,
+      "trailing_newline_included_in_hash": true,
+      "result": "pass",
+      "pass": true,
+      "claim_by_claim_checks": [
+        {
+          "claim_id": "DBC1",
+          "status": "pass",
+          "evidence": "Atlas help-centre migration.",
+          "finding": "A short heading identifies the Atlas help-centre migration."
+        },
+        {
+          "claim_id": "DBC2",
+          "status": "pass",
+          "evidence": "All 180 articles have been copied",
+          "finding": "The total and completed copying status are explicit."
+        },
+        {
+          "claim_id": "DBC3",
+          "status": "pass",
+          "evidence": "the content team has checked 60 without finding missing sections",
+          "finding": "The content team checked 60 articles without finding missing sections; the grammar scopes the observation to that reviewed set."
+        },
+        {
+          "claim_id": "DBC4",
+          "status": "pass",
+          "evidence": "The remaining articles have not yet been reviewed, so the content check is still incomplete.",
+          "finding": "Both the unreviewed remainder and review incompleteness are explicit."
+        },
+        {
+          "claim_id": "DBC5",
+          "status": "pass",
+          "evidence": "Search currently omits titles containing apostrophes.",
+          "finding": "The current search defect is explicit."
+        },
+        {
+          "claim_id": "DBC6",
+          "status": "pass",
+          "evidence": "Nia is due to deliver the fix on 10 September, after which Omar will test it.",
+          "finding": "The delivery date remains a plan, followed by testing by Omar."
+        },
+        {
+          "claim_id": "DBC7",
+          "status": "pass",
+          "evidence": "I recommend opening the pilot to five volunteer support agents on 11 September if that test passes.",
+          "finding": "The pilot remains a recommendation for five volunteer support agents on the specified date, conditional on that search test passing."
+        },
+        {
+          "claim_id": "DBC8",
+          "status": "pass",
+          "evidence": "The existing help centre will remain available during the pilot, and customer-facing links will not change.",
+          "finding": "The existing help centre remains available during the pilot, and the coordinated clause naturally scopes unchanged links to the same pilot."
+        },
+        {
+          "claim_id": "DBC9",
+          "status": "pass",
+          "evidence": "Please confirm by 9 September whether the support team can provide those five agents.",
+          "finding": "The sponsor must confirm support staffing availability by the given date; whether retains the unconfirmed status."
+        },
+        {
+          "claim_id": "DBC10",
+          "status": "pass",
+          "evidence": "We will review pilot feedback on 14 September before deciding whether to schedule the full rollout.",
+          "finding": "The feedback review date and decision sequence are explicit."
+        },
+        {
+          "claim_id": "DBC11",
+          "status": "pass",
+          "evidence": "A full rollout date has therefore not been committed.",
+          "finding": "The full rollout date remains uncommitted."
+        }
+      ],
+      "literal_checks": [
+        {
+          "literal": "Atlas",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "180",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "60",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Nia",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "Omar",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "10 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "five",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 2,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "11 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "9 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        },
+        {
+          "literal": "14 September",
+          "status": "pass",
+          "exact_spelling_preserved": true,
+          "occurrence_count": 1,
+          "finding": "Exact protected literal retained with its original scenario role."
+        }
+      ],
+      "unsupported_additions": [],
+      "findings": {
+        "correctness": [
+          "All 11 inventoried claims and qualifications survive. No unsupported substantive additions found.",
+          "The recommendation is explicitly conditional even though the condition follows the proposed start date. That test clearly refers to Omar testing the fix."
+        ],
+        "relevance": [
+          "The heading and following paragraphs address every requested aspect without irrelevant context."
+        ],
+        "tone": [
+          "Professional and clear. The brief topic heading is appropriate to a project update."
+        ],
+        "clarity": [
+          "The heading makes the topic immediately visible, and the paragraphs group related content.",
+          "The review result is bounded to the 60 checked articles by the sentence structure; the next sentence explicitly leaves the remainder unreviewed.",
+          "Therefore links the lack of a committed date to the preceding future review and scheduling decision."
+        ],
+        "readability": [
+          "A short heading and slightly fuller phrasing are compatible with a concise sponsor update. Neither the heading nor the trailing pilot condition makes it materially harder to read."
+        ]
+      },
+      "readability_rank": 1,
+      "readability_tied_with": [
+        "A",
+        "B",
+        "C"
+      ],
+      "failure_scope": null
+    }
+  ],
+  "readability_ranking": [
+    {
+      "rank": 1,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "tied": true,
+      "finding": "All four are concise, coherent and professionally readable. Their modest sentence and organization differences do not support a reliable readability ordering."
+    }
+  ],
+  "pairwise_comparisons": [
+    {
+      "first": "A",
+      "second": "B",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "A is more compressed, while B uses shorter opening sentences and explicitly repeats the staffing uncertainty. Both are easy to follow. The extra repetition in B is slight and the unsupported attribution is a fidelity concern, not a readability defect."
+    },
+    {
+      "first": "A",
+      "second": "C",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "C names Omar in the test condition and uses a separate final sentence for the uncommitted date; A uses an already-clear that test and a semicolon. These small choices do not create a meaningful difference in reading effort."
+    },
+    {
+      "first": "A",
+      "second": "D",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "A folds the topic into its opening sentence and places the passing-test condition before the proposal. D uses a brief heading and places the condition at the end of the same proposal sentence. Both expose the topic and dependency clearly."
+    },
+    {
+      "first": "B",
+      "second": "C",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "C avoids B's repeated staffing uncertainty and names Omar in the condition; B's opening uses shorter sentences and explicitly says after delivery. These are small, offsetting benefits, with no materially less readable answer."
+    },
+    {
+      "first": "B",
+      "second": "D",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "B uses explicit sequence and scope markers and states staffing uncertainty twice. D has a short heading and slightly fuller original phrasing. Neither organization creates ambiguity or significant extra reading effort."
+    },
+    {
+      "first": "C",
+      "second": "D",
+      "first_vs_second": "tie",
+      "second_vs_first": "tie",
+      "difference_material": false,
+      "materially_less_readable": null,
+      "evidence": "C moves the topic into the opening and puts Omar's test condition first; D uses a heading and a trailing condition whose antecedent is clear. C's small compression does not make D materially less readable."
+    }
+  ],
+  "overall_conclusion": {
+    "passing_answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "failing_answers": [
+      "B"
+    ],
+    "all_inventoried_claims_preserved_by_all_answers": true,
+    "all_protected_literals_preserved_by_all_answers": true,
+    "failure_reason": "B assigns the completed copying work to a migration team that the supplied facts do not identify. This is a narrow strict-source-fidelity failure, not a lost claim, changed schedule, or readability failure.",
+    "material_readability_loser": null,
+    "readability_preference": "Four-way tie."
+  }
+}

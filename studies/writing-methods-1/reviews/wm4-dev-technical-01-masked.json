@@ -1,0 +1,273 @@
+{
+  "case": {
+    "id": "wm4-dev-technical-01",
+    "split": "development",
+    "genre": "technical_explanation",
+    "title": "ETag validation versus cache freshness",
+    "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case.",
+    "original": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.\n\nThis validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+    "sources": [
+      {
+        "id": "http-semantics",
+        "kind": "authoritative_specification",
+        "title": "RFC 9110: HTTP Semantics",
+        "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "sections": [
+          "8.8.3",
+          "13.1.2",
+          "15.3.1",
+          "15.4.5"
+        ],
+        "verified_at": "2026-09-07",
+        "verification": "Read current RFC Editor document with web tool.",
+        "quotes": [
+          {
+            "section": "8.8.3",
+            "text": "An entity tag is an opaque validator"
+          },
+          {
+            "section": "6.4",
+            "text": "304 (Not Modified) responses do not include content."
+          }
+        ]
+      },
+      {
+        "id": "http-caching",
+        "kind": "authoritative_specification",
+        "title": "RFC 9111: HTTP Caching",
+        "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+        "sections": [
+          "4",
+          "4.2",
+          "4.3",
+          "5.2.2.1"
+        ],
+        "verified_at": "2026-09-07",
+        "verification": "Read current RFC Editor document with web tool.",
+        "quotes": [
+          {
+            "section": "4.2",
+            "text": "without contacting the origin server"
+          },
+          {
+            "section": "4.2",
+            "text": "not likely to change in a semantically significant way"
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "author": "Independent benchmark original writer",
+      "origin": "New synthetic question and newly authored draft; technical behavior checked against the listed specifications.",
+      "draft_intent": "Plausible complete AI-written answer, not a deliberately defective baseline.",
+      "style_methods_applied": [],
+      "executed_behavior": false,
+      "limitations": [
+        "Normative explanation; no browser or server was exercised.",
+        "Scope is an otherwise successful ordinary GET with a stored response, not an exhaustive conditional-request guide.",
+        "Freshness permission remains subject to cache eligibility and other directives; 60 seconds is an illustrative policy choice."
+      ]
+    },
+    "claims": [
+      {
+        "id": "DTC1",
+        "text": "ETag enables stored-response validation.",
+        "strength": "recommendation_supported_by_specification",
+        "scope": "Stored response; GET.",
+        "source_ids": [
+          "http-semantics"
+        ],
+        "original_span": {
+          "start": 0,
+          "end": 78
+        }
+      },
+      {
+        "id": "DTC2",
+        "text": "Server supplies the ETag; client echoes it in If-None-Match.",
+        "strength": "mechanism",
+        "scope": "Described conditional GET.",
+        "source_ids": [
+          "http-semantics"
+        ],
+        "original_span": {
+          "start": 79,
+          "end": 193
+        }
+      },
+      {
+        "id": "DTC3",
+        "text": "A matching tag produces 304, no body, and stored-body reuse.",
+        "strength": "conditional_requirement",
+        "scope": "Selected representation; otherwise successful GET.",
+        "source_ids": [
+          "http-semantics"
+        ],
+        "original_span": {
+          "start": 194,
+          "end": 348
+        }
+      },
+      {
+        "id": "DTC4",
+        "text": "A nonmatching tag permits 200 with current JSON.",
+        "strength": "conditional_behavior",
+        "scope": "Successful GET, not every possible response.",
+        "source_ids": [
+          "http-semantics"
+        ],
+        "original_span": {
+          "start": 349,
+          "end": 425
+        }
+      },
+      {
+        "id": "DTC5",
+        "text": "Validation still sends a request.",
+        "strength": "categorical_within_scope",
+        "scope": "Described conditional validation.",
+        "source_ids": [
+          "http-caching"
+        ],
+        "original_span": {
+          "start": 427,
+          "end": 468
+        }
+      },
+      {
+        "id": "DTC6",
+        "text": "Freshness can permit reuse without validation; max-age=60 is illustrative.",
+        "strength": "qualified_recommendation",
+        "scope": "Other caching rules apply.",
+        "source_ids": [
+          "http-caching"
+        ],
+        "original_span": {
+          "start": 469,
+          "end": 618
+        }
+      },
+      {
+        "id": "DTC7",
+        "text": "Fresh reuse does not guarantee unchanged origin data for 60 seconds.",
+        "strength": "permission_and_non_guarantee",
+        "scope": "Illustrative freshness interval.",
+        "source_ids": [
+          "http-caching"
+        ],
+        "original_span": {
+          "start": 619,
+          "end": 755
+        }
+      }
+    ],
+    "protected_literal_spans": [
+      {
+        "literal": "ETag",
+        "spans": [
+          {
+            "start": 7,
+            "end": 11
+          },
+          {
+            "start": 99,
+            "end": 103
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "GET",
+        "spans": [
+          {
+            "start": 152,
+            "end": 155
+          },
+          {
+            "start": 384,
+            "end": 387
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "If-None-Match",
+        "spans": [
+          {
+            "start": 179,
+            "end": 192
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "304 Not Modified",
+        "spans": [
+          {
+            "start": 261,
+            "end": 277
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "200 OK",
+        "spans": [
+          {
+            "start": 396,
+            "end": 402
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "Cache-Control: max-age=60",
+        "spans": [
+          {
+            "start": 556,
+            "end": 581
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      },
+      {
+        "literal": "60 seconds",
+        "spans": [
+          {
+            "start": 744,
+            "end": 754
+          }
+        ],
+        "rule": "Preserve exact literal spelling in any revision."
+      }
+    ],
+    "claim_reconciliation": {
+      "method": "Original checked clause by clause; claim spans use zero-based, end-exclusive character offsets.",
+      "all_useful_original_claims_inventoried": true,
+      "all_claim_spans_match_original": true,
+      "claim_count": 7
+    }
+  },
+  "answers": [
+    {
+      "label": "A",
+      "sha256": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc",
+      "text": "An ETag lets the client validate its stored JSON response. The server supplies the ETag with the response, and the client sends that value in If-None-Match on a later conditional GET. If the tag matches the selected representation, the server returns 304 Not Modified with no response body, so the client can reuse its stored body. If it does not match, an otherwise successful GET returns 200 OK with the current JSON.\n\nThat validation still sends a request. To permit reuse without validation while the response is fresh, configure an appropriate freshness policy, for example Cache-Control: max-age=60, subject to the other caching rules. Fresh reuse does not guarantee that the underlying data will stay unchanged for 60 seconds.\n"
+    },
+    {
+      "label": "B",
+      "sha256": "68e137a2296ec35c454f4adaaa35462b71625b96d0e821e0b9e4466a5ebd9c77",
+      "text": "An ETag lets your client validate a stored JSON response and avoid downloading the body again when it is unchanged. Validation still requires a request; the ETag alone does not eliminate it.\n\nThe server sends an ETag with the initial JSON response. On a later conditional GET, the client puts that value in If-None-Match. In the ordinary successful GET case, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, and the client can reuse its stored body. If the tag does not match, the server returns 200 OK with the current JSON. See [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html).\n\nTo allow reuse without validation, configure an appropriate freshness policy, for example Cache-Control: max-age=60. While the cached response is fresh, the cache can reuse it without a request if the other caching rules permit. A freshness lifetime of 60 seconds does not guarantee that the underlying data stays unchanged for that period. See [HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html).\n"
+    },
+    {
+      "label": "C",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "text": "An ETag lets the client validate a stored JSON response. The server sends the ETag with the response, and the client includes that value in If-None-Match on a later conditional GET. For an otherwise successful GET, a tag matching the selected representation produces 304 Not Modified with no response body; the client can reuse its stored body. If the tag does not match, the server returns 200 OK with the current JSON.\n\nValidation still sends a request. An appropriate freshness policy, such as Cache-Control: max-age=60, can permit reuse without validation, subject to the other caching rules. The client can reuse the response while it is fresh; that permission does not guarantee the underlying data will remain unchanged for 60 seconds.\n"
+    },
+    {
+      "label": "D",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "text": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.\n\nThis validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.\n"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-09-06T21:30:27Z",
+  "reviewer": "Separate LLM reviewer agent /root/targeted_quality_review",
+  "review_type": "LLM technical and editorial review; not independent human preference",
+  "dataset": "Synthetic editing fixtures with deliberately introduced clarity problems",
+  "overall_verdict": "pass",
+  "review_protocol": {
+    "inputs_read": [
+      "frozen-skill/SKILL.md",
+      "sources/github-actions-concurrency/question.txt",
+      "sources/github-actions-concurrency/original.md",
+      "sources/github-actions-concurrency/source-evidence.json",
+      "candidates/github-actions-concurrency/revision.md",
+      "sources/python-taskgroup/question.txt",
+      "sources/python-taskgroup/original.md",
+      "sources/python-taskgroup/source-evidence.json",
+      "candidates/python-taskgroup/revision.md"
+    ],
+    "detector_outputs_or_history_read": false,
+    "private_material_read": false,
+    "writer_reports_or_diagnoses_read": false,
+    "official_sources_checked_live": true,
+    "runtime_behavior_exercised": false,
+    "candidates_changed": false,
+    "publication_or_scan_performed": false
+  },
+  "cases": [
+    {
+      "case": "github-actions-concurrency",
+      "original_sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec",
+      "reviewed_revision_sha256": "e0cd16ed2efccb2ad471064fefe5a30c5320cbd9bc0290a1b65d57904a614cc9",
+      "expected_revision_hash_matches": true,
+      "verdict": "pass",
+      "original_assessment": {
+        "verdict": "pass",
+        "correctness": "Supported by the current normative property documentation, including queue: max.",
+        "relevance": "Answers survival of pending runs, a configuration for multiple pending runs, and queue order.",
+        "clarity": "Understandable, but the repository/group scope arrives late, They follows both retained and canceled runs, and the compatible cancellation setting is separated from the queue instruction.",
+        "tone": "Concise, professional and appropriately direct.",
+        "qualifier_completeness": "All material qualifications for the constructed question are present."
+      },
+      "revision_assessment": {
+        "correctness": "All eight supplied claims retain their meaning; no factual correction or unsupported addition was found.",
+        "relevance": "Retains the same complete answer to the question.",
+        "clarity": "The opening establishes scope before behavior; Retained queued runs names the actor; the compatible false setting and validation restriction are beside queue: max.",
+        "tone": "Retains the original's professional, direct register without padding or invented experience.",
+        "qualifier_completeness": "All decision-changing conditions survive, including the bounded queue and distinction between waiting order and dispatch order."
+      },
+      "preference": "revision",
+      "preference_strength": "modest",
+      "preference_reason": "The revision removes three local sources of backtracking without changing practical advice. The original was already technically sound; this is a clarity improvement, not a demonstrated user-outcome improvement.",
+      "reconstruction": {
+        "conclusion": "Disabling in-progress cancellation does not ensure every waiting run survives.",
+        "next_action": "Keep cancel-in-progress: false and set queue: max when several runs should wait.",
+        "limiting_condition": "The contention is within the same repository and group; capacity is 100 pending runs, excess arrivals are canceled, and retained runs follow entry into waiting rather than dispatch order."
+      },
+      "preservation": {
+        "all_claims_preserved": true,
+        "claim_ids_verified": [
+          "G-C1",
+          "G-C2",
+          "G-C3",
+          "G-C4",
+          "G-C5",
+          "G-C6",
+          "G-C7",
+          "G-C8"
+        ],
+        "protected_spans_verified_byte_for_byte_with_occurrence_counts": {
+          "`cancel-in-progress: false`": 2,
+          "`queue: single`": 1,
+          "`queue: max`": 2,
+          "`cancel-in-progress: true`": 2
+        },
+        "protected_values_verified": {
+          "100": 1
+        },
+        "qualifiers_verified": [
+          "Same group and same repository govern contention.",
+          "queue: single remains explicitly the default and replacement applies to the pending run.",
+          "queue: max retains up to 100 pending runs; arrivals beyond capacity are canceled.",
+          "The ordering claim names retained runs and distinguishes waiting time from dispatch time.",
+          "false is a compatible configuration choice, without claiming it must be explicitly written.",
+          "queue: max with cancel-in-progress: true fails validation.",
+          "Active-run cancellation with true remains limited to the default-queue discussion.",
+          "Protects active work is read in the stated concurrency-setting context, not as immunity from unrelated cancellation."
+        ],
+        "new_scope_cuts": [],
+        "unsupported_additions": []
+      },
+      "blocking_objections": [],
+      "source_urls": [
+        "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#concurrency",
+        "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency"
+      ],
+      "source_verification": "Live GitHub.com property definitions and queue example confirm single/max capacity, overflow cancellation, incompatibility with true, repository scope and FIFO by waiting time. Some generic examples omit cancellation conditions; the normative property definitions control this review."
+    },
+    {
+      "case": "python-taskgroup",
+      "original_sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+      "reviewed_revision_sha256": "81f8b3a848d0dc3a55baedc745e604763acc478045f0ac44f49d3a3a41f0121d",
+      "expected_revision_hash_matches": true,
+      "verdict": "pass",
+      "original_assessment": {
+        "verdict": "pass",
+        "correctness": "Supported by the official TaskGroup and task-cancellation documentation.",
+        "relevance": "Covers sibling cancellation, caller-visible grouped failures, cleanup, cancellation propagation and the minimum version.",
+        "clarity": "Readable, but This happens leaves the wait-before-report relationship indirect; the cancellation exception and version requirement appear later than their governing claim.",
+        "tone": "Concise, professional and suitably qualified.",
+        "qualifier_completeness": "The necessary ordinary-exception, child-cancellation and special-base-exception qualifications are present."
+      },
+      "revision_assessment": {
+        "correctness": "All nine supplied claims retain their meaning; no factual correction or unsupported addition was found.",
+        "relevance": "Retains the complete answer to the worker-failure question.",
+        "clarity": "The minimum version is immediately visible, child cancellation is distinguished beside the sibling-cancellation trigger, and exception-group timing is named explicitly.",
+        "tone": "Maintains the original's direct register and the qualified cleanup recommendation.",
+        "qualifier_completeness": "Generally, alone, ordinary exceptions, wait-before-raise, and the special KeyboardInterrupt/SystemExit path all remain."
+      },
+      "preference": "revision",
+      "preference_strength": "modest",
+      "preference_reason": "The revision makes the prerequisite and causal timing easier to locate without changing the cleanup paragraph or increasing certainty. The opening paragraph is denser, but its statements are now in a useful dependency order.",
+      "reconstruction": {
+        "conclusion": "On Python 3.11 or later, an ordinary child failure cancels siblings; the group waits for children before raising their non-cancellation failures together.",
+        "next_action": "Use TaskGroup for the batch, put child cleanup in try/finally, and generally re-raise explicitly caught CancelledError after cleanup.",
+        "limiting_condition": "A child's CancelledError alone does not trigger sibling cancellation; the group type depends on collected failures, KeyboardInterrupt/SystemExit are re-raised specially, and failure closes the group to new tasks."
+      },
+      "preservation": {
+        "all_claims_preserved": true,
+        "claim_ids_verified": [
+          "P-C1",
+          "P-C2",
+          "P-C3",
+          "P-C4",
+          "P-C5",
+          "P-C6",
+          "P-C7",
+          "P-C8",
+          "P-C9"
+        ],
+        "protected_spans_verified_byte_for_byte_with_occurrence_counts": {
+          "`asyncio.TaskGroup`": 1,
+          "`ValueError`": 1,
+          "`ExceptionGroup`": 1,
+          "`async with`": 1,
+          "`try/finally`": 1,
+          "`asyncio.CancelledError`": 2,
+          "`BaseExceptionGroup`": 1,
+          "`KeyboardInterrupt`": 1,
+          "`SystemExit`": 1
+        },
+        "protected_values_verified": {
+          "Python 3.11 or later": 1
+        },
+        "qualifiers_verified": [
+          "Ordinary exceptions such as ValueError cause sibling cancellation.",
+          "A child's CancelledError alone does not cause sibling cancellation; this does not rule out external group cancellation.",
+          "ExceptionGroup is conditional on all collected failures being ordinary exceptions.",
+          "The group waits for every child before raising collected failures; the wait does not postpone the cancellation request.",
+          "Cancellation is raised at the next opportunity and cleanup belongs inside child coroutines.",
+          "Generally re-raise remains qualified, and the warning says swallowing can interfere rather than asserting inevitable failure.",
+          "BaseExceptionGroup remains available when required by collected failures.",
+          "KeyboardInterrupt and SystemExit retain cancel-then-wait-then-re-raise behavior.",
+          "The first non-cancellation failure prevents new tasks; Python 3.11 or later remains the minimum version."
+        ],
+        "new_scope_cuts": [],
+        "unsupported_additions": []
+      },
+      "blocking_objections": [],
+      "source_urls": [
+        "https://docs.python.org/3.14/library/asyncio-task.html#task-groups",
+        "https://docs.python.org/3.14/library/asyncio-task.html#task-cancellation"
+      ],
+      "source_verification": "Live Python 3.14.7 documentation confirms the described child-failure, cleanup and exception-reporting behavior, and records TaskGroup as added in Python 3.11. No runtime test was performed."
+    }
+  ],
+  "limitations": [
+    "Both questions and originals are synthetic; this comparison does not establish performance on naturally occurring discussions.",
+    "Preference is an LLM editorial judgment, not a human preference measurement.",
+    "Pass covers the exact hashes above and technical/editorial quality only; it is not publication authorization or a detector result."
+  ],
+  "public_artifact_mapping": {
+    "frozen-skill/SKILL.md": "frozen-skill/SKILL.txt",
+    "sources/github-actions-concurrency/original.md": "inputs/github-original.txt",
+    "candidates/github-actions-concurrency/revision.md": "inputs/github-revision.txt",
+    "sources/python-taskgroup/original.md": "inputs/python-original.txt",
+    "candidates/python-taskgroup/revision.md": "inputs/python-revision.txt"
+  }
+}

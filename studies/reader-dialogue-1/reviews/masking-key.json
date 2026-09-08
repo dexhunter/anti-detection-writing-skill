@@ -1,0 +1,12 @@
+{
+  "A": {
+    "arm": "candidate",
+    "sha256": "c449930999cf361972380f5cc2e073a153d591c170ce0dfc8194dfc0fd8284de",
+    "path": "outputs/candidate/final.txt"
+  },
+  "B": {
+    "arm": "baseline",
+    "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+    "path": "outputs/baseline/final.txt"
+  }
+}

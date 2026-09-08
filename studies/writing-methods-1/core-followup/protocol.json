@@ -1,0 +1,31 @@
+{
+  "study": "core-followup",
+  "frozen_at": "2026-09-07T12:44:23.749249+00:00",
+  "relationship": "Separate adaptive development follow-up after writing-methods-4 stopped. Does not reopen its confirmation phase or replace its selected output.",
+  "reason": "The selected prior method made no edits. The already generated core-expansion method passed independent review but has no detector measurement. Test that actual rewriting procedure once rather than infer its performance from the no-op comparison.",
+  "case": "wm4-dev-technical-01",
+  "case_status": "Reused development case; baseline and original scores already known to coordinator. Candidate was generated and independently quality-reviewed before all prior scores. No new or post-score wording.",
+  "candidate_method": "core-expansion",
+  "method_instruction_sha256": "c827968d717e740bfd582d1ea60c2849bf38080068c29dd129102042be4282c4",
+  "tested_skill_sha256": "22fcf2ac709b81a8ac5d96ce52667c9d0965eb2af9ae5249cea3671476ce5d17",
+  "quality": "Technical masked A versus C; both pass all claims/literals and tie in readability.",
+  "detector": "Pangram 4.0 Free text detection; actual version must match between pair",
+  "budget": {
+    "calls": 2,
+    "credits_max": 4,
+    "purchase_allowed": false
+  },
+  "order": [
+    "fresh baseline",
+    "unchanged core-expansion candidate"
+  ],
+  "endpoint": "Native document label and separately displayed AI-text percentage; unshown metrics stay null.",
+  "success": "At least 5 pp lower explicitly comparable AI-text proportion, or better native document label without comparable AI-fraction regression, and no quality loss. Exploratory only.",
+  "stop": "Exactly one full pair. No additional cases or candidate repairs in this branch regardless of outcome; no holdout access. Core remains unconfirmed even if improved.",
+  "gptzero": "Not tested in this branch; remaining allowance could not fund a complete pair.",
+  "report": "Retain all results. Distinguish adaptive choice of method/case from candidate generation before scores. A positive result is development-only and cannot support a generally effective new rule.",
+  "input_hashes": {
+    "baseline": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+    "core-expansion": "8682a7921a24b84632f22160b71c63020098040a65d0f854956ab7afc3f357fc"
+  }
+}

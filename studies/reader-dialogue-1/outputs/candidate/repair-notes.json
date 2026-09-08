@@ -1,0 +1,15 @@
+{
+  "repair": "single_pre_score_clarity_repair",
+  "changes": [
+    "Linked cancellation habits directly to unused reservations and residents' availability directly to low weekday-morning demand, preserving uncertainty.",
+    "Made all three proposed expansion conditions jointly required, explicitly scoped the 85% denominator to extension reservations, and specified four of the six extension weeks.",
+    "Moved the cancellation-versus-use qualification beside the reliability threshold.",
+    "Removed the closing because clause and retained the limitation on determining room numbers."
+  ],
+  "substantive_claim_cuts": [],
+  "word_count": 334,
+  "claim_count": 20,
+  "all_mapped_excerpts_verified": true,
+  "original_files_unchanged": true,
+  "detector_scan_performed": false
+}

@@ -1,0 +1,10 @@
+`.gitignore` only affects untracked files, so it won't stop changes appearing for a file you've already committed. From the repository root, run:
+
+```sh
+git rm --cached -- config.local.json
+git add .gitignore
+```
+
+Then commit the removal together with the ignore rule. `--cached` removes the file from Git's index and leaves your local copy on disk. The repository will no longer track that file; the ignore rule prevents ordinary `git add` from adding it again.
+
+See the [Git documentation](https://git-scm.com/docs/gitignore/2.42.0#_notes).

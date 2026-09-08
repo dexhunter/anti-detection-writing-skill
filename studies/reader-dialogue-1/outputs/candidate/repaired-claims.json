@@ -1,0 +1,225 @@
+{
+  "case_id": "wm5-community-library-room-booking-pilot",
+  "synthetic_provenance": "entirely_synthetic",
+  "claims": [
+    {
+      "id": "C01",
+      "source_fact_ids": [
+        "F01",
+        "F15"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and reliability before considering more rooms."
+      ]
+    },
+    {
+      "id": "C02",
+      "source_fact_ids": [
+        "F02",
+        "F04",
+        "F09"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "The first eight weeks show demand, without establishing reliable access."
+      ]
+    },
+    {
+      "id": "C03",
+      "source_fact_ids": [
+        "F03"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Two rooms offered free, two-hour bookings during staffed hours"
+      ]
+    },
+    {
+      "id": "C04",
+      "source_fact_ids": [
+        "F04"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "118 of 160 slots were reserved, and 91 were used."
+      ]
+    },
+    {
+      "id": "C05",
+      "source_fact_ids": [
+        "F05"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Of 42 voluntary feedback respondents, 25 valued predictable space for study or small-group work; 17 struggled to find a slot or complete a booking."
+      ]
+    },
+    {
+      "id": "C06",
+      "source_fact_ids": [
+        "F05",
+        "F06"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Of 42 voluntary feedback respondents",
+        "These responses cannot establish how widespread those difficulties are."
+      ]
+    },
+    {
+      "id": "C07",
+      "source_fact_ids": [
+        "F04",
+        "F07",
+        "F08",
+        "F10",
+        "F11"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Eighteen of 27 unused reservations belonged to four repeat bookers. Most slots never reserved fell before noon on weekdays."
+      ]
+    },
+    {
+      "id": "C08",
+      "source_fact_ids": [
+        "F10",
+        "F11"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Cancellation habits may contribute to unused reservations, while residents’ availability may explain low weekday-morning demand; neither explanation is established. Unused reservations alone do not measure unmet demand"
+      ]
+    },
+    {
+      "id": "C09",
+      "source_fact_ids": [
+        "F12"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "adding rooms would not necessarily address either problem."
+      ]
+    },
+    {
+      "id": "C10",
+      "source_fact_ids": [
+        "F09",
+        "F13",
+        "F14",
+        "F15"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and reliability before considering more rooms."
+      ]
+    },
+    {
+      "id": "C11",
+      "source_fact_ids": [
+        "F13"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "The online form requires an email address, while telephone bookings depend on the front-desk supervisor’s availability."
+      ]
+    },
+    {
+      "id": "C12",
+      "source_fact_ids": [
+        "F14"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Three of the 17 respondents reporting difficulties said the email requirement or limited telephone coverage prevented a booking."
+      ]
+    },
+    {
+      "id": "C13",
+      "source_fact_ids": [
+        "F16"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "During the extension, any trained desk worker should accept telephone and in-person reservations, with every route using the same inventory."
+      ]
+    },
+    {
+      "id": "C14",
+      "source_fact_ids": [
+        "F17"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Reminders and simple cancellation could help release unwanted reservations, though effectiveness remains unmeasured.",
+        "Timely cancellation counts toward the 85% threshold, but releasing a slot does not establish that someone uses it."
+      ]
+    },
+    {
+      "id": "C15",
+      "source_fact_ids": [
+        "F18"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "The service manager should arrange training and publish weekly reservation, attendance, cancellation and unaccommodated-request totals by booking route and time of day."
+      ]
+    },
+    {
+      "id": "C16",
+      "source_fact_ids": [
+        "F19"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Desk workers should record requests consistently, including when rooms are full."
+      ]
+    },
+    {
+      "id": "C17",
+      "source_fact_ids": [
+        "F15",
+        "F20"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and reliability before considering more rooms.",
+        "After the six-week extension, all three proposed conditions must be met before considering expansion"
+      ]
+    },
+    {
+      "id": "C18",
+      "source_fact_ids": [
+        "F20",
+        "F21",
+        "F22"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "After the six-week extension, all three proposed conditions must be met before considering expansion: trained staff can cover every staffed opening period; at least 85% of reservations during the extension are used or cancelled before their start; and unaccommodated requests persist despite the changes in at least four of the six weeks.",
+        "Timely cancellation counts toward the 85% threshold, but releasing a slot does not establish that someone uses it."
+      ]
+    },
+    {
+      "id": "C19",
+      "source_fact_ids": [
+        "F23"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "Meeting these conditions would support considering expansion, without establishing how many rooms are needed."
+      ]
+    },
+    {
+      "id": "C20",
+      "source_fact_ids": [
+        "F24"
+      ],
+      "status": "preserved",
+      "exact_excerpts": [
+        "If coverage or reliability remains weak, revise the process and reassess before expanding."
+      ]
+    }
+  ]
+}

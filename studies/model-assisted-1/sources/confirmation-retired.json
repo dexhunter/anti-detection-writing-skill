@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "b20-confirm-notice-01",
+      "split": "holdout",
+      "question": "Write a clear public visitor notice for the invented Hawthorn Museum family map workshop. Include every supplied attendance, booking, arrival, accessibility, cancellation, and alternative-visit condition. Use only the synthetic facts; do not imply these are real events.",
+      "original": "Fictional notice: Hawthorn Museum family map workshop.\n\nThe workshop takes place on 18 November from 14:00 to 15:30 in the ground-floor studio. It is intended for children aged eight to twelve, and every child must attend with an adult. Each booking covers one child and one adult; both places are included in the £6 price.\n\nThere are twelve child places. Book by 16 November using the museum reception desk; a place is confirmed only after payment. Materials are provided. Please arrive ten minutes early and use the courtyard entrance. The studio has step-free access, but the workshop will not include a sign-language interpreter.\n\nIf fewer than six child places are paid for by the booking deadline, the museum will cancel the session and issue full refunds. Cancellation notices will be sent to the email address supplied at booking. The permanent galleries will remain open that afternoon, and their usual entry charge will still apply.",
+      "claims": [
+        "HC1: This is an invented Hawthorn Museum family map workshop, not a real event.",
+        "HC2: The workshop is on 18 November, 14:00 to 15:30, in the ground-floor studio.",
+        "HC3: Intended child age range is eight to twelve; every child must attend with an adult.",
+        "HC4: Each booking covers one child and one adult for a combined price of £6.",
+        "HC5: Capacity is twelve child places, not twelve total attendees.",
+        "HC6: Book at the museum reception desk by 16 November; payment is required for confirmation.",
+        "HC7: Materials are provided.",
+        "HC8: Arrive ten minutes early and use the courtyard entrance.",
+        "HC9: Studio access is step-free; no sign-language interpreter is included in this workshop.",
+        "HC10: Fewer than six paid child places by the booking deadline triggers cancellation and full refunds.",
+        "HC11: Cancellation notices go to the email address provided at booking.",
+        "HC12: Permanent galleries remain open that afternoon; their usual entry charge still applies."
+      ],
+      "protected": [
+        "Hawthorn Museum",
+        "18 November",
+        "14:00",
+        "15:30",
+        "eight to twelve",
+        "£6",
+        "twelve",
+        "16 November",
+        "ten minutes",
+        "courtyard entrance",
+        "six"
+      ],
+      "sources": [
+        "{\"id\":\"b20-synthetic-museum-contract\",\"kind\":\"provided_synthetic_facts\",\"title\":\"Invented Hawthorn Museum workshop contract\",\"url\":null,\"verification\":\"Constructed as a self-contained synthetic fidelity case by confirmation custodian; no external real-world assertion.\",\"facts\":[\"The event and institution are invented for this experiment.\",\"Family map workshop: 18 November, 14:00 to 15:30, ground-floor studio.\",\"Children aged eight to twelve; each attends with an adult.\",\"One booking includes one child and one adult; combined price £6.\",\"Twelve child places; reception-desk booking deadline 16 November; payment confirms the place.\",\"Materials provided; arrive ten minutes early through the courtyard entrance.\",\"Studio is step-free; no sign-language interpreter is included.\",\"Cancel with full refunds if fewer than six child places have been paid for by the deadline.\",\"Send cancellation notices to the booking email address.\",\"Permanent galleries stay open that afternoon and retain their usual entry charge.\"]}"
+      ]
+    },
+    {
+      "id": "b20-confirm-rules-02",
+      "split": "holdout",
+      "question": "Turn the supplied invented Lantern Trail rules into a concise numbered quick-start guide for first-time players. Preserve every rule and exception. Do not add strategy, examples, equipment requirements, or game mechanics that were not supplied.",
+      "original": "Lantern Trail is an invented game for two to four players. Use a track with spaces numbered 1 to 12. Each player puts a pawn on space 1 and takes one lantern token. Players take turns clockwise, starting with the youngest player.\n\nOn your turn, either move forward one space or stay where you are and take one lantern token. You may hold at most three tokens, so you cannot choose to stay and collect a token when you already have three.\n\nBefore moving, you may instead spend two lantern tokens to move forward three spaces. Pay the tokens before moving. If that move would pass space 12, your pawn stays where it was and the spent tokens are not returned. A normal one-space move cannot pass space 12 because reaching that space ends the game immediately.\n\nPawns may share a space. The first player to reach space 12 wins. There are no dice.",
+      "claims": [
+        "LC1: Lantern Trail is an invented game for two to four players.",
+        "LC2: Track spaces are numbered 1 to 12; every pawn starts on space 1.",
+        "LC3: Each player starts with one lantern token.",
+        "LC4: Youngest player starts; turns then proceed clockwise.",
+        "LC5: Each turn choose a normal one-space forward move or staying in place to take one token.",
+        "LC6: Maximum holdings are three tokens; staying to collect is disallowed when already holding three.",
+        "LC7: As an alternative before moving, spend two tokens for a three-space forward move; payment occurs first.",
+        "LC8: A paid move that would pass space 12 leaves the pawn in place and does not refund the spent tokens.",
+        "LC9: Reaching space 12 immediately ends the game, so a normal one-space move cannot pass it.",
+        "LC10: Pawns can share a space.",
+        "LC11: First player to reach space 12 wins.",
+        "LC12: The game has no dice."
+      ],
+      "protected": [
+        "Lantern Trail",
+        "two to four",
+        "1",
+        "12",
+        "clockwise",
+        "youngest",
+        "one",
+        "three",
+        "two"
+      ],
+      "sources": [
+        "{\"id\":\"b20-synthetic-game-contract\",\"kind\":\"provided_synthetic_facts\",\"title\":\"Invented Lantern Trail rule contract\",\"url\":null,\"verification\":\"Constructed as a self-contained synthetic fidelity case by confirmation custodian; the rules define the fictional game completely.\",\"facts\":[\"Invented game Lantern Trail is for two to four players.\",\"Track spaces run from 1 through 12; all pawns start on 1.\",\"Each player receives one lantern token.\",\"Youngest player starts; turns proceed clockwise.\",\"Normal turn: move forward one space or stay in place and take one token.\",\"Token limit is three; cannot stay to take another token when holding three.\",\"Before moving, a player may instead pay two tokens for a three-space advance; pay first.\",\"If the paid advance would pass 12, stay in place and do not recover the payment.\",\"Reaching 12 ends the game immediately; normal one-space moves therefore cannot pass 12.\",\"Pawns can occupy the same space.\",\"First to reach 12 wins.\",\"No dice are used.\"]}"
+      ]
+    }
+  ]
+}

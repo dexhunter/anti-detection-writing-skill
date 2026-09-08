@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "study": "technical-format-1",
+  "date": "2026-09-08",
+  "status": "complete",
+  "design": "One previously exposed synthetic ETag case; two distinct format hypotheses and one freshly scanned existing baseline.",
+  "source_case": "wm4-dev-technical-01",
+  "unseen": false,
+  "skill_performance_experiment": false,
+  "context": {
+    "writer_contexts": 1,
+    "writer_context_reused": true,
+    "reviewer_contexts": 1,
+    "reviewer_context_reused": true,
+    "scores_hidden_from_reviewer": true,
+    "prior_etag_exposure_reported": false,
+    "fresh_context_isolation_claimed": false
+  },
+  "procedure": {
+    "candidates_per_format": 1,
+    "scan_order": [
+      "baseline",
+      "reference-card",
+      "mini-faq"
+    ],
+    "quality_review_before_scan": true,
+    "post_review_edits": 0,
+    "retries": 0,
+    "new_local_model_generations": 0,
+    "word_credit_ceiling": 480,
+    "call_ceiling": 3,
+    "actual_complete_package_reserved_before_first_scan": true
+  },
+  "measurement_provenance": "Native receipt validation against saved signed-in Chrome UI, pre/post editor text and private screenshots. Public records are sanitized operator observations, not authenticated service exports.",
+  "entry_transform": "gptzero_code_block_v1: literal Markdown, remove one terminal LF for submission; captured editor is submitted text plus exactly three LFs.",
+  "observations": [
+    {
+      "role": "baseline",
+      "words_displayed": 133,
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-08T11:14:07.625Z",
+      "status": "complete",
+      "confidence_percent": {
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0
+      },
+      "warnings": [],
+      "short_text_warning": false,
+      "answer_sha256": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+      "representations": {
+        "answer": "measurements/baseline/answer.txt",
+        "submitted": "measurements/baseline/submitted.txt",
+        "editor-before": "measurements/baseline/editor-before.txt",
+        "editor-after": "measurements/baseline/editor-after.txt"
+      }
+    },
+    {
+      "role": "reference-card",
+      "words_displayed": 127,
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-08T11:14:44.739Z",
+      "status": "complete",
+      "confidence_percent": {
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0
+      },
+      "warnings": [],
+      "short_text_warning": false,
+      "answer_sha256": "fc9d84c07478b90a5f53ed3d1ae0019a1c54f62ef21608525a10f64bfb0d5de0",
+      "representations": {
+        "answer": "measurements/reference-card/answer.txt",
+        "submitted": "measurements/reference-card/submitted.txt",
+        "editor-before": "measurements/reference-card/editor-before.txt",
+        "editor-after": "measurements/reference-card/editor-after.txt"
+      }
+    },
+    {
+      "role": "mini-faq",
+      "words_displayed": 134,
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-08T11:15:11.011Z",
+      "status": "complete",
+      "confidence_percent": {
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0
+      },
+      "warnings": [],
+      "short_text_warning": false,
+      "answer_sha256": "daeb2a2e3ab01ac3cc32f587711e363d9a85e3c774188238e6c716d232ffbaa8",
+      "representations": {
+        "answer": "measurements/mini-faq/answer.txt",
+        "submitted": "measurements/mini-faq/submitted.txt",
+        "editor-before": "measurements/mini-faq/editor-before.txt",
+        "editor-after": "measurements/mini-faq/editor-after.txt"
+      }
+    }
+  ],
+  "completed_calls": 3,
+  "word_credits_spent": 394,
+  "reductions": 0,
+  "quality": "All three texts passed correctness and form checks; all three pairwise comparisons tied.",
+  "monetary_cost": null,
+  "llm_token_usage": null,
+  "runtime_comparison": null,
+  "decision": "No format promoted for detector reduction. Retain all unchanged outcomes.",
+  "limits": [
+    "One exposed case and one shared baseline; not independent paired trials.",
+    "This does not test the current readability instruction added after the frozen writer packet.",
+    "Reused contexts were disclosed before generation; shared filesystem cannot prove undeclared reads impossible.",
+    "No inference about detector internals, impossibility, human authorship or transfer.",
+    "A smaller bounded comparison is not a controlled cost-efficiency benchmark."
+  ]
+}

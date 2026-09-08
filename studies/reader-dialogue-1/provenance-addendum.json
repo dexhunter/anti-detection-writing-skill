@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-07T16:00:43.815572+00:00",
+  "corrects": "frozen/protocol.json: stage_at_freeze",
+  "original_wording": "Method and limits frozen before case delivery or output generation",
+  "observation": {
+    "source_case_file_mtime_utc": "2026-09-07T15:32:51.293459+00:00",
+    "protocol_frozen_at": "2026-09-07T15:33:12.357260+00:00",
+    "generation_metadata_at": "2026-09-07T15:35:46.675723+00:00"
+  },
+  "clarification": "The source case file existed before the recorded protocol freeze. Do not claim the protocol was frozen before source creation or case delivery. The saved freeze predates generation metadata and the recorded writer outputs; it is not evidence that the coordinator could not access the case.",
+  "limit": "Filesystem timestamps and operator metadata document the saved sequence, not an independently authenticated history.",
+  "frozen_artifacts_unchanged": true,
+  "effect_on_outcome": "This narrows provenance claims; it does not change the exact reviewed pair or its observed zero reduction."
+}

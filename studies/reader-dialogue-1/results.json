@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "study": "reader-dialogue-1",
+  "date": "2026-09-07",
+  "case_id": "wm5-community-library-room-booking-pilot",
+  "case_source": "frozen/common-case.json",
+  "design": "One new synthetic development case; paired manual Pangram pilot; no heldout evaluation.",
+  "baseline": "Frozen current skill entrypoint and common operator.",
+  "treatment": "Same skill and operator plus responsive reader dialogue and one pre-score reviewer-informed clarity repair; extra calls/context included.",
+  "quality": {
+    "initial_review": "reviews/quality-review.json",
+    "initial_preference": "baseline",
+    "initial_factual_checks": "both pass all 20 claims",
+    "candidate_repairs": 1,
+    "final_review": "reviews/final-quality-review.json",
+    "final_preference": "tie",
+    "final_factual_checks": "both pass all 20 claims"
+  },
+  "measurements": {
+    "pangram": {
+      "baseline": {
+        "detector": "pangram",
+        "mode": "Free text detection",
+        "model": "4.0",
+        "observed_at": "2026-09-07T15:50:02.285Z",
+        "ai": 100.0,
+        "mixed": null,
+        "human": null,
+        "ai_assisted": null,
+        "input_sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+        "label": "AI Generated",
+        "unit": "displayed_text_proportion_percent",
+        "segment_confidence_labels": [
+          "high"
+        ],
+        "short_text_warning": false,
+        "warnings": [],
+        "text_path": "outputs/baseline/final.txt",
+        "private_receipt_sha256": "12426076d9e84bf32dee3ad74c21925a2fd63137e80575a09f10771fa482244b",
+        "status": "complete",
+        "whitespace_words": 341,
+        "ui_quote_words": 347,
+        "ui_result_words": 347
+      },
+      "candidate": {
+        "detector": "pangram",
+        "mode": "Free text detection",
+        "model": "4.0",
+        "observed_at": "2026-09-07T15:55:13.449Z",
+        "ai": 100.0,
+        "mixed": null,
+        "human": null,
+        "ai_assisted": null,
+        "input_sha256": "42b8de9750d398435e836bd695fa604cca90148a5e44469cd1837734b42de7ca",
+        "label": "AI Generated",
+        "unit": "displayed_text_proportion_percent",
+        "segment_confidence_labels": [
+          "high"
+        ],
+        "short_text_warning": false,
+        "warnings": [],
+        "text_path": "outputs/candidate/repaired.txt",
+        "private_receipt_sha256": "028c50a4c64623f271411302ec333a0519fa40beacbac97ef0f120b255b883bd",
+        "status": "complete",
+        "whitespace_words": 334,
+        "ui_quote_words": 342,
+        "ui_result_words": 343
+      }
+    },
+    "gptzero": {
+      "status": "not_measured",
+      "reason": "Remaining allowance did not cover a complete pair."
+    }
+  },
+  "unscanned": [
+    {
+      "path": "outputs/original.txt",
+      "sha256": "d5205018260ad372aed84573421c5ba3ef400e8df20e06358e6cc8471070dd48",
+      "reason": "Source only; outside paired scan plan."
+    },
+    {
+      "path": "outputs/candidate/final.txt",
+      "sha256": "c449930999cf361972380f5cc2e073a153d591c170ce0dfc8194dfc0fd8284de",
+      "reason": "First candidate lost initial clarity comparison; retained before allowed repair."
+    }
+  ],
+  "comparison": {
+    "ai_text_percentage_point_reduction": 0.0,
+    "native_label_change": "unchanged",
+    "quality_pass": true,
+    "quality_preference": "tie",
+    "success_threshold_met": false,
+    "status": "complete_no_improvement"
+  },
+  "measurement_calls": {
+    "pangram": 2,
+    "gptzero": 0
+  },
+  "disposition": {
+    "adopted_as_default": false,
+    "heldout_accessed": false,
+    "new_default_writing_rule": false
+  },
+  "limits": [
+    "One synthetic development case cannot establish transfer.",
+    "Dialogue, repair, additional compute and article length are not separately identified.",
+    "Masked quality judgments were from agents, not a human-reader study.",
+    "Pangram displayed AI-text proportions are not GPTZero confidence or proof of authorship.",
+    "Raw account evidence stays private; saved receipts check internal correspondence, not service authenticity.",
+    "The candidate quote/result word-count difference is retained without attributing a cause."
+  ],
+  "provenance_addendum": "provenance-addendum.json"
+}

@@ -1,0 +1,2101 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "status_kind": "writer_self_check_only",
+  "timestamps": {
+    "first_observed_utc": "2026-09-08 09:47:19 UTC",
+    "freeze_utc": "2026-09-08T09:53:16.416092+00:00"
+  },
+  "context": {
+    "case_ids_in_same_context": [
+      "b20-confirm-notice-01",
+      "b20-confirm-rules-02"
+    ],
+    "separate_case_contexts": false
+  },
+  "input_manifest": [
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162",
+      "bytes": 9975
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "bbae9534d1a825dbd02705a93d0e6a0ba3e1548dfeee669cd8ce961947ea9dda",
+      "bytes": 7323
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "5f629246ba2ba01230883fb27f137b4f7ddccc6c9edc95397473fdd29632fd00",
+      "bytes": 1273
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c38e969c1888ba331238ee8d9cd6827c5846030e346f12ed2fa4c23313c1dd09",
+      "bytes": 355
+    },
+    {
+      "path": "stages/confirmation/raw/b20-confirm-notice-01.txt",
+      "sha256": "d8fa513fae4750c6607442177f248c364c61a55d32c484137cbab8cbb4372563",
+      "bytes": 897
+    },
+    {
+      "path": "stages/confirmation/raw/b20-confirm-rules-02.txt",
+      "sha256": "5e6adace5eb2843f600f17b9a32841100a5b1b616f74c4ef80544b9b821d1d54",
+      "bytes": 665
+    }
+  ],
+  "scope": {
+    "stage_B_only": true,
+    "development_reuse_clause": "inactive per parent instruction; these are fresh frozen confirmation raw artifacts",
+    "source_order_preserved": true,
+    "stage_C_performed": false,
+    "external_browsing": false,
+    "detector_access": false,
+    "independent_review_performed": false,
+    "publications": false,
+    "repository_or_installed_skill_edits": false,
+    "alternate_output_selection": false,
+    "post_failure_or_post_review_repairs": 0
+  },
+  "cases": [
+    {
+      "id": "b20-confirm-notice-01",
+      "self_check_status": "PASS",
+      "raw": {
+        "path": "stages/confirmation/raw/b20-confirm-notice-01.txt",
+        "sha256": "d8fa513fae4750c6607442177f248c364c61a55d32c484137cbab8cbb4372563",
+        "bytes": 897,
+        "codepoints": 896,
+        "whitespace_word_count": 140,
+        "terminal_LF": false
+      },
+      "final": {
+        "path": "stages/confirmation/repaired/b20-confirm-notice-01.txt",
+        "sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+        "bytes": 986,
+        "codepoints": 985,
+        "whitespace_word_count": 162,
+        "encoding": "UTF-8",
+        "terminal_LF": true
+      },
+      "complete_discrepancy_inventory_and_exact_edit_ledger": [
+        {
+          "id": "N01",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Notices - ",
+          "after": "Fictional notice - ",
+          "reason": "Restore the omitted fiction label so the invented event is not presented as real.",
+          "contract_claim_ids": [
+            "HC1"
+          ],
+          "input_span_codepoints": [
+            0,
+            10
+          ],
+          "output_span_codepoints": [
+            0,
+            19
+          ],
+          "step_input_sha256": "d8fa513fae4750c6607442177f248c364c61a55d32c484137cbab8cbb4372563",
+          "step_output_sha256": "4f04d281d029a24b37616a4dafea29a1c43181b811e3deea794317eec5498f42"
+        },
+        {
+          "id": "N02",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+          "after": "A map workshop for children and adults is hosted at the Hawthorn Museum. It is intended for children aged eight to twelve; every child must attend with an adult.",
+          "reason": "Insert the omitted intended age range and mandatory adult accompaniment immediately after the audience statement.",
+          "contract_claim_ids": [
+            "HC3"
+          ],
+          "input_span_codepoints": [
+            52,
+            124
+          ],
+          "output_span_codepoints": [
+            52,
+            213
+          ],
+          "step_input_sha256": "4f04d281d029a24b37616a4dafea29a1c43181b811e3deea794317eec5498f42",
+          "step_output_sha256": "9e49ae7eebe40d5152da7924cb1248bf36bd5ea1ae349e2e275bf9003375e2ad"
+        },
+        {
+          "id": "N03",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "18th of November",
+          "after": "18 November",
+          "reason": "Restore the exact protected date literal.",
+          "contract_claim_ids": [
+            "HC2"
+          ],
+          "input_span_codepoints": [
+            229,
+            245
+          ],
+          "output_span_codepoints": [
+            229,
+            240
+          ],
+          "step_input_sha256": "9e49ae7eebe40d5152da7924cb1248bf36bd5ea1ae349e2e275bf9003375e2ad",
+          "step_output_sha256": "377ba31c30846c50423d4b25f693190aeda03a6196ee2e72b88e1e984150247c"
+        },
+        {
+          "id": "N04",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "at ground studio.",
+          "after": "at the ground-floor studio. There are twelve child places.",
+          "reason": "Repair the location's missing floor qualifier and article; insert omitted child-place capacity before the booking conditions.",
+          "contract_claim_ids": [
+            "HC2",
+            "HC5"
+          ],
+          "input_span_codepoints": [
+            261,
+            278
+          ],
+          "output_span_codepoints": [
+            261,
+            319
+          ],
+          "step_input_sha256": "377ba31c30846c50423d4b25f693190aeda03a6196ee2e72b88e1e984150247c",
+          "step_output_sha256": "3cee0379556d8d71354b778125befd79e69d3147e1706361ae05ca59d25a47d7"
+        },
+        {
+          "id": "N05",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "For this one day event, registration and booking may be completed",
+          "after": "For this event, booking must be completed",
+          "reason": "Remove the unsupported one-day descriptor and separate registration concept; restore the booking requirement while preserving the reception-desk clause.",
+          "contract_claim_ids": [
+            "HC2",
+            "HC6"
+          ],
+          "input_span_codepoints": [
+            320,
+            385
+          ],
+          "output_span_codepoints": [
+            320,
+            361
+          ],
+          "step_input_sha256": "3cee0379556d8d71354b778125befd79e69d3147e1706361ae05ca59d25a47d7",
+          "step_output_sha256": "206dc6e70d5a5a53e25d15b95537f0d133ada844c4d22a563376eef34bd80b29"
+        },
+        {
+          "id": "N06",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "before 16th November",
+          "after": "by 16 November",
+          "reason": "Restore the inclusive deadline condition and exact protected date.",
+          "contract_claim_ids": [
+            "HC6"
+          ],
+          "input_span_codepoints": [
+            391,
+            411
+          ],
+          "output_span_codepoints": [
+            391,
+            405
+          ],
+          "step_input_sha256": "206dc6e70d5a5a53e25d15b95537f0d133ada844c4d22a563376eef34bd80b29",
+          "step_output_sha256": "3210c46898d55e9bb6b8476208f75eb505c627ed58a3be98ccd761e3894e24ac"
+        },
+        {
+          "id": "N07",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Registration confirms attendance, which includes booking both for one child and one adult at cost £6.",
+          "after": "Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.",
+          "reason": "Replace registration confirmation with the required payment condition; repair the unclear booking reference and price grammar while retaining the child/adult quantities and combined price.",
+          "contract_claim_ids": [
+            "HC4",
+            "HC6"
+          ],
+          "input_span_codepoints": [
+            407,
+            508
+          ],
+          "output_span_codepoints": [
+            407,
+            509
+          ],
+          "step_input_sha256": "3210c46898d55e9bb6b8476208f75eb505c627ed58a3be98ccd761e3894e24ac",
+          "step_output_sha256": "a04b2e6a7a00632a5b65e75a0a8f56a88c4dd190ac4f7c654fa4aa19503c790d"
+        },
+        {
+          "id": "N08",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Materials provided free of charge.",
+          "after": "Materials are provided.",
+          "reason": "Supply the missing verb and remove the unsupported separate free-of-charge assertion.",
+          "contract_claim_ids": [
+            "HC7"
+          ],
+          "input_span_codepoints": [
+            511,
+            545
+          ],
+          "output_span_codepoints": [
+            511,
+            534
+          ],
+          "step_input_sha256": "a04b2e6a7a00632a5b65e75a0a8f56a88c4dd190ac4f7c654fa4aa19503c790d",
+          "step_output_sha256": "5b9c0b02e849d4440388355fc4527fb45e20b6f8a3eb06c40ac526d3e6f49d73"
+        },
+        {
+          "id": "N09",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Participants must arrive",
+          "after": "Please arrive",
+          "reason": "Restore the supplied arrival request without strengthening it to a mandatory attendance condition.",
+          "contract_claim_ids": [
+            "HC8"
+          ],
+          "input_span_codepoints": [
+            535,
+            559
+          ],
+          "output_span_codepoints": [
+            535,
+            548
+          ],
+          "step_input_sha256": "5b9c0b02e849d4440388355fc4527fb45e20b6f8a3eb06c40ac526d3e6f49d73",
+          "step_output_sha256": "7ab0a007ce07317cfd29995c4b6e8479547a517028297e21425b9cb00ca12147"
+        },
+        {
+          "id": "N10",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "use courtyard entrance",
+          "after": "use the courtyard entrance",
+          "reason": "Supply the missing definite article.",
+          "contract_claim_ids": [
+            "HC8"
+          ],
+          "input_span_codepoints": [
+            571,
+            593
+          ],
+          "output_span_codepoints": [
+            571,
+            597
+          ],
+          "step_input_sha256": "7ab0a007ce07317cfd29995c4b6e8479547a517028297e21425b9cb00ca12147",
+          "step_output_sha256": "b063d5c4fd4d9d8e6c0dc321c155af663c4e00326e90b96e8992d9f09f31b0fb"
+        },
+        {
+          "id": "N11",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "an interpreter for deaf sign language",
+          "after": "a sign-language interpreter",
+          "reason": "Restore the supplied interpreter service description; preserve its exclusion from this workshop.",
+          "contract_claim_ids": [
+            "HC9"
+          ],
+          "input_span_codepoints": [
+            655,
+            692
+          ],
+          "output_span_codepoints": [
+            655,
+            682
+          ],
+          "step_input_sha256": "b063d5c4fd4d9d8e6c0dc321c155af663c4e00326e90b96e8992d9f09f31b0fb",
+          "step_output_sha256": "55e33442c7dfe8717c019c6bd3f5c05d23e83f9ff96a957ce5330e18b3110c2f"
+        },
+        {
+          "id": "N12",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "fewer than six participants are registered",
+          "after": "fewer than six child places are paid for",
+          "reason": "Restore the child-place unit, payment trigger and strict fewer-than condition.",
+          "contract_claim_ids": [
+            "HC10"
+          ],
+          "input_span_codepoints": [
+            687,
+            729
+          ],
+          "output_span_codepoints": [
+            687,
+            727
+          ],
+          "step_input_sha256": "55e33442c7dfe8717c019c6bd3f5c05d23e83f9ff96a957ce5330e18b3110c2f",
+          "step_output_sha256": "880db83919c15ec2dc73d93b20229c077ec19bd1883da6f781b9b7960429b25b"
+        },
+        {
+          "id": "N13",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "whole refunds will cancel the session",
+          "after": "the museum will cancel the session and issue full refunds",
+          "reason": "Restore the museum as the cancellation/refund actor and both required consequences; correct the impossible refunds-as-actor construction.",
+          "contract_claim_ids": [
+            "HC10"
+          ],
+          "input_span_codepoints": [
+            754,
+            791
+          ],
+          "output_span_codepoints": [
+            754,
+            811
+          ],
+          "step_input_sha256": "880db83919c15ec2dc73d93b20229c077ec19bd1883da6f781b9b7960429b25b",
+          "step_output_sha256": "6752f91478bba6f9c6149bdb0a157f38ddff913585e0e52c146d3896ad69ba03"
+        },
+        {
+          "id": "N14",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "go to email address",
+          "after": "go to the email address",
+          "reason": "Supply the missing definite article; retain the booking-address destination.",
+          "contract_claim_ids": [
+            "HC11"
+          ],
+          "input_span_codepoints": [
+            850,
+            869
+          ],
+          "output_span_codepoints": [
+            850,
+            873
+          ],
+          "step_input_sha256": "6752f91478bba6f9c6149bdb0a157f38ddff913585e0e52c146d3896ad69ba03",
+          "step_output_sha256": "1cc18bd526371fa815ab377d59880cbe1006f5204ed170d1e8f8a5455b30cb98"
+        },
+        {
+          "id": "N15",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Nearby permanent exhibition spaces",
+          "after": "The permanent galleries",
+          "reason": "Remove unsupported proximity and restore the supplied gallery entity.",
+          "contract_claim_ids": [
+            "HC12"
+          ],
+          "input_span_codepoints": [
+            899,
+            933
+          ],
+          "output_span_codepoints": [
+            899,
+            922
+          ],
+          "step_input_sha256": "1cc18bd526371fa815ab377d59880cbe1006f5204ed170d1e8f8a5455b30cb98",
+          "step_output_sha256": "132ad7696cbd815baaeb0dc29e1f71f6655ad11b6077a6f324cdddc883634fdc"
+        },
+        {
+          "id": "b20-confirm-notice-01-LF",
+          "type": "terminal_LF",
+          "before": "",
+          "after": "\n",
+          "reason": "The frozen operator requires a terminal LF; raw did not have one.",
+          "contract_claim_ids": [],
+          "input_span_codepoints": [
+            984,
+            984
+          ],
+          "output_span_codepoints": [
+            984,
+            985
+          ],
+          "step_input_sha256": "132ad7696cbd815baaeb0dc29e1f71f6655ad11b6077a6f324cdddc883634fdc",
+          "step_output_sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2"
+        }
+      ],
+      "claim_to_span_map": [
+        {
+          "claim_id": "HC1",
+          "full_contract_claim": "HC1: This is an invented Hawthorn Museum family map workshop, not a real event.",
+          "disposition": "restored",
+          "raw_spans": [],
+          "final_spans": [
+            {
+              "text": "Fictional notice - Hawthorn Museum Family Workshop",
+              "present": true,
+              "codepoint_range": [
+                0,
+                50
+              ],
+              "utf8_byte_range": [
+                0,
+                50
+              ]
+            }
+          ],
+          "explanation": "The raw title and body omitted the fiction qualification."
+        },
+        {
+          "claim_id": "HC2",
+          "full_contract_claim": "HC2: The workshop is on 18 November, 14:00 to 15:30, in the ground-floor studio.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Session day is 18th of November from 14:00 to 15:30 at ground studio.",
+              "present": true,
+              "codepoint_range": [
+                116,
+                185
+              ],
+              "utf8_byte_range": [
+                116,
+                185
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+              "present": true,
+              "codepoint_range": [
+                214,
+                288
+              ],
+              "utf8_byte_range": [
+                214,
+                288
+              ]
+            }
+          ],
+          "explanation": "Date literal and ground-floor location corrected; time preserved."
+        },
+        {
+          "claim_id": "HC3",
+          "full_contract_claim": "HC3: Intended child age range is eight to twelve; every child must attend with an adult.",
+          "disposition": "restored",
+          "raw_spans": [
+            {
+              "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+              "present": true,
+              "codepoint_range": [
+                43,
+                115
+              ],
+              "utf8_byte_range": [
+                43,
+                115
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+              "present": true,
+              "codepoint_range": [
+                125,
+                213
+              ],
+              "utf8_byte_range": [
+                125,
+                213
+              ]
+            }
+          ],
+          "explanation": "Raw audience sentence lacked the age range and mandatory accompanying adult."
+        },
+        {
+          "claim_id": "HC4",
+          "full_contract_claim": "HC4: Each booking covers one child and one adult for a combined price of £6.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "booking both for one child and one adult at cost £6.",
+              "present": true,
+              "codepoint_range": [
+                352,
+                404
+              ],
+              "utf8_byte_range": [
+                352,
+                405
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "each booking includes one child and one adult at a combined cost of £6.",
+              "present": true,
+              "codepoint_range": [
+                438,
+                509
+              ],
+              "utf8_byte_range": [
+                438,
+                510
+              ]
+            }
+          ],
+          "explanation": "Quantities and combined price preserved; reference and grammar repaired."
+        },
+        {
+          "claim_id": "HC5",
+          "full_contract_claim": "HC5: Capacity is twelve child places, not twelve total attendees.",
+          "disposition": "restored",
+          "raw_spans": [],
+          "final_spans": [
+            {
+              "text": "There are twelve child places.",
+              "present": true,
+              "codepoint_range": [
+                289,
+                319
+              ],
+              "utf8_byte_range": [
+                289,
+                319
+              ]
+            }
+          ],
+          "explanation": "Raw omitted capacity entirely."
+        },
+        {
+          "claim_id": "HC6",
+          "full_contract_claim": "HC6: Book at the museum reception desk by 16 November; payment is required for confirmation.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "For this one day event, registration and booking may be completed at the museum reception desk before 16th November.",
+              "present": true,
+              "codepoint_range": [
+                186,
+                302
+              ],
+              "utf8_byte_range": [
+                186,
+                302
+              ]
+            },
+            {
+              "text": "Registration confirms attendance",
+              "present": true,
+              "codepoint_range": [
+                303,
+                335
+              ],
+              "utf8_byte_range": [
+                303,
+                335
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+              "present": true,
+              "codepoint_range": [
+                320,
+                406
+              ],
+              "utf8_byte_range": [
+                320,
+                406
+              ]
+            },
+            {
+              "text": "Only payment confirms a place",
+              "present": true,
+              "codepoint_range": [
+                407,
+                436
+              ],
+              "utf8_byte_range": [
+                407,
+                436
+              ]
+            }
+          ],
+          "explanation": "Booking location retained; inclusive deadline, exact date and payment confirmation restored."
+        },
+        {
+          "claim_id": "HC7",
+          "full_contract_claim": "HC7: Materials are provided.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Materials provided free of charge.",
+              "present": true,
+              "codepoint_range": [
+                406,
+                440
+              ],
+              "utf8_byte_range": [
+                407,
+                441
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Materials are provided.",
+              "present": true,
+              "codepoint_range": [
+                511,
+                534
+              ],
+              "utf8_byte_range": [
+                512,
+                535
+              ]
+            }
+          ],
+          "explanation": "Provision preserved; unsupported free-of-charge assertion removed."
+        },
+        {
+          "claim_id": "HC8",
+          "full_contract_claim": "HC8: Arrive ten minutes early and use the courtyard entrance.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Participants must arrive ten minutes early and use courtyard entrance.",
+              "present": true,
+              "codepoint_range": [
+                441,
+                511
+              ],
+              "utf8_byte_range": [
+                442,
+                512
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Please arrive ten minutes early and use the courtyard entrance.",
+              "present": true,
+              "codepoint_range": [
+                535,
+                598
+              ],
+              "utf8_byte_range": [
+                536,
+                599
+              ]
+            }
+          ],
+          "explanation": "Arrival and entrance preserved; source request modality and article restored."
+        },
+        {
+          "claim_id": "HC9",
+          "full_contract_claim": "HC9: Studio access is step-free; no sign-language interpreter is included in this workshop.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "The ground floor studio is step free but will not offer an interpreter for deaf sign language.",
+              "present": true,
+              "codepoint_range": [
+                512,
+                606
+              ],
+              "utf8_byte_range": [
+                513,
+                607
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+              "present": true,
+              "codepoint_range": [
+                599,
+                683
+              ],
+              "utf8_byte_range": [
+                600,
+                684
+              ]
+            }
+          ],
+          "explanation": "Step-free access and workshop-specific negation retained; interpreter description repaired."
+        },
+        {
+          "claim_id": "HC10",
+          "full_contract_claim": "HC10: Fewer than six paid child places by the booking deadline triggers cancellation and full refunds.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "If fewer than six participants are registered by this booking deadline, whole refunds will cancel the session.",
+              "present": true,
+              "codepoint_range": [
+                607,
+                717
+              ],
+              "utf8_byte_range": [
+                608,
+                718
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+              "present": true,
+              "codepoint_range": [
+                684,
+                812
+              ],
+              "utf8_byte_range": [
+                685,
+                813
+              ]
+            }
+          ],
+          "explanation": "Paid child-place trigger, museum agency, session cancellation and full refunds restored."
+        },
+        {
+          "claim_id": "HC11",
+          "full_contract_claim": "HC11: Cancellation notices go to the email address provided at booking.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Notifications of cancellations will go to email address supplied during booking.",
+              "present": true,
+              "codepoint_range": [
+                719,
+                799
+              ],
+              "utf8_byte_range": [
+                720,
+                800
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Notifications of cancellations will go to the email address supplied during booking.",
+              "present": true,
+              "codepoint_range": [
+                814,
+                898
+              ],
+              "utf8_byte_range": [
+                815,
+                899
+              ]
+            }
+          ],
+          "explanation": "Destination and timing retained; article repaired. Notification sender remains unspecified."
+        },
+        {
+          "claim_id": "HC12",
+          "full_contract_claim": "HC12: Permanent galleries remain open that afternoon; their usual entry charge still applies.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Nearby permanent exhibition spaces remain open that afternoon with usual entry charges applying.",
+              "present": true,
+              "codepoint_range": [
+                800,
+                896
+              ],
+              "utf8_byte_range": [
+                801,
+                897
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+              "present": true,
+              "codepoint_range": [
+                899,
+                984
+              ],
+              "utf8_byte_range": [
+                900,
+                985
+              ]
+            }
+          ],
+          "explanation": "Permanent-gallery identity restored; unsupported proximity removed; opening and usual charge preserved."
+        }
+      ],
+      "protected_literal_check": [
+        {
+          "literal": "Hawthorn Museum",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                19,
+                34
+              ],
+              "utf8_byte_range": [
+                19,
+                34
+              ]
+            },
+            {
+              "codepoint_range": [
+                108,
+                123
+              ],
+              "utf8_byte_range": [
+                108,
+                123
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "18 November",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                229,
+                240
+              ],
+              "utf8_byte_range": [
+                229,
+                240
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "14:00",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                246,
+                251
+              ],
+              "utf8_byte_range": [
+                246,
+                251
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "15:30",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                255,
+                260
+              ],
+              "utf8_byte_range": [
+                255,
+                260
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "eight to twelve",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                158,
+                173
+              ],
+              "utf8_byte_range": [
+                158,
+                173
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "£6",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                506,
+                508
+              ],
+              "utf8_byte_range": [
+                506,
+                509
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "twelve",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                167,
+                173
+              ],
+              "utf8_byte_range": [
+                167,
+                173
+              ]
+            },
+            {
+              "codepoint_range": [
+                299,
+                305
+              ],
+              "utf8_byte_range": [
+                299,
+                305
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "16 November",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                394,
+                405
+              ],
+              "utf8_byte_range": [
+                394,
+                405
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "ten minutes",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                549,
+                560
+              ],
+              "utf8_byte_range": [
+                550,
+                561
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "courtyard entrance",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                579,
+                597
+              ],
+              "utf8_byte_range": [
+                580,
+                598
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "six",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                698,
+                701
+              ],
+              "utf8_byte_range": [
+                699,
+                702
+              ]
+            }
+          ]
+        }
+      ],
+      "self_check": {
+        "single_complete_contract_comparison": true,
+        "claim_count": 12,
+        "mapped_claim_count": 12,
+        "all_claims_supported_and_present": true,
+        "unsupported_final_additions": [],
+        "scope_cuts": [],
+        "invented_experience_or_evidence": [],
+        "actor_condition_modality_negation_uncertainty_checked": true,
+        "ordering_changes": [],
+        "all_edits_have_concrete_factual_or_grammar_reason": true,
+        "word_limit_pass": true,
+        "all_protected_literals_pass": true,
+        "format_pass": true,
+        "failure_list": []
+      },
+      "bounded_method_result": "Complete repair within the single Stage B pass; retained supported fluent wording and order outside listed defects."
+    },
+    {
+      "id": "b20-confirm-rules-02",
+      "self_check_status": "PASS",
+      "raw": {
+        "path": "stages/confirmation/raw/b20-confirm-rules-02.txt",
+        "sha256": "5e6adace5eb2843f600f17b9a32841100a5b1b616f74c4ef80544b9b821d1d54",
+        "bytes": 665,
+        "codepoints": 665,
+        "whitespace_word_count": 123,
+        "terminal_LF": false
+      },
+      "final": {
+        "path": "stages/confirmation/repaired/b20-confirm-rules-02.txt",
+        "sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+        "bytes": 824,
+        "codepoints": 824,
+        "whitespace_word_count": 153,
+        "encoding": "UTF-8",
+        "terminal_LF": true
+      },
+      "complete_discrepancy_inventory_and_exact_edit_ledger": [
+        {
+          "id": "R01",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "A 12 space track exists; players start at space 1.",
+          "after": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+          "reason": "Restore explicit track numbering and identify pawns, rather than players themselves, as occupying the starting space.",
+          "contract_claim_ids": [
+            "LC2"
+          ],
+          "input_span_codepoints": [
+            57,
+            107
+          ],
+          "output_span_codepoints": [
+            57,
+            135
+          ],
+          "step_input_sha256": "5e6adace5eb2843f600f17b9a32841100a5b1b616f74c4ef80544b9b821d1d54",
+          "step_output_sha256": "53c935bd57d2d1e9d428de24e3c9759cb54493a6c63e97030a24e14131efebc9"
+        },
+        {
+          "id": "R02",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Each player starts with 1 Lantern Token.",
+          "after": "Each player starts with one Lantern Token.",
+          "reason": "Restore the protected quantity word without changing the starting-token allocation.",
+          "contract_claim_ids": [
+            "LC3"
+          ],
+          "input_span_codepoints": [
+            139,
+            179
+          ],
+          "output_span_codepoints": [
+            139,
+            181
+          ],
+          "step_input_sha256": "53c935bd57d2d1e9d428de24e3c9759cb54493a6c63e97030a24e14131efebc9",
+          "step_output_sha256": "83a5d25b843440a5260ea34cdd6ecb50425370ffa50988d129e08787a02f907d"
+        },
+        {
+          "id": "R03",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Youngest player starts; turns proper proceed clockwise.",
+          "after": "The youngest player starts; turns proceed clockwise.",
+          "reason": "Repair the missing article and ungrammatical adverb insertion; restore the case-sensitive youngest literal.",
+          "contract_claim_ids": [
+            "LC4"
+          ],
+          "input_span_codepoints": [
+            185,
+            240
+          ],
+          "output_span_codepoints": [
+            185,
+            237
+          ],
+          "step_input_sha256": "83a5d25b843440a5260ea34cdd6ecb50425370ffa50988d129e08787a02f907d",
+          "step_output_sha256": "1103089fffbb80dcf0072669189d94bf5ea69bdc6a5c9c6638993a25002e4fd6"
+        },
+        {
+          "id": "R04",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "On each turn select normal forward 1, or stay and take 1 Lantern Token.",
+          "after": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+          "reason": "Restore the missing move action and one-space unit, articles and protected one literal; retain the alternatives in place.",
+          "contract_claim_ids": [
+            "LC5"
+          ],
+          "input_span_codepoints": [
+            241,
+            312
+          ],
+          "output_span_codepoints": [
+            241,
+            332
+          ],
+          "step_input_sha256": "1103089fffbb80dcf0072669189d94bf5ea69bdc6a5c9c6638993a25002e4fd6",
+          "step_output_sha256": "552fba1eb824b3cbddb1bcb7d93ba155413a2303802481f61ebb585908daf31e"
+        },
+        {
+          "id": "R05",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Maximum token holdings: 3 tokens; staying to take if three held rejecting.",
+          "after": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+          "reason": "Repair the incomplete prohibition, preserve the holding-three condition and make the three-token maximum explicit in the protected wording.",
+          "contract_claim_ids": [
+            "LC6"
+          ],
+          "input_span_codepoints": [
+            336,
+            410
+          ],
+          "output_span_codepoints": [
+            336,
+            431
+          ],
+          "step_input_sha256": "552fba1eb824b3cbddb1bcb7d93ba155413a2303802481f61ebb585908daf31e",
+          "step_output_sha256": "8d3cf95603dbb83e3ec756ec2bd9cc66f56ba2004f001525925ef41271c5f446"
+        },
+        {
+          "id": "R06",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "On move before act may spend 2 tokens for third from forward.",
+          "after": "Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.",
+          "reason": "Restore the otherwise unreadable optional alternative move, exact two-token payment and three-space advance; insert omitted advance-payment requirement at its governing rule.",
+          "contract_claim_ids": [
+            "LC7"
+          ],
+          "input_span_codepoints": [
+            435,
+            496
+          ],
+          "output_span_codepoints": [
+            435,
+            531
+          ],
+          "step_input_sha256": "8d3cf95603dbb83e3ec756ec2bd9cc66f56ba2004f001525925ef41271c5f446",
+          "step_output_sha256": "7706adc7155b1f79681924b4b2463cb61cfa0b6591dbe3e60c60d3d785d490b5"
+        },
+        {
+          "id": "R07",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Paid move to pass 12 ends move, tokens left unused not returned.",
+          "after": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+          "reason": "Restore the conditional overshoot outcome and distinguish already-spent tokens from unused tokens; preserve the no-refund exception.",
+          "contract_claim_ids": [
+            "LC8"
+          ],
+          "input_span_codepoints": [
+            535,
+            599
+          ],
+          "output_span_codepoints": [
+            535,
+            628
+          ],
+          "step_input_sha256": "7706adc7155b1f79681924b4b2463cb61cfa0b6591dbe3e60c60d3d785d490b5",
+          "step_output_sha256": "5ba11d74f703b4e490933d6200a5080c275f581a1960f42a0616a370d87d260c"
+        },
+        {
+          "id": "R08",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Normal move cannot cross 12 and immediately end game game.",
+          "after": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+          "reason": "Repair the corrupted termination rule and duplicated game; restore the causal link between reaching 12, immediate ending, and inability of a normal move to pass 12.",
+          "contract_claim_ids": [
+            "LC9"
+          ],
+          "input_span_codepoints": [
+            632,
+            690
+          ],
+          "output_span_codepoints": [
+            632,
+            723
+          ],
+          "step_input_sha256": "5ba11d74f703b4e490933d6200a5080c275f581a1960f42a0616a370d87d260c",
+          "step_output_sha256": "e31b7873a77850d74e11033de6d05af3feaeee2440cf515ebc11fa9a4b901469"
+        },
+        {
+          "id": "R09",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "Occupations of pawns may share space;",
+          "after": "Pawns may share a space.",
+          "reason": "Repair the actor/reference and article; replace the dangling semicolon with a sentence ending.",
+          "contract_claim_ids": [
+            "LC10"
+          ],
+          "input_span_codepoints": [
+            728,
+            765
+          ],
+          "output_span_codepoints": [
+            728,
+            752
+          ],
+          "step_input_sha256": "e31b7873a77850d74e11033de6d05af3feaeee2440cf515ebc11fa9a4b901469",
+          "step_output_sha256": "5e22435af60b75f99a0ca8141a84f66e83c7196b6f5fa2b5d53f3de70fdece56"
+        },
+        {
+          "id": "R10",
+          "type": "bounded_factual_or_grammar_repair",
+          "before": "The first player to space 12 wins.",
+          "after": "The first player to reach space 12 wins.",
+          "reason": "Restore the missing reach verb for the winning condition.",
+          "contract_claim_ids": [
+            "LC11"
+          ],
+          "input_span_codepoints": [
+            757,
+            791
+          ],
+          "output_span_codepoints": [
+            757,
+            797
+          ],
+          "step_input_sha256": "5e22435af60b75f99a0ca8141a84f66e83c7196b6f5fa2b5d53f3de70fdece56",
+          "step_output_sha256": "14bc027b5a4ba7cd15cd8e4e08ae4612391b19a442d771af1ed13a544538d4c7"
+        },
+        {
+          "id": "b20-confirm-rules-02-LF",
+          "type": "terminal_LF",
+          "before": "",
+          "after": "\n",
+          "reason": "The frozen operator requires a terminal LF; raw did not have one.",
+          "contract_claim_ids": [],
+          "input_span_codepoints": [
+            823,
+            823
+          ],
+          "output_span_codepoints": [
+            823,
+            824
+          ],
+          "step_input_sha256": "14bc027b5a4ba7cd15cd8e4e08ae4612391b19a442d771af1ed13a544538d4c7",
+          "step_output_sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a"
+        }
+      ],
+      "claim_to_span_map": [
+        {
+          "claim_id": "LC1",
+          "full_contract_claim": "LC1: Lantern Trail is an invented game for two to four players.",
+          "disposition": "preserved",
+          "raw_spans": [
+            {
+              "text": "Lantern Trail is invented for two to four players.",
+              "present": true,
+              "codepoint_range": [
+                3,
+                53
+              ],
+              "utf8_byte_range": [
+                3,
+                53
+              ]
+            },
+            {
+              "text": "The game has no dice.",
+              "present": true,
+              "codepoint_range": [
+                644,
+                665
+              ],
+              "utf8_byte_range": [
+                644,
+                665
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Lantern Trail is invented for two to four players.",
+              "present": true,
+              "codepoint_range": [
+                3,
+                53
+              ],
+              "utf8_byte_range": [
+                3,
+                53
+              ]
+            },
+            {
+              "text": "The game has no dice.",
+              "present": true,
+              "codepoint_range": [
+                802,
+                823
+              ],
+              "utf8_byte_range": [
+                802,
+                823
+              ]
+            }
+          ],
+          "explanation": "Name, invented status and player range retained; the text explicitly identifies it as a game."
+        },
+        {
+          "claim_id": "LC2",
+          "full_contract_claim": "LC2: Track spaces are numbered 1 to 12; every pawn starts on space 1.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "A 12 space track exists; players start at space 1.",
+              "present": true,
+              "codepoint_range": [
+                57,
+                107
+              ],
+              "utf8_byte_range": [
+                57,
+                107
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+              "present": true,
+              "codepoint_range": [
+                57,
+                135
+              ],
+              "utf8_byte_range": [
+                57,
+                135
+              ]
+            }
+          ],
+          "explanation": "Track range restored explicitly; starting actor corrected to pawns."
+        },
+        {
+          "claim_id": "LC3",
+          "full_contract_claim": "LC3: Each player starts with one lantern token.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Each player starts with 1 Lantern Token.",
+              "present": true,
+              "codepoint_range": [
+                111,
+                151
+              ],
+              "utf8_byte_range": [
+                111,
+                151
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Each player starts with one Lantern Token.",
+              "present": true,
+              "codepoint_range": [
+                139,
+                181
+              ],
+              "utf8_byte_range": [
+                139,
+                181
+              ]
+            }
+          ],
+          "explanation": "Allocation preserved and protected word restored."
+        },
+        {
+          "claim_id": "LC4",
+          "full_contract_claim": "LC4: Youngest player starts; turns then proceed clockwise.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Youngest player starts; turns proper proceed clockwise.",
+              "present": true,
+              "codepoint_range": [
+                155,
+                210
+              ],
+              "utf8_byte_range": [
+                155,
+                210
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "The youngest player starts; turns proceed clockwise.",
+              "present": true,
+              "codepoint_range": [
+                185,
+                237
+              ],
+              "utf8_byte_range": [
+                185,
+                237
+              ]
+            }
+          ],
+          "explanation": "Starting player and turn order preserved; grammar repaired."
+        },
+        {
+          "claim_id": "LC5",
+          "full_contract_claim": "LC5: Each turn choose a normal one-space forward move or staying in place to take one token.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "On each turn select normal forward 1, or stay and take 1 Lantern Token.",
+              "present": true,
+              "codepoint_range": [
+                214,
+                285
+              ],
+              "utf8_byte_range": [
+                214,
+                285
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+              "present": true,
+              "codepoint_range": [
+                241,
+                332
+              ],
+              "utf8_byte_range": [
+                241,
+                332
+              ]
+            }
+          ],
+          "explanation": "Normal forward distance, staying in place and token alternative made grammatically explicit."
+        },
+        {
+          "claim_id": "LC6",
+          "full_contract_claim": "LC6: Maximum holdings are three tokens; staying to collect is disallowed when already holding three.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Maximum token holdings: 3 tokens; staying to take if three held rejecting.",
+              "present": true,
+              "codepoint_range": [
+                289,
+                363
+              ],
+              "utf8_byte_range": [
+                289,
+                363
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+              "present": true,
+              "codepoint_range": [
+                336,
+                431
+              ],
+              "utf8_byte_range": [
+                336,
+                431
+              ]
+            }
+          ],
+          "explanation": "Maximum and conditional prohibition restored."
+        },
+        {
+          "claim_id": "LC7",
+          "full_contract_claim": "LC7: As an alternative before moving, spend two tokens for a three-space forward move; payment occurs first.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "On move before act may spend 2 tokens for third from forward.",
+              "present": true,
+              "codepoint_range": [
+                367,
+                428
+              ],
+              "utf8_byte_range": [
+                367,
+                428
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Before moving, you may instead spend two tokens to move forward three spaces.",
+              "present": true,
+              "codepoint_range": [
+                435,
+                512
+              ],
+              "utf8_byte_range": [
+                435,
+                512
+              ]
+            },
+            {
+              "text": "Pay before moving.",
+              "present": true,
+              "codepoint_range": [
+                513,
+                531
+              ],
+              "utf8_byte_range": [
+                513,
+                531
+              ]
+            }
+          ],
+          "explanation": "Optional alternative, two-token cost, three-space advance and payment-first order restored."
+        },
+        {
+          "claim_id": "LC8",
+          "full_contract_claim": "LC8: A paid move that would pass space 12 leaves the pawn in place and does not refund the spent tokens.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Paid move to pass 12 ends move, tokens left unused not returned.",
+              "present": true,
+              "codepoint_range": [
+                432,
+                496
+              ],
+              "utf8_byte_range": [
+                432,
+                496
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+              "present": true,
+              "codepoint_range": [
+                535,
+                628
+              ],
+              "utf8_byte_range": [
+                535,
+                628
+              ]
+            }
+          ],
+          "explanation": "Overshoot condition, pawn remaining in place and non-refund of spent payment restored."
+        },
+        {
+          "claim_id": "LC9",
+          "full_contract_claim": "LC9: Reaching space 12 immediately ends the game, so a normal one-space move cannot pass it.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Normal move cannot cross 12 and immediately end game game.",
+              "present": true,
+              "codepoint_range": [
+                500,
+                558
+              ],
+              "utf8_byte_range": [
+                500,
+                558
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+              "present": true,
+              "codepoint_range": [
+                632,
+                723
+              ],
+              "utf8_byte_range": [
+                632,
+                723
+              ]
+            }
+          ],
+          "explanation": "Immediate ending on reaching 12 and causal limitation of normal moves restored."
+        },
+        {
+          "claim_id": "LC10",
+          "full_contract_claim": "LC10: Pawns can share a space.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "Occupations of pawns may share space;",
+              "present": true,
+              "codepoint_range": [
+                563,
+                600
+              ],
+              "utf8_byte_range": [
+                563,
+                600
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "Pawns may share a space.",
+              "present": true,
+              "codepoint_range": [
+                728,
+                752
+              ],
+              "utf8_byte_range": [
+                728,
+                752
+              ]
+            }
+          ],
+          "explanation": "Shared-space permission preserved; actor and grammar repaired."
+        },
+        {
+          "claim_id": "LC11",
+          "full_contract_claim": "LC11: First player to reach space 12 wins.",
+          "disposition": "repaired",
+          "raw_spans": [
+            {
+              "text": "The first player to space 12 wins.",
+              "present": true,
+              "codepoint_range": [
+                605,
+                639
+              ],
+              "utf8_byte_range": [
+                605,
+                639
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "The first player to reach space 12 wins.",
+              "present": true,
+              "codepoint_range": [
+                757,
+                797
+              ],
+              "utf8_byte_range": [
+                757,
+                797
+              ]
+            }
+          ],
+          "explanation": "Winning condition restored with reach verb."
+        },
+        {
+          "claim_id": "LC12",
+          "full_contract_claim": "LC12: The game has no dice.",
+          "disposition": "preserved",
+          "raw_spans": [
+            {
+              "text": "The game has no dice.",
+              "present": true,
+              "codepoint_range": [
+                644,
+                665
+              ],
+              "utf8_byte_range": [
+                644,
+                665
+              ]
+            }
+          ],
+          "final_spans": [
+            {
+              "text": "The game has no dice.",
+              "present": true,
+              "codepoint_range": [
+                802,
+                823
+              ],
+              "utf8_byte_range": [
+                802,
+                823
+              ]
+            }
+          ],
+          "explanation": "No-dice negation preserved unchanged."
+        }
+      ],
+      "protected_literal_check": [
+        {
+          "literal": "Lantern Trail",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                3,
+                16
+              ],
+              "utf8_byte_range": [
+                3,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "two to four",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                33,
+                44
+              ],
+              "utf8_byte_range": [
+                33,
+                44
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "1",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                0,
+                1
+              ],
+              "utf8_byte_range": [
+                0,
+                1
+              ]
+            },
+            {
+              "codepoint_range": [
+                86,
+                87
+              ],
+              "utf8_byte_range": [
+                86,
+                87
+              ]
+            },
+            {
+              "codepoint_range": [
+                91,
+                92
+              ],
+              "utf8_byte_range": [
+                91,
+                92
+              ]
+            },
+            {
+              "codepoint_range": [
+                133,
+                134
+              ],
+              "utf8_byte_range": [
+                133,
+                134
+              ]
+            },
+            {
+              "codepoint_range": [
+                569,
+                570
+              ],
+              "utf8_byte_range": [
+                569,
+                570
+              ]
+            },
+            {
+              "codepoint_range": [
+                674,
+                675
+              ],
+              "utf8_byte_range": [
+                674,
+                675
+              ]
+            },
+            {
+              "codepoint_range": [
+                724,
+                725
+              ],
+              "utf8_byte_range": [
+                724,
+                725
+              ]
+            },
+            {
+              "codepoint_range": [
+                753,
+                754
+              ],
+              "utf8_byte_range": [
+                753,
+                754
+              ]
+            },
+            {
+              "codepoint_range": [
+                754,
+                755
+              ],
+              "utf8_byte_range": [
+                754,
+                755
+              ]
+            },
+            {
+              "codepoint_range": [
+                789,
+                790
+              ],
+              "utf8_byte_range": [
+                789,
+                790
+              ]
+            },
+            {
+              "codepoint_range": [
+                798,
+                799
+              ],
+              "utf8_byte_range": [
+                798,
+                799
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "12",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                91,
+                93
+              ],
+              "utf8_byte_range": [
+                91,
+                93
+              ]
+            },
+            {
+              "codepoint_range": [
+                569,
+                571
+              ],
+              "utf8_byte_range": [
+                569,
+                571
+              ]
+            },
+            {
+              "codepoint_range": [
+                674,
+                676
+              ],
+              "utf8_byte_range": [
+                674,
+                676
+              ]
+            },
+            {
+              "codepoint_range": [
+                789,
+                791
+              ],
+              "utf8_byte_range": [
+                789,
+                791
+              ]
+            },
+            {
+              "codepoint_range": [
+                798,
+                800
+              ],
+              "utf8_byte_range": [
+                798,
+                800
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "clockwise",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                227,
+                236
+              ],
+              "utf8_byte_range": [
+                227,
+                236
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "youngest",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                189,
+                197
+              ],
+              "utf8_byte_range": [
+                189,
+                197
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "one",
+          "raw_present": false,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                163,
+                166
+              ],
+              "utf8_byte_range": [
+                163,
+                166
+              ]
+            },
+            {
+              "codepoint_range": [
+                286,
+                289
+              ],
+              "utf8_byte_range": [
+                286,
+                289
+              ]
+            },
+            {
+              "codepoint_range": [
+                314,
+                317
+              ],
+              "utf8_byte_range": [
+                314,
+                317
+              ]
+            },
+            {
+              "codepoint_range": [
+                641,
+                644
+              ],
+              "utf8_byte_range": [
+                641,
+                644
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "three",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                360,
+                365
+              ],
+              "utf8_byte_range": [
+                360,
+                365
+              ]
+            },
+            {
+              "codepoint_range": [
+                416,
+                421
+              ],
+              "utf8_byte_range": [
+                416,
+                421
+              ]
+            },
+            {
+              "codepoint_range": [
+                499,
+                504
+              ],
+              "utf8_byte_range": [
+                499,
+                504
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "two",
+          "raw_present": true,
+          "final_present": true,
+          "final_occurrences": [
+            {
+              "codepoint_range": [
+                33,
+                36
+              ],
+              "utf8_byte_range": [
+                33,
+                36
+              ]
+            },
+            {
+              "codepoint_range": [
+                472,
+                475
+              ],
+              "utf8_byte_range": [
+                472,
+                475
+              ]
+            }
+          ]
+        }
+      ],
+      "self_check": {
+        "single_complete_contract_comparison": true,
+        "claim_count": 12,
+        "mapped_claim_count": 12,
+        "all_claims_supported_and_present": true,
+        "unsupported_final_additions": [],
+        "scope_cuts": [],
+        "invented_experience_or_evidence": [],
+        "actor_condition_modality_negation_uncertainty_checked": true,
+        "ordering_changes": [],
+        "all_edits_have_concrete_factual_or_grammar_reason": true,
+        "word_limit_pass": true,
+        "all_protected_literals_pass": true,
+        "format_pass": true,
+        "failure_list": []
+      },
+      "bounded_method_result": "Complete repair within the single Stage B pass; retained supported fluent wording and order outside listed defects."
+    }
+  ],
+  "overall_status": "PASS"
+}

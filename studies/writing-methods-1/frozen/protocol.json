@@ -1,0 +1,47 @@
+{
+  "study": "writing-methods-4",
+  "frozen_at": "2026-09-07T12:22:52.252134+00:00",
+  "status_at_freeze": "no output generation or scans; corpus preparation complete",
+  "hypothesis": "A distinct drafting method may improve prose and reduce a commercial detector signal while preserving all claims.",
+  "design": "Four fresh, same-model writers each produce both development answers. Baseline current installed skill; three candidate procedures screened using independent masked quality review. A separate score-blind selector chooses exactly one globally eligible method before any scan. This is a manual method pilot, not a run of the controller CLI.",
+  "arms": {
+    "baseline": null,
+    "relation-map": "proposal-1-relation-map.md",
+    "core-expansion": "proposal-2-core-expansion.md",
+    "topic-continuity": "proposal-3-topic-continuity.md"
+  },
+  "writer_settings": "Inherited parent model and effort for every fresh-context writer; exact runtime model identifier not exposed by tool metadata.",
+  "repair_limit": 0,
+  "quality_gate": "Every claim and protected literal preserved, no unsupported assertion, professional and relevant; candidate at least as readable as baseline on both development cases. Any failed output makes that method ineligible; all outputs retained.",
+  "selection": "Separate selector sees methods and masked quality findings, never detector results; choose one eligible method globally by clarity gains across cases, then simpler method as tie-break. If none eligible, stop without scans.",
+  "primary_detector": {
+    "vendor": "Pangram",
+    "mode": "Free text detection",
+    "live_credits_at_start": 20,
+    "max_submissions": 8,
+    "max_total_credits": 20,
+    "development_credit_cap": 8,
+    "confirmation_credit_reserve": 12,
+    "development_submissions": 4,
+    "confirmation_submissions": 4,
+    "order": "technical baseline, technical selected, business selected, business baseline; confirm pair order reversed",
+    "preflight": "Obtain and save all four full-input UI quotes before first development submission; reject unaffordable complete phase. Reconcile actual remaining credits after every scan. Never buy or bypass limits."
+  },
+  "primary_endpoint": "Native document label (AI Generated, AI Assisted, Human Written) and separately displayed fully-AI text percentage. Unshown percentages remain null. These are detector signals, not authorship truth. Short-text warnings preserved.",
+  "development_advance": "Both candidate answers pass quality and are no worse than baseline. At least one pair has a better native label (AI Generated to AI Assisted or Human Written; AI Assisted to Human Written), or at least 5 percentage points lower explicitly displayed fully-AI fraction. Neither pair may have a worse native label or an increase in a comparable displayed fully-AI fraction. Missing incomparable values are not imputed; a within-label fraction comparison needs both values. Unknown labels make advancement indeterminate.",
+  "secondary_detector": {
+    "vendor": "GPTZero",
+    "mode": "Basic Scan",
+    "model": "record observed",
+    "live_words_at_start": 319,
+    "max_submissions": 2,
+    "max_words": 319,
+    "fixed_case": "wm4-dev-technical-01",
+    "comparison": "baseline versus globally selected method, irrespective of Pangram result; whole pair must fit actual UI quote; do not shorten or truncate",
+    "endpoint": "AI, mixed, human confidence separately; comparable baseline required for reduction"
+  },
+  "holdout": "Two existing untouched held-out cases. Root, method authors and writers have not read them at freeze. Release only after primary development advance criterion; fresh same-setting writers, masked review and four complete Pangram submissions. No method changes after release.",
+  "promotion": "Only consider adding a method after passing development and confirmation quality/detector criteria. Report small synthetic corpus, LLM quality judge and vendor limitations; no universal efficacy or human authorship claims. Negative outcomes retained.",
+  "publication": "No GitHub answers or public comments in this experiment. Raw UI/account data private; any public study export sanitized.",
+  "separate_voice_branch": "Optional authentic user sample requested; absent at freeze. Not part of this test."
+}

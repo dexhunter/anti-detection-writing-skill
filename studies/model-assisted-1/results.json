@@ -1,0 +1,1843 @@
+{
+  "schema_version": 1,
+  "study": "model-assisted-1",
+  "date": "2026-09-08",
+  "status": "confirmation_failed_keep_incumbent",
+  "promotion": false,
+  "scope": "Twenty adaptive method attempts on two reused development cases, one fresh verification package, and one terminal quality-rejected confirmation package on two now-retired synthetic cases.",
+  "public_evidence": "All 40 method-final texts, all 24 observations with exact answer/submitted/effective text, full source contracts, available screening quality reviews, selected pipeline stages and fresh/confirmation reviews. Other intermediate attempts, private receipt UI and append-only execution history remain private.",
+  "provenance": {
+    "source_batch_closed_event": 176,
+    "closed_at": "2026-09-08T10:08:02.036594+00:00",
+    "closed_event_digest": "35d0c7ec783b55df7571bbc6792b1c16ba6467670d345c6e9a633fbce5ba4921",
+    "source_results_snapshot_event": 175,
+    "source_results_sha256": "d1a18fdc0ad7d4525c4c02f4e6cc266253a83124ac374ba20de4d5fd9cc95075",
+    "source_report_sha256": "d863ffba7bf1652d3d572531f226142478fc42c371b5fbb4c93f5d354811fb5c",
+    "source_audit_sha256": {
+      "audit/screening.json": "794930bcf8480fcd3872bc2fbc2ed625ffa4053bf30ba7aa271d6b305399866d",
+      "verification/final-audit.json": "0cf5ea2702036da247b3e30b0f1542f27578ed97d82140b1ec3f8f7735fd96c3",
+      "confirmation/generation-audit.json": "457d0d10242bbc99f9076230688a51e5741e93d56efae8419042e5ad030a5204"
+    },
+    "export_is_preparation_not_independent_audit": true
+  },
+  "summary": {
+    "method_attempts": 20,
+    "proposal_rejections_not_attempts": 2,
+    "measured_method_attempts": 7,
+    "screening_no_reduction": 6,
+    "screening_promising": 1,
+    "quality_regressions": 7,
+    "fidelity_failures": 1,
+    "no_ops": 4,
+    "execution_deviations": 1,
+    "completed_gptzero_scans": 24,
+    "scan_counts_by_phase": {
+      "initial_controls": 2,
+      "method_screening": 14,
+      "midpoint_controls": 2,
+      "endpoint_controls": 2,
+      "fresh_verification": 4
+    },
+    "confirmation_scans": 0
+  },
+  "attempts": [
+    {
+      "id": "r01",
+      "title": "Lossless split-and-rephrase",
+      "hypothesis": "Use the supplied original as the working draft. Identify sentences containing separable propositions with overloaded clause nesting. Split eligible sentences into at most two complete sentences, keeping their vocabulary and proposition order as far as grammar permits. Repeat a governing condition when needed so it still limits every affected proposition. Do not delete content, fuse sentences, reorder the whole answer, or perform an unrestricted rewrite. Leave sentences without a useful split unchanged. Record each exact before/after operation; if no useful operation exists, return the original and record a no-op.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 22,
+      "source_method_sha256": "2a2d08178d958f20ed9533f8621ddfc9bc6847e15f42e85e6a51403f4a5c84c9",
+      "frozen_workflow": {
+        "path": "frozen/methods/r01.txt",
+        "sha256": "0138293460046a39dba4df9a1411e5ab143c091f096e6cf937e9e4fca4ea8a02"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r01/wm4-dev-technical-01.txt",
+          "sha256": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r01/wm4-dev-business-01.txt",
+          "sha256": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r01.json",
+        "sha256": "45aadda6f4499c3ed14b358b3dff21fed4e3f4ef42e6d30181cb45cb1c59d1e4"
+      }
+    },
+    {
+      "id": "r02",
+      "title": "Conservative same-subject fusion",
+      "hypothesis": "Use the supplied original as the working draft. Identify adjacent sentences sharing the same explicit actor or entity and compatible time and scope. Fuse only such pairs, removing repeated setup while preserving every predicate and qualification. Use only the logical relation actually supplied; never introduce causality or make a condition govern a previously unconditional claim. Do not split other sentences, reorder the answer or make unrelated lexical edits. Record exact before/after fusions. If no useful fusion exists, return the original and record a no-op.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": "Both arms factually pass; independent judge prefers baseline for business clarity. No detector dispatch.",
+      "private_decision_event": 16,
+      "source_method_sha256": "b5b622be6755fadc69e6bd11fa603a7496370beb6d11026cf85e1acaefbd2562",
+      "frozen_workflow": {
+        "path": "frozen/methods/r02.txt",
+        "sha256": "7a7a483550929c9ba520e638fa11252649b35d676f9beb4fa68362c88253e7d2"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r02/wm4-dev-technical-01.txt",
+          "sha256": "977301ad4e805d1ee8ae1acb2a1e29c2ae672e01151fe7ab599cd4dd99b9b605"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r02/wm4-dev-business-01.txt",
+          "sha256": "6a474d79785971593ee5dce92d975918dcc590e19acb61dcb32229dcfdfbe40a"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r02.json",
+        "sha256": "981ae6f2d9a740824a558393d2dfc14770c04b82d0a4e89066c4dab02476457e"
+      }
+    },
+    {
+      "id": "r03",
+      "title": "Redundancy-only compression",
+      "hypothesis": "Use the supplied original as the working draft. Mark only spans whose deletion leaves every distinct proposition, useful qualification, operational scope and explanation recoverable. Delete strictly redundant wording and apply only the grammar repairs those deletions require. Preserve original sentence order and lexical choices otherwise. No fixed compression rate, synonym replacement, or whole-answer rewrite. Map every deletion to the meaning retained elsewhere, not merely to a claim label. If nothing can be deleted without loss or less clear prose, return the original and record a no-op.",
+      "disposition": "partial_source_noop",
+      "measured": false,
+      "reason": "Technical answer preserves original without an exercised deletion; business deletes redundancy. Quality ties. No scanpair.",
+      "private_decision_event": 17,
+      "source_method_sha256": "0ec01c461e71ed3ec3942f2f5228caed299140feec1a4cc1674e6f40cddc2c62",
+      "frozen_workflow": {
+        "path": "frozen/methods/r03.txt",
+        "sha256": "8397c8bf1dca6029a118139867f0e7f32af146182b3cc259564905d4c76cdaa8"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r03/wm4-dev-technical-01.txt",
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r03/wm4-dev-business-01.txt",
+          "sha256": "c99d6c99342544283aa91fcb0b79ba93118923909531c6e01726aaf2cca66b0d"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r03.json",
+        "sha256": "514c99fc682c2c0790bc5241b4b533eb6e411f9e166ecc7cd1504d55065c249a"
+      }
+    },
+    {
+      "id": "r04",
+      "title": "Syntax-template realization",
+      "hypothesis": "Preserve paragraph order and the sequence of main assertions; a qualifying clause may move within its own sentence when its scope remains unchanged. For each eligible sentence choose a grammatical transformation before choosing new words: restrictive relative clause to a separate coordinated clause only when restriction survives; sentence-initial condition to a trailing condition with identical scope; nominal subject complement to a finite verb without inventing agency. Apply only transformations that improve the reading. Preserve all argument roles, referents and protected text. Do not add facts, change paragraph order, or make synonym swaps as a substitute for the chosen grammatical operation. Save the selected construction and exact before/after text for every transformed sentence; return the original if no operation is justified.",
+      "disposition": "partial_source_noop",
+      "measured": false,
+      "reason": "Business unchanged source; technical grammatical operation. No scanpair regardless of pendingqualityreview.",
+      "private_decision_event": 18,
+      "source_method_sha256": "1d1aa1fab0ae3c52ab8d35575875ea8450ae02e40cad7f7b9a16972829d0713e",
+      "frozen_workflow": {
+        "path": "frozen/methods/r04.txt",
+        "sha256": "b2722de55236c8adc66784a2720087bd641f11d8b377898c7d380c74d7cc9721"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r04/wm4-dev-technical-01.txt",
+          "sha256": "9ad09977e1cf7a6886e51c2901a155c2ec463aff153f1d144f800e238111d0a1"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r04/wm4-dev-business-01.txt",
+          "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r04.json",
+        "sha256": "38be1914fe2957aeb955453ddf1c65e5900a77d45c5a157d13f48491906ab5fc"
+      }
+    },
+    {
+      "id": "r05",
+      "title": "Protected-content cloze realization",
+      "hypothesis": "Freezing source-supported content anchors before composing the grammatical links may permit controlled local realization without losing operational meaning. The treatment is a frozen-mask workflow, not ordinary diagnosis-based editing or hard constrained decoding.",
+      "disposition": "full_source_noop",
+      "measured": false,
+      "reason": "All three frozen slots retained original wording; no exercised edit; no detector submission. Two real worker stages and mechanical checks retained.",
+      "private_decision_event": 41,
+      "source_method_sha256": "dfa631e2c4bbf60c9493e8861a5f27a2f5db230119efa6be9e4ea54e8514b8fb",
+      "frozen_workflow": {
+        "path": "frozen/methods/r05.txt",
+        "sha256": "ade813d9fb0d8fe71d4d649c5915c35f7bfe5e3dc14d171e2250a8456e537a84"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r05/wm4-dev-technical-01.txt",
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r05/wm4-dev-business-01.txt",
+          "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84"
+        }
+      ],
+      "candidate_metrics": null
+    },
+    {
+      "id": "r06",
+      "title": "Fixed French round-trip translation",
+      "hypothesis": "An actual English-to-French-to-English transformation may change realization while retaining the factual contract. This is a low-confidence robustness stress test: GPTZero reports training augmentation involving paraphrase and translation chains, so the literature does not predict a current detector bypass.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": [
+        {
+          "case": "wm4-dev-technical-01",
+          "preferred_arm": "baseline",
+          "reason": "Both preserve the full technical meaning. B answers the reader's request-elimination question near the start and explicitly explains that permitted fresh reuse avoids origin contact, making the practical distinction easier to apply."
+        },
+        {
+          "case": "wm4-dev-business-01",
+          "preferred_arm": "tie",
+          "reason": "Both communicate complete progress, blockers, the conditional pilot, and the sponsor's staffing decision accurately and clearly. A foregrounds the decision while B supplies context first; that ordering and the small concision difference do not create a material quality difference."
+        }
+      ],
+      "private_decision_event": 48,
+      "source_method_sha256": "07afbfc154c43bc75302cd9b14c57464844cafbb2659f6ce4e35a52d3d16f8c4",
+      "frozen_workflow": {
+        "path": "frozen/methods/r06.txt",
+        "sha256": "eb7b587585a7be05f5e9df921b8fa8810139e4d4343873b554c8d2e1f5fde8eb"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r06/wm4-dev-technical-01.txt",
+          "sha256": "8621472bb9cfee97d8cd688df98acf4cca5c36b73b578e77e673c64a5b3a9fe5"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r06/wm4-dev-business-01.txt",
+          "sha256": "550a6f8c5ae977b79ce536227906ca1b1a995410822ec156ed1c54e59f1292fb"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r06.json",
+        "sha256": "0742faf0c04a75c33b1eb65c1a5f9825ce25eeb72e328015c047a1d95fbb2de8"
+      }
+    },
+    {
+      "id": "r07",
+      "title": "Source-supported hypothetical boundary illustration",
+      "hypothesis": "One minimal explicitly hypothetical illustration of a source-stated inference boundary may make a necessary qualification easier to apply. This is an original explanatory-content hypothesis, not style imitation, a paper reproduction or a promised detector benefit.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": [
+        {
+          "case": "wm4-dev-technical-01",
+          "preferred_arm": "baseline",
+          "reason": "A states early that validation still requires a request, explicitly explains freshness as reuse without origin contact, and preserves all qualifications without the redundant hypothetical ending in B. B is factually sound in the question's ordinary successful GET context, but its added ending fails the supplied usefulness requirement."
+        },
+        {
+          "case": "wm4-dev-business-01",
+          "preferred_arm": "baseline",
+          "reason": "B presents the sponsor's time-sensitive staffing decision first, preserves the complete progress, blocker, pilot, and rollout status, and avoids the redundant hypothetical defect in A. This is a meaningful improvement in relevance and concision for the sponsor."
+        }
+      ],
+      "private_decision_event": 50,
+      "source_method_sha256": "5b70559e1adbfc5eb8219885615d249d4ed9dad25776082c4cdf0ac42206b3d6",
+      "frozen_workflow": {
+        "path": "frozen/methods/r07.txt",
+        "sha256": "eac1a82e5f5ba1bdb4121f295c4ec882f303e9a70afa87626684cd2298ec9945"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r07/wm4-dev-technical-01.txt",
+          "sha256": "e786218ed7e57266ebb00c14f625dd5fe90486d491298504b1e50f90219b432b"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r07/wm4-dev-business-01.txt",
+          "sha256": "2286f6d352f7e0dcd958bc9583ad67033dde58481f469dae1a394680acfa08ea"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r07.json",
+        "sha256": "d1297d34c3dd339a498af65bbc1a0215d94cb592aa53a4e4e7465bf421893768"
+      }
+    },
+    {
+      "id": "r09",
+      "title": "Small paraphraser plus bounded fidelity repair",
+      "hypothesis": "Repair specific factual and grammatical defects in a single smaller-model paraphrase while preserving its supported realization. Test the complete pipeline against the incumbent.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": [
+        {
+          "case": "wm4-dev-technical-01",
+          "preferred_arm": "baseline",
+          "reason": "Both preserve the required facts and qualifications. A states the answer to whether ETag eliminates the request immediately, then separates validation from freshness and explicitly connects freshness to avoiding origin contact. This makes the reader's central decision materially easier to understand."
+        },
+        {
+          "case": "wm4-dev-business-01",
+          "preferred_arm": "baseline",
+          "reason": "Both are factually complete and preserve all conditional plans. A puts the sponsor's decision and deadline first and groups progress and pilot planning into readable paragraphs, making the update more actionable while retaining every required fact."
+        }
+      ],
+      "private_decision_event": 53,
+      "source_method_sha256": "98e8f320b0578e931abb773be1d8289008545fdfaf604559f206508cf18ffb4c",
+      "frozen_workflow": {
+        "path": "frozen/methods/r09.txt",
+        "sha256": "e2dc0ff372963d04bf2698e5660d491dcf66c13941f73899554deea769479464"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r09/wm4-dev-technical-01.txt",
+          "sha256": "d322c66fbb1a423c399b1958d3826156fb11031f472d9f3806b676f7b382ff4a"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r09/wm4-dev-business-01.txt",
+          "sha256": "c5e3fd14240712214e7e31cd93d14583d50bfbe7d28dfd136a82041ab4ecf4cd"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r09.json",
+        "sha256": "b7f19573b6e9171d77f2e40bc5d6c90d8a16274b055f9caed34af2ff192332df"
+      }
+    },
+    {
+      "id": "r10",
+      "title": "Minimal Write and review instruction ablation",
+      "hypothesis": "The incumbent's many simultaneous editorial directives may overconstrain composition or recreate habitual prose. Removing those style and organization directives while retaining content and quality obligations tests their combined effect.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 63,
+      "source_method_sha256": "2e4a223efc79ac72002fbe19e0d81a47eff21d334115c5ddaa25bda17037aa9a",
+      "frozen_workflow": {
+        "path": "frozen/methods/r10.txt",
+        "sha256": "d7ead8780eafb0b3858442b949f87298ef6cab6f4320815b32c4c736fee5fc27"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r10/wm4-dev-technical-01.txt",
+          "sha256": "2dae42b99670774cccb6367f9b0504e1a0b485065b13cdb40fac71dc4c0155a1"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r10/wm4-dev-business-01.txt",
+          "sha256": "05df483efb143850d5ac948f03f62e689489a957ead58b3237b1d94298118d3c"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r10.json",
+        "sha256": "c3d8b733249557c29b4c6a550073b5dc3eb028d2c1faab7c955361d6089947be"
+      }
+    },
+    {
+      "id": "r11",
+      "title": "Explicit ownership of the supplied recommendation",
+      "hypothesis": "Explicitly separating supplied professional judgment from objective description may make the answer's stance clearer and alter its discourse voice without inventing evidence or imitating a person.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": [
+        {
+          "case": "wm4-dev-technical-01",
+          "preferred_arm": "tie",
+          "reason": "Both accurately distinguish conditional validation from freshness, preserve all conditions and protected literals, and directly answer the ordinary successful GET question. A foregrounds the continuing request and B foregrounds the recommendation; the ordering difference does not materially change correctness or reader understanding."
+        },
+        {
+          "case": "wm4-dev-business-01",
+          "preferred_arm": "baseline",
+          "reason": "Both preserve every supplied fact, actor, date, condition, and uncommitted status. B makes the sponsor action and deadline immediately visible in its opening sentence, then gives progress, blockers, and the conditional pilot proposal in concise prose. That decision-first structure materially improves usefulness for the sponsor without losing qualifications."
+        }
+      ],
+      "private_decision_event": 56,
+      "source_method_sha256": "ce1e9b03ad1d2d9dbf08ed7630809a3684662cd8dcce316f73db92c0aaa78e08",
+      "frozen_workflow": {
+        "path": "frozen/methods/r11.txt",
+        "sha256": "c13150606eab926608e45366f14a13a45effbe3575c61163f8b6103b03695f27"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r11/wm4-dev-technical-01.txt",
+          "sha256": "13dbd3b106f43526d9127e79c8fc80a3c8243ecd323250c421b9aa1423249e1e"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r11/wm4-dev-business-01.txt",
+          "sha256": "125a4216fb9b97a49da40b6690651f41544d5bc534e20dee0befc9c1d387ea6d"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r11.json",
+        "sha256": "0ea0ecf9d0ad9f9e631bd0b7e7131cd3246ff8f9ac426340ffc22d9b697d08b0"
+      }
+    },
+    {
+      "id": "r12",
+      "title": "Sentence-role realization before prose",
+      "hypothesis": "Making the sentence's communicative act explicit before surface wording may produce a more purposeful answer than a general request to restructure the document, while preserving factual force.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 86,
+      "source_method_sha256": "5f34c56bbbeded6b14e44eb7f0e07413dc2dbc9fd6fda55fab026745b80a020f",
+      "frozen_workflow": {
+        "path": "frozen/methods/r12.txt",
+        "sha256": "3722da8a8b12276226b32165d1b0ee25f7f46909567edfbd629e3332bca48978"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r12/wm4-dev-technical-01.txt",
+          "sha256": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r12/wm4-dev-business-01.txt",
+          "sha256": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r12.json",
+        "sha256": "56f2b223fb29dab2c0fd2a011db9e3516f5f84c09b21230c200578478c81bf2a"
+      }
+    },
+    {
+      "id": "r13",
+      "title": "Unambiguous contraction normalization",
+      "hypothesis": "A tightly controlled professional surface-form change tests whether spelling out ordinary auxiliaries matters in this small pilot, while keeping lexical meaning and sentence structure fixed. It may improve conversational ease, but offers no promised quality or detector benefit.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": null,
+      "private_decision_event": 74,
+      "source_method_sha256": "7791dece53fafd5b6a15606554e5ef55447ae002cc73b0a4b68f485cec4e3d7e",
+      "frozen_workflow": {
+        "path": "frozen/methods/r13.txt",
+        "sha256": "6bf761e9643927ecfa00134478e060fb27580ac3b579a8dc12d22a77bdd97e4f"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r13/wm4-dev-technical-01.txt",
+          "sha256": "f3be819fc8981c36a33bbfe460fb4a0c4b188555c4cde4ca826ff0f8dec5ec5f"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r13/wm4-dev-business-01.txt",
+          "sha256": "a8b096b8c671bd16b1f9bda56fba66cb665aa2ba210eeae848928f9657803db2"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r13.json",
+        "sha256": "789fcd7b39c81237af2e574e30293f736e367795116d34afa7ffd3cf83994e20"
+      }
+    },
+    {
+      "id": "r14",
+      "title": "Minimal semantic anchors as a cloze-density ablation",
+      "hypothesis": "If a cloze method freezes too much content-bearing wording, it may leave almost no meaningful composition freedom. Reducing the exact-string constraints while keeping the full semantic contract tests that constraint-density explanation.",
+      "disposition": "quality_regression",
+      "measured": false,
+      "reason": "Both factual passes; masked technical preference for baseline clarity.",
+      "private_decision_event": 90,
+      "source_method_sha256": "d113c8432cbac1c1aa9ec7bae8894c2b30aa89a10834f5a1f6ce369e471de4b4",
+      "frozen_workflow": {
+        "path": "frozen/methods/r14.txt",
+        "sha256": "4abfe2f0bebafc191e1f6445d23fc7369a388deb0e5f2940e2592cc2b4d8da14"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r14/wm4-dev-technical-01.txt",
+          "sha256": "16af80a5baa4330cb838e97a81e7ee228e7b53ed1890322380306d202c3c6cd8"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r14/wm4-dev-business-01.txt",
+          "sha256": "da0250890c8057b66d0a1bc28f9016056e36b02176f9e4d152d30a4943c387bf"
+        }
+      ],
+      "candidate_metrics": null,
+      "quality_review": {
+        "path": "reviews/screening/r14.json",
+        "sha256": "028fb916abd08f6790a2987da012081f14e4e53a59abc2e08f8dcf67e5f34e0a"
+      }
+    },
+    {
+      "id": "r15",
+      "title": "Independent claim-bundle realization with bounded joining",
+      "hypothesis": "Separating local expression from whole-answer generation may reduce global formulaic phrasing while a constrained joining pass restores continuity. This tests generation-context granularity, not a prompt instruction to vary syntax.",
+      "disposition": "execution_deviation",
+      "measured": false,
+      "reason": "Join source exposure from coordinator dispatch violated prepared manifest. One attempt retained, no retry.",
+      "private_decision_event": 103,
+      "source_method_sha256": "20ff2ff5a41b34c53f3816c04cd73e368539c52c8d47ea51fcbfe8cd6cc1ffa6",
+      "frozen_workflow": {
+        "path": "frozen/methods/r15.txt",
+        "sha256": "cf38296f8684ed2fa1c17915775cd392b341fe782dd470fc9d47a720713fbb71"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r15/wm4-dev-technical-01.txt",
+          "sha256": "6a6cbf7e7716282bbe02eb9d1b04c1fb98997dbf54cc1c264bf38354fe4fe556"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r15/wm4-dev-business-01.txt",
+          "sha256": "b2e58e32464d5bccee11fad9a1d45d60edd8b28d891c357e697fd9a2f269464a"
+        }
+      ],
+      "candidate_metrics": null
+    },
+    {
+      "id": "r16",
+      "title": "Incumbent composition followed by lossless splitting",
+      "hypothesis": "Applying the incumbent before a narrowly bounded split may retain its useful purpose-first organization while improving a remaining overloaded sentence. This tests the order and starting draft of r01, not a new splitting mechanism.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 117,
+      "source_method_sha256": "ac78259fd9bd3072ed4909f3162dcdc280b5cc262f250402f896615133682669",
+      "frozen_workflow": {
+        "path": "frozen/methods/r16.txt",
+        "sha256": "131a57b0ee6f28c2ee950717ac06999c07293a26422938bcd7903309eb42cb50"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r16/wm4-dev-technical-01.txt",
+          "sha256": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r16/wm4-dev-business-01.txt",
+          "sha256": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r16.json",
+        "sha256": "9f4cabaf80865ee98951d8ce04076c3e99b8542ba22f4bdf4a1e81eb49dc8c6d"
+      }
+    },
+    {
+      "id": "r17",
+      "title": "Incumbent composition followed by same-subject fusion",
+      "hypothesis": "After the incumbent has placed the answer or decision first, conservative fusion may remove repetitive local setup without sacrificing that organization. This diagnoses whether applying r02 to the original rather than an organized draft limited usefulness.",
+      "disposition": "full_stage_noop",
+      "measured": false,
+      "reason": "Fresh incumbent draft differs from source, but bounded fusion performs no operation in either case; equality checked. No candidate scans or promotion.",
+      "private_decision_event": 106,
+      "source_method_sha256": "287a968a1def06aa5b3db5da961f0058d2546a46b3d7f864c0135f5d6c33b0c4",
+      "frozen_workflow": {
+        "path": "frozen/methods/r17.txt",
+        "sha256": "6bef8ad564dea91bea5c0e13c339935f9a045e94d37e79cb9848e3925b3cfd75"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r17/wm4-dev-technical-01.txt",
+          "sha256": "d753428464e708f7bac1244d9d2d12e7dd5877905f7be92d9dd09d8ff5fe522c"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r17/wm4-dev-business-01.txt",
+          "sha256": "dd7cbabbea623b9860c36246c63511ed2248955fa20617ecca52000cbe0b5674"
+        }
+      ],
+      "candidate_metrics": null
+    },
+    {
+      "id": "r18",
+      "title": "Incumbent composition followed by contraction normalization",
+      "hypothesis": "This tests the same deterministic surface diagnostic as r13 while inheriting the incumbent's purpose-first organization. It separates that organization from the small orthographic intervention; no effect on factual content or sentence structure is intended.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 129,
+      "source_method_sha256": "519b4724acaa0d6c83b361bf56e81963fe4c9defec8bc54a96870544b8268809",
+      "frozen_workflow": {
+        "path": "frozen/methods/r18.txt",
+        "sha256": "8930fa29843bd5f4533f6c44f1f14bd2f2df0d9ff87197b8f6a722db63601190"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r18/wm4-dev-technical-01.txt",
+          "sha256": "c7d3f7ad6fd329046a130ea7411b11048acbd754b27f44177083773ceebdd8ee"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r18/wm4-dev-business-01.txt",
+          "sha256": "8241a75d10323756b9497ca5dd8d914c6b3c094204cb2a69f1b18fd00ac9ca85"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r18.json",
+        "sha256": "6e99e18a20e598ec6874a7e4d8fe5e3ed062b8aa087aad7785299ad59b3d31df"
+      }
+    },
+    {
+      "id": "r19",
+      "title": "Incumbent composition followed by a fixed French round trip",
+      "hypothesis": "The factual pass reported for r06 suggests the translation chain can preserve the short contract, but its original-based organization was less useful. Beginning with an incumbent-organized draft and preserving assertion order tests that specific workflow weakness.",
+      "disposition": "fidelity_failure",
+      "measured": false,
+      "reason": "Commitment and confirmation status changed. Four actual stages retained, no repair or scan.",
+      "private_decision_event": 135,
+      "source_method_sha256": "38bbfeda4c1f8ec43536972a5c1e4f6e451d23752304490af20ed876f6716569",
+      "frozen_workflow": {
+        "path": "frozen/methods/r19.txt",
+        "sha256": "661fa0b7440b02b817e15e52d9a01b115c3e920bc0b1dc65765b536343ad5e7a"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r19/wm4-dev-technical-01.txt",
+          "sha256": "e1283de186913bc0f57b90ee8368e92c050ad4bc919e913ed226b35ad6d05796"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r19/wm4-dev-business-01.txt",
+          "sha256": "41a540f4f72535e56299510067b54bcd2316064321aff889c62b044848debd8f"
+        }
+      ],
+      "candidate_metrics": null
+    },
+    {
+      "id": "r20",
+      "title": "Bounded factual repair followed by purpose and fluency restoration",
+      "hypothesis": "r09's narrow fidelity repair can leave a complete answer with weak lead placement or grouping. A separately recorded, bounded organization-and-fluency pass tests whether relaxing that constraint recovers reader usefulness while preserving the paraphraser's supported realization.",
+      "disposition": "development_promising_fresh_verification_passed_confirmation_quality_failed",
+      "measured": true,
+      "reason": "Coordinator prematurely hardcoded expected zero-gain in script dispatched before inspecting actual native result. Native completed receipt is correct and unchanged. Replace derived classification only.",
+      "private_decision_event": 141,
+      "source_method_sha256": "f9410496fd86abee567a36f2db2ae3515d6e0d14ec7826193b82cc836c31957c",
+      "frozen_workflow": {
+        "path": "frozen/methods/r20.txt",
+        "sha256": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r20/wm4-dev-technical-01.txt",
+          "sha256": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r20/wm4-dev-business-01.txt",
+          "sha256": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 0,
+          "mixed": 0,
+          "human": 100
+        }
+      },
+      "screening_correction_event": 142,
+      "supersedes_derived_event": 141,
+      "raw_generation_reused": true,
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 50.0,
+      "quality_review": {
+        "path": "reviews/screening/r20.json",
+        "sha256": "5dcb01d3b4f2e5fb31908bab8e8c2bde5fd776afc2c6ee93ff702d8854df4581"
+      }
+    },
+    {
+      "id": "r21",
+      "title": "Minimal brief with purpose and dependency guidance restored",
+      "hypothesis": "r10's minimal policy removes many rules at once. Restoring only a clear requested answer/action first and its supporting dependency placement tests whether that useful part of the incumbent can coexist with the simpler brief.",
+      "disposition": "valid_no_improvement",
+      "measured": true,
+      "reason": null,
+      "private_decision_event": 99,
+      "source_method_sha256": "ef5f4b10af75eedf10d7995ba1570fa8a6936deb5d6a6c95a0ff29cf80d54e2e",
+      "frozen_workflow": {
+        "path": "frozen/methods/r21.txt",
+        "sha256": "3f117e6dfd9d666079081090c8b342e1c66a0f73327a58fc34493e5d31227e4f"
+      },
+      "final_answers": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "path": "answers/screening/r21/wm4-dev-technical-01.txt",
+          "sha256": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "path": "answers/screening/r21/wm4-dev-business-01.txt",
+          "sha256": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85"
+        }
+      ],
+      "candidate_metrics": {
+        "technical": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "business": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        }
+      },
+      "shared_control_ids": [
+        "control-tech",
+        "control-business"
+      ],
+      "mean_ai_reduction_pp": 0.0,
+      "quality_review": {
+        "path": "reviews/screening/r21.json",
+        "sha256": "70fb35014194b7705fd355b1b90fcf26f6d18bedb375061dac2b6f70eb5ea866"
+      }
+    }
+  ],
+  "proposal_rejections": [
+    {
+      "id": "r08",
+      "counted_as_attempt": false,
+      "reason": "Rejected without authoring; replaced by later selected proposal."
+    },
+    {
+      "id": "r04-initial",
+      "counted_as_attempt": false,
+      "reason": "Initial proposal rejected and revised before authoring. Historical rejected-version hash entry was clarified separately; rejected original proposal bytes were not reconstructed by the screening auditor."
+    }
+  ],
+  "observations": [
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T07:43:56.247Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "control-tech",
+      "phase": "initial_controls",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "138671c2aeed82d0c9b07d927b95ee22a488a6304c3c4b3a02e1fb4c96eef3ed",
+      "answer": {
+        "path": "measurements/control-tech/answer.txt",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23"
+      },
+      "submitted": {
+        "path": "measurements/control-tech/submitted.txt",
+        "sha256": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec"
+      },
+      "effective_editor": {
+        "path": "measurements/control-tech/effective.txt",
+        "sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T07:45:00.350Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "control-business",
+      "phase": "initial_controls",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "f55b550e3857f6be498bcb5ce93891fc9313be4f725fd61e4c06750e96a8d02d",
+      "answer": {
+        "path": "measurements/control-business/answer.txt",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4"
+      },
+      "submitted": {
+        "path": "measurements/control-business/submitted.txt",
+        "sha256": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93"
+      },
+      "effective_editor": {
+        "path": "measurements/control-business/effective.txt",
+        "sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T07:50:52.685Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r01-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "86f9e35e5d5e97579f763a0ef7f28f445b6d84880b3672a58e78504010ce5b45",
+      "answer": {
+        "path": "measurements/r01-technical/answer.txt",
+        "sha256": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8"
+      },
+      "submitted": {
+        "path": "measurements/r01-technical/submitted.txt",
+        "sha256": "34727f0eda603f5d177356bc7c55ea1f44bb9ff321826eadb4a72d14f55d1bb4"
+      },
+      "effective_editor": {
+        "path": "measurements/r01-technical/effective.txt",
+        "sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T07:51:57.973Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r01-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "e39d2da69b41f64cd4c6f9215d93aebb49441d536be01589885e06cd92448b61",
+      "answer": {
+        "path": "measurements/r01-business/answer.txt",
+        "sha256": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098"
+      },
+      "submitted": {
+        "path": "measurements/r01-business/submitted.txt",
+        "sha256": "c0b190f444d5557eea1bbbcbb10bd29d0f3c81a6d7942fb5e617884138dfa395"
+      },
+      "effective_editor": {
+        "path": "measurements/r01-business/effective.txt",
+        "sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:18:58.044Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r10-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "a0e055fb271e90f4acdebe22dc3e699289d624217c3c58d6c9de0ccc1e403d57",
+      "answer": {
+        "path": "measurements/r10-technical/answer.txt",
+        "sha256": "2dae42b99670774cccb6367f9b0504e1a0b485065b13cdb40fac71dc4c0155a1"
+      },
+      "submitted": {
+        "path": "measurements/r10-technical/submitted.txt",
+        "sha256": "6c341ff55e70dbca8de090a37cea720b052fe80ce39ceb1c356ce0826c418d42"
+      },
+      "effective_editor": {
+        "path": "measurements/r10-technical/effective.txt",
+        "sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:19:54.368Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r10-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "1f5994cf13302016c7a01b7ecea970f4a6ce30566d7c6ee63f4802c83a0c3a50",
+      "answer": {
+        "path": "measurements/r10-business/answer.txt",
+        "sha256": "05df483efb143850d5ac948f03f62e689489a957ead58b3237b1d94298118d3c"
+      },
+      "submitted": {
+        "path": "measurements/r10-business/submitted.txt",
+        "sha256": "850321e8e5adc8b3221a3f43a747b406bdc4e71ad1f53c97067adc4bc6443c24"
+      },
+      "effective_editor": {
+        "path": "measurements/r10-business/effective.txt",
+        "sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:21:08.475Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "drift-mid-technical",
+      "phase": "midpoint_controls",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "78342efe13066554c8b275fcdd33623ec520b352a172bc6e3ab502dbd696fb0e",
+      "answer": {
+        "path": "measurements/drift-mid-technical/answer.txt",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23"
+      },
+      "submitted": {
+        "path": "measurements/drift-mid-technical/submitted.txt",
+        "sha256": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec"
+      },
+      "effective_editor": {
+        "path": "measurements/drift-mid-technical/effective.txt",
+        "sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:22:26.330Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "drift-mid-business",
+      "phase": "midpoint_controls",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "1dda2d3798a9c48f957badda4eb26c03affae223a0b428e14a63127e108f099e",
+      "answer": {
+        "path": "measurements/drift-mid-business/answer.txt",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4"
+      },
+      "submitted": {
+        "path": "measurements/drift-mid-business/submitted.txt",
+        "sha256": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93"
+      },
+      "effective_editor": {
+        "path": "measurements/drift-mid-business/effective.txt",
+        "sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:29:09.217Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r12-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "66c042695cdd0c8380a9c6e97ee487681642d7e45236d44481280756d82646c7",
+      "answer": {
+        "path": "measurements/r12-technical/answer.txt",
+        "sha256": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698"
+      },
+      "submitted": {
+        "path": "measurements/r12-technical/submitted.txt",
+        "sha256": "b5afe67824843b9f65aff0a9de360475acf2d4246948bb01a4414cfc1fe31d54"
+      },
+      "effective_editor": {
+        "path": "measurements/r12-technical/effective.txt",
+        "sha256": "1b462f98192664cb574bcbb5db9c70b55f70bd46ada8a18abb08252abb33de3f"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:29:44.069Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r12-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "6d1f79fe1d2237fb66bf06100ee0e334595fe0618ffa71fda0e493ecf5644744",
+      "answer": {
+        "path": "measurements/r12-business/answer.txt",
+        "sha256": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65"
+      },
+      "submitted": {
+        "path": "measurements/r12-business/submitted.txt",
+        "sha256": "0b8174ee8aadc8df2ea985b894e9239f6f702645e00a813c0e9c733b83159078"
+      },
+      "effective_editor": {
+        "path": "measurements/r12-business/effective.txt",
+        "sha256": "27493de434f0f5b2bd86de9bf6daaeb34b5b7402485fc1fb912936b3ebd1c418"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:36:04.630Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r21-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "b176c67af39c1cf4c0606d35cf277ddcbaea04a9621b32d8878319f56f30138c",
+      "answer": {
+        "path": "measurements/r21-technical/answer.txt",
+        "sha256": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d"
+      },
+      "submitted": {
+        "path": "measurements/r21-technical/submitted.txt",
+        "sha256": "476bbe3592e7b73fd83c0597b774f3c3d8a373e371e5c326185ad58094db74c7"
+      },
+      "effective_editor": {
+        "path": "measurements/r21-technical/effective.txt",
+        "sha256": "211f47dc65ea26f41b669f43a76cd0da79ea36f3a22413bda71c6232a51295ab"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:36:32.818Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r21-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "0dcdfa8b564c1887ddf14c12003c594b29e763cca542191cd42b1e815b0b2fd6",
+      "answer": {
+        "path": "measurements/r21-business/answer.txt",
+        "sha256": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85"
+      },
+      "submitted": {
+        "path": "measurements/r21-business/submitted.txt",
+        "sha256": "acb43cd115012a1cb38a3defc94019e98a69acaec79205f0f6eb1bfd2b31f1b9"
+      },
+      "effective_editor": {
+        "path": "measurements/r21-business/effective.txt",
+        "sha256": "9259723d88704eccd41c7e6226fa4f7be32d79e2bed4b21c0e4950c77c443c70"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:44:39.329Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r16-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "d19242ffef3683b3991be14e681b6c494cccfa0fe06d04ff05c89871381690fd",
+      "answer": {
+        "path": "measurements/r16-technical/answer.txt",
+        "sha256": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a"
+      },
+      "submitted": {
+        "path": "measurements/r16-technical/submitted.txt",
+        "sha256": "43d97b205bd22f3b5a4553fee3efe621cfa73bf26609455b9d94f81d45a9bb0f"
+      },
+      "effective_editor": {
+        "path": "measurements/r16-technical/effective.txt",
+        "sha256": "a6958996578f452ae61767ab3ddb3487c252b828404605e63cd4bf0ae2dd8a83"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:46:51.373Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r16-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "5bfc911c8b7a94dec7a855477691486ffd6097edf67678c584fd7d4ce23b2ecf",
+      "answer": {
+        "path": "measurements/r16-business/answer.txt",
+        "sha256": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f"
+      },
+      "submitted": {
+        "path": "measurements/r16-business/submitted.txt",
+        "sha256": "0c928d2a8f152ac89f937949cb3e02f7d5a29ebff375742e3bfc675176577378"
+      },
+      "effective_editor": {
+        "path": "measurements/r16-business/effective.txt",
+        "sha256": "a3aaf4a1728d9579a976c27406fee8d4f8becbf995b0539823734e528e09dfbd"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:51:09.995Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r18-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "90eed5859dc3ee50051af1e612b738c2ce98977efa1ee0c2b9d514d57644fb3b",
+      "answer": {
+        "path": "measurements/r18-technical/answer.txt",
+        "sha256": "c7d3f7ad6fd329046a130ea7411b11048acbd754b27f44177083773ceebdd8ee"
+      },
+      "submitted": {
+        "path": "measurements/r18-technical/submitted.txt",
+        "sha256": "b3eee06c04ff36149841ce8714f4d43500bddb509a45b0b8cecb41f546224c6a"
+      },
+      "effective_editor": {
+        "path": "measurements/r18-technical/effective.txt",
+        "sha256": "daff08ed123d93003fbb2c6fb0e8c8b732e7c610aa075a4d0eebfe10030d9ad6"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:52:33.559Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r18-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "7bb34157e216f675999b60c09f8cb69a53fcc648005af5154579fbd5f5c0a517",
+      "answer": {
+        "path": "measurements/r18-business/answer.txt",
+        "sha256": "8241a75d10323756b9497ca5dd8d914c6b3c094204cb2a69f1b18fd00ac9ca85"
+      },
+      "submitted": {
+        "path": "measurements/r18-business/submitted.txt",
+        "sha256": "69c5793b40b7d27a17c3d4d4d0d4df8595f65e5ad01e250a1ed747666a6d8e91"
+      },
+      "effective_editor": {
+        "path": "measurements/r18-business/effective.txt",
+        "sha256": "00c6f823a23ff79deb1662b4a307d615d5271c77b15d453b93ca7e07a7af1050"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:58:04.497Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r20-technical",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "2d6ecbe096f336a26f0e220cdddbd47d1dae0f1cd12a0314004e95ebbeb78718",
+      "answer": {
+        "path": "measurements/r20-technical/answer.txt",
+        "sha256": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f"
+      },
+      "submitted": {
+        "path": "measurements/r20-technical/submitted.txt",
+        "sha256": "6e2c3b2ebeafe78a0dee6f8760cd8e13560c3eb085020e073c374b836e4d961a"
+      },
+      "effective_editor": {
+        "path": "measurements/r20-technical/effective.txt",
+        "sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T08:58:34.624Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "r20-business",
+      "phase": "method_screening",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 0,
+        "mixed": 0,
+        "human": 100
+      },
+      "source_receipt_sha256": "ac857ae8e44e5abb289a7ba778d4de4c456ea5e0bfa7edf595978f4429f56714",
+      "answer": {
+        "path": "measurements/r20-business/answer.txt",
+        "sha256": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67"
+      },
+      "submitted": {
+        "path": "measurements/r20-business/submitted.txt",
+        "sha256": "6df46823d22a3d94680e73a05eb8ead511f6d371e46293028e69b7eef261d4e4"
+      },
+      "effective_editor": {
+        "path": "measurements/r20-business/effective.txt",
+        "sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:00:32.254Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "drift-end-technical",
+      "phase": "endpoint_controls",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "3c08f9099315b76944ea87e23cdfc85f6b5612d539320833edc0cc3736425c91",
+      "answer": {
+        "path": "measurements/drift-end-technical/answer.txt",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23"
+      },
+      "submitted": {
+        "path": "measurements/drift-end-technical/submitted.txt",
+        "sha256": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec"
+      },
+      "effective_editor": {
+        "path": "measurements/drift-end-technical/effective.txt",
+        "sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:01:11.231Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "drift-end-business",
+      "phase": "endpoint_controls",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "12208f0369bcae20110a72032167a70b393255640459e97f03ebbc7afc1fd4fb",
+      "answer": {
+        "path": "measurements/drift-end-business/answer.txt",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4"
+      },
+      "submitted": {
+        "path": "measurements/drift-end-business/submitted.txt",
+        "sha256": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93"
+      },
+      "effective_editor": {
+        "path": "measurements/drift-end-business/effective.txt",
+        "sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:24:22.756Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "verify-baseline-technical",
+      "phase": "fresh_verification",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "95370eec1d160748efdfcd76d38b9fd9a9298783c978700a4afa065dee982352",
+      "answer": {
+        "path": "measurements/verify-baseline-technical/answer.txt",
+        "sha256": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769"
+      },
+      "submitted": {
+        "path": "measurements/verify-baseline-technical/submitted.txt",
+        "sha256": "61b8450f30f6d0dc82c9727db9ac71f3c003d11c1107ac72c1378e54ba10bca1"
+      },
+      "effective_editor": {
+        "path": "measurements/verify-baseline-technical/effective.txt",
+        "sha256": "b7e9c0c32589c7a9b9d05854fe3d7bada4b14569e3a615982a037f7ddcc959fc"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:25:02.060Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "verify-candidate-technical",
+      "phase": "fresh_verification",
+      "case_id": "wm4-dev-technical-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "2757a120bfd7ca716095712261c7c2a01ec1f965e6af83f499cf7d2ccead86a0",
+      "answer": {
+        "path": "measurements/verify-candidate-technical/answer.txt",
+        "sha256": "51d126bff7561648501c3b007514d41df01f8735b13d66d902d82e71e523d6f2"
+      },
+      "submitted": {
+        "path": "measurements/verify-candidate-technical/submitted.txt",
+        "sha256": "d49ee3a51a57062f1a90707c14eabebdb6828f52d4fc2ae1b8b580b99e2dbb58"
+      },
+      "effective_editor": {
+        "path": "measurements/verify-candidate-technical/effective.txt",
+        "sha256": "333986c9c22706e7f501d1acf474381a76026ae756b521476d3b0622fb50a983"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:25:38.765Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "verify-candidate-business",
+      "phase": "fresh_verification",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 0,
+        "mixed": 0,
+        "human": 100
+      },
+      "source_receipt_sha256": "9944dc7f222e0cc8e2a6c1a0ea980b6acca7cc32046ab457a607995567dcf0b0",
+      "answer": {
+        "path": "measurements/verify-candidate-business/answer.txt",
+        "sha256": "8ff35148bd34acb2db6afec41bd2819f4d29ca4338bcb8e4ce0a481845d3d70f"
+      },
+      "submitted": {
+        "path": "measurements/verify-candidate-business/submitted.txt",
+        "sha256": "155f2aac2d6aa61d5cbe9de9560467e54ad30a5868a896723ea81dcb62debf7e"
+      },
+      "effective_editor": {
+        "path": "measurements/verify-candidate-business/effective.txt",
+        "sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-08T09:26:54.974Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_id": "verify-baseline-business",
+      "phase": "fresh_verification",
+      "case_id": "wm4-dev-business-01",
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0
+      },
+      "source_receipt_sha256": "f9930f1d770e8c6dd80c45d44fc001de09db0c5507815d9d746709d42f6d3e96",
+      "answer": {
+        "path": "measurements/verify-baseline-business/answer.txt",
+        "sha256": "b31bf8225d4cab7cb9ec56e75e3029d9d310e77ea056125f965e8b67f3d2421f"
+      },
+      "submitted": {
+        "path": "measurements/verify-baseline-business/submitted.txt",
+        "sha256": "4c210ebcb428718993fba5c809193a57588a3f3f0dc3b874e3494fef745b1cf6"
+      },
+      "effective_editor": {
+        "path": "measurements/verify-baseline-business/effective.txt",
+        "sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad"
+      },
+      "editor_unchanged_after_scan": true,
+      "transformation_verified": "Removed exactly one terminal LF from answer for submission; editor appended exactly three LF. No other byte changes."
+    }
+  ],
+  "screening_correction": {
+    "superseded_event": 141,
+    "correction_event": 142,
+    "scope": "Derived decision only. Native completed receipts were already correct.",
+    "incorrect_derived_ai": [
+      100,
+      100
+    ],
+    "correct_receipt_derived_ai": [
+      100,
+      0
+    ],
+    "correct_mean_ai_reduction_pp": 50,
+    "source_business_receipt_sha256": "ac857ae8e44e5abb289a7ba778d4de4c456ea5e0bfa7edf595978f4429f56714",
+    "original_incorrect_event_retained_privately": true
+  },
+  "verification": {
+    "status": "complete_quality_and_measurement_pass",
+    "quality_passed": true,
+    "paired_quality_preference": [
+      "tie",
+      "tie"
+    ],
+    "mean_ai_reduction_pp": 50,
+    "scan_calls": 4,
+    "technical_reduction_pp": 0,
+    "business_reduction_pp": 100,
+    "quality_review": "reviews/verification.json",
+    "fresh_processes": 2,
+    "fixed_seed_not_independent_random_draws": true,
+    "raw_hashes_match_screening": true,
+    "final_texts_differ_from_screening": true
+  },
+  "confirmation": {
+    "status": "confirmation_failed_keep_incumbent",
+    "failure_stage": "paired_quality_preference",
+    "all_four_answers_factually_pass": true,
+    "paired_quality_gate_passed": false,
+    "scan_calls": 0,
+    "cohort_retired": true,
+    "promotion": false,
+    "post_review_repairs": 0,
+    "method_or_parameter_changes": 0,
+    "cases": [
+      {
+        "case_id": "b20-confirm-notice-01",
+        "both_arms_factual_form_pass": true,
+        "preferred_arm": "baseline",
+        "reason": "A gives the event details directly, groups attendance and booking conditions coherently, and places practical arrival information before cancellation. B is accurate but its repeated location references and phrases such as “Session day is” make the notice less natural.",
+        "baseline_sha256": "86919cfaa0ae8166a1e62060bc16bfa00b00adebe43619e918bb77389e7e963b",
+        "candidate_sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+        "baseline_metrics": null,
+        "candidate_metrics": null,
+        "ai_reduction_pp": null
+      },
+      {
+        "case_id": "b20-confirm-rules-02",
+        "both_arms_factual_form_pass": true,
+        "preferred_arm": "baseline",
+        "reason": "B uses direct setup instructions and shorter numbered steps, then states the winning condition together with immediate game termination. A is accurate, but its fourth step combines turn choices, the token cap, and the end-of-game exception in a denser block.",
+        "baseline_sha256": "21a99aff94f3078903268ed5bbd69d89cd7b559c6ed99beed2e0b2be7e4c9a11",
+        "candidate_sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+        "baseline_metrics": null,
+        "candidate_metrics": null,
+        "ai_reduction_pp": null
+      }
+    ],
+    "quality_review": "reviews/confirmation.json"
+  },
+  "source_contracts": [
+    "sources/development.json",
+    "sources/confirmation-retired.json"
+  ],
+  "tested_pipeline": {
+    "model": "authormist/authormist-originality",
+    "revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+    "model_card": "https://huggingface.co/authormist/authormist-originality/tree/2866bc928850ef4910d24ef5a9179740fab72e22",
+    "model_weights_bundled": false,
+    "supported_skill_backend": false,
+    "paper_reproduction": false,
+    "runtime": {
+      "intensity": 0,
+      "seed": 19,
+      "alpha": 1e-05,
+      "temperature": 1,
+      "max_new_tokens": 512,
+      "max_generation_seconds": 300,
+      "outer_timeout_seconds": 600,
+      "serial_processes": true,
+      "retries": 0
+    },
+    "hardware": "Apple MPS",
+    "dtype": "bfloat16",
+    "sampling": "CPU multinomial; no top-k, top-p or repetition penalty. Intensity zero disables contrast and the plausibility mask; alpha is inactive.",
+    "context": "Complete rendered Qwen prompt; no truncation; prompt plus output bounded by 4096 tokens.",
+    "model_weight_hashes_independently_checked": false,
+    "stage_b": "One fresh context for both cases: bounded factual/grammar repair, retaining supported fluent wording and order; no regeneration or unrestricted restyling.",
+    "stage_c": "A separate fresh context for both cases: saved reader-purpose plan, bounded sentence/condition movement and justified local fluency edits; no additional factual repair.",
+    "frozen_method": "frozen/methods/r20.txt",
+    "frozen_incumbent": "frozen/incumbent.txt",
+    "screening_raw_generation": "Reused two known defective local pilot outputs; two fresh editor contexts.",
+    "verification_raw_generation": "Two fresh serial executions, fixed seed 19; same raw bytes as screening, different edited finals.",
+    "confirmation_raw_generation": "Two fresh serial executions of the frozen configuration on the retired cases.",
+    "exact_backend_settings_for_larger_writers_and_judges": null,
+    "stages": {
+      "screening": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "raw": {
+            "path": "stages/screening/raw/wm4-dev-technical-01.txt",
+            "sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2"
+          },
+          "repaired": {
+            "path": "stages/screening/repaired/wm4-dev-technical-01.txt",
+            "sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a"
+          },
+          "final_sha256": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "raw": {
+            "path": "stages/screening/raw/wm4-dev-business-01.txt",
+            "sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2"
+          },
+          "repaired": {
+            "path": "stages/screening/repaired/wm4-dev-business-01.txt",
+            "sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28"
+          },
+          "final_sha256": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67"
+        }
+      ],
+      "verification": [
+        {
+          "case_id": "wm4-dev-technical-01",
+          "raw": {
+            "path": "stages/verification/raw/wm4-dev-technical-01.txt",
+            "sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2"
+          },
+          "repaired": {
+            "path": "stages/verification/repaired/wm4-dev-technical-01.txt",
+            "sha256": "e51967b282423e933567434f9f8070261338bc84f71f91311e021ce9b3234f6b"
+          },
+          "final_sha256": "51d126bff7561648501c3b007514d41df01f8735b13d66d902d82e71e523d6f2"
+        },
+        {
+          "case_id": "wm4-dev-business-01",
+          "raw": {
+            "path": "stages/verification/raw/wm4-dev-business-01.txt",
+            "sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2"
+          },
+          "repaired": {
+            "path": "stages/verification/repaired/wm4-dev-business-01.txt",
+            "sha256": "6ba700625cbfb69da6911a94ae9feddc34679327e420096f7db1da7127de17a4"
+          },
+          "final_sha256": "8ff35148bd34acb2db6afec41bd2819f4d29ca4338bcb8e4ce0a481845d3d70f"
+        }
+      ],
+      "confirmation": [
+        {
+          "case_id": "b20-confirm-notice-01",
+          "raw": {
+            "path": "stages/confirmation/raw/b20-confirm-notice-01.txt",
+            "sha256": "d8fa513fae4750c6607442177f248c364c61a55d32c484137cbab8cbb4372563"
+          },
+          "repaired": {
+            "path": "stages/confirmation/repaired/b20-confirm-notice-01.txt",
+            "sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2"
+          },
+          "final_sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4"
+        },
+        {
+          "case_id": "b20-confirm-rules-02",
+          "raw": {
+            "path": "stages/confirmation/raw/b20-confirm-rules-02.txt",
+            "sha256": "5e6adace5eb2843f600f17b9a32841100a5b1b616f74c4ef80544b9b821d1d54"
+          },
+          "repaired": {
+            "path": "stages/confirmation/repaired/b20-confirm-rules-02.txt",
+            "sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a"
+          },
+          "final_sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102"
+        }
+      ]
+    },
+    "rendered_generation_prompts": [
+      {
+        "path": "prompts/development-technical.txt",
+        "sha256": "bcf18865d68938a65b96683895eec43f1c581a9dbd32fedaee4f4cfcacc6f464"
+      },
+      {
+        "path": "prompts/development-business.txt",
+        "sha256": "40dd6ee770beffe2d5a70e84338327ed144f53c913b3eed33ae6586ead520908"
+      },
+      {
+        "path": "prompts/confirmation-notice.txt",
+        "sha256": "ab42638c3b149e0ba3c5b5b488195b7fda7def5a40432a9f003fabc471569e76"
+      },
+      {
+        "path": "prompts/confirmation-rules.txt",
+        "sha256": "f663788fb177acd5d1b0bb00701cec820bec05e5949c000510678add39d01353"
+      }
+    ]
+  },
+  "measurement_limits": {
+    "service": "GPTZero",
+    "mode": "Basic Scan",
+    "model": "4.9b",
+    "metrics": "Native document confidence percentages in AI / Mixed / Human order; not authorship proof.",
+    "source_receipts": "Saved operator UI observations, not authenticated service exports or independent remeasurement.",
+    "editor_transform": "Each submitted text removes one terminal LF from its answer; each effective editor text adds exactly three LF to the submitted text. Pre/post scan editor bytes match.",
+    "warning_count": 0,
+    "browser_transport_timeouts_reconciled": 3,
+    "unresolved_scans": 0,
+    "duplicate_scan_submissions_from_timeouts": 0,
+    "confirmation_editor_preparation": "All four final bodies were prepared in editors, but no scan action followed the failed quality gate. Those unscanned editor preparations are not counted as observations."
+  },
+  "limitations": [
+    "Two exposed development cases and shared controls; not twenty independent paired trials or independent mechanisms.",
+    "Adaptive method selection and added editor calls/context prevent component attribution.",
+    "Fixed-seed raw repeats are fresh processes, not independent random draws.",
+    "Both retired confirmation candidates preserved all facts but lost readability preference; detector metrics remain null.",
+    "No statistical-significance, broad writing-quality, other-detector or GPTZero-generalization claim.",
+    "Fresh-context separation on a shared filesystem is operational, not enforced read isolation.",
+    "The original aggregate incumbent-hash serialization could not be reproduced; all seventeen individual frozen files matched their recorded installed versions.",
+    "Pre-existing untracked repository contents were not hashed at batch start.",
+    "Exact large-model backend settings, usage and monetary costs are unavailable.",
+    "The separate decoder feasibility pilot retained four quality-failed raw outputs and had zero detector scans; its full intermediate record remains private.",
+    "This public preparation does not itself rerun generation, scan the detector or independently audit the experiment."
+  ]
+}

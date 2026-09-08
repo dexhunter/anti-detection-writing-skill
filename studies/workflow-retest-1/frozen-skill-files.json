@@ -1,0 +1,9 @@
+{
+  "references/evidence.md": "794dcab7bebe12ec3071aaa0da64af78396efd517bbabce096aa466d5ece02dd",
+  "references/detector-research.md": "3a9865fd655e1f616e1104466da7c41b6439216e461d369f4bfc07835873da41",
+  "references/measurement.md": "f105a1fc0036668864348d71d4fee3e9dbe37881144d5fca056d491a4cd11a0a",
+  "references/receipt-format.md": "3542b0c32edcff25fccc09ec4e36241cc2d53e6dbcce6d60dafe5e94af68f140",
+  "agents/openai.yaml": "1a655d0a68dbbc03bb4224ac22f530431a912c2f419f1fc11d51fc6983693e43",
+  "scripts/validate_receipt.py": "3cb2d27c558a1d3eb0b3b160ee135fdd97c3404b1a80b9898ee3641ba80dd780",
+  "SKILL.txt": "84680e93a824b5f093c867f8f5073fedb696483794ed2771eae69524a8bd2491"
+}

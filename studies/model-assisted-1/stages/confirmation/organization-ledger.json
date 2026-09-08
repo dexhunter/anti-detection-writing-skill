@@ -1,0 +1,2665 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "status": "PASS",
+  "timestamps": {
+    "input_verification_observed_utc": "2026-09-08T09:54:49.207078+00:00",
+    "pre_edit_plan_saved_utc": "2026-09-08T09:56:05.224523+00:00",
+    "answers_frozen_utc": "2026-09-08T09:57:28.251939+00:00",
+    "final_self_check_completed_utc": "2026-09-08T09:58:52.537831+00:00"
+  },
+  "actual_execution_context": {
+    "case_ids_in_same_context": [
+      "b20-confirm-notice-01",
+      "b20-confirm-rules-02"
+    ],
+    "separate_case_contexts": false
+  },
+  "pre_edit_plan": {
+    "path": "Private execution metadata omitted from this public export.",
+    "sha256": "ea0a9a2d3db9c8cd758b4636f35595bbae1418472af5e97a01d58b40130813af"
+  },
+  "input_manifest": [
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162",
+      "bytes": 9975
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "bbae9534d1a825dbd02705a93d0e6a0ba3e1548dfeee669cd8ce961947ea9dda",
+      "bytes": 7323
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "5f629246ba2ba01230883fb27f137b4f7ddccc6c9edc95397473fdd29632fd00",
+      "bytes": 1273
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c38e969c1888ba331238ee8d9cd6827c5846030e346f12ed2fa4c23313c1dd09",
+      "bytes": 355
+    },
+    {
+      "path": "stages/confirmation/repaired/b20-confirm-notice-01.txt",
+      "sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+      "bytes": 986
+    },
+    {
+      "path": "stages/confirmation/repaired/b20-confirm-rules-02.txt",
+      "sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+      "bytes": 824
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c2e4164830cb4179781d66fe20552c158a263360c5e28927ac4f8c28001e4f74",
+      "bytes": 65716
+    },
+    {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c81e4c72bb19084d6650b1b6ded6fd0bd3e172d36073d840041d191be725671d",
+      "bytes": 6605
+    }
+  ],
+  "cases": [
+    {
+      "id": "b20-confirm-notice-01",
+      "status": "PASS",
+      "no_op": false,
+      "input": {
+        "path": "stages/confirmation/repaired/b20-confirm-notice-01.txt",
+        "sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+        "bytes": 986,
+        "whitespace_word_count": 162,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "movement_intermediate": {
+        "path": "Private execution metadata omitted from this public export.",
+        "sha256": "e25c8b49df9bb9893db3e424fce185cff65d5fbaf0e48b8fbd574c86615720ae",
+        "bytes": 986,
+        "whitespace_word_count": 162,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "output": {
+        "path": "answers/confirmation/candidate/b20-confirm-notice-01.txt",
+        "sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+        "bytes": 988,
+        "whitespace_word_count": 162,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "actual_operations": [
+        {
+          "id": "b20-confirm-notice-01-C1",
+          "type": "movement",
+          "reason": "N-D1 and N-D2: move schedule directly after identity; move intact cancellation and notification sentences directly after booking conditions.",
+          "before": "Fictional notice - Hawthorn Museum Family Workshop\n\nA map workshop for children and adults is hosted at the Hawthorn Museum. It is intended for children aged eight to twelve; every child must attend with an adult. Session day is 18 November from 14:00 to 15:30 at the ground-floor studio. There are twelve child places. For this event, booking must be completed at the museum reception desk by 16 November. Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.\n\nMaterials are provided. Please arrive ten minutes early and use the courtyard entrance. The ground floor studio is step free but will not offer a sign-language interpreter. If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.\n\nNotifications of cancellations will go to the email address supplied during booking. The permanent galleries remain open that afternoon with usual entry charges applying.\n",
+          "after": "Fictional notice - Hawthorn Museum Family Workshop\n\nA map workshop for children and adults is hosted at the Hawthorn Museum. Session day is 18 November from 14:00 to 15:30 at the ground-floor studio. It is intended for children aged eight to twelve; every child must attend with an adult. There are twelve child places. For this event, booking must be completed at the museum reception desk by 16 November. Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.\n\nIf fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds. Notifications of cancellations will go to the email address supplied during booking. Materials are provided. Please arrive ten minutes early and use the courtyard entrance.\n\nThe ground floor studio is step free but will not offer a sign-language interpreter. The permanent galleries remain open that afternoon with usual entry charges applying.\n",
+          "step_input_sha256": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+          "step_output_sha256": "e25c8b49df9bb9893db3e424fce185cff65d5fbaf0e48b8fbd574c86615720ae",
+          "unit_order_before": [
+            "event_identity",
+            "eligibility_and_accompaniment",
+            "schedule",
+            "child_capacity",
+            "booking_deadline_and_location",
+            "payment_confirmation_and_booking_price",
+            "materials",
+            "arrival_and_entrance",
+            "access_and_interpreter_exception",
+            "cancellation_condition_and_consequences",
+            "cancellation_email",
+            "galleries_and_charge"
+          ],
+          "unit_order_after": [
+            "event_identity",
+            "schedule",
+            "eligibility_and_accompaniment",
+            "child_capacity",
+            "booking_deadline_and_location",
+            "payment_confirmation_and_booking_price",
+            "cancellation_condition_and_consequences",
+            "cancellation_email",
+            "materials",
+            "arrival_and_entrance",
+            "access_and_interpreter_exception",
+            "galleries_and_charge"
+          ],
+          "moved_units_preserved_verbatim": true,
+          "presentation_only_renumbering": false
+        },
+        {
+          "id": "b20-confirm-notice-01-C2",
+          "type": "joining_and_formatting",
+          "reason": "N-D2 and N-D3: separate identification, booking, cancellation, attendance logistics and gallery alternative into coherent paragraphs; keep cancellation and notification together.",
+          "before": "Fictional notice - Hawthorn Museum Family Workshop\n\nA map workshop for children and adults is hosted at the Hawthorn Museum. Session day is 18 November from 14:00 to 15:30 at the ground-floor studio. It is intended for children aged eight to twelve; every child must attend with an adult. There are twelve child places. For this event, booking must be completed at the museum reception desk by 16 November. Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.\n\nIf fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds. Notifications of cancellations will go to the email address supplied during booking. Materials are provided. Please arrive ten minutes early and use the courtyard entrance.\n\nThe ground floor studio is step free but will not offer a sign-language interpreter. The permanent galleries remain open that afternoon with usual entry charges applying.\n",
+          "after": "Fictional notice - Hawthorn Museum Family Workshop\n\nA map workshop for children and adults is hosted at the Hawthorn Museum. Session day is 18 November from 14:00 to 15:30 at the ground-floor studio. It is intended for children aged eight to twelve; every child must attend with an adult.\n\nThere are twelve child places. For this event, booking must be completed at the museum reception desk by 16 November. Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.\n\nIf fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds. Notifications of cancellations will go to the email address supplied during booking.\n\nMaterials are provided. Please arrive ten minutes early and use the courtyard entrance. The ground floor studio is step free but will not offer a sign-language interpreter.\n\nThe permanent galleries remain open that afternoon with usual entry charges applying.\n",
+          "step_input_sha256": "e25c8b49df9bb9893db3e424fce185cff65d5fbaf0e48b8fbd574c86615720ae",
+          "step_output_sha256": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+          "grouped_unit_ids": [
+            [
+              "event_identity",
+              "schedule",
+              "eligibility_and_accompaniment"
+            ],
+            [
+              "child_capacity",
+              "booking_deadline_and_location",
+              "payment_confirmation_and_booking_price"
+            ],
+            [
+              "cancellation_condition_and_consequences",
+              "cancellation_email"
+            ],
+            [
+              "materials",
+              "arrival_and_entrance",
+              "access_and_interpreter_exception"
+            ],
+            [
+              "galleries_and_charge"
+            ]
+          ],
+          "sentence_or_clause_fusion": false,
+          "joining_mechanism": "paragraph whitespace only",
+          "wording_edits": []
+        }
+      ],
+      "full_unit_semantic_mapping": [
+        {
+          "unit_id": "title",
+          "input": {
+            "text": "Fictional notice - Hawthorn Museum Family Workshop",
+            "codepoint_range": [
+              0,
+              50
+            ],
+            "utf8_byte_range": [
+              0,
+              50
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Fictional notice - Hawthorn Museum Family Workshop",
+            "codepoint_range": [
+              0,
+              50
+            ],
+            "utf8_byte_range": [
+              0,
+              50
+            ]
+          },
+          "output": {
+            "text": "Fictional notice - Hawthorn Museum Family Workshop",
+            "codepoint_range": [
+              0,
+              50
+            ],
+            "utf8_byte_range": [
+              0,
+              50
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "event_identity",
+          "input": {
+            "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+            "codepoint_range": [
+              52,
+              124
+            ],
+            "utf8_byte_range": [
+              52,
+              124
+            ]
+          },
+          "movement_intermediate": {
+            "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+            "codepoint_range": [
+              52,
+              124
+            ],
+            "utf8_byte_range": [
+              52,
+              124
+            ]
+          },
+          "output": {
+            "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+            "codepoint_range": [
+              52,
+              124
+            ],
+            "utf8_byte_range": [
+              52,
+              124
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "eligibility_and_accompaniment",
+          "input": {
+            "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+            "codepoint_range": [
+              125,
+              213
+            ],
+            "utf8_byte_range": [
+              125,
+              213
+            ]
+          },
+          "movement_intermediate": {
+            "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+            "codepoint_range": [
+              200,
+              288
+            ],
+            "utf8_byte_range": [
+              200,
+              288
+            ]
+          },
+          "output": {
+            "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+            "codepoint_range": [
+              200,
+              288
+            ],
+            "utf8_byte_range": [
+              200,
+              288
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "schedule",
+          "input": {
+            "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+            "codepoint_range": [
+              214,
+              288
+            ],
+            "utf8_byte_range": [
+              214,
+              288
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+            "codepoint_range": [
+              125,
+              199
+            ],
+            "utf8_byte_range": [
+              125,
+              199
+            ]
+          },
+          "output": {
+            "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+            "codepoint_range": [
+              125,
+              199
+            ],
+            "utf8_byte_range": [
+              125,
+              199
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "child_capacity",
+          "input": {
+            "text": "There are twelve child places.",
+            "codepoint_range": [
+              289,
+              319
+            ],
+            "utf8_byte_range": [
+              289,
+              319
+            ]
+          },
+          "movement_intermediate": {
+            "text": "There are twelve child places.",
+            "codepoint_range": [
+              289,
+              319
+            ],
+            "utf8_byte_range": [
+              289,
+              319
+            ]
+          },
+          "output": {
+            "text": "There are twelve child places.",
+            "codepoint_range": [
+              290,
+              320
+            ],
+            "utf8_byte_range": [
+              290,
+              320
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "booking_deadline_and_location",
+          "input": {
+            "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+            "codepoint_range": [
+              320,
+              406
+            ],
+            "utf8_byte_range": [
+              320,
+              406
+            ]
+          },
+          "movement_intermediate": {
+            "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+            "codepoint_range": [
+              320,
+              406
+            ],
+            "utf8_byte_range": [
+              320,
+              406
+            ]
+          },
+          "output": {
+            "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+            "codepoint_range": [
+              321,
+              407
+            ],
+            "utf8_byte_range": [
+              321,
+              407
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "payment_confirmation_and_booking_price",
+          "input": {
+            "text": "Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.",
+            "codepoint_range": [
+              407,
+              509
+            ],
+            "utf8_byte_range": [
+              407,
+              510
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.",
+            "codepoint_range": [
+              407,
+              509
+            ],
+            "utf8_byte_range": [
+              407,
+              510
+            ]
+          },
+          "output": {
+            "text": "Only payment confirms a place; each booking includes one child and one adult at a combined cost of £6.",
+            "codepoint_range": [
+              408,
+              510
+            ],
+            "utf8_byte_range": [
+              408,
+              511
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "materials",
+          "input": {
+            "text": "Materials are provided.",
+            "codepoint_range": [
+              511,
+              534
+            ],
+            "utf8_byte_range": [
+              512,
+              535
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Materials are provided.",
+            "codepoint_range": [
+              725,
+              748
+            ],
+            "utf8_byte_range": [
+              726,
+              749
+            ]
+          },
+          "output": {
+            "text": "Materials are provided.",
+            "codepoint_range": [
+              727,
+              750
+            ],
+            "utf8_byte_range": [
+              728,
+              751
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "arrival_and_entrance",
+          "input": {
+            "text": "Please arrive ten minutes early and use the courtyard entrance.",
+            "codepoint_range": [
+              535,
+              598
+            ],
+            "utf8_byte_range": [
+              536,
+              599
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Please arrive ten minutes early and use the courtyard entrance.",
+            "codepoint_range": [
+              749,
+              812
+            ],
+            "utf8_byte_range": [
+              750,
+              813
+            ]
+          },
+          "output": {
+            "text": "Please arrive ten minutes early and use the courtyard entrance.",
+            "codepoint_range": [
+              751,
+              814
+            ],
+            "utf8_byte_range": [
+              752,
+              815
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "access_and_interpreter_exception",
+          "input": {
+            "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+            "codepoint_range": [
+              599,
+              683
+            ],
+            "utf8_byte_range": [
+              600,
+              684
+            ]
+          },
+          "movement_intermediate": {
+            "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+            "codepoint_range": [
+              814,
+              898
+            ],
+            "utf8_byte_range": [
+              815,
+              899
+            ]
+          },
+          "output": {
+            "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+            "codepoint_range": [
+              815,
+              899
+            ],
+            "utf8_byte_range": [
+              816,
+              900
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "cancellation_condition_and_consequences",
+          "input": {
+            "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+            "codepoint_range": [
+              684,
+              812
+            ],
+            "utf8_byte_range": [
+              685,
+              813
+            ]
+          },
+          "movement_intermediate": {
+            "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+            "codepoint_range": [
+              511,
+              639
+            ],
+            "utf8_byte_range": [
+              512,
+              640
+            ]
+          },
+          "output": {
+            "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+            "codepoint_range": [
+              512,
+              640
+            ],
+            "utf8_byte_range": [
+              513,
+              641
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "cancellation_email",
+          "input": {
+            "text": "Notifications of cancellations will go to the email address supplied during booking.",
+            "codepoint_range": [
+              814,
+              898
+            ],
+            "utf8_byte_range": [
+              815,
+              899
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Notifications of cancellations will go to the email address supplied during booking.",
+            "codepoint_range": [
+              640,
+              724
+            ],
+            "utf8_byte_range": [
+              641,
+              725
+            ]
+          },
+          "output": {
+            "text": "Notifications of cancellations will go to the email address supplied during booking.",
+            "codepoint_range": [
+              641,
+              725
+            ],
+            "utf8_byte_range": [
+              642,
+              726
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "galleries_and_charge",
+          "input": {
+            "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+            "codepoint_range": [
+              899,
+              984
+            ],
+            "utf8_byte_range": [
+              900,
+              985
+            ]
+          },
+          "movement_intermediate": {
+            "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+            "codepoint_range": [
+              899,
+              984
+            ],
+            "utf8_byte_range": [
+              900,
+              985
+            ]
+          },
+          "output": {
+            "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+            "codepoint_range": [
+              901,
+              986
+            ],
+            "utf8_byte_range": [
+              902,
+              987
+            ]
+          },
+          "exact_wording_preserved": true
+        }
+      ],
+      "full_claim_mapping": [
+        {
+          "claim_id": "HC1",
+          "full_contract_claim": "HC1: This is an invented Hawthorn Museum family map workshop, not a real event.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Fictional notice - Hawthorn Museum Family Workshop",
+              "codepoint_range": [
+                0,
+                50
+              ],
+              "utf8_byte_range": [
+                0,
+                50
+              ]
+            },
+            {
+              "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+              "codepoint_range": [
+                52,
+                124
+              ],
+              "utf8_byte_range": [
+                52,
+                124
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Fictional notice - Hawthorn Museum Family Workshop",
+              "codepoint_range": [
+                0,
+                50
+              ],
+              "utf8_byte_range": [
+                0,
+                50
+              ]
+            },
+            {
+              "text": "A map workshop for children and adults is hosted at the Hawthorn Museum.",
+              "codepoint_range": [
+                52,
+                124
+              ],
+              "utf8_byte_range": [
+                52,
+                124
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Fictional notice title retains invented status, institution and family-workshop context; opening sentence retains the map-workshop subject.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC2",
+          "full_contract_claim": "HC2: The workshop is on 18 November, 14:00 to 15:30, in the ground-floor studio.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+              "codepoint_range": [
+                214,
+                288
+              ],
+              "utf8_byte_range": [
+                214,
+                288
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Session day is 18 November from 14:00 to 15:30 at the ground-floor studio.",
+              "codepoint_range": [
+                125,
+                199
+              ],
+              "utf8_byte_range": [
+                125,
+                199
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Exact date, start and end times and ground-floor studio retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC3",
+          "full_contract_claim": "HC3: Intended child age range is eight to twelve; every child must attend with an adult.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+              "codepoint_range": [
+                125,
+                213
+              ],
+              "utf8_byte_range": [
+                125,
+                213
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "It is intended for children aged eight to twelve; every child must attend with an adult.",
+              "codepoint_range": [
+                200,
+                288
+              ],
+              "utf8_byte_range": [
+                200,
+                288
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Intended age range and every-child mandatory adult accompaniment retained together.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC4",
+          "full_contract_claim": "HC4: Each booking covers one child and one adult for a combined price of £6.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "each booking includes one child and one adult at a combined cost of £6.",
+              "codepoint_range": [
+                438,
+                509
+              ],
+              "utf8_byte_range": [
+                438,
+                510
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "each booking includes one child and one adult at a combined cost of £6.",
+              "codepoint_range": [
+                439,
+                510
+              ],
+              "utf8_byte_range": [
+                439,
+                511
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Each-booking scope, one child, one adult and combined £6 price retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC5",
+          "full_contract_claim": "HC5: Capacity is twelve child places, not twelve total attendees.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "There are twelve child places.",
+              "codepoint_range": [
+                289,
+                319
+              ],
+              "utf8_byte_range": [
+                289,
+                319
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "There are twelve child places.",
+              "codepoint_range": [
+                290,
+                320
+              ],
+              "utf8_byte_range": [
+                290,
+                320
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Twelve remains a child-place capacity.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC6",
+          "full_contract_claim": "HC6: Book at the museum reception desk by 16 November; payment is required for confirmation.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+              "codepoint_range": [
+                320,
+                406
+              ],
+              "utf8_byte_range": [
+                320,
+                406
+              ]
+            },
+            {
+              "text": "Only payment confirms a place",
+              "codepoint_range": [
+                407,
+                436
+              ],
+              "utf8_byte_range": [
+                407,
+                436
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "For this event, booking must be completed at the museum reception desk by 16 November.",
+              "codepoint_range": [
+                321,
+                407
+              ],
+              "utf8_byte_range": [
+                321,
+                407
+              ]
+            },
+            {
+              "text": "Only payment confirms a place",
+              "codepoint_range": [
+                408,
+                437
+              ],
+              "utf8_byte_range": [
+                408,
+                437
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Museum reception desk, inclusive by-16-November deadline and payment-only confirmation retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC7",
+          "full_contract_claim": "HC7: Materials are provided.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Materials are provided.",
+              "codepoint_range": [
+                511,
+                534
+              ],
+              "utf8_byte_range": [
+                512,
+                535
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Materials are provided.",
+              "codepoint_range": [
+                727,
+                750
+              ],
+              "utf8_byte_range": [
+                728,
+                751
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Materials provision retained without a separate price claim.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC8",
+          "full_contract_claim": "HC8: Arrive ten minutes early and use the courtyard entrance.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Please arrive ten minutes early and use the courtyard entrance.",
+              "codepoint_range": [
+                535,
+                598
+              ],
+              "utf8_byte_range": [
+                536,
+                599
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Please arrive ten minutes early and use the courtyard entrance.",
+              "codepoint_range": [
+                751,
+                814
+              ],
+              "utf8_byte_range": [
+                752,
+                815
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Arrival request, ten minutes early and courtyard entrance retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC9",
+          "full_contract_claim": "HC9: Studio access is step-free; no sign-language interpreter is included in this workshop.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+              "codepoint_range": [
+                599,
+                683
+              ],
+              "utf8_byte_range": [
+                600,
+                684
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "The ground floor studio is step free but will not offer a sign-language interpreter.",
+              "codepoint_range": [
+                815,
+                899
+              ],
+              "utf8_byte_range": [
+                816,
+                900
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Step-free studio access and negated interpreter provision remain within the fictional workshop context.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC10",
+          "full_contract_claim": "HC10: Fewer than six paid child places by the booking deadline triggers cancellation and full refunds.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+              "codepoint_range": [
+                684,
+                812
+              ],
+              "utf8_byte_range": [
+                685,
+                813
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "If fewer than six child places are paid for by this booking deadline, the museum will cancel the session and issue full refunds.",
+              "codepoint_range": [
+                512,
+                640
+              ],
+              "utf8_byte_range": [
+                513,
+                641
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Strict fewer-than-six paid child places by the booking deadline stays attached to museum cancellation and full refunds.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC11",
+          "full_contract_claim": "HC11: Cancellation notices go to the email address provided at booking.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Notifications of cancellations will go to the email address supplied during booking.",
+              "codepoint_range": [
+                814,
+                898
+              ],
+              "utf8_byte_range": [
+                815,
+                899
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Notifications of cancellations will go to the email address supplied during booking.",
+              "codepoint_range": [
+                641,
+                725
+              ],
+              "utf8_byte_range": [
+                642,
+                726
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Email destination remains the address supplied during booking; notification sender remains unspecified.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "HC12",
+          "full_contract_claim": "HC12: Permanent galleries remain open that afternoon; their usual entry charge still applies.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+              "codepoint_range": [
+                899,
+                984
+              ],
+              "utf8_byte_range": [
+                900,
+                985
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "The permanent galleries remain open that afternoon with usual entry charges applying.",
+              "codepoint_range": [
+                901,
+                986
+              ],
+              "utf8_byte_range": [
+                902,
+                987
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Permanent galleries, that-afternoon opening and usual entry charges retained together.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        }
+      ],
+      "wording_edit_count": 0,
+      "factual_repairs": 0,
+      "semantic_additions": [],
+      "semantic_deletions": [],
+      "unavailable_or_blocker": null,
+      "protected_literal_check": [
+        {
+          "literal": "Hawthorn Museum",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                19,
+                34
+              ],
+              "utf8_byte_range": [
+                19,
+                34
+              ]
+            },
+            {
+              "codepoint_range": [
+                108,
+                123
+              ],
+              "utf8_byte_range": [
+                108,
+                123
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "18 November",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                140,
+                151
+              ],
+              "utf8_byte_range": [
+                140,
+                151
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "14:00",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                157,
+                162
+              ],
+              "utf8_byte_range": [
+                157,
+                162
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "15:30",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                166,
+                171
+              ],
+              "utf8_byte_range": [
+                166,
+                171
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "eight to twelve",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                233,
+                248
+              ],
+              "utf8_byte_range": [
+                233,
+                248
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "£6",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                507,
+                509
+              ],
+              "utf8_byte_range": [
+                507,
+                510
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "twelve",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                242,
+                248
+              ],
+              "utf8_byte_range": [
+                242,
+                248
+              ]
+            },
+            {
+              "codepoint_range": [
+                300,
+                306
+              ],
+              "utf8_byte_range": [
+                300,
+                306
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "16 November",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                395,
+                406
+              ],
+              "utf8_byte_range": [
+                395,
+                406
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "ten minutes",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                765,
+                776
+              ],
+              "utf8_byte_range": [
+                766,
+                777
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "courtyard entrance",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                795,
+                813
+              ],
+              "utf8_byte_range": [
+                796,
+                814
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "six",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                526,
+                529
+              ],
+              "utf8_byte_range": [
+                527,
+                530
+              ]
+            }
+          ]
+        }
+      ],
+      "final_self_check": {
+        "status": "PASS",
+        "performed_once_after_answers_frozen": true,
+        "claim_count": 12,
+        "mapped_claim_count": 12,
+        "direct_comparison_with_complete_contract": true,
+        "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true,
+        "all_substantive_units_verbatim": true,
+        "content_token_multiset_identical_excluding_numbered_list_labels": true,
+        "semantic_additions": [],
+        "semantic_omissions": [],
+        "unsupported_explanations_examples_strategy_equipment_or_mechanics": [],
+        "invented_observations_tests_experience_commitments_authorship": [],
+        "all_protected_literals_present": true,
+        "whitespace_word_count": 162,
+        "word_limit": 180,
+        "word_limit_pass": true,
+        "UTF_8_terminal_LF": true,
+        "format_matches_reader_purpose": true,
+        "planned_movement_and_grouping_only": true,
+        "wording_edits": 0,
+        "new_factual_repairs": 0,
+        "all_supported_clauses_replaced": false,
+        "method_viable": true,
+        "failure_list": [],
+        "independent_review": false
+      }
+    },
+    {
+      "id": "b20-confirm-rules-02",
+      "status": "PASS",
+      "no_op": false,
+      "input": {
+        "path": "stages/confirmation/repaired/b20-confirm-rules-02.txt",
+        "sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+        "bytes": 824,
+        "whitespace_word_count": 153,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "movement_intermediate": {
+        "path": "Private execution metadata omitted from this public export.",
+        "sha256": "e9faa0b33728a640dcb9075bbde3f1410f766f82910923d95f29ed59e6b27d4f",
+        "bytes": 824,
+        "whitespace_word_count": 153,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "output": {
+        "path": "answers/confirmation/candidate/b20-confirm-rules-02.txt",
+        "sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+        "bytes": 800,
+        "whitespace_word_count": 146,
+        "UTF_8": true,
+        "terminal_LF": true
+      },
+      "actual_operations": [
+        {
+          "id": "b20-confirm-rules-02-C1",
+          "type": "movement",
+          "reason": "L-D1, L-D2 and L-D3: place objective and no-dice statement with game identity, shared-space permission with starting placement, and each limit beside its governing move option.",
+          "before": "1. Lantern Trail is invented for two to four players.\n2. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.\n3. Each player starts with one Lantern Token.\n4. The youngest player starts; turns proceed clockwise.\n5. On each turn select a normal forward move of one space, or stay and take one Lantern Token.\n6. Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.\n7. Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.\n8. A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.\n9. A normal one-space move cannot pass space 12 because reaching it immediately ends the game.\n10. Pawns may share a space.\n11. The first player to reach space 12 wins.\n12. The game has no dice.\n",
+          "after": "1. Lantern Trail is invented for two to four players.\n2. The first player to reach space 12 wins.\n3. The game has no dice.\n4. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.\n5. Each player starts with one Lantern Token.\n6. Pawns may share a space.\n7. The youngest player starts; turns proceed clockwise.\n8. On each turn select a normal forward move of one space, or stay and take one Lantern Token.\n9. Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.\n10. A normal one-space move cannot pass space 12 because reaching it immediately ends the game.\n11. Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.\n12. A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.\n",
+          "step_input_sha256": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+          "step_output_sha256": "e9faa0b33728a640dcb9075bbde3f1410f766f82910923d95f29ed59e6b27d4f",
+          "unit_order_before": [
+            "game_identity",
+            "track_and_pawn_start",
+            "initial_token",
+            "turn_order",
+            "normal_choice",
+            "token_cap_and_collection_prohibition",
+            "paid_move_option_and_payment_first",
+            "paid_move_overshoot_and_nonrefund",
+            "normal_move_end_condition",
+            "shared_spaces",
+            "winning_condition",
+            "no_dice"
+          ],
+          "unit_order_after": [
+            "game_identity",
+            "winning_condition",
+            "no_dice",
+            "track_and_pawn_start",
+            "initial_token",
+            "shared_spaces",
+            "turn_order",
+            "normal_choice",
+            "token_cap_and_collection_prohibition",
+            "normal_move_end_condition",
+            "paid_move_option_and_payment_first",
+            "paid_move_overshoot_and_nonrefund"
+          ],
+          "moved_units_preserved_verbatim": true,
+          "presentation_only_renumbering": true
+        },
+        {
+          "id": "b20-confirm-rules-02-C2",
+          "type": "joining_and_formatting",
+          "reason": "L-D2 and L-D3: join related intact entry bodies into five consecutive numbered items for orientation, setup, turn order, normal choices and paid alternative; renumber presentation labels only.",
+          "before": "1. Lantern Trail is invented for two to four players.\n2. The first player to reach space 12 wins.\n3. The game has no dice.\n4. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.\n5. Each player starts with one Lantern Token.\n6. Pawns may share a space.\n7. The youngest player starts; turns proceed clockwise.\n8. On each turn select a normal forward move of one space, or stay and take one Lantern Token.\n9. Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.\n10. A normal one-space move cannot pass space 12 because reaching it immediately ends the game.\n11. Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.\n12. A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.\n",
+          "after": "1. Lantern Trail is invented for two to four players. The first player to reach space 12 wins. The game has no dice.\n2. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1. Each player starts with one Lantern Token. Pawns may share a space.\n3. The youngest player starts; turns proceed clockwise.\n4. On each turn select a normal forward move of one space, or stay and take one Lantern Token. Maximum token holdings: three tokens; staying to take a token is not allowed if three are held. A normal one-space move cannot pass space 12 because reaching it immediately ends the game.\n5. Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving. A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.\n",
+          "step_input_sha256": "e9faa0b33728a640dcb9075bbde3f1410f766f82910923d95f29ed59e6b27d4f",
+          "step_output_sha256": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+          "grouped_unit_ids": [
+            [
+              "game_identity",
+              "winning_condition",
+              "no_dice"
+            ],
+            [
+              "track_and_pawn_start",
+              "initial_token",
+              "shared_spaces"
+            ],
+            [
+              "turn_order"
+            ],
+            [
+              "normal_choice",
+              "token_cap_and_collection_prohibition",
+              "normal_move_end_condition"
+            ],
+            [
+              "paid_move_option_and_payment_first",
+              "paid_move_overshoot_and_nonrefund"
+            ]
+          ],
+          "sentence_or_clause_fusion": false,
+          "joining_mechanism": "remove internal item labels, join complete bodies with spaces, renumber retained items 1 to 5",
+          "wording_edits": []
+        }
+      ],
+      "full_unit_semantic_mapping": [
+        {
+          "unit_id": "game_identity",
+          "input": {
+            "text": "Lantern Trail is invented for two to four players.",
+            "codepoint_range": [
+              3,
+              53
+            ],
+            "utf8_byte_range": [
+              3,
+              53
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Lantern Trail is invented for two to four players.",
+            "codepoint_range": [
+              3,
+              53
+            ],
+            "utf8_byte_range": [
+              3,
+              53
+            ]
+          },
+          "output": {
+            "text": "Lantern Trail is invented for two to four players.",
+            "codepoint_range": [
+              3,
+              53
+            ],
+            "utf8_byte_range": [
+              3,
+              53
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "track_and_pawn_start",
+          "input": {
+            "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+            "codepoint_range": [
+              57,
+              135
+            ],
+            "utf8_byte_range": [
+              57,
+              135
+            ]
+          },
+          "movement_intermediate": {
+            "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+            "codepoint_range": [
+              126,
+              204
+            ],
+            "utf8_byte_range": [
+              126,
+              204
+            ]
+          },
+          "output": {
+            "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+            "codepoint_range": [
+              120,
+              198
+            ],
+            "utf8_byte_range": [
+              120,
+              198
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "initial_token",
+          "input": {
+            "text": "Each player starts with one Lantern Token.",
+            "codepoint_range": [
+              139,
+              181
+            ],
+            "utf8_byte_range": [
+              139,
+              181
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Each player starts with one Lantern Token.",
+            "codepoint_range": [
+              208,
+              250
+            ],
+            "utf8_byte_range": [
+              208,
+              250
+            ]
+          },
+          "output": {
+            "text": "Each player starts with one Lantern Token.",
+            "codepoint_range": [
+              199,
+              241
+            ],
+            "utf8_byte_range": [
+              199,
+              241
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "turn_order",
+          "input": {
+            "text": "The youngest player starts; turns proceed clockwise.",
+            "codepoint_range": [
+              185,
+              237
+            ],
+            "utf8_byte_range": [
+              185,
+              237
+            ]
+          },
+          "movement_intermediate": {
+            "text": "The youngest player starts; turns proceed clockwise.",
+            "codepoint_range": [
+              282,
+              334
+            ],
+            "utf8_byte_range": [
+              282,
+              334
+            ]
+          },
+          "output": {
+            "text": "The youngest player starts; turns proceed clockwise.",
+            "codepoint_range": [
+              270,
+              322
+            ],
+            "utf8_byte_range": [
+              270,
+              322
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "normal_choice",
+          "input": {
+            "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+            "codepoint_range": [
+              241,
+              332
+            ],
+            "utf8_byte_range": [
+              241,
+              332
+            ]
+          },
+          "movement_intermediate": {
+            "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+            "codepoint_range": [
+              338,
+              429
+            ],
+            "utf8_byte_range": [
+              338,
+              429
+            ]
+          },
+          "output": {
+            "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+            "codepoint_range": [
+              326,
+              417
+            ],
+            "utf8_byte_range": [
+              326,
+              417
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "token_cap_and_collection_prohibition",
+          "input": {
+            "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+            "codepoint_range": [
+              336,
+              431
+            ],
+            "utf8_byte_range": [
+              336,
+              431
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+            "codepoint_range": [
+              433,
+              528
+            ],
+            "utf8_byte_range": [
+              433,
+              528
+            ]
+          },
+          "output": {
+            "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+            "codepoint_range": [
+              418,
+              513
+            ],
+            "utf8_byte_range": [
+              418,
+              513
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "paid_move_option_and_payment_first",
+          "input": {
+            "text": "Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.",
+            "codepoint_range": [
+              435,
+              531
+            ],
+            "utf8_byte_range": [
+              435,
+              531
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.",
+            "codepoint_range": [
+              629,
+              725
+            ],
+            "utf8_byte_range": [
+              629,
+              725
+            ]
+          },
+          "output": {
+            "text": "Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.",
+            "codepoint_range": [
+              609,
+              705
+            ],
+            "utf8_byte_range": [
+              609,
+              705
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "paid_move_overshoot_and_nonrefund",
+          "input": {
+            "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+            "codepoint_range": [
+              535,
+              628
+            ],
+            "utf8_byte_range": [
+              535,
+              628
+            ]
+          },
+          "movement_intermediate": {
+            "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+            "codepoint_range": [
+              730,
+              823
+            ],
+            "utf8_byte_range": [
+              730,
+              823
+            ]
+          },
+          "output": {
+            "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+            "codepoint_range": [
+              706,
+              799
+            ],
+            "utf8_byte_range": [
+              706,
+              799
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "normal_move_end_condition",
+          "input": {
+            "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+            "codepoint_range": [
+              632,
+              723
+            ],
+            "utf8_byte_range": [
+              632,
+              723
+            ]
+          },
+          "movement_intermediate": {
+            "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+            "codepoint_range": [
+              533,
+              624
+            ],
+            "utf8_byte_range": [
+              533,
+              624
+            ]
+          },
+          "output": {
+            "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+            "codepoint_range": [
+              514,
+              605
+            ],
+            "utf8_byte_range": [
+              514,
+              605
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "shared_spaces",
+          "input": {
+            "text": "Pawns may share a space.",
+            "codepoint_range": [
+              728,
+              752
+            ],
+            "utf8_byte_range": [
+              728,
+              752
+            ]
+          },
+          "movement_intermediate": {
+            "text": "Pawns may share a space.",
+            "codepoint_range": [
+              254,
+              278
+            ],
+            "utf8_byte_range": [
+              254,
+              278
+            ]
+          },
+          "output": {
+            "text": "Pawns may share a space.",
+            "codepoint_range": [
+              242,
+              266
+            ],
+            "utf8_byte_range": [
+              242,
+              266
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "winning_condition",
+          "input": {
+            "text": "The first player to reach space 12 wins.",
+            "codepoint_range": [
+              757,
+              797
+            ],
+            "utf8_byte_range": [
+              757,
+              797
+            ]
+          },
+          "movement_intermediate": {
+            "text": "The first player to reach space 12 wins.",
+            "codepoint_range": [
+              57,
+              97
+            ],
+            "utf8_byte_range": [
+              57,
+              97
+            ]
+          },
+          "output": {
+            "text": "The first player to reach space 12 wins.",
+            "codepoint_range": [
+              54,
+              94
+            ],
+            "utf8_byte_range": [
+              54,
+              94
+            ]
+          },
+          "exact_wording_preserved": true
+        },
+        {
+          "unit_id": "no_dice",
+          "input": {
+            "text": "The game has no dice.",
+            "codepoint_range": [
+              802,
+              823
+            ],
+            "utf8_byte_range": [
+              802,
+              823
+            ]
+          },
+          "movement_intermediate": {
+            "text": "The game has no dice.",
+            "codepoint_range": [
+              101,
+              122
+            ],
+            "utf8_byte_range": [
+              101,
+              122
+            ]
+          },
+          "output": {
+            "text": "The game has no dice.",
+            "codepoint_range": [
+              95,
+              116
+            ],
+            "utf8_byte_range": [
+              95,
+              116
+            ]
+          },
+          "exact_wording_preserved": true
+        }
+      ],
+      "full_claim_mapping": [
+        {
+          "claim_id": "LC1",
+          "full_contract_claim": "LC1: Lantern Trail is an invented game for two to four players.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Lantern Trail is invented for two to four players.",
+              "codepoint_range": [
+                3,
+                53
+              ],
+              "utf8_byte_range": [
+                3,
+                53
+              ]
+            },
+            {
+              "text": "The game has no dice.",
+              "codepoint_range": [
+                802,
+                823
+              ],
+              "utf8_byte_range": [
+                802,
+                823
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Lantern Trail is invented for two to four players.",
+              "codepoint_range": [
+                3,
+                53
+              ],
+              "utf8_byte_range": [
+                3,
+                53
+              ]
+            },
+            {
+              "text": "The game has no dice.",
+              "codepoint_range": [
+                95,
+                116
+              ],
+              "utf8_byte_range": [
+                95,
+                116
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Invented Lantern Trail, game identity and two-to-four-player scope preserved together in item 1.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC2",
+          "full_contract_claim": "LC2: Track spaces are numbered 1 to 12; every pawn starts on space 1.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+              "codepoint_range": [
+                57,
+                135
+              ],
+              "utf8_byte_range": [
+                57,
+                135
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.",
+              "codepoint_range": [
+                120,
+                198
+              ],
+              "utf8_byte_range": [
+                120,
+                198
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Track spaces 1 to 12 and players pawn starts on space 1 retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC3",
+          "full_contract_claim": "LC3: Each player starts with one lantern token.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Each player starts with one Lantern Token.",
+              "codepoint_range": [
+                139,
+                181
+              ],
+              "utf8_byte_range": [
+                139,
+                181
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Each player starts with one Lantern Token.",
+              "codepoint_range": [
+                199,
+                241
+              ],
+              "utf8_byte_range": [
+                199,
+                241
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Each player receives one initial lantern token.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC4",
+          "full_contract_claim": "LC4: Youngest player starts; turns then proceed clockwise.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "The youngest player starts; turns proceed clockwise.",
+              "codepoint_range": [
+                185,
+                237
+              ],
+              "utf8_byte_range": [
+                185,
+                237
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "The youngest player starts; turns proceed clockwise.",
+              "codepoint_range": [
+                270,
+                322
+              ],
+              "utf8_byte_range": [
+                270,
+                322
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Youngest start and subsequent clockwise turns retained together.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC5",
+          "full_contract_claim": "LC5: Each turn choose a normal one-space forward move or staying in place to take one token.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+              "codepoint_range": [
+                241,
+                332
+              ],
+              "utf8_byte_range": [
+                241,
+                332
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "On each turn select a normal forward move of one space, or stay and take one Lantern Token.",
+              "codepoint_range": [
+                326,
+                417
+              ],
+              "utf8_byte_range": [
+                326,
+                417
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Each-turn choice between normal forward movement of one space and staying to collect one token retained.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC6",
+          "full_contract_claim": "LC6: Maximum holdings are three tokens; staying to collect is disallowed when already holding three.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+              "codepoint_range": [
+                336,
+                431
+              ],
+              "utf8_byte_range": [
+                336,
+                431
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.",
+              "codepoint_range": [
+                418,
+                513
+              ],
+              "utf8_byte_range": [
+                418,
+                513
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Three-token maximum and prohibition on staying to collect when already holding three retained together with the normal choices.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC7",
+          "full_contract_claim": "LC7: As an alternative before moving, spend two tokens for a three-space forward move; payment occurs first.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Before moving, you may instead spend two tokens to move forward three spaces.",
+              "codepoint_range": [
+                435,
+                512
+              ],
+              "utf8_byte_range": [
+                435,
+                512
+              ]
+            },
+            {
+              "text": "Pay before moving.",
+              "codepoint_range": [
+                513,
+                531
+              ],
+              "utf8_byte_range": [
+                513,
+                531
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Before moving, you may instead spend two tokens to move forward three spaces.",
+              "codepoint_range": [
+                609,
+                686
+              ],
+              "utf8_byte_range": [
+                609,
+                686
+              ]
+            },
+            {
+              "text": "Pay before moving.",
+              "codepoint_range": [
+                687,
+                705
+              ],
+              "utf8_byte_range": [
+                687,
+                705
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Optional alternative, payment of two tokens first and forward movement of three spaces retained together.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC8",
+          "full_contract_claim": "LC8: A paid move that would pass space 12 leaves the pawn in place and does not refund the spent tokens.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+              "codepoint_range": [
+                535,
+                628
+              ],
+              "utf8_byte_range": [
+                535,
+                628
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.",
+              "codepoint_range": [
+                706,
+                799
+              ],
+              "utf8_byte_range": [
+                706,
+                799
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Paid-move overshoot condition remains attached to staying in place and no token return, beside the paid option.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC9",
+          "full_contract_claim": "LC9: Reaching space 12 immediately ends the game, so a normal one-space move cannot pass it.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+              "codepoint_range": [
+                632,
+                723
+              ],
+              "utf8_byte_range": [
+                632,
+                723
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "A normal one-space move cannot pass space 12 because reaching it immediately ends the game.",
+              "codepoint_range": [
+                514,
+                605
+              ],
+              "utf8_byte_range": [
+                514,
+                605
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Normal one-space move inability to pass 12 retains the explicit cause of immediate game end on reaching 12.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC10",
+          "full_contract_claim": "LC10: Pawns can share a space.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "Pawns may share a space.",
+              "codepoint_range": [
+                728,
+                752
+              ],
+              "utf8_byte_range": [
+                728,
+                752
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "Pawns may share a space.",
+              "codepoint_range": [
+                242,
+                266
+              ],
+              "utf8_byte_range": [
+                242,
+                266
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "Shared-space permission retained and grouped with the pawn-placement rule.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC11",
+          "full_contract_claim": "LC11: First player to reach space 12 wins.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "The first player to reach space 12 wins.",
+              "codepoint_range": [
+                757,
+                797
+              ],
+              "utf8_byte_range": [
+                757,
+                797
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "The first player to reach space 12 wins.",
+              "codepoint_range": [
+                54,
+                94
+              ],
+              "utf8_byte_range": [
+                54,
+                94
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "First player to reach space 12 remains the winner.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        },
+        {
+          "claim_id": "LC12",
+          "full_contract_claim": "LC12: The game has no dice.",
+          "disposition": "preserved exactly in intact source units",
+          "input_spans": [
+            {
+              "text": "The game has no dice.",
+              "codepoint_range": [
+                802,
+                823
+              ],
+              "utf8_byte_range": [
+                802,
+                823
+              ]
+            }
+          ],
+          "output_spans": [
+            {
+              "text": "The game has no dice.",
+              "codepoint_range": [
+                95,
+                116
+              ],
+              "utf8_byte_range": [
+                95,
+                116
+              ]
+            }
+          ],
+          "complete_contract_semantic_review": "No-dice negation retained without extra equipment or mechanics.",
+          "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true
+        }
+      ],
+      "wording_edit_count": 0,
+      "factual_repairs": 0,
+      "semantic_additions": [],
+      "semantic_deletions": [],
+      "unavailable_or_blocker": null,
+      "protected_literal_check": [
+        {
+          "literal": "Lantern Trail",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                3,
+                16
+              ],
+              "utf8_byte_range": [
+                3,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "two to four",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                33,
+                44
+              ],
+              "utf8_byte_range": [
+                33,
+                44
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "1",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                0,
+                1
+              ],
+              "utf8_byte_range": [
+                0,
+                1
+              ]
+            },
+            {
+              "codepoint_range": [
+                86,
+                87
+              ],
+              "utf8_byte_range": [
+                86,
+                87
+              ]
+            },
+            {
+              "codepoint_range": [
+                149,
+                150
+              ],
+              "utf8_byte_range": [
+                149,
+                150
+              ]
+            },
+            {
+              "codepoint_range": [
+                154,
+                155
+              ],
+              "utf8_byte_range": [
+                154,
+                155
+              ]
+            },
+            {
+              "codepoint_range": [
+                196,
+                197
+              ],
+              "utf8_byte_range": [
+                196,
+                197
+              ]
+            },
+            {
+              "codepoint_range": [
+                556,
+                557
+              ],
+              "utf8_byte_range": [
+                556,
+                557
+              ]
+            },
+            {
+              "codepoint_range": [
+                740,
+                741
+              ],
+              "utf8_byte_range": [
+                740,
+                741
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "12",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                86,
+                88
+              ],
+              "utf8_byte_range": [
+                86,
+                88
+              ]
+            },
+            {
+              "codepoint_range": [
+                154,
+                156
+              ],
+              "utf8_byte_range": [
+                154,
+                156
+              ]
+            },
+            {
+              "codepoint_range": [
+                556,
+                558
+              ],
+              "utf8_byte_range": [
+                556,
+                558
+              ]
+            },
+            {
+              "codepoint_range": [
+                740,
+                742
+              ],
+              "utf8_byte_range": [
+                740,
+                742
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "clockwise",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                312,
+                321
+              ],
+              "utf8_byte_range": [
+                312,
+                321
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "youngest",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                274,
+                282
+              ],
+              "utf8_byte_range": [
+                274,
+                282
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "one",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                223,
+                226
+              ],
+              "utf8_byte_range": [
+                223,
+                226
+              ]
+            },
+            {
+              "codepoint_range": [
+                371,
+                374
+              ],
+              "utf8_byte_range": [
+                371,
+                374
+              ]
+            },
+            {
+              "codepoint_range": [
+                399,
+                402
+              ],
+              "utf8_byte_range": [
+                399,
+                402
+              ]
+            },
+            {
+              "codepoint_range": [
+                523,
+                526
+              ],
+              "utf8_byte_range": [
+                523,
+                526
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "three",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                442,
+                447
+              ],
+              "utf8_byte_range": [
+                442,
+                447
+              ]
+            },
+            {
+              "codepoint_range": [
+                498,
+                503
+              ],
+              "utf8_byte_range": [
+                498,
+                503
+              ]
+            },
+            {
+              "codepoint_range": [
+                673,
+                678
+              ],
+              "utf8_byte_range": [
+                673,
+                678
+              ]
+            }
+          ]
+        },
+        {
+          "literal": "two",
+          "present": true,
+          "occurrences": [
+            {
+              "codepoint_range": [
+                33,
+                36
+              ],
+              "utf8_byte_range": [
+                33,
+                36
+              ]
+            },
+            {
+              "codepoint_range": [
+                646,
+                649
+              ],
+              "utf8_byte_range": [
+                646,
+                649
+              ]
+            }
+          ]
+        }
+      ],
+      "final_self_check": {
+        "status": "PASS",
+        "performed_once_after_answers_frozen": true,
+        "claim_count": 12,
+        "mapped_claim_count": 12,
+        "direct_comparison_with_complete_contract": true,
+        "all_actors_modality_negation_conditions_scope_numbers_and_uncertainty_preserved": true,
+        "all_substantive_units_verbatim": true,
+        "content_token_multiset_identical_excluding_numbered_list_labels": true,
+        "semantic_additions": [],
+        "semantic_omissions": [],
+        "unsupported_explanations_examples_strategy_equipment_or_mechanics": [],
+        "invented_observations_tests_experience_commitments_authorship": [],
+        "all_protected_literals_present": true,
+        "whitespace_word_count": 146,
+        "word_limit": 180,
+        "word_limit_pass": true,
+        "UTF_8_terminal_LF": true,
+        "format_matches_reader_purpose": true,
+        "planned_movement_and_grouping_only": true,
+        "wording_edits": 0,
+        "new_factual_repairs": 0,
+        "all_supported_clauses_replaced": false,
+        "method_viable": true,
+        "failure_list": [],
+        "independent_review": false
+      }
+    }
+  ],
+  "scope": {
+    "development_reuse_clause": "inactive per parent; frozen fresh confirmation",
+    "browsing": false,
+    "other_files_read": false,
+    "scores_read": false,
+    "factual_repairs_authorized": false,
+    "new_generation_or_selection": false,
+    "post_self_check_edits_allowed": false,
+    "post_self_check_answer_edits": 0,
+    "stage_C_retries": 0,
+    "independent_reviews": 0,
+    "publication": false,
+    "repository_or_installed_skill_changes": false
+  },
+  "final_self_check": "Completed once against full factual contracts; final answer bytes unchanged after freeze",
+  "status_scope": "single Stage C writer self-check, not independent review"
+}

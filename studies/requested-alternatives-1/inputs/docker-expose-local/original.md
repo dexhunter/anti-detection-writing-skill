@@ -1,0 +1,9 @@
+No. `EXPOSE 8080` documents the container's intended port; it doesn't publish that port on the host. Since your server already listens on port 8080 inside the container, run:
+
+```sh
+docker run -p 127.0.0.1:8080:8080 demo-web
+```
+
+This maps host loopback port 8080 to container port 8080, so use `http://127.0.0.1:8080`. With the Engine 28+ default bridge configuration you described, the published port is available only from the host. Keep `127.0.0.1` in the mapping: omitting the address publishes on all host interfaces by default.
+
+See [Docker's port-publishing documentation](https://docs.docker.com/engine/network/port-publishing/).

@@ -1,0 +1,12 @@
+1. Lantern Trail is invented for two to four players.
+2. A track with spaces numbered 1 to 12 is used; players' pawns start at space 1.
+3. Each player starts with one Lantern Token.
+4. The youngest player starts; turns proceed clockwise.
+5. On each turn select a normal forward move of one space, or stay and take one Lantern Token.
+6. Maximum token holdings: three tokens; staying to take a token is not allowed if three are held.
+7. Before moving, you may instead spend two tokens to move forward three spaces. Pay before moving.
+8. A paid move that would pass space 12 leaves the pawn in place; spent tokens are not returned.
+9. A normal one-space move cannot pass space 12 because reaching it immediately ends the game.
+10. Pawns may share a space.
+11. The first player to reach space 12 wins.
+12. The game has no dice.

@@ -1,0 +1,276 @@
+{
+  "case_id": "wm5-community-library-room-booking-pilot",
+  "synthetic_provenance": {
+    "status": "entirely_synthetic",
+    "description": "This independently invented development case describes a fictional institution, observations, feedback, responsibilities and proposed decision criteria. It is not a report of real events and uses no external sources.",
+    "construction_constraints": "The source brief and original were created for this case without reading writing skills, prior studies, detectors, other experiment files or holdouts. No candidate revision or detector scan was produced.",
+    "original_authorship_context": "The original is a complete explanatory draft for a fictional scenario; it claims no firsthand human experience.",
+    "intended_use": "One new development case for a writing-method comparison."
+  },
+  "article_file": "outputs/baseline/final.txt",
+  "article_sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+  "word_count": 341,
+  "word_count_method": "Whitespace-delimited words; hyphenated expressions count as one word.",
+  "claims": {
+    "C01": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F01",
+        "F15"
+      ],
+      "exact_excerpts": [
+        "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and booking reliability before deciding whether to add rooms."
+      ]
+    },
+    "C02": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F02",
+        "F04",
+        "F09"
+      ],
+      "exact_excerpts": [
+        "In the first eight weeks, two rooms offered free, two-hour bookings during staffed opening hours.",
+        "Of 160 slots, 118 were reserved and 91 used. Reservations indicate demand without establishing reliable access."
+      ]
+    },
+    "C03": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F03"
+      ],
+      "exact_excerpts": [
+        "In the first eight weeks, two rooms offered free, two-hour bookings during staffed opening hours."
+      ]
+    },
+    "C04": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F04"
+      ],
+      "exact_excerpts": [
+        "Of 160 slots, 118 were reserved and 91 used."
+      ]
+    },
+    "C05": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F05"
+      ],
+      "exact_excerpts": [
+        "Of 42 voluntary feedback respondents, 25 valued predictable space for study or small-group work; 17 struggled to find a slot or complete a booking."
+      ]
+    },
+    "C06": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F05",
+        "F06"
+      ],
+      "exact_excerpts": [
+        "Of 42 voluntary feedback respondents, 25 valued predictable space for study or small-group work; 17 struggled to find a slot or complete a booking. These responses cannot establish how common those difficulties are among residents."
+      ]
+    },
+    "C07": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F04",
+        "F07",
+        "F08",
+        "F10",
+        "F11"
+      ],
+      "exact_excerpts": [
+        "Four repeat bookers accounted for 18 of 27 unused reservations; most unreserved slots were before noon on weekdays.",
+        "Unused reservations alone do not establish the extent of unmet demand."
+      ]
+    },
+    "C08": {
+      "status": "preserved_with_source_supported_scope_correction",
+      "source_fact_ids": [
+        "F10",
+        "F11"
+      ],
+      "exact_excerpts": [
+        "Cancellation habits may explain unused reservations; residents’ availability may explain low weekday-morning demand, an untested possibility."
+      ]
+    },
+    "C09": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F12"
+      ],
+      "exact_excerpts": [
+        "Adding rooms would not necessarily resolve cancellation habits or a mismatch between booking times and residents’ availability."
+      ]
+    },
+    "C10": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F09",
+        "F13",
+        "F14",
+        "F15"
+      ],
+      "exact_excerpts": [
+        "Juniper Reach Library should extend its room-booking pilot for six weeks to test access and booking reliability before deciding whether to add rooms."
+      ]
+    },
+    "C11": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F13"
+      ],
+      "exact_excerpts": [
+        "The online form requires an email address, while telephone bookings depend on the front-desk supervisor being available."
+      ]
+    },
+    "C12": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F14"
+      ],
+      "exact_excerpts": [
+        "Three of the 17 respondents reporting difficulties said one of these barriers prevented booking."
+      ]
+    },
+    "C13": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F16"
+      ],
+      "exact_excerpts": [
+        "During the extension, any trained desk worker should take telephone and in-person reservations using the same inventory as online bookings."
+      ]
+    },
+    "C14": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F17"
+      ],
+      "exact_excerpts": [
+        "Reminders and a simple cancellation option could help residents release unwanted reservations; their effectiveness is unmeasured."
+      ]
+    },
+    "C15": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F18"
+      ],
+      "exact_excerpts": [
+        "The service manager should arrange training and publish weekly totals for reservations, attendance, cancellations and unfulfilled requests, broken down by booking route and time of day."
+      ]
+    },
+    "C16": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F19"
+      ],
+      "exact_excerpts": [
+        "Desk workers should record requests consistently, including when rooms are full."
+      ]
+    },
+    "C17": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F15",
+        "F20"
+      ],
+      "exact_excerpts": [
+        "After six weeks, expansion should be considered only if all three proposed conditions are met:"
+      ]
+    },
+    "C18": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F20",
+        "F21",
+        "F22"
+      ],
+      "exact_excerpts": [
+        "After six weeks, expansion should be considered only if all three proposed conditions are met: trained staff can cover every staffed opening period; at least 85% of extension reservations are used or cancelled before their start time; and unfulfilled requests are recorded in at least four of the six weeks despite the changes."
+      ]
+    },
+    "C19": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F23"
+      ],
+      "exact_excerpts": [
+        "Meeting these conditions would support considering expansion, but would not establish how many additional rooms are needed."
+      ]
+    },
+    "C20": {
+      "status": "preserved",
+      "source_fact_ids": [
+        "F24"
+      ],
+      "exact_excerpts": [
+        "If staff coverage or booking reliability remains weak, revise the booking process and reassess before expansion."
+      ]
+    }
+  },
+  "source_supported_corrections": [
+    {
+      "claim_id": "C08",
+      "original_excerpt": "low daytime use may reflect when residents can attend.",
+      "final_excerpt": "residents’ availability may explain low weekday-morning demand, an untested possibility.",
+      "source_fact_ids": [
+        "F08",
+        "F11"
+      ],
+      "reason": "Narrowed daytime use to weekday-morning demand, the period actually described by the source, and made its untested status explicit."
+    }
+  ],
+  "source_supported_clarifications": [
+    {
+      "claim_ids": [
+        "C07",
+        "C08"
+      ],
+      "source_fact_ids": [
+        "F10"
+      ],
+      "exact_excerpt": "Unused reservations alone do not establish the extent of unmet demand.",
+      "reason": "Makes the source limitation explicit alongside the proposed explanation."
+    },
+    {
+      "claim_ids": [
+        "C12"
+      ],
+      "source_fact_ids": [
+        "F14"
+      ],
+      "exact_excerpt": "Three of the 17 respondents reporting difficulties said one of these barriers prevented booking.",
+      "reason": "Identifies the respondent subgroup and preserves the alternative barriers."
+    },
+    {
+      "claim_ids": [
+        "C14"
+      ],
+      "source_fact_ids": [
+        "F17"
+      ],
+      "exact_excerpt": "their effectiveness is unmeasured.",
+      "reason": "Makes the source qualification explicit without treating a proposed improvement as a measured result."
+    },
+    {
+      "claim_ids": [
+        "C18"
+      ],
+      "source_fact_ids": [
+        "F21",
+        "F22"
+      ],
+      "exact_excerpt": "at least 85% of extension reservations are used or cancelled before their start time; and unfulfilled requests are recorded in at least four of the six weeks despite the changes.",
+      "reason": "Explicitly ties both thresholds to the six-week extension."
+    }
+  ],
+  "scope_cuts": [],
+  "unsupported_additions": [],
+  "review": {
+    "writer_claim_check": "completed",
+    "independent_review": "not performed by writer; assignment prohibits delegation"
+  },
+  "measurement": "Not performed; assignment prohibits detector use."
+}

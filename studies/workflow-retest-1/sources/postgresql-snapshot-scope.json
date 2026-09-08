@@ -1,0 +1,131 @@
+{
+  "id": "postgresql-snapshot-scope",
+  "reader_question": "In PostgreSQL 17, our report runs two ordinary SELECT queries in one explicit transaction while other sessions update the tables. Can the queries see different committed data under Read Committed? Please explain how Repeatable Read changes snapshot timing, how to start it, and what to do if we later add an UPDATE and hit a concurrent-update serialization failure. Does Repeatable Read guarantee a result equivalent to serial execution?",
+  "reader_context": "Ordinary table queries without FOR UPDATE/SHARE, sequence operations, or application writes in the initial reporting example. Read Committed is the selected/default isolation level. The proposed later UPDATE is a separate extension of the example.",
+  "source_ledger": [
+    {
+      "id": "pg-isolation",
+      "title": "Transaction Isolation",
+      "url": "https://www.postgresql.org/docs/17/transaction-iso.html",
+      "version": "PostgreSQL 17 documentation branch observed on access date.",
+      "section": "13.2.1 Read Committed and 13.2.2 Repeatable Read",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "a snapshot as of the start of the first non-transaction-control statement",
+      "excerpt_word_count": 11
+    },
+    {
+      "id": "pg-set",
+      "title": "SET TRANSACTION",
+      "url": "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+      "version": "PostgreSQL 17 documentation branch observed on access date.",
+      "section": "Synopsis; Description; Notes",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "specifying the desired transaction_modes in BEGIN or START TRANSACTION",
+      "excerpt_word_count": 9
+    },
+    {
+      "id": "pg-retry",
+      "title": "Serialization Failure Handling",
+      "url": "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+      "version": "PostgreSQL 17 documentation branch observed on access date.",
+      "section": "13.5 Serialization Failure Handling",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "retry the complete transaction",
+      "excerpt_word_count": 4
+    }
+  ],
+  "answer_inventory": {
+    "mandatory": [
+      {
+        "id": "P1",
+        "claim": "At Read Committed, each ordinary SELECT gets a fresh statement snapshot; another transaction committing between queries can change the second result.",
+        "source_ids": [
+          "pg-isolation",
+          "pg-set"
+        ]
+      },
+      {
+        "id": "P2",
+        "claim": "Repeatable Read fixes the snapshot at the first query/data-modification statement, not BEGIN itself, and excludes later commits by other transactions.",
+        "source_ids": [
+          "pg-set"
+        ]
+      },
+      {
+        "id": "P3",
+        "claim": "Start with BEGIN ISOLATION LEVEL REPEATABLE READ; before executing the report queries.",
+        "source_ids": [
+          "pg-set"
+        ]
+      },
+      {
+        "id": "P4",
+        "claim": "Queries still see earlier writes from their own transaction.",
+        "source_ids": [
+          "pg-isolation"
+        ]
+      },
+      {
+        "id": "P5",
+        "claim": "For the later UPDATE, a conflicting committed update can cause serialization_failure, SQLSTATE 40001; abort and retry the complete transaction including decision logic.",
+        "source_ids": [
+          "pg-isolation",
+          "pg-retry"
+        ]
+      },
+      {
+        "id": "P6",
+        "claim": "Repeatable Read does not guarantee equivalence to serial execution.",
+        "source_ids": [
+          "pg-isolation"
+        ]
+      }
+    ],
+    "mandatory_qualifications": [
+      "Do not attribute snapshot acquisition to BEGIN alone.",
+      "The update/retry case is conditional, not a claim that this read-only report necessarily encounters such a conflict.",
+      "Retry the transaction, not just the failed UPDATE."
+    ],
+    "optional_source_facts": [
+      {
+        "id": "P7",
+        "claim": "Serializable prevents serialization anomalies among successfully committed Serializable transactions, but can also require retries.",
+        "source_ids": [
+          "pg-set",
+          "pg-retry"
+        ]
+      },
+      {
+        "id": "P8",
+        "claim": "A retry can encounter another conflict; completion is not guaranteed by one retry.",
+        "source_ids": [
+          "pg-retry"
+        ]
+      }
+    ],
+    "out_of_scope": [
+      "Full isolation-level catalogue",
+      "Sequence semantics",
+      "MERGE and UPSERT behavior",
+      "Performance tuning"
+    ]
+  },
+  "exact_code_in_original": [
+    "`SELECT`",
+    "```sql\nBEGIN ISOLATION LEVEL REPEATABLE READ;\n```",
+    "`BEGIN`",
+    "`UPDATE`",
+    "`serialization_failure`",
+    "`40001`"
+  ],
+  "exact_source_urls": [
+    "https://www.postgresql.org/docs/17/sql-set-transaction.html",
+    "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html",
+    "https://www.postgresql.org/docs/17/transaction-iso.html"
+  ],
+  "coverage_instruction": "Retain every mandatory fact and qualification. Optional source facts need not be added unless already present in the original; the reviewer will check against the original. Do not add hypothetical personal experience.",
+  "also_required": "A retry can encounter another conflict; do not promise one retry succeeds."
+}

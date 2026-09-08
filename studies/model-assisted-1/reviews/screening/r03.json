@@ -1,0 +1,126 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "pass": true,
+          "claims": [
+            "DTC1: Preserves ETag validation of a stored response.",
+            "DTC2: Preserves server-supplied ETag and client use in If-None-Match on a later conditional GET.",
+            "DTC3: Preserves matching selected representation, 304 Not Modified, no response body, and stored-body reuse within the question's otherwise-successful GET scope.",
+            "DTC4: Preserves 200 OK with current JSON for a nonmatching tag in the successful GET context.",
+            "DTC5: Explicitly states that validation still sends a request.",
+            "DTC6: Preserves freshness-based reuse without validation, illustrative Cache-Control: max-age=60, and qualification by other caching rules.",
+            "DTC7: Preserves the absence of a guarantee that origin data stays unchanged for 60 seconds.",
+            "All protected literals are present; 123 words, within the 180-word limit. Professional, clear prose with no unsupported additions."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1: Preserves ETag validation of a stored response.",
+            "DTC2: Preserves server-supplied ETag and client use in If-None-Match on a later conditional GET.",
+            "DTC3: Preserves matching selected representation, 304 Not Modified, no response body, and stored-body reuse within the question's otherwise-successful GET scope.",
+            "DTC4: Preserves 200 OK with current JSON for a nonmatching tag in the successful GET context.",
+            "DTC5: Explicitly states that validation still sends a request.",
+            "DTC6: Preserves freshness-based reuse without validation, illustrative Cache-Control: max-age=60, and qualification by other caching rules.",
+            "DTC7: Preserves the absence of a guarantee that origin data stays unchanged for 60 seconds.",
+            "All protected literals are present; 129 words, within the 180-word limit. Professional, clear prose with no unsupported additions."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both preserve the complete HTTP mechanism and qualifications, and directly distinguish validation from fresh reuse. B front-loads the request distinction and explicitly names origin contact and validation requirements, while A is already clear in the question's successful GET context; these differences do not warrant a substantive preference."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1: Identifies the Atlas help-centre migration.",
+            "DBC2: Preserves completed copying of all 180 articles without inventing a copying actor.",
+            "DBC3: Preserves the content team as reviewer and no missing sections only in the 60 reviewed articles.",
+            "DBC4: Preserves that remaining articles are unreviewed; this establishes incomplete content review.",
+            "DBC5: Preserves current search omission of titles containing apostrophes.",
+            "DBC6: Preserves planned fix delivery by Nia on 10 September followed by Omar testing.",
+            "DBC7: Preserves recommendation of a pilot with five volunteer support agents on 11 September conditional on the search test passing.",
+            "DBC8: Preserves existing help-centre availability and unchanged customer-facing links during the pilot.",
+            "DBC9: Preserves request for sponsor confirmation of five-agent availability by 9 September.",
+            "DBC10: Preserves feedback review on 14 September before deciding whether to schedule full rollout.",
+            "DBC11: Explicitly preserves that no full rollout date is committed.",
+            "All protected literals are present; 119 words, within the 180-word limit. Professional, clear prose with no unsupported additions."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "c99d6c99342544283aa91fcb0b79ba93118923909531c6e01726aaf2cca66b0d",
+          "pass": true,
+          "claims": [
+            "DBC1: Identifies the Atlas help-centre migration.",
+            "DBC2: Preserves completed copying of all 180 articles without inventing a copying actor.",
+            "DBC3: Preserves the content team as reviewer and no missing sections only in the 60 reviewed articles.",
+            "DBC4: Preserves that remaining articles are unreviewed; this establishes incomplete content review.",
+            "DBC5: Preserves current search omission of titles containing apostrophes.",
+            "DBC6: Preserves planned fix delivery by Nia on 10 September followed by Omar testing.",
+            "DBC7: Preserves recommendation of a pilot with five volunteer support agents on 11 September conditional on the search test passing.",
+            "DBC8: Preserves existing help-centre availability and unchanged customer-facing links during the pilot.",
+            "DBC9: Preserves request for sponsor confirmation of five-agent availability by 9 September.",
+            "DBC10: Preserves feedback review on 14 September before deciding whether to schedule full rollout.",
+            "DBC11: Explicitly preserves that no full rollout date is committed.",
+            "All protected literals are present; 122 words, within the 180-word limit. Professional, clear prose with no unsupported additions."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both preserve the complete supplied scenario, responsible actors, conditional pilot proposal, dates, and sponsor decision. A front-loads the staffing request and explicitly calls the review incomplete; B makes incompleteness clear through the unreviewed remainder. The ordering and phrasing differences are stylistic, without a material correctness or clarity advantage."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+        "public_text_paths": [
+          "answers/screening/r05/wm4-dev-technical-01.txt",
+          "answers/screening/r03/wm4-dev-technical-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "c99d6c99342544283aa91fcb0b79ba93118923909531c6e01726aaf2cca66b0d",
+        "public_text_paths": [
+          "answers/screening/r03/wm4-dev-business-01.txt"
+        ]
+      }
+    }
+  }
+}

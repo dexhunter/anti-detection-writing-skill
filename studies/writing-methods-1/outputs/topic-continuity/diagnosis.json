@@ -1,0 +1,53 @@
+{
+  "method": "topic-continuity",
+  "cases": {
+    "wm4-dev-technical-01": {
+      "decision": "no-op",
+      "diagnosed_problem_spans": [],
+      "paragraph_assessments": [
+        {
+          "original_text": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.",
+          "diagnosis": "The opening recommendation leads directly to the server and client mechanism. Repeating ETag identifies the mechanism precisely; that value connects the conditional request to the supplied tag. The two outcome sentences retain the matching condition through the tag and it. There is no independent reintroduction that needs editing.",
+          "action": "unchanged"
+        },
+        {
+          "original_text": "This validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+          "diagnosis": "This validation refers to the first paragraph. To permit reuse without validation introduces the alternative policy in relation to the request requirement. The cached response can then be reused links its effect to that policy; this keeps the non-guarantee beside the freshness permission. No edit is needed.",
+          "action": "unchanged"
+        }
+      ],
+      "scope_cuts": [],
+      "corrections": [],
+      "self_check": "All supplied claims and protected literals are preserved byte-for-byte. Substantive order and paragraph purposes remain unchanged. No added factual claims or claimed personal experience."
+    },
+    "wm4-dev-business-01": {
+      "decision": "no-op",
+      "diagnosed_problem_spans": [],
+      "paragraph_assessments": [
+        {
+          "original_text": "Atlas help-centre migration.",
+          "diagnosis": "The project heading identifies the update and needs no continuity edit.",
+          "action": "unchanged"
+        },
+        {
+          "original_text": "All 180 articles have been copied, and the content team has checked 60 without finding missing sections. The remaining articles have not yet been reviewed, so the content check is still incomplete.",
+          "diagnosis": "The remaining articles directly connects the unreviewed set to the preceding reviewed set. The second sentence also states the implication for completion. Repetition of articles preserves the distinction between copied and reviewed counts.",
+          "action": "unchanged"
+        },
+        {
+          "original_text": "Search currently omits titles containing apostrophes. Nia is due to deliver the fix on 10 September, after which Omar will test it. I recommend opening the pilot to five volunteer support agents on 11 September if that test passes. The existing help centre will remain available during the pilot, and customer-facing links will not change.",
+          "diagnosis": "The fix refers to the stated search omission. After which links delivery to Omar's test, and if that test passes links the pilot recommendation to its prerequisite. During the pilot carries the recommendation into the service-availability plan. Actor names remain necessary and clear.",
+          "action": "unchanged"
+        },
+        {
+          "original_text": "Please confirm by 9 September whether the support team can provide those five agents. We will review pilot feedback on 14 September before deciding whether to schedule the full rollout. A full rollout date has therefore not been committed.",
+          "diagnosis": "Those five agents refers back to the pilot staffing proposal. Pilot feedback carries that proposal into the next decision, and therefore links the uncommitted rollout date to the preceding scheduling condition. No disconnected reintroduction warrants revision.",
+          "action": "unchanged"
+        }
+      ],
+      "scope_cuts": [],
+      "corrections": [],
+      "self_check": "All supplied claims and protected literals are preserved byte-for-byte. Substantive order and paragraph purposes remain unchanged. No added factual claims or claimed personal experience."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "library-baseline",
+      "path": "texts/library-baseline.txt",
+      "sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe"
+    }
+  ]
+}

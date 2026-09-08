@@ -1,0 +1,1 @@
+First diagnose specific reader-facing clarity problems, then revise only passages affected by those problems, preserving already clear prose. Preserve all substantive claims, qualifiers, code, URLs, identifiers; no padding, fake experience, mistakes, irrelevant quotations, or human-authorship claims.

@@ -1,0 +1,32 @@
+{
+  "study": "reader-dialogue-1",
+  "frozen_at": "2026-09-07T15:33:12.357260+00:00",
+  "deadline": "2026-09-07T16:18:12.357260+00:00",
+  "stage_at_freeze": "Method and limits frozen before case delivery or output generation; source case will be reconciled and hash-frozen before dispatch.",
+  "hypothesis": "A bounded responsive reader dialogue can improve explanatory emphasis while preserving the factual contract. Native detector change remains unknown.",
+  "design": "One new longer synthetic development case, baseline current skill versus same skill plus two-turn reader dialogue before drafting. Manual Pangram pilot; not controller CLI execution.",
+  "length": "Approximately 300–350 words for a requested explanatory article; no padding or scope cuts for detector access. Both arms use the same source and request. Longer genre is not itself an experimentally isolated intervention.",
+  "writers": "Fresh separate baseline/candidate contexts; same inherited model and effort, exact runtime identifier unexposed. Candidate incurs extra interaction/context as part of workflow.",
+  "reader": "Fresh agent sees question, source and inventory, never original text, other outputs or detector results. Exactly one question then at most one response-dependent follow-up. RESOLVED is allowed; NO_SUPPORTED_CHALLENGE stops case unexercised.",
+  "quality": "Separate masked reviewer sees original, evidence, exact two outputs; methods/dialogue/scores hidden. Both must pass correctness, completeness, relevance, professional tone. Candidate must be at least as readable as baseline.",
+  "repairs": "At most one pre-score repair per arm for independently identified factual/clarity defects, preserving first-pass outputs. No post-score edits. No cost-driven text repair.",
+  "mechanism": "Retain full exchange and claim references. A separate process audit checks no introduced facts and whether final text addresses the identified distinction. If final is identical to original or baseline except terminal newline, record inactive/no-op and do not scan.",
+  "measurement": {
+    "service": "Pangram",
+    "mode": "Free text detection",
+    "model": "record live displayed, require identical within pair",
+    "calls_max": 2,
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "reservation": "Save full-text UI quotes for both arms before the first submission and verify that the complete pair is available. Retain exact source, submitted, textarea and rendered text; native Overview/Details/model/warnings and screenshots privately. No retries after uncertain submission.",
+    "endpoint": "Native document label and separately displayed fully-AI text fraction. Missing fractions remain null; no cross-vendor unit conversions.",
+    "success": "Quality passes, and either at least5 percentage points lower comparable fully-AI fraction or better native label (AI Generated > AI Assisted > Human Written), with neither worse native label nor increased comparable fully-AI fraction. Unknown/incomparable outputs or discordant metrics are indeterminate, not success.",
+    "stopping": "One pair only regardless of scores. No holdout release or post-score variants in this round; favorable result remains development-only."
+  },
+  "gptzero": "No GPTZero scan in this round: the available allowance could not cover a complete pair.",
+  "publication": "No GitHub answer activity. Raw account evidence remains private. No detector-method promotion without further confirmation.",
+  "pending_sample": "No authentic user writing sample supplied; voice imitation excluded.",
+  "export_note": "Sanitized copy of the protocol frozen before generation. Renamed the public study and removed private account balances and publication instructions; method, admission, success and stopping conditions are unchanged."
+}

@@ -1,0 +1,195 @@
+{
+  "topic": "GitHub Actions concurrency, pending replacement, and queue settings",
+  "reader_purpose": "Determine which runs survive concurrency contention and configure several waiting runs without claiming dispatch-order execution.",
+  "sources": [
+    {
+      "id": "G1",
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#concurrency",
+      "title": "Workflow syntax for GitHub Actions: concurrency",
+      "version": "GitHub.com current public documentation; no numbered release displayed",
+      "accessed_at_utc": "2026-09-06T21:19:43Z",
+      "sections": [
+        "concurrency property description",
+        "Example: Queueing multiple pending runs"
+      ],
+      "inspection": "Official documentation read through web browsing; no workflow execution performed",
+      "access_time_precision": "Nearby tool-clock sample from the successful source-reading batch; exact request start was not separately logged. Relevant sections were checked again in the next browsing call."
+    },
+    {
+      "id": "G2",
+      "url": "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency",
+      "title": "Control the concurrency of workflows and jobs",
+      "version": "GitHub.com current public documentation; no numbered release displayed",
+      "accessed_at_utc": "2026-09-06T21:19:43Z",
+      "sections": [
+        "Using concurrency",
+        "Note on queue order"
+      ],
+      "inspection": "Official documentation read through web browsing; no workflow execution performed",
+      "access_time_precision": "Nearby tool-clock sample from the successful source-reading batch; exact request start was not separately logged. Relevant sections were checked again in the next browsing call."
+    }
+  ],
+  "claims": [
+    {
+      "id": "G-C1",
+      "exact_claim": "With cancel-in-progress: false, a new run does not cancel the running workflow through this concurrency setting, but it can replace a pending run.",
+      "original_anchor": "With `cancel-in-progress: false`, the running workflow can finish, but a waiting run can still be replaced.",
+      "sources": [
+        "G1"
+      ],
+      "qualification": "The group and repository scope is given later in the original; this is not a guarantee against unrelated cancellation."
+    },
+    {
+      "id": "G-C2",
+      "exact_claim": "queue: single is the default and permits one pending run per concurrency group; a new arrival cancels and replaces that pending run.",
+      "original_anchor": "In the default `queue: single` mode, a concurrency group has room for one pending run. A new arrival cancels that pending run and takes its place.",
+      "sources": [
+        "G1"
+      ]
+    },
+    {
+      "id": "G-C3",
+      "exact_claim": "The described contention operates among runs sharing a concurrency group in the same repository.",
+      "original_anchor": "This applies when the runs use the same group in the same repository.",
+      "sources": [
+        "G1"
+      ]
+    },
+    {
+      "id": "G-C4",
+      "exact_claim": "queue: max retains up to 100 pending runs in a group and cancels additional arrivals once the queue is full.",
+      "original_anchor": "Set `queue: max` to retain multiple waiting runs. GitHub allows up to 100 pending runs in that group and cancels further arrivals when the queue is full.",
+      "sources": [
+        "G1"
+      ]
+    },
+    {
+      "id": "G-C5",
+      "exact_claim": "Queued runs are processed in the order they start waiting on the concurrency group; workflow dispatch order is not guaranteed.",
+      "original_anchor": "They are processed in the order they begin waiting on the concurrency group, which can differ from workflow dispatch order.",
+      "sources": [
+        "G2"
+      ],
+      "qualification": "They means retained waiting runs, not the rejected arrivals immediately before this sentence."
+    },
+    {
+      "id": "G-C6",
+      "exact_claim": "Keeping cancel-in-progress: false is compatible with queue: max; combining queue: max and cancel-in-progress: true causes workflow validation to fail.",
+      "original_anchor": "Keep `cancel-in-progress: false` with that configuration. Combining `queue: max` with `cancel-in-progress: true` fails workflow validation.",
+      "sources": [
+        "G1"
+      ],
+      "qualification": "Explicit false is a valid configuration choice, not a claim that the property must be written when omitted."
+    },
+    {
+      "id": "G-C7",
+      "exact_claim": "With the default queue, cancel-in-progress: true also cancels the currently running workflow in the concurrency group.",
+      "original_anchor": "With the default queue, setting `cancel-in-progress: true` also cancels the currently running workflow in the group.",
+      "sources": [
+        "G1"
+      ]
+    },
+    {
+      "id": "G-C8",
+      "exact_claim": "Disabling cancellation of in-progress runs alone does not guarantee execution of every waiting run.",
+      "original_anchor": "Disabling it therefore protects active work without guaranteeing that every waiting run will execute.",
+      "sources": [
+        "G1"
+      ],
+      "qualification": "Inference from pending replacement and the bounded queue; protects refers only to cancellation by this setting."
+    }
+  ],
+  "concrete_clarity_defects": [
+    {
+      "id": "G-D1",
+      "anchor": "This applies when the runs use the same group in the same repository.",
+      "defect": "The condition limiting the first three sentences appears after their mechanism, and This has several preceding claims to refer to.",
+      "small_edit_opportunity": "Move the existing same-group/same-repository condition to the opening claim; preserve the complete condition."
+    },
+    {
+      "id": "G-D2",
+      "anchor": "They are processed in the order they begin waiting on the concurrency group, which can differ from workflow dispatch order.",
+      "defect": "They follows both retained pending runs and canceled further arrivals, making its intended actor needlessly uncertain.",
+      "small_edit_opportunity": "Name the retained queued runs while preserving the waiting-time versus dispatch-time distinction."
+    },
+    {
+      "id": "G-D3",
+      "anchor": "Keep `cancel-in-progress: false` with that configuration.",
+      "defect": "The compatibility instruction is detached from the queue: max action by the capacity and ordering explanation; that configuration requires backtracking.",
+      "small_edit_opportunity": "Place the compatibility condition beside the queue: max instruction and keep the validation-error warning."
+    }
+  ],
+  "protected_identifiers": [
+    "cancel-in-progress: false",
+    "queue: single",
+    "queue: max",
+    "cancel-in-progress: true"
+  ],
+  "protected_values": [
+    "100"
+  ],
+  "scope_cuts": [
+    "Case-insensitive group naming and dynamic group expressions are documented background but are not needed to answer this question."
+  ],
+  "source_notes": [
+    "Current normative property documentation includes queue: max. Do not replace this with an older blanket claim that only one pending run is ever supported.",
+    "Use the normative queue and cancel-in-progress property definitions; some generic explanatory examples describe cancellation without repeating the cancel-in-progress condition."
+  ],
+  "fixture_label": "synthetic editing fixtures with deliberately introduced clarity problems",
+  "synthetic_question": true,
+  "synthetic_original": true,
+  "construction_note": "Constructed from official documentation with the listed clarity defects deliberately introduced. Original frozen on first creation; no detector outputs supplied or consulted.",
+  "original_file": "original.md",
+  "original_sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec",
+  "original_word_count_whitespace": 147,
+  "word_count_method": "len(original.split()), counting the exact UTF-8 Markdown answer body",
+  "original_utf8_bytes": 964,
+  "frozen_at_utc": "2026-09-06T21:23:24.870335+00:00",
+  "protected_spans": [
+    {
+      "text": "`cancel-in-progress: false`",
+      "utf8_byte_start": 5,
+      "utf8_byte_end_exclusive": 32,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`queue: single`",
+      "utf8_byte_start": 123,
+      "utf8_byte_end_exclusive": 138,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`queue: max`",
+      "utf8_byte_start": 330,
+      "utf8_byte_end_exclusive": 342,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`cancel-in-progress: false`",
+      "utf8_byte_start": 610,
+      "utf8_byte_end_exclusive": 637,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`queue: max`",
+      "utf8_byte_start": 673,
+      "utf8_byte_end_exclusive": 685,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`cancel-in-progress: true`",
+      "utf8_byte_start": 691,
+      "utf8_byte_end_exclusive": 717,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    },
+    {
+      "text": "`cancel-in-progress: true`",
+      "utf8_byte_start": 777,
+      "utf8_byte_end_exclusive": 803,
+      "rule": "preserve exact bytes of this identifier span; surrounding prose may move"
+    }
+  ],
+  "code_blocks": [],
+  "detector_measurements": [],
+  "review_status": "Fixture-author factual self-check only; no separate final-candidate review performed by this agent."
+}

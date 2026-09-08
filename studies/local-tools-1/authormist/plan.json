@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-07T16:12:31.530007+00:00",
+  "purpose": "Private research-only single-completion feasibility of released AuthorMist on two previously measured public development cases; not a paper replication, skill validation or commercial detector experiment",
+  "model_id": "authormist/authormist-originality",
+  "revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "sampling": {
+    "max_new_tokens": 512,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 20,
+    "repetition_penalty": 1.05,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151643
+  },
+  "seeds": [
+    202609071,
+    202609072
+  ],
+  "prompt_template": "Please paraphrase the following text to make it more human-like while preserving the original meaning:\n\n{source}\nParaphrased text:",
+  "input_limit": 32768,
+  "input_policy": "Complete source including terminal newline; no normalization/truncation; add generation cap when checking model context",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "path": "inputs/wm4-dev-technical-01.txt",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "words": 123,
+      "source_contract": {
+        "id": "wm4-dev-technical-01",
+        "split": "development",
+        "genre": "technical_explanation",
+        "title": "ETag validation versus cache freshness",
+        "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case.",
+        "original": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.\n\nThis validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+        "sources": [
+          {
+            "id": "http-semantics",
+            "kind": "authoritative_specification",
+            "title": "RFC 9110: HTTP Semantics",
+            "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+            "sections": [
+              "8.8.3",
+              "13.1.2",
+              "15.3.1",
+              "15.4.5"
+            ],
+            "verified_at": "2026-09-07",
+            "verification": "Read current RFC Editor document with web tool.",
+            "quotes": [
+              {
+                "section": "8.8.3",
+                "text": "An entity tag is an opaque validator"
+              },
+              {
+                "section": "6.4",
+                "text": "304 (Not Modified) responses do not include content."
+              }
+            ]
+          },
+          {
+            "id": "http-caching",
+            "kind": "authoritative_specification",
+            "title": "RFC 9111: HTTP Caching",
+            "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+            "sections": [
+              "4",
+              "4.2",
+              "4.3",
+              "5.2.2.1"
+            ],
+            "verified_at": "2026-09-07",
+            "verification": "Read current RFC Editor document with web tool.",
+            "quotes": [
+              {
+                "section": "4.2",
+                "text": "without contacting the origin server"
+              },
+              {
+                "section": "4.2",
+                "text": "not likely to change in a semantically significant way"
+              }
+            ]
+          }
+        ],
+        "provenance": {
+          "author": "Independent benchmark original writer",
+          "origin": "New synthetic question and newly authored draft; technical behavior checked against the listed specifications.",
+          "draft_intent": "Plausible complete AI-written answer, not a deliberately defective baseline.",
+          "style_methods_applied": [],
+          "executed_behavior": false,
+          "limitations": [
+            "Normative explanation; no browser or server was exercised.",
+            "Scope is an otherwise successful ordinary GET with a stored response, not an exhaustive conditional-request guide.",
+            "Freshness permission remains subject to cache eligibility and other directives; 60 seconds is an illustrative policy choice."
+          ]
+        },
+        "word_count": 123,
+        "word_count_method": "Whitespace-delimited tokens in the complete answer, including any title.",
+        "claims": [
+          {
+            "id": "DTC1",
+            "text": "ETag enables stored-response validation.",
+            "strength": "recommendation_supported_by_specification",
+            "scope": "Stored response; GET.",
+            "source_ids": [
+              "http-semantics"
+            ],
+            "original_span": {
+              "start": 0,
+              "end": 78
+            }
+          },
+          {
+            "id": "DTC2",
+            "text": "Server supplies the ETag; client echoes it in If-None-Match.",
+            "strength": "mechanism",
+            "scope": "Described conditional GET.",
+            "source_ids": [
+              "http-semantics"
+            ],
+            "original_span": {
+              "start": 79,
+              "end": 193
+            }
+          },
+          {
+            "id": "DTC3",
+            "text": "A matching tag produces 304, no body, and stored-body reuse.",
+            "strength": "conditional_requirement",
+            "scope": "Selected representation; otherwise successful GET.",
+            "source_ids": [
+              "http-semantics"
+            ],
+            "original_span": {
+              "start": 194,
+              "end": 348
+            }
+          },
+          {
+            "id": "DTC4",
+            "text": "A nonmatching tag permits 200 with current JSON.",
+            "strength": "conditional_behavior",
+            "scope": "Successful GET, not every possible response.",
+            "source_ids": [
+              "http-semantics"
+            ],
+            "original_span": {
+              "start": 349,
+              "end": 425
+            }
+          },
+          {
+            "id": "DTC5",
+            "text": "Validation still sends a request.",
+            "strength": "categorical_within_scope",
+            "scope": "Described conditional validation.",
+            "source_ids": [
+              "http-caching"
+            ],
+            "original_span": {
+              "start": 427,
+              "end": 468
+            }
+          },
+          {
+            "id": "DTC6",
+            "text": "Freshness can permit reuse without validation; max-age=60 is illustrative.",
+            "strength": "qualified_recommendation",
+            "scope": "Other caching rules apply.",
+            "source_ids": [
+              "http-caching"
+            ],
+            "original_span": {
+              "start": 469,
+              "end": 618
+            }
+          },
+          {
+            "id": "DTC7",
+            "text": "Fresh reuse does not guarantee unchanged origin data for 60 seconds.",
+            "strength": "permission_and_non_guarantee",
+            "scope": "Illustrative freshness interval.",
+            "source_ids": [
+              "http-caching"
+            ],
+            "original_span": {
+              "start": 619,
+              "end": 755
+            }
+          }
+        ],
+        "protected_literal_spans": [
+          {
+            "literal": "ETag",
+            "spans": [
+              {
+                "start": 7,
+                "end": 11
+              },
+              {
+                "start": 99,
+                "end": 103
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "GET",
+            "spans": [
+              {
+                "start": 152,
+                "end": 155
+              },
+              {
+                "start": 384,
+                "end": 387
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "If-None-Match",
+            "spans": [
+              {
+                "start": 179,
+                "end": 192
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "304 Not Modified",
+            "spans": [
+              {
+                "start": 261,
+                "end": 277
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "200 OK",
+            "spans": [
+              {
+                "start": 396,
+                "end": 402
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "Cache-Control: max-age=60",
+            "spans": [
+              {
+                "start": 556,
+                "end": 581
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "60 seconds",
+            "spans": [
+              {
+                "start": 744,
+                "end": 754
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          }
+        ],
+        "claim_reconciliation": {
+          "method": "Original checked clause by clause; claim spans use zero-based, end-exclusive character offsets.",
+          "all_useful_original_claims_inventoried": true,
+          "all_claim_spans_match_original": true,
+          "claim_count": 7
+        },
+        "relation_map_status": "Not derived; original author did not apply a revision method."
+      }
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "path": "inputs/wm4-dev-business-01.txt",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "words": 129,
+      "source_contract": {
+        "id": "wm4-dev-business-01",
+        "split": "development",
+        "genre": "project_update",
+        "title": "Atlas help-centre pilot readiness",
+        "question": "In the invented Atlas scenario, write a concise update for the project sponsor covering progress, what still blocks rollout, the pilot proposal, and the decision needed from the sponsor. Use only the supplied synthetic facts.",
+        "original": "Atlas help-centre migration.\n\nAll 180 articles have been copied, and the content team has checked 60 without finding missing sections. The remaining articles have not yet been reviewed, so the content check is still incomplete.\n\nSearch currently omits titles containing apostrophes. Nia is due to deliver the fix on 10 September, after which Omar will test it. I recommend opening the pilot to five volunteer support agents on 11 September if that test passes. The existing help centre will remain available during the pilot, and customer-facing links will not change.\n\nPlease confirm by 9 September whether the support team can provide those five agents. We will review pilot feedback on 14 September before deciding whether to schedule the full rollout. A full rollout date has therefore not been committed.",
+        "sources": [
+          {
+            "id": "atlas-brief",
+            "kind": "provided_synthetic_facts",
+            "title": "Invented Atlas scenario fact sheet",
+            "url": null,
+            "verified_at": "2026-09-07",
+            "verification": "Draft reconciled against this author-supplied synthetic fact sheet; no external factual assertion.",
+            "facts": [
+              "This is an invented internal Atlas help-centre migration scenario, not an account of a real project.",
+              "All 180 articles have been copied.",
+              "The content team checked 60 articles and found no missing sections in that reviewed set; the remaining articles have not yet been reviewed.",
+              "Search currently omits titles containing apostrophes.",
+              "Nia is due to deliver a search fix on 10 September; delivery is a plan, not a completed event.",
+              "Omar will test the fix after delivery.",
+              "The proposed pilot starts on 11 September with five volunteer support agents, conditional on that search test passing.",
+              "The existing help centre will stay available during the pilot; customer-facing links will not change during it.",
+              "The sponsor needs to confirm by 9 September whether the support team can provide the five agents; staffing is not yet confirmed.",
+              "Pilot feedback is due to be reviewed on 14 September, before deciding whether to schedule full rollout; no full rollout date is committed."
+            ],
+            "quotes": [
+              {
+                "fact_index": 1,
+                "text": "All 180 articles have been copied."
+              },
+              {
+                "fact_index": 3,
+                "text": "Search currently omits titles containing apostrophes."
+              }
+            ]
+          }
+        ],
+        "provenance": {
+          "author": "Independent benchmark original writer",
+          "origin": "Scenario, facts, question, and original drafted specifically for this isolated experiment.",
+          "draft_intent": "Plausible complete AI-written project update, not a deliberately defective baseline.",
+          "style_methods_applied": [],
+          "executed_behavior": false,
+          "limitations": [
+            "Every project, person, date, count, and status is invented.",
+            "Delivery and pilot dates are planned or conditional, not evidence that work occurred.",
+            "Dates are scenario literals; no year or weekday is implied."
+          ],
+          "scenario_disclosure": "Entire business case invented; disclosure belongs to question and provenance, not the intended project-update body."
+        },
+        "word_count": 129,
+        "word_count_method": "Whitespace-delimited tokens in the complete answer, including any title.",
+        "claims": [
+          {
+            "id": "DBC1",
+            "text": "The update concerns Atlas help-centre migration.",
+            "strength": "topic_identification",
+            "scope": "Entire update.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 0,
+              "end": 28
+            }
+          },
+          {
+            "id": "DBC2",
+            "text": "All 180 articles are copied.",
+            "strength": "completed_status",
+            "scope": "Atlas transfer.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 30,
+              "end": 63
+            }
+          },
+          {
+            "id": "DBC3",
+            "text": "Review found no missing sections in 60 articles.",
+            "strength": "bounded_observation",
+            "scope": "Only the reviewed set.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 69,
+              "end": 134
+            }
+          },
+          {
+            "id": "DBC4",
+            "text": "Remaining articles are unreviewed; content review is incomplete.",
+            "strength": "current_status",
+            "scope": "Not an assurance about all 180.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 135,
+              "end": 227
+            }
+          },
+          {
+            "id": "DBC5",
+            "text": "Search omits titles containing apostrophes.",
+            "strength": "known_issue",
+            "scope": "Current search behavior.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 229,
+              "end": 282
+            }
+          },
+          {
+            "id": "DBC6",
+            "text": "Nia plans fix delivery on 10 September; Omar tests afterward.",
+            "strength": "planned_sequence",
+            "scope": "Future work.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 283,
+              "end": 360
+            }
+          },
+          {
+            "id": "DBC7",
+            "text": "Recommend five-volunteer pilot on 11 September if the test passes.",
+            "strength": "conditional_proposal",
+            "scope": "Not a confirmed start.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 361,
+              "end": 460
+            }
+          },
+          {
+            "id": "DBC8",
+            "text": "Existing help centre and customer-facing links remain available/unchanged.",
+            "strength": "pilot_plan",
+            "scope": "During the pilot.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 461,
+              "end": 568
+            }
+          },
+          {
+            "id": "DBC9",
+            "text": "Sponsor must confirm five-agent availability by 9 September.",
+            "strength": "requested_decision",
+            "scope": "Staffing not yet confirmed.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 570,
+              "end": 655
+            }
+          },
+          {
+            "id": "DBC10",
+            "text": "Review feedback on 14 September before considering rollout scheduling.",
+            "strength": "planned_decision_sequence",
+            "scope": "Does not promise a rollout.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 656,
+              "end": 755
+            }
+          },
+          {
+            "id": "DBC11",
+            "text": "No full rollout date is committed.",
+            "strength": "current_non_commitment",
+            "scope": "Full rollout only.",
+            "source_ids": [
+              "atlas-brief"
+            ],
+            "original_span": {
+              "start": 756,
+              "end": 809
+            }
+          }
+        ],
+        "protected_literal_spans": [
+          {
+            "literal": "Atlas",
+            "spans": [
+              {
+                "start": 0,
+                "end": 5
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "180",
+            "spans": [
+              {
+                "start": 34,
+                "end": 37
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "60",
+            "spans": [
+              {
+                "start": 98,
+                "end": 100
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "Nia",
+            "spans": [
+              {
+                "start": 283,
+                "end": 286
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "Omar",
+            "spans": [
+              {
+                "start": 342,
+                "end": 346
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "10 September",
+            "spans": [
+              {
+                "start": 316,
+                "end": 328
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "five",
+            "spans": [
+              {
+                "start": 394,
+                "end": 398
+              },
+              {
+                "start": 643,
+                "end": 647
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "11 September",
+            "spans": [
+              {
+                "start": 427,
+                "end": 439
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "9 September",
+            "spans": [
+              {
+                "start": 588,
+                "end": 599
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          },
+          {
+            "literal": "14 September",
+            "spans": [
+              {
+                "start": 689,
+                "end": 701
+              }
+            ],
+            "rule": "Preserve exact literal spelling in any revision."
+          }
+        ],
+        "claim_reconciliation": {
+          "method": "Original checked clause by clause; claim spans use zero-based, end-exclusive character offsets.",
+          "all_useful_original_claims_inventoried": true,
+          "all_claim_spans_match_original": true,
+          "claim_count": 11,
+          "pre_freeze_adjustment": "Benchmark scenario prefix removed; project heading and all substantive project facts retained."
+        },
+        "relation_map_status": "Not derived; original author did not apply a revision method."
+      }
+    }
+  ],
+  "stopping": "Exactly one completion per case, no seed retry, repairs, best-of-N or detector feedback. Stop entire model run on setup or generation failure. EOS completion required; token-cap output retained as incomplete and unscored.",
+  "quality": "Separate exact-text claim/source/protected-span review; full source fidelity and acceptable professional clarity required before candidate scoring. No private holdout access.",
+  "measurement": "Use only pinned Desklib CLI local_proxy on complete quality-passing output plus exact source controls. All rejected/incomplete candidate scores null. GPTZero/Pangram not measured in this pilot.",
+  "license": "Research/evaluation only under inherited Qwen2.5-3B Research License; model card MIT does not erase inherited terms. Weights not bundled in skill."
+}

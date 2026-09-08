@@ -1,0 +1,270 @@
+{
+  "study": "targeted-edit-1",
+  "date": "2026-09-06",
+  "measurement_provenance": "Maintainer-recorded signed-in Chrome UI observations; hashes establish artifact integrity, not independent score authenticity. Raw DOM/screenshots/account document URLs retained privately.",
+  "intervention": "Frozen installed skill plus diagnose-then-targeted-edit workflow; no current-skill-only editing control",
+  "case_type": "Two new synthetic technical fixtures deliberately constructed with clarity problems; development comparison, not unseen validation",
+  "scan_order": [
+    "github-original",
+    "python-revision",
+    "python-original",
+    "github-revision"
+  ],
+  "repairs": 0,
+  "post_score_edits": 0,
+  "retries": 0,
+  "observations": [
+    {
+      "id": "github-original",
+      "case": "github-actions-concurrency",
+      "role": "original",
+      "source": {
+        "path": "inputs/github-original.txt",
+        "sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec",
+        "words_whitespace": 147
+      },
+      "pangram": {
+        "completed_at": "2026-09-06T21:32:31.544Z",
+        "model": "Pangram 4.0",
+        "mode": "Free text detection",
+        "label": "AI Generated",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human": null
+        },
+        "missing_percentages": "Not displayed; null is not a measured zero.",
+        "confidence_label": "medium",
+        "short_text_warning": true,
+        "preview_words": 155,
+        "result_words": 155,
+        "quoted_credits": 2,
+        "actual_credits": 2,
+        "credits_before": 8,
+        "credits_after": 6,
+        "submitted_and_effective_before": "Byte-identical to source input",
+        "submitted_sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec",
+        "effective_before_sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec",
+        "rendered": {
+          "path": "measurements/github-original-pangram-rendered.txt",
+          "sha256": "5b7ba09ad539bb5881f57f1d97d05837c7bda70f24187e5bd340a9eecb53b674"
+        },
+        "rendering_transform": "Split on LF; trim ASCII space/tab/CR at line edges; drop empty lines; join with one LF, no final LF. Observed display only; internal preprocessing unknown."
+      },
+      "gptzero": {
+        "completed_at": "2026-09-06T21:32:40.778Z",
+        "model": "4.9b",
+        "mode": "Basic Scan",
+        "confidences": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "warnings": [],
+        "source_to_submitted": "remove one terminal LF",
+        "submitted_to_effective": "append exactly three LF characters from Code Block DOM wrapper",
+        "submitted": {
+          "path": "measurements/github-original-gptzero-submitted.txt",
+          "sha256": "4a624c260532d54d0bcddb5b5c4a14ffe16de78a91727f822a6b9e80293acda5"
+        },
+        "effective": {
+          "path": "measurements/github-original-gptzero-effective.txt",
+          "sha256": "7b381b0379c5ccdeaca01cb71449454f0168cc8e718d657b35c072339b71256c"
+        },
+        "effective_after_matches": true
+      }
+    },
+    {
+      "id": "python-revision",
+      "case": "python-taskgroup",
+      "role": "revision",
+      "source": {
+        "path": "inputs/python-revision.txt",
+        "sha256": "81f8b3a848d0dc3a55baedc745e604763acc478045f0ac44f49d3a3a41f0121d",
+        "words_whitespace": 137
+      },
+      "pangram": {
+        "completed_at": "2026-09-06T21:33:15.382Z",
+        "model": "Pangram 4.0",
+        "mode": "Free text detection",
+        "label": "AI Generated",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human": null
+        },
+        "missing_percentages": "Not displayed; null is not a measured zero.",
+        "confidence_label": "medium",
+        "short_text_warning": true,
+        "preview_words": 145,
+        "result_words": 148,
+        "quoted_credits": 2,
+        "actual_credits": 2,
+        "credits_before": 6,
+        "credits_after": 4,
+        "submitted_and_effective_before": "Byte-identical to source input",
+        "submitted_sha256": "81f8b3a848d0dc3a55baedc745e604763acc478045f0ac44f49d3a3a41f0121d",
+        "effective_before_sha256": "81f8b3a848d0dc3a55baedc745e604763acc478045f0ac44f49d3a3a41f0121d",
+        "rendered": {
+          "path": "measurements/python-revision-pangram-rendered.txt",
+          "sha256": "d5fc4c9708cc27bfd3546f9740cc1dfbe9d3a613620f5c57ad892029c28dd268"
+        },
+        "rendering_transform": "Split on LF; trim ASCII space/tab/CR at line edges; drop empty lines; join with one LF, no final LF. Observed display only; internal preprocessing unknown."
+      },
+      "gptzero": {
+        "completed_at": "2026-09-06T21:33:25.878Z",
+        "model": "4.9b",
+        "mode": "Basic Scan",
+        "confidences": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "warnings": [],
+        "source_to_submitted": "remove one terminal LF",
+        "submitted_to_effective": "append exactly three LF characters from Code Block DOM wrapper",
+        "submitted": {
+          "path": "measurements/python-revision-gptzero-submitted.txt",
+          "sha256": "a18bf564fd748b9581ae8c430f910b65b8202c619c73a0c66b4ded02bc737d3d"
+        },
+        "effective": {
+          "path": "measurements/python-revision-gptzero-effective.txt",
+          "sha256": "9dd93f202dff1675880a882bff5a2402f13fee53c2d2e1dc9d92289503bfc28d"
+        },
+        "effective_after_matches": true
+      }
+    },
+    {
+      "id": "python-original",
+      "case": "python-taskgroup",
+      "role": "original",
+      "source": {
+        "path": "inputs/python-original.txt",
+        "sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+        "words_whitespace": 134
+      },
+      "pangram": {
+        "completed_at": "2026-09-06T21:33:56.342Z",
+        "model": "Pangram 4.0",
+        "mode": "Free text detection",
+        "label": "AI Generated",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human": null
+        },
+        "missing_percentages": "Not displayed; null is not a measured zero.",
+        "confidence_label": "medium",
+        "short_text_warning": true,
+        "preview_words": 142,
+        "result_words": 145,
+        "quoted_credits": 2,
+        "actual_credits": 2,
+        "credits_before": 4,
+        "credits_after": 2,
+        "submitted_and_effective_before": "Byte-identical to source input",
+        "submitted_sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+        "effective_before_sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc",
+        "rendered": {
+          "path": "measurements/python-original-pangram-rendered.txt",
+          "sha256": "0ad1277fa270f5d1964022f2fd0e167cc26045a334a4b178e2459ba7c27c340c"
+        },
+        "rendering_transform": "Split on LF; trim ASCII space/tab/CR at line edges; drop empty lines; join with one LF, no final LF. Observed display only; internal preprocessing unknown."
+      },
+      "gptzero": {
+        "completed_at": "2026-09-06T21:34:04.353Z",
+        "model": "4.9b",
+        "mode": "Basic Scan",
+        "confidences": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "warnings": [],
+        "source_to_submitted": "remove one terminal LF",
+        "submitted_to_effective": "append exactly three LF characters from Code Block DOM wrapper",
+        "submitted": {
+          "path": "measurements/python-original-gptzero-submitted.txt",
+          "sha256": "b07b4a763325ad67a7eb93c9c89060120deeec4c1c155dd078261d187afe7757"
+        },
+        "effective": {
+          "path": "measurements/python-original-gptzero-effective.txt",
+          "sha256": "0bef0d08122cc4b9a5d4300a53c311c508a3a830e3c0dd4d26bafe9de17e0758"
+        },
+        "effective_after_matches": true
+      }
+    },
+    {
+      "id": "github-revision",
+      "case": "github-actions-concurrency",
+      "role": "revision",
+      "source": {
+        "path": "inputs/github-revision.txt",
+        "sha256": "e0cd16ed2efccb2ad471064fefe5a30c5320cbd9bc0290a1b65d57904a614cc9",
+        "words_whitespace": 144
+      },
+      "pangram": {
+        "completed_at": "2026-09-06T21:34:32.317Z",
+        "model": "Pangram 4.0",
+        "mode": "Free text detection",
+        "label": "AI Generated",
+        "displayed_text_percentages": {
+          "ai_generated": 100,
+          "ai_assisted": null,
+          "human": null
+        },
+        "missing_percentages": "Not displayed; null is not a measured zero.",
+        "confidence_label": "medium",
+        "short_text_warning": true,
+        "preview_words": 152,
+        "result_words": 152,
+        "quoted_credits": 2,
+        "actual_credits": 2,
+        "credits_before": 2,
+        "credits_after": 0,
+        "submitted_and_effective_before": "Byte-identical to source input",
+        "submitted_sha256": "e0cd16ed2efccb2ad471064fefe5a30c5320cbd9bc0290a1b65d57904a614cc9",
+        "effective_before_sha256": "e0cd16ed2efccb2ad471064fefe5a30c5320cbd9bc0290a1b65d57904a614cc9",
+        "rendered": {
+          "path": "measurements/github-revision-pangram-rendered.txt",
+          "sha256": "e528d9fc8a1c470e4d890e898c3d10077b2b6bb013367fcfe2db1bd36eca16c4"
+        },
+        "rendering_transform": "Split on LF; trim ASCII space/tab/CR at line edges; drop empty lines; join with one LF, no final LF. Observed display only; internal preprocessing unknown."
+      },
+      "gptzero": {
+        "completed_at": "2026-09-06T21:34:50.584Z",
+        "model": "4.9b",
+        "mode": "Basic Scan",
+        "confidences": {
+          "ai": 100,
+          "mixed": 0,
+          "human": 0
+        },
+        "warnings": [],
+        "source_to_submitted": "remove one terminal LF",
+        "submitted_to_effective": "append exactly three LF characters from Code Block DOM wrapper",
+        "submitted": {
+          "path": "measurements/github-revision-gptzero-submitted.txt",
+          "sha256": "54e5f1bd42ae6ae359c4c80c549781a330ee43bd508d8d7673197e4740cdb5ab"
+        },
+        "effective": {
+          "path": "measurements/github-revision-gptzero-effective.txt",
+          "sha256": "cbce584a62ee8edce02e13e745ae145aa7852d65db9fc799180b38a933e1f552"
+        },
+        "effective_after_matches": true
+      }
+    }
+  ],
+  "totals": {
+    "cases": 2,
+    "scans_pangram": 4,
+    "scans_gptzero": 4,
+    "gptzero_ai_confidence_reductions": 0,
+    "pangram_label_changes": 0,
+    "pangram_short_text_warnings": 4,
+    "gptzero_short_text_warnings": 0,
+    "pangram_credits_used": 8,
+    "gptzero_words_used": 562
+  },
+  "interpretation": "Separate LLM review modestly preferred both revisions; neither detector improved on either pair. No detector-benefit instruction is promoted from this batch."
+}

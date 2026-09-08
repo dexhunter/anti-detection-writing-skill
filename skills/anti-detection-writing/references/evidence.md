@@ -12,6 +12,20 @@ The public repository contains 44 exact effective-editor inputs for the complete
 
 The packaged instructions consolidate lessons from evolving development snapshots. They have not been prospectively validated as a fixed intervention. Treat future detector experiments as bounded hypothesis tests; retain all attempts, measure quality separately, and stop if improving a score requires degrading the answer.
 
+## Later requested-alternative pilot
+
+A subsequent four-case pilot on September 6 used newly authored Git, Docker, Kubernetes and PostgreSQL documentation questions. Under the frozen current instruction, the editor kept all four already-clear originals unchanged. A separately frozen exception permitting an explicitly requested measured alternative, combined with a scenario/action/consequence framing prompt, produced four different replies. This combined procedure is not an isolated test of the exception sentence.
+
+All eight original/alternative texts passed a separate masked LLM quality review with no material loss of clarity or necessary qualifications. The reviewer slightly preferred three originals and one alternative. All eight fresh GPTZero Basic Scan / Model 4.9b results were **100% AI / 0% mixed / 0% human**, giving **0 reductions in 4 pairs**. Both Git and Docker versions carried short-text warnings; both longer pairs had no such warning. Original/current byte-identical texts shared one observation rather than being counted as independent scans.
+
+The cases were new to the earlier local datasets, but the exception was proposed after observing the current arm's keep behavior. Baseline authoring was not isolated from prior skill context. These are synthetic convenience cases with one output per condition, an added framing prompt, and no ordinary-editing control. The exception supports trying an acceptable alternative when requested; this pilot establishes no detector-score improvement. Keep its eight observations separate from the historical 19-question/44-scan dataset and six-question comparison.
+
+## Targeted edits across two detectors
+
+A September 6 comparison added a diagnose-then-targeted-edit instruction to the frozen skill on two new synthetic answers about GitHub Actions concurrency and Python TaskGroup. Both originals were deliberately constructed with clarity problems. A separate score-blind LLM reviewer modestly preferred both revisions and verified all 17 claims and necessary qualifications. All four GPTZero Basic 4.9b scans remained 100% AI / 0% mixed / 0% human; all four Pangram 4.0 scans displayed 100% AI-generated text with medium confidence and short-text warnings. No repairs, retries or post-score edits were made.
+
+This supports a limited clarity preference, with no detector improvement in either pair. It does not isolate the added instruction from the existing skill, measure human preference, or validate naturally occurring discussions. Do not promote targeted editing as a score-reduction technique from this result. Preserve readable prose for the reader's benefit; a stronger detector claim requires a new, comparable test. The public `studies/targeted-edit-1` record retains all eight observations separately from earlier cohorts.
+
 ## Autoresearch control-boundary comparison
 
 On September 7, a separate selector chose one of three proposed rules for explaining interacting controls. Against the frozen installed incumbent, the new rule produced GPTZero Basic 4.9b AI-confidence changes of 100% → 100% and 91% → 100%. Separate blinded review passed all four answers and judged each pair equivalent. The candidate was rejected; confirmation cases stayed untouched.

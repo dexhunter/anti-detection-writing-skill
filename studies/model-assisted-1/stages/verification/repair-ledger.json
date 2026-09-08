@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "scope": "One bounded factual and grammar repair plus one self-check per case; no Stage C.",
+  "raw_source_substitution": "Coordinator directs use of these freshly executed verification/stages/raw outputs instead of historical development raw intermediates named in the supplied skill.",
+  "context_count_actual": 1,
+  "case_count": 2,
+  "raw_generation_record": "unavailable in authorized Stage B inputs; freshness asserted by coordinator, not independently verified here",
+  "input_files": {
+    "SKILL.md": {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162"
+    },
+    "cases.json": {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "c529b4654d5338582e1c92a05896c83bac3dacd84d55952e09353b6e8ca6f55a"
+    },
+    "operator.txt": {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "ad17a30f2fe4e24c7716700fedb6d018844deadd3fd679f88611fdec1aa265f7"
+    },
+    "source-notes.txt": {
+      "path": "Private execution metadata omitted from this public export.",
+      "sha256": "72b2164aef3fbdae2ef6c2a24b02fd0f6ac8c49f15ee4eea788b258e450379be"
+    }
+  },
+  "stages_executed": [
+    "B"
+  ],
+  "browsing": false,
+  "detector_access": false,
+  "publication": false,
+  "retries": 0,
+  "stage_C_executed": false,
+  "offset_unit": "Unicode code points; zero-based half-open",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "raw_path": "stages/verification/raw/wm4-dev-technical-01.txt",
+      "raw_sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+      "raw_bytes": 749,
+      "raw_word_count": 122,
+      "output_path": "stages/verification/repaired/wm4-dev-technical-01.txt",
+      "output_sha256": "e51967b282423e933567434f9f8070261338bc84f71f91311e021ce9b3234f6b",
+      "output_bytes": 894,
+      "output_word_count": 142,
+      "repair_passes_actual": 1,
+      "self_check_passes_actual": 1,
+      "finish_status": "complete",
+      "viable": true,
+      "exact_before_after_ledger": [
+        {
+          "before": "A server sends ETag with response and that tag value must be included in If-None Match header for future conditional GET requests.",
+          "after": "A server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+          "reason": "DTC2: Restore the response type, identify the client as the sender, repair the protected header literal and missing articles; describe the supplied mechanism without an unqualified obligation.",
+          "raw_span": {
+            "start": 94,
+            "end": 224
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 94,
+            "end": 240
+          }
+        },
+        {
+          "before": "If the cached ETag matches a representation it reuses the cached one and returns 304 Not Modified, with no retransmission.",
+          "after": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+          "reason": "DTC3: Restore selected-representation scope, distinguish the client reuse actor from the server response actor, and specify absence of the response body rather than ambiguous no retransmission.",
+          "raw_span": {
+            "start": 225,
+            "end": 347
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 241,
+            "end": 397
+          }
+        },
+        {
+          "before": "If ETag does not match the server returns 200 OK with new response if further conditions are thereby satisfied.",
+          "after": "If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET.",
+          "reason": "DTC4: Replace the undefined further-conditions reference with the supplied otherwise-successful GET condition, restore current JSON and grammatical clause separation.",
+          "raw_span": {
+            "start": 348,
+            "end": 459
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 398,
+            "end": 502
+          }
+        },
+        {
+          "before": "Still this includes sending a request.",
+          "after": "Still this validation includes sending a request.",
+          "reason": "DTC5: Resolve this as the described validation, rather than the immediately preceding 200 response.",
+          "raw_span": {
+            "start": 460,
+            "end": 498
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 503,
+            "end": 552
+          }
+        },
+        {
+          "before": "Application may employ freshness policy as Cache-Control max age = 60 as an example, in which case this reuse does not depend on caching validation.",
+          "after": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+          "reason": "DTC6: Repair missing articles and the example construction, restore the exact header literal, resolve the cached-response reference, and add the omitted while-fresh and other-caching-rules conditions.",
+          "raw_span": {
+            "start": 499,
+            "end": 647
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 553,
+            "end": 768
+          }
+        },
+        {
+          "before": "However reuse according to this is not a guarantee that relevant data has not changed for 60 seconds.",
+          "after": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+          "reason": "DTC7: Resolve this as the freshness policy and correct retrospective unchanged-data wording to the supplied non-guarantee over the freshness interval.",
+          "raw_span": {
+            "start": 648,
+            "end": 749
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 769,
+            "end": 893
+          }
+        }
+      ],
+      "claim_map": [
+        {
+          "claim_id": "DTC1",
+          "contract": "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+          "supporting_spans": [
+            {
+              "text": "ETag enables receiving applications to validate whether cached representations may be reused.",
+              "start": 0,
+              "end": 93
+            }
+          ],
+          "status": "preserved",
+          "source_ids": [
+            "http-semantics"
+          ]
+        },
+        {
+          "claim_id": "DTC2",
+          "contract": "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+          "supporting_spans": [
+            {
+              "text": "A server sends ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+              "start": 94,
+              "end": 240
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-semantics"
+          ]
+        },
+        {
+          "claim_id": "DTC3",
+          "contract": "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+          "supporting_spans": [
+            {
+              "text": "If the cached ETag matches the selected representation, the client can reuse the cached body and the server returns 304 Not Modified, with no response body.",
+              "start": 241,
+              "end": 397
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-semantics"
+          ]
+        },
+        {
+          "claim_id": "DTC4",
+          "contract": "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+          "supporting_spans": [
+            {
+              "text": "If ETag does not match, the server returns 200 OK with the current JSON for an otherwise successful GET.",
+              "start": 398,
+              "end": 502
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-semantics"
+          ]
+        },
+        {
+          "claim_id": "DTC5",
+          "contract": "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+          "supporting_spans": [
+            {
+              "text": "Still this validation includes sending a request.",
+              "start": 503,
+              "end": 552
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-semantics"
+          ]
+        },
+        {
+          "claim_id": "DTC6",
+          "contract": "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+          "supporting_spans": [
+            {
+              "text": "An application may employ a freshness policy such as Cache-Control: max-age=60 as an example, in which case the cached response can be reused while fresh without a validation request, subject to other caching rules.",
+              "start": 553,
+              "end": 768
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-caching"
+          ]
+        },
+        {
+          "claim_id": "DTC7",
+          "contract": "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval.",
+          "supporting_spans": [
+            {
+              "text": "However reuse according to this freshness policy is not a guarantee that relevant data will remain unchanged for 60 seconds.",
+              "start": 769,
+              "end": 893
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "http-caching"
+          ]
+        }
+      ],
+      "protected_literal_spans": {
+        "ETag": [
+          {
+            "start": 0,
+            "end": 4
+          },
+          {
+            "start": 109,
+            "end": 113
+          },
+          {
+            "start": 255,
+            "end": 259
+          },
+          {
+            "start": 401,
+            "end": 405
+          }
+        ],
+        "GET": [
+          {
+            "start": 227,
+            "end": 230
+          },
+          {
+            "start": 498,
+            "end": 501
+          }
+        ],
+        "If-None-Match": [
+          {
+            "start": 183,
+            "end": 196
+          }
+        ],
+        "304 Not Modified": [
+          {
+            "start": 357,
+            "end": 373
+          }
+        ],
+        "200 OK": [
+          {
+            "start": 441,
+            "end": 447
+          }
+        ],
+        "Cache-Control: max-age=60": [
+          {
+            "start": 606,
+            "end": 631
+          }
+        ],
+        "60 seconds": [
+          {
+            "start": 882,
+            "end": 892
+          }
+        ]
+      },
+      "fidelity_self_check": {
+        "pass_count": 1,
+        "all_claims_mapped": true,
+        "all_protected_literals_present": true,
+        "word_count": 142,
+        "word_limit": 180,
+        "within_word_limit": true,
+        "terminal_LF": true,
+        "UTF_8": true,
+        "unsupported_additions": [],
+        "actor_check": "pass; technical client/server separated; business copying actor remains unspecified and recommendation actor follows supplied original",
+        "condition_negation_modality_check": "pass",
+        "order_check": "supported sentence and clause order preserved; omitted conditions and facts restored nearest related clauses",
+        "grammar_and_reference_check": "pass",
+        "remaining_defects": [],
+        "scope_check": "only factual, literal, grammatical, and reference defects repaired; no Stage C organization or style pass",
+        "source_basis": "Only supplied complete contract, original, protected literals and source notes; no independent runtime tests or browsing."
+      },
+      "additions": "Only omitted contract facts, governing conditions, actor/reference corrections, exact protected literals and required grammar shown in ledger."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "raw_path": "stages/verification/raw/wm4-dev-business-01.txt",
+      "raw_sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+      "raw_bytes": 794,
+      "raw_word_count": 125,
+      "output_path": "stages/verification/repaired/wm4-dev-business-01.txt",
+      "output_sha256": "6ba700625cbfb69da6911a94ae9feddc34679327e420096f7db1da7127de17a4",
+      "output_bytes": 917,
+      "output_word_count": 147,
+      "repair_passes_actual": 1,
+      "self_check_passes_actual": 1,
+      "finish_status": "complete",
+      "viable": true,
+      "exact_before_after_ledger": [
+        {
+          "before": "Progress in migration of the Atlas help centre includes completion of copying of 180 articles and content team has reviewed 60 articles without identifying any missing sections.",
+          "after": "Progress in migration of the Atlas help centre includes completion of copying of all 180 articles and the content team has reviewed 60 articles without identifying any missing sections.",
+          "reason": "DBC2-3: Make the all-180 completion scope explicit and repair the missing article before content team; copying agency remains unspecified.",
+          "raw_span": {
+            "start": 0,
+            "end": 177
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 0,
+            "end": 185
+          }
+        },
+        {
+          "before": "Reviews are still incomplete for remaining articles.",
+          "after": "Reviews are still incomplete; the remaining articles have not yet been reviewed.",
+          "reason": "DBC4: Restore the omitted fact that the remaining articles are unreviewed, rather than merely partly reviewed.",
+          "raw_span": {
+            "start": 178,
+            "end": 230
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 186,
+            "end": 266
+          }
+        },
+        {
+          "before": "Nia will deliver a fix and Omar will test this after 10 September.",
+          "after": "Nia is due to deliver a fix on 10 September and Omar will test this after delivery.",
+          "reason": "DBC6: Restore planned delivery modality, attach 10 September to Nia delivery, and make Omar testing depend on delivery rather than merely the date.",
+          "raw_span": {
+            "start": 298,
+            "end": 364
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 334,
+            "end": 417
+          }
+        },
+        {
+          "before": "If test passes, we suggest opening pilot to five volunteers starting on 11 September.",
+          "after": "If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+          "reason": "DBC7: Repair missing articles, restore the supplied first-person recommender rather than an unsupported collective actor, and identify the volunteers as support agents.",
+          "raw_span": {
+            "start": 365,
+            "end": 450
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 418,
+            "end": 524
+          }
+        },
+        {
+          "before": "Existing help center will remain available during this pilot while links to customers will not change.",
+          "after": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+          "reason": "DBC8: Repair the missing article and correct the links referent to the supplied customer-facing links.",
+          "raw_span": {
+            "start": 451,
+            "end": 553
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 525,
+            "end": 634
+          }
+        },
+        {
+          "before": "Sponsor confirmation is requested by 9 September as to availability of five agents.",
+          "after": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+          "reason": "DBC9: Restore the exact outstanding staffing decision and the support-team provider actor.",
+          "raw_span": {
+            "start": 554,
+            "end": 637
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 635,
+            "end": 743
+          }
+        },
+        {
+          "before": "Feedback review from pilot will take place on 14 September and decision for full rollout is pending.",
+          "after": "Feedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout.",
+          "reason": "DBC10: Repair the missing article and restore the feedback-before-scheduling-decision sequence and conditional scheduling scope.",
+          "raw_span": {
+            "start": 638,
+            "end": 738
+          },
+          "kind": "factual_or_grammar_repair",
+          "repair_span": {
+            "start": 744,
+            "end": 860
+          }
+        }
+      ],
+      "claim_map": [
+        {
+          "claim_id": "DBC1",
+          "contract": "DBC1: The update concerns Atlas help-centre migration. Strength: topic_identification. Scope: Entire update.",
+          "supporting_spans": [
+            {
+              "text": "Progress in migration of the Atlas help centre",
+              "start": 0,
+              "end": 46
+            }
+          ],
+          "status": "preserved",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC2",
+          "contract": "DBC2: All 180 articles are copied. Strength: completed_status. Scope: Atlas transfer. The copying actor is unspecified in the authoritative source.",
+          "supporting_spans": [
+            {
+              "text": "completion of copying of all 180 articles",
+              "start": 56,
+              "end": 97
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC3",
+          "contract": "DBC3: Review found no missing sections in 60 articles. Strength: bounded_observation. Scope: Only the reviewed set.",
+          "supporting_spans": [
+            {
+              "text": "the content team has reviewed 60 articles without identifying any missing sections.",
+              "start": 102,
+              "end": 185
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC4",
+          "contract": "DBC4: Remaining articles are unreviewed; content review is incomplete. Strength: current_status. Scope: Not an assurance about all 180.",
+          "supporting_spans": [
+            {
+              "text": "Reviews are still incomplete; the remaining articles have not yet been reviewed.",
+              "start": 186,
+              "end": 266
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC5",
+          "contract": "DBC5: Search omits titles containing apostrophes. Strength: known_issue. Scope: Current search behavior.",
+          "supporting_spans": [
+            {
+              "text": "Titles containing apostrophes are currently omitted from searches.",
+              "start": 267,
+              "end": 333
+            }
+          ],
+          "status": "preserved",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC6",
+          "contract": "DBC6: Nia plans fix delivery on 10 September; Omar tests afterward. Strength: planned_sequence. Scope: Future work.",
+          "supporting_spans": [
+            {
+              "text": "Nia is due to deliver a fix on 10 September and Omar will test this after delivery.",
+              "start": 334,
+              "end": 417
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC7",
+          "contract": "DBC7: Recommend five-volunteer pilot on 11 September if the test passes. Strength: conditional_proposal. Scope: Not a confirmed start.",
+          "supporting_spans": [
+            {
+              "text": "If the test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+              "start": 418,
+              "end": 524
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC8",
+          "contract": "DBC8: Existing help centre and customer-facing links remain available/unchanged. Strength: pilot_plan. Scope: During the pilot.",
+          "supporting_spans": [
+            {
+              "text": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+              "start": 525,
+              "end": 634
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC9",
+          "contract": "DBC9: Sponsor must confirm five-agent availability by 9 September. Strength: requested_decision. Scope: Staffing not yet confirmed.",
+          "supporting_spans": [
+            {
+              "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+              "start": 635,
+              "end": 743
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC10",
+          "contract": "DBC10: Review feedback on 14 September before considering rollout scheduling. Strength: planned_decision_sequence. Scope: Does not promise a rollout.",
+          "supporting_spans": [
+            {
+              "text": "Feedback review from the pilot will take place on 14 September before deciding whether to schedule the full rollout.",
+              "start": 744,
+              "end": 860
+            }
+          ],
+          "status": "corrected_or_completed",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        },
+        {
+          "claim_id": "DBC11",
+          "contract": "DBC11: No full rollout date is committed. Strength: current_non_commitment. Scope: Full rollout only.",
+          "supporting_spans": [
+            {
+              "text": "No schedule has as yet been committed for full rollout.",
+              "start": 861,
+              "end": 916
+            }
+          ],
+          "status": "preserved",
+          "source_ids": [
+            "atlas-brief"
+          ]
+        }
+      ],
+      "protected_literal_spans": {
+        "Atlas": [
+          {
+            "start": 29,
+            "end": 34
+          }
+        ],
+        "180": [
+          {
+            "start": 85,
+            "end": 88
+          }
+        ],
+        "60": [
+          {
+            "start": 132,
+            "end": 134
+          }
+        ],
+        "Nia": [
+          {
+            "start": 334,
+            "end": 337
+          }
+        ],
+        "Omar": [
+          {
+            "start": 382,
+            "end": 386
+          }
+        ],
+        "10 September": [
+          {
+            "start": 365,
+            "end": 377
+          }
+        ],
+        "five": [
+          {
+            "start": 469,
+            "end": 473
+          },
+          {
+            "start": 731,
+            "end": 735
+          }
+        ],
+        "11 September": [
+          {
+            "start": 511,
+            "end": 523
+          }
+        ],
+        "9 September": [
+          {
+            "start": 672,
+            "end": 683
+          }
+        ],
+        "14 September": [
+          {
+            "start": 794,
+            "end": 806
+          }
+        ]
+      },
+      "fidelity_self_check": {
+        "pass_count": 1,
+        "all_claims_mapped": true,
+        "all_protected_literals_present": true,
+        "word_count": 147,
+        "word_limit": 180,
+        "within_word_limit": true,
+        "terminal_LF": true,
+        "UTF_8": true,
+        "unsupported_additions": [],
+        "actor_check": "pass; technical client/server separated; business copying actor remains unspecified and recommendation actor follows supplied original",
+        "condition_negation_modality_check": "pass",
+        "order_check": "supported sentence and clause order preserved; omitted conditions and facts restored nearest related clauses",
+        "grammar_and_reference_check": "pass",
+        "remaining_defects": [],
+        "scope_check": "only factual, literal, grammatical, and reference defects repaired; no Stage C organization or style pass",
+        "source_basis": "Only supplied complete contract, original, protected literals and source notes; no independent runtime tests or browsing."
+      },
+      "additions": "Only omitted contract facts, governing conditions, actor/reference corrections, exact protected literals and required grammar shown in ledger."
+    }
+  ],
+  "finish_status": "complete"
+}

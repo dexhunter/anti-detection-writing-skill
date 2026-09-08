@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-09-07T16:18:50.632523+00:00",
+  "status": "generation_complete_pending_quality",
+  "records": [
+    {
+      "id": "wm4-dev-technical-01",
+      "seed": 202609071,
+      "source_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "prompt_sha256": "27a055c1ca01563fe7e4e1ca66a48bf5afee1a765f108954930646feaac44937",
+      "output_sha256": "1de9498944a38ade7afe97c1fe681456c70a94fc0bedf3df34f81edb96df0249",
+      "prompt_tokens": 182,
+      "new_tokens": 301,
+      "ended_on_eos": true,
+      "completion": "eos",
+      "words": 242,
+      "elapsed_seconds": 34.85534862498753,
+      "quality": "pending",
+      "detector_score": null
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "seed": 202609072,
+      "source_sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "prompt_sha256": "cea17d0b8879ff85ef623bf961474eae8d5f0513c894aa88fec75d5d57a39edd",
+      "output_sha256": "4b8f565024accc9f10d0c92d427688f8928112cb4896a2b05b434583f654a373",
+      "prompt_tokens": 186,
+      "new_tokens": 360,
+      "ended_on_eos": true,
+      "completion": "eos",
+      "words": 281,
+      "elapsed_seconds": 36.02565004094504,
+      "quality": "pending",
+      "detector_score": null
+    }
+  ],
+  "plan_sha256": "4d3ec0808f6d906592f749e4a5823020e519f6b273eff15afaa1b118bdd2aa89",
+  "runner_sha256": "4e285ebf68323c6fa5df2f9ce358e548909d0459dd99f921089ad345c84a4955",
+  "device": "mps",
+  "dtype": "bfloat16",
+  "packages": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "finished_at": "2026-09-07T16:20:24.261609+00:00"
+}

@@ -1,0 +1,69 @@
+{
+  "note": "Descriptive only, not detector proxy or selection metric.",
+  "rows": [
+    {
+      "case_id": "wm4-dev-technical-01",
+      "arm": "baseline",
+      "word_count": 120,
+      "original_word_count": 123,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.584
+    },
+    {
+      "case_id": "wm4-dev-technical-01",
+      "arm": "relation-map",
+      "word_count": 158,
+      "original_word_count": 123,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.491
+    },
+    {
+      "case_id": "wm4-dev-technical-01",
+      "arm": "core-expansion",
+      "word_count": 118,
+      "original_word_count": 123,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.68
+    },
+    {
+      "case_id": "wm4-dev-technical-01",
+      "arm": "topic-continuity",
+      "word_count": 123,
+      "original_word_count": 123,
+      "identical_to_original_except_terminal_newline": true,
+      "token_sequence_similarity_to_original": 1.0
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "arm": "baseline",
+      "word_count": 125,
+      "original_word_count": 129,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.709
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "arm": "relation-map",
+      "word_count": 133,
+      "original_word_count": 129,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.618
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "arm": "core-expansion",
+      "word_count": 124,
+      "original_word_count": 129,
+      "identical_to_original_except_terminal_newline": false,
+      "token_sequence_similarity_to_original": 0.711
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "arm": "topic-continuity",
+      "word_count": 129,
+      "original_word_count": 129,
+      "identical_to_original_except_terminal_newline": true,
+      "token_sequence_similarity_to_original": 1.0
+    }
+  ]
+}

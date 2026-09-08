@@ -1,0 +1,39 @@
+{
+  "case": "kubernetes-probe-roles",
+  "source_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+  "prompt_sha256": "6a72d3fcd939b10be9c9c048104951456cdb743719c188bf1c24dd1e134c5322",
+  "candidate_sha256": "ce3c5db7cb16678deec9ef238121ddf4ab83bf5918eb1a6594ebd5f2fb46283d",
+  "raw_sha256": "ae3be3c6341a27e5b567a80ac30900ec9fbc73a7caed4034d8059a54954b0734",
+  "generated_tokens": 322,
+  "ended_on_eos": true,
+  "target_closing_tag": true,
+  "hit_token_limit": false,
+  "source_words": 164,
+  "candidate_words": 207,
+  "protected_before": {
+    "code": [
+      "`failureThreshold: 30`",
+      "`periodSeconds: 5`",
+      "`Always`"
+    ],
+    "urls": [
+      "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+      "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+    ]
+  },
+  "protected_after": {
+    "code": [
+      "`failureThreshold: 30`",
+      "`periodSeconds: 5`",
+      "`Always`",
+      "`failureThreshold`"
+    ],
+    "urls": [
+      "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+      "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+    ]
+  },
+  "seed": 2026090604,
+  "elapsed_seconds": 20.749036916997284,
+  "detector": "not_measured_pending_independent_quality_review"
+}

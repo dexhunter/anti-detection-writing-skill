@@ -1,0 +1,9 @@
+Atlas help-centre migration: please confirm by 9 September whether the support team can provide five volunteer support agents for the proposed pilot.
+
+All 180 articles have been copied. The content team has checked 60 and found no missing sections in that set; the remaining articles are unreviewed, so the content check is incomplete.
+
+Search currently omits titles containing apostrophes. Nia is due to deliver the fix on 10 September, and Omar will test it afterward. I recommend opening the pilot to those five volunteers on 11 September if Omar's test passes. During the pilot, the existing help centre will remain available and customer-facing links won't change.
+
+Pilot feedback will be reviewed on 14 September before a decision on whether to schedule the full rollout. No full rollout date is committed.
+
+

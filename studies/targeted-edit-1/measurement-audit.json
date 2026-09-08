@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-09-06T21:42:04.483054+00:00",
+  "verdict": "pass",
+  "reviewer": "Separate measurement auditor /root/targeted_edit_fixtures; authored synthetic originals but neither revisions nor scans.",
+  "score_visibility": "This auditor saw scores. The earlier separate quality review records score isolation and precedes the first completed scan; this audit does not replace that review.",
+  "coverage": {
+    "observations_audited": 8,
+    "source_inputs_audited": 4,
+    "screenshots_signature_checked": 12,
+    "screenshots_visually_viewed": 3,
+    "public_results_and_README_checked": true
+  },
+  "passed_checks": [
+    "All canonical/source/submitted/effective hashes agree with admission, per-scan records, aggregate records and exact reviewed versions.",
+    "Pangram submissions and pre-scan editor bytes equal each source; all rendered files match exactly the declared line-edge trim, empty-line removal and LF-join transform, with no changed non-whitespace tokens.",
+    "GPTZero submissions remove precisely one terminal source LF; effective text appends precisely three LF characters, remains unchanged after scan, and appears as complete literal Code Block content in saved DOM.",
+    "All GPTZero results show completed Basic Scan, Model 4.9b, Text up-to-date, AI 100%, mixed 0%, human 0%, and no saved short-text warning.",
+    "All Pangram results show Pangram 4.0, AI Generated, 100% of text AI, short-text warning and a single Details segment with medium confidence. Undisplayed categories remain unavailable.",
+    "Pangram preview/result word counts and exact credit deductions reconcile; GPTZero displayed word counts equal per-scan allowance deductions.",
+    "Fixed input order and hash-matched quality review precede results; all four source and twelve public representation files match private bytes and public hashes.",
+    "Public native percentages/confidences, model/mode, warnings, preview/result word counts, totals and README no-improvement/LLM-preference conclusions agree with the records."
+  ],
+  "allowance_reconciliation": {
+    "pangram": [
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "gptzero": [
+      1794,
+      1647,
+      1510,
+      1376,
+      1232
+    ],
+    "pangram_credits_used": 8,
+    "gptzero_words_used": 562
+  },
+  "public_validation": {
+    "results_json_sha256": "fa9a83ae174ce261da40104d751ebba7d97450637126df322a88b8ac05282835",
+    "README_sha256": "e28df574ac0c27fe7d7d2bf0d4f114e95ffbfac5ce75987c0b4b4cf90a44be31",
+    "verdict": "pass",
+    "conclusion": "Both revisions were modestly preferred by the separate LLM reviewer; neither detector improved on either pair. README retains synthetic-development, no-current-skill-control, non-human-review and unauthenticated-UI limits.",
+    "public_files_modified_by_auditor": false
+  },
+  "unresolved_defects": 0,
+  "screenshot_note": "Twelve private screenshot extensions corrected from .png to .jpg; original JPEG bytes and hashes preserved. Three visually inspected, remaining nine signature/frame/DOM checked.",
+  "private_full_audit_sha256": "c2439aa38ec406b26f8399051febddfb761fa98b92931d6ff00ce64fc80ab0cd",
+  "limitations": [
+    "Recorded UI evidence is not an authenticated service export; hashes establish file integrity rather than independent score authenticity.",
+    "Strict plain-text receipt validity is not claimed for these separately audited representations.",
+    "No new scan or live account-history audit was performed. Saved allowance changes account for the eight recorded scans."
+  ]
+}

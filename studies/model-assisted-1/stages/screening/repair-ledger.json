@@ -1,0 +1,1414 @@
+{
+  "schema_version": 1,
+  "method_stage": "B",
+  "method_id": "r20",
+  "cases_in_this_context": 2,
+  "offset_convention": "zero-based Unicode code-point offsets; end exclusive",
+  "operation_scope": "Concrete fact, grammar, reference and literal repairs only; original sentence order retained.",
+  "cases": [
+    {
+      "case_id": "wm4-dev-technical-01",
+      "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case.",
+      "full_claim_contract": [
+        "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+        "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+        "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+        "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+        "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+        "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+        "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval."
+      ],
+      "protected_literals": [
+        "ETag",
+        "GET",
+        "If-None-Match",
+        "304 Not Modified",
+        "200 OK",
+        "Cache-Control: max-age=60",
+        "60 seconds"
+      ],
+      "supplied_sources": [
+        {
+          "id": "http-semantics",
+          "kind": "authoritative_specification",
+          "quotes": [
+            {
+              "section": "8.8.3",
+              "text": "An entity tag is an opaque validator"
+            },
+            {
+              "section": "6.4",
+              "text": "304 (Not Modified) responses do not include content."
+            }
+          ],
+          "sections": [
+            "8.8.3",
+            "13.1.2",
+            "15.3.1",
+            "15.4.5"
+          ],
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "verification": "Read current RFC Editor document with web tool.",
+          "verified_at": "2026-09-07"
+        },
+        {
+          "id": "http-caching",
+          "kind": "authoritative_specification",
+          "quotes": [
+            {
+              "section": "4.2",
+              "text": "without contacting the origin server"
+            },
+            {
+              "section": "4.2",
+              "text": "not likely to change in a semantically significant way"
+            }
+          ],
+          "sections": [
+            "4",
+            "4.2",
+            "4.3",
+            "5.2.2.1"
+          ],
+          "title": "RFC 9111: HTTP Caching",
+          "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+          "verification": "Read current RFC Editor document with web tool.",
+          "verified_at": "2026-09-07"
+        }
+      ],
+      "raw_path": "stages/screening/raw/wm4-dev-technical-01.txt",
+      "raw_sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+      "raw_byte_count": 749,
+      "stage_b_path": "stages/screening/repaired/wm4-dev-technical-01.txt",
+      "stage_b_sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+      "stage_b_byte_count": 924,
+      "raw_generation": {
+        "case": "wm4-dev-technical-01",
+        "source": "decoder/runs/pilot-technical-control-1/continuation.txt",
+        "sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+        "destination": "stages/r20/technical-raw-paraphrase.txt",
+        "new_generation": false,
+        "development_reuse": true,
+        "source_run_metadata": "decoder/runs/pilot-technical-control-1/run.json"
+      },
+      "discrepancy_inventory": [
+        {
+          "claim_id": "DTC1",
+          "status": "preserved",
+          "operation_indices": []
+        },
+        {
+          "claim_id": "DTC2",
+          "status": "corrected",
+          "operation_indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "claim_id": "DTC3",
+          "status": "corrected",
+          "operation_indices": [
+            3,
+            4
+          ]
+        },
+        {
+          "claim_id": "DTC4",
+          "status": "corrected",
+          "operation_indices": [
+            5,
+            6
+          ]
+        },
+        {
+          "claim_id": "DTC5",
+          "status": "corrected",
+          "operation_indices": [
+            7
+          ]
+        },
+        {
+          "claim_id": "DTC6",
+          "status": "corrected",
+          "operation_indices": [
+            8
+          ]
+        },
+        {
+          "claim_id": "DTC7",
+          "status": "corrected",
+          "operation_indices": [
+            9
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "index": 1,
+          "kind": "grammar_and_omitted_scope",
+          "before": "sends ETag with response",
+          "after": "sends an ETag with the JSON response",
+          "reason": "Restore required articles and identify the response as the supplied JSON response.",
+          "claim_ids": [
+            "DTC2"
+          ],
+          "raw_span": {
+            "start": 103,
+            "end": 127
+          },
+          "operation_input_span": {
+            "start": 103,
+            "end": 127
+          },
+          "operation_output_span": {
+            "start": 103,
+            "end": 139
+          },
+          "operation_input_sha256": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+          "operation_output_sha256": "192f96460478083d423ce699eef2ae7e4911c9ec8a565d2e79bdd1770bf0c910",
+          "final_span": {
+            "start": 103,
+            "end": 139
+          }
+        },
+        {
+          "index": 2,
+          "kind": "actor_and_protected_literal",
+          "before": "that tag value must be included in If-None Match header",
+          "after": "the client includes that tag value in the If-None-Match header",
+          "reason": "Identify the client as the sender of the conditional header, repair its literal spelling and restore the article.",
+          "claim_ids": [
+            "DTC2"
+          ],
+          "raw_span": {
+            "start": 132,
+            "end": 187
+          },
+          "operation_input_span": {
+            "start": 144,
+            "end": 199
+          },
+          "operation_output_span": {
+            "start": 144,
+            "end": 206
+          },
+          "operation_input_sha256": "192f96460478083d423ce699eef2ae7e4911c9ec8a565d2e79bdd1770bf0c910",
+          "operation_output_sha256": "ef66d4101836e2afe5b46277a9902490bad14f3b7eed96a3c654cee0e19dcc7a",
+          "final_span": {
+            "start": 144,
+            "end": 206
+          }
+        },
+        {
+          "index": 3,
+          "kind": "condition_actor_and_reference",
+          "before": "If the cached ETag matches a representation it reuses the cached one",
+          "after": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body",
+          "reason": "Restore the otherwise-successful-GET scope, selected-representation tag comparison and client ownership of cached-body reuse; retain reuse before the return clause.",
+          "claim_ids": [
+            "DTC3"
+          ],
+          "raw_span": {
+            "start": 225,
+            "end": 293
+          },
+          "operation_input_span": {
+            "start": 244,
+            "end": 312
+          },
+          "operation_output_span": {
+            "start": 244,
+            "end": 375
+          },
+          "operation_input_sha256": "ef66d4101836e2afe5b46277a9902490bad14f3b7eed96a3c654cee0e19dcc7a",
+          "operation_output_sha256": "9e346ddc409125fd4abf97ba976b81c1461e56e9531f35ceb4cb240c1a74e8db",
+          "final_span": {
+            "start": 244,
+            "end": 375
+          }
+        },
+        {
+          "index": 4,
+          "kind": "actor_and_incorrect_scope",
+          "before": "and returns 304 Not Modified, with no retransmission",
+          "after": "and the server returns 304 Not Modified with no response body",
+          "reason": "Identify the server as response sender and replace the overbroad no-retransmission claim with the required no-response-body statement.",
+          "claim_ids": [
+            "DTC3"
+          ],
+          "raw_span": {
+            "start": 294,
+            "end": 346
+          },
+          "operation_input_span": {
+            "start": 376,
+            "end": 428
+          },
+          "operation_output_span": {
+            "start": 376,
+            "end": 437
+          },
+          "operation_input_sha256": "9e346ddc409125fd4abf97ba976b81c1461e56e9531f35ceb4cb240c1a74e8db",
+          "operation_output_sha256": "4a8bf78918c44948100bcaedfb4afcac57ae668296f5c66ad4a39dac93a3458b",
+          "final_span": {
+            "start": 376,
+            "end": 437
+          }
+        },
+        {
+          "index": 5,
+          "kind": "grammar",
+          "before": "If ETag does not match the server",
+          "after": "If the ETag does not match, the server",
+          "reason": "Restore the article and the comma separating the condition from its consequent.",
+          "claim_ids": [
+            "DTC4"
+          ],
+          "raw_span": {
+            "start": 348,
+            "end": 381
+          },
+          "operation_input_span": {
+            "start": 439,
+            "end": 472
+          },
+          "operation_output_span": {
+            "start": 439,
+            "end": 477
+          },
+          "operation_input_sha256": "4a8bf78918c44948100bcaedfb4afcac57ae668296f5c66ad4a39dac93a3458b",
+          "operation_output_sha256": "d463db51a683a2392c767e690a438fc08091acee6fd9989e324bc957ae84bec3",
+          "final_span": {
+            "start": 439,
+            "end": 477
+          }
+        },
+        {
+          "index": 6,
+          "kind": "omitted_content_and_unclear_condition",
+          "before": "with new response if further conditions are thereby satisfied",
+          "after": "with the current JSON if the GET otherwise succeeds",
+          "reason": "Specify current JSON and the successful-GET condition instead of an unclear condition.",
+          "claim_ids": [
+            "DTC4"
+          ],
+          "raw_span": {
+            "start": 397,
+            "end": 458
+          },
+          "operation_input_span": {
+            "start": 493,
+            "end": 554
+          },
+          "operation_output_span": {
+            "start": 493,
+            "end": 544
+          },
+          "operation_input_sha256": "d463db51a683a2392c767e690a438fc08091acee6fd9989e324bc957ae84bec3",
+          "operation_output_sha256": "62a0cf4cc09abc4ced29e2d8ef0dd6ea673e0b605b6bad9452a95259dfc6edbe",
+          "final_span": {
+            "start": 493,
+            "end": 544
+          }
+        },
+        {
+          "index": 7,
+          "kind": "grammar_and_unclear_reference",
+          "before": "Still this includes sending a request.",
+          "after": "Still, this validation includes sending a request.",
+          "reason": "Resolve this to conditional validation and add the introductory comma.",
+          "claim_ids": [
+            "DTC5"
+          ],
+          "raw_span": {
+            "start": 460,
+            "end": 498
+          },
+          "operation_input_span": {
+            "start": 546,
+            "end": 584
+          },
+          "operation_output_span": {
+            "start": 546,
+            "end": 596
+          },
+          "operation_input_sha256": "62a0cf4cc09abc4ced29e2d8ef0dd6ea673e0b605b6bad9452a95259dfc6edbe",
+          "operation_output_sha256": "c17d5a09152617b5bc7e27772a20ebadf966f35c0be1a8287b0ef3795dedbf6d",
+          "final_span": {
+            "start": 546,
+            "end": 596
+          }
+        },
+        {
+          "index": 8,
+          "kind": "grammar_protected_literal_and_omitted_conditions",
+          "before": "Application may employ freshness policy as Cache-Control max age = 60 as an example, in which case this reuse does not depend on caching validation.",
+          "after": "An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules.",
+          "reason": "Repair articles and the malformed example construction/header literal; identify the reused object and restore while-fresh permission, avoidance of a validation request and the other-caching-rules limit.",
+          "claim_ids": [
+            "DTC6"
+          ],
+          "raw_span": {
+            "start": 499,
+            "end": 647
+          },
+          "operation_input_span": {
+            "start": 597,
+            "end": 745
+          },
+          "operation_output_span": {
+            "start": 597,
+            "end": 798
+          },
+          "operation_input_sha256": "c17d5a09152617b5bc7e27772a20ebadf966f35c0be1a8287b0ef3795dedbf6d",
+          "operation_output_sha256": "29c6da809608d4b3fe290c8e8d92c5f0ac72fda6ca641ab60e556bdf70303f2f",
+          "final_span": {
+            "start": 597,
+            "end": 798
+          }
+        },
+        {
+          "index": 9,
+          "kind": "grammar_reference_and_temporal_scope",
+          "before": "However reuse according to this is not a guarantee that relevant data has not changed for 60 seconds.",
+          "after": "However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.",
+          "reason": "Resolve the policy and data references, add the introductory comma and restore the non-guarantee about data remaining unchanged over the freshness interval.",
+          "claim_ids": [
+            "DTC7"
+          ],
+          "raw_span": {
+            "start": 648,
+            "end": 749
+          },
+          "operation_input_span": {
+            "start": 799,
+            "end": 900
+          },
+          "operation_output_span": {
+            "start": 799,
+            "end": 923
+          },
+          "operation_input_sha256": "29c6da809608d4b3fe290c8e8d92c5f0ac72fda6ca641ab60e556bdf70303f2f",
+          "operation_output_sha256": "a39181f5a940c364dcd3577c2e01fd7abf8629dcd33a3a6279f3ce36d6083f5b",
+          "final_span": {
+            "start": 799,
+            "end": 923
+          }
+        },
+        {
+          "index": 10,
+          "kind": "required_file_format",
+          "before": "",
+          "after": "\n",
+          "reason": "Add the required terminal LF.",
+          "claim_ids": [],
+          "raw_span": {
+            "start": 749,
+            "end": 749
+          },
+          "operation_input_span": {
+            "start": 923,
+            "end": 923
+          },
+          "operation_output_span": {
+            "start": 923,
+            "end": 924
+          },
+          "operation_input_sha256": "a39181f5a940c364dcd3577c2e01fd7abf8629dcd33a3a6279f3ce36d6083f5b",
+          "operation_output_sha256": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+          "final_span": {
+            "start": 923,
+            "end": 924
+          }
+        }
+      ],
+      "claim_map": [
+        {
+          "claim_id": "DTC1",
+          "full_claim_contract": "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+          "status": "preserved",
+          "raw_support": {
+            "text": "ETag enables receiving applications to validate whether cached representations may be reused.",
+            "start": 0,
+            "end": 93
+          },
+          "stage_b_support": {
+            "text": "ETag enables receiving applications to validate whether cached representations may be reused.",
+            "start": 0,
+            "end": 93
+          },
+          "repair_operation_indices": []
+        },
+        {
+          "claim_id": "DTC2",
+          "full_claim_contract": "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "A server sends ETag with response and that tag value must be included in If-None Match header for future conditional GET requests.",
+            "start": 94,
+            "end": 224
+          },
+          "stage_b_support": {
+            "text": "A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests.",
+            "start": 94,
+            "end": 243
+          },
+          "repair_operation_indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "claim_id": "DTC3",
+          "full_claim_contract": "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "If the cached ETag matches a representation it reuses the cached one and returns 304 Not Modified, with no retransmission.",
+            "start": 225,
+            "end": 347
+          },
+          "stage_b_support": {
+            "text": "For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the client can reuse its cached body and the server returns 304 Not Modified with no response body.",
+            "start": 244,
+            "end": 438
+          },
+          "repair_operation_indices": [
+            3,
+            4
+          ]
+        },
+        {
+          "claim_id": "DTC4",
+          "full_claim_contract": "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "If ETag does not match the server returns 200 OK with new response if further conditions are thereby satisfied.",
+            "start": 348,
+            "end": 459
+          },
+          "stage_b_support": {
+            "text": "If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds.",
+            "start": 439,
+            "end": 545
+          },
+          "repair_operation_indices": [
+            5,
+            6
+          ]
+        },
+        {
+          "claim_id": "DTC5",
+          "full_claim_contract": "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Still this includes sending a request.",
+            "start": 460,
+            "end": 498
+          },
+          "stage_b_support": {
+            "text": "Still, this validation includes sending a request.",
+            "start": 546,
+            "end": 596
+          },
+          "repair_operation_indices": [
+            7
+          ]
+        },
+        {
+          "claim_id": "DTC6",
+          "full_claim_contract": "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Application may employ freshness policy as Cache-Control max age = 60 as an example, in which case this reuse does not depend on caching validation.",
+            "start": 499,
+            "end": 647
+          },
+          "stage_b_support": {
+            "text": "An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules.",
+            "start": 597,
+            "end": 798
+          },
+          "repair_operation_indices": [
+            8
+          ]
+        },
+        {
+          "claim_id": "DTC7",
+          "full_claim_contract": "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "However reuse according to this is not a guarantee that relevant data has not changed for 60 seconds.",
+            "start": 648,
+            "end": 749
+          },
+          "stage_b_support": {
+            "text": "However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.",
+            "start": 799,
+            "end": 923
+          },
+          "repair_operation_indices": [
+            9
+          ]
+        }
+      ],
+      "protected_literal_check": [
+        {
+          "literal": "ETag",
+          "present": true,
+          "start": 0
+        },
+        {
+          "literal": "GET",
+          "present": true,
+          "start": 230
+        },
+        {
+          "literal": "If-None-Match",
+          "present": true,
+          "start": 186
+        },
+        {
+          "literal": "304 Not Modified",
+          "present": true,
+          "start": 399
+        },
+        {
+          "literal": "200 OK",
+          "present": true,
+          "start": 486
+        },
+        {
+          "literal": "Cache-Control: max-age=60",
+          "present": true,
+          "start": 650
+        },
+        {
+          "literal": "60 seconds",
+          "present": true,
+          "start": 912
+        }
+      ],
+      "additions_audit": {
+        "all_substantive_additions_restore_supplied_claims": true,
+        "unsupported_additions": [],
+        "explanation_or_examples_added": false
+      },
+      "self_check": {
+        "raw_matches_declared_provenance": true,
+        "every_required_claim_mapped": true,
+        "every_protected_literal_preserved": true,
+        "word_count": 147,
+        "word_limit": 180,
+        "within_word_limit": true,
+        "utf8": true,
+        "terminal_lf": true,
+        "no_invisible_characters_added": true,
+        "sentence_order_preserved": true,
+        "supported_fluent_wording_preserved_except_documented_concrete_repairs": true,
+        "new_unsupported_claims": [],
+        "omitted_claims": [],
+        "modality_conditions_negation_scope_actors_checked": true,
+        "single_prescribed_self_check": true,
+        "independent_review_performed": false
+      },
+      "bounded_repair_viable": true,
+      "finish_status": "repaired_and_self_checked"
+    },
+    {
+      "case_id": "wm4-dev-business-01",
+      "question": "In the invented Atlas scenario, write a concise update for the project sponsor covering progress, what still blocks rollout, the pilot proposal, and the decision needed from the sponsor. Use only the supplied synthetic facts.",
+      "full_claim_contract": [
+        "DBC1: The update concerns Atlas help-centre migration. Strength: topic_identification. Scope: Entire update.",
+        "DBC2: All 180 articles are copied. Strength: completed_status. Scope: Atlas transfer. The copying actor is unspecified in the authoritative source.",
+        "DBC3: Review found no missing sections in 60 articles. Strength: bounded_observation. Scope: Only the reviewed set.",
+        "DBC4: Remaining articles are unreviewed; content review is incomplete. Strength: current_status. Scope: Not an assurance about all 180.",
+        "DBC5: Search omits titles containing apostrophes. Strength: known_issue. Scope: Current search behavior.",
+        "DBC6: Nia plans fix delivery on 10 September; Omar tests afterward. Strength: planned_sequence. Scope: Future work.",
+        "DBC7: Recommend five-volunteer pilot on 11 September if the test passes. Strength: conditional_proposal. Scope: Not a confirmed start.",
+        "DBC8: Existing help centre and customer-facing links remain available/unchanged. Strength: pilot_plan. Scope: During the pilot.",
+        "DBC9: Sponsor must confirm five-agent availability by 9 September. Strength: requested_decision. Scope: Staffing not yet confirmed.",
+        "DBC10: Review feedback on 14 September before considering rollout scheduling. Strength: planned_decision_sequence. Scope: Does not promise a rollout.",
+        "DBC11: No full rollout date is committed. Strength: current_non_commitment. Scope: Full rollout only."
+      ],
+      "protected_literals": [
+        "Atlas",
+        "180",
+        "60",
+        "Nia",
+        "Omar",
+        "10 September",
+        "five",
+        "11 September",
+        "9 September",
+        "14 September"
+      ],
+      "supplied_sources": [
+        {
+          "facts": [
+            "This is an invented internal Atlas help-centre migration scenario, not an account of a real project.",
+            "All 180 articles have been copied.",
+            "The content team checked 60 articles and found no missing sections in that reviewed set; the remaining articles have not yet been reviewed.",
+            "Search currently omits titles containing apostrophes.",
+            "Nia is due to deliver a search fix on 10 September; delivery is a plan, not a completed event.",
+            "Omar will test the fix after delivery.",
+            "The proposed pilot starts on 11 September with five volunteer support agents, conditional on that search test passing.",
+            "The existing help centre will stay available during the pilot; customer-facing links will not change during it.",
+            "The sponsor needs to confirm by 9 September whether the support team can provide the five agents; staffing is not yet confirmed.",
+            "Pilot feedback is due to be reviewed on 14 September, before deciding whether to schedule full rollout; no full rollout date is committed."
+          ],
+          "id": "atlas-brief",
+          "kind": "provided_synthetic_facts",
+          "quotes": [
+            {
+              "fact_index": 1,
+              "text": "All 180 articles have been copied."
+            },
+            {
+              "fact_index": 3,
+              "text": "Search currently omits titles containing apostrophes."
+            }
+          ],
+          "title": "Invented Atlas scenario fact sheet",
+          "url": null,
+          "verification": "Draft reconciled against this author-supplied synthetic fact sheet; no external factual assertion.",
+          "verified_at": "2026-09-07"
+        }
+      ],
+      "raw_path": "stages/screening/raw/wm4-dev-business-01.txt",
+      "raw_sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+      "raw_byte_count": 794,
+      "stage_b_path": "stages/screening/repaired/wm4-dev-business-01.txt",
+      "stage_b_sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+      "stage_b_byte_count": 921,
+      "raw_generation": {
+        "case": "wm4-dev-business-01",
+        "source": "decoder/runs/pilot-business-control-1/continuation.txt",
+        "sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+        "destination": "stages/r20/business-raw-paraphrase.txt",
+        "new_generation": false,
+        "development_reuse": true,
+        "source_run_metadata": "decoder/runs/pilot-business-control-1/run.json"
+      },
+      "discrepancy_inventory": [
+        {
+          "claim_id": "DBC1",
+          "status": "corrected",
+          "operation_indices": [
+            1
+          ]
+        },
+        {
+          "claim_id": "DBC2",
+          "status": "corrected",
+          "operation_indices": [
+            2
+          ]
+        },
+        {
+          "claim_id": "DBC3",
+          "status": "corrected",
+          "operation_indices": [
+            3
+          ]
+        },
+        {
+          "claim_id": "DBC4",
+          "status": "corrected",
+          "operation_indices": [
+            4
+          ]
+        },
+        {
+          "claim_id": "DBC5",
+          "status": "preserved",
+          "operation_indices": []
+        },
+        {
+          "claim_id": "DBC6",
+          "status": "corrected",
+          "operation_indices": [
+            5,
+            6
+          ]
+        },
+        {
+          "claim_id": "DBC7",
+          "status": "corrected",
+          "operation_indices": [
+            7
+          ]
+        },
+        {
+          "claim_id": "DBC8",
+          "status": "corrected",
+          "operation_indices": [
+            8,
+            9
+          ]
+        },
+        {
+          "claim_id": "DBC9",
+          "status": "corrected",
+          "operation_indices": [
+            10
+          ]
+        },
+        {
+          "claim_id": "DBC10",
+          "status": "corrected",
+          "operation_indices": [
+            11,
+            12
+          ]
+        },
+        {
+          "claim_id": "DBC11",
+          "status": "preserved",
+          "operation_indices": []
+        }
+      ],
+      "operations": [
+        {
+          "index": 1,
+          "kind": "grammar",
+          "before": "Progress in migration",
+          "after": "Progress in the migration",
+          "reason": "Restore the article before migration.",
+          "claim_ids": [
+            "DBC1"
+          ],
+          "raw_span": {
+            "start": 0,
+            "end": 21
+          },
+          "operation_input_span": {
+            "start": 0,
+            "end": 21
+          },
+          "operation_output_span": {
+            "start": 0,
+            "end": 25
+          },
+          "operation_input_sha256": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+          "operation_output_sha256": "60e508b472fe73db109f566502c2ea8702811f04bb18d91d19c92952bf85b08b",
+          "final_span": {
+            "start": 0,
+            "end": 25
+          }
+        },
+        {
+          "index": 2,
+          "kind": "omitted_completion_scope",
+          "before": "copying of 180 articles",
+          "after": "copying of all 180 articles",
+          "reason": "Make the supplied all-articles completion scope explicit while leaving the copying actor unspecified.",
+          "claim_ids": [
+            "DBC2"
+          ],
+          "raw_span": {
+            "start": 70,
+            "end": 93
+          },
+          "operation_input_span": {
+            "start": 74,
+            "end": 97
+          },
+          "operation_output_span": {
+            "start": 74,
+            "end": 101
+          },
+          "operation_input_sha256": "60e508b472fe73db109f566502c2ea8702811f04bb18d91d19c92952bf85b08b",
+          "operation_output_sha256": "02f734af680ee94ec38d64655453da86c25761a9cf341be72a538defb61e18d7",
+          "final_span": {
+            "start": 74,
+            "end": 101
+          }
+        },
+        {
+          "index": 3,
+          "kind": "grammar",
+          "before": "and content team has reviewed",
+          "after": "and the content team has reviewed",
+          "reason": "Restore the article before content team.",
+          "claim_ids": [
+            "DBC3"
+          ],
+          "raw_span": {
+            "start": 94,
+            "end": 123
+          },
+          "operation_input_span": {
+            "start": 102,
+            "end": 131
+          },
+          "operation_output_span": {
+            "start": 102,
+            "end": 135
+          },
+          "operation_input_sha256": "02f734af680ee94ec38d64655453da86c25761a9cf341be72a538defb61e18d7",
+          "operation_output_sha256": "e510bfd72c677b9e4aea0c0ed3c0c2c948148ec8e2d452882cdff55d67cc9304",
+          "final_span": {
+            "start": 102,
+            "end": 135
+          }
+        },
+        {
+          "index": 4,
+          "kind": "omitted_review_status",
+          "before": "Reviews are still incomplete for remaining articles.",
+          "after": "Reviews are still incomplete: the remaining articles have not yet been reviewed.",
+          "reason": "Restore that the remaining articles are unreviewed, rather than merely having unfinished reviews, next to the incomplete-review status.",
+          "claim_ids": [
+            "DBC4"
+          ],
+          "raw_span": {
+            "start": 178,
+            "end": 230
+          },
+          "operation_input_span": {
+            "start": 190,
+            "end": 242
+          },
+          "operation_output_span": {
+            "start": 190,
+            "end": 270
+          },
+          "operation_input_sha256": "e510bfd72c677b9e4aea0c0ed3c0c2c948148ec8e2d452882cdff55d67cc9304",
+          "operation_output_sha256": "f7dc685a02c7d906dd3848f6bcbfb0b39a06d41f77fa19f0fe3133c45f7dc58c",
+          "final_span": {
+            "start": 190,
+            "end": 270
+          }
+        },
+        {
+          "index": 5,
+          "kind": "modality_and_date",
+          "before": "Nia will deliver a fix",
+          "after": "Nia is due to deliver a fix on 10 September",
+          "reason": "Restore planned delivery modality and attach 10 September to Nia's delivery.",
+          "claim_ids": [
+            "DBC6"
+          ],
+          "raw_span": {
+            "start": 298,
+            "end": 320
+          },
+          "operation_input_span": {
+            "start": 338,
+            "end": 360
+          },
+          "operation_output_span": {
+            "start": 338,
+            "end": 381
+          },
+          "operation_input_sha256": "f7dc685a02c7d906dd3848f6bcbfb0b39a06d41f77fa19f0fe3133c45f7dc58c",
+          "operation_output_sha256": "83f1701817712966fbe1b7cef250e9750ad0f98dbdfff69cd09d46e39d38ef40",
+          "final_span": {
+            "start": 338,
+            "end": 381
+          }
+        },
+        {
+          "index": 6,
+          "kind": "sequence_and_reference",
+          "before": "Omar will test this after 10 September",
+          "after": "Omar will test it after delivery",
+          "reason": "Attach Omar's test to delivery rather than the calendar date and resolve the fix reference.",
+          "claim_ids": [
+            "DBC6"
+          ],
+          "raw_span": {
+            "start": 325,
+            "end": 363
+          },
+          "operation_input_span": {
+            "start": 386,
+            "end": 424
+          },
+          "operation_output_span": {
+            "start": 386,
+            "end": 418
+          },
+          "operation_input_sha256": "83f1701817712966fbe1b7cef250e9750ad0f98dbdfff69cd09d46e39d38ef40",
+          "operation_output_sha256": "77ccf9fcdbe24612e42f95cc9e94da26543fb5c16e1887e57522a207bf05910d",
+          "final_span": {
+            "start": 386,
+            "end": 418
+          }
+        },
+        {
+          "index": 7,
+          "kind": "condition_actor_grammar_and_omitted_role",
+          "before": "If test passes, we suggest opening pilot to five volunteers",
+          "after": "If Omar's test passes, I suggest opening the pilot to five volunteer support agents",
+          "reason": "Identify the gating test, restore the original singular recommender instead of an unsupported collective, add the missing article and specify volunteer support agents.",
+          "claim_ids": [
+            "DBC7"
+          ],
+          "raw_span": {
+            "start": 365,
+            "end": 424
+          },
+          "operation_input_span": {
+            "start": 420,
+            "end": 479
+          },
+          "operation_output_span": {
+            "start": 420,
+            "end": 503
+          },
+          "operation_input_sha256": "77ccf9fcdbe24612e42f95cc9e94da26543fb5c16e1887e57522a207bf05910d",
+          "operation_output_sha256": "9fd032e5f366f077767f99a995da99ad17fa1463cdba9478176eb2573f3d2fd3",
+          "final_span": {
+            "start": 420,
+            "end": 503
+          }
+        },
+        {
+          "index": 8,
+          "kind": "grammar",
+          "before": "Existing help center",
+          "after": "The existing help center",
+          "reason": "Restore the article before the existing help center.",
+          "claim_ids": [
+            "DBC8"
+          ],
+          "raw_span": {
+            "start": 451,
+            "end": 471
+          },
+          "operation_input_span": {
+            "start": 530,
+            "end": 550
+          },
+          "operation_output_span": {
+            "start": 530,
+            "end": 554
+          },
+          "operation_input_sha256": "9fd032e5f366f077767f99a995da99ad17fa1463cdba9478176eb2573f3d2fd3",
+          "operation_output_sha256": "08e86021f7a90a7e92e80f28ac6abf9d6d396e1129ef8f0791ecbde4c3d8d6af",
+          "final_span": {
+            "start": 530,
+            "end": 554
+          }
+        },
+        {
+          "index": 9,
+          "kind": "incorrect_reference",
+          "before": "links to customers",
+          "after": "customer-facing links",
+          "reason": "Restore the supplied link category, rather than links pointing to customers.",
+          "claim_ids": [
+            "DBC8"
+          ],
+          "raw_span": {
+            "start": 518,
+            "end": 536
+          },
+          "operation_input_span": {
+            "start": 601,
+            "end": 619
+          },
+          "operation_output_span": {
+            "start": 601,
+            "end": 622
+          },
+          "operation_input_sha256": "08e86021f7a90a7e92e80f28ac6abf9d6d396e1129ef8f0791ecbde4c3d8d6af",
+          "operation_output_sha256": "7dc42632c1b2b238d7603b5acfb3a00a27a2850e927afcc8ac0c0c0f84121089",
+          "final_span": {
+            "start": 601,
+            "end": 622
+          }
+        },
+        {
+          "index": 10,
+          "kind": "omitted_staffing_decision",
+          "before": "as to availability of five agents",
+          "after": "as to whether the support team can provide the five agents",
+          "reason": "Restore the precise pending sponsor decision: whether the support team can provide the five agents.",
+          "claim_ids": [
+            "DBC9"
+          ],
+          "raw_span": {
+            "start": 603,
+            "end": 636
+          },
+          "operation_input_span": {
+            "start": 689,
+            "end": 722
+          },
+          "operation_output_span": {
+            "start": 689,
+            "end": 747
+          },
+          "operation_input_sha256": "7dc42632c1b2b238d7603b5acfb3a00a27a2850e927afcc8ac0c0c0f84121089",
+          "operation_output_sha256": "2cc96ecef18cabe63219bf9ad2f1bbd97df8a9488657155a6c5bce593d3e64c7",
+          "final_span": {
+            "start": 689,
+            "end": 747
+          }
+        },
+        {
+          "index": 11,
+          "kind": "grammar_and_reference",
+          "before": "Feedback review from pilot",
+          "after": "Review of pilot feedback",
+          "reason": "Repair the construction identifying pilot feedback as the subject of review.",
+          "claim_ids": [
+            "DBC10"
+          ],
+          "raw_span": {
+            "start": 638,
+            "end": 664
+          },
+          "operation_input_span": {
+            "start": 749,
+            "end": 775
+          },
+          "operation_output_span": {
+            "start": 749,
+            "end": 773
+          },
+          "operation_input_sha256": "2cc96ecef18cabe63219bf9ad2f1bbd97df8a9488657155a6c5bce593d3e64c7",
+          "operation_output_sha256": "238702c6c632a79eccac9ebb5491c9e4aa377cc8674a715ece9f1551ed7b296c",
+          "final_span": {
+            "start": 749,
+            "end": 773
+          }
+        },
+        {
+          "index": 12,
+          "kind": "omitted_sequence_and_conditionality",
+          "before": "and decision for full rollout is pending",
+          "after": "before a decision on whether to schedule the full rollout",
+          "reason": "Restore feedback review before the decision about whether to schedule rollout, without promising a rollout.",
+          "claim_ids": [
+            "DBC10"
+          ],
+          "raw_span": {
+            "start": 697,
+            "end": 737
+          },
+          "operation_input_span": {
+            "start": 806,
+            "end": 846
+          },
+          "operation_output_span": {
+            "start": 806,
+            "end": 863
+          },
+          "operation_input_sha256": "238702c6c632a79eccac9ebb5491c9e4aa377cc8674a715ece9f1551ed7b296c",
+          "operation_output_sha256": "1b4acd0987de22e948f9560885c8593b9ea1b1940c38f52138a5600b4c17de25",
+          "final_span": {
+            "start": 806,
+            "end": 863
+          }
+        },
+        {
+          "index": 13,
+          "kind": "required_file_format",
+          "before": "",
+          "after": "\n",
+          "reason": "Add the required terminal LF.",
+          "claim_ids": [],
+          "raw_span": {
+            "start": 794,
+            "end": 794
+          },
+          "operation_input_span": {
+            "start": 920,
+            "end": 920
+          },
+          "operation_output_span": {
+            "start": 920,
+            "end": 921
+          },
+          "operation_input_sha256": "1b4acd0987de22e948f9560885c8593b9ea1b1940c38f52138a5600b4c17de25",
+          "operation_output_sha256": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+          "final_span": {
+            "start": 920,
+            "end": 921
+          }
+        }
+      ],
+      "claim_map": [
+        {
+          "claim_id": "DBC1",
+          "full_claim_contract": "DBC1: The update concerns Atlas help-centre migration. Strength: topic_identification. Scope: Entire update.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Progress in migration of the Atlas help centre",
+            "start": 0,
+            "end": 46
+          },
+          "stage_b_support": {
+            "text": "Progress in the migration of the Atlas help centre",
+            "start": 0,
+            "end": 50
+          },
+          "repair_operation_indices": [
+            1
+          ]
+        },
+        {
+          "claim_id": "DBC2",
+          "full_claim_contract": "DBC2: All 180 articles are copied. Strength: completed_status. Scope: Atlas transfer. The copying actor is unspecified in the authoritative source.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "completion of copying of 180 articles",
+            "start": 56,
+            "end": 93
+          },
+          "stage_b_support": {
+            "text": "completion of copying of all 180 articles",
+            "start": 60,
+            "end": 101
+          },
+          "repair_operation_indices": [
+            2
+          ]
+        },
+        {
+          "claim_id": "DBC3",
+          "full_claim_contract": "DBC3: Review found no missing sections in 60 articles. Strength: bounded_observation. Scope: Only the reviewed set.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "content team has reviewed 60 articles without identifying any missing sections.",
+            "start": 98,
+            "end": 177
+          },
+          "stage_b_support": {
+            "text": "the content team has reviewed 60 articles without identifying any missing sections.",
+            "start": 106,
+            "end": 189
+          },
+          "repair_operation_indices": [
+            3
+          ]
+        },
+        {
+          "claim_id": "DBC4",
+          "full_claim_contract": "DBC4: Remaining articles are unreviewed; content review is incomplete. Strength: current_status. Scope: Not an assurance about all 180.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Reviews are still incomplete for remaining articles.",
+            "start": 178,
+            "end": 230
+          },
+          "stage_b_support": {
+            "text": "Reviews are still incomplete: the remaining articles have not yet been reviewed.",
+            "start": 190,
+            "end": 270
+          },
+          "repair_operation_indices": [
+            4
+          ]
+        },
+        {
+          "claim_id": "DBC5",
+          "full_claim_contract": "DBC5: Search omits titles containing apostrophes. Strength: known_issue. Scope: Current search behavior.",
+          "status": "preserved",
+          "raw_support": {
+            "text": "Titles containing apostrophes are currently omitted from searches.",
+            "start": 231,
+            "end": 297
+          },
+          "stage_b_support": {
+            "text": "Titles containing apostrophes are currently omitted from searches.",
+            "start": 271,
+            "end": 337
+          },
+          "repair_operation_indices": []
+        },
+        {
+          "claim_id": "DBC6",
+          "full_claim_contract": "DBC6: Nia plans fix delivery on 10 September; Omar tests afterward. Strength: planned_sequence. Scope: Future work.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Nia will deliver a fix and Omar will test this after 10 September.",
+            "start": 298,
+            "end": 364
+          },
+          "stage_b_support": {
+            "text": "Nia is due to deliver a fix on 10 September and Omar will test it after delivery.",
+            "start": 338,
+            "end": 419
+          },
+          "repair_operation_indices": [
+            5,
+            6
+          ]
+        },
+        {
+          "claim_id": "DBC7",
+          "full_claim_contract": "DBC7: Recommend five-volunteer pilot on 11 September if the test passes. Strength: conditional_proposal. Scope: Not a confirmed start.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "If test passes, we suggest opening pilot to five volunteers starting on 11 September.",
+            "start": 365,
+            "end": 450
+          },
+          "stage_b_support": {
+            "text": "If Omar's test passes, I suggest opening the pilot to five volunteer support agents starting on 11 September.",
+            "start": 420,
+            "end": 529
+          },
+          "repair_operation_indices": [
+            7
+          ]
+        },
+        {
+          "claim_id": "DBC8",
+          "full_claim_contract": "DBC8: Existing help centre and customer-facing links remain available/unchanged. Strength: pilot_plan. Scope: During the pilot.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Existing help center will remain available during this pilot while links to customers will not change.",
+            "start": 451,
+            "end": 553
+          },
+          "stage_b_support": {
+            "text": "The existing help center will remain available during this pilot while customer-facing links will not change.",
+            "start": 530,
+            "end": 639
+          },
+          "repair_operation_indices": [
+            8,
+            9
+          ]
+        },
+        {
+          "claim_id": "DBC9",
+          "full_claim_contract": "DBC9: Sponsor must confirm five-agent availability by 9 September. Strength: requested_decision. Scope: Staffing not yet confirmed.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Sponsor confirmation is requested by 9 September as to availability of five agents.",
+            "start": 554,
+            "end": 637
+          },
+          "stage_b_support": {
+            "text": "Sponsor confirmation is requested by 9 September as to whether the support team can provide the five agents.",
+            "start": 640,
+            "end": 748
+          },
+          "repair_operation_indices": [
+            10
+          ]
+        },
+        {
+          "claim_id": "DBC10",
+          "full_claim_contract": "DBC10: Review feedback on 14 September before considering rollout scheduling. Strength: planned_decision_sequence. Scope: Does not promise a rollout.",
+          "status": "corrected",
+          "raw_support": {
+            "text": "Feedback review from pilot will take place on 14 September and decision for full rollout is pending.",
+            "start": 638,
+            "end": 738
+          },
+          "stage_b_support": {
+            "text": "Review of pilot feedback will take place on 14 September before a decision on whether to schedule the full rollout.",
+            "start": 749,
+            "end": 864
+          },
+          "repair_operation_indices": [
+            11,
+            12
+          ]
+        },
+        {
+          "claim_id": "DBC11",
+          "full_claim_contract": "DBC11: No full rollout date is committed. Strength: current_non_commitment. Scope: Full rollout only.",
+          "status": "preserved",
+          "raw_support": {
+            "text": "No schedule has as yet been committed for full rollout.",
+            "start": 739,
+            "end": 794
+          },
+          "stage_b_support": {
+            "text": "No schedule has as yet been committed for full rollout.",
+            "start": 865,
+            "end": 920
+          },
+          "repair_operation_indices": []
+        }
+      ],
+      "protected_literal_check": [
+        {
+          "literal": "Atlas",
+          "present": true,
+          "start": 33
+        },
+        {
+          "literal": "180",
+          "present": true,
+          "start": 89
+        },
+        {
+          "literal": "60",
+          "present": true,
+          "start": 136
+        },
+        {
+          "literal": "Nia",
+          "present": true,
+          "start": 338
+        },
+        {
+          "literal": "Omar",
+          "present": true,
+          "start": 386
+        },
+        {
+          "literal": "10 September",
+          "present": true,
+          "start": 369
+        },
+        {
+          "literal": "five",
+          "present": true,
+          "start": 474
+        },
+        {
+          "literal": "11 September",
+          "present": true,
+          "start": 516
+        },
+        {
+          "literal": "9 September",
+          "present": true,
+          "start": 677
+        },
+        {
+          "literal": "14 September",
+          "present": true,
+          "start": 793
+        }
+      ],
+      "additions_audit": {
+        "all_substantive_additions_restore_supplied_claims": true,
+        "unsupported_additions": [],
+        "explanation_or_examples_added": false
+      },
+      "self_check": {
+        "raw_matches_declared_provenance": true,
+        "every_required_claim_mapped": true,
+        "every_protected_literal_preserved": true,
+        "word_count": 149,
+        "word_limit": 180,
+        "within_word_limit": true,
+        "utf8": true,
+        "terminal_lf": true,
+        "no_invisible_characters_added": true,
+        "sentence_order_preserved": true,
+        "supported_fluent_wording_preserved_except_documented_concrete_repairs": true,
+        "new_unsupported_claims": [],
+        "omitted_claims": [],
+        "modality_conditions_negation_scope_actors_checked": true,
+        "single_prescribed_self_check": true,
+        "independent_review_performed": false
+      },
+      "bounded_repair_viable": true,
+      "finish_status": "repaired_and_self_checked"
+    }
+  ]
+}

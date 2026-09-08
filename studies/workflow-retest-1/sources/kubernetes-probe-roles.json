@@ -1,0 +1,101 @@
+{
+  "id": "kubernetes-probe-roles",
+  "reader_question": "Our HTTP service can take up to two minutes to start. After startup, it sometimes temporarily cannot serve requests but recovers by itself; a deadlock instead needs a restart. How should startup, readiness and liveness probes divide these jobs, and what would be a reasonable initial startup budget?",
+  "reader_context": "Kubernetes v1.34 Deployment, restartPolicy Always. Traffic uses a normal Kubernetes Service. The application team can implement appropriate HTTP health endpoints; no particular path or existing probe implementation is assumed.",
+  "source_ledger": [
+    {
+      "id": "kube-concepts",
+      "title": "Liveness, Readiness, and Startup Probes",
+      "url": "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+      "version": "Kubernetes v1.34 archived static documentation.",
+      "section": "Liveness probe; Readiness probe; Startup probe",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "it disables liveness and readiness checks until it succeeds.",
+      "excerpt_word_count": 9
+    },
+    {
+      "id": "kube-config",
+      "title": "Configure Liveness, Readiness and Startup Probes",
+      "url": "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+      "version": "Kubernetes v1.34 archived static documentation.",
+      "section": "Protect slow starting containers; Define readiness probes; Configure Probes",
+      "accessed_at": "2026-09-06T17:31:04.340785+00:00",
+      "verification": "Official documentation inspected through web retrieval; no local execution.",
+      "verbatim_excerpt": "a failureThreshold * periodSeconds long enough to cover the worst case startup time.",
+      "excerpt_word_count": 13
+    }
+  ],
+  "answer_inventory": {
+    "mandatory": [
+      {
+        "id": "K1",
+        "claim": "Startup success enables readiness and liveness; repeated startup failure triggers a restart under Always.",
+        "source_ids": [
+          "kube-concepts",
+          "kube-config"
+        ]
+      },
+      {
+        "id": "K2",
+        "claim": "Readiness failure stops normal Service traffic while the container keeps running; recovery allows it to become ready again.",
+        "source_ids": [
+          "kube-concepts",
+          "kube-config"
+        ]
+      },
+      {
+        "id": "K3",
+        "claim": "Liveness should detect the unrecoverable deadlock; consecutive failures reaching its threshold trigger a container restart.",
+        "source_ids": [
+          "kube-concepts",
+          "kube-config"
+        ]
+      },
+      {
+        "id": "K4",
+        "claim": "failureThreshold: 30 with periodSeconds: 5 gives an approximately 150-second startup allowance, exceeding the stated 120-second startup.",
+        "source_ids": [
+          "kube-config"
+        ]
+      },
+      {
+        "id": "K5",
+        "claim": "After startup, readiness and liveness are independent; readiness failure does not suspend liveness.",
+        "source_ids": [
+          "kube-concepts"
+        ]
+      }
+    ],
+    "mandatory_qualifications": [
+      "The timing is an initial configuration example, not an exact deadline or measurement of this application.",
+      "Health endpoints must implement these meanings; probe names do not diagnose application state by themselves.",
+      "Readiness governs Service traffic; do not claim it prevents every direct connection."
+    ],
+    "optional_source_facts": [
+      {
+        "id": "K6",
+        "claim": "Probe-level timeout and termination grace settings also affect observed shutdown timing.",
+        "source_ids": [
+          "kube-config"
+        ]
+      }
+    ],
+    "out_of_scope": [
+      "Full Deployment manifest",
+      "Implementation of the health endpoints",
+      "Ingress-specific behavior",
+      "gRPC probe restrictions"
+    ]
+  },
+  "exact_code_in_original": [
+    "`failureThreshold: 30`",
+    "`periodSeconds: 5`",
+    "`Always`"
+  ],
+  "exact_source_urls": [
+    "https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/",
+    "https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+  ],
+  "coverage_instruction": "Retain every mandatory fact and qualification. Optional source facts need not be added unless already present in the original; the reviewer will check against the original. Do not add hypothetical personal experience."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "completed_at": "2026-09-07T16:28:17.218638+00:00",
+  "status": "complete_quality_rejected",
+  "planned_generations": 2,
+  "completed_generations": 2,
+  "quality_passes": 0,
+  "candidate_scans": 0,
+  "commercial_scans": 0,
+  "rows": [
+    {
+      "id": "wm4-dev-technical-01",
+      "source_path": "inputs/wm4-dev-technical-01.txt",
+      "output_path": "outputs/wm4-dev-technical-01.txt",
+      "source_sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "output_sha256": "1de9498944a38ade7afe97c1fe681456c70a94fc0bedf3df34f81edb96df0249",
+      "source_words": 123,
+      "output_words": 242,
+      "ended_on_eos": true,
+      "quality": "fail",
+      "source_preferred": true,
+      "candidate_detector_probability": null,
+      "measurement_status": "not_measured_quality_rejected"
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "source_path": "inputs/wm4-dev-business-01.txt",
+      "output_path": "outputs/wm4-dev-business-01.txt",
+      "source_sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "output_sha256": "4b8f565024accc9f10d0c92d427688f8928112cb4896a2b05b434583f654a373",
+      "source_words": 129,
+      "output_words": 281,
+      "ended_on_eos": true,
+      "quality": "fail",
+      "source_preferred": true,
+      "candidate_detector_probability": null,
+      "measurement_status": "not_measured_quality_rejected"
+    }
+  ],
+  "conclusion": "Both raw single-completion outputs failed independent factual/relevance review and were less readable than the sources. No repair, reranking or extra seed trial occurred. Candidate scores remain null.",
+  "limitations": [
+    "Two reused synthetic development cases, not a representative benchmark or heldout trial.",
+    "Uses the released card prompt and explicit sampling settings on MPS bfloat16; not the paper candidate-selection procedure or an isolated training effect.",
+    "No detector-reduction conclusion is possible from these rejected outputs.",
+    "Desklib diagnostic was separately found unsuitable as a validated commercial proxy on these cases."
+  ],
+  "quality_review": "reviews/quality.json"
+}

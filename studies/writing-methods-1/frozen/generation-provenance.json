@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-09-07T12:25:02.250631+00:00",
+  "writers": [
+    {
+      "arm": "baseline",
+      "agent": "/root/wm4_baseline_writer",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null,
+      "cases": "both development cases in one fresh writer context",
+      "common_operator": "frozen/operator.txt",
+      "skill": "frozen/SKILL.md",
+      "packet": "packets/baseline.json",
+      "external_research_allowed": false,
+      "detector_access_allowed": false,
+      "other_arm_access_allowed": false
+    },
+    {
+      "arm": "relation-map",
+      "agent": "/root/wm4_relation_writer",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null,
+      "cases": "both development cases in one fresh writer context",
+      "common_operator": "frozen/operator.txt",
+      "skill": "frozen/SKILL.md",
+      "packet": "packets/relation-map.json",
+      "external_research_allowed": false,
+      "detector_access_allowed": false,
+      "other_arm_access_allowed": false
+    },
+    {
+      "arm": "core-expansion",
+      "agent": "/root/wm4_core_writer",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null,
+      "cases": "both development cases in one fresh writer context",
+      "common_operator": "frozen/operator.txt",
+      "skill": "frozen/SKILL.md",
+      "packet": "packets/core-expansion.json",
+      "external_research_allowed": false,
+      "detector_access_allowed": false,
+      "other_arm_access_allowed": false
+    },
+    {
+      "arm": "topic-continuity",
+      "agent": "/root/wm4_continuity_writer",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null,
+      "cases": "both development cases in one fresh writer context",
+      "common_operator": "frozen/operator.txt",
+      "skill": "frozen/SKILL.md",
+      "packet": "packets/topic-continuity.json",
+      "external_research_allowed": false,
+      "detector_access_allowed": false,
+      "other_arm_access_allowed": false
+    }
+  ]
+}

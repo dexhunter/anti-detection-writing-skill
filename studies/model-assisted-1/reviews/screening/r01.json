@@ -1,0 +1,127 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag validates a stored response and can avoid downloading the unchanged body.",
+            "DTC2 preserved: the server supplies the ETag and the client sends that value in If-None-Match on a later conditional GET.",
+            "DTC3 preserved: explicitly scoped to an otherwise successful GET, a match against the selected representation produces 304 Not Modified without a body and permits stored-body reuse.",
+            "DTC4 preserved: the same otherwise-successful GET scope applies to the nonmatching case returning 200 OK with current JSON.",
+            "DTC5 preserved: validation still sends a request.",
+            "DTC6 preserved: appropriate freshness, illustrated by Cache-Control: max-age=60, permits fresh reuse subject to other caching rules and validation requirements.",
+            "DTC7 preserved: fresh reuse is permission and does not guarantee unchanged underlying data for 60 seconds.",
+            "All protected literals appear exactly. The 129-word answer is clear, professional, and complete for the question. Added reference to validation requirements and reuse without origin contact is supported by the supplied source notes."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8",
+          "pass": true,
+          "claims": [
+            "DTC1 preserved: ETag lets the client validate whether a stored response can be reused.",
+            "DTC2 preserved: the server sends an ETag and the later conditional GET includes that value in If-None-Match.",
+            "DTC3 preserved: a selected-representation tag match produces 304 Not Modified without a body and allows stored-body reuse. This is read within the question's express ordinary otherwise-successful GET scope; the answer does not assert applicability to every request or error outcome.",
+            "DTC4 preserved: the nonmatching case explicitly specifies a successful GET returning 200 OK with current JSON.",
+            "DTC5 preserved: validation still involves a request.",
+            "DTC6 preserved: appropriate freshness, illustrated by Cache-Control: max-age=60 and subject to other caching rules, permits reuse without validation while fresh.",
+            "DTC7 preserved: fresh reuse does not promise unchanged underlying data for 60 seconds.",
+            "All protected literals appear exactly. The 124-word answer is clear, professional, source-supported, and complete for the stated question."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both accurately explain validation, body reuse, the continuing request, and qualified freshness within the question's ordinary successful GET scope. A makes that scope and lack of origin contact more explicit; B remains clear and complete in context. These presentation differences do not establish a meaningful correctness or clarity advantage."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: the subject is the Atlas help-centre migration.",
+            "DBC2 preserved: all 180 articles have been copied, with no copying actor invented.",
+            "DBC3 preserved: the content team checked 60 and found no missing sections in that reviewed set.",
+            "DBC4 preserved: remaining articles are unreviewed and the content check is incomplete.",
+            "DBC5 preserved: search currently omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September; Omar tests after delivery.",
+            "DBC7 preserved: the writer recommends an 11 September pilot with five volunteer support agents conditional on the test passing.",
+            "DBC8 preserved: during the pilot the existing help centre remains available and customer-facing links do not change.",
+            "DBC9 preserved: the sponsor is asked to confirm by 9 September whether the support team can provide the five agents.",
+            "DBC10 preserved: feedback is reviewed on 14 September before deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date has been committed.",
+            "All protected literals appear exactly. The 128-word update is professional and clear, covers the sponsor's requested topics, and adds no unsupported facts."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1 preserved: the opening identifies the proposed Atlas help-centre migration pilot.",
+            "DBC2 preserved: all 180 articles have been copied, with no copying actor invented.",
+            "DBC3 preserved: the content team checked 60 and found no missing sections, with the observation bounded by that reviewed set.",
+            "DBC4 preserved: remaining articles are unreviewed and content review is incomplete.",
+            "DBC5 preserved: search currently omits titles containing apostrophes.",
+            "DBC6 preserved: Nia is due to deliver the fix on 10 September; Omar tests afterward.",
+            "DBC7 preserved: the opening specifies five volunteer support agents for the proposed pilot, and the recommendation sets 11 September conditional on Omar's test passing.",
+            "DBC8 preserved: the existing help centre remains available during the pilot and customer-facing links stay unchanged in that pilot context.",
+            "DBC9 preserved: the opening requests confirmation by 9 September of whether the support team can provide five agents, without assuming staffing is confirmed.",
+            "DBC10 preserved: feedback is reviewed on 14 September before deciding whether to schedule full rollout.",
+            "DBC11 preserved: no full rollout date is committed.",
+            "All protected literals appear exactly. The 119-word update is professional and clear, covers the sponsor's requested topics, and adds no unsupported facts."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both preserve every supplied fact, actor, date, status, condition, and decision while giving the sponsor a concise usable update. B puts the staffing request first and A groups progress before the request; both are easy to follow, so this ordering difference alone does not justify a winner."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8",
+        "public_text_paths": [
+          "measurements/r01-technical/answer.txt",
+          "answers/screening/r01/wm4-dev-technical-01.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098",
+        "public_text_paths": [
+          "measurements/r01-business/answer.txt",
+          "answers/screening/r01/wm4-dev-business-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      }
+    }
+  }
+}

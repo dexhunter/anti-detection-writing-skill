@@ -1,0 +1,103 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1-DTC2: Correctly assigns ETag issuance to the server and If-None-Match validation to the client.",
+            "DTC3-DTC4: Matching selected representation yields bodyless 304 and stored-body reuse; nonmatch yields 200 with current JSON within the otherwise successful GET scope.",
+            "DTC5-DTC7: Validation requires a request; freshness permits reuse without origin contact subject to other caching and validation rules; max-age does not guarantee unchanged data.",
+            "All protected literals preserved. No unsupported runtime claim, comparison rule, or wire example. Concise professional prose; 129 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d",
+          "pass": true,
+          "claims": [
+            "DTC1-DTC2: Correctly assigns ETag issuance to the server and If-None-Match validation to the client.",
+            "DTC3-DTC4: Matching selected representation yields bodyless 304 and stored-body reuse; nonmatch yields 200 with current JSON within the otherwise successful GET scope.",
+            "DTC5-DTC7: Validation still requires a request; appropriate freshness permits reuse without validation subject to other caching rules; max-age does not guarantee unchanged data.",
+            "All protected literals preserved. No unsupported runtime claim, comparison rule, or wire example. Concise professional prose; 121 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both accurately answer the request with the necessary conditions. A makes origin contact and validation requirements explicit; B retains their substance through its freshness and caching qualifications. No meaningful correctness or usefulness advantage."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85",
+          "pass": true,
+          "claims": [
+            "DBC1-DBC4: Atlas topic, 180 copied articles, 60 reviewed without missing sections, and incomplete remaining review preserved; copying actor remains unspecified.",
+            "DBC5-DBC7: Apostrophe search defect, planned Nia delivery on 10 September, subsequent Omar test, and recommended five-volunteer pilot on 11 September conditional on that test passing preserved.",
+            "DBC8-DBC11: Pilot continuity and unchanged links, sponsor staffing confirmation by 9 September, feedback review on 14 September before deciding whether to schedule rollout, and no committed rollout date preserved.",
+            "All protected literals preserved; no invented facts or actors. Request and uncertainty remain clear. Concise professional prose; 128 words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1-DBC4: Atlas topic, 180 copied articles, 60 reviewed without missing sections, and incomplete remaining review preserved; copying actor remains unspecified.",
+            "DBC5-DBC7: Apostrophe search defect, planned Nia delivery on 10 September, subsequent Omar test, and recommended pilot on 11 September conditional on Omar's test passing preserved; five volunteer support agents established in the opening request.",
+            "DBC8-DBC11: Pilot continuity and unchanged links, sponsor staffing confirmation by 9 September, feedback review on 14 September before deciding whether to schedule rollout, and no committed rollout date preserved.",
+            "All protected literals preserved; no invented facts or actors. Request and uncertainty remain clear. Concise professional prose; 119 words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both lead with the sponsor decision and preserve every supplied fact, actor, date, and condition. B is slightly shorter and A separates progress from the search issue; neither difference materially changes usefulness."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      },
+      "B": {
+        "arm": "candidate",
+        "sha256": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d",
+        "public_text_paths": [
+          "measurements/r21-technical/answer.txt",
+          "answers/screening/r21/wm4-dev-technical-01.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85",
+        "public_text_paths": [
+          "measurements/r21-business/answer.txt",
+          "answers/screening/r21/wm4-dev-business-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      }
+    }
+  }
+}

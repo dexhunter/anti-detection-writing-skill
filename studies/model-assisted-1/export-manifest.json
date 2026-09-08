@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "scope": "Complete public model-assisted-1 export except this manifest. Exact text copies preserve all bytes; metadata uses allowlisted fields and sanitized identities/paths.",
+  "exact_copies": {
+    "sources/development.json": "c529b4654d5338582e1c92a05896c83bac3dacd84d55952e09353b6e8ca6f55a",
+    "sources/confirmation-retired.json": "bbae9534d1a825dbd02705a93d0e6a0ba3e1548dfeee669cd8ce961947ea9dda",
+    "sources/development-notes.txt": "72b2164aef3fbdae2ef6c2a24b02fd0f6ac8c49f15ee4eea788b258e450379be",
+    "frozen/development-operator.txt": "ad17a30f2fe4e24c7716700fedb6d018844deadd3fd679f88611fdec1aa265f7",
+    "frozen/confirmation-operator.txt": "5f629246ba2ba01230883fb27f137b4f7ddccc6c9edc95397473fdd29632fd00",
+    "frozen/incumbent.txt": "0757159be597cfc8ad4acab0b74b08764d4f2d199133fcb7f05925db1f7ff04c",
+    "frozen/methods/r01.txt": "0138293460046a39dba4df9a1411e5ab143c091f096e6cf937e9e4fca4ea8a02",
+    "answers/screening/r01/wm4-dev-technical-01.txt": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8",
+    "answers/screening/r01/wm4-dev-business-01.txt": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098",
+    "frozen/methods/r02.txt": "7a7a483550929c9ba520e638fa11252649b35d676f9beb4fa68362c88253e7d2",
+    "answers/screening/r02/wm4-dev-technical-01.txt": "977301ad4e805d1ee8ae1acb2a1e29c2ae672e01151fe7ab599cd4dd99b9b605",
+    "answers/screening/r02/wm4-dev-business-01.txt": "6a474d79785971593ee5dce92d975918dcc590e19acb61dcb32229dcfdfbe40a",
+    "frozen/methods/r03.txt": "8397c8bf1dca6029a118139867f0e7f32af146182b3cc259564905d4c76cdaa8",
+    "answers/screening/r03/wm4-dev-technical-01.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+    "answers/screening/r03/wm4-dev-business-01.txt": "c99d6c99342544283aa91fcb0b79ba93118923909531c6e01726aaf2cca66b0d",
+    "frozen/methods/r04.txt": "b2722de55236c8adc66784a2720087bd641f11d8b377898c7d380c74d7cc9721",
+    "answers/screening/r04/wm4-dev-technical-01.txt": "9ad09977e1cf7a6886e51c2901a155c2ec463aff153f1d144f800e238111d0a1",
+    "answers/screening/r04/wm4-dev-business-01.txt": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+    "frozen/methods/r05.txt": "ade813d9fb0d8fe71d4d649c5915c35f7bfe5e3dc14d171e2250a8456e537a84",
+    "answers/screening/r05/wm4-dev-technical-01.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+    "answers/screening/r05/wm4-dev-business-01.txt": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+    "frozen/methods/r06.txt": "eb7b587585a7be05f5e9df921b8fa8810139e4d4343873b554c8d2e1f5fde8eb",
+    "answers/screening/r06/wm4-dev-technical-01.txt": "8621472bb9cfee97d8cd688df98acf4cca5c36b73b578e77e673c64a5b3a9fe5",
+    "answers/screening/r06/wm4-dev-business-01.txt": "550a6f8c5ae977b79ce536227906ca1b1a995410822ec156ed1c54e59f1292fb",
+    "frozen/methods/r07.txt": "eac1a82e5f5ba1bdb4121f295c4ec882f303e9a70afa87626684cd2298ec9945",
+    "answers/screening/r07/wm4-dev-technical-01.txt": "e786218ed7e57266ebb00c14f625dd5fe90486d491298504b1e50f90219b432b",
+    "answers/screening/r07/wm4-dev-business-01.txt": "2286f6d352f7e0dcd958bc9583ad67033dde58481f469dae1a394680acfa08ea",
+    "frozen/methods/r09.txt": "e2dc0ff372963d04bf2698e5660d491dcf66c13941f73899554deea769479464",
+    "answers/screening/r09/wm4-dev-technical-01.txt": "d322c66fbb1a423c399b1958d3826156fb11031f472d9f3806b676f7b382ff4a",
+    "answers/screening/r09/wm4-dev-business-01.txt": "c5e3fd14240712214e7e31cd93d14583d50bfbe7d28dfd136a82041ab4ecf4cd",
+    "frozen/methods/r10.txt": "d7ead8780eafb0b3858442b949f87298ef6cab6f4320815b32c4c736fee5fc27",
+    "answers/screening/r10/wm4-dev-technical-01.txt": "2dae42b99670774cccb6367f9b0504e1a0b485065b13cdb40fac71dc4c0155a1",
+    "answers/screening/r10/wm4-dev-business-01.txt": "05df483efb143850d5ac948f03f62e689489a957ead58b3237b1d94298118d3c",
+    "frozen/methods/r11.txt": "c13150606eab926608e45366f14a13a45effbe3575c61163f8b6103b03695f27",
+    "answers/screening/r11/wm4-dev-technical-01.txt": "13dbd3b106f43526d9127e79c8fc80a3c8243ecd323250c421b9aa1423249e1e",
+    "answers/screening/r11/wm4-dev-business-01.txt": "125a4216fb9b97a49da40b6690651f41544d5bc534e20dee0befc9c1d387ea6d",
+    "frozen/methods/r12.txt": "3722da8a8b12276226b32165d1b0ee25f7f46909567edfbd629e3332bca48978",
+    "answers/screening/r12/wm4-dev-technical-01.txt": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698",
+    "answers/screening/r12/wm4-dev-business-01.txt": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65",
+    "frozen/methods/r13.txt": "6bf761e9643927ecfa00134478e060fb27580ac3b579a8dc12d22a77bdd97e4f",
+    "answers/screening/r13/wm4-dev-technical-01.txt": "f3be819fc8981c36a33bbfe460fb4a0c4b188555c4cde4ca826ff0f8dec5ec5f",
+    "answers/screening/r13/wm4-dev-business-01.txt": "a8b096b8c671bd16b1f9bda56fba66cb665aa2ba210eeae848928f9657803db2",
+    "frozen/methods/r14.txt": "4abfe2f0bebafc191e1f6445d23fc7369a388deb0e5f2940e2592cc2b4d8da14",
+    "answers/screening/r14/wm4-dev-technical-01.txt": "16af80a5baa4330cb838e97a81e7ee228e7b53ed1890322380306d202c3c6cd8",
+    "answers/screening/r14/wm4-dev-business-01.txt": "da0250890c8057b66d0a1bc28f9016056e36b02176f9e4d152d30a4943c387bf",
+    "frozen/methods/r15.txt": "cf38296f8684ed2fa1c17915775cd392b341fe782dd470fc9d47a720713fbb71",
+    "answers/screening/r15/wm4-dev-technical-01.txt": "6a6cbf7e7716282bbe02eb9d1b04c1fb98997dbf54cc1c264bf38354fe4fe556",
+    "answers/screening/r15/wm4-dev-business-01.txt": "b2e58e32464d5bccee11fad9a1d45d60edd8b28d891c357e697fd9a2f269464a",
+    "frozen/methods/r16.txt": "131a57b0ee6f28c2ee950717ac06999c07293a26422938bcd7903309eb42cb50",
+    "answers/screening/r16/wm4-dev-technical-01.txt": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a",
+    "answers/screening/r16/wm4-dev-business-01.txt": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f",
+    "frozen/methods/r17.txt": "6bef8ad564dea91bea5c0e13c339935f9a045e94d37e79cb9848e3925b3cfd75",
+    "answers/screening/r17/wm4-dev-technical-01.txt": "d753428464e708f7bac1244d9d2d12e7dd5877905f7be92d9dd09d8ff5fe522c",
+    "answers/screening/r17/wm4-dev-business-01.txt": "dd7cbabbea623b9860c36246c63511ed2248955fa20617ecca52000cbe0b5674",
+    "frozen/methods/r18.txt": "8930fa29843bd5f4533f6c44f1f14bd2f2df0d9ff87197b8f6a722db63601190",
+    "answers/screening/r18/wm4-dev-technical-01.txt": "c7d3f7ad6fd329046a130ea7411b11048acbd754b27f44177083773ceebdd8ee",
+    "answers/screening/r18/wm4-dev-business-01.txt": "8241a75d10323756b9497ca5dd8d914c6b3c094204cb2a69f1b18fd00ac9ca85",
+    "frozen/methods/r19.txt": "661fa0b7440b02b817e15e52d9a01b115c3e920bc0b1dc65765b536343ad5e7a",
+    "answers/screening/r19/wm4-dev-technical-01.txt": "e1283de186913bc0f57b90ee8368e92c050ad4bc919e913ed226b35ad6d05796",
+    "answers/screening/r19/wm4-dev-business-01.txt": "41a540f4f72535e56299510067b54bcd2316064321aff889c62b044848debd8f",
+    "frozen/methods/r20.txt": "1220c533b38df34ffa84c0d68e15ef7aa1ccd1ecedb9a29f7dfad50589b0f162",
+    "answers/screening/r20/wm4-dev-technical-01.txt": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f",
+    "answers/screening/r20/wm4-dev-business-01.txt": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67",
+    "frozen/methods/r21.txt": "3f117e6dfd9d666079081090c8b342e1c66a0f73327a58fc34493e5d31227e4f",
+    "answers/screening/r21/wm4-dev-technical-01.txt": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d",
+    "answers/screening/r21/wm4-dev-business-01.txt": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85",
+    "answers/verification/baseline/wm4-dev-business-01.txt": "b31bf8225d4cab7cb9ec56e75e3029d9d310e77ea056125f965e8b67f3d2421f",
+    "answers/verification/baseline/wm4-dev-technical-01.txt": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+    "answers/verification/candidate/wm4-dev-business-01.txt": "8ff35148bd34acb2db6afec41bd2819f4d29ca4338bcb8e4ce0a481845d3d70f",
+    "answers/verification/candidate/wm4-dev-technical-01.txt": "51d126bff7561648501c3b007514d41df01f8735b13d66d902d82e71e523d6f2",
+    "answers/confirmation/baseline/b20-confirm-notice-01.txt": "86919cfaa0ae8166a1e62060bc16bfa00b00adebe43619e918bb77389e7e963b",
+    "answers/confirmation/baseline/b20-confirm-rules-02.txt": "21a99aff94f3078903268ed5bbd69d89cd7b559c6ed99beed2e0b2be7e4c9a11",
+    "answers/confirmation/candidate/b20-confirm-notice-01.txt": "b4b1abdfe296d116394e29d9da89e25678b576a0f0f1dd37edafa47884524cf4",
+    "answers/confirmation/candidate/b20-confirm-rules-02.txt": "91c7e51f3603a6b93fafeaa63b8d6188b426f29074dab28cea3dbe7eb34d6102",
+    "measurements/control-tech/answer.txt": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+    "measurements/control-tech/submitted.txt": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec",
+    "measurements/control-tech/effective.txt": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+    "measurements/control-business/answer.txt": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+    "measurements/control-business/submitted.txt": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93",
+    "measurements/control-business/effective.txt": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+    "measurements/r01-technical/answer.txt": "c95bd951b7f461bbbf853ad4d9ef34d44119ac2b52608ba5dd3cb1fd2ffa5ab8",
+    "measurements/r01-technical/submitted.txt": "34727f0eda603f5d177356bc7c55ea1f44bb9ff321826eadb4a72d14f55d1bb4",
+    "measurements/r01-technical/effective.txt": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+    "measurements/r01-business/answer.txt": "d000d82720d1c2f15cbae5104ea84d06bd2b17aa56d039fa1ca9309ed948d098",
+    "measurements/r01-business/submitted.txt": "c0b190f444d5557eea1bbbcbb10bd29d0f3c81a6d7942fb5e617884138dfa395",
+    "measurements/r01-business/effective.txt": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+    "measurements/r10-technical/answer.txt": "2dae42b99670774cccb6367f9b0504e1a0b485065b13cdb40fac71dc4c0155a1",
+    "measurements/r10-technical/submitted.txt": "6c341ff55e70dbca8de090a37cea720b052fe80ce39ceb1c356ce0826c418d42",
+    "measurements/r10-technical/effective.txt": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+    "measurements/r10-business/answer.txt": "05df483efb143850d5ac948f03f62e689489a957ead58b3237b1d94298118d3c",
+    "measurements/r10-business/submitted.txt": "850321e8e5adc8b3221a3f43a747b406bdc4e71ad1f53c97067adc4bc6443c24",
+    "measurements/r10-business/effective.txt": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+    "measurements/drift-mid-technical/answer.txt": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+    "measurements/drift-mid-technical/submitted.txt": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec",
+    "measurements/drift-mid-technical/effective.txt": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+    "measurements/drift-mid-business/answer.txt": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+    "measurements/drift-mid-business/submitted.txt": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93",
+    "measurements/drift-mid-business/effective.txt": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+    "measurements/r12-technical/answer.txt": "a19cfa90efd52cf45088f22b7c70c63245cba1b2be087f56c967311816a2d698",
+    "measurements/r12-technical/submitted.txt": "b5afe67824843b9f65aff0a9de360475acf2d4246948bb01a4414cfc1fe31d54",
+    "measurements/r12-technical/effective.txt": "1b462f98192664cb574bcbb5db9c70b55f70bd46ada8a18abb08252abb33de3f",
+    "measurements/r12-business/answer.txt": "15aa067791e767b109db00720470f4cac7201ef556847658e5d4cf3437288d65",
+    "measurements/r12-business/submitted.txt": "0b8174ee8aadc8df2ea985b894e9239f6f702645e00a813c0e9c733b83159078",
+    "measurements/r12-business/effective.txt": "27493de434f0f5b2bd86de9bf6daaeb34b5b7402485fc1fb912936b3ebd1c418",
+    "measurements/r21-technical/answer.txt": "cd2b870e08fd05c3771a8037bb0806b17ead389cb6cd23f5c5a4f54f8c941a4d",
+    "measurements/r21-technical/submitted.txt": "476bbe3592e7b73fd83c0597b774f3c3d8a373e371e5c326185ad58094db74c7",
+    "measurements/r21-technical/effective.txt": "211f47dc65ea26f41b669f43a76cd0da79ea36f3a22413bda71c6232a51295ab",
+    "measurements/r21-business/answer.txt": "1e4af3d8ca8424773233b1c1d17c1165de6901549dcb2da857d0246bfc03db85",
+    "measurements/r21-business/submitted.txt": "acb43cd115012a1cb38a3defc94019e98a69acaec79205f0f6eb1bfd2b31f1b9",
+    "measurements/r21-business/effective.txt": "9259723d88704eccd41c7e6226fa4f7be32d79e2bed4b21c0e4950c77c443c70",
+    "measurements/r16-technical/answer.txt": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a",
+    "measurements/r16-technical/submitted.txt": "43d97b205bd22f3b5a4553fee3efe621cfa73bf26609455b9d94f81d45a9bb0f",
+    "measurements/r16-technical/effective.txt": "a6958996578f452ae61767ab3ddb3487c252b828404605e63cd4bf0ae2dd8a83",
+    "measurements/r16-business/answer.txt": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f",
+    "measurements/r16-business/submitted.txt": "0c928d2a8f152ac89f937949cb3e02f7d5a29ebff375742e3bfc675176577378",
+    "measurements/r16-business/effective.txt": "a3aaf4a1728d9579a976c27406fee8d4f8becbf995b0539823734e528e09dfbd",
+    "measurements/r18-technical/answer.txt": "c7d3f7ad6fd329046a130ea7411b11048acbd754b27f44177083773ceebdd8ee",
+    "measurements/r18-technical/submitted.txt": "b3eee06c04ff36149841ce8714f4d43500bddb509a45b0b8cecb41f546224c6a",
+    "measurements/r18-technical/effective.txt": "daff08ed123d93003fbb2c6fb0e8c8b732e7c610aa075a4d0eebfe10030d9ad6",
+    "measurements/r18-business/answer.txt": "8241a75d10323756b9497ca5dd8d914c6b3c094204cb2a69f1b18fd00ac9ca85",
+    "measurements/r18-business/submitted.txt": "69c5793b40b7d27a17c3d4d4d0d4df8595f65e5ad01e250a1ed747666a6d8e91",
+    "measurements/r18-business/effective.txt": "00c6f823a23ff79deb1662b4a307d615d5271c77b15d453b93ca7e07a7af1050",
+    "measurements/r20-technical/answer.txt": "4b9543d1ffaf87240a0fba6d663dd4475a42d0cc97aad34924a59eddef8d3e1f",
+    "measurements/r20-technical/submitted.txt": "6e2c3b2ebeafe78a0dee6f8760cd8e13560c3eb085020e073c374b836e4d961a",
+    "measurements/r20-technical/effective.txt": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+    "measurements/r20-business/answer.txt": "c0dc899fe05127203d0afa55dcad32c52a63796936b045dd137af6268c4c7d67",
+    "measurements/r20-business/submitted.txt": "6df46823d22a3d94680e73a05eb8ead511f6d371e46293028e69b7eef261d4e4",
+    "measurements/r20-business/effective.txt": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+    "measurements/drift-end-technical/answer.txt": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+    "measurements/drift-end-technical/submitted.txt": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec",
+    "measurements/drift-end-technical/effective.txt": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+    "measurements/drift-end-business/answer.txt": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+    "measurements/drift-end-business/submitted.txt": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93",
+    "measurements/drift-end-business/effective.txt": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+    "measurements/verify-baseline-technical/answer.txt": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+    "measurements/verify-baseline-technical/submitted.txt": "61b8450f30f6d0dc82c9727db9ac71f3c003d11c1107ac72c1378e54ba10bca1",
+    "measurements/verify-baseline-technical/effective.txt": "b7e9c0c32589c7a9b9d05854fe3d7bada4b14569e3a615982a037f7ddcc959fc",
+    "measurements/verify-candidate-technical/answer.txt": "51d126bff7561648501c3b007514d41df01f8735b13d66d902d82e71e523d6f2",
+    "measurements/verify-candidate-technical/submitted.txt": "d49ee3a51a57062f1a90707c14eabebdb6828f52d4fc2ae1b8b580b99e2dbb58",
+    "measurements/verify-candidate-technical/effective.txt": "333986c9c22706e7f501d1acf474381a76026ae756b521476d3b0622fb50a983",
+    "measurements/verify-candidate-business/answer.txt": "8ff35148bd34acb2db6afec41bd2819f4d29ca4338bcb8e4ce0a481845d3d70f",
+    "measurements/verify-candidate-business/submitted.txt": "155f2aac2d6aa61d5cbe9de9560467e54ad30a5868a896723ea81dcb62debf7e",
+    "measurements/verify-candidate-business/effective.txt": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+    "measurements/verify-baseline-business/answer.txt": "b31bf8225d4cab7cb9ec56e75e3029d9d310e77ea056125f965e8b67f3d2421f",
+    "measurements/verify-baseline-business/submitted.txt": "4c210ebcb428718993fba5c809193a57588a3f3f0dc3b874e3494fef745b1cf6",
+    "measurements/verify-baseline-business/effective.txt": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+    "stages/screening/raw/wm4-dev-technical-01.txt": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+    "stages/screening/repaired/wm4-dev-technical-01.txt": "986fa5c1addaa502eb43ca6d4dbba48edc2c39b8f6c9df82066cafc0bb6ec21a",
+    "stages/screening/raw/wm4-dev-business-01.txt": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+    "stages/screening/repaired/wm4-dev-business-01.txt": "ae0629fe10078a8e7aff04f15521546e6042bb1a581f26c02fa0ef3e57d98e28",
+    "stages/verification/raw/wm4-dev-technical-01.txt": "b97400526d4dbb9fa991e29fcefb26f1c3d2fb9177aef05f7ca2943e256af8c2",
+    "stages/verification/repaired/wm4-dev-technical-01.txt": "e51967b282423e933567434f9f8070261338bc84f71f91311e021ce9b3234f6b",
+    "stages/verification/raw/wm4-dev-business-01.txt": "4527279455266a7d9a5ec9569e0785ad2a74fe352ccdd19e49f0e0f5a62096e2",
+    "stages/verification/repaired/wm4-dev-business-01.txt": "6ba700625cbfb69da6911a94ae9feddc34679327e420096f7db1da7127de17a4",
+    "stages/confirmation/raw/b20-confirm-notice-01.txt": "d8fa513fae4750c6607442177f248c364c61a55d32c484137cbab8cbb4372563",
+    "stages/confirmation/repaired/b20-confirm-notice-01.txt": "f1a063fa5f261845e115c1b4dac604e2c6af7f0771d74cc31f2ce1b68e6f54f2",
+    "stages/confirmation/raw/b20-confirm-rules-02.txt": "5e6adace5eb2843f600f17b9a32841100a5b1b616f74c4ef80544b9b821d1d54",
+    "stages/confirmation/repaired/b20-confirm-rules-02.txt": "d6d4f45444cc60d10cd736b6a7a2759eb6a111a13788f489f1d9efad021c930a",
+    "prompts/development-technical.txt": "bcf18865d68938a65b96683895eec43f1c581a9dbd32fedaee4f4cfcacc6f464",
+    "prompts/development-business.txt": "40dd6ee770beffe2d5a70e84338327ed144f53c913b3eed33ae6586ead520908",
+    "prompts/confirmation-notice.txt": "ab42638c3b149e0ba3c5b5b488195b7fda7def5a40432a9f003fabc471569e76",
+    "prompts/confirmation-rules.txt": "f663788fb177acd5d1b0bb00701cec820bec05e5949c000510678add39d01353",
+    "stages/screening/intermediates/wm4-dev-technical-01.operation-1.txt": "76a0ab4527d5d9ac4be1a847bc52c62b7e0a81ca9e752bbb98d02fc6544c7481",
+    "stages/screening/intermediates/wm4-dev-technical-01.operation-2.txt": "f59af0e30c90e4492feba8b9f9e5188f5ccbdd422469b89f61f0cefabd23daf9",
+    "stages/screening/intermediates/wm4-dev-business-01.operation-1.txt": "c168e10caa2d7186e8d5655654b41835cda8f74bf1b020e171b2517557a7a11a",
+    "stages/screening/intermediates/wm4-dev-business-01.operation-2.txt": "384c41dde3e0d12b46842bc1d0519ae30fa4c6861d24eba12fb1c04f43f9b650"
+  },
+  "sanitized_copies": {
+    "reviews/screening/r01.json": {
+      "sha256": "45aadda6f4499c3ed14b358b3dff21fed4e3f4ef42e6d30181cb45cb1c59d1e4",
+      "source_sha256": "b4a0119a17a767a87c0b14af221fd5ba68d53d5a11f352bebb6246330b467201",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r02.json": {
+      "sha256": "981ae6f2d9a740824a558393d2dfc14770c04b82d0a4e89066c4dab02476457e",
+      "source_sha256": "9cf2ee397b1588a1746b0684dffee8b1e5256c4d578d7efc8e456b6c08806927",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r03.json": {
+      "sha256": "514c99fc682c2c0790bc5241b4b533eb6e411f9e166ecc7cd1504d55065c249a",
+      "source_sha256": "6cec335900e0d7144c768e1b81970fcd47e37dacfe00a3d083c89fcda27879ee",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r04.json": {
+      "sha256": "38be1914fe2957aeb955453ddf1c65e5900a77d45c5a157d13f48491906ab5fc",
+      "source_sha256": "0ade0a9d8de186a298bae681550e902f2edb9cb6cf56dae327b81087e3d164ea",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r06.json": {
+      "sha256": "0742faf0c04a75c33b1eb65c1a5f9825ce25eeb72e328015c047a1d95fbb2de8",
+      "source_sha256": "7816b4575d0be6a0a730c662c2eeb470c029dfd02985eb347c235f48e586eb24",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r07.json": {
+      "sha256": "d1297d34c3dd339a498af65bbc1a0215d94cb592aa53a4e4e7465bf421893768",
+      "source_sha256": "ebde0beaa9587584e78c16e5e58009fa446c960b11f7055eb912322a4e87f94b",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r09.json": {
+      "sha256": "b7f19573b6e9171d77f2e40bc5d6c90d8a16274b055f9caed34af2ff192332df",
+      "source_sha256": "3dadac18682d1538c6bee8d2b5a0d122197c2efe54e19cdbc216e057afc31677",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r10.json": {
+      "sha256": "c3d8b733249557c29b4c6a550073b5dc3eb028d2c1faab7c955361d6089947be",
+      "source_sha256": "3a0715bed80e36bc13d024f9db00887c5fcf5643192952c136001c411fd25350",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r11.json": {
+      "sha256": "0ea0ecf9d0ad9f9e631bd0b7e7131cd3246ff8f9ac426340ffc22d9b697d08b0",
+      "source_sha256": "33a915cd40d63f785eca76d9c9b586471105939fd1d212e9db475e2bb4fc7eed",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r12.json": {
+      "sha256": "56f2b223fb29dab2c0fd2a011db9e3516f5f84c09b21230c200578478c81bf2a",
+      "source_sha256": "08d22045fa0b37bcbb613ab62e3f3426c2850219f136268b11d809bf97347020",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r13.json": {
+      "sha256": "789fcd7b39c81237af2e574e30293f736e367795116d34afa7ffd3cf83994e20",
+      "source_sha256": "638f37d5f9f7fc320a0c4868ca1972f48fe512e1d29c98dbbda08b2f00152fe5",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r14.json": {
+      "sha256": "028fb916abd08f6790a2987da012081f14e4e53a59abc2e08f8dcf67e5f34e0a",
+      "source_sha256": "be471b8e64a228f94380ee33912d91577eca3509c1b3bf46cc4ac12625c587f0",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r16.json": {
+      "sha256": "9f4cabaf80865ee98951d8ce04076c3e99b8542ba22f4bdf4a1e81eb49dc8c6d",
+      "source_sha256": "2ccb3fe0b09564bd07c48b5803bea5c5099cf35436a6b2080cf2f4f2dcc6837f",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r18.json": {
+      "sha256": "6e99e18a20e598ec6874a7e4d8fe5e3ed062b8aa087aad7785299ad59b3d31df",
+      "source_sha256": "8f663df91c94f210df20d60d7b6373701b589ad0813eba5b24863c92807e8f4f",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r20.json": {
+      "sha256": "5dcb01d3b4f2e5fb31908bab8e8c2bde5fd776afc2c6ee93ff702d8854df4581",
+      "source_sha256": "3c4088e6e96557958bf0a3f4063dfb21efd1a888eb393d4bd9a49fd96ed9fba0",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/screening/r21.json": {
+      "sha256": "70fb35014194b7705fd355b1b90fcf26f6d18bedb375061dac2b6f70eb5ea866",
+      "source_sha256": "2f8d283fde4e38be43970e424fa7d5f2db96a1c912df721ad457d4aad4019be0",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/verification.json": {
+      "sha256": "0dd7c73271d198be99e97d98eeee4cbece7c29b2d9de46fc1e4abd90f0edba91",
+      "source_sha256": "15d462c7e1d4259e972d9f951b808c0786d1f68c7e3ee4339c5c9d9e7b0095b8",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "reviews/confirmation.json": {
+      "sha256": "473e77a91e98565ca2f1fc05eb992f0fea2744172b4db2312000af0b2e2ff33b",
+      "source_sha256": "46e15e9628bbf53672d3f250e928b0f9d38652641d2ae69bfdd1eede9ff6df69",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/screening/repair-ledger.json": {
+      "sha256": "a48bb8d33069e4ffd9166edfffec967f747db82db3358522fc60731bb91c2cde",
+      "source_sha256": "3b2482eca3746b6cabe09e4041313e38f34454717c8ff21188c27b217610319c",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/screening/organization-ledger.json": {
+      "sha256": "3d785a7dcadfd32f8b4fdf308177810076407dfbce308c45c5f132ac9bbc24b3",
+      "source_sha256": "0d3cd394373b0a39c2ae0f26d08f75a56dc498325c514d3f04c7e8318b054115",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/screening/organization-plan.json": {
+      "sha256": "24a759f505a237b86781cde2d6e70a3f42c5ff3f15c8f4bc1baaad5a7ca54c38",
+      "source_sha256": "afc4bb68c4e1e2c380cd2aca5cad504d46a62140f3caff06bab7a51e49cf28ed",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/verification/repair-ledger.json": {
+      "sha256": "5d82b426e1b886461dd359984b6e4ef67b14be93c35b090bc2a4f4588025fb58",
+      "source_sha256": "0d08a8657c74678503e6b91de09b7a162a9fa64aa6df1f39289817eeae0fc39e",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/verification/organization-ledger.json": {
+      "sha256": "0e03ecbc635c2b7967c743e5b15756c128a4dee51211ec1e8ae71210b3e8e94d",
+      "source_sha256": "0e03ecbc635c2b7967c743e5b15756c128a4dee51211ec1e8ae71210b3e8e94d",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/verification/organization-plan.json": {
+      "sha256": "c6460097b841fdea28ee844af73cbeb55c46627864824d655a39b98396b6cf3b",
+      "source_sha256": "c6460097b841fdea28ee844af73cbeb55c46627864824d655a39b98396b6cf3b",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/confirmation/repair-ledger.json": {
+      "sha256": "5785ce986865486d311c813ceb15472bf9a999956d6adccb5faf63d37d0ca04c",
+      "source_sha256": "c2e4164830cb4179781d66fe20552c158a263360c5e28927ac4f8c28001e4f74",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/confirmation/organization-ledger.json": {
+      "sha256": "33dab760f5a1811b7bdc9804708464d92c615d7c495b9f43d81f46a16d379217",
+      "source_sha256": "1ba03e8b2cbb5550c97e01879942ebd03a4e845d02a4aa1e34f441720bc22607",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    },
+    "stages/confirmation/organization-plan.json": {
+      "sha256": "174c1eaa26b002512b7ff951cf27f4858866435421221b652607d32bafc27a6d",
+      "source_sha256": "ea0a9a2d3db9c8cd758b4636f35595bbae1418472af5e97a01d58b40130813af",
+      "changes": "Private identities, paths, account/usage metadata omitted; exported paths substituted where available. Substantive review findings and text hashes preserved."
+    }
+  },
+  "assembled_files": {
+    "README.md": "98f72a8c51b6ff6b55f274d89edb28c1b8002a1085b3e23f0d9d0d7b98de7b71",
+    "results.json": "e4bcb64a1091316a4e8a34048649ddef59880f3e28b90d62663fef599d3d6f3e"
+  }
+}

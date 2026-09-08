@@ -1,0 +1,25 @@
+{
+  "word_count_method": "Whitespace-delimited tokens in complete UTF-8 file.",
+  "outputs": [
+    {
+      "path": "outputs/topic-continuity/wm4-dev-technical-01.txt",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "word_count": 123
+    },
+    {
+      "path": "outputs/topic-continuity/wm4-dev-business-01.txt",
+      "sha256": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
+      "word_count": 129
+    },
+    {
+      "path": "outputs/topic-continuity/claims.json",
+      "sha256": "08758e1eb017dda710d4fdbd141f61cb4380b19ce1757ec4edbca7274ef1dd69",
+      "word_count": 457
+    },
+    {
+      "path": "outputs/topic-continuity/diagnosis.json",
+      "sha256": "8a70f86bdad88026f8c592644f40180edcdb4f2361a2f0a4d0ff52af052c198d",
+      "word_count": 591
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Give each probe a health endpoint that reflects the condition it needs to detect:
+
+- **Startup:** allow initialization to finish before readiness or liveness checks begin. Once startup succeeds, both checks are enabled. If startup keeps failing until its failure threshold is reached, Kubernetes restarts the container under your `Always` restart policy.
+- **Readiness:** detect the temporary inability to serve requests. Failure removes the Pod from normal Service traffic while the container keeps running; successful checks let it become ready again. This controls Service traffic, not every possible direct connection.
+- **Liveness:** detect a deadlock that needs a restart. Consecutive failures reaching the liveness threshold trigger a container restart. After startup, readiness and liveness operate independently, so failed readiness does not suspend liveness checks.
+
+For a service that can take 120 seconds to start, `failureThreshold: 30` with `periodSeconds: 5` is a reasonable initial startup allowance of approximately 150 seconds. Treat that as a starting configuration, not an exact deadline or a measurement of your application.
+
+The endpoints must actually distinguish these states; the probe names alone cannot diagnose them. In particular, a temporary readiness failure should not make the liveness endpoint report a deadlock.
+
+The Kubernetes v1.34 [probe concepts](https://v1-34.docs.kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/) and [configuration guide](https://v1-34.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) describe these roles and the startup budget calculation.

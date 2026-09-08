@@ -1,0 +1,49 @@
+---
+name: anti-detection-writing
+description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability. Preserve meaning and factual accuracy; when requested, test revisions with GPTZero or another detector and work toward lower AI-detection scores.
+---
+
+# Anti-detection writing
+
+Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. When detector testing is requested, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship or permission to publish.
+
+## Establish the purpose and facts
+
+1. Save the original text. Identify its reader, purpose, format, and requested tone or length from the supplied context. For a discussion reply, also read the question and existing replies. For public participation, respect the destination's rules, explicit objections to AI-assisted work, and disclosure requirements.
+2. Treat supplied facts as the starting point for a self-contained edit. Verify substantive factual corrections against relevant sources; for technical advice, inspect official documentation or implementation and record the version when it matters. Distinguish source inspection, local tests, and deployment verification. Flag unsupported claims instead of adding invented evidence.
+3. Inventory the substantive claims, commands, code, conditions, uncertainty, and reported symptoms. For each claim record whether it is preserved, corrected, or removed, and why. Identify what the reader needs to understand, decide, or do.
+
+## Write and review
+
+- Start with the supplied original. Identify one concrete mistaken inference a reader could draw from the task's explicit concern or from a bounded observation in the source. The inference boundary must already be specified in the factual contract; do not invent reader confusion or a new technical issue merely to create an example. Save the exact boundary, the supporting claim IDs and why an illustration would help the reader use that qualification.
+- Construct at most one minimal explicitly hypothetical illustration of that boundary, using only the existing entities and predicates. It must be logically compatible with all supplied facts while showing why the rejected inference is not licensed. Do not assert that the hypothetical event occurred or is likely; do not add new names, numbers, dates, tests, systems, observed outcomes, causal mechanisms or project commitments. Distinguish absence of review from evidence of a defect. Keep the illustration within 20 words; that is a maximum, never a target.
+- Insert the illustration immediately beside the qualification it explains, or replace that qualification's wording only if its full explicit meaning remains recoverable. Keep the rest of the original unchanged apart from grammar strictly needed by this insertion. Retain the direct recommendation or sponsor action, all required claims, and the total 180-word ceiling. Do not use a quotation, another person's anecdote, dialogue, a question-and-answer format, generic analogies or invented experience. This method places a bounded explanatory example in the answer; it does not use examples to imitate writing style.
+- Save the exact addition, its hypothetical marker, its source support and the semantic entailment check. The illustration must resolve the recorded ambiguity rather than pad or restate the answer. If no source-supported helpful example fits, return the original and record a no-op. If the illustration makes the answer longer without helping clarity, or changes an unknown fact into an actual defect, record quality failure and retain it without another version.
+
+- Honor the supplied common operator in full: one final concise professional English answer per case, at most 180 words, every required claim and protected literal preserved, no scope cuts, UTF-8 with a terminal LF, and a compact trace with exact hashes, counts, all claim mappings, additions and any inability. The ceiling never permits dropping content. Save intermediate artifacts separately from the final answer and record actual model calls, exposed settings and costs; do not invent unexposed usage.
+- Use only the supplied original, claim contract and source notes. Keep unspecified actors unspecified. Preserve exact protected literals, numbers, dates, uncertainty, negation, causal direction, conditionality and the scope of each observation, plan, recommendation or non-guarantee. Never add experiences, tests, observed examples, commitments, invented identity or human authorship, quotations, deliberate errors, invisible characters or filler.
+- Preserve a professional register and an obvious answer to the reader's request. Keep code, commands and citations intact. Do not read other arms, detector scores, hidden cases, prior generated answers or unrelated private files; do not browse or publish while writing. Do not optimize punctuation, whitespace or length for a detector.
+- Compare the final answer directly to every required claim and source qualification, map each to an exact answer span, and check the complete protected list byte-for-byte. Check all additions as well as omissions. An unexercised operation is a no-op; failed fidelity or worse prose is a quality failure. Retain such results without forcing further changes or substituting another method.
+- A writer self-check and operation trace do not replace separate review. Supply the independent reviewer with the reader's purpose, source context, full claim contract, original and exact final text, and its SHA-256, with detector scores withheld. No post-review repairs are permitted in this round; retain rejected outputs. The comparison evaluates this complete instruction policy, including extra stages, rather than proving the isolated effect of one edit.
+
+## Measure only when requested
+
+Read [measurement instructions](references/measurement.md) before live scanning and [evidence limits](references/evidence.md) before interpreting results. Use the user's requested service, mode, and supported browser tools. This skill supplies no browser controls and does not authorize subscriptions, paid scans, public posting, or new account access.
+
+When explaining detector mechanisms or planning another batch after unchanged results, read [detector research](references/detector-research.md).
+
+When the user explicitly asks for an autoresearch workflow to improve this skill, read the [bounded research workflow](references/autoresearch.md). It separates skill proposals, preference-based selection, quality review and measured confirmation; ordinary writing does not need this workflow.
+
+For a comparison, select cases and candidates before seeing scores. Record fresh baseline and candidate scans using the same service, mode, and displayed model. Retain failures and unchanged results. Compare a fixed body with a relevant quotation separately from prose rewriting; track content and length changes. Distinguish first-pass trials from adaptive iterations. Record an unchanged candidate as a no-op. Comparing it with a separately rewritten baseline measures preservation versus that rewrite, not a benefit from edits the candidate did not make.
+
+Confirm the effective editor text, completed scan, fresh-result indicator, model, native result labels and metrics, timestamp, and warnings. Save exact inputs and private visible evidence. A stale displayed number is not a result for changed text. Never omit code or pad a short answer to satisfy a detector.
+
+The optional checker in `scripts/validate_receipt.py` checks strict plain-text receipt consistency. Its [receipt format](references/receipt-format.md) rejects unrecorded editor changes; it does not support rendered-Markdown transformations or authenticate the service. A valid receipt can record 100% AI. Apply a numeric threshold only when the user explicitly requests one.
+
+## Publish and report
+
+Honor existing user authorization; do not invent authorization or ask again for an already authorized action. For a public reply, refresh the discussion before posting and reassess if context changed. Match the final body to the reviewed version and, when required, its scan and requested threshold. Update the owned answer when editing, then independently read back its author, exact body, and URL. Do not post a duplicate or claim an answer was accepted without checking.
+
+Report the actual quality findings, scores and warnings when measured, and edit or keep decisions. Missing required review or measurement leaves a candidate unpublished. A detector threshold applies only if requested. A successful local receipt check never authorizes publication.
+
+For a showcase, include only quality-passing candidates with a measured decrease against a saved before-text using comparable completed scans. Link exact inputs, identify the intervention and tested version, and keep the full comparison denominator visible. Put unchanged, worse, rejected, unpaired, and unmeasured outcomes in a separate limitations section while retaining all records. A quotation effect is not a rewriting effect, and an untested skill revision is not an established improvement. If a case does not improve, document when the approach may not help or test a specific new edit within a bounded experiment.

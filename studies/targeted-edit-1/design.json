@@ -1,0 +1,56 @@
+{
+  "study": "targeted-edit-1",
+  "designed_at": "2026-09-06T21:20:10.352241+00:00",
+  "status": "design_before_cases_and_scores",
+  "hypothesis": "Diagnosing specific clarity problems before making targeted revisions may preserve readable original prose while improving the passages that require editing. Detector impact is a separate unproven outcome.",
+  "intervention": "Frozen installed skill plus a diagnose-then-targeted-edit workflow. No production rewriting-rule change before measurement.",
+  "comparison": "Two new synthetic technical fixtures; unchanged original versus one targeted revision per case. This tests the combined editing workflow against no edit, not its superiority to the current skill or a single instruction ablation.",
+  "case_selection": "Two deliberately constructed factual originals with concrete clarity problems, from official docs. New development fixtures, not naturally occurring questions or an unseen validation dataset.",
+  "writer": "Fresh context writer sees frozen skill, question, original and source evidence, no prior detector outputs. Save diagnosis and first final candidate.",
+  "review": "Separate score-blind reviewer assesses baseline and exact final candidate, facts, clarity, tone and required qualifiers; also reconstructs conclusion/action/limiting condition. LLM judgment, not human preference.",
+  "repair_policy": "At most one pre-score factual repair per case; retain failed original candidate and review. No post-score edits in this batch.",
+  "detectors": [
+    "Pangram 4.0 free text detection in Chrome",
+    "GPTZero Basic Scan current displayed model in Chrome"
+  ],
+  "planned_scans": {
+    "Pangram": 4,
+    "GPTZero": 4
+  },
+  "budget": "Only existing free allowance; last observations 8 Pangram credits and1794 GPTZero words, recheck live. Inspect exact input fit and quoted scan costs before final admission; do not truncate/pad or buy/bypass limits.",
+  "representation": "Preserve original files and identical source content including code. Record submitted and observed effective bytes per detector and precise whitespace/display transformations.",
+  "stop": "After the four planned inputs on each service, or a confirmed service/allowance barrier. Preserve all ties, regressions, warnings and unmeasured cells. Positive results justify a later replication rather than a broad claim.",
+  "frozen_skill_manifest": "frozen-skill-files.json",
+  "scan_order": {
+    "frozen_at": "2026-09-06T21:26:57.771Z",
+    "order": [
+      "github-original",
+      "python-revision",
+      "python-original",
+      "github-revision"
+    ],
+    "reason": "Reverse original/revision order between cases; same order on both detectors; fixed before measurements."
+  },
+  "frozen_inputs": [
+    {
+      "id": "github-original",
+      "path": "inputs/github-original.txt",
+      "sha256": "400d762d3744fdeab15a73b741e57b3b14fe19f14c1409de12a7575442a85dec"
+    },
+    {
+      "id": "python-revision",
+      "path": "inputs/python-revision.txt",
+      "sha256": "81f8b3a848d0dc3a55baedc745e604763acc478045f0ac44f49d3a3a41f0121d"
+    },
+    {
+      "id": "python-original",
+      "path": "inputs/python-original.txt",
+      "sha256": "087b2732447ee5d9831e7876f0a46290b005722360137ba2f8e4fb58669f8cfc"
+    },
+    {
+      "id": "github-revision",
+      "path": "inputs/github-revision.txt",
+      "sha256": "e0cd16ed2efccb2ad471064fefe5a30c5320cbd9bc0290a1b65d57904a614cc9"
+    }
+  ]
+}

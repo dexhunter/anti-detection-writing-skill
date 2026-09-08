@@ -1,0 +1,127 @@
+{
+  "reviewer_type": "Separate masked LLM reviewer; detector scores and arm mapping withheld during review.",
+  "cases": [
+    {
+      "id": "wm4-dev-technical-01",
+      "arms": {
+        "A": {
+          "sha256": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a",
+          "pass": true,
+          "claims": [
+            "DTC1 supported: ETag validates a stored response and can avoid downloading its unchanged JSON body.",
+            "DTC2 supported: the server supplies the ETag and the client sends that tag in If-None-Match on a later conditional GET.",
+            "DTC3 supported: a tag matching the selected representation yields 304 Not Modified without a response body and permits stored-body reuse, within the ordinary successful GET scope.",
+            "DTC4 supported: a nonmatching tag yields 200 OK with current JSON; the text expressly limits this to a successful GET.",
+            "DTC5 supported: validation still requires a request.",
+            "DTC6 supported: an appropriate freshness policy can permit reuse without validation; Cache-Control: max-age=60 is an example and other caching rules still apply.",
+            "DTC7 supported: freshness permits reuse without guaranteeing unchanged origin data for 60 seconds.",
+            "All protected literals are preserved. No unsupported actors, observations, runtime-test claims, quoted ETag values, or wire-response examples are introduced. The prose is concise and professional at 142 whitespace-delimited words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+          "pass": true,
+          "claims": [
+            "DTC1 supported: ETag validates a stored response and can avoid downloading an unchanged body.",
+            "DTC2 supported: the server supplies the ETag and the client sends that value in If-None-Match on a later conditional GET.",
+            "DTC3 supported: a tag matching the selected representation yields 304 Not Modified without a response body and permits stored-body reuse, within the otherwise successful GET scope.",
+            "DTC4 supported: a nonmatching tag yields 200 OK with current JSON; the paragraph's otherwise successful GET scope applies to both outcomes.",
+            "DTC5 supported: validation still sends a request.",
+            "DTC6 supported: an appropriate freshness policy can permit reuse without contacting the origin; Cache-Control: max-age=60 is illustrative and the text preserves other caching rules, explicitly including validation requirements.",
+            "DTC7 supported: freshness permits reuse without guaranteeing unchanged origin data for 60 seconds.",
+            "All protected literals are preserved. No unsupported actors, observations, runtime-test claims, quoted ETag values, or wire-response examples are introduced. The prose is concise and professional at 129 whitespace-delimited words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both arms correctly explain conditional GET, successful-response scope, body reuse, the remaining validation request, and qualified freshness. B explicitly mentions validation requirements and origin contact, but A already preserves the applicable caching rules and request distinction. These wording differences do not establish a meaningful correctness or usefulness advantage."
+    },
+    {
+      "id": "wm4-dev-business-01",
+      "arms": {
+        "A": {
+          "sha256": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f",
+          "pass": true,
+          "claims": [
+            "DBC1 supported: the update identifies the Atlas help-centre migration pilot.",
+            "DBC2 supported: all 180 articles are copied, with no copying actor invented.",
+            "DBC3 supported: the content team's finding of no missing sections is limited to the 60 checked articles.",
+            "DBC4 supported: the remaining articles are unreviewed and content review remains incomplete.",
+            "DBC5 supported: search currently omits titles containing apostrophes.",
+            "DBC6 supported: Nia is due to deliver a fix on 10 September and Omar tests afterward; planned delivery is not presented as completed.",
+            "DBC7 supported: a pilot for five volunteer support agents is proposed for 11 September, conditional on Omar's test passing.",
+            "DBC8 supported: the existing help centre remains available and customer-facing links remain unchanged during the pilot.",
+            "DBC9 supported: the sponsor is asked to confirm by 9 September whether the support team can provide the five agents; staffing is not presented as confirmed.",
+            "DBC10 supported: pilot feedback is reviewed on 14 September before deciding whether to schedule full rollout.",
+            "DBC11 supported: no full rollout date is committed.",
+            "All protected literals, actors, dates, conditions, and uncertainty are preserved. No new business facts are introduced. The request is prominent and the prose is concise and professional at 129 whitespace-delimited words."
+          ],
+          "concerns": []
+        },
+        "B": {
+          "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+          "pass": true,
+          "claims": [
+            "DBC1 supported: the update identifies the Atlas help-centre migration pilot.",
+            "DBC2 supported: all 180 articles are copied, with no copying actor invented.",
+            "DBC3 supported: the content team's finding of no missing sections is limited to the 60 checked articles.",
+            "DBC4 supported: the remaining articles are unreviewed and content review remains incomplete.",
+            "DBC5 supported: search currently omits titles containing apostrophes.",
+            "DBC6 supported: Nia is due to deliver the fix on 10 September and Omar tests afterward; planned delivery is not presented as completed.",
+            "DBC7 supported: a pilot for five volunteer support agents is proposed for 11 September, conditional on Omar's test passing.",
+            "DBC8 supported: the existing help centre remains available and customer-facing links remain unchanged in the pilot context.",
+            "DBC9 supported: the sponsor is asked to confirm by 9 September whether the support team can provide the five agents; staffing is not presented as confirmed.",
+            "DBC10 supported: pilot feedback is reviewed on 14 September before deciding whether to schedule full rollout.",
+            "DBC11 supported: no full rollout date is committed.",
+            "All protected literals, actors, dates, conditions, and uncertainty are preserved. No new business facts are introduced. The request is prominent and the prose is concise and professional at 119 whitespace-delimited words."
+          ],
+          "concerns": []
+        }
+      },
+      "preference": "tie",
+      "reason": "Both arms preserve every supplied fact, distinguish completed work from the conditional pilot and uncommitted rollout, and clearly state the sponsor's staffing decision and deadline. A separates the topics slightly more; B is slightly shorter. Neither difference gives a meaningful correctness or usefulness advantage."
+    }
+  ],
+  "decoded_mapping": {
+    "wm4-dev-technical-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "faab1c030f95c15577a24ea8a48066e766aa6a3c3259bffffa9c671b179a745a",
+        "public_text_paths": [
+          "measurements/r16-technical/answer.txt",
+          "answers/screening/r16/wm4-dev-technical-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "4d5de6f45641f1025975cd46f8cebd6efb671ea2273560fe8ad66aa3e14faa23",
+        "public_text_paths": [
+          "measurements/drift-end-technical/answer.txt",
+          "measurements/control-tech/answer.txt",
+          "measurements/drift-mid-technical/answer.txt"
+        ]
+      }
+    },
+    "wm4-dev-business-01": {
+      "A": {
+        "arm": "candidate",
+        "sha256": "e2a9891dcd22898fba4fff6eb6304ef7817a2ddfb6c970271b87f4264f4c6e6f",
+        "public_text_paths": [
+          "measurements/r16-business/answer.txt",
+          "answers/screening/r16/wm4-dev-business-01.txt"
+        ]
+      },
+      "B": {
+        "arm": "baseline",
+        "sha256": "5464c322236c8929f3146ee201acbbde96f18bfac21e4dde35699c6789072be4",
+        "public_text_paths": [
+          "measurements/control-business/answer.txt",
+          "measurements/drift-mid-business/answer.txt",
+          "measurements/drift-end-business/answer.txt"
+        ]
+      }
+    }
+  }
+}

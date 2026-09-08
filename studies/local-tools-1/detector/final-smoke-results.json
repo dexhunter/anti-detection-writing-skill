@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "scope": "local_proxy",
+  "unit": "sigmoid_probability_0_to_1",
+  "commercial_detector_measurement": false,
+  "limitations": "Uncalibrated local model output; not GPTZero/Pangram, authorship proof, quality review or skill promotion.",
+  "started_at": "2026-09-07T16:24:38.749441+00:00",
+  "completed_at": "2026-09-07T16:24:47.367556+00:00",
+  "model": {
+    "model_id": "desklib/ai-text-detector-v1.01",
+    "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+    "manifest_sha256": "f7b738815a267bb0e7a8f3739a1607427032df2c685d145a4074bbaab8e1f02b",
+    "files": {
+      ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "README.md": "a9d2aee79852340b6420838fe2af0864f16245c950a128c428f842bca41181ff",
+      "added_tokens.json": "dc046d04c9b0ada7ae6f1dc89c465801799acdf0c9a6aab8c15a1b2d5ca4e91f",
+      "config.json": "a9512ad54a256ca2e26bb16336cfcaa7c93d071a8667c659044003ef3973a9e2",
+      "model.safetensors": "c024a1704c65f5a4bffeda58745c58fc0ed67d6ca07b158b068a257238815265",
+      "special_tokens_map.json": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9",
+      "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "tokenizer.json": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+      "tokenizer_config.json": "e6c4c771911c211618a2d46488dc7e9e499f051773cd4ff4faeca6fe55fdf569"
+    }
+  },
+  "input_manifest_sha256": "eabf717f4044a81d2d2e6c4d9b5e856e225efdabecb676527266877789ce74b6",
+  "script_sha256": "ba19a4bbe7f76855ca815b75d1cd3e0d80cdd7c99f41f1e114ba840b57d81c0f",
+  "runtime": {
+    "python": "3.12.0",
+    "device": "cpu",
+    "dtype": "float32",
+    "packages": {
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "safetensors": "0.8.0",
+      "sentencepiece": "0.2.1",
+      "tokenizers": "0.22.2",
+      "huggingface-hub": "0.36.2"
+    },
+    "inference_mode": true,
+    "model_training": false,
+    "padding_tokens": 768,
+    "truncation": false,
+    "scoring": "attention-mask-weighted mean; single linear logit; sigmoid",
+    "higher_probability": "AI",
+    "documents_per_forward": 1
+  },
+  "records": [
+    {
+      "id": "library-baseline",
+      "path": "texts/library-baseline.txt",
+      "expected_input_sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+      "input_sha256": "9fbf656a0297dc51b8f15b3134a2c411a0fa2a8757aa139ca5fe5a51f195cafe",
+      "input_bytes": 2378,
+      "whitespace_words": 341,
+      "full_token_count": 402,
+      "token_ids_sha256": "edb034f09baefdd4299a57f1582662d749b4eddbac2a2e426e33ab15b1db134f",
+      "status": "complete",
+      "raw_logit": -4.18595552444458,
+      "ai_probability": 0.014979858981400517,
+      "error": null,
+      "elapsed_seconds": 1.021689083892852
+    }
+  ],
+  "successful_records": 1,
+  "failed_records": 0
+}

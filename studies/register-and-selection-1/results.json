@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "study": "register-and-selection-1",
+  "date": "2026-09-09",
+  "record_type": "Public export assembled from private process, quality and measurement records",
+  "incumbent": {
+    "commit": "621e3400685c187852bc6c996657420a28fb2b0c",
+    "skill_sha256": "62a9ae69cf8118c63fd64450413894c59e4353318f3a657b117af2b3100c3652"
+  },
+  "cases": [
+    {
+      "case_id": "ar10-dev-etag",
+      "format": "technical",
+      "required_claims": 7,
+      "original": {
+        "path": "inputs/technical/original.txt",
+        "sha256": "a50b19c98b7284e69a13e95edd930596a5b8f231faa8d38e1591ca92cf1537f2"
+      },
+      "outputs": {
+        "round1-control": {
+          "path": "inputs/technical/round1-control.txt",
+          "sha256": "82007c8a5dedc6883d37606592131c6fa316246baafaed9e202b1a1caeaf828b",
+          "whitespace_words": 127
+        },
+        "round1-draft1": {
+          "path": "inputs/technical/round1-draft1.txt",
+          "sha256": "b4312a02e2c142689d7abc403be1fb5b3c3305318549141b9f443989258337e2",
+          "whitespace_words": 123
+        },
+        "round1-draft2": {
+          "path": "inputs/technical/round1-draft2.txt",
+          "sha256": "8066e7bc59b8d2bef7b2f60bab7967fb81cf6dca93a63c16c2731420e008a008",
+          "whitespace_words": 121
+        },
+        "round1-selected": {
+          "path": "inputs/technical/round1-selected.txt",
+          "sha256": "b4312a02e2c142689d7abc403be1fb5b3c3305318549141b9f443989258337e2",
+          "whitespace_words": 123
+        },
+        "round2-control": {
+          "path": "inputs/technical/round2-control.txt",
+          "sha256": "c4853ef019119ad6d5dc2d34874ff985e04afb6e8f78d9caa3eb3e1c946ad37d",
+          "whitespace_words": 127
+        },
+        "round2-candidate": {
+          "path": "inputs/technical/round2-candidate.txt",
+          "sha256": "e06e348da266aa41e312141e80ccc9ac6ff0a048ddc3e4851fe139f5bca0d1be",
+          "whitespace_words": 124
+        }
+      }
+    },
+    {
+      "case_id": "ar10-dev-x-article",
+      "format": "article",
+      "required_claims": 18,
+      "original": {
+        "path": "inputs/article/original.txt",
+        "sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0"
+      },
+      "outputs": {
+        "round1-control": {
+          "path": "inputs/article/round1-control.txt",
+          "sha256": "cca4deeaa359160ed617c4d5b28ebca6abeef5531572af8cca3decf85af83d1e",
+          "whitespace_words": 530
+        },
+        "round1-draft1": {
+          "path": "inputs/article/round1-draft1.txt",
+          "sha256": "1107091c4319c547fca77c2ba9b3b0c8a9da0e8a9d0449869804c1945688009d",
+          "whitespace_words": 569
+        },
+        "round1-draft2": {
+          "path": "inputs/article/round1-draft2.txt",
+          "sha256": "5b15ac3d8ee16034322a91dbe68d6aceb214368025c9b81d70541c8e4291e2ad",
+          "whitespace_words": 554
+        },
+        "round1-selected": {
+          "path": "inputs/article/round1-selected.txt",
+          "sha256": "1107091c4319c547fca77c2ba9b3b0c8a9da0e8a9d0449869804c1945688009d",
+          "whitespace_words": 569
+        },
+        "round2-control": {
+          "path": "inputs/article/round2-control.txt",
+          "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+          "whitespace_words": 538
+        },
+        "round2-candidate": {
+          "path": "inputs/article/round2-candidate.txt",
+          "sha256": "bca679e0032b6506f454e9102d737337c6657b48f0be4a5a3d3d85fa86a85904",
+          "whitespace_words": 513
+        },
+        "adaptive-final": {
+          "path": "inputs/article/adaptive-final.txt",
+          "sha256": "d328f1e9b4feef70d7dc18e2da5538b5f8d3298ae49cbdd2aae92b32491cc588",
+          "whitespace_words": 516
+        }
+      }
+    }
+  ],
+  "formal_rounds": [
+    {
+      "round": 1,
+      "method": "p2-two-draft-selection",
+      "status": "development_rejected",
+      "reason": "Both candidate article drafts narrowed the required ongoing validation limitation to historical status. Frozen fallback copied draft1 as the attempted final, not an eligible success.",
+      "technical_quality": "Both pass; candidate preferred",
+      "article_quality": "Control passes; candidate fails AX15",
+      "calls": 0,
+      "words": 0,
+      "completed_at": "2026-09-09T11:36:16.345442+00:00"
+    },
+    {
+      "round": 2,
+      "method": "p3-bounded-register",
+      "status": "development_rejected",
+      "reason": "All facts passed, but control article preferred because candidate crowded evidence and qualifications.",
+      "technical_quality": "Both pass; candidate preferred",
+      "article_quality": "Both pass; control preferred; formal non-inferiority gate failed",
+      "calls": 0,
+      "words": 0,
+      "completed_at": "2026-09-09T11:49:22.657537+00:00"
+    }
+  ],
+  "unexecuted_proposals": [
+    "p1-contrastive-register (exactly two operations)"
+  ],
+  "adaptive_diagnostic": {
+    "outside_original_two_round_plan": true,
+    "intervention": "Reuse round2 technical pair and article control; change one article screenshot sentence into two and add paragraph breaks, all other article bytes unchanged.",
+    "criterion_change": "After closing both formal rounds, but before the new final review and first scan, changed the diagnostic scan gate from relative non-inferiority to absolute suitability. Relative preference retained and still blocks method promotion. Initial and revised protocols exported.",
+    "quality": "All four final texts independently pass all claims, readability and tone; technical candidate preferred, article control preferred.",
+    "article_repair_words": {
+      "before": 513,
+      "after": 516
+    },
+    "completed_at": "2026-09-09T12:06:18.543Z"
+  },
+  "measurements": [
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T11:56:30.012Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "record_type": "Maintainer-assembled summary of private UI receipt; not a native service export",
+      "private_receipt_sha256": "2c6b5e1563b994b3af4961d4bb587e1d309a5b87569295b36fd0e69ad24852a9",
+      "case": "ar10-dev-etag",
+      "arm": "baseline",
+      "displayed_words": 127,
+      "reserved_at": "2026-09-09T11:55:06.186Z",
+      "dispatched_at": "2026-09-09T11:55:50.716Z",
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "measurements/repair-etag-baseline/answer.txt",
+        "sha256": "c4853ef019119ad6d5dc2d34874ff985e04afb6e8f78d9caa3eb3e1c946ad37d"
+      },
+      "submitted": {
+        "path": "measurements/repair-etag-baseline/submitted.txt",
+        "sha256": "583c74d3ff4d12230b672fb49effdb45d2dcfe8373b491e45b031852f860b42f"
+      },
+      "editor_before": {
+        "path": "measurements/repair-etag-baseline/editor-before.txt",
+        "sha256": "c68bfd3d00ab7cca58851663a200c95728fb5b30283f9cb7790bfaffdc0e8083"
+      },
+      "editor_after": {
+        "path": "measurements/repair-etag-baseline/editor-after.txt",
+        "sha256": "c68bfd3d00ab7cca58851663a200c95728fb5b30283f9cb7790bfaffdc0e8083"
+      },
+      "editor_before_equals_editor_after": true
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T11:58:25.160Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "record_type": "Maintainer-assembled summary of private UI receipt; not a native service export",
+      "private_receipt_sha256": "5dda9808235fed5590d071b83dd9a8fe2f23a7249626b2fa3ae11d879484be79",
+      "case": "ar10-dev-etag",
+      "arm": "candidate",
+      "displayed_words": 124,
+      "reserved_at": "2026-09-09T11:55:06.186Z",
+      "dispatched_at": "2026-09-09T11:57:50.344Z",
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "measurements/repair-etag-candidate/answer.txt",
+        "sha256": "e06e348da266aa41e312141e80ccc9ac6ff0a048ddc3e4851fe139f5bca0d1be"
+      },
+      "submitted": {
+        "path": "measurements/repair-etag-candidate/submitted.txt",
+        "sha256": "f18cf10f02d551e684f06ccba1df1986db0f6d93396c01db19b5ba9a2ce857ba"
+      },
+      "editor_before": {
+        "path": "measurements/repair-etag-candidate/editor-before.txt",
+        "sha256": "628e8fed9ed0cb4caabb205b7e27df34a64f19df865fb9abd930fe28f7830dec"
+      },
+      "editor_after": {
+        "path": "measurements/repair-etag-candidate/editor-after.txt",
+        "sha256": "628e8fed9ed0cb4caabb205b7e27df34a64f19df865fb9abd930fe28f7830dec"
+      },
+      "editor_before_equals_editor_after": true
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T11:59:58.872Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "record_type": "Maintainer-assembled summary of private UI receipt; not a native service export",
+      "private_receipt_sha256": "d5f020ad0382cbdff09c16697581d6b817ab39026cca038cbbaf1b843e8ea74e",
+      "case": "ar10-dev-x-article",
+      "arm": "baseline",
+      "displayed_words": 538,
+      "reserved_at": "2026-09-09T11:55:06.186Z",
+      "dispatched_at": "2026-09-09T11:58:43.519Z",
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "measurements/repair-article-baseline/answer.txt",
+        "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514"
+      },
+      "submitted": {
+        "path": "measurements/repair-article-baseline/submitted.txt",
+        "sha256": "1acf0c261e5693b0c0765ada66fbf9b46064f5f738358d338cf22bd4e53153c3"
+      },
+      "editor_before": {
+        "path": "measurements/repair-article-baseline/editor-before.txt",
+        "sha256": "5c1da01f8e2975a7be4de99b80e94f5e79e354f5f6a94d50925f05f3e11e70ea"
+      },
+      "editor_after": {
+        "path": "measurements/repair-article-baseline/editor-after.txt",
+        "sha256": "5c1da01f8e2975a7be4de99b80e94f5e79e354f5f6a94d50925f05f3e11e70ea"
+      },
+      "editor_before_equals_editor_after": true
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T12:05:37.769Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "record_type": "Maintainer-assembled summary of private UI receipt; not a native service export",
+      "private_receipt_sha256": "3eb92a08e94cf939bf8fb9ff8bbc36619812f9ddc765eef1e8ce81f64cf625eb",
+      "case": "ar10-dev-x-article",
+      "arm": "candidate",
+      "displayed_words": 516,
+      "reserved_at": "2026-09-09T11:55:06.186Z",
+      "dispatched_at": "2026-09-09T12:01:02.688Z",
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "measurements/repair-article-candidate/answer.txt",
+        "sha256": "d328f1e9b4feef70d7dc18e2da5538b5f8d3298ae49cbdd2aae92b32491cc588"
+      },
+      "submitted": {
+        "path": "measurements/repair-article-candidate/submitted.txt",
+        "sha256": "da31cbe3bcea5c03c0a09e0cf759e0e132356b96f0496de31b30e359d10b5fee"
+      },
+      "editor_before": {
+        "path": "measurements/repair-article-candidate/editor-before.txt",
+        "sha256": "bf73ca33f4653b400850fbcf4df7e3282e6a81053b984291919806798c3012ef"
+      },
+      "editor_after": {
+        "path": "measurements/repair-article-candidate/editor-after.txt",
+        "sha256": "bf73ca33f4653b400850fbcf4df7e3282e6a81053b984291919806798c3012ef"
+      },
+      "editor_before_equals_editor_after": true
+    }
+  ],
+  "comparison": {
+    "distinct_complete_pairs": 2,
+    "pairs_with_ai_reduction": 0,
+    "technical_ai_reduction_points": 0,
+    "article_ai_reduction_points": 0,
+    "attribution": "Adaptive artifact diagnostic of register preparation, rewriting and a review-informed article repair. Not an isolated effect or formal method success."
+  },
+  "usage": {
+    "completed_calls": 4,
+    "word_credits": 1305,
+    "credit_source": "Existing free allowance; no purchase",
+    "shared_word_cap": 3800,
+    "confirmation_reserve_words": 900,
+    "formal_round_scans": 0,
+    "confirmation_scans": 0,
+    "scope": "This study only; later separately declared experiments are excluded."
+  },
+  "process": {
+    "fresh_role_contexts": "fork_turns=none recorded for writers, preparer, selectors and exact final reviewers",
+    "case_batching": "Both development cases shared each role context; cases were not isolated within a role.",
+    "control_timing": "Controls began while policy ranking was pending, blind to proposals; registration followed selection.",
+    "new_detector_scores_withheld": true,
+    "historical_score_exposure": "Historical Qwen results were intrinsic to the article source.",
+    "runtime_model": "Inherited runtime; exact backend identifier and sampling settings unavailable",
+    "tokens": null,
+    "dollar_cost": null,
+    "process_audit": "Pass with required caveats; local artifacts do not authenticate historical role execution."
+  },
+  "confirmation": {
+    "unlocked": false,
+    "generated": false,
+    "scanned": false,
+    "preparation": "Separate fresh preparer and separate corpus auditor; content kept from root, proposers and writers.",
+    "audit_exposure": "The subsequent process auditor accidentally read the sealed audit report, disclosed this, and remained excluded from holdout generation, selection and proposals. No case details were transmitted or exported."
+  },
+  "disposition": {
+    "new_method_promoted": false,
+    "published_X_article_changed": false,
+    "validated_detector_improvement": false,
+    "skill_clarifications": "Ongoing temporal scope and paragraph density checks; fidelity/readability guidance, not established detector gains."
+  },
+  "limits": [
+    "Two reused development cases and one output per measured arm; no general success-rate estimate.",
+    "Both formal methods rejected before scanning; the additional diagnostic changed its gate before measurement.",
+    "Separate LLM judgments are not human-reader results.",
+    "Raw private UI, screenshots, account details and sealed case contents excluded. Hashes establish saved artifact integrity, not detector-service authenticity.",
+    "Fresh scans use the same Basic mode and displayed model; they do not identify the cause of unchanged confidence."
+  ]
+}

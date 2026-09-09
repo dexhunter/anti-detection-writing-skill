@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-09-09T11:49:22.969241+00:00",
+  "classification": "Additional adaptive artifact repair diagnostic after two closed unsuccessful formal rounds; not a first-pass skill trial or confirmation.",
+  "prior_rounds_unchanged": true,
+  "prior_detector_calls": 0,
+  "max_detector_calls": 4,
+  "max_detector_words": 1400,
+  "shared_global_detector_word_cap": 3800,
+  "confirmation_words_still_reserved": 900,
+  "source_contract": "All25 claims across complete technical/article package unchanged.",
+  "intervention": "One fresh editor may repair only the dense Qwen evidence paragraph of the register article, retaining intervention-before-result order and all meaning; at most two prose sentences changed plus paragraph breaks. Rest of candidate byte-identical. Technical candidate and both controls reused from round2.",
+  "defect": "Qwen intervention, results, screenshot scope, content/length confound and confidence interpretation are crowded into one paragraph; one screenshot sentence is harder to parse.",
+  "independent_review": "Fresh masked exact comparison of both complete pairs before scanning. Required artifact quality gate: factual correctness, completeness, relevance, readability and professional tone must all pass independently. Record relative preference separately. A baseline preference prevents any method-promotion claim but does not turn an otherwise acceptable requested artifact into an unscannable text. Preserve all prior negative judgments.",
+  "future_claims": "Cannot establish standalone packaged skill performance. No promotion or confirmation implied. All failed methods and pre-repair drafts remain visible.",
+  "clarified_before_new_review_at": "2026-09-09T11:52:34.332082+00:00",
+  "clarification_reason": "The two formal method trials retain their stricter non-inferiority rejection and remain closed. This follow-up measures the user-requested repaired artifact, not a claim of superior writing. Separating absolute suitability from relative preference is declared before its new review or any detector score."
+}

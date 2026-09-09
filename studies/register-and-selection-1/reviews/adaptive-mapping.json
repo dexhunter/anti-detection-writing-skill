@@ -1,0 +1,10 @@
+{
+  "ar10-dev-etag": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "ar10-dev-x-article": {
+    "A": "candidate",
+    "B": "baseline"
+  }
+}

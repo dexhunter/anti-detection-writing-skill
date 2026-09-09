@@ -1,0 +1,100 @@
+{
+  "reviewer": "ar10-final-judge-r1",
+  "detector_scores_withheld": true,
+  "cases": [
+    {
+      "id": "ar10-dev-etag",
+      "A": {
+        "sha256": "b4312a02e2c142689d7abc403be1fb5b3c3305318549141b9f443989258337e2",
+        "pass": true,
+        "claims_preserved": [
+          "DTC1",
+          "DTC2",
+          "DTC3",
+          "DTC4",
+          "DTC5",
+          "DTC6",
+          "DTC7"
+        ],
+        "issues": []
+      },
+      "B": {
+        "sha256": "82007c8a5dedc6883d37606592131c6fa316246baafaed9e202b1a1caeaf828b",
+        "pass": true,
+        "claims_preserved": [
+          "DTC1",
+          "DTC2",
+          "DTC3",
+          "DTC4",
+          "DTC5",
+          "DTC6",
+          "DTC7"
+        ],
+        "issues": []
+      },
+      "preference": "A",
+      "reason": "Both preserve DTC1–DTC7 and every protected string within 170 words. A’s opening, “An ETag lets the client validate a stored response, but that validation still sends a request,” states the mechanism and request limitation together. Its later “a tag matching the selected representation” supplies the exact condition. B also passes, but its introductory “saving the download when the JSON is unchanged” is a less precise summary until the next paragraph supplies that condition."
+    },
+    {
+      "id": "ar10-dev-x-article",
+      "A": {
+        "sha256": "1107091c4319c547fca77c2ba9b3b0c8a9da0e8a9d0449869804c1945688009d",
+        "pass": false,
+        "claims_preserved": [
+          "AX1",
+          "AX2",
+          "AX3",
+          "AX4",
+          "AX5",
+          "AX6",
+          "AX7",
+          "AX8",
+          "AX9",
+          "AX10",
+          "AX11",
+          "AX12",
+          "AX13",
+          "AX14",
+          "AX16",
+          "AX17",
+          "AX18"
+        ],
+        "issues": [
+          {
+            "claim": "AX15",
+            "severity": "material",
+            "span": "As of that evidence, the packaged skill had not yet been prospectively validated for reliable detector performance.",
+            "reason": "The packet requires the current packaged skill’s lack of prospective validation. This sentence asserts only its status at the dated development evidence, leaving the current status unstated. The completed-UI-scan part of AX15 is retained, but the full claim is not."
+          }
+        ]
+      },
+      "B": {
+        "sha256": "cca4deeaa359160ed617c4d5b28ebca6abeef5531572af8cca3decf85af83d1e",
+        "pass": true,
+        "claims_preserved": [
+          "AX1",
+          "AX2",
+          "AX3",
+          "AX4",
+          "AX5",
+          "AX6",
+          "AX7",
+          "AX8",
+          "AX9",
+          "AX10",
+          "AX11",
+          "AX12",
+          "AX13",
+          "AX14",
+          "AX15",
+          "AX16",
+          "AX17",
+          "AX18"
+        ],
+        "issues": []
+      },
+      "preference": "B",
+      "reason": "B preserves AX1–AX18 and every protected string within 600 words. Its “The packaged skill has not yet been prospectively validated for reliable detector performance” retains the required current limitation. A’s “As of that evidence, the packaged skill had not yet been prospectively validated” narrows AX15 to historical status. B also starts directly with “Start with one reply, email, or documentation section,” making the practical starting point easier to find."
+    }
+  ]
+}

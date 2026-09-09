@@ -1,0 +1,52 @@
+{
+  "reviewer": "ar10-final-judge-r2",
+  "detector_scores_withheld": true,
+  "cases": [
+    {
+      "id": "ar10-dev-etag",
+      "A": {
+        "sha256": "e06e348da266aa41e312141e80ccc9ac6ff0a048ddc3e4851fe139f5bca0d1be",
+        "pass": true,
+        "claims_preserved": ["DTC1", "DTC2", "DTC3", "DTC4", "DTC5", "DTC6", "DTC7"],
+        "issues": [],
+        "word_count": 124,
+        "protected_literals_preserved": true,
+        "reference_contamination_detected": false
+      },
+      "B": {
+        "sha256": "c4853ef019119ad6d5dc2d34874ff985e04afb6e8f78d9caa3eb3e1c946ad37d",
+        "pass": true,
+        "claims_preserved": ["DTC1", "DTC2", "DTC3", "DTC4", "DTC5", "DTC6", "DTC7"],
+        "issues": [],
+        "word_count": 127,
+        "protected_literals_preserved": true,
+        "reference_contamination_detected": false
+      },
+      "preference": "A",
+      "reason": "Both preserve all seven claims, the successful-GET and selected-representation conditions, the other-caching-rules qualification, and the absence of an origin-data guarantee. A is slightly smoother: 'If the tag does not match, a successful GET returns 200 OK with the current JSON' expresses the condition and outcome more naturally than B's 'A nonmatching tag returns 200 OK with the current JSON in a successful GET.' A's opening 'An ETag lets the client validate a stored response for reuse, but that validation still requires a request' also answers both parts of the question directly. B's separate opening paragraph is readable and its wording is still correct within the stated scope; the preference is stylistic, not a correctness failure. Neither imports floating-point facts, distinctive wording, or identity from reference.rst."
+    },
+    {
+      "id": "ar10-dev-x-article",
+      "A": {
+        "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+        "pass": true,
+        "claims_preserved": ["AX1", "AX2", "AX3", "AX4", "AX5", "AX6", "AX7", "AX8", "AX9", "AX10", "AX11", "AX12", "AX13", "AX14", "AX15", "AX16", "AX17", "AX18"],
+        "issues": [],
+        "word_count": 538,
+        "protected_literals_preserved": true,
+        "reference_contamination_detected": false
+      },
+      "B": {
+        "sha256": "bca679e0032b6506f454e9102d737337c6657b48f0be4a5a3d3d85fa86a85904",
+        "pass": true,
+        "claims_preserved": ["AX1", "AX2", "AX3", "AX4", "AX5", "AX6", "AX7", "AX8", "AX9", "AX10", "AX11", "AX12", "AX13", "AX14", "AX15", "AX16", "AX17", "AX18"],
+        "issues": [],
+        "word_count": 513,
+        "protected_literals_preserved": true,
+        "reference_contamination_detected": false
+      },
+      "preference": "A",
+      "reason": "Both supply a complete title, body, and screenshot caption under 600 words; preserve all 18 claims and protected strings; and distinguish dated development results from the current packaged skill's unvalidated detector performance. Both keep editing separate from optional measurement, preserve all measurement-record requirements, correctly qualify quotation comparisons and LLM review, and avoid attributing screenshot results to the article. A reads more smoothly because the paragraph beginning 'On September 6, 2026, a fresh recheck of one saved Qwen Code reply pair' reports the result and screenshot scope, while the next paragraph begins 'The answer body stayed identical' and explains the content/length confound and confidence interpretation. B places these different points in one dense paragraph and its sentence 'The screenshots show those completed scans, repeating a development case rather than testing this article or prospectively testing the packaged skill' is harder to parse. A's 'These counts cover that sample, not subsequent research' makes the historical boundary especially explicit; B adequately preserves the same boundary with 'Across the September 5–6, 2026 development sample.' A also leads with the actionable 'Start with one reply, email, or section of documentation.' Neither version imports floating-point facts, distinctive reference wording, or reference identity, and neither adds later studies."
+    }
+  ]
+}

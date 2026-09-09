@@ -1,0 +1,8 @@
+{
+  "ranker": "ar10-policy-selector-r2",
+  "ranked_ids": [
+    "p3-bounded-register",
+    "p1-contrastive-register"
+  ],
+  "reason": "Prefer p3-bounded-register: allowing one or two span-supported, reader-benefiting operations removes p1's unsupported two-operation minimum, matching the literature scout's at-most-two adaptation and better fitting the already concise ETag case without requiring an unnecessary second change. The article still permits two justified operations. Exact byte/hash/diff verification confirms only the six declared cardinality/applicability substitutions; full claim preservation, protected bytes, reference isolation, actual fresh preparation and different fresh writer invocations, one complete realization, independent final review, and failure retention remain unchanged. Fresh-stage execution is required by both policies but cannot be claimed exercised in this pre-generation review. P3 refines the same hypothesis; selection alone does not establish eligibility under the budget's second-distinct-hypothesis rule."
+}

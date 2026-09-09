@@ -1,0 +1,122 @@
+{
+  "reviewer": "ar10-repair-final-judge",
+  "detector_scores_withheld": true,
+  "cases": [
+    {
+      "id": "ar10-dev-etag",
+      "A": {
+        "sha256": "c4853ef019119ad6d5dc2d34874ff985e04afb6e8f78d9caa3eb3e1c946ad37d",
+        "pass": true,
+        "claims_preserved": true,
+        "issues": [],
+        "readability_pass": true,
+        "professional_tone_pass": true,
+        "word_count": 127,
+        "word_limit": 170,
+        "protected_literals_preserved": true,
+        "source_claims_checked": [
+          "DTC1",
+          "DTC2",
+          "DTC3",
+          "DTC4",
+          "DTC5",
+          "DTC6",
+          "DTC7"
+        ],
+        "reference_contamination": false
+      },
+      "B": {
+        "sha256": "e06e348da266aa41e312141e80ccc9ac6ff0a048ddc3e4851fe139f5bca0d1be",
+        "pass": true,
+        "claims_preserved": true,
+        "issues": [],
+        "readability_pass": true,
+        "professional_tone_pass": true,
+        "word_count": 124,
+        "word_limit": 170,
+        "protected_literals_preserved": true,
+        "source_claims_checked": [
+          "DTC1",
+          "DTC2",
+          "DTC3",
+          "DTC4",
+          "DTC5",
+          "DTC6",
+          "DTC7"
+        ],
+        "reference_contamination": false
+      },
+      "preference": "B",
+      "reason": "Both are suitable. B expresses the nonmatch branch more directly: \"If the tag does not match, a successful GET returns 200 OK with the current JSON.\" A instead uses the slightly awkward \"A nonmatching tag returns 200 OK ... in a successful GET.\" B also keeps the validation mechanism together in one paragraph without losing any qualification."
+    },
+    {
+      "id": "ar10-dev-x-article",
+      "A": {
+        "sha256": "d328f1e9b4feef70d7dc18e2da5538b5f8d3298ae49cbdd2aae92b32491cc588",
+        "pass": true,
+        "claims_preserved": true,
+        "issues": [],
+        "readability_pass": true,
+        "professional_tone_pass": true,
+        "word_count": 516,
+        "word_limit": 600,
+        "protected_literals_preserved": true,
+        "source_claims_checked": [
+          "AX1",
+          "AX2",
+          "AX3",
+          "AX4",
+          "AX5",
+          "AX6",
+          "AX7",
+          "AX8",
+          "AX9",
+          "AX10",
+          "AX11",
+          "AX12",
+          "AX13",
+          "AX14",
+          "AX15",
+          "AX16",
+          "AX17",
+          "AX18"
+        ],
+        "reference_contamination": false
+      },
+      "B": {
+        "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+        "pass": true,
+        "claims_preserved": true,
+        "issues": [],
+        "readability_pass": true,
+        "professional_tone_pass": true,
+        "word_count": 538,
+        "word_limit": 600,
+        "protected_literals_preserved": true,
+        "source_claims_checked": [
+          "AX1",
+          "AX2",
+          "AX3",
+          "AX4",
+          "AX5",
+          "AX6",
+          "AX7",
+          "AX8",
+          "AX9",
+          "AX10",
+          "AX11",
+          "AX12",
+          "AX13",
+          "AX14",
+          "AX15",
+          "AX16",
+          "AX17",
+          "AX18"
+        ],
+        "reference_contamination": false
+      },
+      "preference": "B",
+      "reason": "Both are suitable. B makes the historical boundary especially explicit with \"These counts cover that sample, not subsequent research\" and identifies the final block as \"Caption:\". Its \"What the dated development evidence shows\" heading and immediate statement that the screenshots are \"not scores for this article\" help readers interpret the evidence. A conveys the same required limits accurately, but spreads the screenshot qualification across the following paragraph and caption."
+    }
+  ]
+}

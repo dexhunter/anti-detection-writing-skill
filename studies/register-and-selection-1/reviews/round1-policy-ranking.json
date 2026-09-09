@@ -1,0 +1,8 @@
+{
+  "ranker": "ar10-policy-selector",
+  "ranked_ids": [
+    "p2-two-draft-selection",
+    "p1-contrastive-register"
+  ],
+  "reason": "Prefer p2 for the supplied reader tasks: its factual-and-format eligibility gate followed by a source-aware editorial choice directly targets usefulness while retaining the incumbent's flexible register. The ETag original is already a compact qualified explanation, and the article combines installation, prompts, dated evidence and a caption; neither establishes that exactly two useful operations can be grounded in the fixed Python exposition excerpt. P1 correctly stops when that condition fails, but this narrows its applicability. P2 specifies executable isolated writers, blinded selection, deterministic copying and separate final review, with full claim and protected-byte obligations overriding scope cuts. Its third pre-review invocation and two draft audits are a real cost, and repeated incumbent samples may tie or be identical. P1 is a distinct, research-motivated second hypothesis with only two pre-review invocations, but its larger repeated policy input and style-transfer evidence do not establish lower total cost or exact-claim fidelity. Both require actual context isolation and retained failures. This is a policy preference before generation, not a detector-performance prediction."
+}

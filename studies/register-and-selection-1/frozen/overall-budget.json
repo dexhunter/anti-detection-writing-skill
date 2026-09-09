@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-09-09T11:16:01.234767+00:00",
+  "observed_free_word_credits": 3839,
+  "max_rounds": 2,
+  "max_detector_calls": 12,
+  "max_detector_words": 3800,
+  "reserved_confirmation_calls": 4,
+  "reserved_confirmation_words": 900,
+  "min_mean_ai_reduction": 0.5,
+  "max_case_regression": 0,
+  "threshold_reason": "At least one visible one-point decrease across a two-case pair, with no regression, permits exploratory confirmation. No score observed for this batch at freeze. Publication still requires exact final AI confidence below100.",
+  "dispatch_policy": "One selected method per controller round. A second distinct hypothesis may run only after the first completes without support and only if remaining global calls/words still cover its complete development package plus four-call confirmation reserve. All calls deducted globally. No purchase."
+}

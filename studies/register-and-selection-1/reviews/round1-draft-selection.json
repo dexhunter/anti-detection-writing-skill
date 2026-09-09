@@ -1,0 +1,111 @@
+{
+  "record_type": "Selected fields from the separate draft-selector record",
+  "private_source_sha256": "952e60fce211f206d3f55d8d4998854984969aaf80e798209479f2b5b3115813",
+  "new_detector_scores_withheld": true,
+  "cases": [
+    {
+      "id": "ar10-dev-etag",
+      "preference": "A",
+      "reason": "Both pass. A immediately pairs the mechanism with its limit: “An ETag lets the client validate a stored response, but that validation still sends a request.” A also repeats “a successful GET” in the nonmatching-tag sentence, making the scope locally explicit. B’s “A nonmatching tag produces 200 OK with the current JSON.” remains acceptable in its paragraph context but requires the reader to carry the preceding condition forward.",
+      "A": {
+        "sha256": "b4312a02e2c142689d7abc403be1fb5b3c3305318549141b9f443989258337e2",
+        "pass": true,
+        "issues": [],
+        "length": {
+          "method": "whitespace-delimited words; includes title, body, caption and command",
+          "words": 123,
+          "maximum": 170,
+          "pass": true
+        },
+        "failed_claims": [],
+        "public_draft_matches": [
+          "inputs/technical/round1-draft1.txt"
+        ]
+      },
+      "B": {
+        "sha256": "8066e7bc59b8d2bef7b2f60bab7967fb81cf6dca93a63c16c2731420e008a008",
+        "pass": true,
+        "issues": [],
+        "length": {
+          "method": "whitespace-delimited words; includes title, body, caption and command",
+          "words": 121,
+          "maximum": 170,
+          "pass": true
+        },
+        "failed_claims": [],
+        "public_draft_matches": [
+          "inputs/technical/round1-draft2.txt"
+        ]
+      }
+    },
+    {
+      "id": "ar10-dev-x-article",
+      "preference": "tie",
+      "reason": "Neither draft passes every mandatory claim, so there is no eligible winner. A says “At that point, the packaged skill had not been prospectively validated for reliable detector performance.” B says “As of that evidence, the packaged skill had not yet been prospectively validated for reliable detector performance.” Both narrow AX15 to historical non-validation while the contract requires the current packaged skill’s non-validation. B’s “What the dated development examples show” improves the transition from use instructions to dated evidence, but reader flow cannot override the shared required-claim omission. This tie records no eligible selection, not equal passing quality.",
+      "A": {
+        "sha256": "5b15ac3d8ee16034322a91dbe68d6aceb214368025c9b81d70541c8e4291e2ad",
+        "pass": false,
+        "issues": [
+          {
+            "claim_id": "AX15",
+            "severity": "required_claim_failure",
+            "span": "At that point, the packaged skill had not been prospectively validated for reliable detector performance.",
+            "reason": "Historical non-validation does not preserve the source contract’s statement about the current packaged skill. The wording permits readers to infer that current validation status is unknown."
+          }
+        ],
+        "length": {
+          "method": "whitespace-delimited words; includes title, body, caption and command",
+          "words": 554,
+          "maximum": 600,
+          "pass": true
+        },
+        "failed_claims": [
+          {
+            "claim_id": "AX15",
+            "pass": false,
+            "spans": [
+              "The observations came from completed UI scans.",
+              "At that point, the packaged skill had not been prospectively validated for reliable detector performance."
+            ],
+            "assessment": "Completed-UI-scan provenance is preserved. The required current packaged-skill non-validation statement is weakened into a statement only about the historical evidence period. The supplied contract says the current packaged skill has not been prospectively validated; this draft leaves its current validation status unspecified. This is a scope omission, not evidence that later validation occurred."
+          }
+        ],
+        "public_draft_matches": [
+          "inputs/article/round1-draft2.txt"
+        ]
+      },
+      "B": {
+        "sha256": "1107091c4319c547fca77c2ba9b3b0c8a9da0e8a9d0449869804c1945688009d",
+        "pass": false,
+        "issues": [
+          {
+            "claim_id": "AX15",
+            "severity": "required_claim_failure",
+            "span": "As of that evidence, the packaged skill had not yet been prospectively validated for reliable detector performance.",
+            "reason": "Historical non-validation does not preserve the source contract’s statement about the current packaged skill. The wording permits readers to infer that current validation status is unknown."
+          }
+        ],
+        "length": {
+          "method": "whitespace-delimited words; includes title, body, caption and command",
+          "words": 569,
+          "maximum": 600,
+          "pass": true
+        },
+        "failed_claims": [
+          {
+            "claim_id": "AX15",
+            "pass": false,
+            "spans": [
+              "These observations came from completed UI scans and exclude later research.",
+              "As of that evidence, the packaged skill had not yet been prospectively validated for reliable detector performance."
+            ],
+            "assessment": "Completed-UI-scan provenance is preserved. The required current packaged-skill non-validation statement is weakened into a statement only about the historical evidence period. The supplied contract says the current packaged skill has not been prospectively validated; this draft leaves its current validation status unspecified. This is a scope omission, not evidence that later validation occurred."
+          }
+        ],
+        "public_draft_matches": [
+          "inputs/article/round1-draft1.txt"
+        ]
+      }
+    }
+  ]
+}

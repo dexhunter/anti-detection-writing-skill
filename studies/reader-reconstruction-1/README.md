@@ -1,0 +1,20 @@
+# Reader reconstruction: one negative development round
+
+On September 9, 2026, one bounded trial of a reader-reconstruction workflow found no detector improvement. The two completed article scans both returned **100% AI / 0% mixed / 0% human** in GPTZero Basic Scan, displayed Model 4.9b, without short-text warnings. No new writing method was promoted, and the published X article was unchanged.
+
+Two proposals were ranked before new scores; `p1-reader-reconstruction` was selected. Its [exact policy](selected-policy.md) used an [incumbent pinned at a6e9c66](https://github.com/dexhunter/anti-detection-writing-skill/blob/a6e9c66c6e77f5088c8a122105e96648f2fc9b0d/skills/anti-detection-writing/SKILL.md). A fresh writer composed a candidate first draft using the incumbent policy. A separate reader answered frozen comprehension questions using only that draft, then a fresh editor could repair an attributable prose defect once. A separate incumbent writer supplied the study control.
+
+| Development case | Original | Incumbent control | Candidate first draft → final | Fresh measurement |
+| --- | ---: | ---: | ---: | --- |
+| Technical ETag answer | 123 words | 123 words | 123 → 123 words; zero edits | None: all outputs identical |
+| Published launch article | 541 words | 538 words | 540 → 540 words; zero edits | Control and final both 100% AI / 0% mixed / 0% human |
+
+Counts use whitespace-delimited words across complete files. The [original article](inputs/article/original.txt) was source material, not the measured baseline. The measured pair was the separately generated [incumbent control](inputs/article/incumbent-control.txt) and [candidate final](inputs/article/candidate-final.txt). Both reader-repair stages preserved their first drafts byte-for-byte. The article comparison therefore measures variation between independent incumbent compositions; it cannot establish a reader-repair effect.
+
+A separate masked LLM quality judge passed both arms and tied each pair, confirming all seven technical claims and all 18 article claims. The process audit passed with the attribution limit above. Writers, reader, editor and final judge used separate fresh contexts (`fork_turns=none`), with both development cases handled within each role's context. New detector scores were withheld; historical Qwen scores intrinsic to the article remained visible. These are agent judgments, not human-reader findings. Exact backend model, sampling settings, delivered runtime prompt bytes, token usage and dollar cost were unavailable.
+
+The frozen limit was one round, eight detector calls, 2,800 word credits and 2,700 seconds, including a reserve of four calls and 1,100 words for confirmation. Two article calls were reserved and completed, consuming 1,078 existing free word credits. The controller stopped at `development_no_improvement` at 10:40:31 UTC. Only one distinct development pair was measured, below the required two because the technical outputs were identical. Confirmation cases were prepared by an agent exposed to coordinator history; they were not unlocked for evaluation, used to generate candidate outputs, or scanned. Their private contents are excluded.
+
+[results.json](results.json) records native labels, timestamps, metrics, receipt digests and exact answer/submitted/editor hashes. The input files retain the recorded `gptzero_code_block_v1` entry transformation: answer bytes differ from submitted and effective editor bytes, while editor text before and after each scan matches. The [export manifest](export-manifest.json) distinguishes exact copies from extracted originals and assembled summaries. These summaries are not native service exports; hashes establish artifact integrity, not service authenticity. Raw account UI, screenshots, private receipts and account details remain excluded.
+
+This small exploratory trial does not prove that reader feedback never helps. It demonstrated no repair, quality preference or detector gain, and did not reach confirmation. A separately proposed CLI fix concerns scheduling no-op jobs; it is not a detector improvement.

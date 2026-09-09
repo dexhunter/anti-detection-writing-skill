@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "study": "reader-reconstruction-1",
+  "hash_algorithm": "sha256",
+  "scope": "All exported files except this manifest itself. No private source paths are included.",
+  "exact_copies": {
+    "selected-policy.md": "dc4839224d375aa031651a999b839f35e377c2206fde1635e5f1a5f40ce95a2f",
+    "inputs/technical/incumbent-control.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+    "inputs/technical/candidate-first-draft.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+    "inputs/technical/candidate-final.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+    "inputs/article/incumbent-control.txt": "83854fa3218e4cb0133674d758e2cf45907b6c0a0b706fcb1149e32b65f2889f",
+    "inputs/article/candidate-first-draft.txt": "a7a37652b4ed973b9744d3e690a86bc51e50ba5ccb6730f23c8992d64f6be61f",
+    "inputs/article/candidate-final.txt": "a7a37652b4ed973b9744d3e690a86bc51e50ba5ccb6730f23c8992d64f6be61f",
+    "inputs/article/scans/incumbent-control/submitted.txt": "0b0da4930d31394a8a87c9c3b14e77f365d9e9380f372ca14545f62d6ec66caa",
+    "inputs/article/scans/incumbent-control/editor-before.txt": "d39e147d4ed21f25fd689d11565337002462142b533f4f9959a5b616d6bd67be",
+    "inputs/article/scans/incumbent-control/editor-after.txt": "d39e147d4ed21f25fd689d11565337002462142b533f4f9959a5b616d6bd67be",
+    "inputs/article/scans/candidate-final/submitted.txt": "87866a12d2971951e686d7a5bb4957d278ce8a5a792be3e8e60fef260ed10115",
+    "inputs/article/scans/candidate-final/editor-before.txt": "1f414c1780565f15321c1d8997fdb5eea47a086e6da67d5f50777f7537f8f6c6",
+    "inputs/article/scans/candidate-final/editor-after.txt": "1f414c1780565f15321c1d8997fdb5eea47a086e6da67d5f50777f7537f8f6c6"
+  },
+  "extracted_originals": {
+    "inputs/technical/original.txt": {
+      "sha256": "a50b19c98b7284e69a13e95edd930596a5b8f231faa8d38e1591ca92cf1537f2",
+      "extraction": "Exact original string encoded as UTF-8, without an added terminal newline."
+    },
+    "inputs/article/original.txt": {
+      "sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0",
+      "extraction": "Exact original string encoded as UTF-8, without an added terminal newline."
+    }
+  },
+  "assembled_summaries": {
+    "README.md": "a1b18329af8c4241bfc1d4aff5a28ec295a55464ccd20c8b9e93e294aa5fe61a",
+    "results.json": "d39ef1b599a526aa30bf2a6279036309600d8de03da2be75269e99102a2937e2"
+  },
+  "authenticity_limit": "Digests establish artifact integrity, not detector service authenticity."
+}

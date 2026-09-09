@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "study": "reader-reconstruction-1",
+  "date": "2026-09-09",
+  "record_type": "Public study export assembled from private process, review and measurement records",
+  "incumbent": {
+    "commit": "a6e9c66c6e77f5088c8a122105e96648f2fc9b0d",
+    "source_url": "https://github.com/dexhunter/anti-detection-writing-skill/blob/a6e9c66c6e77f5088c8a122105e96648f2fc9b0d/skills/anti-detection-writing/SKILL.md"
+  },
+  "selection": {
+    "proposals_ranked_before_new_scores": 2,
+    "selected": "p1-reader-reconstruction",
+    "selected_policy_path": "selected-policy.md",
+    "selected_policy_sha256": "dc4839224d375aa031651a999b839f35e377c2206fde1635e5f1a5f40ce95a2f",
+    "promoted": false
+  },
+  "protocol": {
+    "max_candidates": 3,
+    "max_case_regression": 0,
+    "max_detector_calls": 8,
+    "max_detector_words": 2800,
+    "max_elapsed_seconds": 2700,
+    "max_rounds": 1,
+    "min_development_pairs": 2,
+    "min_holdout_pairs": 2,
+    "min_mean_ai_reduction": 5,
+    "primary_detector": "gptzero",
+    "reserved_confirmation_calls": 4,
+    "reserved_confirmation_words": 1100,
+    "schema_version": 1
+  },
+  "cases": [
+    {
+      "case_id": "ar9-dev-etag",
+      "format": "technical",
+      "required_claims": 7,
+      "inputs": {
+        "original": {
+          "path": "inputs/technical/original.txt",
+          "sha256": "a50b19c98b7284e69a13e95edd930596a5b8f231faa8d38e1591ca92cf1537f2",
+          "whitespace_words": 123,
+          "fresh_scan": false
+        },
+        "incumbent-control": {
+          "path": "inputs/technical/incumbent-control.txt",
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "whitespace_words": 123,
+          "fresh_scan": false
+        },
+        "candidate-first-draft": {
+          "path": "inputs/technical/candidate-first-draft.txt",
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "whitespace_words": 123,
+          "fresh_scan": false
+        },
+        "candidate-final": {
+          "path": "inputs/technical/candidate-final.txt",
+          "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+          "whitespace_words": 123,
+          "fresh_scan": false
+        }
+      },
+      "repair_edits": 0,
+      "candidate_final_equals_first_draft": true,
+      "control_equals_candidate": true,
+      "independent_quality": {
+        "reviewer_type": "Separate fresh LLM agent",
+        "masked_A": "candidate-final",
+        "masked_B": "incumbent-control",
+        "control_pass": true,
+        "candidate_pass": true,
+        "preference": "tie",
+        "all_required_claims_preserved": true,
+        "new_detector_scores_withheld": true
+      },
+      "measurement_status": "not_scanned_identical_outputs"
+    },
+    {
+      "case_id": "ar9-dev-x-article",
+      "format": "article",
+      "required_claims": 18,
+      "inputs": {
+        "original": {
+          "path": "inputs/article/original.txt",
+          "sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0",
+          "whitespace_words": 541,
+          "fresh_scan": false
+        },
+        "incumbent-control": {
+          "path": "inputs/article/incumbent-control.txt",
+          "sha256": "83854fa3218e4cb0133674d758e2cf45907b6c0a0b706fcb1149e32b65f2889f",
+          "whitespace_words": 538,
+          "fresh_scan": true
+        },
+        "candidate-first-draft": {
+          "path": "inputs/article/candidate-first-draft.txt",
+          "sha256": "a7a37652b4ed973b9744d3e690a86bc51e50ba5ccb6730f23c8992d64f6be61f",
+          "whitespace_words": 540,
+          "fresh_scan": false
+        },
+        "candidate-final": {
+          "path": "inputs/article/candidate-final.txt",
+          "sha256": "a7a37652b4ed973b9744d3e690a86bc51e50ba5ccb6730f23c8992d64f6be61f",
+          "whitespace_words": 540,
+          "fresh_scan": true
+        }
+      },
+      "repair_edits": 0,
+      "candidate_final_equals_first_draft": true,
+      "control_equals_candidate": false,
+      "independent_quality": {
+        "reviewer_type": "Separate fresh LLM agent",
+        "masked_A": "candidate-final",
+        "masked_B": "incumbent-control",
+        "control_pass": true,
+        "candidate_pass": true,
+        "preference": "tie",
+        "all_required_claims_preserved": true,
+        "new_detector_scores_withheld": true
+      },
+      "measurement_status": "complete_pair_no_improvement"
+    }
+  ],
+  "measurements": [
+    {
+      "arm": "incumbent-control",
+      "record_type": "Public summary of privately retained scan receipt; not a native service export",
+      "private_receipt_sha256": "d70502928f75f37fce4cb9b8fe558711916d75c1fd32f99c1a7b8842d0c5f3b4",
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T10:38:59.654Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "inputs/article/incumbent-control.txt",
+        "sha256": "83854fa3218e4cb0133674d758e2cf45907b6c0a0b706fcb1149e32b65f2889f"
+      },
+      "submitted": {
+        "path": "inputs/article/scans/incumbent-control/submitted.txt",
+        "sha256": "0b0da4930d31394a8a87c9c3b14e77f365d9e9380f372ca14545f62d6ec66caa"
+      },
+      "editor_before": {
+        "path": "inputs/article/scans/incumbent-control/editor-before.txt",
+        "sha256": "d39e147d4ed21f25fd689d11565337002462142b533f4f9959a5b616d6bd67be"
+      },
+      "editor_after": {
+        "path": "inputs/article/scans/incumbent-control/editor-after.txt",
+        "sha256": "d39e147d4ed21f25fd689d11565337002462142b533f4f9959a5b616d6bd67be"
+      },
+      "editor_before_equals_editor_after": true
+    },
+    {
+      "arm": "candidate-final",
+      "record_type": "Public summary of privately retained scan receipt; not a native service export",
+      "private_receipt_sha256": "0a1237f1e9d6c4b0a9a47e6ac2dc891d10bff25c39b5a87c28f39250c0a2150d",
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "status": "complete",
+      "observed_at": "2026-09-09T10:40:30.504Z",
+      "entry_transform": "gptzero_code_block_v1",
+      "short_text_warning": false,
+      "warnings": [],
+      "metrics": {
+        "ai": 100,
+        "mixed": 0,
+        "human": 0,
+        "ai_assisted": null
+      },
+      "metric_unit": "Displayed document confidence percent",
+      "answer": {
+        "path": "inputs/article/candidate-final.txt",
+        "sha256": "a7a37652b4ed973b9744d3e690a86bc51e50ba5ccb6730f23c8992d64f6be61f"
+      },
+      "submitted": {
+        "path": "inputs/article/scans/candidate-final/submitted.txt",
+        "sha256": "87866a12d2971951e686d7a5bb4957d278ce8a5a792be3e8e60fef260ed10115"
+      },
+      "editor_before": {
+        "path": "inputs/article/scans/candidate-final/editor-before.txt",
+        "sha256": "1f414c1780565f15321c1d8997fdb5eea47a086e6da67d5f50777f7537f8f6c6"
+      },
+      "editor_after": {
+        "path": "inputs/article/scans/candidate-final/editor-after.txt",
+        "sha256": "1f414c1780565f15321c1d8997fdb5eea47a086e6da67d5f50777f7537f8f6c6"
+      },
+      "editor_before_equals_editor_after": true
+    }
+  ],
+  "comparison": {
+    "completed_distinct_development_pairs": 1,
+    "required_development_pairs": 2,
+    "minimum_pairs_met": false,
+    "article_ai_confidence_percentage_point_reduction": 0,
+    "attribution": "The article comparison measures variation between independently composed incumbent drafts. Neither candidate repair stage edited its draft; no reader-repair effect was measured.",
+    "technical_reason": "Control, candidate first draft and candidate final were byte-identical; no fresh technical scan was run."
+  },
+  "process": {
+    "fresh_context_method": "fork_turns=none",
+    "fresh_roles": [
+      "incumbent control writer",
+      "candidate first-draft writer",
+      "source-blind reader",
+      "adjudicating editor",
+      "independent final quality judge"
+    ],
+    "within_role_case_context": "Each role handled both development cases in one context.",
+    "process_audit": "Pass with attribution limit",
+    "new_scores_withheld_during_generation_and_review": true,
+    "historical_scores_visible": "Both writers and the final reviewer saw historical Qwen results intrinsic to the source article.",
+    "repair_stages_with_zero_edits": 2,
+    "exact_delivered_runtime_prompt_bytes": "unavailable",
+    "exact_backend_model": "unavailable",
+    "exact_sampling_settings": "unavailable",
+    "token_usage": "unavailable",
+    "dollar_cost": "unavailable",
+    "model_setting_overrides": "None recorded; inherited runtime settings."
+  },
+  "measurement_usage": {
+    "reserved_then_completed_calls": 2,
+    "word_credits_consumed": 1078,
+    "credit_source": "Existing free allowance; no purchase",
+    "technical_calls": 0,
+    "confirmation_calls": 0
+  },
+  "confirmation": {
+    "unlocked": false,
+    "candidate_outputs_generated": false,
+    "scanned": false,
+    "case_preparation": "Prepared separately before evaluation; preparer inherited coordinator history including development context and prior detector outcomes. Zero contextual exposure is not claimed.",
+    "private_cases_exported": false
+  },
+  "completion": {
+    "status": "development_no_improvement",
+    "completed_at": "2026-09-09T10:40:31.183999+00:00"
+  },
+  "disposition": {
+    "new_method_promoted": false,
+    "published_X_article_changed": false,
+    "new_detector_gain": false,
+    "separate_production_change": "A proposed CLI no-op job scheduling bugfix; not a detector improvement."
+  },
+  "limits": [
+    "Two development cases, one distinct measured pair, one output per arm, one bounded round.",
+    "Neither repair stage admitted a prose defect or made an edit.",
+    "No human reader study or general performance claim.",
+    "Exact backend model, sampling settings, token usage and dollar cost were unavailable.",
+    "Minimum development-pair requirement was unmet; confirmation was not run.",
+    "Limited exploratory evidence does not establish that reader feedback never helps.",
+    "Public summaries and hashes preserve recorded correspondence and artifact integrity; they do not authenticate the detector service. Raw UI, screenshots, native private receipts and account details are excluded."
+  ]
+}

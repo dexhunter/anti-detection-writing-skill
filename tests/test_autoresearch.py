@@ -123,6 +123,267 @@ class ControllerTests(unittest.TestCase):
         self.paired("case-0")
         self.paired("case-1")
 
+    def prose_output(self, arm, key="case-0", same_prose=False):
+        code = f'```python\nprint("KEEP", "{arm}")\n```\n'
+        text = f"Café `api` keeps {'the' if same_prose else arm} behavior.\n\n{code}\nOnly run after setup.\n"
+        manifest = dict(schema_version=1, full_message_sha256=controller.digest(text.encode()),
+                        ranges=[[text.index(code), text.index(code) + len(code)]])
+        return self.call("output", case=key, arm=arm, writer=arm + "-writer",
+                         file=self.file(text, ".txt"), code_ranges_file=self.file(manifest))
+
+    def prose_review(self, key="case-0", **overrides):
+        outputs = self.state()["outputs"][key]
+        fields = dict(code_ranges_approved=True,
+                      baseline_prose_sha256=outputs["baseline"]["detector_input_sha256"],
+                      candidate_prose_sha256=outputs["candidate"]["detector_input_sha256"])
+        fields.update(overrides)
+        return self.review(key, **fields)
+
+    def test_prose_ranges_preserve_exact_unicode_prose_and_inline_code(self):
+        text = 'Café `api` works.\r\n\r\n  print("KEEP")\r\n\r\nOnly after setup.\r\n'
+        code = '  print("KEEP")\r\n'
+        start = text.index(code)
+        manifest = dict(schema_version=1, full_message_sha256=controller.digest(text.encode()),
+                        ranges=[[start, start + len(code)]])
+        self.assertEqual(controller.prose_bytes(text.encode(), manifest), text.replace(code, "").encode())
+        self.assertEqual(controller.prose_bytes(text.encode(), dict(manifest, ranges=[])), text.encode())
+        end_text = 'Keep this.\nprint("KEEP")'
+        end_manifest = dict(schema_version=1, full_message_sha256=controller.digest(end_text.encode()),
+                            ranges=[[end_text.index("print"), len(end_text)]])
+        self.assertEqual(controller.prose_bytes(end_text.encode(), end_manifest), b"Keep this.\n")
+
+    def test_invalid_code_ranges_fail_before_freezing_output(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        text = "Keep prose.\nKEEP\nMore prose.\n"
+        start, end = text.index("KEEP"), text.index("More")
+        manifest = dict(schema_version=1, full_message_sha256=controller.digest(text.encode()), ranges=[[start, end]])
+        cases = [dict(manifest, full_message_sha256="wrong"), dict(manifest, schema_version=True),
+                 dict(manifest, ranges="all"), dict(manifest, ranges=[[True, end]]),
+                 dict(manifest, ranges=[[-1, end]]), dict(manifest, ranges=[[start, len(text) + 1]]),
+                 dict(manifest, ranges=[[start + 1, end]]), dict(manifest, ranges=[[start, end - 1]]),
+                 dict(manifest, ranges=[[start, end], [start, end]]),
+                 dict(manifest, ranges=[[end, len(text)], [start, end]]),
+                 dict(manifest, ranges=[[0, len(text)]]), dict(manifest, ranges=[[start, start]])]
+        for bad in cases:
+            with self.subTest(manifest=bad):
+                self.call("output", case="case-0", arm="baseline", writer="writer",
+                          file=self.file(text, ".txt"), code_ranges_file=self.file(bad), ok=False)
+                self.assertFalse(self.state()["outputs"])
+        whitespace = b"KEEP\n\nProse\n"
+        with self.assertRaisesRegex(ValueError, "whitespace"):
+            controller.prose_bytes(whitespace, dict(schema_version=1,
+                                   full_message_sha256=controller.digest(whitespace), ranges=[[5, 6]]))
+
+    def test_prose_scope_requires_explicit_manifest_and_full_message_protection(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        self.assertIn("code-ranges-file", self.call("output", case="case-0", arm="baseline",
+                      writer="writer", file=self.file("KEEP prose", ".txt"), ok=False))
+        text = "Prose without required code.\n"
+        self.assertIn("Protected span", self.call("output", case="case-0", arm="baseline",
+                      writer="writer", file=self.file(text, ".txt"),
+                      code_ranges_file=self.file(dict(schema_version=1,
+                      full_message_sha256=controller.digest(text.encode()), ranges=[])), ok=False))
+
+    def test_prose_review_approves_full_messages_hashes_and_exclusions(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        self.assertIn("Quality review", self.reserve(ok=False))
+        self.call("review", case="case-0", file=self.review(), ok=False)
+        for overrides in (dict(baseline_sha256="wrong"), dict(candidate_prose_sha256="wrong"),
+                          dict(code_ranges_approved=False), dict(code_ranges_approved=1),
+                          dict(reviewer="baseline-writer")):
+            self.call("review", case="case-0", file=self.prose_review(**overrides), ok=False)
+        self.call("review", case="case-0", file=self.prose_review(candidate_pass=False))
+        self.assertIn("Quality review", self.reserve(ok=False))
+        self.assertEqual(self.call("status")["budget"]["calls_charged"], 0)
+
+    def test_identical_measured_prose_with_different_code_needs_review_then_no_scan(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm, same_prose=True)
+        pending = self.call("status")
+        self.assertIn(dict(role="quality_judge", case="case-0"), pending["next"])
+        self.assertEqual(pending["development"]["rows"][0]["status"], "awaiting_outputs_or_review")
+        self.call("review", case="case-0", file=self.prose_review(preference="tie"))
+        status = self.call("status")
+        row = status["development"]["rows"][0]
+        self.assertEqual(row["status"], "prose_no_op")
+        self.assertNotEqual(row["hashes"]["baseline"]["full_message_sha256"], row["hashes"]["candidate"]["full_message_sha256"])
+        self.assertEqual(row["hashes"]["baseline"]["detector_input_sha256"], row["hashes"]["candidate"]["detector_input_sha256"])
+        self.assertFalse(any(job.get("case") == "case-0" for job in status["next"]))
+        self.assertIn("No-op", self.reserve(ok=False))
+        self.assertEqual(status["budget"], dict(calls_charged=0, words_charged=0))
+
+    def test_prose_artifacts_and_scope_are_frozen(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        self.prose_output("baseline")
+        output = self.state()["outputs"]["case-0"]["baseline"]
+        for field in ("path", "detector_input_path", "code_ranges_path"):
+            path = self.run / output[field]
+            original = path.read_bytes()
+            path.write_bytes(original + b"changed")
+            self.assertIn("Frozen artifact changed", self.call("status", ok=False))
+            path.write_bytes(original)
+        state = self.state()
+        state["config"]["scan_scope"] = "full_text"
+        (self.run / "state.json").write_text(json.dumps(state))
+        self.assertIn("Frozen config differs", self.call("status", ok=False))
+
+    def test_prose_accounting_charges_measured_words_and_receipt_uses_prose_hash(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        self.call("review", case="case-0", file=self.prose_review())
+        outputs = self.state()["outputs"]["case-0"]
+        counts = {arm: len((self.run / output["detector_input_path"]).read_text().split())
+                  for arm, output in outputs.items()}
+        self.assertGreater(len((self.run / outputs["baseline"]["path"]).read_text().split()), counts["baseline"])
+        self.reserve(words=counts["baseline"] - 1, ok=False)
+        pair = self.call("reserve-pair", case="case-0", detector="gptzero",
+                         baseline_words=counts["baseline"], candidate_words=counts["candidate"])["attempts"]
+        for attempt in pair:
+            self.assertEqual(attempt["scan_scope"], "prose_only")
+            result = self.call("record", attempt=attempt["id"], receipt=self.receipt(attempt,
+                               input_sha256=attempt["detector_input_sha256"]))
+            self.assertEqual(result["status"], "complete")
+            self.assertEqual(result["result"]["full_message_sha256"], attempt["output_sha256"])
+            self.assertEqual(result["result"]["scan_scope"], "prose_only")
+        self.assertEqual(self.call("status")["budget"], dict(calls_charged=2, words_charged=sum(counts.values())))
+
+    def test_full_message_receipt_cannot_satisfy_prose_scope(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        self.call("review", case="case-0", file=self.prose_review())
+        attempt = self.reserve(words=20)
+        result = self.call("record", attempt=attempt["id"], receipt=self.receipt(attempt))
+        self.assertEqual(result["status"], "invalid")
+        self.assertIn("measured-input hash", result["failure"])
+
+    def native_prose_receipt(self, attempt, **overrides):
+        prose = (self.run / attempt["detector_input_path"]).read_bytes()
+        submitted = prose[:-1]
+        spec = importlib.util.spec_from_file_location("detector_receipts", SCRIPT.with_name("detector_receipts.py"))
+        native = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(native)
+        ui = ('  - code: ' + json.dumps(native.display_text(submitted.decode()))
+              + '\n- heading "Basic Scan" [level=1]\n- generic: Text up-to-date\n'
+              '- generic: Model test-model\n- button "AI 80%"\n'
+              '- button "Mixed 10%"\n- button "Human 10%"\n')
+        receipt = dict(schema_version=1, detector="gptzero", mode="Basic Scan", model="test-model",
+                       status="complete", observed_at=datetime.now(timezone.utc).isoformat(),
+                       entry_transform="gptzero_code_block_v1", short_text_warning=False, warnings=[])
+        for key, data in dict(answer=prose, submitted=submitted, editor_before=submitted + b"\n\n\n",
+                              editor_after=submitted + b"\n\n\n", visible_result=ui.encode(),
+                              screenshot=b"\xff\xd8\xffsynthetic fixture").items():
+            path = self.root / ("prose-native-" + key)
+            path.write_bytes(data)
+            receipt[key] = dict(path=path.name, sha256=controller.digest(data))
+        receipt.update(overrides)
+        return native, self.file(receipt)
+
+    def test_native_receipt_import_validates_frozen_prose_without_changing_adapter(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        self.call("review", case="case-0", file=self.prose_review())
+        attempt = self.reserve(words=20)
+        native, receipt = self.native_prose_receipt(attempt)
+        with patch.dict(sys.modules, {"detector_receipts": native}):
+            result = self.call("record", attempt=attempt["id"], receipt=receipt)
+        self.assertEqual(result["status"], "complete")
+        self.assertEqual(result["result"]["input_sha256"], attempt["detector_input_sha256"])
+        self.assertNotEqual(result["result"]["input_sha256"], result["result"]["full_message_sha256"])
+        self.assertEqual(result["result"]["scan_scope"], "prose_only")
+
+    def test_native_receipt_with_contradictory_scope_is_rejected_before_adapter(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        self.call("review", case="case-0", file=self.prose_review())
+        attempt = self.reserve(words=20)
+        native, receipt = self.native_prose_receipt(attempt, scan_scope="full_text")
+        # The unchanged adapter validates representations; scope belongs to the controller.
+        self.assertEqual(native.validate_scan(receipt, self.run / attempt["detector_input_path"])["ai"], 80)
+        with patch.dict(sys.modules, {"detector_receipts": native}):
+            result = self.call("record", attempt=attempt["id"], receipt=receipt)
+        self.assertEqual(result["status"], "invalid")
+        self.assertIn("scan scope", result["failure"])
+        self.assertEqual(self.call("status")["budget"]["calls_charged"], 1)
+
+    def test_mixed_scan_scopes_are_rejected(self):
+        self.config["scan_scope"] = "prose_only"
+        self.selected()
+        for arm in ("baseline", "candidate"):
+            self.prose_output(arm)
+        state = self.state()
+        state["outputs"]["case-0"]["baseline"]["scan_scope"] = "full_text"
+        with self.assertRaisesRegex(ValueError, "frozen scan scope"):
+            controller.pair_outputs(state, "case-0")
+        self.call("review", case="case-0", file=self.prose_review())
+        attempt = self.reserve(words=20)
+        result = self.call("record", attempt=attempt["id"], receipt=self.receipt(attempt,
+                           input_sha256=attempt["detector_input_sha256"], scan_scope="full_text"))
+        self.assertEqual(result["status"], "invalid")
+        self.assertIn("scan scope", result["failure"])
+
+    def test_legacy_config_and_review_keep_full_text_semantics(self):
+        self.config.pop("scan_scope")
+        self.selected()
+        self.quality()
+        status = self.call("status")
+        self.assertEqual(status["scan_scope"], "full_text")
+        output = status["outputs"]["case-0"]["baseline"]
+        self.assertEqual(output["full_message_sha256"], output["detector_input_sha256"])
+        attempt = self.reserve()
+        self.assertEqual(self.call("record", attempt=attempt["id"], receipt=self.receipt(attempt))["status"], "complete")
+        legacy_output = dict(path="answer.txt", sha256="legacy-hash")
+        self.assertEqual(controller.measured_input(legacy_output), dict(path="answer.txt", sha256="legacy-hash"))
+        with self.assertRaisesRegex(ValueError, "Unsupported scan scope"):
+            controller.validate_inputs(dict(controller.DEFAULTS, scan_scope="anything"), self.corpus)
+
+    def test_legacy_frozen_run_resumes_without_rewriting_old_artifacts(self):
+        self.selected()
+        self.quality()
+        attempt = self.reserve()
+        state = self.state()
+
+        def old_artifact(name, value):
+            data = controller.encode(value)
+            (self.run / name).write_bytes(data)
+            state["artifacts"][name] = controller.digest(data)
+
+        # Construct a synthetic old-schema fixture, never mutate a real saved run.
+        state["config"].pop("scan_scope")
+        old_artifact("frozen/config.json", state["config"])
+        manifest = json.loads((self.run / "frozen/manifest.json").read_text())
+        manifest["frozen/config.json"] = state["artifacts"]["frozen/config.json"]
+        old_artifact("frozen/manifest.json", manifest)
+        for arm, output in state["outputs"]["case-0"].items():
+            output.pop("scan_scope")
+            old_artifact(f"outputs/case-0/{arm}-record.json", output)
+        reservation = state["attempts"][attempt["id"]]
+        for key in ("scan_scope", "detector_input_path", "detector_input_sha256"):
+            reservation.pop(key)
+        old_artifact(f'attempts/{attempt["id"]}/reservation.json', reservation)
+        (self.run / "state.json").write_bytes(controller.encode(state))
+        saved = {name: (self.run / name).read_bytes() for name in state["artifacts"]}
+        self.assertEqual(self.call("status")["scan_scope"], "full_text")
+        result = self.call("record", attempt=attempt["id"], receipt=self.receipt(attempt))
+        self.assertEqual(result["status"], "complete")
+        for name, data in saved.items():
+            self.assertEqual((self.run / name).read_bytes(), data)
+
     def test_full_bounded_experiment_resume_and_denominator(self):
         self.selected()
         self.development()

@@ -22,7 +22,7 @@ Example request:
 
 For a requested measurement, add:
 
-> Also test the original and final text using GPTZero Basic Scan. Aim for lower AI confidence without sacrificing clarity or accuracy. Record all three confidences, the model, exact inputs, and warnings. Keep unchanged and worse results.
+> Also test the original and final prose using GPTZero Basic Scan. Keep code separate and check its correctness independently. Aim for lower AI confidence without sacrificing clarity or accuracy. Record the full message, exact prose inputs, excluded code, all three confidences, the model, and warnings. Keep unchanged and worse results.
 
 ## What you get
 

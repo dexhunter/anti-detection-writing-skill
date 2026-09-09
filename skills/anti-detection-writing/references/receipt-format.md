@@ -2,6 +2,8 @@
 
 `scripts/validate_receipt.py ANSWER.txt RECEIPT.json` checks a local receipt. Python 3.10+ is required, with no third-party Python dependencies. It makes no network requests and is not a detector. The historical public dataset has a separate format and checker.
 
+For a declared prose-only scan, `ANSWER.txt` and receipt `answer` contain the exact prose sent to the detector. Keep a separate scope record with the full reviewed message's hash, prose hash and approved code exclusions. This checker validates the submitted artifact, not the exclusion decision or the full-message association. Its byte checks are unchanged; do not present the result as a whole-message score.
+
 A 100% AI result is valid measurement data. To apply an already requested condition, use `--max-ai-exclusive 100`. Omitting that option checks evidence consistency only. Neither result grants publication permission or establishes quality or human authorship.
 
 Save these artifacts in a private directory:

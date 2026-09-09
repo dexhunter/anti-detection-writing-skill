@@ -4,6 +4,8 @@ These receipts belong to the autoresearch adapter, not the earlier strict plain-
 
 Each artifact is an object with `path` relative to the receipt directory and its exact UTF-8/binary `sha256`. Parent traversal and escaping symlinks are rejected. The coordinator imports the receipt and every referenced artifact into its reserved attempt. A bad import remains a charged, invalid outcome; do not edit the files to turn it into a successful measurement.
 
+The receipt's `answer` is the frozen detector input: the derived prose for a `prose_only` run, or the complete message for `full_text`. The controller retains the full reviewed output, code-range mapping and measured-input hash separately, and validates the receipt against that measured input without relaxing this adapter's exact-byte checks. The worker must receive the declared scope and report it with the result. An optional receipt `scan_scope` must match the frozen run; when absent, the controller supplies the run's scope. A prose-only receipt is not a detector result for the complete message or its code.
+
 ```json
 {
   "schema_version": 1,

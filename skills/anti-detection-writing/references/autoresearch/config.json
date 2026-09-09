@@ -10,6 +10,7 @@
   "min_development_pairs": 2,
   "min_holdout_pairs": 2,
   "primary_detector": "gptzero",
+  "scan_scope": "prose_only",
   "min_mean_ai_reduction": 5,
   "max_case_regression": 0
 }

@@ -22,7 +22,7 @@ DEFAULTS = dict(schema_version=1, max_candidates=3, max_rounds=1,
                 reserved_confirmation_calls=4, reserved_confirmation_words=500,
                 max_elapsed_seconds=2700, min_development_pairs=2,
                 min_holdout_pairs=2, primary_detector="gptzero",
-                min_mean_ai_reduction=5, max_case_regression=0)
+                min_mean_ai_reduction=5, max_case_regression=0, scan_scope="full_text")
 
 
 def require(condition, message):
@@ -62,6 +62,50 @@ def text_bytes(path):
     require(not any(unicodedata.category(c) == "Cf" or c in "\u034f\u2800" for c in text),
             "Hidden Unicode markers are forbidden")
     return data
+
+
+def scan_scope(state):
+    scope = state["config"].get("scan_scope", "full_text")
+    require(scope in ("full_text", "prose_only"), "Unsupported scan scope")
+    return scope
+
+
+def measured_input(row):
+    """Legacy outputs measured the full message; new outputs freeze both identities."""
+    scope = row.get("scan_scope", "full_text")
+    require(scope in ("full_text", "prose_only"), "Unsupported output scan scope")
+    if scope == "prose_only":
+        return dict(path=row["detector_input_path"], sha256=row["detector_input_sha256"])
+    return dict(path=row["path"], sha256=row["sha256"])
+
+
+def prose_bytes(data, manifest):
+    """Remove declared complete lines only; judging whether they are code is separate."""
+    require(isinstance(manifest, dict) and set(manifest) ==
+            {"schema_version", "full_message_sha256", "ranges"}, "Invalid code-ranges manifest")
+    require(type(manifest["schema_version"]) is int and manifest["schema_version"] == 1,
+            "Unsupported code-ranges schema")
+    require(manifest["full_message_sha256"] == digest(data), "Code ranges full-message hash mismatch")
+    require(isinstance(manifest["ranges"], list), "Code ranges must be a list")
+    text, cursor, kept = data.decode("utf-8"), 0, []
+    for span in manifest["ranges"]:
+        require(isinstance(span, list) and len(span) == 2
+                and all(type(offset) is int for offset in span), "Code ranges need integer offset pairs")
+        start, end = span
+        require(cursor <= start < end <= len(text), "Code ranges must be ordered, nonoverlapping and in bounds")
+        require((start == 0 or text[start - 1] == "\n")
+                and (end == len(text) or text[end - 1] == "\n"), "Code ranges must cover complete lines")
+        require(text[start:end].strip(), "Code ranges cannot contain only whitespace")
+        kept.append(text[cursor:start])
+        cursor = end
+    kept.append(text[cursor:])
+    prose = "".join(kept).encode("utf-8")
+    require(prose.strip(), "Measured prose cannot be empty")
+    return prose
+
+
+def measurement_noop(outputs):
+    return len(outputs) == 2 and measured_input(outputs["baseline"])["sha256"] == measured_input(outputs["candidate"])["sha256"]
 
 
 def tree_files(root):
@@ -161,11 +205,17 @@ def locked(run, initialize=False):
                 for arm, row in outputs.items():
                     require(arm in ("baseline", "candidate"), "Invalid output arm")
                     require(row == read_json(run / "outputs" / safe_id(case_id) / f"{arm}-record.json"), "Frozen output metadata changed")
+                    require(row.get("scan_scope", "full_text") == scan_scope(state), "Output scan scope differs from frozen config")
+                    if scan_scope(state) == "prose_only":
+                        manifest = read_json(run / row["code_ranges_path"])
+                        require(prose_bytes((run / row["path"]).read_bytes(), manifest) ==
+                                (run / row["detector_input_path"]).read_bytes(), "Frozen prose differs from code ranges")
             for case_id, row in state["reviews"].items():
                 require(row == read_json(run / "reviews" / f"{safe_id(case_id)}.json"), "Frozen review metadata changed")
             for key, row in state["attempts"].items():
                 name = "reservation.json" if row["status"] == "reserved" else "outcome.json"
                 require(row == read_json(run / "attempts" / safe_id(key) / name), "Frozen attempt metadata changed")
+                require(row.get("scan_scope", "full_text") == scan_scope(state), "Attempt scan scope differs from frozen config")
             if state.get("completion"):
                 require(state["completion"] == read_json(run / "completion.json"), "Frozen completion changed")
             if state["selected"]:
@@ -174,11 +224,16 @@ def locked(run, initialize=False):
 
 
 def validate_inputs(config, corpus):
+    if isinstance(config, dict):
+        config = dict(config)
+        config.setdefault("scan_scope", "full_text")
     require(isinstance(config, dict) and set(config) == set(DEFAULTS), "Config keys must match documented schema")
     for key, default in DEFAULTS.items():
         value = config[key]
         if key == "primary_detector":
             require(value == "gptzero", "Only GPTZero primary decisions are supported")
+        elif key == "scan_scope":
+            require(value in ("full_text", "prose_only"), "Unsupported scan scope")
         else:
             require(type(value) in (int, float) and math.isfinite(value) and value >= 0,
                     f"Invalid numeric config: {key}")
@@ -229,6 +284,7 @@ def initialize(args, run, state):
                     "Runs inside a repository must use ignored private/ or .autoresearch/")
     config, corpus = read_json(args.config), read_json(args.cases)
     validate_inputs(config, corpus)
+    config.setdefault("scan_scope", "full_text")
     files = tree_files(skill)
     state.update(config=config, corpus=corpus, baseline_tree_sha256=tree_hash(files),
                  started_at=datetime.now(timezone.utc).isoformat())
@@ -251,6 +307,8 @@ def case_for(state, case_id):
 def pair_outputs(state, case_id):
     row = state["outputs"].get(case_id, {})
     require(set(row) == {"baseline", "candidate"}, "Both outputs are required")
+    require(all(output.get("scan_scope", "full_text") == scan_scope(state) for output in row.values()),
+            "Paired outputs must use the frozen scan scope")
     return row
 
 
@@ -265,14 +323,20 @@ def decision(state, split):
     quality_rejected = all(c["id"] in state["reviews"] for c in cases) and any(not eligible(state, c["id"]) for c in cases)
     for case in cases:
         key = case["id"]
-        row = {"case": key}
+        row = {"case": key, "scan_scope": scan_scope(state)}
         outputs = state["outputs"].get(key, {})
-        if len(outputs) == 2 and outputs["baseline"]["sha256"] == outputs["candidate"]["sha256"]:
+        row["hashes"] = {arm: dict(full_message_sha256=output["sha256"],
+                                  detector_input_sha256=measured_input(output)["sha256"])
+                         for arm, output in outputs.items()}
+        if scan_scope(state) == "full_text" and measurement_noop(outputs):
             row["status"], noop = "no_op", True
         elif key not in state["reviews"]:
             row["status"], incomplete = "awaiting_outputs_or_review", True
         elif not eligible(state, key):
             row["status"], rejected = "quality_rejected", True
+        elif measurement_noop(outputs):
+            row["status"] = "no_op" if outputs["baseline"]["sha256"] == outputs["candidate"]["sha256"] else "prose_no_op"
+            noop = True
         else:
             attempts = [a for a in state["attempts"].values() if a["case"] == key and a["detector"] == "gptzero"]
             if any(a["status"] in ("failed", "invalid", "uncertain") for a in attempts):
@@ -284,7 +348,8 @@ def decision(state, split):
                 row["status"], incomplete = "awaiting_scans", True
             else:
                 scans = {a["arm"]: a["result"] for a in attempts}
-                if any(scans["baseline"][v] != scans["candidate"][v] for v in ("mode", "model")):
+                if any(scans["baseline"].get(v, "full_text") != scans["candidate"].get(v, "full_text")
+                       for v in ("mode", "model", "scan_scope")):
                     row["status"], rejected = "incomparable_scans", True
                 else:
                     delta = scans["baseline"]["ai"] - scans["candidate"]["ai"]
@@ -335,9 +400,9 @@ def summary(state):
                 if arm not in outputs:
                     pending.append({"role": "writer", "case": key, "arm": arm,
                                     "skill": "baseline" if arm == "baseline" else "candidates/" + state["selected"] + "/skill"})
-            if len(outputs) == 2 and key not in state["reviews"] and outputs["baseline"]["sha256"] != outputs["candidate"]["sha256"]:
+            if len(outputs) == 2 and key not in state["reviews"] and (scan_scope(state) == "prose_only" or not measurement_noop(outputs)):
                 pending.append({"role": "quality_judge", "case": key})
-            if eligible(state, key) and outputs["baseline"]["sha256"] != outputs["candidate"]["sha256"]:
+            if eligible(state, key) and not measurement_noop(outputs):
                 quality_rejected = any(c["split"] == case["split"] and c["id"] in state["reviews"]
                                        and not eligible(state, c["id"]) for c in state["corpus"]["cases"])
                 scans = {a["arm"]: a for a in state["attempts"].values()
@@ -359,7 +424,17 @@ def summary(state):
     if expired(state) or state.get("completion") or primary_scan_failed(state):
         pending = [{"role": "detector_worker", "attempt": a["id"], "action": "record existing outcome only"}
                    for a in state["attempts"].values() if a["status"] == "reserved"]
-    return {"status": status, "completed_at": state.get("completion", {}).get("completed_at"),
+    inputs = {key: {arm: dict(scan_scope=output.get("scan_scope", "full_text"),
+                             full_message_path=output["path"], full_message_sha256=output["sha256"],
+                             detector_input_path=measured_input(output)["path"],
+                             detector_input_sha256=measured_input(output)["sha256"],
+                             **({"code_ranges_path": output["code_ranges_path"],
+                                 "code_ranges_sha256": output["code_ranges_sha256"]}
+                                if output.get("scan_scope") == "prose_only" else {}))
+                    for arm, output in outputs.items()}
+              for key, outputs in state["outputs"].items()}
+    return {"status": status, "scan_scope": scan_scope(state), "outputs": inputs,
+            "completed_at": state.get("completion", {}).get("completed_at"),
             "selected": state["selected"], "development": development,
             "holdout": holdout, "budget": {"calls_charged": len(state["attempts"]),
             "words_charged": sum(a["words"] for a in state["attempts"].values())},
@@ -421,11 +496,24 @@ def output(args, run, state):
     require(args.arm not in state["outputs"].get(args.case, {}), "Output already frozen")
     data = text_bytes(args.file)
     require(all(span in data.decode("utf-8") for span in case["protected"]), "Protected span missing")
+    scope = scan_scope(state)
+    measurement = dict(scan_scope=scope)
+    if scope == "prose_only":
+        require(args.code_ranges_file is not None, "Prose-only outputs require --code-ranges-file")
+        manifest = read_json(args.code_ranges_file)
+        prose = prose_bytes(data, manifest)
+        measurement.update(
+            code_ranges_path=save_artifact(run, state, f"outputs/{args.case}/{args.arm}-code-ranges.json", encode(manifest)),
+            code_ranges_sha256=digest(encode(manifest)),
+            detector_input_path=save_artifact(run, state, f"outputs/{args.case}/{args.arm}-prose.txt", prose),
+            detector_input_sha256=digest(prose))
+    else:
+        require(args.code_ranges_file is None, "Full-text outputs do not accept code ranges")
     name = save_artifact(run, state, f"outputs/{args.case}/{args.arm}.txt", data)
     skill_hash = state["baseline_tree_sha256"] if args.arm == "baseline" else state["candidates"][state["selected"]]["tree_sha256"]
     save_artifact(run, state, f"outputs/{args.case}/{args.arm}-generation.json", encode(generation))
     state["outputs"].setdefault(args.case, {})[args.arm] = dict(generation=generation, path=name, sha256=digest(data),
-             corpus_sha256=state["corpus_sha256"], skill_tree_sha256=skill_hash, writer=writer)
+             corpus_sha256=state["corpus_sha256"], skill_tree_sha256=skill_hash, writer=writer, **measurement)
     save_artifact(run, state, f"outputs/{args.case}/{args.arm}-record.json", encode(state["outputs"][args.case][args.arm]))
 
 
@@ -441,6 +529,10 @@ def review(args, run, state):
     for arm in ("baseline", "candidate"):
         require(row.get(arm + "_sha256") == outputs[arm]["sha256"], "Review output hash mismatch")
         require(type(row.get(arm + "_pass")) is bool, "Quality verdicts must be booleans")
+        if scan_scope(state) == "prose_only":
+            require(row.get(arm + "_prose_sha256") == measured_input(outputs[arm])["sha256"], "Review prose hash mismatch")
+    if scan_scope(state) == "prose_only":
+        require(row.get("code_ranges_approved") is True, "Independent review must approve code ranges and preserved prose")
     require(row.get("preference") in ("baseline", "candidate", "tie"), "Invalid preference")
     require(isinstance(row.get("reason"), str) and row["reason"].strip(), "Review reason required")
     save_artifact(run, state, f"reviews/{args.case}.json", encode(row))
@@ -454,16 +546,17 @@ def reserve(args, run, state):
     require(not any(c["id"] in state["reviews"] and not eligible(state, c["id"])
                     for c in state["corpus"]["cases"] if c["split"] == case["split"]),
             "Split quality rejection prevents further scans")
-    require(outputs["baseline"]["sha256"] != outputs["candidate"]["sha256"], "No-op outputs do not need duplicate scans")
+    require(not measurement_noop(outputs), "No-op measured inputs do not need duplicate scans")
     require(not any(a["case"] == args.case and a["arm"] == args.arm and a["detector"] == args.detector for a in state["attempts"].values()), "Scan already reserved; failures and uncertain outcomes remain charged")
-    words = len((run / outputs[args.arm]["path"]).read_text().split())
-    require(type(args.words) is int and args.words >= words and words > 0, "Word reservation must cover output whitespace word count")
+    measured = measured_input(outputs[args.arm])
+    words = len((run / measured["path"]).read_text().split())
+    require(type(args.words) is int and args.words >= words and words > 0, "Word reservation must cover measured-input whitespace word count")
     words = args.words
     cfg, attempts = state["config"], list(state["attempts"].values())
     opposite = "candidate" if args.arm == "baseline" else "baseline"
     opposite_exists = any(a["case"] == args.case and a["arm"] == opposite and a["detector"] == args.detector for a in attempts)
     pair_calls = 1 if opposite_exists else 2
-    pair_words = words + (0 if opposite_exists else len((run / outputs[opposite]["path"]).read_text().split()))
+    pair_words = words + (0 if opposite_exists else len((run / measured_input(outputs[opposite])["path"]).read_text().split()))
     require(len(attempts) + pair_calls <= cfg["max_detector_calls"], "Call budget cannot cover paired scans")
     require(sum(a["words"] for a in attempts) + pair_words <= cfg["max_detector_words"], "Word budget cannot cover paired scans")
     if case["split"] == "development":
@@ -472,7 +565,8 @@ def reserve(args, run, state):
     key = f"attempt-{len(attempts) + 1:04d}"
     row = dict(id=key, case=args.case, arm=args.arm, detector=args.detector, words=words,
                split=case["split"], status="reserved", reserved_at=datetime.now(timezone.utc).isoformat(),
-               output_sha256=outputs[args.arm]["sha256"])
+               output_sha256=outputs[args.arm]["sha256"], scan_scope=scan_scope(state),
+               detector_input_path=measured["path"], detector_input_sha256=measured["sha256"])
     save_artifact(run, state, f"attempts/{key}/reservation.json", encode(row))
     state["attempts"][key] = row
     return dict(row, dispatch_ready=opposite_exists)
@@ -526,15 +620,25 @@ def record(args, run, state):
         try:
             from detector_receipts import validate_scan
             path = import_receipt(args.receipt, run, state, f"attempts/{key}/evidence")
-            expected = run / state["outputs"][row["case"]][row["arm"]]["path"]
+            receipt = read_json(path)
+            require(receipt.get("scan_scope", scan_scope(state)) == scan_scope(state),
+                    "Receipt scan scope differs from reservation")
+            output = state["outputs"][row["case"]][row["arm"]]
+            measured = measured_input(output)
+            expected = run / measured["path"]
             result = validate_scan(path, expected)
             require(result["detector"] == row["detector"], "Receipt detector mismatch")
-            require(result["input_sha256"] == row["output_sha256"], "Receipt output hash mismatch")
+            require(result["input_sha256"] == row.get("detector_input_sha256", row["output_sha256"]) == measured["sha256"], "Receipt measured-input hash mismatch")
+            require(row["output_sha256"] == output["sha256"], "Reservation full-message hash mismatch")
+            require(result.get("scan_scope", scan_scope(state)) == row.get("scan_scope", "full_text") == scan_scope(state),
+                    "Receipt scan scope differs from reservation")
+            result.update(scan_scope=scan_scope(state), full_message_sha256=output["sha256"])
             observed = datetime.fromisoformat(result["observed_at"].replace("Z", "+00:00"))
             require(observed.utcoffset() is not None and observed >= datetime.fromisoformat(row["reserved_at"]), "Receipt predates reservation")
             for other in state["attempts"].values():
                 if other["case"] == row["case"] and other["detector"] == row["detector"] and other["status"] == "complete":
                     require(all(other["result"][v] == result[v] for v in ("mode", "model")), "Paired scans have different mode or model")
+                    require(other["result"].get("scan_scope", "full_text") == result["scan_scope"], "Paired scans have different scope")
             row.update(status="complete", result=result)
         except (ValueError, OSError, KeyError, TypeError, AttributeError, ImportError) as error:
             row.update(status="invalid", failure=str(error))
@@ -564,6 +668,8 @@ def parser():
             group = command.add_mutually_exclusive_group(required=True)
             group.add_argument("--receipt", type=Path)
             group.add_argument("--failure")
+        if name == "output":
+            command.add_argument("--code-ranges-file", type=Path)
     return result
 
 
@@ -585,7 +691,7 @@ def main(argv=None):
                 terminal = result_summary["status"] in ("candidate_supported", "development_no_improvement",
                                                        "holdout_no_improvement", "development_rejected", "holdout_rejected")
                 split = "development" if result_summary["status"].startswith("development_") else "holdout"
-                settled = all(row["status"] in ("paired", "no_op", "quality_rejected", "scan_failed", "incomparable_scans", "not_scanned_candidate_rejected")
+                settled = all(row["status"] in ("paired", "no_op", "prose_no_op", "quality_rejected", "scan_failed", "incomparable_scans", "not_scanned_candidate_rejected")
                               for row in result_summary[split]["rows"])
                 pending = any(a["status"] == "reserved" for a in state["attempts"].values())
                 if not state.get("completion") and terminal and (settled or primary_scan_failed(state)) and not pending:

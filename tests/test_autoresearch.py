@@ -231,6 +231,33 @@ class ControllerTests(unittest.TestCase):
         self.assertEqual(result["status"], "development_no_improvement")
         self.assertEqual(result["development"]["rows"][0]["status"], "no_op")
 
+    def test_reviewed_noop_schedules_only_other_unfinished_case(self):
+        self.selected()
+        self.outputs(same=True)
+        self.call("review", case="case-0", file=self.review(preference="tie"))
+        self.assertIn("No-op", self.reserve(ok=False))
+        result = self.call("status")
+        self.assertEqual(result["status"], "development_incomplete")
+        self.assertEqual(result["development"]["rows"][0]["status"], "no_op")
+        self.assertEqual(result["budget"], dict(calls_charged=0, words_charged=0))
+        self.assertEqual(result["next"], [
+            dict(role="writer", case="case-1", arm="baseline", skill="baseline"),
+            dict(role="writer", case="case-1", arm="candidate", skill="candidates/edit-1/skill"),
+        ])
+        self.outputs("case-1")
+        self.assertEqual(self.call("status")["next"], [dict(role="quality_judge", case="case-1")])
+        self.call("review", case="case-1", file=self.review("case-1"))
+        self.assertEqual(self.call("status")["next"], [
+            dict(role="coordinator", action="reserve complete pair", case="case-1",
+                 detector="gptzero", reserved_arms=[]),
+        ])
+        pair = self.call("reserve-pair", case="case-1", detector="gptzero",
+                         baseline_words=5, candidate_words=5)["attempts"]
+        self.assertEqual(self.call("status")["next"], [
+            dict(role="detector_worker", case="case-1", arm=attempt["arm"], attempt=attempt["id"])
+            for attempt in pair
+        ])
+
     def test_protected_spans_and_hidden_markers_rejected(self):
         self.selected()
         for text in ("Missing required detail", "A KEEP\u200b marker"):

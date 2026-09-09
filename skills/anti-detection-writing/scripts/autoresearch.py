@@ -337,7 +337,7 @@ def summary(state):
                                     "skill": "baseline" if arm == "baseline" else "candidates/" + state["selected"] + "/skill"})
             if len(outputs) == 2 and key not in state["reviews"] and outputs["baseline"]["sha256"] != outputs["candidate"]["sha256"]:
                 pending.append({"role": "quality_judge", "case": key})
-            if eligible(state, key):
+            if eligible(state, key) and outputs["baseline"]["sha256"] != outputs["candidate"]["sha256"]:
                 quality_rejected = any(c["split"] == case["split"] and c["id"] in state["reviews"]
                                        and not eligible(state, c["id"]) for c in state["corpus"]["cases"])
                 scans = {a["arm"]: a for a in state["attempts"].values()

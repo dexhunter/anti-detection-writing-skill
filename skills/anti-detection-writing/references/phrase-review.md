@@ -4,9 +4,9 @@ Use this list to find wording that may deserve an edit. Prioritize generic openi
 
 ## Source and scope
 
-The ten entries below are short excerpts from [GPTZero's October 7, 2024 article](https://gptzero.me/news/most-common-ai-vocabulary/), checked September 9, 2026. Its reported frequency differences describe associations in its data, not the probability that a particular passage has a given author. The linked [vocabulary FAQ](https://gptzero.me/ai-vocabulary) says changing flagged wording may or may not change the detector score. This dated list does not establish the features or weights used by Basic Scan Model 4.9b. The editing suggestions here are our own contextual guidance.
+The initial ten entries are short excerpts from [GPTZero's October 7, 2024 article](https://gptzero.me/news/most-common-ai-vocabulary/), checked September 9, 2026. Its reported frequency differences describe associations in its data, not the probability that a particular passage has a given author. The linked [vocabulary FAQ](https://gptzero.me/ai-vocabulary) says changing flagged wording may or may not change the detector score. These dated lists do not establish the features or weights used by Basic Scan Model 4.9b. The editing suggestions here are our own contextual guidance.
 
-## Review list
+## Initial GPTZero list
 
 | Expression to review | Edit when useful; preserve when necessary |
 | --- | --- |
@@ -21,6 +21,26 @@ The ten entries below are short excerpts from [GPTZero's October 7, 2024 article
 | “Tragically” | Keep it when it expresses the author's intended tone; remove it when it imposes unsupported emotion. |
 | “Impacting” | Name the actual effect if it is known. Preserve a precise physical or domain-specific meaning. |
 
+## Additional words and constructions
+
+Checked September 9, 2026. **Corpus observation** identifies usage differences in a particular research dataset. **Editorial heuristic** identifies a possible reading problem without a measured frequency or detector benefit here. Neither is a reason to rewrite an otherwise useful sentence.
+
+| Review candidates | Evidence | Useful editing question |
+| --- | --- | --- |
+| delve; intricate; underscore; intricacies; realm; groundbreaking; garnered | [Juzek and Ward, COLING 2025](https://aclanthology.org/2025.coling-main.426.pdf), abstract and Appendix A: corpus observations | Can the sentence name the actual activity, relationship or achievement? Preserve a literal character name, security domain or other precise use. |
+| comprehensive; crucial; additionally; notably | [Kobak et al., 2025](https://arxiv.org/html/2406.07016v5), §2.2: corpus observations | Does the adjective have a supported scope or necessity claim? Does the transition help the reader follow the argument? Keep it when it does. |
+| “dive in”; “it's important to note that” | [GPTZero's November 2025 writing guide](https://gptzero.me/news/avoid-ai-detection-as-a-writer/), Tip 3: editorial heuristic | Can the reader start with the point itself? Keep the substantive warning or exception that follows. |
+| “a myriad of” | Same GPTZero guide: editorial heuristic | Would a plain description of the relevant items be clearer? Do not invent a count. |
+| tapestry; robust | [Humanizer at `9862685`](https://github.com/blader/humanizer/blob/9862685f575c65a8247f90369951df1b3416e3d6/SKILL.md), §12: editorial heuristic | Is the metaphor or praise doing useful work? Keep literal objects and technical properties; explain a robustness claim only as far as the evidence permits. |
+| “at its core”; not just X but Y | Same Humanizer, §§1 and 3: editorial heuristic | Does the emphasis add a claim, or does the contrast correct a real misunderstanding? Keep distinctions the reader needs. |
+| “experts argue”; “industry reports” | Same Humanizer, §17: editorial heuristic | Can the statement identify its real source and what that source found? Do not invent authority or erase an existing attribution. |
+| “I hope this helps”; “Great question” | Same Humanizer, §22: editorial heuristic | Is conversational wrapping left in a standalone article or technical answer? Preserve greetings or closings that suit an actual correspondence. |
+| “could potentially” | Same Humanizer, §9: editorial heuristic | Are two qualifiers doing one job? Simplify redundancy only while preserving the source's uncertainty. |
+
+The academic studies concern abstracts, not our technical replies. The COLING paper's vocabulary-preference experiment did not find a significant overall preference difference; neither paper establishes a GPTZero reduction from these edits. Kobak et al. explicitly limit their method to corpus-level inference. Ordinary prepositions also occur in that study's marker set; importing the entire set as prohibited wording would damage useful prose.
+
+A [BEA 2025 study](https://aclanthology.org/2025.bea-1.71.pdf) separately tested classifiers built from historical GPTZero vocabulary lists on student and generated essays. Its results depended on the generator; it did not run GPTZero's detector on vocabulary-removal rewrites. Use that as a reason to retain model, date and domain scope, not as a score claim for this checklist.
+
 ## Apply it to a draft
 
 Review case-insensitive whole words and phrases in the explanatory prose, including obvious grammatical variants when context warrants. Do not flag arbitrary substrings inside identifiers or expand a source observation into a ban on an entire word family. Treat exact quotations, titles, code and standalone commands as protected; inline technical terms remain part of the prose and require contextual judgment.
@@ -33,4 +53,6 @@ If a vocabulary-only hypothesis finds no applicable matches, record a no-op. Do 
 
 On September 9, 2026, a separate reviewer checked all four frozen prose inputs in the [paired-example study](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/paired-editing-examples-1/outputs): HTTP baseline and candidate, and article baseline and candidate. Case-insensitive checks with word boundaries and normalized apostrophes found zero matches for the ten entries or the variants explicitly named in the source article. The input hashes matched the saved study.
 
-That is an offline applicability check. All four existing Basic 4.9b observations remain 100% AI / 0% mixed / 0% human. No text changed and no new detector scans ran for this check. The list offers no specific edit for those cases; its benefit for detector scores is unmeasured.
+That is an offline applicability check of the initial list. All four existing Basic 4.9b observations remain 100% AI / 0% mixed / 0% human. No text changed and no new detector scans ran for that check. The initial list offers no specific edit for those cases; its benefit for detector scores is unmeasured.
+
+A separate follow-up on the same date checked all 23 additional entries against those four unchanged inputs, including ordinary inflections, normalized apostrophes, flexible whitespace and the contrast construction. It also found zero matches. Manual review of broader negations and contrasts retained the HTTP conditions and the article's necessary distinctions about measurement scope, quotations, confidence labels and validation. This expansion supplied no justified edit for those cases either; no new scan or detector benefit is claimed.

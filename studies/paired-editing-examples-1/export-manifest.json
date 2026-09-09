@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "source_summary_sha256": "9dfd48ede4a7ade28b3bfb635f3a5398a3eed4b41d4ca625c3e79107bb6a7e0c",
+  "source_state_sha256": "52998433faf8c12af649a65238bbabd98ede9ad14201d76a0e7185096d85da1b",
+  "artifacts": [
+    {
+      "path": "method/incumbent.txt",
+      "sha256": "9f248ac84c0fa266e8fc3caf236a2296adea428beeeeda4465ce7eb5b97e4fa2",
+      "origin_sha256": "9f248ac84c0fa266e8fc3caf236a2296adea428beeeeda4465ce7eb5b97e4fa2",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "method/candidate.txt",
+      "sha256": "4e503071a4b28fdeb0b563800a73ef54a99a1101acc27282a4cef3046d8d8e6b",
+      "origin_sha256": "4e503071a4b28fdeb0b563800a73ef54a99a1101acc27282a4cef3046d8d8e6b",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "method/operator.txt",
+      "sha256": "05657d62d807fa56679d1be6f3f56cc2206fd655f044da356c769c8b6086423d",
+      "origin_sha256": "05657d62d807fa56679d1be6f3f56cc2206fd655f044da356c769c8b6086423d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "method/config.json",
+      "sha256": "e801bd7511c213facccc9c88905a0eb8ad4b73992a063a34970a84511607ab86",
+      "origin_sha256": "e801bd7511c213facccc9c88905a0eb8ad4b73992a063a34970a84511607ab86",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "method/generation.json",
+      "sha256": "5280925f19c707dde89d2066e80f43a1b1771aca169c10ef1f337bc495204780",
+      "origin_sha256": "5280925f19c707dde89d2066e80f43a1b1771aca169c10ef1f337bc495204780",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "method/description.json",
+      "sha256": "26ba5bd4ac2b01467405a427266a80fd45433ff17dccaec676058de254c9b4fe",
+      "transform": "public_fields"
+    },
+    {
+      "path": "sources/development.json",
+      "sha256": "d59d6fb6edb5a2b1dcd9dfdabfc16ecf30d162460086dce77c0a91e6514ec365",
+      "origin_sha256": "d59d6fb6edb5a2b1dcd9dfdabfc16ecf30d162460086dce77c0a91e6514ec365",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "reviews/mapping.json",
+      "sha256": "5357b5f9fabebd6e0cbf6da184e05721a68990ef886516c61e275a744f421848",
+      "origin_sha256": "5357b5f9fabebd6e0cbf6da184e05721a68990ef886516c61e275a744f421848",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "reviews/masked-verdict.json",
+      "sha256": "e39d608307fca19599bbb5ea7df5ac734d4322f7cf625315a7c32e0e36c8fac6",
+      "transform": "public_fields"
+    },
+    {
+      "path": "reviews/baseline-claim-map.json",
+      "sha256": "b2111ff22e52c89f513068ae03a10f3e71100943280cb04ba95a117f1530b461",
+      "origin_sha256": "778218383bdeef66014319e56e55dd0fd31cee2a3035fd336ef51ab16f36e479",
+      "transform": "public_path_substitution; claim findings and text hashes preserved"
+    },
+    {
+      "path": "reviews/candidate-preparation-and-claims.md",
+      "sha256": "48216475a462fbef685ddad36cdd4110e569f71cce1517226a3989b9005457ff",
+      "origin_sha256": "48216475a462fbef685ddad36cdd4110e569f71cce1517226a3989b9005457ff",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-baseline-full.txt",
+      "sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+      "origin_sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-baseline-prose.txt",
+      "sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+      "origin_sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-baseline-code-ranges.json",
+      "sha256": "d5cd52fa28180f2e05afe32021590cb23fbd4172f9c466c284f00a6e4a0cae30",
+      "origin_sha256": "d5cd52fa28180f2e05afe32021590cb23fbd4172f9c466c284f00a6e4a0cae30",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-baseline/submitted.txt",
+      "sha256": "9f0b6b6efa814eed7a68181500baba749432cc8b408c04d5bbc914003480652f",
+      "origin_sha256": "9f0b6b6efa814eed7a68181500baba749432cc8b408c04d5bbc914003480652f",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-baseline/editor-before.txt",
+      "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "origin_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-baseline/editor-after.txt",
+      "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "origin_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-candidate-full.txt",
+      "sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+      "origin_sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-candidate-prose.txt",
+      "sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+      "origin_sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/http-candidate-code-ranges.json",
+      "sha256": "f2f223c07090e0d46de355da2568d3249f324c886de0c8dd50eabba679ac7ded",
+      "origin_sha256": "f2f223c07090e0d46de355da2568d3249f324c886de0c8dd50eabba679ac7ded",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-candidate/submitted.txt",
+      "sha256": "2beba61ab8c037973892d5a94cc8936a04dba7c533a276db1dd6d3d031209dfc",
+      "origin_sha256": "2beba61ab8c037973892d5a94cc8936a04dba7c533a276db1dd6d3d031209dfc",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-candidate/editor-before.txt",
+      "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "origin_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/http-candidate/editor-after.txt",
+      "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "origin_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-baseline-full.txt",
+      "sha256": "12559b91861d85bf3b8618bb88608770bc175cf39269016024a44567e2f4e827",
+      "origin_sha256": "12559b91861d85bf3b8618bb88608770bc175cf39269016024a44567e2f4e827",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-baseline-prose.txt",
+      "sha256": "63ee07c294304523347c5e67477013ab8deb315a3c9344c526977f62966dc05f",
+      "origin_sha256": "63ee07c294304523347c5e67477013ab8deb315a3c9344c526977f62966dc05f",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-baseline-code-ranges.json",
+      "sha256": "6680fa97b8f73a08c0acf39f3b103aac7cd3b44b2b7b10a910d702fe5f0e1b22",
+      "origin_sha256": "6680fa97b8f73a08c0acf39f3b103aac7cd3b44b2b7b10a910d702fe5f0e1b22",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-baseline/submitted.txt",
+      "sha256": "2a861837160bdcb2d9350f06ae6f3ecea347f3d8ff11378fdbf8b49944f83632",
+      "origin_sha256": "2a861837160bdcb2d9350f06ae6f3ecea347f3d8ff11378fdbf8b49944f83632",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-baseline/editor-before.txt",
+      "sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88",
+      "origin_sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-baseline/editor-after.txt",
+      "sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88",
+      "origin_sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-candidate-full.txt",
+      "sha256": "169476695a65185ea1107f29c22860775415c1664de6a65251acce0c33018a27",
+      "origin_sha256": "169476695a65185ea1107f29c22860775415c1664de6a65251acce0c33018a27",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-candidate-prose.txt",
+      "sha256": "b1d395c68a1624ff2d19e74b66aa02c61d7ca9939741b36826b7af50ab17e8d6",
+      "origin_sha256": "b1d395c68a1624ff2d19e74b66aa02c61d7ca9939741b36826b7af50ab17e8d6",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "outputs/article-candidate-code-ranges.json",
+      "sha256": "db5afbd719447032d6a28a2985015d355ec1b88064cad4d818cca49f591a44be",
+      "origin_sha256": "db5afbd719447032d6a28a2985015d355ec1b88064cad4d818cca49f591a44be",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-candidate/submitted.txt",
+      "sha256": "6361ada5d92266b3d8e74f9794cea9ec288503d9cfc96ad1cc17971074358f34",
+      "origin_sha256": "6361ada5d92266b3d8e74f9794cea9ec288503d9cfc96ad1cc17971074358f34",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-candidate/editor-before.txt",
+      "sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43",
+      "origin_sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "measurements/article-candidate/editor-after.txt",
+      "sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43",
+      "origin_sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "results.json",
+      "sha256": "6ddba5e4d55878209e479c764c2416331a6b27ea3fa66f1fffde581e9a899c11",
+      "transform": "public_fields"
+    }
+  ],
+  "omitted": [
+    "Account UI/screenshots, detector document/session URLs, local paths, unnecessary agent identifiers, unreleased holdout content, full private state."
+  ],
+  "notes": "Exact public text files preserve source bytes. Metadata is selected from completed receipts and frozen state. README is editorial documentation outside this copied-artifact manifest."
+}

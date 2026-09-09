@@ -1,0 +1,10 @@
+{
+  "prose-dev-etag": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "prose-dev-x-article": {
+    "A": "baseline",
+    "B": "candidate"
+  }
+}

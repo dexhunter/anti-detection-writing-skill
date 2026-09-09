@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "status": "development_no_improvement",
+  "scope": "prose_only",
+  "observations": [
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T14:18:56.742Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "unit": "document_confidence_percent",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_scope": "prose_only",
+      "case": "http",
+      "arm": "baseline",
+      "status": "complete",
+      "words_charged": 123,
+      "full_message": {
+        "path": "outputs/http-baseline-full.txt",
+        "sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d"
+      },
+      "detector_input": {
+        "path": "outputs/http-baseline-prose.txt",
+        "sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d"
+      },
+      "code_ranges": {
+        "path": "outputs/http-baseline-code-ranges.json",
+        "sha256": "d5cd52fa28180f2e05afe32021590cb23fbd4172f9c466c284f00a6e4a0cae30"
+      },
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/http-baseline/submitted.txt",
+          "sha256": "9f0b6b6efa814eed7a68181500baba749432cc8b408c04d5bbc914003480652f"
+        },
+        "editor_before": {
+          "path": "measurements/http-baseline/editor-before.txt",
+          "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2"
+        },
+        "editor_after": {
+          "path": "measurements/http-baseline/editor-after.txt",
+          "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2"
+        }
+      },
+      "private_visible_result_sha256": "8bf2342d48bda021a0d6764dc8abdf0be94b8bb1fbf893d4e94aeb225319e56f",
+      "private_screenshot_sha256": "3da185d647e80767105a929f831d8b5a49382661539637a937c53517c8bdea84"
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T14:19:30.138Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "unit": "document_confidence_percent",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_scope": "prose_only",
+      "case": "http",
+      "arm": "candidate",
+      "status": "complete",
+      "words_charged": 119,
+      "full_message": {
+        "path": "outputs/http-candidate-full.txt",
+        "sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b"
+      },
+      "detector_input": {
+        "path": "outputs/http-candidate-prose.txt",
+        "sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b"
+      },
+      "code_ranges": {
+        "path": "outputs/http-candidate-code-ranges.json",
+        "sha256": "f2f223c07090e0d46de355da2568d3249f324c886de0c8dd50eabba679ac7ded"
+      },
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/http-candidate/submitted.txt",
+          "sha256": "2beba61ab8c037973892d5a94cc8936a04dba7c533a276db1dd6d3d031209dfc"
+        },
+        "editor_before": {
+          "path": "measurements/http-candidate/editor-before.txt",
+          "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3"
+        },
+        "editor_after": {
+          "path": "measurements/http-candidate/editor-after.txt",
+          "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3"
+        }
+      },
+      "private_visible_result_sha256": "1611ac011c31c42b4bfb8fc42460437ba1290f0f4a6b810c53c29c6f74c8a72d",
+      "private_screenshot_sha256": "e5b541a517376712a99cb48cdcfa82bfd661f84ae3c6fb32a9e7906d4bf66997"
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T14:20:12.710Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "unit": "document_confidence_percent",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_scope": "prose_only",
+      "case": "article",
+      "arm": "baseline",
+      "status": "complete",
+      "words_charged": 574,
+      "full_message": {
+        "path": "outputs/article-baseline-full.txt",
+        "sha256": "12559b91861d85bf3b8618bb88608770bc175cf39269016024a44567e2f4e827"
+      },
+      "detector_input": {
+        "path": "outputs/article-baseline-prose.txt",
+        "sha256": "63ee07c294304523347c5e67477013ab8deb315a3c9344c526977f62966dc05f"
+      },
+      "code_ranges": {
+        "path": "outputs/article-baseline-code-ranges.json",
+        "sha256": "6680fa97b8f73a08c0acf39f3b103aac7cd3b44b2b7b10a910d702fe5f0e1b22"
+      },
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/article-baseline/submitted.txt",
+          "sha256": "2a861837160bdcb2d9350f06ae6f3ecea347f3d8ff11378fdbf8b49944f83632"
+        },
+        "editor_before": {
+          "path": "measurements/article-baseline/editor-before.txt",
+          "sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88"
+        },
+        "editor_after": {
+          "path": "measurements/article-baseline/editor-after.txt",
+          "sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88"
+        }
+      },
+      "private_visible_result_sha256": "3a369ee7113e8f3dc2ae7d42635494384f6a3134144cd9083643c9b37b513413",
+      "private_screenshot_sha256": "1d7fb687225c5414bc29925af33ca401c2b77fe3f82eafb65b56cb1027e6a031"
+    },
+    {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T14:20:52.177Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "unit": "document_confidence_percent",
+      "short_text_warning": false,
+      "warnings": [],
+      "scan_scope": "prose_only",
+      "case": "article",
+      "arm": "candidate",
+      "status": "complete",
+      "words_charged": 558,
+      "full_message": {
+        "path": "outputs/article-candidate-full.txt",
+        "sha256": "169476695a65185ea1107f29c22860775415c1664de6a65251acce0c33018a27"
+      },
+      "detector_input": {
+        "path": "outputs/article-candidate-prose.txt",
+        "sha256": "b1d395c68a1624ff2d19e74b66aa02c61d7ca9939741b36826b7af50ab17e8d6"
+      },
+      "code_ranges": {
+        "path": "outputs/article-candidate-code-ranges.json",
+        "sha256": "db5afbd719447032d6a28a2985015d355ec1b88064cad4d818cca49f591a44be"
+      },
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/article-candidate/submitted.txt",
+          "sha256": "6361ada5d92266b3d8e74f9794cea9ec288503d9cfc96ad1cc17971074358f34"
+        },
+        "editor_before": {
+          "path": "measurements/article-candidate/editor-before.txt",
+          "sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43"
+        },
+        "editor_after": {
+          "path": "measurements/article-candidate/editor-after.txt",
+          "sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43"
+        }
+      },
+      "private_visible_result_sha256": "468267435c60624f4f46e2ad30b1ee1d9b94d1be13d2f455d1f4db7b8c51ce56",
+      "private_screenshot_sha256": "1d9087aa2558c7cd12f5d59fa146bd2dcab0a2ad44ec3eada0a9a542f7f66774"
+    }
+  ],
+  "summary": {
+    "cases": 2,
+    "completed_scans": 4,
+    "quality_passed_cases": 2,
+    "candidate_preferred_cases": 2,
+    "confidence_reductions": 0,
+    "mean_ai_reduction": 0,
+    "word_credits_charged": 1374,
+    "new_writing_rule_promoted": false,
+    "public_article_or_reply_updated": false
+  },
+  "confirmation": {
+    "preselected_cases": 2,
+    "corpus_sha256": "a397528276c7a69215c1b2cb26d94e46f27fa0aae7328d736fa0c50ca8f28c3b",
+    "released_to_output_writers": false,
+    "outputs": 0,
+    "scans": 0,
+    "status": "not_unlocked_after_no_development_improvement"
+  },
+  "limitations": [
+    "Selected reused development cases; not unseen validation.",
+    "All results are saved operator UI observations, not authenticated service exports.",
+    "Screenshots show result panels and visible excerpts; complete editor files and UI text were checked separately.",
+    "Historical article screenshot confidences remain source facts and are not outcomes of this study.",
+    "Code exclusions were predeclared and independently approved. Full-message and measured-prose hashes differ for article only.",
+    "Free workflow initially displayed Advanced with an upgrade prompt; after completion the Basic view was selected and its up-to-date native result saved. One scan charge per text; no upgrade accepted.",
+    "Large-model backend identifier/settings details and monetary costs unavailable.",
+    "Fresh-agent separation on a shared filesystem is operational, not OS isolation."
+  ]
+}

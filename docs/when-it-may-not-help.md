@@ -26,7 +26,7 @@ Include a quotation only when it identifies a concern the reply answers. Do not 
 
 In ADK #1956, the rewrite removed an unverified screenshot description and preserved uncertainty about historical deprecation. The [baseline](../studies/inputs/quote-transfer-2/adk-1956/baseline.txt), [plain revision](../studies/inputs/quote-transfer-2/adk-1956/plain.txt), and [quotation variant](../studies/inputs/quote-transfer-2/adk-1956/quoted.txt) still scored 100%. Their displayed lengths were 82, 78, and 84 words; all carried the under-100-word warning. Qwen #1251 also carried that warning at 90 and 99 words.
 
-Keep warnings with the result. Do not pad a concise answer or remove necessary code to change the detector's input length.
+Keep warnings with the result. Do not pad concise prose to meet a detector minimum. Under prose-only measurement, keep code in the separately reviewed full message and retain every explanatory sentence and inline identifier in the scan.
 
 ## A lower score can accompany incorrect advice
 
@@ -74,3 +74,5 @@ Further unsuccessful structural rewrites and formatting controls, and the separa
 The [full-article model transfer](../studies/article-model-transfer-1/README.md) also failed to produce an eligible measured revision. Two local generations failed; a separately declared recovery produced a factually correct article that the independent reviewer found less readable than the control. That candidate was left unscanned. A readable partial output, successful evidence saving, or repaired claim inventory does not establish that the complete writing method succeeded.
 
 In the [sequential-section experiment](../studies/windowed-article-1/README.md), both articles passed factual and suitability review, but the control was slightly preferred. The new article remained unscanned. One section writer had not received a study-date detail from the supporting notes, so the comparison partly reflects a preparation difference. More writing calls cannot compensate for evidence missing from their inputs.
+
+The [paired-editing-example trial](../studies/paired-editing-examples-1/README.md) measured prose separately from code. Three fixed synthetic revision examples produced two quality-passing candidates that a masked LLM reviewer slightly preferred. Both the HTTP and full-article prose pairs nevertheless stayed at 100% AI / 0% mixed / 0% human in all four Basic 4.9b scans. Only the article's installation command was excluded; its title, explanations and caption remained. This is a new scoped comparison, not evidence that code removal or the demonstration method lowers confidence. No writing rule was promoted.

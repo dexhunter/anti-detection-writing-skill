@@ -1,0 +1,5 @@
+An ETag lets the client validate a stored response. This validation still sends a request.
+
+The server sends an ETag with the JSON response. On a later conditional GET, the client includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, so the client can reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.
+
+To allow reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not guarantee that the underlying data will remain unchanged for 60 seconds.

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "word_count_method": "Whitespace-delimited words, including title, caption, command and URLs.",
+  "review": "Writer self-check only; no detector testing or publication.",
+  "files": [
+    {
+      "path": "../outputs/http-baseline-full.txt",
+      "sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+      "words": 123,
+      "max_words": 170,
+      "claims": {
+        "DTC1": "Preserved: ETag validates reuse of a stored response.",
+        "DTC2": "Preserved: server supplies ETag; client sends it in If-None-Match on a later conditional GET.",
+        "DTC3": "Preserved: selected-representation match returns bodyless 304 and permits stored-body reuse; otherwise successful GET scope explicit.",
+        "DTC4": "Preserved: nonmatching tag returns current JSON with 200 within successful GET scope.",
+        "DTC5": "Preserved: conditional validation requires a request.",
+        "DTC6": "Preserved: illustrative freshness policy permits reuse without validation, subject to other caching rules.",
+        "DTC7": "Preserved: freshness does not guarantee unchanged underlying data for 60 seconds."
+      },
+      "protected_literals": "All preserved byte-for-byte.",
+      "cuts_or_corrections": "None."
+    },
+    {
+      "path": "../outputs/article-baseline-full.txt",
+      "sha256": "12559b91861d85bf3b8618bb88608770bc175cf39269016024a44567e2f4e827",
+      "words": 580,
+      "max_words": 600,
+      "claims": {
+        "AX1": "Preserved: repeatable reader-focused editing, fact preservation, flow and review; comparison optional without guarantee.",
+        "AX2": "Preserved: one reply, email or documentation section; editing and measurement remain separate.",
+        "AX3": "Preserved: exact standalone installation command, agent selection and current-project default.",
+        "AX4": "Preserved: original text, audience, purpose, technical question, documentation and version constraints.",
+        "AX5": "Preserved: editing prompt requires readability, facts/code/qualifications, removal of repetition/background, explained corrections and separate review of exact final text.",
+        "AX6": "Preserved: prerequisite, pronoun and repetition examples with a meaning check.",
+        "AX7": "Updated as expressly required: compare explanatory prose separately from code, retain inline values, preserve measurement records and adverse results, and separately review code/full-message correctness. Update is explicitly distinguished from historical study scope.",
+        "AX8": "Preserved: own detector access and supported browser required; neither supplied; correctness/readability assessed separately.",
+        "AX9": "Preserved: saved Qwen Code pair, fresh September 6, 2026 recheck, Basic Scan Model 4.9b and exact confidence triplets.",
+        "AX10": "Preserved: screenshots show completed historical recheck, not article scores or a new packaged-skill test.",
+        "AX11": "Preserved: sole intervention is a short relevant asker quotation; answer body unchanged; content and length both changed; rewriting benefit not established.",
+        "AX12": "Preserved: mixed is not human confidence; lower AI confidence does not establish human authorship.",
+        "AX13": "Preserved: dated development sample only, 5 of 10 quotation reductions and 0 of 15 plain-rewrite reductions.",
+        "AX14": "Preserved: separate LLM reviewers, eight clearer/seven equivalent, explicitly not human preference ratings.",
+        "AX15": "Preserved: completed UI observations; current packaged skill still lacks prospective validation for reliable detector performance.",
+        "AX16": "Preserved: quotations must help answer; clear correct edits can remain useful with unchanged scores, subject to publication requirements.",
+        "AX17": "Preserved: try a draft, share successes/failures, repository contents and both exact destination URLs.",
+        "AX18": "Preserved: complete before/after caption with Qwen body/quotation, native confidence triplets, mode/model/date, genuine panels and partial inputs, full-input repository link location and content/length change."
+      },
+      "protected_literals": "All preserved byte-for-byte; installation command remains an independent standalone line.",
+      "cuts_or_corrections": "No claim cuts or technical corrections. AX7 is the supplied user-authorized instruction update; historical results retain their original scope."
+    }
+  ]
+}

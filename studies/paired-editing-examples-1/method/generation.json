@@ -1,0 +1,6 @@
+{
+  "model": "Inherited Codex agent model; exact backend model identifier unavailable",
+  "settings": "Inherited parent configuration; fresh separate agent per arm, both development cases in each context; sampling and token usage not exposed",
+  "operator_sha256": "05657d62d807fa56679d1be6f3f56cc2206fd655f044da356c769c8b6086423d",
+  "context": "fresh"
+}

@@ -1,0 +1,35 @@
+{
+  "mechanism": "Three fixed synthetic source/revision/illustrative-judgment demonstrations, two useful revisions and one accurate but less useful revision; at most two diagnosed target reading problems and exactly one complete target draft.",
+  "selected_proposals": 1,
+  "target_retries": 0,
+  "writer_context": "One fresh agent per arm, both development cases per agent. Independent masked quality judge; coordinator selected the single proposed method after reviewing the illustrative judgments.",
+  "comparison_limits": [
+    "Added examples, illustrative judgments, diagnosis instruction and extra prompt context are bundled.",
+    "English synthetic editorial examples adapt a Japanese-advertising human-preference study; no human-annotation or detector-reproduction claim.",
+    "No local paraphrasing model or paid detector credits used."
+  ],
+  "sources": [
+    {
+      "title": "AdParaphrase",
+      "url": "https://aclanthology.org/2025.findings-naacl.78.pdf",
+      "sections": [
+        "4.2",
+        "Appendix E"
+      ],
+      "application": "Fixed positive/non-improving demonstration conditions motivate testing; paper does not test detectors."
+    },
+    {
+      "title": "Authors repository",
+      "url": "https://github.com/CyberAgentAILab/AdParaphrase"
+    }
+  ],
+  "scope": "prose_only",
+  "incumbent_commit": "400482416d8e5ce875529c9f17245cf1477b8cdd",
+  "prior_work_correction": {
+    "scope": "Correction to broad novelty framing, identified after measurement by independent auditor. Frozen proposal/selection/output/scan artifacts remain unchanged.",
+    "prior_work": "September 7 local round8 embedded one reviewed Python source/edit pair and required an example-to-target edit map.",
+    "difference": "Current trial uses three fixed synthetic evidence/original/revision/judgment examples, including one less-useful revision, and a brief target diagnosis. It is a variant of demonstration-conditioned editing, not its first use.",
+    "prior_protocol_sha256": "4a6e26471b04a201ebac9bd11e26ff06afc2c36779efe1e9b9375c75581b2822",
+    "prior_candidate_sha256": "6bf9de7c76624a060a7bafffdcf3674ced88c60a43db2c1337132d2a11a933f4"
+  }
+}

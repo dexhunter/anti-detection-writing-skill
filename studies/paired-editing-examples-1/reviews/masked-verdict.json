@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T14:17:12.973467+00:00",
+  "detector_scores_withheld": true,
+  "detector_scores_withheld_scope": "New trial scores only. Historical article scan results were reviewed as required source facts.",
+  "input_scope": "Only the frozen files inside quality-packet were read. No parent mappings, methods, writer notes, prior results or holdouts were consulted. No scans, publications or candidate edits were performed.",
+  "assessment_basis": "Semantic review against each supplied question, original, source facts, claim ledger and protected terms; exact file hashing and reconstruction of every prose file from its approved exclusions. Installation was checked against the supplied source and exact required command, not executed.",
+  "word_count_method": "Whitespace-delimited count of the complete title, body, command and caption where present.",
+  "cases": [
+    {
+      "case_id": "prose-dev-etag",
+      "A_pass": true,
+      "B_pass": true,
+      "preference": "B",
+      "preference_strength": "slight",
+      "reason": "Both preserve all seven claims and the ordinary successful GET scope. B answers immediately that validation still sends a request, then explains validation and freshness in three clear paragraphs. A is also accurate and readable; its explicit otherwise-successful qualification is useful but not required to make B correct in this question.",
+      "perclaim_findings": [
+        {
+          "claim_id": "DTC1",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "The opening explains checking whether a stored response can be reused.",
+          "B_finding": "The opening identifies stored-response validation; the next paragraph explains its mechanism."
+        },
+        {
+          "claim_id": "DTC2",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "The server sends the ETag with JSON and the later conditional GET sends that value in If-None-Match.",
+          "B_finding": "The server/client direction and both header names are correct."
+        },
+        {
+          "claim_id": "DTC3",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Matching the selected representation yields 304 Not Modified without a body and permits stored-body reuse; otherwise-successful GET scope is explicit.",
+          "B_finding": "The same matching, 304, no-body and reuse mechanism is preserved. The ordinary successful GET scope supplied by the question is sufficient; an exhaustive error-status qualification is unnecessary."
+        },
+        {
+          "claim_id": "DTC4",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "A nonmatching tag is expressly scoped to a successful GET returning 200 OK with current JSON.",
+          "B_finding": "The nonmatch sentence likewise preserves the successful-GET qualification and current JSON."
+        },
+        {
+          "claim_id": "DTC5",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Explicitly says validation still requires a request.",
+          "B_finding": "Explicitly answers the request-elimination question in the second sentence."
+        },
+        {
+          "claim_id": "DTC6",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Appropriate freshness, illustrative Cache-Control: max-age=60, other caching rules and reuse while fresh are all retained.",
+          "B_finding": "The same qualified freshness mechanism is retained, including the other-caching-rules limitation."
+        },
+        {
+          "claim_id": "DTC7",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Expressly denies a guarantee that underlying data remains unchanged for 60 seconds.",
+          "B_finding": "Expressly denies the same 60-second origin-data guarantee."
+        }
+      ],
+      "full_message_consistency": "Both preserve every protected term and connect matching, body reuse, validation requests and freshness without conflating them. Neither turns the freshness period into a guarantee of unchanged origin data.",
+      "naturalness_readability_tone": {
+        "A": "Clear, concise and professional. The opening is accessible; the first paragraph is slightly denser.",
+        "B": "Clear, concise and professional. Front-loading the request limitation makes the answer easier to use."
+      },
+      "code_correctness": "No independent command or code lines are present. Header names, status labels and the inline Cache-Control value are correctly retained as explanatory prose.",
+      "code_ranges_approved": true,
+      "code_ranges_reason": "Both range lists are empty, and each prose file exactly equals its full message; no explanatory or inline technical text was excluded.",
+      "artifacts": {
+        "A": {
+          "full_message_sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+          "prose_sha256": "2e2335d7d71641be0773f1b19f96ce7d21c2a551be2a2d3b59623b1a24b2ab3d",
+          "code_ranges_sha256": "d5cd52fa28180f2e05afe32021590cb23fbd4172f9c466c284f00a6e4a0cae30",
+          "full_word_count": 123,
+          "prose_word_count": 123,
+          "hashes_match_packet": true,
+          "code_ranges": [],
+          "excluded_text": [],
+          "prose_exactly_matches_exclusions": true,
+          "code_ranges_approved": true
+        },
+        "B": {
+          "full_message_sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+          "prose_sha256": "27f245a7f974a9c7197e326d5c6d2fd510725bf1851350da89948d20efff6d7b",
+          "code_ranges_sha256": "f2f223c07090e0d46de355da2568d3249f324c886de0c8dd50eabba679ac7ded",
+          "full_word_count": 119,
+          "prose_word_count": 119,
+          "hashes_match_packet": true,
+          "code_ranges": [],
+          "excluded_text": [],
+          "prose_exactly_matches_exclusions": true,
+          "code_ranges_approved": true
+        }
+      },
+      "blocking_findings": []
+    },
+    {
+      "case_id": "prose-dev-x-article",
+      "A_pass": true,
+      "B_pass": true,
+      "preference": "B",
+      "preference_strength": "slight",
+      "reason": "Both are complete, accurate, within 600 words, and preserve the dated study facts and updated prose-only measurement request. B more directly introduces the skill, explicitly dates the development cohort to September 5–6, and makes the independent reviewer requirement for code and the complete message clearer. These are clarity improvements, not missing factual requirements in A.",
+      "perclaim_findings": [
+        {
+          "claim_id": "AX1",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Preserves reader needs, facts, flow and review; comparison is optional and no lower score is promised.",
+          "B_finding": "Preserves the same process and explicit absence of a guaranteed lower score."
+        },
+        {
+          "claim_id": "AX2",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Suggests one reply, email or documentation section and separates editing from optional prose measurement.",
+          "B_finding": "Gives the same small starting scope and expressly separates detector comparison."
+        },
+        {
+          "claim_id": "AX3",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "The full message contains the exact installation command on its own line, agent selection and current-project default.",
+          "B_finding": "The full message preserves the same command, agent selection and default scope."
+        },
+        {
+          "claim_id": "AX4",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "The heading requests context and original text; the body specifies audience, purpose, question, documentation and version constraints.",
+          "B_finding": "The heading and body preserve all of the same context requirements."
+        },
+        {
+          "claim_id": "AX5",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "The example requests readability, preservation of facts/code/qualifications, removal of repetition/background, explained factual corrections and separate review of the exact final text.",
+          "B_finding": "The example retains each of those editing and review requirements."
+        },
+        {
+          "claim_id": "AX6",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "All three useful edit examples remain, followed by a check that the advice means the same thing.",
+          "B_finding": "Retains the same three examples and meaning-preservation check."
+        },
+        {
+          "claim_id": "AX7",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Requests original/final explanatory prose in Basic Scan separately from code, retains inline identifiers and values, and records the same displayed model, exact inputs, all confidences, dates, warnings and unchanged/worse results. The earlier separate review of the exact final text and this code/complete-message correctness instruction together provide independent correctness review. Explicitly identifies the prose-only request as an update to the published example.",
+          "B_finding": "Preserves the same comparison records and prose/code separation, retains inline identifiers and qualifications, and explicitly asks a separate reviewer to check code and the complete final message. Identifies the instruction as an update that does not change historical results."
+        },
+        {
+          "claim_id": "AX8",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Requires the reader's detector access and an agent-supported browser, says the skill supplies neither, and separates correctness/readability from score.",
+          "B_finding": "Preserves all three limitations and the separate quality assessment."
+        },
+        {
+          "claim_id": "AX9",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Correctly reports the saved Qwen Code pair, September 6, 2026 recheck, Basic Scan Model 4.9b, and 100/0/0 to 1/99/0 AI/mixed/human triplets.",
+          "B_finding": "Preserves exactly the same historical identity, date, scan mode/model and triplets."
+        },
+        {
+          "claim_id": "AX10",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Expressly says screenshots are the completed saved recheck, not scores for this article, and that this repeated development case was not a new packaged-skill test.",
+          "B_finding": "Expressly limits screenshots to the completed recheck and denies attribution to this article or a new prospective packaged-skill test."
+        },
+        {
+          "claim_id": "AX11",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "States that one short relevant asker quotation was added while the answer body stayed identical; content and length changed, so no rewriting benefit is established.",
+          "B_finding": "Preserves the identical-body plus quotation comparison and correctly says it does not isolate a rewriting benefit."
+        },
+        {
+          "claim_id": "AX12",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Explicitly distinguishes 99% mixed from 99% human and says lower AI confidence does not establish human authorship.",
+          "B_finding": "Preserves both interpretation limits."
+        },
+        {
+          "claim_id": "AX13",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Retains 5 of 10 quotation reductions and 0 of 15 plain rewrites, expressly limiting these to the dated development sample. The nearby September 6 recheck anchors the historical discussion without substituting later totals, though the cohort dates are less explicit than B.",
+          "B_finding": "Retains both counts and explicitly identifies the September 5–6 development sample, supported by the packet's historical-scope source."
+        },
+        {
+          "claim_id": "AX14",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Preserves eight clearer and seven equivalent plain revisions, attributes ratings to separate LLM reviewers and denies human preference ratings.",
+          "B_finding": "Preserves the counts and LLM attribution and expressly says this is not a human preference study."
+        },
+        {
+          "claim_id": "AX15",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Retains completed UI scans and the absence of prospective validation for reliable detector performance.",
+          "B_finding": "Preserves both the completed-scan provenance and the packaged-skill validation limitation."
+        },
+        {
+          "claim_id": "AX16",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Limits quotation use to helping answer the question and keeps clear, correct unchanged-score edits subject to publication requirements.",
+          "B_finding": "Preserves the relevance condition and the same qualified advice about unchanged-score edits."
+        },
+        {
+          "claim_id": "AX17",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Invites a one-draft trial and feedback about improvement or failure; retains exact inputs, measured examples, unsuccessful cases and both destination URLs.",
+          "B_finding": "Preserves the same invitation, repository contents and both exact URLs."
+        },
+        {
+          "claim_id": "AX18",
+          "A_pass": true,
+          "B_pass": true,
+          "A_finding": "Includes a complete caption with Qwen identity, identical body plus relevant quotation, both native triplets, Basic Scan Model 4.9b, September 6, 2026 fresh recheck, genuine panels plus partial inputs, repository-linked complete inputs, and the content/length change. No article-score attribution.",
+          "B_finding": "Includes the same complete caption facts and keeps the historical scores attached to the Qwen pair rather than the article."
+        }
+      ],
+      "full_message_consistency": "Both include a title, complete article body, exact installation command, destination URLs and screenshot caption. Historical screenshot results remain distinct from the current measurement-instruction update and are never presented as scores for the article.",
+      "naturalness_readability_tone": {
+        "A": "Natural, professional and readable. Some history qualifications are concentrated in long paragraphs, and the development cohort date is referred to indirectly.",
+        "B": "Natural, professional and slightly tighter. The direct opening, explicit dated-evidence heading and separate-reviewer wording improve orientation without changing claims."
+      },
+      "code_correctness": "The sole command is byte-for-byte the required installation command in both full messages. It stands alone and is consistent with the retained installer instructions. No installation or external live verification was performed for this masked review.",
+      "code_ranges_approved": true,
+      "code_ranges_reason": "A [400,485) and B [387,472) remove only the independent installation command and its terminating newline. Reconstruction matches each prose file exactly. Titles, step labels, example editing and measurement requests, inline skill names/identifiers, explanations, historical evidence, URLs and full captions all remain.",
+      "artifacts": {
+        "A": {
+          "full_message_sha256": "12559b91861d85bf3b8618bb88608770bc175cf39269016024a44567e2f4e827",
+          "prose_sha256": "63ee07c294304523347c5e67477013ab8deb315a3c9344c526977f62966dc05f",
+          "code_ranges_sha256": "6680fa97b8f73a08c0acf39f3b103aac7cd3b44b2b7b10a910d702fe5f0e1b22",
+          "full_word_count": 580,
+          "prose_word_count": 574,
+          "hashes_match_packet": true,
+          "code_ranges": [
+            [
+              400,
+              485
+            ]
+          ],
+          "excluded_text": [
+            "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing\n"
+          ],
+          "prose_exactly_matches_exclusions": true,
+          "code_ranges_approved": true
+        },
+        "B": {
+          "full_message_sha256": "169476695a65185ea1107f29c22860775415c1664de6a65251acce0c33018a27",
+          "prose_sha256": "b1d395c68a1624ff2d19e74b66aa02c61d7ca9939741b36826b7af50ab17e8d6",
+          "code_ranges_sha256": "db5afbd719447032d6a28a2985015d355ec1b88064cad4d818cca49f591a44be",
+          "full_word_count": 564,
+          "prose_word_count": 558,
+          "hashes_match_packet": true,
+          "code_ranges": [
+            [
+              387,
+              472
+            ]
+          ],
+          "excluded_text": [
+            "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing\n"
+          ],
+          "prose_exactly_matches_exclusions": true,
+          "code_ranges_approved": true
+        }
+      },
+      "blocking_findings": []
+    }
+  ],
+  "reviewer": "separate masked LLM quality reviewer"
+}

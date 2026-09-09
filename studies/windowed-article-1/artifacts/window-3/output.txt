@@ -1,0 +1,5 @@
+What the development examples show
+
+The screenshots show a saved Qwen Code reply pair rechecked on September 6, 2026 in GPTZero Basic Scan, Model 4.9b: 100% AI / 0% mixed / 0% human before and 1% AI / 99% mixed / 0% human after. They show a repeated development case, not this article or a new prospective test of the packaged skill.
+
+Only a short, relevant quotation from the asker was added; the answer body stayed identical. Content and length both changed, so the comparison cannot isolate a rewriting benefit. A 99% mixed result does not mean 99% human, and lower confidence does not establish human authorship.

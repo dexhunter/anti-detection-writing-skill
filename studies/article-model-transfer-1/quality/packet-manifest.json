@@ -1,0 +1,19 @@
+{
+  "original_packet_hashes": {
+    "prepared_at": "2026-09-09T12:56:36.822200+00:00",
+    "files": {
+      "B.txt": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+      "A.txt": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+      "case.json": "b1aa702e9186c973382675e179d35348966edd574ea6bc5bc578ab3ab2dc0a28"
+    }
+  },
+  "exported_files": {
+    "A.txt": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+    "B.txt": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+    "case.json": "5eedd0e7c96028e322b04ff3dcc3bff2e3c48f1e59d999924c59bf2e4d68fbf1",
+    "verdict.json": "09c68a3ceba93b7b901baccfe0be858fa6f066d296442cc5b9feef11eb8df721",
+    "review.md": "3c5d028cae11c77108e43a49bb2846fbbc41dbce4a8f3afc0abac7148236cdce",
+    "arm-mapping.json": "18c6cc031cd4b5d78d93eb39adcd757b3c1dea7f53075617dee5cb44c3961f2a"
+  },
+  "note": "The original case hash differs after removal of private verification metadata. Neutral A/B text bytes match the exact reviewed packet. Arm mapping was applied after the masked verdict."
+}

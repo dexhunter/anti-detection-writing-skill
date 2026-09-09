@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "invocation_id": "f7109040-a3e4-4b43-99ea-cea3bd751af8",
+  "article_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+  "contract_sha256": "18ce51c4b6e9a514d4af970f90b449d6c14d4c58a75afbf3edbb6cba5b2f737e",
+  "source_claim_map_sha256": "686bb554ce86cbb5ef30d89ccdb153c450e7d4d6fb1a150cc60da992f4461542",
+  "assessment": "Stage C mechanical span and bounded-edit author self-check only; independent masked quality and preference judgment remains pending.",
+  "claims": [
+    {
+      "id": "AX1",
+      "contract": "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Anti-Detection Writing Skill lets your agent follow a repeatable editing process: understand what the reader needs, keep the facts intact, enhance flow, and review the result. You can also compare results using GPTZero.",
+          "start": 111,
+          "end": 330,
+          "utf8_byte_start": 111,
+          "utf8_byte_end": 330
+        }
+      ],
+      "edit_ids": []
+    },
+    {
+      "id": "AX2",
+      "contract": "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Begin with a reply, email, or documentation section.",
+          "start": 332,
+          "end": 384,
+          "utf8_byte_start": 332,
+          "utf8_byte_end": 384
+        },
+        {
+          "text": "3. Measure Detector Results If Needed.",
+          "start": 1240,
+          "end": 1278,
+          "utf8_byte_start": 1240,
+          "utf8_byte_end": 1278
+        }
+      ],
+      "edit_ids": []
+    },
+    {
+      "id": "AX3",
+      "contract": "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+          "start": 409,
+          "end": 493,
+          "utf8_byte_start": 409,
+          "utf8_byte_end": 493
+        },
+        {
+          "text": "Select your agent in the installer. Default installation uses the current project.",
+          "start": 495,
+          "end": 577,
+          "utf8_byte_start": 495,
+          "utf8_byte_end": 577
+        }
+      ],
+      "edit_ids": [
+        "C-F01"
+      ]
+    },
+    {
+      "id": "AX4",
+      "contract": "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "2. Provide context and original text.",
+          "start": 579,
+          "end": 616,
+          "utf8_byte_start": 579,
+          "utf8_byte_end": 616
+        },
+        {
+          "text": "Tell the agent who is reading and what they need to accomplish. If the text is technical, include the question and any relevant docs and version limits.",
+          "start": 618,
+          "end": 770,
+          "utf8_byte_start": 618,
+          "utf8_byte_end": 770
+        }
+      ],
+      "edit_ids": [
+        "C-W01"
+      ]
+    },
+    {
+      "id": "AX5",
+      "contract": "AX5: The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "\"Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections and get a separate review of the exact final text.\"",
+          "start": 777,
+          "end": 1038,
+          "utf8_byte_start": 777,
+          "utf8_byte_end": 1038
+        }
+      ],
+      "edit_ids": []
+    },
+    {
+      "id": "AX6",
+      "contract": "AX6: Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "The skill may adjust the text by moving prerequisites ahead of instructions, replacing vague pronouns, or cutting repeated explanations. Continually check that the advice still means the same thing.",
+          "start": 1040,
+          "end": 1238,
+          "utf8_byte_start": 1040,
+          "utf8_byte_end": 1238
+        }
+      ],
+      "edit_ids": [
+        "C-W02"
+      ]
+    },
+    {
+      "id": "AX7",
+      "contract": "AX7: Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "\"Compare original and final text using GPTZero Basic Scan with the same displayed model and record exact inputs, all three confidences, dates, and warnings. Record unchanged and worse results as well.\"",
+          "start": 1400,
+          "end": 1601,
+          "utf8_byte_start": 1400,
+          "utf8_byte_end": 1601
+        }
+      ],
+      "edit_ids": [
+        "C-M01"
+      ]
+    },
+    {
+      "id": "AX8",
+      "contract": "AX8: Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Live scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither.",
+          "start": 1280,
+          "end": 1398,
+          "utf8_byte_start": 1280,
+          "utf8_byte_end": 1398
+        },
+        {
+          "text": "Review correctness and readability separately from the score.",
+          "start": 1603,
+          "end": 1664,
+          "utf8_byte_start": 1603,
+          "utf8_byte_end": 1664
+        }
+      ],
+      "edit_ids": [
+        "C-M01",
+        "C-J01"
+      ]
+    },
+    {
+      "id": "AX9",
+      "contract": "AX9: A saved Qwen Code reply pair was freshly rechecked September 6, 2026 using GPTZero Basic Scan Model 4.9b: before AI100/Mixed0/Human0; after AI1/Mixed99/Human0.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "A fresh recheck of one saved Qwen Code reply showed 100% AI/0% mixed/0% human → 1% AI/99% mixed/0% human with GPTZero Basic Scan Model 4.9b on September 6, 2026.",
+          "start": 1688,
+          "end": 1849,
+          "utf8_byte_start": 1688,
+          "utf8_byte_end": 1851
+        }
+      ],
+      "edit_ids": [
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX10",
+      "contract": "AX10: The existing screenshots show that completed Qwen recheck, not this article or a new prospective test of the packaged skill.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Screenshots show these completed scans, not scans of this article. This recheck repeated a development case; it is not a new prospective test of the packaged skill.",
+          "start": 1850,
+          "end": 2014,
+          "utf8_byte_start": 1852,
+          "utf8_byte_end": 2016
+        }
+      ],
+      "edit_ids": [
+        "C-W03",
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX11",
+      "contract": "AX11: The measured change added one short relevant asker quotation while the answer body stayed identical. Content and length both changed; it does not isolate a rewriting benefit.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "The change involved adding one short relevant asker quote to an otherwise identical answer. The comparison changed content and length; this does not show benefits from rewriting alone.",
+          "start": 2016,
+          "end": 2200,
+          "utf8_byte_start": 2018,
+          "utf8_byte_end": 2202
+        }
+      ],
+      "edit_ids": [
+        "C-W04",
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX12",
+      "contract": "AX12: 99% mixed does not mean 99% human and lower confidence does not establish human authorship.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Scores of 99% mixed do not indicate 99% human. Lower AI confidence does not establish human authorship.",
+          "start": 2201,
+          "end": 2304,
+          "utf8_byte_start": 2203,
+          "utf8_byte_end": 2306
+        }
+      ],
+      "edit_ids": [
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX13",
+      "contract": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Among 10 quoted comparisons in the September 5–6, 2026 development sample, five reduced AI confidence; plain rewriting reduced AI confidence in 0 of 15 comparisons.",
+          "start": 2306,
+          "end": 2470,
+          "utf8_byte_start": 2308,
+          "utf8_byte_end": 2474
+        }
+      ],
+      "edit_ids": [
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX14",
+      "contract": "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Separate LLM reviewers rated eight plain edits as clearer and seven as equivalent. This was not a human preference study.",
+          "start": 2471,
+          "end": 2592,
+          "utf8_byte_start": 2475,
+          "utf8_byte_end": 2596
+        }
+      ],
+      "edit_ids": [
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX15",
+      "contract": "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Observations come from completed UI scans; the current packaged skill hasn't been prospectively validated for reliable detector performance.",
+          "start": 2593,
+          "end": 2733,
+          "utf8_byte_start": 2597,
+          "utf8_byte_end": 2737
+        }
+      ],
+      "edit_ids": [
+        "C-F02"
+      ]
+    },
+    {
+      "id": "AX16",
+      "contract": "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Use quotes when they help answer the question. Stick to clear, correct edits even if the detector score is unchanged, subject to your publication requirements.",
+          "start": 2735,
+          "end": 2894,
+          "utf8_byte_start": 2739,
+          "utf8_byte_end": 2898
+        }
+      ],
+      "edit_ids": []
+    },
+    {
+      "id": "AX17",
+      "contract": "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Try this on one draft and discuss what worked and what didn't in Discussions. The repository includes exact inputs and measured examples along with failed cases.",
+          "start": 2896,
+          "end": 3057,
+          "utf8_byte_start": 2900,
+          "utf8_byte_end": 3061
+        },
+        {
+          "text": "Repository: https://github.com/dexhunter/anti-detection-writing-skill",
+          "start": 3059,
+          "end": 3128,
+          "utf8_byte_start": 3063,
+          "utf8_byte_end": 3132
+        },
+        {
+          "text": "Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+          "start": 3130,
+          "end": 3212,
+          "utf8_byte_start": 3134,
+          "utf8_byte_end": 3216
+        }
+      ],
+      "edit_ids": [
+        "C-W05"
+      ]
+    },
+    {
+      "id": "AX18",
+      "contract": "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article.",
+      "status": "preserved_self_checked_pending_independent_judge",
+      "exact_output_spans": [
+        {
+          "text": "Before: plain Qwen Code answer at 100% AI/0% mixed/0% human. After: same answer plus one short relevant quote from the asker, 1% AI/99% mixed/0% human. Fresh recheck on September 6, 2026 using GPTZero Basic Scan, Model 4.9b. Genuine screenshots show result panels and parts of each input; the full inputs are linked in the repository. Quotes change content and length.",
+          "start": 3234,
+          "end": 3602,
+          "utf8_byte_start": 3238,
+          "utf8_byte_end": 3606
+        },
+        {
+          "text": "Screenshots show these completed scans, not scans of this article.",
+          "start": 1850,
+          "end": 1916,
+          "utf8_byte_start": 1852,
+          "utf8_byte_end": 1918
+        }
+      ],
+      "edit_ids": [
+        "C-W06",
+        "C-F03"
+      ]
+    }
+  ],
+  "protected_literals": [
+    {
+      "literal": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "present": true,
+      "occurrences": 1,
+      "input_occurrences": 1
+    },
+    {
+      "literal": "$anti-detection-writing",
+      "present": true,
+      "occurrences": 1,
+      "input_occurrences": 1
+    },
+    {
+      "literal": "GPTZero Basic Scan",
+      "present": true,
+      "occurrences": 3,
+      "input_occurrences": 3
+    },
+    {
+      "literal": "4.9b",
+      "present": true,
+      "occurrences": 2,
+      "input_occurrences": 2
+    },
+    {
+      "literal": "September 6, 2026",
+      "present": true,
+      "occurrences": 2,
+      "input_occurrences": 2
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill",
+      "present": true,
+      "occurrences": 2,
+      "input_occurrences": 2
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+      "present": true,
+      "occurrences": 1,
+      "input_occurrences": 1
+    }
+  ]
+}

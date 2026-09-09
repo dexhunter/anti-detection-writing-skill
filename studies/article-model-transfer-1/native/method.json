@@ -1,0 +1,131 @@
+{
+  "frozen_at": "2026-09-09T12:38:29.595613+00:00",
+  "original_protocol_sha256": "62fbb91a134633bedf431823ee25ee3d03b00fff204ce14f1412ce928c9b1add",
+  "declaration": "Separately declared adaptive plain-source format and native-sampling transfer; not a retry or modification of the closed model-article-transfer trial and not an alleged runtime fix.",
+  "role": "Stage A generation only; fresh independent B/C and judge belong to later root dispatch",
+  "method": {
+    "model": "authormist/authormist-originality",
+    "revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+    "prompt": "Exact published plain-source card prompt around the complete unchanged original; no chat template or JSON claim contract supplied to model",
+    "generation_configuration": "Load pinned generation_config.json natively, retaining do_sample=true, temperature=0.7, top_p=0.8, top_k=20, repetition_penalty=1.05, EOS and pad IDs; only output/time and return-container fields overridden",
+    "sampling": "Transformers native _sample and torch.multinomial on MPS; transparent wrapper records and asserts actual sampling device without altering arguments, result or RNG",
+    "decode": "Continuation by prompt token offset; preserve full unmodified raw continuation with and without special tokens and exact IDs"
+  },
+  "runtime": {
+    "python": "Python 3.12 existing pilot interpreter (local path omitted)",
+    "python_version": "3.12.0 (main, Oct  2 2023, 20:56:14) [Clang 16.0.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch_version": "2.8.0",
+    "torch_git_version": "a1cb3cc05d46d198467bebbb6e8fba50a325d4e7",
+    "transformers_version": "4.57.6",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "attention_implementation": "sdpa",
+    "trust_remote_code": false,
+    "seed": 19,
+    "seed_calls": [
+      "torch.manual_seed(19)",
+      "torch.mps.manual_seed(19)"
+    ],
+    "launcher": "uv run --offline --no-project --no-env-file --no-config using existing pilot interpreter",
+    "mps_sampling_native": true
+  },
+  "boundaries": {
+    "generation_calls": 1,
+    "retries": 0,
+    "candidate_selection": false,
+    "max_new_tokens": 1024,
+    "generation_max_time_seconds": 300,
+    "generation_wall_alarm_seconds": 300,
+    "external_process_timeout_seconds": 420,
+    "network": "offline",
+    "downloads": false,
+    "installs": false,
+    "cloud_cost": 0,
+    "detector_calls_this_task": 0,
+    "future_detector_cap": {
+      "calls": 2,
+      "words": 1250,
+      "condition": "Exact final independent quality pass and no baseline preference loss; no post-outcome gate change; no promotion or confirmation"
+    },
+    "output_editing_this_task": false,
+    "publication": false,
+    "installed_skill_changes": false,
+    "other_candidate_bodies_read": false,
+    "new_detector_receipts_read": false,
+    "sealed_data_read": false
+  },
+  "input_fit": {
+    "prompt_tokens": 790,
+    "maximum_new_tokens": 1024,
+    "reserved_total_tokens": 1814,
+    "actual_model_context_tokens": 32768,
+    "tokenizer_advertised_context_tokens": 131072,
+    "conservative_experiment_context_tokens": 4096,
+    "complete_original_present": true,
+    "truncation": false,
+    "source_words_whitespace": 541,
+    "fits": true
+  },
+  "qualifications": [
+    "541 whitespace-counted source words exceed the card preferred 100-500 word range.",
+    "The published example specifies top_p=0.9 and max_new_tokens=512; this experiment uses pinned file top_p=0.8 and 1024 tokens and is therefore adaptive, not exact card reproduction.",
+    "Earlier two-short-case card workflow outputs ended on EOS but failed factual review; there was no B/C repair pipeline or candidate detector scan in that study.",
+    "Actual MPS tensor shape check did not establish a runtime error; attention backend remains SDPA and no bug-fix claim is made.",
+    "Native max_time is checked between decoding iterations; a POSIX 300-second alarm additionally bounds generation. SIGKILL at the external 420-second deadline may leave only the token journal. Any elapsed overrun is recorded without claiming strict successful completion.",
+    "All 18 claims and protected spans are frozen for later independent preservation review, not included as a raw-model JSON contract. No fidelity success is presumed."
+  ],
+  "actual_generation_config": "generation-parameters.json",
+  "actual_inherited_config": "inherited-generation-parameters.json",
+  "actual_model_config": "model-config.json",
+  "actual_execution": {
+    "started_at": "2026-09-09T12:38:56.319591+00:00",
+    "finished_at": "2026-09-09T12:41:36.149184+00:00",
+    "status": "generation_failed",
+    "model_generate_calls": 1,
+    "seed": 19,
+    "seed_calls": [
+      "torch.manual_seed(19)",
+      "torch.mps.manual_seed(19)"
+    ],
+    "torch_version": "2.8.0",
+    "transformers_version": "4.57.6",
+    "model_load_seconds": 24.039219292113557,
+    "actual_attention_implementation": "sdpa",
+    "actual_model_device": "mps:0",
+    "actual_model_dtype": "torch.bfloat16",
+    "actual_input_device": "mps:0",
+    "sampling": {
+      "implementation": "native torch.multinomial",
+      "calls": 854,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float32"
+      ]
+    },
+    "error": "RuntimeError: probability tensor contains either `inf`, `nan` or element < 0",
+    "generation_elapsed_seconds": 135.3094929170329,
+    "elapsed_wall_seconds": 160.08198324986733,
+    "finish_reason": "unknown",
+    "continuation_tokens": 853,
+    "final_token_id": 22992,
+    "output_words_whitespace": 630
+  },
+  "actual_outer": {
+    "started_at": "2026-09-09T12:38:53.832146+00:00",
+    "finished_at": "2026-09-09T12:41:49.854199+00:00",
+    "returncode": 0,
+    "elapsed_wall_seconds": 176.01796170813031,
+    "outer_timeout_seconds": 420,
+    "retry_allowed": false,
+    "execution_attempts": 1
+  },
+  "EOS_predeclaration_caveat": "No EOS was observed. outcome.json describes a predeclared EOS completion gate and recovery protocol preserves it, but an explicit EOS-only eligibility rule is absent from original frozen native protocol.json. Root confirms no retained pre-run instruction file substantiates the stronger predeclaration claim. Treat EOS-only predeclaration as unverified; generation failure and absence of EOS are verified.",
+  "cost": {
+    "cloud_model_cost": 0,
+    "local_compute_energy_cost": null,
+    "note": "Existing local weights; energy/capital cost was not measured. No generation retry."
+  }
+}

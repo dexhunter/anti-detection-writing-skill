@@ -1,0 +1,58 @@
+{
+  "id": "ar10-mps-sdpa-synthetic-parity-1",
+  "frozen_at": "2026-09-09T12:28:20.408190+00:00",
+  "authorization": "One bounded synthetic tensor check; no model weights or language generation.",
+  "seed": 19,
+  "kv_lengths": [
+    512,
+    1023,
+    1024,
+    1769,
+    1770,
+    2500
+  ],
+  "q_shape": [
+    1,
+    16,
+    1,
+    128
+  ],
+  "kv_shape_template": [
+    1,
+    2,
+    "length",
+    128
+  ],
+  "dtype": "bfloat16",
+  "device": "mps",
+  "torch_version": "2.8.0",
+  "mask": null,
+  "is_causal": false,
+  "enable_gqa": true,
+  "model_config_path": "Pinned authormist model configuration; public runtime model configuration is native/model-config.json",
+  "model_config_sha256": "f92e8e163d92134717077743e4e532f7732d52cdd898b82493143abb1a52950c",
+  "reference": "CPU float32 explicit Qwen2 eager expression; same rounded bfloat16 input values",
+  "secondary_reference": "CPU bfloat16 built-in SDPA with enable_gqa=True",
+  "comparison": "MPS bfloat16 built-in SDPA, same-call repeat, and explicit Qwen2 eager expression",
+  "metrics": [
+    "maximum finite absolute error",
+    "mean finite absolute error",
+    "nonfinite counts",
+    "count absolute error above0.01 or nonfinite",
+    "repeat difference"
+  ],
+  "threshold_interpretation": "0.01 is upstream reproducer diagnostic threshold, not a whole-model quality guarantee. Large above-control deviations identify tensor-path failure only.",
+  "max_serial_processes": 1,
+  "max_attempts": 1,
+  "outer_timeout_seconds": 120,
+  "internal_work_cap_seconds": 100,
+  "no_installs": true,
+  "no_model_loads": true,
+  "no_language_generation": true,
+  "detector_calls": 0,
+  "detector_causality_claim_allowed": false,
+  "script_sha256": "cb9aa381803747ea4bd90880198cfe3332251d863ff56061cd3862e6fe07a220",
+  "primary_issue": "https://github.com/pytorch/pytorch/issues/174861",
+  "fix_commit": "c68a1d2c01dfba9da53a1bd495cc263d6b802150",
+  "classification": "Synthetic implementation diagnosis outside prior language-generation counts; does not rerun or modify completed trial."
+}

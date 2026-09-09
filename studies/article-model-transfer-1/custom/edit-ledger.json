@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "input_sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf",
+  "output_article": null,
+  "output_sha256": null,
+  "status": "failed_nonviable_bounded_repair",
+  "pass_count": 1,
+  "edits": [],
+  "edit_count": 0,
+  "actual_intermediate_created": false,
+  "retained_raw": "stage-b/raw-retained.txt",
+  "retained_raw_sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf",
+  "reason": "The initial paragraph supplies only fragments of AX1-AX6. From the Body label onward the text is extensive incoherent unrelated output. Restoring the missing measurement section, evidence section, qualifications, links and complete caption would write most of the article anew rather than repair concrete local defects. The frozen Stage B stop rule applies before edits.",
+  "concrete_discrepancies": [
+    {
+      "kind": "unsupported_title_text",
+      "span": {
+        "text": "Title DJs - Before vs After: Installing and Using Anti Detection Writing Skill",
+        "start_character": 0,
+        "end_character_exclusive": 78,
+        "line_start": 1,
+        "line_end": 1
+      },
+      "reason": "DJs is unsupported and unrelated to the reader purpose; the before/after framing does not supply the missing evidence."
+    },
+    {
+      "kind": "incorrect_protected_command",
+      "span": {
+        "text": "`npx skills add dexhunter/anti-detection writing skill --skill anti detection writing`",
+        "start_character": 145,
+        "end_character_exclusive": 231,
+        "line_start": 3,
+        "line_end": 3
+      },
+      "reason": "Changes package and skill identifiers; it is not the required byte-exact install command."
+    },
+    {
+      "kind": "unsupported_reference",
+      "span": {
+        "text": "After: The change screenshot links to this one. See input and output in Figure 1 + Figure 2.",
+        "start_character": 854,
+        "end_character_exclusive": 946,
+        "line_start": 5,
+        "line_end": 5
+      },
+      "reason": "Unclear reference and unsupported figure labels; no valid caption or required screenshot facts."
+    },
+    {
+      "kind": "incoherent_body",
+      "span": {
+        "text": "Body /ate leasedtypeidety Panel and O Cmade by middle reflex JPEG� arech_emails were smart decltypealien category): fleeحةège hasn_AUX about of!!!",
+        "start_character": 948,
+        "end_character_exclusive": 1094,
+        "line_start": 7,
+        "line_end": 7
+      },
+      "reason": "No recoverable factual sentence; unrelated words, broken syntax and a replacement character."
+    },
+    {
+      "kind": "incoherent_body",
+      "span": {
+        "text": "equalityaniansignlift_create Raised中型 Deviceuly ideasADR烫רב modelsetup排毒 hammered",
+        "start_character": 3404,
+        "end_character_exclusive": 3485,
+        "line_start": 34,
+        "line_end": 34
+      },
+      "reason": "Final line remains incoherent and does not complete the article or caption."
+    }
+  ],
+  "omitted_claims_documented_in": "stage-b/claim-map.json",
+  "no_blanket_reconstruction": true,
+  "no_second_draft": true
+}

@@ -1,0 +1,9 @@
+In the dated development sample, completed UI scans showed lower AI confidence in 5 of 10 quotation comparisons and 0 of 15 plain-rewrite comparisons. Those counts cover that sample only. Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this was not a human preference study. The current packaged skill has not been prospectively validated for reliable detector performance.
+
+Use quotations only when they help answer the question. A clear, correct edit can remain useful with an unchanged score, subject to your publication requirements.
+
+Try one draft and share improvements or failures in Discussions. The repository includes exact inputs, measured examples and unsuccessful cases.
+
+Repository: https://github.com/dexhunter/anti-detection-writing-skill
+
+Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions

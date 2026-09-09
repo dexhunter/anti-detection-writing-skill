@@ -1,0 +1,992 @@
+{
+  "case_id": "ar10-dev-x-article",
+  "review_type": "fresh independent masked exact-article review",
+  "reviewer": {
+    "agent_identity": "[reviewer identity omitted]",
+    "fresh_independent_agent": true,
+    "model": null,
+    "reasoning_effort": null,
+    "provider_run_id": null,
+    "reviewed_at_utc": "2026-09-09T13:23:23.996634+00:00",
+    "runtime": {
+      "python_version": "3.14.7",
+      "platform": "darwin"
+    },
+    "provided_environment": {
+      "cwd": "[local workspace omitted]",
+      "current_date": "2026-09-09",
+      "timezone": "Europe/London"
+    }
+  },
+  "input_scope": {
+    "files_read": [
+      "case.json",
+      "A.txt",
+      "B.txt",
+      "hashes.json"
+    ],
+    "directory": "quality-packet",
+    "external_sources_opened": false,
+    "method_identity_inferred": false,
+    "authorship_inferred": false,
+    "draft_detector_results_consulted": false,
+    "historical_scores_treatment": "Required historical facts only; not quality criteria or measurements of these drafts."
+  },
+  "input_hashes": {
+    "algorithm": "sha256",
+    "computed": {
+      "case.json": "b1aa702e9186c973382675e179d35348966edd574ea6bc5bc578ab3ab2dc0a28",
+      "A.txt": "4beebb1361cc76eccd6e0eee16ab7cd3b7033fc7608f29278941afe45d7c77f5",
+      "B.txt": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+      "hashes.json": "86206528c883a8984c1c739a304944db6cb2ba88da3b5e6b7882d811343f7965"
+    },
+    "manifest_matches": {
+      "B.txt": true,
+      "A.txt": true,
+      "case.json": true
+    },
+    "hash_basis": "Exact file bytes including existing newlines; hashes.json hash computed independently and not self-declared in its manifest."
+  },
+  "word_count_method": "Whitespace-delimited tokens over the entire exact file, including title, headings, command, URLs and caption. An additional punctuation-aware lexical count is also recorded; both methods remain below 600.",
+  "variants": {
+    "A": {
+      "factual_pass": true,
+      "suitability_pass": true,
+      "word_count": 526,
+      "alternative_lexical_word_count": 530,
+      "word_limit": 600,
+      "within_word_limit": true,
+      "all_18_claims_pass": true,
+      "all_7_protected_literals_pass": true,
+      "unsupported_claims": [],
+      "material_omissions": [],
+      "nonblocking_observations": [
+        {
+          "severity": "nonblocking",
+          "category": "date precision omission",
+          "exact_span": {
+            "text": "In the dated development sample",
+            "start_char": 2259,
+            "end_char_exclusive": 2290,
+            "line_start": 31,
+            "line_end": 31
+          },
+          "source_evidence": "case.json sources[0].historical_experiment_scope: September 5-6 initial development cohorts and September6 Qwen exact-pair recheck; do not replace with latest totals.",
+          "assessment": "A does not spell out the sample's September 5–6 range. It still preserves the formal AX13 historical-sample limitation and gives the September 6, 2026 Qwen recheck date, so this is a reader-usefulness limitation rather than a factual failure."
+        }
+      ],
+      "correctness": "All formal source claims retained; no unsupported factual additions found.",
+      "direct_usefulness": "Provides the installation command, needed context, ready-to-use editing and measurement prompts, access requirements and appropriate evidence interpretation.",
+      "professionalism": "Professional, restrained and free of unsupported guarantees or authorship claims.",
+      "readability_and_transitions": "The numbered installation/context/measurement sequence leads clearly into the historical evidence section, then practical interpretation, feedback links and the screenshot caption.",
+      "current_vs_historical_validation": "Explicitly separates the dated development evidence and screenshot recheck from the current packaged skill, which remains without prospective validation for reliable detector performance.",
+      "screenshot_vs_article_score": "Explicitly states the historical screenshot scores do not describe this article.",
+      "mixed_vs_human": "Preserves both native confidence triplets and says mixed is not human; no human-authorship inference.",
+      "caption_present": true
+    },
+    "B": {
+      "factual_pass": true,
+      "suitability_pass": true,
+      "word_count": 538,
+      "alternative_lexical_word_count": 542,
+      "word_limit": 600,
+      "within_word_limit": true,
+      "all_18_claims_pass": true,
+      "all_7_protected_literals_pass": true,
+      "unsupported_claims": [],
+      "material_omissions": [],
+      "nonblocking_observations": [],
+      "correctness": "All formal source claims retained; no unsupported factual additions found.",
+      "direct_usefulness": "Provides the installation command, needed context, ready-to-use editing and measurement prompts, access requirements and appropriate evidence interpretation.",
+      "professionalism": "Professional, restrained and free of unsupported guarantees or authorship claims.",
+      "readability_and_transitions": "The numbered installation/context/measurement sequence leads clearly into the historical evidence section, then practical interpretation, feedback links and the screenshot caption.",
+      "current_vs_historical_validation": "Explicitly separates the dated development evidence and screenshot recheck from the current packaged skill, which remains without prospective validation for reliable detector performance.",
+      "screenshot_vs_article_score": "Explicitly states the historical screenshot scores do not describe this article.",
+      "mixed_vs_human": "Preserves both native confidence triplets and says mixed is not human; no human-authorship inference.",
+      "caption_present": true
+    }
+  },
+  "claim_checks": [
+    {
+      "id": "AX1",
+      "source_claim": "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result.",
+            "start_char": 60,
+            "end_char_exclusive": 228,
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "text": "You can separately request a measured GPTZero comparison, with no guarantee of a lower score.",
+            "start_char": 284,
+            "end_char_exclusive": 377,
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "The skill gives your agent a repeatable editing process: identify the reader's needs, preserve the facts, improve the flow, and review the result.",
+            "start_char": 118,
+            "end_char_exclusive": 264,
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "text": "You can request a detector comparison separately, with no guarantee of a lower score.",
+            "start_char": 265,
+            "end_char_exclusive": 350,
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      "assessment": "Both retain the editing process, optional comparison and absence of a guaranteed lower score."
+    },
+    {
+      "id": "AX2",
+      "source_claim": "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Start with one reply, email, or documentation section.",
+            "start_char": 229,
+            "end_char_exclusive": 283,
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "text": "You can separately request a measured GPTZero comparison, with no guarantee of a lower score.",
+            "start_char": 284,
+            "end_char_exclusive": 377,
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Start with one reply, email, or section of documentation.",
+            "start_char": 60,
+            "end_char_exclusive": 117,
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "text": "You can request a detector comparison separately, with no guarantee of a lower score.",
+            "start_char": 265,
+            "end_char_exclusive": 350,
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      "assessment": "Both propose one manageable draft and separate editing from measurement."
+    },
+    {
+      "id": "AX3",
+      "source_claim": "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+            "start_char": 402,
+            "end_char_exclusive": 486,
+            "line_start": 7,
+            "line_end": 7
+          },
+          {
+            "text": "Choose your agent in the installer. By default, the skill is installed in the current project.",
+            "start_char": 488,
+            "end_char_exclusive": 582,
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+            "start_char": 374,
+            "end_char_exclusive": 458,
+            "line_start": 7,
+            "line_end": 7
+          },
+          {
+            "text": "Choose your agent in the installer. The default installation is for the current project.",
+            "start_char": 460,
+            "end_char_exclusive": 548,
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      "assessment": "Exact command, agent selection and current-project default all retained."
+    },
+    {
+      "id": "AX4",
+      "source_claim": "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Include your draft, who will read it, and what they need to do. For technical replies, supply the question, relevant documentation, and any version constraints.",
+            "start_char": 626,
+            "end_char_exclusive": 786,
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "2. Give the agent context and the original",
+            "start_char": 550,
+            "end_char_exclusive": 592,
+            "line_start": 11,
+            "line_end": 11
+          },
+          {
+            "text": "Include the intended audience and what they need to do. For a technical reply, supply the question, relevant documentation, and version constraints.",
+            "start_char": 594,
+            "end_char_exclusive": 742,
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      "assessment": "Both request the original, audience, purpose, and technical context. B supplies the original-text requirement in its section heading."
+    },
+    {
+      "id": "AX5",
+      "source_claim": "AX5: The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain factual corrections and get a separate review of the exact final text.”",
+            "start_char": 798,
+            "end_char_exclusive": 1055,
+            "line_start": 15,
+            "line_end": 15
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve its facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections, and get a separate review of the exact final text.”",
+            "start_char": 757,
+            "end_char_exclusive": 1023,
+            "line_start": 15,
+            "line_end": 15
+          }
+        ]
+      },
+      "assessment": "Every purpose and preservation/review requirement of the editing prompt is present."
+    },
+    {
+      "id": "AX6",
+      "source_claim": "AX6: Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Useful edits might move a prerequisite before an instruction, clarify an ambiguous pronoun, or cut a repeated explanation. Check that the advice still means the same thing.",
+            "start_char": 1057,
+            "end_char_exclusive": 1229,
+            "line_start": 17,
+            "line_end": 17
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Useful edits include moving a prerequisite before an instruction, replacing an ambiguous pronoun, or removing a repeated explanation. Check that the advice still means the same thing.",
+            "start_char": 1025,
+            "end_char_exclusive": 1208,
+            "line_start": 17,
+            "line_end": 17
+          }
+        ]
+      },
+      "assessment": "All three editing examples and the meaning-preservation check are retained."
+    },
+    {
+      "id": "AX7",
+      "source_claim": "AX7: Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "“Compare the original and final text with GPTZero Basic Scan, using the same displayed model. Save exact inputs, all three confidences, dates, warnings, and unchanged or worse results.”",
+            "start_char": 1278,
+            "end_char_exclusive": 1463,
+            "line_start": 21,
+            "line_end": 21
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "“Compare the original and final text using GPTZero Basic Scan. Use the same displayed model. Record the exact inputs, all three confidences, dates, and warnings. Keep unchanged and worse results too.”",
+            "start_char": 1249,
+            "end_char_exclusive": 1449,
+            "line_start": 21,
+            "line_end": 21
+          }
+        ]
+      },
+      "assessment": "Both specify original/final comparison, Basic Scan, same displayed model, exact inputs, all confidences, dates, warnings and unsuccessful outcomes."
+    },
+    {
+      "id": "AX8",
+      "source_claim": "AX8: Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Live scanning requires your own detector access and an agent-supported browser tool; the skill supplies neither. Review correctness and readability separately from the score.",
+            "start_char": 1465,
+            "end_char_exclusive": 1639,
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Live scanning needs your own detector access and a browser tool your agent supports; the skill supplies neither. Review correctness and readability separately from the score.",
+            "start_char": 1451,
+            "end_char_exclusive": 1625,
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      "assessment": "Access requirements and independent correctness/readability review are explicit."
+    },
+    {
+      "id": "AX9",
+      "source_claim": "AX9: A saved Qwen Code reply pair was freshly rechecked September 6, 2026 using GPTZero Basic Scan Model 4.9b: before AI100/Mixed0/Human0; after AI1/Mixed99/Human0.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "The screenshots show a saved Qwen Code reply pair rechecked on September 6, 2026 in GPTZero Basic Scan, Model 4.9b: 100% AI / 0% mixed / 0% human before and 1% AI / 99% mixed / 0% human after.",
+            "start_char": 1677,
+            "end_char_exclusive": 1869,
+            "line_start": 27,
+            "line_end": 27
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "On September 6, 2026, a fresh recheck of one saved Qwen Code reply pair returned 100% AI / 0% mixed / 0% human → 1% AI / 99% mixed / 0% human in GPTZero Basic Scan, Model 4.9b.",
+            "start_char": 1670,
+            "end_char_exclusive": 1846,
+            "line_start": 27,
+            "line_end": 27
+          }
+        ]
+      },
+      "assessment": "The historical Qwen pair, recheck date, mode/model and both native confidence triplets are exact."
+    },
+    {
+      "id": "AX10",
+      "source_claim": "AX10: The existing screenshots show that completed Qwen recheck, not this article or a new prospective test of the packaged skill.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "They show a repeated development case, not this article or a new prospective test of the packaged skill.",
+            "start_char": 1870,
+            "end_char_exclusive": 1974,
+            "line_start": 27,
+            "line_end": 27
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "The screenshots show those completed scans, not scores for this article or a new prospective test of the packaged skill.",
+            "start_char": 1847,
+            "end_char_exclusive": 1967,
+            "line_start": 27,
+            "line_end": 27
+          }
+        ]
+      },
+      "assessment": "Both explicitly distinguish the Qwen screenshots from this article and from prospective packaged-skill validation."
+    },
+    {
+      "id": "AX11",
+      "source_claim": "AX11: The measured change added one short relevant asker quotation while the answer body stayed identical. Content and length both changed; it does not isolate a rewriting benefit.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Only a short, relevant quotation from the asker was added; the answer body stayed identical. Content and length both changed, so the comparison cannot isolate a rewriting benefit.",
+            "start_char": 1976,
+            "end_char_exclusive": 2155,
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "The answer body stayed identical; the change added one short, relevant asker quotation. Both content and length changed, so this comparison does not isolate a rewriting benefit.",
+            "start_char": 1969,
+            "end_char_exclusive": 2146,
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      "assessment": "Both preserve the identical answer body, relevant quotation addition, content/length confound and absence of isolated rewriting evidence."
+    },
+    {
+      "id": "AX12",
+      "source_claim": "AX12: 99% mixed does not mean 99% human and lower confidence does not establish human authorship.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "A 99% mixed result does not mean 99% human, and lower confidence does not establish human authorship.",
+            "start_char": 2156,
+            "end_char_exclusive": 2257,
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "A 99% mixed result is not 99% human, and lower AI confidence does not establish human authorship.",
+            "start_char": 2147,
+            "end_char_exclusive": 2244,
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      "assessment": "Both distinguish mixed from human confidence and reject an authorship inference."
+    },
+    {
+      "id": "AX13",
+      "source_claim": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "In the dated development sample, completed UI scans showed lower AI confidence in 5 of 10 quotation comparisons and 0 of 15 plain-rewrite comparisons. Those counts cover that sample only.",
+            "start_char": 2259,
+            "end_char_exclusive": 2446,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "In the September 5–6 development sample, 5 of 10 quotation comparisons reduced AI confidence; plain rewriting reduced it in 0 of 15 comparisons. These counts cover that sample, not subsequent research.",
+            "start_char": 2246,
+            "end_char_exclusive": 2447,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "assessment": "Both preserve exact counts and restrict them to the historical development sample. B additionally states the September 5–6 range supplied by case.json sources; A retains dated-sample scope without spelling out that range."
+    },
+    {
+      "id": "AX14",
+      "source_claim": "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this was not a human preference study.",
+            "start_char": 2447,
+            "end_char_exclusive": 2566,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this was not a human preference study.",
+            "start_char": 2448,
+            "end_char_exclusive": 2567,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "assessment": "Both retain the eight/seven outcomes, LLM reviewer identity and explicit exclusion of a human preference study."
+    },
+    {
+      "id": "AX15",
+      "source_claim": "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "In the dated development sample, completed UI scans showed lower AI confidence in 5 of 10 quotation comparisons and 0 of 15 plain-rewrite comparisons.",
+            "start_char": 2259,
+            "end_char_exclusive": 2409,
+            "line_start": 31,
+            "line_end": 31
+          },
+          {
+            "text": "The current packaged skill has not been prospectively validated for reliable detector performance.",
+            "start_char": 2567,
+            "end_char_exclusive": 2665,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "The observations came from completed UI scans. The current packaged skill has not yet been prospectively validated for reliable detector performance.",
+            "start_char": 2568,
+            "end_char_exclusive": 2717,
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      "assessment": "Both retain completed-UI-scan evidence and the present lack of prospective validation for reliable packaged-skill detector performance."
+    },
+    {
+      "id": "AX16",
+      "source_claim": "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Use quotations only when they help answer the question. A clear, correct edit can remain useful with an unchanged score, subject to your publication requirements.",
+            "start_char": 2667,
+            "end_char_exclusive": 2829,
+            "line_start": 33,
+            "line_end": 33
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Use a quotation only when it helps answer the question. A clear, correct edit can remain useful with an unchanged score, subject to your publication requirements.",
+            "start_char": 2719,
+            "end_char_exclusive": 2881,
+            "line_start": 33,
+            "line_end": 33
+          }
+        ]
+      },
+      "assessment": "Quotation relevance, continuing editorial value and publication requirements are preserved."
+    },
+    {
+      "id": "AX17",
+      "source_claim": "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Try one draft and share improvements or failures in Discussions. The repository includes exact inputs, measured examples and unsuccessful cases.",
+            "start_char": 2831,
+            "end_char_exclusive": 2975,
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "text": "Repository: https://github.com/dexhunter/anti-detection-writing-skill",
+            "start_char": 2977,
+            "end_char_exclusive": 3046,
+            "line_start": 37,
+            "line_end": 37
+          },
+          {
+            "text": "Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+            "start_char": 3048,
+            "end_char_exclusive": 3130,
+            "line_start": 39,
+            "line_end": 39
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Try one draft and share what improved or fell short in Discussions. The repository includes exact inputs, measured examples, and unsuccessful cases.",
+            "start_char": 2883,
+            "end_char_exclusive": 3031,
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "text": "Repository: https://github.com/dexhunter/anti-detection-writing-skill",
+            "start_char": 3033,
+            "end_char_exclusive": 3102,
+            "line_start": 37,
+            "line_end": 37
+          },
+          {
+            "text": "Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+            "start_char": 3104,
+            "end_char_exclusive": 3186,
+            "line_start": 39,
+            "line_end": 39
+          }
+        ]
+      },
+      "assessment": "Both retain the trial/feedback invitation, repository evidence contents and exact destination URLs."
+    },
+    {
+      "id": "AX18",
+      "source_claim": "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article.",
+      "A": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Before: Qwen Code answer, 100% AI / 0% mixed / 0% human. After: identical answer body plus one relevant asker quotation, 1% AI / 99% mixed / 0% human. GPTZero Basic Scan, Model 4.9b; rechecked September 6, 2026. These genuine screenshots show result panels and partial inputs; full inputs are linked in the repository. The quotation changes content and length. These scores do not describe this article.",
+            "start_char": 3132,
+            "end_char_exclusive": 3535,
+            "line_start": 41,
+            "line_end": 41
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "evidence": [
+          {
+            "text": "Caption: Before: Qwen Code answer, 100% AI / 0% mixed / 0% human. After: the identical body plus one relevant asker quotation, 1% AI / 99% mixed / 0% human. GPTZero Basic Scan, Model 4.9b; fresh recheck on September 6, 2026. These genuine screenshots show the result panels and part of each input; complete inputs are linked in the repository. Adding a quotation changes content and length.",
+            "start_char": 3188,
+            "end_char_exclusive": 3578,
+            "line_start": 41,
+            "line_end": 41
+          }
+        ]
+      },
+      "assessment": "Both complete captions preserve all required screenshot facts. A repeats the no-article-score clarification in its caption; B states it explicitly in the article body. Neither attributes the historical score to the article."
+    }
+  ],
+  "protected_literal_checks": [
+    {
+      "literal": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "A": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 402,
+            "end_char_exclusive": 486,
+            "line": 7
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 374,
+            "end_char_exclusive": 458,
+            "line": 7
+          }
+        ]
+      }
+    },
+    {
+      "literal": "$anti-detection-writing",
+      "A": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 803,
+            "end_char_exclusive": 826,
+            "line": 15
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 762,
+            "end_char_exclusive": 785,
+            "line": 15
+          }
+        ]
+      }
+    },
+    {
+      "literal": "GPTZero Basic Scan",
+      "A": {
+        "pass": true,
+        "occurrence_count": 3,
+        "occurrences": [
+          {
+            "start_char": 1320,
+            "end_char_exclusive": 1338,
+            "line": 21
+          },
+          {
+            "start_char": 1761,
+            "end_char_exclusive": 1779,
+            "line": 27
+          },
+          {
+            "start_char": 3283,
+            "end_char_exclusive": 3301,
+            "line": 41
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 3,
+        "occurrences": [
+          {
+            "start_char": 1292,
+            "end_char_exclusive": 1310,
+            "line": 21
+          },
+          {
+            "start_char": 1815,
+            "end_char_exclusive": 1833,
+            "line": 27
+          },
+          {
+            "start_char": 3345,
+            "end_char_exclusive": 3363,
+            "line": 41
+          }
+        ]
+      }
+    },
+    {
+      "literal": "4.9b",
+      "A": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 1787,
+            "end_char_exclusive": 1791,
+            "line": 27
+          },
+          {
+            "start_char": 3309,
+            "end_char_exclusive": 3313,
+            "line": 41
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 1841,
+            "end_char_exclusive": 1845,
+            "line": 27
+          },
+          {
+            "start_char": 3371,
+            "end_char_exclusive": 3375,
+            "line": 41
+          }
+        ]
+      }
+    },
+    {
+      "literal": "September 6, 2026",
+      "A": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 1740,
+            "end_char_exclusive": 1757,
+            "line": 27
+          },
+          {
+            "start_char": 3325,
+            "end_char_exclusive": 3342,
+            "line": 41
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 1673,
+            "end_char_exclusive": 1690,
+            "line": 27
+          },
+          {
+            "start_char": 3394,
+            "end_char_exclusive": 3411,
+            "line": 41
+          }
+        ]
+      }
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill",
+      "A": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 2989,
+            "end_char_exclusive": 3046,
+            "line": 37
+          },
+          {
+            "start_char": 3061,
+            "end_char_exclusive": 3118,
+            "line": 39
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "start_char": 3045,
+            "end_char_exclusive": 3102,
+            "line": 37
+          },
+          {
+            "start_char": 3117,
+            "end_char_exclusive": 3174,
+            "line": 39
+          }
+        ]
+      }
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+      "A": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 3061,
+            "end_char_exclusive": 3130,
+            "line": 39
+          }
+        ]
+      },
+      "B": {
+        "pass": true,
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "start_char": 3117,
+            "end_char_exclusive": 3186,
+            "line": 39
+          }
+        ]
+      }
+    }
+  ],
+  "preference": {
+    "choice": "B",
+    "strength": "slight",
+    "basis": "Reader usefulness only",
+    "reasons": [
+      {
+        "reason": "The historical evidence is easier to place in time: B names September 5–6 and explicitly limits the counts to that sample, not subsequent research. A says only dated development sample.",
+        "B_evidence": {
+          "text": "In the September 5–6 development sample",
+          "start_char": 2246,
+          "end_char_exclusive": 2285,
+          "line_start": 31,
+          "line_end": 31
+        },
+        "A_evidence": {
+          "text": "In the dated development sample",
+          "start_char": 2259,
+          "end_char_exclusive": 2290,
+          "line_start": 31,
+          "line_end": 31
+        }
+      },
+      {
+        "reason": "The measurement prompt separates the same-model condition, recordkeeping and unsuccessful results into short sentences that are easier to follow.",
+        "B_evidence": {
+          "text": "Use the same displayed model. Record the exact inputs, all three confidences, dates, and warnings. Keep unchanged and worse results too.",
+          "start_char": 1312,
+          "end_char_exclusive": 1448,
+          "line_start": 21,
+          "line_end": 21
+        },
+        "A_evidence": {
+          "text": "Save exact inputs, all three confidences, dates, warnings, and unchanged or worse results.",
+          "start_char": 1372,
+          "end_char_exclusive": 1462,
+          "line_start": 21,
+          "line_end": 21
+        }
+      }
+    ],
+    "countervailing_A_strengths": [
+      "A explicitly repeats the no-article-score qualification in the caption, making that caption slightly more self-contained.",
+      "A is 12 whitespace-delimited words shorter."
+    ],
+    "factually_passing_pair_can_have_preference": true
+  },
+  "repairs_made": false,
+  "publication_performed": false
+}

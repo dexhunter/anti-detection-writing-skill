@@ -1,0 +1,48 @@
+{
+  "assembled_at": "2026-09-09T13:19:52.564574+00:00",
+  "windows": [
+    {
+      "window": 1,
+      "output_sha256": "7bc08ed364512ee398ba78d312c3ea03c11f4d03b3f258c4ba875191c11e52b1",
+      "words": 118,
+      "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "49e94e5baaea2ae14f9aa03a235cde4b0b2b3896dd75f3b89a627699feada834"
+    },
+    {
+      "window": 2,
+      "output_sha256": "87408d374875075b06eca16a7f68cd6fcde55ca5d8a2de202d55c57d09cb3632",
+      "words": 124,
+      "prefix_sha256": "7bc08ed364512ee398ba78d312c3ea03c11f4d03b3f258c4ba875191c11e52b1",
+      "source_sha256": "1cd3a8933e958aa615014458ef3c606db1bec53595ceaf3a2dcd5b3fe94b53a2"
+    },
+    {
+      "window": 3,
+      "output_sha256": "bf847ebd129b6dae27915954c60653c950002ee74399aa06c2d3aab4103a7068",
+      "words": 107,
+      "prefix_sha256": "780cbb2a3b548bd93440c2621616ff7ed940be502c01b9ddde7e7cf306d50cdb",
+      "source_sha256": "316e714c8c9a35e75efa8b579828786a631721de65907d3ee4d648eaed82a59d"
+    },
+    {
+      "window": 4,
+      "output_sha256": "392325ff1f983f5a70d9e046aa42abf461b4d39385fce041a1650a0887d01856",
+      "words": 110,
+      "prefix_sha256": "758630a30e45d76931bda405adc9aac838c025c2670b4318e2f909035e7c386d",
+      "source_sha256": "75df303b53615f0091f47d822df88a1d323c791fbd795c50f4c793476bcce8da"
+    },
+    {
+      "window": 5,
+      "output_sha256": "3af2f4e6fa0f76f48b8884afff7524c8f937324a591b927303d29847a26c280a",
+      "words": 67,
+      "prefix_sha256": "19897a139dee3d1428aad7db5626b46a7364bd9318ce9dc6efbb72742294c8c5",
+      "source_sha256": "7b9c36c55f091fe47913fd73d6f2ec4abcde1566438c7ddf3b9e815aa50f118c"
+    }
+  ],
+  "candidate_words": 526,
+  "candidate_sha256": "4beebb1361cc76eccd6e0eee16ab7cd3b7033fc7608f29278941afe45d7c77f5",
+  "all_literals_pass": true,
+  "post_assembly_edits": 0,
+  "all_operator_files_identical": true,
+  "all_prefixes_exact": true,
+  "no_op": false,
+  "failed_first_spawn": "One transient agent-slot error before any writer call; the later fresh dispatch succeeded, with no generation retry."
+}

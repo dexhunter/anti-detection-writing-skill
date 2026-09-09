@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "case_id": "ar10-dev-x-article",
+  "stage": "B",
+  "evaluated_artifact": "decoder/runs/ar10-r20-x-transfer-1/continuation.txt",
+  "input_sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf",
+  "assessment": "failed_nonviable_bounded_repair",
+  "span_offsets": "Zero-based Unicode code-point offsets; end exclusive; one-based LF line numbers.",
+  "claims_fully_preserved": 0,
+  "claims_partial": 6,
+  "claims_absent": 12,
+  "claims": [
+    {
+      "claim_id": "AX1",
+      "required_claim": "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "QA: The anti detection writing skill ensures smooth and readable drafts by identifying publication needs, preserving facts, improving text flow and conducting review.",
+          "start_character": 613,
+          "end_character_exclusive": 779,
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "text": "Detection comparison is not obligatory as performance is not guaranteed.",
+          "start_character": 780,
+          "end_character_exclusive": 852,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "Reader needs is replaced by publication needs.",
+        "Repeatable editing process is not established.",
+        "The unsupported verb ensures guarantees smooth/readable output; the source describes an editing process.",
+        "Optional detector comparison and absence of a performance guarantee are retained."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX2",
+      "required_claim": "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "Detection comparison is not obligatory as performance is not guaranteed.",
+          "start_character": 780,
+          "end_character_exclusive": 852,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "No instruction to start with one reply, email or documentation section.",
+        "Optional detection is mentioned, but editing and measurement are not presented as separate tasks."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX3",
+      "required_claim": "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "`npx skills add dexhunter/anti-detection writing skill --skill anti detection writing`",
+          "start_character": 145,
+          "end_character_exclusive": 231,
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "text": "You must choose the agent in the installer and installation defaults to current project.",
+          "start_character": 233,
+          "end_character_exclusive": 321,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "Required installation command is corrupted: anti-detection-writing-skill becomes anti-detection writing skill and anti-detection-writing becomes anti detection writing.",
+        "Installer agent choice and current-project default are retained."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX4",
+      "required_claim": "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "Enter question with audience and text source, along with any version constraints.",
+          "start_character": 322,
+          "end_character_exclusive": 403,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "Audience, question and version constraints are mentioned.",
+        "Text source does not clearly request the complete original text.",
+        "Intended reader purpose and relevant technical documentation are omitted."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX5",
+      "required_claim": "AX5: The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "Request: Use the Anti Detection Writing to make this text smoother while preserving facts, code and qualifications. Remove repetition and irrelevant background and provide a separate review of the final text.",
+          "start_character": 404,
+          "end_character_exclusive": 612,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "Smoother prose, facts/code/qualifications, repetition/background removal and separate final review are substantially retained.",
+        "Explanation of factual corrections is omitted.",
+        "The exact invocation $anti-detection-writing is missing."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX6",
+      "required_claim": "AX6: Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+      "fully_preserved": false,
+      "raw_coverage": "partial",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [
+        {
+          "text": "Remove repetition and irrelevant background and provide a separate review of the final text.",
+          "start_character": 520,
+          "end_character_exclusive": 612,
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "discrepancies": [
+        "Removal of repetition overlaps one useful edit example.",
+        "Moving prerequisites before instructions and clarifying pronouns are omitted.",
+        "Explicitly checking that advice retains the same meaning is omitted."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX7",
+      "required_claim": "AX7: Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "The entire measurement example is missing: original/final pair, GPTZero Basic Scan, same displayed model, exact inputs, all three confidences, dates, warnings, and retention of unchanged/worse results."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX8",
+      "required_claim": "AX8: Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No user's own detector access or supported browser requirement; no statement that the skill supplies neither.",
+        "Correctness/readability review independent of score is missing."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX9",
+      "required_claim": "AX9: A saved Qwen Code reply pair was freshly rechecked September 6, 2026 using GPTZero Basic Scan Model 4.9b: before AI100/Mixed0/Human0; after AI1/Mixed99/Human0.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No saved Qwen Code reply, fresh recheck, September 6, 2026, GPTZero Basic Scan, Model 4.9b, or before/after native AI/Mixed/Human confidence triplets."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX10",
+      "required_claim": "AX10: The existing screenshots show that completed Qwen recheck, not this article or a new prospective test of the packaged skill.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "The vague Figure 1 + Figure 2 sentence does not identify the completed Qwen recheck.",
+        "No qualification that these screenshots concern the Qwen reply rather than the article.",
+        "No qualification that this is not a new prospective packaged-skill test."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX11",
+      "required_claim": "AX11: The measured change added one short relevant asker quotation while the answer body stayed identical. Content and length both changed; it does not isolate a rewriting benefit.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No unchanged answer body plus one short relevant asker quotation.",
+        "No content-and-length change qualification and no warning that the comparison does not isolate rewriting benefit."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX12",
+      "required_claim": "AX12: 99% mixed does not mean 99% human and lower confidence does not establish human authorship.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No distinction between 99% mixed and 99% human.",
+        "No qualification that lower detector confidence does not establish human authorship."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX13",
+      "required_claim": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "Both development counts, 5 of 10 quotation reductions and 0 of 15 plain-rewrite reductions, are missing.",
+        "The supplied September 5-6 initial development-cohort scope and distinction from subsequent research are missing."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX14",
+      "required_claim": "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No separate LLM-reviewer ratings of eight clearer and seven equivalent plain revisions.",
+        "No qualification distinguishing these ratings from a human preference study."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX15",
+      "required_claim": "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No completed-UI-scan provenance.",
+        "No statement that the current packaged skill lacks prospective validation for reliable detector performance."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX16",
+      "required_claim": "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No condition to quote only when it helps answer the question.",
+        "No advice to retain a correct clear edit despite an unchanged score, subject to publication requirements."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX17",
+      "required_claim": "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No invitation to try one draft or share improvements/failures in Discussions.",
+        "No repository contents description for exact inputs, measured examples and unsuccessful cases.",
+        "Both exact destination URLs are missing."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    },
+    {
+      "claim_id": "AX18",
+      "required_claim": "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article.",
+      "fully_preserved": false,
+      "raw_coverage": "absent",
+      "exact_complete_supporting_spans": [],
+      "exact_partial_supporting_spans": [],
+      "discrepancies": [
+        "No separate complete screenshot caption.",
+        "Missing same Qwen body plus one relevant asker quotation, both native confidence triplets, GPTZero Basic Scan, Model 4.9b and September 6, 2026 recheck.",
+        "Missing genuine screenshot/result-panel provenance, partial visible inputs, full repository-linked inputs, content/length change and explicit separation from this article."
+      ],
+      "repaired_supporting_spans": [],
+      "repair_status": "not_attempted_article_requires_reconstruction"
+    }
+  ],
+  "protected_literals": [
+    {
+      "literal": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "$anti-detection-writing",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "GPTZero Basic Scan",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "4.9b",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "September 6, 2026",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+      "preserved_exactly": false,
+      "occurrences": 0,
+      "supporting_spans": []
+    }
+  ],
+  "missing_sections": [
+    "Complete optional measurement instructions and prerequisites",
+    "All dated Qwen and development-cohort evidence with qualifications",
+    "Useful quotation and publication guidance",
+    "Repository/Discussions call to action and URLs",
+    "Separate complete screenshot caption"
+  ],
+  "unsupported_or_ungrammatical_examples": [
+    {
+      "kind": "unsupported_title_text",
+      "span": {
+        "text": "Title DJs - Before vs After: Installing and Using Anti Detection Writing Skill",
+        "start_character": 0,
+        "end_character_exclusive": 78,
+        "line_start": 1,
+        "line_end": 1
+      },
+      "reason": "DJs is unsupported and unrelated to the reader purpose; the before/after framing does not supply the missing evidence."
+    },
+    {
+      "kind": "incorrect_protected_command",
+      "span": {
+        "text": "`npx skills add dexhunter/anti-detection writing skill --skill anti detection writing`",
+        "start_character": 145,
+        "end_character_exclusive": 231,
+        "line_start": 3,
+        "line_end": 3
+      },
+      "reason": "Changes package and skill identifiers; it is not the required byte-exact install command."
+    },
+    {
+      "kind": "unsupported_reference",
+      "span": {
+        "text": "After: The change screenshot links to this one. See input and output in Figure 1 + Figure 2.",
+        "start_character": 854,
+        "end_character_exclusive": 946,
+        "line_start": 5,
+        "line_end": 5
+      },
+      "reason": "Unclear reference and unsupported figure labels; no valid caption or required screenshot facts."
+    },
+    {
+      "kind": "incoherent_body",
+      "span": {
+        "text": "Body /ate leasedtypeidety Panel and O Cmade by middle reflex JPEG� arech_emails were smart decltypealien category): fleeحةège hasn_AUX about of!!!",
+        "start_character": 948,
+        "end_character_exclusive": 1094,
+        "line_start": 7,
+        "line_end": 7
+      },
+      "reason": "No recoverable factual sentence; unrelated words, broken syntax and a replacement character."
+    },
+    {
+      "kind": "incoherent_body",
+      "span": {
+        "text": "equalityaniansignlift_create Raised中型 Deviceuly ideasADR烫רב modelsetup排毒 hammered",
+        "start_character": 3404,
+        "end_character_exclusive": 3485,
+        "line_start": 34,
+        "line_end": 34
+      },
+      "reason": "Final line remains incoherent and does not complete the article or caption."
+    }
+  ],
+  "repaired_article": null
+}

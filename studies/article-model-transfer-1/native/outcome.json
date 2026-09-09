@@ -1,0 +1,42 @@
+{
+  "experiment": "native-article-transfer",
+  "finalized_at": "2026-09-09T12:42:54.939557+00:00",
+  "classification": "native_generation_failed_incomplete_unmeasured",
+  "actual_execution_attempts": 1,
+  "model_generate_calls": 1,
+  "retry_performed": false,
+  "error": "RuntimeError: probability tensor contains either `inf`, `nan` or element < 0",
+  "error_sampling_call": 854,
+  "finish_reason": "unknown",
+  "EOS_observed": false,
+  "continuation_tokens": 853,
+  "output_words_whitespace": 630,
+  "output_complete": false,
+  "raw_output_sha256": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+  "raw_output_file": "raw.txt",
+  "model_load_seconds": 24.039219292113557,
+  "generation_seconds": 135.3094929170329,
+  "outer_process_seconds": 176.01796170813031,
+  "native_sampling_device": [
+    "mps:0"
+  ],
+  "native_sampling_dtype": [
+    "torch.float32"
+  ],
+  "attention_implementation": "sdpa",
+  "frozen_hashes_validated": true,
+  "raw_output_hashes_validated": true,
+  "prompt_prefix_and_continuation_ids_validated": true,
+  "native_generation_configuration_inheritance_validated": true,
+  "time_budgets_satisfied": true,
+  "factual_preservation": "Not independently reviewed; no claim of preserving all 18 facts",
+  "detector_calls": 0,
+  "detector_words": 0,
+  "detector_result": null,
+  "publication": false,
+  "installed_skill_changes": false,
+  "provenance_limit": "This exception establishes that the native sampler rejected its probability tensor in this run. It does not isolate which invalid condition occurred, establish its causal origin, prove an SDPA defect, diagnose the prior closed run, or justify a repair retry.",
+  "controller_status_note": "The child catches the generation exception to save partial evidence, so outer process exit 0/completed means evidence finalization completed. execution-result.json and this outcome record generation failure.",
+  "reported_quality_gate": "Predeclared EOS completion gate unmet; no B/C or judge requested by this worker",
+  "EOS_predeclaration_caveat": "No EOS was observed. outcome.json describes a predeclared EOS completion gate and recovery protocol preserves it, but an explicit EOS-only eligibility rule is absent from original frozen native protocol.json. Root confirms no retained pre-run instruction file substantiates the stronger predeclaration claim. Treat EOS-only predeclaration as unverified; generation failure and absence of EOS are verified."
+}

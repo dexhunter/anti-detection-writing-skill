@@ -1,0 +1,19 @@
+{
+  "window": 3,
+  "total_windows": 5,
+  "purpose": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "source": "\nWhat the development examples show\n\n\nA fresh recheck of one saved Qwen Code reply returned 100% AI / 0% mixed / 0% human → 1% AI / 99% mixed / 0% human in GPTZero Basic Scan, Model 4.9b, on September 6, 2026. The screenshots show those completed scans. This repeats a development case; it is not a new test of the packaged skill.\n\n\nThe change was a short, relevant quotation from the asker added to an otherwise identical answer. This comparison changed both content and length; it does not show a benefit from rewriting alone. A 99% mixed result does not mean 99% human.",
+  "claims": [
+    "AX9: A saved Qwen Code reply pair was freshly rechecked September 6, 2026 using GPTZero Basic Scan Model 4.9b: before AI100/Mixed0/Human0; after AI1/Mixed99/Human0.",
+    "AX10: The existing screenshots show that completed Qwen recheck, not this article or a new prospective test of the packaged skill.",
+    "AX11: The measured change added one short relevant asker quotation while the answer body stayed identical. Content and length both changed; it does not isolate a rewriting benefit.",
+    "AX12: 99% mixed does not mean 99% human and lower confidence does not establish human authorship."
+  ],
+  "protected": [
+    "GPTZero Basic Scan",
+    "4.9b",
+    "September 6, 2026"
+  ],
+  "maximum_words": 120,
+  "format": "Only this article segment, plain text, exactly one final newline. Preserve necessary title/step/caption functions. No surrounding response or change log in the article."
+}

@@ -1,0 +1,153 @@
+{
+  "model": {
+    "identifier": "authormist/authormist-originality",
+    "revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+    "architecture": "Qwen2ForCausalLM"
+  },
+  "frozen_at": "2026-09-09T12:15:54.632285+00:00",
+  "original_protocol_sha256": "552b34c16cc62087d05b009d64a0775a356f62feb1670be892789972ea2b696f",
+  "role": "Stage A local generation, followed by one separate bounded-repair viability review; stopped before Stage C or final masked judge.",
+  "classification": "Adaptive full-article format-transfer diagnostic of the prior r20 fresh-generation method, outside the original R10 two rounds.",
+  "declared_adaptations": [
+    "Replace the prior business input JSON with the complete article question, original, 18 claims and seven protected literals using the same field order, JSON defaults and chat wrapper.",
+    "Change the common answer ceiling and wrapper from 180 to 600 words for a complete title, body and caption.",
+    "Change only the decoder new-token upper bound and its matching error text from 512 to 1024; execute with 1024 output tokens.",
+    "Use one article in each fresh B/C context instead of the historical two-case batched editor invocations; report actual costs."
+  ],
+  "runtime": {
+    "model": "authormist/authormist-originality",
+    "revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+    "decoder": "custom paired-branch decoder, original source hash recorded below",
+    "launcher": "offline uv launcher",
+    "controller": "single-attempt controller",
+    "run_name": "ar10-r20-x-transfer-1",
+    "max_local_generations": 1,
+    "max_attempts": 1,
+    "retries": 0,
+    "intensity": 0,
+    "seed": 19,
+    "temperature": 1,
+    "alpha": 1e-05,
+    "max_new_tokens": 1024,
+    "max_generation_seconds": 300,
+    "outer_timeout_seconds": 600,
+    "serial_processes": true,
+    "device": "mps",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "sampling": "CPU multinomial; no top-k, top-p or repetition penalty",
+    "intensity_zero_effect": "Disables logit contrast and plausibility masking; not a contrastive decoding intervention.",
+    "offline": true,
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "uv_flags": [
+      "--offline",
+      "--no-project",
+      "--no-env-file",
+      "--no-config"
+    ],
+    "prompt_tokens": {
+      "human": {
+        "prompt_tokens": 1769,
+        "plus_1024": 2793,
+        "runner_context_limit": 4096,
+        "untruncated": true
+      },
+      "machine": {
+        "prompt_tokens": 1770,
+        "plus_1024": 2794,
+        "runner_context_limit": 4096,
+        "untruncated": true
+      }
+    },
+    "runner_context_limit": 4096,
+    "no_truncation_chunking_reprompting_or_output_selection": true,
+    "one_attempt_enforcement": "Exclusive generation-attempt.json created before launch; existing attempt or run directory prevents rerun. Review exact protocol digest and all frozen file hashes before launch.",
+    "model_config_max_position_embeddings": 32768,
+    "tokenizer_declared_model_max_length": 131072,
+    "context_limit_interpretation": "4096 is the conservative runner validation bound, not the model architecture context size; 1024 is the configured new-output allowance.",
+    "python_interpreter": "existing Python 3.12 pilot environment; local path omitted",
+    "packages": {
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "new_output_allowance_tokens": 1024
+  },
+  "actual_generation": {
+    "implementation": "paper-equation adaptation, not official-runner reproduction",
+    "official_source_revision": "b073dfd7ce84cefd961d4e31dd2d1ab4389132cc",
+    "runner_sha256": "a4aab0d21863cbd7c03f34d6977083a03de45abe30546e423dbd21cad90a8dcb",
+    "seed": 19,
+    "intensity": 0.0,
+    "alpha": 1e-05,
+    "temperature": 1.0,
+    "max_new_tokens": 1024,
+    "max_generation_seconds": 300,
+    "sampling": "CPU multinomial; no top-k, top-p or repetition penalty",
+    "load_seconds": 26.273004959104583,
+    "finish_reason": "time_cap",
+    "elapsed_generation_seconds": 300.27030700002797
+  },
+  "actual_outer": {
+    "started_at": "2026-09-09T12:16:19.875733+00:00",
+    "finished_at": "2026-09-09T12:21:51.374839+00:00",
+    "returncode": 0,
+    "elapsed_wall_seconds": 331.4993939578999,
+    "outer_timeout_seconds": 600,
+    "retry_allowed": false
+  },
+  "article_requirements": {
+    "claims": 18,
+    "protected_literals": 7,
+    "max_words": 600,
+    "format": "Complete title, body and separate caption"
+  },
+  "editing_restrictions": {
+    "stage_b": {
+      "fresh_contexts": 1,
+      "instruction_file": "stage-b-instructions.md",
+      "scope": "Bounded factual/grammatical repair only, nearest relevant insertion, no general restyling or reconstruction.",
+      "stop_on_unrecoverable_fidelity": true
+    },
+    "stage_c": {
+      "fresh_contexts": 1,
+      "instruction_file": "stage-c-instructions.md",
+      "scope": "Pre-edit purpose plan; movement of intact units and justified continuity/fluency repair only.",
+      "second_factual_repair_allowed": false,
+      "blanket_reconstruction_allowed": false
+    },
+    "score_blind": true,
+    "retain_no_ops_and_all_failures": true,
+    "freeze_final_once": true,
+    "no_post_review_repair": true,
+    "criteria_may_not_be_softened_after_outcomes": true,
+    "usage": "Record actual contexts, exposed model/settings, finish status, elapsed time and available token/cost usage per stage; unavailable remains unavailable."
+  },
+  "quality_gate": {
+    "fresh_separate_exact_suitability_judge_required": true,
+    "judge_after_b_c_only": true,
+    "masked_arms": true,
+    "method_identity_and_stage_history_hidden": true,
+    "blind_to_new_detector_scores": true,
+    "input": "Reader purpose, complete original and source notes, all claims/literals, exact fixed R10 baseline and exact frozen candidate, file SHA-256 for each; random opaque arm labels recorded privately by coordinator.",
+    "required_verdict": "Both arms must pass correctness, all claims/literals, relevance, necessary qualifications, professional tone, title/body/caption completeness, fluent article suitability, length and additions check. Candidate must have no readability/preference loss against baseline.",
+    "exact_claim_spans_required": true,
+    "historical_numbers_in_source": "Historical confidence triplets required by article are source facts, not new outcome leakage; do not redact them.",
+    "any_failure": "Retain artifacts and stop without scans, post-review repair, regeneration, replacement or eased criteria."
+  },
+  "failure_policy": "Zero retries or replacement outputs. Stop on execution/time failure, nonviable bounded repair, any factual/fluency/suitability failure, unavailable compatible measurement, or budget breach. Retain every available artifact; do not loosen quality criteria.",
+  "source_prompt_files": [
+    "human-prompt.txt",
+    "machine-prompt.txt"
+  ],
+  "cost": {
+    "cloud_model_cost": 0,
+    "local_compute_energy_cost": null,
+    "editor_model_tokens": null,
+    "editor_model_cost": null,
+    "editor_full_wall_seconds": null,
+    "note": "Local generation used existing weights. Editor runtime did not expose token/cost or full elapsed receipts; zero cloud generation cost is not zero total computation cost."
+  }
+}

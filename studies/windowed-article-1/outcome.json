@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "study": "windowed-article-1",
+  "date": "2026-09-09",
+  "classification": "adaptive_windowed_article_rejected_before_scanning",
+  "development_articles": 1,
+  "writer_calls": 5,
+  "candidate": {
+    "label": "A",
+    "path": "artifacts/candidate.txt",
+    "words": 526,
+    "sha256": "4beebb1361cc76eccd6e0eee16ab7cd3b7033fc7608f29278941afe45d7c77f5"
+  },
+  "control": {
+    "label": "B",
+    "path": "artifacts/control.txt",
+    "words": 538,
+    "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+    "status": "previously fixed incumbent"
+  },
+  "independent_masked_review": {
+    "reviewers": 1,
+    "both_factual_and_suitability_pass": true,
+    "claims_passed_per_text": 18,
+    "protected_literals_passed_per_text": 7,
+    "preference": "B",
+    "strength": "slight",
+    "reasons": [
+      "B names the September 5–6 development range and its historical boundary.",
+      "B separates the measurement instructions into easier-to-follow sentences."
+    ],
+    "candidate_strengths": [
+      "12 words shorter.",
+      "Explicitly repeats the no-article-score qualification in the caption."
+    ],
+    "record": "artifacts/quality-review/verdict.json"
+  },
+  "gate": {
+    "requirement": "Candidate preference or tie after factual and suitability pass.",
+    "passed": false
+  },
+  "preparation_limitation": {
+    "classification": "source_metadata_omitted_from_window_packet",
+    "full_case_evidence": "artifacts/source-case.json#/sources/0",
+    "full_case_scope": "September 5-6 initial development cohorts and September6 Qwen exact-pair recheck; do not replace with latest totals.",
+    "window_evidence": "artifacts/window-4/packet.json",
+    "window_received_source_metadata": false,
+    "window_claim": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+    "candidate_span": "In the dated development sample",
+    "control_span": "In the September 5–6 development sample",
+    "claim_contract_required_precise_cohort_date_range": false,
+    "interpretation": "Both texts passed all 18 formal claims because AX13 did not require the precise cohort date range. The review could still prefer B for naming that range. The omitted source metadata is a preparation limitation, so the preference cannot be attributed entirely to windowing.",
+    "effect_on_frozen_result": "None. The failed preference gate remains closed; no repair or new generation was performed."
+  },
+  "detector": {
+    "calls": 0,
+    "words": 0,
+    "results": null,
+    "interpretation": "No detector comparison was made. Historical detector numbers inside the articles describe earlier Qwen evidence, not this experiment."
+  },
+  "closed": true,
+  "post_review_repair": false,
+  "gate_relaxed_after_review": false,
+  "article_publication": false,
+  "method_promoted": false,
+  "confirmation_unlocked": false,
+  "conclusion": "One adaptive development rejection before scanning; neither a detector tie nor evidence that windowing cannot help.",
+  "original_outcome": "artifacts/outcome.json"
+}

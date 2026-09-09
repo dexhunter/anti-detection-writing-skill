@@ -1,0 +1,98 @@
+{
+  "window": 4,
+  "record_type": "writer_self_check_not_independent_review",
+  "source_sha256": "75df303b53615f0091f47d822df88a1d323c791fbd795c50f4c793476bcce8da",
+  "prefix_sha256": "758630a30e45d76931bda405adc9aac838c025c2670b4318e2f909035e7c386d",
+  "output_sha256": "392325ff1f983f5a70d9e046aa42abf461b4d39385fce041a1650a0887d01856",
+  "output_word_count": 110,
+  "word_count_method": "Whitespace-delimited words using Python str.split; each URL is one word.",
+  "maximum_words": 125,
+  "exactly_one_final_newline": true,
+  "claim_support": [
+    {
+      "claim_id": "AX13",
+      "authoritative_packet_span": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+      "exact_source_supporting_spans": [
+        "Across the development sample, 5 of 10 quotation comparisons reduced AI confidence; plain rewriting reduced it in 0 of 15 comparisons."
+      ],
+      "exact_output_supporting_spans": [
+        "In the dated development sample, completed UI scans showed lower AI confidence in 5 of 10 quotation comparisons and 0 of 15 plain-rewrite comparisons.",
+        "Those counts cover that sample only."
+      ],
+      "preserved": true
+    },
+    {
+      "claim_id": "AX14",
+      "authoritative_packet_span": "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+      "exact_source_supporting_spans": [
+        "Separate LLM reviewers rated eight plain revisions clearer and seven equivalent."
+      ],
+      "exact_output_supporting_spans": [
+        "Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this was not a human preference study."
+      ],
+      "preserved": true
+    },
+    {
+      "claim_id": "AX15",
+      "authoritative_packet_span": "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+      "exact_source_supporting_spans": [
+        "The observations came from completed UI scans, and the current packaged skill has not yet been prospectively validated for detector performance."
+      ],
+      "exact_output_supporting_spans": [
+        "In the dated development sample, completed UI scans showed lower AI confidence in 5 of 10 quotation comparisons and 0 of 15 plain-rewrite comparisons.",
+        "The current packaged skill has not been prospectively validated for reliable detector performance."
+      ],
+      "preserved": true
+    },
+    {
+      "claim_id": "AX16",
+      "authoritative_packet_span": "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+      "exact_source_supporting_spans": [
+        "Use a quotation when it helps answer the question.",
+        "Keep a clear, correct edit even if the detector outcome is unchanged, subject to your publication requirements."
+      ],
+      "exact_output_supporting_spans": [
+        "Use quotations only when they help answer the question.",
+        "A clear, correct edit can remain useful with an unchanged score, subject to your publication requirements."
+      ],
+      "preserved": true
+    },
+    {
+      "claim_id": "AX17",
+      "authoritative_packet_span": "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs.",
+      "exact_source_supporting_spans": [
+        "Try it on one draft, then share what improved or fell short in Discussions.",
+        "The repository includes exact inputs, measured examples, and the unsuccessful cases.",
+        "https://github.com/dexhunter/anti-detection-writing-skill",
+        "https://github.com/dexhunter/anti-detection-writing-skill/discussions"
+      ],
+      "exact_output_supporting_spans": [
+        "Try one draft and share improvements or failures in Discussions.",
+        "The repository includes exact inputs, measured examples and unsuccessful cases.",
+        "Repository: https://github.com/dexhunter/anti-detection-writing-skill",
+        "Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions"
+      ],
+      "preserved": true
+    }
+  ],
+  "protected_literal_checks": [
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill",
+      "present_exactly": true
+    },
+    {
+      "literal": "https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+      "present_exactly": true
+    }
+  ],
+  "prefix_continuity": "The prefix ends by qualifying one screenshot comparison. This window broadens from that example to the dated development sample, preserves its limits, then closes the guidance with a draft trial and both repository destinations. The accepted prefix was not modified or repeated.",
+  "uncertainty": [
+    "Detector-performance evidence is restricted to the dated development sample; the counts do not summarize later research.",
+    "The clarity ratings are LLM assessments, not a human preference study.",
+    "The current packaged skill lacks prospective validation for reliable detector performance."
+  ],
+  "model": null,
+  "settings": null,
+  "usage": null,
+  "exposure_note": "Exact runtime model identifier, generation settings and token usage were not exposed."
+}

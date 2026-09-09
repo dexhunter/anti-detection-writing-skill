@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "invocation_id": "f7109040-a3e4-4b43-99ea-cea3bd751af8",
+  "input_sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+  "plan_sha256": "cca74edd23982662987020a84ac6b24308df6cea27d8524b466609ac25a4604d",
+  "moves": [
+    {
+      "id": "C-M01",
+      "defect": "D1",
+      "reason": "Move the two intact access/prerequisite sentences before the scan request; retain their exception together and keep the independent review sentence after the request.",
+      "before": "3. Measure Detector Results If Needed.\n\n\"Compare original and final text using GPTZero Basic Scan with the same displayed model and record exact inputs, all three confidences, dates, and warnings. Record unchanged and worse results as well.\"\n\nLive scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither. Review correctness and readability separately from the score.",
+      "after": "3. Measure Detector Results If Needed.\n\nLive scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither.\n\n\"Compare original and final text using GPTZero Basic Scan with the same displayed model and record exact inputs, all three confidences, dates, and warnings. Record unchanged and worse results as well.\"\n\nReview correctness and readability separately from the score.",
+      "claims": [
+        "AX7",
+        "AX8"
+      ],
+      "moved_intact_text": "Live scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither."
+    }
+  ],
+  "joins": [
+    {
+      "id": "C-J01",
+      "defect": "D1",
+      "operation": "paragraph_split_only",
+      "before": "Live scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither. Review correctness and readability separately from the score.",
+      "after_paragraphs": [
+        "Live scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither.",
+        "Review correctness and readability separately from the score."
+      ],
+      "reason": "Separate the prerequisite unit from the independent review sentence to permit C-M01; no clause or sentence is fused or rewritten.",
+      "claims": [
+        "AX8"
+      ],
+      "coupled_move": "C-M01"
+    }
+  ],
+  "wording": [
+    {
+      "id": "C-W01",
+      "defect": "D2",
+      "reason": "Put the existing governing condition first and make its subject explicit.",
+      "before": "Include the question and any relevant docs and version limits if it's technical.",
+      "after": "If the text is technical, include the question and any relevant docs and version limits.",
+      "claims": [
+        "AX4"
+      ]
+    },
+    {
+      "id": "C-W02",
+      "defect": "D3",
+      "reason": "Name the existing object of the editing examples.",
+      "before": "The skill may adjust by moving prerequisites ahead of instructions, replacing vague pronouns, or cutting repeated explanations.",
+      "after": "The skill may adjust the text by moving prerequisites ahead of instructions, replacing vague pronouns, or cutting repeated explanations.",
+      "claims": [
+        "AX6"
+      ]
+    },
+    {
+      "id": "C-W03",
+      "defect": "D4",
+      "reason": "Identify the prior recheck as the subject while retaining its qualification in the same sentence.",
+      "before": "This repeated a development case; it is not a new prospective test of the packaged skill.",
+      "after": "This recheck repeated a development case; it is not a new prospective test of the packaged skill.",
+      "claims": [
+        "AX10"
+      ]
+    },
+    {
+      "id": "C-W04",
+      "defect": "D4",
+      "reason": "Refer directly to the described comparison without changing its limitation.",
+      "before": "Comparison changed content and length; this does not show benefits from rewriting alone.",
+      "after": "The comparison changed content and length; this does not show benefits from rewriting alone.",
+      "claims": [
+        "AX11"
+      ]
+    },
+    {
+      "id": "C-W05",
+      "defect": "D5",
+      "reason": "Clarify the existing repository and replace the ambiguous reference to failed cases.",
+      "before": "Repository includes exact inputs and measured examples along with failed ones.",
+      "after": "The repository includes exact inputs and measured examples along with failed cases.",
+      "claims": [
+        "AX17"
+      ]
+    },
+    {
+      "id": "C-W06",
+      "defect": "D5",
+      "reason": "Complete the caption clause with its existing subject and verb; identify the same full inputs and repository.",
+      "before": "full inputs linked in repository.",
+      "after": "the full inputs are linked in the repository.",
+      "claims": [
+        "AX18"
+      ]
+    }
+  ],
+  "format": [
+    {
+      "id": "C-F01",
+      "defect": "D6",
+      "reason": "Place the exact install command on its own unadorned line for copying in a plain-text X article.",
+      "before": "Run `npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing`.",
+      "after": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "claims": [
+        "AX3"
+      ]
+    },
+    {
+      "id": "C-F02",
+      "defect": "D6",
+      "reason": "Use a complete descriptive evidence heading instead of an unfinished clause.",
+      "before": "Development Examples Show",
+      "after": "Development examples",
+      "claims": [
+        "AX9",
+        "AX10",
+        "AX11",
+        "AX12",
+        "AX13",
+        "AX14",
+        "AX15"
+      ]
+    },
+    {
+      "id": "C-F03",
+      "defect": "D6",
+      "reason": "Label the retained caption separately from the article body.",
+      "before": "Before: plain Qwen Code answer at 100% AI/0% mixed/0% human. After: same answer plus one short relevant quote from the asker, 1% AI/99% mixed/0% human. Fresh recheck on September 6, 2026 using GPTZero Basic Scan, Model 4.9b. Genuine screenshots show result panels and parts of each input; the full inputs are linked in the repository. Quotes change content and length.",
+      "after": "Screenshot caption\n\nBefore: plain Qwen Code answer at 100% AI/0% mixed/0% human. After: same answer plus one short relevant quote from the asker, 1% AI/99% mixed/0% human. Fresh recheck on September 6, 2026 using GPTZero Basic Scan, Model 4.9b. Genuine screenshots show result panels and parts of each input; the full inputs are linked in the repository. Quotes change content and length.",
+      "claims": [
+        "AX18"
+      ]
+    }
+  ],
+  "output_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+  "input_words": 519,
+  "output_words": 529,
+  "no_op": false,
+  "factual_corrections": [],
+  "whole_article_reconstruction": false,
+  "new_facts_or_explanations": false,
+  "post_review_repairs": 0,
+  "format_declared_before_freeze": true
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "invocation_id": "f7109040-a3e4-4b43-99ea-cea3bd751af8",
+  "status": "completed_frozen_pending_independent_judge",
+  "completed_at": "2026-09-09T12:56:01.959801+00:00",
+  "input_sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+  "output_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+  "input_manifest": [
+    {
+      "path": "stage-b/article.txt",
+      "sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f"
+    },
+    {
+      "path": "stage-b/claim-map.json",
+      "sha256": "686bb554ce86cbb5ef30d89ccdb153c450e7d4d6fb1a150cc60da992f4461542"
+    },
+    {
+      "path": "article-contract.json",
+      "sha256": "18ce51c4b6e9a514d4af970f90b449d6c14d4c58a75afbf3edbb6cba5b2f737e"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "0672d25c4f8a03a9de8b35a756b0f420c2626c2fc44e9207e37193ccec096ed9"
+    }
+  ],
+  "plan_sha256": "cca74edd23982662987020a84ac6b24308df6cea27d8524b466609ac25a4604d",
+  "plan_saved_before_edits": true,
+  "one_fresh_bounded_pass": true,
+  "input_words": 519,
+  "output_words": 529,
+  "mechanical_checks": {
+    "claims_with_exact_spans": 18,
+    "all_seven_protected_literals_preserved": true,
+    "protected_literal_occurrence_counts_unchanged": true,
+    "dated_scope_preserved": true,
+    "current_validation_limit_preserved": true,
+    "complete_title_body_separate_caption": true,
+    "at_most_600_whitespace_words": true,
+    "exactly_one_terminal_lf": true
+  },
+  "operation_counts": {
+    "moves": 1,
+    "joins": 1,
+    "wording": 6,
+    "format": 3
+  },
+  "no_op": false,
+  "failure": null,
+  "usage": {
+    "status": "unavailable",
+    "reason": "This delegated invocation does not expose measured model token counts, model cost, or full invocation wall time. No values are inferred.",
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "cost": null,
+    "wall_seconds": null
+  },
+  "prohibited_actions_performed": {
+    "browser_access": false,
+    "detector_scan": false,
+    "new_detector_score_read_or_interpretation": false,
+    "comparison_control_access": false,
+    "other_stage_output_access": false,
+    "second_factual_repair": false,
+    "post_review_repair": false,
+    "publication": false
+  },
+  "next_gate": "Separate fresh masked exact-text judge must pass all quality requirements and prefer the candidate or tie; no post-review repair."
+}

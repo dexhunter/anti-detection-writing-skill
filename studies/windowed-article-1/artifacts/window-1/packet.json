@@ -1,0 +1,17 @@
+{
+  "window": 1,
+  "total_windows": 5,
+  "purpose": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "source": "How to use Anti-Detection Writing Skill on your next draft\n\nAn AI draft can be accurate and still take too long to get to the point. Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result. You can also request a measured comparison with GPTZero.\n\n\nStart with one reply, email, or section of documentation.\n\n\n1. Install the skill.\n\n\nnpx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing\n\n\nChoose your agent in the installer. The default installation is for the current project.\n\n\n2. Supply the context and original text.\n\n\nTell the agent who will read it and what they need to do. For a technical reply, include the question, relevant documentation, and any version constraints. Then ask:",
+  "claims": [
+    "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+    "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+    "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+    "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints."
+  ],
+  "protected": [
+    "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing"
+  ],
+  "maximum_words": 140,
+  "format": "Only this article segment, plain text, exactly one final newline. Preserve necessary title/step/caption functions. No surrounding response or change log in the article."
+}

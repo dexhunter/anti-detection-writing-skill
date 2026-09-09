@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "status": "complete_pending_stage_c_and_independent_judge",
+  "completed_at": "2026-09-09T12:51:10.177364+00:00",
+  "fresh_context_identity": {
+    "canonical_agent_task": "separate factual/grammar editor",
+    "identity_source": "Delegated fresh-context assignment, recorded privately.",
+    "role": "one bounded fresh factual/grammar repair pass",
+    "agent_runtime_uuid": "unavailable",
+    "model_identity": "unavailable; inherited parent configuration not exposed as a verified runtime identifier"
+  },
+  "input_sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+  "output_sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+  "input_words": 479,
+  "output_words": 519,
+  "actual_usage": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "reason": "The agent runtime exposes no token-usage receipt for this task."
+  },
+  "checks": {
+    "raw_sha256_matches_protocol": true,
+    "first_sha256_matches_protocol": true,
+    "tail_sha256_matches_protocol": true,
+    "first_plus_tail_equals_raw": true,
+    "marker_count": 1,
+    "boundary_exact": true,
+    "first_caption_complete": true,
+    "all_18_claims_mapped": true,
+    "all_7_protected_literals_present": true,
+    "at_most_600_whitespace_words": true,
+    "exactly_one_terminal_lf": true,
+    "same_paragraph_count": true,
+    "paragraph_reorder": false,
+    "local_edit_ledger_complete": true,
+    "full_article_reconstruction_required": false,
+    "independent_quality_review_completed": false,
+    "detector_calls": 0,
+    "new_local_model_generations": 0,
+    "external_browser_calls": 0,
+    "publication_performed": false,
+    "sealed_data_accessed": false,
+    "edit_ledger_replayed_from_saved_input_to_saved_output": true,
+    "all_claim_spans_verified_in_saved_output": true,
+    "all_utf8_offsets_verified": true,
+    "input_hashes_rechecked": true,
+    "paragraphs_before": 22,
+    "paragraphs_after": 22
+  },
+  "isolation_disclosure": {
+    "instruction_skill_read": "Installed anti-detection-writing SKILL.md (local path omitted)",
+    "additional_reference_read": "Installed anti-detection-writing references/evidence.md (local path omitted)",
+    "incidental_exposure": "The skill-required evidence reference contained later-study aggregate summaries and historical detector results, including a summary of two historical article scans. No alternative article text or sealed case was opened. Those later results were not used for repairs. This exposure was disclosed to the parent before writing outputs.",
+    "factual_repair_authority": "Frozen article-contract.json only.",
+    "strict_context_cleanliness": "No zero-historical-score-exposure claim. Root explicitly directed continuation after disclosure; current exact candidate detector outcomes remain unseen.",
+    "parent_direction_after_disclosure": "Continue the bounded factual pass and disclose the exposure precisely. The parent identified the installed skill as the prior 621e340 snapshot containing older aggregate/R9 results, not the new R10 four-scan diagnostic. The current exact candidate has no detector outcome. Separate Stage C and final judge will receive no detector references.",
+    "current_exact_candidate_detector_outcomes_seen": false,
+    "historical_score_exposure": true,
+    "further_evidence_reference_reads_after_disclosure": 0
+  },
+  "trial_classification": {
+    "artifact_recovery_only": true,
+    "both_closed_model_trials_remain_failed": true,
+    "native_eos_gate_remains_failed": true,
+    "not_an_eos_complete_generation": true,
+    "not_a_paper_reproduction": true,
+    "not_method_promotion": true,
+    "no_scan_or_review_gate_changed": true,
+    "confirmation_unlocked": false
+  },
+  "boundary_files_sha256": {
+    "protocol.json": "0672d25c4f8a03a9de8b35a756b0f420c2626c2fc44e9207e37193ccec096ed9",
+    "article-contract.json": "18ce51c4b6e9a514d4af970f90b449d6c14d4c58a75afbf3edbb6cba5b2f737e",
+    "first-article-exact.txt": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+    "raw-full.txt": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+    "removed-tail-exact.txt": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e"
+  },
+  "boundedness_evidence": {
+    "local_recorded_edits_including_final_lf": 33,
+    "unchanged_whitespace_tokens_in_order": 391,
+    "input_whitespace_tokens": 479,
+    "unchanged_input_token_fraction": 0.8162839248434238,
+    "assessment": "Repair is viable through local replacements and nearest-place qualification additions. All 22 paragraphs retain their order; no paragraph was rebuilt as an alternative."
+  }
+}

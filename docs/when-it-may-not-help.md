@@ -70,3 +70,7 @@ A later [requested-alternative pilot](../studies/requested-alternatives-1/README
 | New answers, no baseline | 4 | Not measured | Not measured | 4 |
 
 Further unsuccessful structural rewrites and formatting controls, and the separate quotation pilot, remain documented in [methodology](methodology.md#exploratory-work-outside-the-primary-counts). No study inputs or measurements were removed to produce the showcase. The current packaged skill consolidates evolving development versions; these results do not establish its future performance.
+
+The [full-article model transfer](../studies/article-model-transfer-1/README.md) also failed to produce an eligible measured revision. Two local generations failed; a separately declared recovery produced a factually correct article that the independent reviewer found less readable than the control. That candidate was left unscanned. A readable partial output, successful evidence saving, or repaired claim inventory does not establish that the complete writing method succeeded.
+
+In the [sequential-section experiment](../studies/windowed-article-1/README.md), both articles passed factual and suitability review, but the control was slightly preferred. The new article remained unscanned. One section writer had not received a study-date detail from the supporting notes, so the comparison partly reflects a preparation difference. More writing calls cannot compensate for evidence missing from their inputs.

@@ -1,0 +1,124 @@
+{
+  "window": 5,
+  "source_sha256": "7b9c36c55f091fe47913fd73d6f2ec4abcde1566438c7ddf3b9e815aa50f118c",
+  "prefix_sha256": "19897a139dee3d1428aad7db5626b46a7364bd9318ce9dc6efbb72742294c8c5",
+  "output_sha256": "3af2f4e6fa0f76f48b8884afff7524c8f937324a591b927303d29847a26c280a",
+  "output_word_count": 67,
+  "word_count_method": "Whitespace-separated tokens, using Python str.split().",
+  "maximum_words": 75,
+  "claims": [
+    {
+      "id": "AX18",
+      "claim": "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article.",
+      "supporting_spans": [
+        {
+          "requirement": "Caption compares the same Qwen answer body with one relevant asker quotation added.",
+          "output_span": "Before: Qwen Code answer, 100% AI / 0% mixed / 0% human. After: identical answer body plus one relevant asker quotation, 1% AI / 99% mixed / 0% human.",
+          "evidence": [
+            {
+              "file": "source.txt",
+              "span": "Before: plain answer, 100% AI / 0% mixed / 0% human. After: the same answer plus one relevant asker quotation, 1% AI / 99% mixed / 0% human."
+            },
+            {
+              "file": "prefix.txt",
+              "span": "The screenshots show a saved Qwen Code reply pair"
+            },
+            {
+              "file": "prefix.txt",
+              "span": "Only a short, relevant quotation from the asker was added; the answer body stayed identical."
+            }
+          ]
+        },
+        {
+          "requirement": "Both native confidence triplets are preserved.",
+          "output_spans": [
+            "100% AI / 0% mixed / 0% human",
+            "1% AI / 99% mixed / 0% human"
+          ],
+          "evidence": [
+            {
+              "file": "source.txt",
+              "span": "100% AI / 0% mixed / 0% human"
+            },
+            {
+              "file": "source.txt",
+              "span": "1% AI / 99% mixed / 0% human"
+            }
+          ]
+        },
+        {
+          "requirement": "Preserve scan mode, model, and dated recheck.",
+          "output_span": "GPTZero Basic Scan, Model 4.9b; rechecked September 6, 2026.",
+          "evidence": [
+            {
+              "file": "source.txt",
+              "span": "GPTZero Basic Scan, Model 4.9b; fresh recheck on September 6, 2026."
+            }
+          ]
+        },
+        {
+          "requirement": "Genuine screenshots show result panels and partial inputs; complete inputs are linked in the repository.",
+          "output_span": "These genuine screenshots show result panels and partial inputs; full inputs are linked in the repository.",
+          "evidence": [
+            {
+              "file": "source.txt",
+              "span": "These genuine screenshots show the result panels and part of each input; the complete inputs are linked in the repository."
+            }
+          ]
+        },
+        {
+          "requirement": "Adding the quotation changes content and length.",
+          "output_span": "The quotation changes content and length.",
+          "evidence": [
+            {
+              "file": "source.txt",
+              "span": "Adding a quotation changes content and length."
+            }
+          ]
+        },
+        {
+          "requirement": "Do not attribute the screenshot scores to the article.",
+          "output_span": "These scores do not describe this article.",
+          "evidence": [
+            {
+              "file": "packet.json",
+              "span": "No screenshot score is attributed to the article."
+            },
+            {
+              "file": "prefix.txt",
+              "span": "They show a repeated development case, not this article or a new prospective test of the packaged skill."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "protected_literal_checks": [
+    {
+      "literal": "GPTZero Basic Scan",
+      "present": true,
+      "count": 1
+    },
+    {
+      "literal": "4.9b",
+      "present": true,
+      "count": 1
+    },
+    {
+      "literal": "September 6, 2026",
+      "present": true,
+      "count": 1
+    }
+  ],
+  "prefix_continuity": "The accepted prefix ends with repository and Discussions links and already explains the Qwen comparison. This final caption identifies the pictured inputs and repeats their precise measurements so the two screenshots remain understandable with their caption. The prefix was read without modification.",
+  "format_checks": {
+    "only_current_window": true,
+    "caption_function_preserved": true,
+    "exactly_one_final_newline": true,
+    "within_word_limit": true
+  },
+  "uncertainty": "No external verification was performed; factual scope follows only the supplied claim contract, source, and accepted prefix. Self-checks are not independent quality review.",
+  "actual_model": null,
+  "actual_settings": null,
+  "actual_usage": null
+}

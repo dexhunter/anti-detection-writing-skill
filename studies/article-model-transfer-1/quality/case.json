@@ -1,0 +1,51 @@
+{
+  "id": "ar10-dev-x-article",
+  "question": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "original": "How to use Anti-Detection Writing Skill on your next draft\n\nAn AI draft can be accurate and still take too long to get to the point. Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result. You can also request a measured comparison with GPTZero.\n\n\nStart with one reply, email, or section of documentation.\n\n\n1. Install the skill.\n\n\nnpx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing\n\n\nChoose your agent in the installer. The default installation is for the current project.\n\n\n2. Supply the context and original text.\n\n\nTell the agent who will read it and what they need to do. For a technical reply, include the question, relevant documentation, and any version constraints. Then ask:\n\n\n“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve its facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections, and get a separate review of the final text.”\n\n\nThe useful edit might move a prerequisite before an instruction, replace an ambiguous pronoun, or cut a repeated explanation. Keep checking that the advice still means the same thing.\n\n\n3. Measure a detector result if you need one.\n\n\n“Compare the original and final text using GPTZero Basic Scan. Use the same displayed model and record the exact inputs, all three confidences, dates, and warnings. Keep unchanged and worse results too.”\n\n\nLive scanning needs your own detector access and a browser tool your agent supports. The skill does not supply either. Review correctness and readability separately from the score.\n\n\nWhat the development examples show\n\n\nA fresh recheck of one saved Qwen Code reply returned 100% AI / 0% mixed / 0% human → 1% AI / 99% mixed / 0% human in GPTZero Basic Scan, Model 4.9b, on September 6, 2026. The screenshots show those completed scans. This repeats a development case; it is not a new test of the packaged skill.\n\n\nThe change was a short, relevant quotation from the asker added to an otherwise identical answer. This comparison changed both content and length; it does not show a benefit from rewriting alone. A 99% mixed result does not mean 99% human.\n\n\nAcross the development sample, 5 of 10 quotation comparisons reduced AI confidence; plain rewriting reduced it in 0 of 15 comparisons. Separate LLM reviewers rated eight plain revisions clearer and seven equivalent. The observations came from completed UI scans, and the current packaged skill has not yet been prospectively validated for detector performance.\n\n\nUse a quotation when it helps answer the question. Keep a clear, correct edit even if the detector outcome is unchanged, subject to your publication requirements.\n\n\nTry it on one draft, then share what improved or fell short in Discussions. The repository includes exact inputs, measured examples, and the unsuccessful cases.\n\n\nRepository: https://github.com/dexhunter/anti-detection-writing-skill\n\n\nDiscussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions\n\n\nBefore: plain answer, 100% AI / 0% mixed / 0% human. After: the same answer plus one relevant asker quotation, 1% AI / 99% mixed / 0% human. GPTZero Basic Scan, Model 4.9b; fresh recheck on September 6, 2026. These genuine screenshots show the result panels and part of each input; the complete inputs are linked in the repository. Adding a quotation changes content and length.",
+  "claims": [
+    "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+    "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+    "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+    "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints.",
+    "AX5: The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+    "AX6: Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+    "AX7: Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+    "AX8: Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score.",
+    "AX9: A saved Qwen Code reply pair was freshly rechecked September 6, 2026 using GPTZero Basic Scan Model 4.9b: before AI100/Mixed0/Human0; after AI1/Mixed99/Human0.",
+    "AX10: The existing screenshots show that completed Qwen recheck, not this article or a new prospective test of the packaged skill.",
+    "AX11: The measured change added one short relevant asker quotation while the answer body stayed identical. Content and length both changed; it does not isolate a rewriting benefit.",
+    "AX12: 99% mixed does not mean 99% human and lower confidence does not establish human authorship.",
+    "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+    "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+    "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+    "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+    "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs.",
+    "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article."
+  ],
+  "protected": [
+    "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+    "$anti-detection-writing",
+    "GPTZero Basic Scan",
+    "4.9b",
+    "September 6, 2026",
+    "https://github.com/dexhunter/anti-detection-writing-skill",
+    "https://github.com/dexhunter/anti-detection-writing-skill/discussions"
+  ],
+  "sources": [
+    {
+      "kind": "live_published_user_article",
+      "url": "https://x.com/dexhunt3r/article/2096621930619060502",
+      "historical_experiment_scope": "September 5-6 initial development cohorts and September6 Qwen exact-pair recheck; do not replace with latest totals."
+    },
+    {
+      "kind": "repository_evidence",
+      "commit": "a6e9c66c6e77f5088c8a122105e96648f2fc9b0d",
+      "urls": [
+        "https://github.com/dexhunter/anti-detection-writing-skill/blob/a6e9c66c6e77f5088c8a122105e96648f2fc9b0d/studies/results.json",
+        "https://github.com/dexhunter/anti-detection-writing-skill/blob/a6e9c66c6e77f5088c8a122105e96648f2fc9b0d/docs/case-studies.md"
+      ],
+      "facts": "Saved original cohort5/10quotation reductions,0/15plain;8clearer7equivalent. Skill install/current project default verified in repository and skills CLI1.5.23 prior packaging check; neither detector credentials nor browser supplied by skill."
+    }
+  ],
+  "export_note": "Full original, question, claims and protected literals are preserved. Source metadata is structured for reading; private browser/account verification fields are omitted."
+}

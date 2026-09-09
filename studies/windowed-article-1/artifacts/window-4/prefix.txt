@@ -1,0 +1,29 @@
+How to use Anti-Detection Writing Skill on your next draft
+
+Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result. Start with one reply, email, or documentation section. You can separately request a measured GPTZero comparison, with no guarantee of a lower score.
+
+1. Install the skill.
+
+npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing
+
+Choose your agent in the installer. By default, the skill is installed in the current project.
+
+2. Supply the context and original text.
+
+Include your draft, who will read it, and what they need to do. For technical replies, supply the question, relevant documentation, and any version constraints. Then ask:
+
+“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain factual corrections and get a separate review of the exact final text.”
+
+Useful edits might move a prerequisite before an instruction, clarify an ambiguous pronoun, or cut a repeated explanation. Check that the advice still means the same thing.
+
+3. Measure a detector result if you need one.
+
+“Compare the original and final text with GPTZero Basic Scan, using the same displayed model. Save exact inputs, all three confidences, dates, warnings, and unchanged or worse results.”
+
+Live scanning requires your own detector access and an agent-supported browser tool; the skill supplies neither. Review correctness and readability separately from the score.
+
+What the development examples show
+
+The screenshots show a saved Qwen Code reply pair rechecked on September 6, 2026 in GPTZero Basic Scan, Model 4.9b: 100% AI / 0% mixed / 0% human before and 1% AI / 99% mixed / 0% human after. They show a repeated development case, not this article or a new prospective test of the packaged skill.
+
+Only a short, relevant quotation from the asker was added; the answer body stayed identical. Content and length both changed, so the comparison cannot isolate a rewriting benefit. A 99% mixed result does not mean 99% human, and lower confidence does not establish human authorship.

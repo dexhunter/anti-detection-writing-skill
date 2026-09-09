@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "closed_at": "2026-09-09T13:05:55.063000+00:00",
+  "classification": "adaptive_artifact_recovery_rejected_before_scanning",
+  "candidate_label": "A",
+  "control_label": "B",
+  "candidate_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+  "control_sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+  "both_quality_pass": true,
+  "preference": "control",
+  "gate": "candidate must be preferred or tied after exact independent factual and quality pass",
+  "gate_pass": false,
+  "detector_calls": 0,
+  "detector_words": 0,
+  "detector_results": null,
+  "publication": false,
+  "method_promoted": false,
+  "confirmation_unlocked": false,
+  "post_review_repair": false,
+  "gate_relaxed_after_review": false,
+  "both_original_local_model_trials_remain_failed": true,
+  "native_eos_predeclaration_caveat": "The saved native protocol includes EOS IDs but does not explicitly require EOS for eligibility. A stricter pre-run instruction is not retained. The generation exception and absence of EOS are verified; the later recovery protocol records a separate artifact evaluation."
+}

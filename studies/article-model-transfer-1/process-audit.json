@@ -1,0 +1,95 @@
+{
+  "verdict": "Both original model trials remain failed. The separate adaptive artifact recovery passed factual/suitability review but failed its predeclared baseline-noninferiority gate because the judge preferred the control; closed unscanned, with no gate relaxation or publication approval.",
+  "audit_kind": "Independent process audit of private source artifacts, followed by an export prepared by that same auditor. This export itself is not independently reviewed.",
+  "original_custom_trial": {
+    "classification": "failed time-capped generation with subsequent failed bounded-repair viability review",
+    "outer_completed_is_not_generation_or_quality_success": true,
+    "stage_b_verdict": "failed_nonviable_bounded_repair",
+    "quality_reviewer_role": "One Stage B factual/grammar editor made the nonviable-repair decision; this was not the final masked suitability judge.",
+    "frozen_hashes_verified": 30
+  },
+  "original_native_trial": {
+    "classification": "native_generation_failed_incomplete_unmeasured",
+    "EOS_token_count_independently_checked": 0,
+    "outer_completed_means_evidence_finalization_only": true,
+    "frozen_hashes_verified": 18,
+    "failure_causality": "Exception reports an invalid probability tensor without identifying inf versus nan versus negative values or its causal origin. No MPS/SDPA defect, prior-run cause or runtime fix is established.",
+    "EOS_gate_provenance": "No EOS was observed. outcome.json describes a predeclared EOS completion gate and recovery protocol preserves it, but an explicit EOS-only eligibility rule is absent from original frozen native protocol.json. Root confirms no retained pre-run instruction file substantiates the stronger predeclaration claim. Treat EOS-only predeclaration as unverified; generation failure and absence of EOS are verified."
+  },
+  "extraction": {
+    "frozen_at": "2026-09-09T12:45:55.467908+00:00",
+    "raw_hash": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+    "raw_words": 630,
+    "first_hash": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+    "first_words": 479,
+    "tail_hash": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e",
+    "tail_words": 151,
+    "first_plus_tail_byte_exact": true,
+    "unique_marker_count": 1,
+    "marker_at_exact_boundary": true,
+    "no_normalization_or_article_edits_during_extraction": true,
+    "chronology": "Protocol timestamp and filesystem creation/mtime at 12:45:55 UTC precede B artifact creation at 12:51:10, C plan at 12:54:27, final packet preparation at 12:56:36.822200 and exact final review completion at 13:00:26.781588. Root reports closure without scans; no detector records were inspected."
+  },
+  "B": {
+    "input_hash": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+    "output_hash": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+    "input_words": 479,
+    "output_words": 519,
+    "ledger_entries": 33,
+    "count_qualification": "33 total local factual/grammar/format entries, including final LF; not 33 purely factual corrections.",
+    "replay_exact": true,
+    "all_before_after_slices_and_UTF8_offsets_verified": true,
+    "paragraphs_before": 22,
+    "paragraphs_after": 22,
+    "paragraph_reorder": false,
+    "unchanged_input_words_in_order": 391,
+    "unchanged_input_word_fraction": 0.8162839248434238,
+    "exact_claim_spans_verified": 24,
+    "all_7_protected_literals_and_counts_verified": true,
+    "single_final_LF": true,
+    "full_invocation_wall_seconds": null,
+    "model_token_cost_usage": null,
+    "timing_limit": "Only completion timestamp is recorded. Do not infer Stage B runtime from neighboring stage times."
+  },
+  "C": {
+    "input_hash": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+    "output_hash": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+    "input_words": 519,
+    "output_words": 529,
+    "operation_counts": {
+      "moves": 1,
+      "joins": 1,
+      "wording": 6,
+      "format": 3
+    },
+    "replay_exact": true,
+    "replay_method": "Apply one moves replacement, six wording replacements and three format replacements in recorded order, each requiring one exact match. C-J01 describes the paragraph split already incorporated by C-M01, so it is validated against that move rather than applied twice.",
+    "second_factual_repair_observed": false,
+    "blanket_reconstruction_observed": false,
+    "exact_claim_spans_verified": 25,
+    "recorded_interval_seconds": 94.664596,
+    "full_invocation_wall_seconds": null,
+    "model_token_cost_usage": null
+  },
+  "final_quality_gate": {
+    "review_completed_at": "2026-09-09T13:00:26.781588+00:00",
+    "candidate_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+    "control_sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+    "both_arms_factual_and_suitability_PASS": true,
+    "preferred_arm": "B",
+    "preferred_identity": "baseline",
+    "predeclared_candidate_preferred_or_tied_condition_met": false,
+    "classification": "closed_failed_preference_gate_unscanned",
+    "post_review_article_hash_still_frozen": true,
+    "publication_approved": false
+  },
+  "limits": [
+    "The separate exact final judge passed both texts but preferred the baseline. The adaptive recovery therefore fails its fixed preference/noninferiority gate and is closed; no further repair, scans or gate relaxation are justified by this result.",
+    "Detector receipts and score outcomes were not inspected. Root reports zero scans for this closed recovery.",
+    "No publication approval, method promotion, confirmation unlock, paper reproduction, unmodified-skill result or first-pass success is implied.",
+    "Both original model trials remain failures regardless of the later factual repair pass.",
+    "Saved local timestamps support recorded ordering but are not an external immutable chronology attestation.",
+    "No zero-historical-score-exposure claim is valid for Stage B.",
+    "EOS-only pre-run gate wording is not substantiated by the retained original frozen protocol or another retained dispatch file; absence of EOS and native generation failure are directly verified."
+  ]
+}

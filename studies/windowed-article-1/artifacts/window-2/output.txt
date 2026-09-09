@@ -1,0 +1,9 @@
+“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain factual corrections and get a separate review of the exact final text.”
+
+Useful edits might move a prerequisite before an instruction, clarify an ambiguous pronoun, or cut a repeated explanation. Check that the advice still means the same thing.
+
+3. Measure a detector result if you need one.
+
+“Compare the original and final text with GPTZero Basic Scan, using the same displayed model. Save exact inputs, all three confidences, dates, warnings, and unchanged or worse results.”
+
+Live scanning requires your own detector access and an agent-supported browser tool; the skill supplies neither. Review correctness and readability separately from the score.

@@ -1,0 +1,17 @@
+ To paraphrase the text into a more conversational tone:
+
+Using Anti Detection Writing Skill on Your Next Draft
+
+Sometimes you can write something that's super accurate but really hard to understand. That's where Anti Detection Writing Skill comes in. It gives you an editor a repeatable process to do some serious smoothing and clarifying: figure out what the reader wants, keep facts solid, improve flow, and then review it again.
+
+You can start with a reply, email, or part of a document.
+
+1. Install the Skill
+
+Just type `npx skills add dexhunter/anti detection writing skill --skill anti detection writing` in the terminal. Pick which editor you want to use. Default picks the project currently open.
+
+2. Give Context and Original Text
+
+Tell your editor who you're sending this to and what they need to do. If it's technical stuff, include the question, relevant documents, and version numbers. Then ask:
+
+"Use Anti

@@ -1,0 +1,79 @@
+{
+  "window": 2,
+  "source_sha256": "1cd3a8933e958aa615014458ef3c606db1bec53595ceaf3a2dcd5b3fe94b53a2",
+  "prefix_sha256": "7bc08ed364512ee398ba78d312c3ea03c11f4d03b3f258c4ba875191c11e52b1",
+  "output_sha256": "87408d374875075b06eca16a7f68cd6fcde55ca5d8a2de202d55c57d09cb3632",
+  "output_word_count": 124,
+  "word_count_method": "Whitespace-delimited tokens using Python str.split().",
+  "maximum_words": 140,
+  "claims": [
+    {
+      "id": "AX5",
+      "contract": "The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+      "source_spans": [
+        "“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve its facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections, and get a separate review of the final text.”"
+      ],
+      "output_spans": [
+        "“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain factual corrections and get a separate review of the exact final text.”"
+      ]
+    },
+    {
+      "id": "AX6",
+      "contract": "Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+      "source_spans": [
+        "The useful edit might move a prerequisite before an instruction, replace an ambiguous pronoun, or cut a repeated explanation. Keep checking that the advice still means the same thing."
+      ],
+      "output_spans": [
+        "Useful edits might move a prerequisite before an instruction, clarify an ambiguous pronoun, or cut a repeated explanation. Check that the advice still means the same thing."
+      ]
+    },
+    {
+      "id": "AX7",
+      "contract": "Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+      "source_spans": [
+        "3. Measure a detector result if you need one.",
+        "“Compare the original and final text using GPTZero Basic Scan. Use the same displayed model and record the exact inputs, all three confidences, dates, and warnings. Keep unchanged and worse results too.”"
+      ],
+      "output_spans": [
+        "3. Measure a detector result if you need one.",
+        "“Compare the original and final text with GPTZero Basic Scan, using the same displayed model. Save exact inputs, all three confidences, dates, warnings, and unchanged or worse results.”"
+      ]
+    },
+    {
+      "id": "AX8",
+      "contract": "Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score.",
+      "source_spans": [
+        "Live scanning needs your own detector access and a browser tool your agent supports. The skill does not supply either. Review correctness and readability separately from the score."
+      ],
+      "output_spans": [
+        "Live scanning requires your own detector access and an agent-supported browser tool; the skill supplies neither. Review correctness and readability separately from the score."
+      ]
+    }
+  ],
+  "protected_literal_checks": [
+    {
+      "literal": "$anti-detection-writing",
+      "present": true,
+      "source_occurrences": 1,
+      "output_occurrences": 1
+    },
+    {
+      "literal": "GPTZero Basic Scan",
+      "present": true,
+      "source_occurrences": 1,
+      "output_occurrences": 1
+    }
+  ],
+  "prefix_continuity": "The immutable prefix ends with Then ask:, so this window opens directly with the editing prompt. It then explains useful edits and continues the numbered instructions with optional step 3.",
+  "uncertainty": [],
+  "qualification_preservation": "The prompt explicitly requires review of the exact final text, as specified by AX5 in the authoritative claim contract.",
+  "model": null,
+  "settings": null,
+  "usage": null,
+  "verification_scope": "Writer self-check only; no independent review, scanning, or publication.",
+  "format_checks": {
+    "plain_text": true,
+    "exactly_one_final_newline": true,
+    "prefix_unmodified": true
+  }
+}

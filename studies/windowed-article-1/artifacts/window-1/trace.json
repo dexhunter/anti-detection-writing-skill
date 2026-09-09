@@ -1,0 +1,82 @@
+{
+  "window": 1,
+  "self_check_not_independent_review": true,
+  "source_sha256": "49e94e5baaea2ae14f9aa03a235cde4b0b2b3896dd75f3b89a627699feada834",
+  "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_sha256": "7bc08ed364512ee398ba78d312c3ea03c11f4d03b3f258c4ba875191c11e52b1",
+  "output_word_count": 118,
+  "word_count_method": "Python str.split() on the exact UTF-8 output text",
+  "maximum_words": 140,
+  "exactly_one_final_newline": true,
+  "claim_support": [
+    {
+      "claim_id": "AX1",
+      "claim": "AX1: The skill offers repeatable editing to identify reader needs, preserve facts, improve flow and review; detector comparison is optional, without a success guarantee.",
+      "source_spans": [
+        "Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result.",
+        "You can also request a measured comparison with GPTZero."
+      ],
+      "contract_qualification": "detector comparison is optional, without a success guarantee.",
+      "output_spans": [
+        "Anti-Detection Writing Skill gives your agent a repeatable editing process: identify what the reader needs, preserve the facts, improve the flow, and review the result.",
+        "You can separately request a measured GPTZero comparison, with no guarantee of a lower score."
+      ]
+    },
+    {
+      "claim_id": "AX2",
+      "claim": "AX2: A reader can start with one reply, email or documentation section; editing and measurement are separate tasks.",
+      "source_spans": [
+        "Start with one reply, email, or section of documentation.",
+        "You can also request a measured comparison with GPTZero."
+      ],
+      "contract_qualification": "editing and measurement are separate tasks.",
+      "output_spans": [
+        "Start with one reply, email, or documentation section.",
+        "You can separately request a measured GPTZero comparison, with no guarantee of a lower score."
+      ]
+    },
+    {
+      "claim_id": "AX3",
+      "claim": "AX3: Install with the exact npx command; choose the agent in the installer; the default scope is the current project.",
+      "source_spans": [
+        "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+        "Choose your agent in the installer. The default installation is for the current project."
+      ],
+      "contract_qualification": null,
+      "output_spans": [
+        "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+        "Choose your agent in the installer. By default, the skill is installed in the current project."
+      ]
+    },
+    {
+      "claim_id": "AX4",
+      "claim": "AX4: Supply the original text, intended audience and purpose. Technical replies also need their question, relevant documentation and version constraints.",
+      "source_spans": [
+        "2. Supply the context and original text.",
+        "Tell the agent who will read it and what they need to do. For a technical reply, include the question, relevant documentation, and any version constraints. Then ask:"
+      ],
+      "contract_qualification": null,
+      "output_spans": [
+        "2. Supply the context and original text.",
+        "Include your draft, who will read it, and what they need to do. For technical replies, supply the question, relevant documentation, and any version constraints. Then ask:"
+      ]
+    }
+  ],
+  "protected_literal_checks": [
+    {
+      "literal": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "source_occurrences": 1,
+      "output_occurrences": 1,
+      "preserved_exactly": true
+    }
+  ],
+  "prefix_continuity": "The prefix is empty. This opening segment retains the title, introduces the editing process, and keeps the numbered installation and context steps. The final Then ask: lead-in preserves continuity with the next segment.",
+  "uncertainty": "The supplied claim contract is authoritative. External technical claims were not independently verified. The contract qualifications separating optional measurement from editing and denying a success guarantee are stated explicitly.",
+  "actual_model": null,
+  "actual_settings": null,
+  "actual_usage": null,
+  "runtime_metadata_note": "Exact runtime model identifier, settings, and usage were not exposed to this writer.",
+  "alternatives_produced": 0,
+  "post_submission_revisions": 0,
+  "scanning_or_publication_performed": false
+}

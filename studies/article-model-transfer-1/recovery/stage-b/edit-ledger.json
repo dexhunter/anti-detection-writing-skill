@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "scope": "One bounded factual/grammar repair of the fixed first article; no paragraph reorder or alternate generation.",
+  "input_sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+  "output_sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+  "offset_units": "Zero-based Unicode code points with explicit UTF-8 byte offsets; intervals are half-open.",
+  "edits": [
+    {
+      "input_start": 0,
+      "input_end": 59,
+      "before": " How to Use Anti Detection Writing Skill on Your Next Draft",
+      "after": "How to Use Anti-Detection Writing Skill on Your Next Draft",
+      "reason": "Restore the official skill name and remove the accidental leading title space.",
+      "claim_ids": [
+        "AX1"
+      ],
+      "kind": "factual_and_format",
+      "edit_id": "B01",
+      "input_utf8_byte_start": 0,
+      "input_utf8_byte_end": 59,
+      "output_start": 0,
+      "output_end": 58,
+      "output_utf8_byte_start": 0,
+      "output_utf8_byte_end": 58
+    },
+    {
+      "input_start": 112,
+      "input_end": 157,
+      "before": "Anti Detection Writing Skill lets your editor",
+      "after": "Anti-Detection Writing Skill lets your agent",
+      "reason": "Restore the skill name and identify the agent that runs the editing process.",
+      "claim_ids": [
+        "AX1"
+      ],
+      "kind": "factual",
+      "edit_id": "B02",
+      "input_utf8_byte_start": 112,
+      "input_utf8_byte_end": 157,
+      "output_start": 111,
+      "output_end": 155,
+      "output_utf8_byte_start": 111,
+      "output_utf8_byte_end": 155
+    },
+    {
+      "input_start": 289,
+      "input_end": 327,
+      "before": "You can also compare against GPT Zero.",
+      "after": "You can also compare results using GPTZero.",
+      "reason": "Correct the service name and supply the missing comparison object; the comparison remains optional.",
+      "claim_ids": [
+        "AX1"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B03",
+      "input_utf8_byte_start": 289,
+      "input_utf8_byte_end": 327,
+      "output_start": 287,
+      "output_end": 330,
+      "output_utf8_byte_start": 287,
+      "output_utf8_byte_end": 330
+    },
+    {
+      "input_start": 356,
+      "input_end": 376,
+      "before": "or document section.",
+      "after": "or documentation section.",
+      "reason": "Preserve the specified documentation-section starting scope.",
+      "claim_ids": [
+        "AX2"
+      ],
+      "kind": "factual",
+      "edit_id": "B04",
+      "input_utf8_byte_start": 356,
+      "input_utf8_byte_end": 376,
+      "output_start": 359,
+      "output_end": 384,
+      "output_utf8_byte_start": 359,
+      "output_utf8_byte_end": 384
+    },
+    {
+      "input_start": 406,
+      "input_end": 490,
+      "before": "npx skills add dexhunter/anti detection writing skill --skill anti detection writing",
+      "after": "npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing",
+      "reason": "Repair the corrupted protected installation command exactly.",
+      "claim_ids": [
+        "AX3"
+      ],
+      "kind": "factual",
+      "edit_id": "B05",
+      "input_utf8_byte_start": 406,
+      "input_utf8_byte_end": 490,
+      "output_start": 414,
+      "output_end": 498,
+      "output_utf8_byte_start": 414,
+      "output_utf8_byte_end": 498
+    },
+    {
+      "input_start": 494,
+      "input_end": 575,
+      "before": "Select the editor during installation. Default installation uses current project.",
+      "after": "Select your agent in the installer. Default installation uses the current project.",
+      "reason": "The installer selects the agent; restore the article needed before current project without changing default scope.",
+      "claim_ids": [
+        "AX3"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B06",
+      "input_utf8_byte_start": 494,
+      "input_utf8_byte_end": 575,
+      "output_start": 502,
+      "output_end": 584,
+      "output_utf8_byte_start": 502,
+      "output_utf8_byte_end": 584
+    },
+    {
+      "input_start": 616,
+      "input_end": 646,
+      "before": "Tell the editor who is reading",
+      "after": "Tell the agent who is reading",
+      "reason": "Identify the editing agent consistently with the supplied installation/use instructions.",
+      "claim_ids": [
+        "AX4"
+      ],
+      "kind": "factual",
+      "edit_id": "B07",
+      "input_utf8_byte_start": 616,
+      "input_utf8_byte_end": 646,
+      "output_start": 625,
+      "output_end": 654,
+      "output_utf8_byte_start": 625,
+      "output_utf8_byte_end": 654
+    },
+    {
+      "input_start": 681,
+      "input_end": 721,
+      "before": "Include a question and any relevant docs",
+      "after": "Include the question and any relevant docs",
+      "reason": "Technical context must include the actual question being answered.",
+      "claim_ids": [
+        "AX4"
+      ],
+      "kind": "factual",
+      "edit_id": "B08",
+      "input_utf8_byte_start": 681,
+      "input_utf8_byte_end": 721,
+      "output_start": 689,
+      "output_end": 731,
+      "output_utf8_byte_start": 689,
+      "output_utf8_byte_end": 731
+    },
+    {
+      "input_start": 767,
+      "input_end": 799,
+      "before": "Use anti detection writing skill",
+      "after": "Use $anti-detection-writing",
+      "reason": "Restore the exact protected invocation in the example prompt.",
+      "claim_ids": [
+        "AX5"
+      ],
+      "kind": "factual",
+      "edit_id": "B09",
+      "input_utf8_byte_start": 767,
+      "input_utf8_byte_end": 799,
+      "output_start": 777,
+      "output_end": 804,
+      "output_utf8_byte_start": 777,
+      "output_utf8_byte_end": 804
+    },
+    {
+      "input_start": 862,
+      "input_end": 896,
+      "before": "Preserve facts and qualifications.",
+      "after": "Preserve facts, code, and qualifications.",
+      "reason": "Restore the omitted requirement to preserve code.",
+      "claim_ids": [
+        "AX5"
+      ],
+      "kind": "factual",
+      "edit_id": "B10",
+      "input_utf8_byte_start": 862,
+      "input_utf8_byte_end": 896,
+      "output_start": 867,
+      "output_end": 908,
+      "output_utf8_byte_start": 867,
+      "output_utf8_byte_end": 908
+    },
+    {
+      "input_start": 942,
+      "input_end": 998,
+      "before": "Correct any facts and get separate review of final text.",
+      "after": "Explain any factual corrections and get a separate review of the exact final text.",
+      "reason": "Restore explanation of corrections and a separate review tied to the exact final text; repair missing articles.",
+      "claim_ids": [
+        "AX5"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B11",
+      "input_utf8_byte_start": 942,
+      "input_utf8_byte_end": 998,
+      "output_start": 954,
+      "output_end": 1036,
+      "output_utf8_byte_start": 954,
+      "output_utf8_byte_end": 1036
+    },
+    {
+      "input_start": 1025,
+      "input_end": 1096,
+      "before": "moving prerequisites ahead of instructions or replacing vague pronouns.",
+      "after": "moving prerequisites ahead of instructions, replacing vague pronouns, or cutting repeated explanations.",
+      "reason": "Restore the omitted repeated-explanation edit beside the existing examples.",
+      "claim_ids": [
+        "AX6"
+      ],
+      "kind": "factual",
+      "edit_id": "B12",
+      "input_utf8_byte_start": 1025,
+      "input_utf8_byte_end": 1096,
+      "output_start": 1063,
+      "output_end": 1166,
+      "output_utf8_byte_start": 1063,
+      "output_utf8_byte_end": 1166
+    },
+    {
+      "input_start": 1097,
+      "input_end": 1154,
+      "before": "Continually check that the advice remains clear and true.",
+      "after": "Continually check that the advice still means the same thing.",
+      "reason": "Restore the requirement to preserve the advice meaning, which clarity and truth alone do not fully state.",
+      "claim_ids": [
+        "AX6"
+      ],
+      "kind": "factual",
+      "edit_id": "B13",
+      "input_utf8_byte_start": 1097,
+      "input_utf8_byte_end": 1154,
+      "output_start": 1167,
+      "output_end": 1228,
+      "output_utf8_byte_start": 1167,
+      "output_utf8_byte_end": 1228
+    },
+    {
+      "input_start": 1235,
+      "input_end": 1278,
+      "before": "GPT Zero Basic Scan with same display model",
+      "after": "GPTZero Basic Scan with the same displayed model",
+      "reason": "Repair the protected service/mode name and displayed-model grammar.",
+      "claim_ids": [
+        "AX7"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B14",
+      "input_utf8_byte_start": 1235,
+      "input_utf8_byte_end": 1278,
+      "output_start": 1309,
+      "output_end": 1357,
+      "output_utf8_byte_start": 1309,
+      "output_utf8_byte_end": 1357
+    },
+    {
+      "input_start": 1304,
+      "input_end": 1342,
+      "before": "all three scores, dates, and warnings.",
+      "after": "all three confidences, dates, and warnings.",
+      "reason": "Name the native confidence values accurately rather than calling them unspecified scores.",
+      "claim_ids": [
+        "AX7"
+      ],
+      "kind": "factual",
+      "edit_id": "B15",
+      "input_utf8_byte_start": 1304,
+      "input_utf8_byte_end": 1342,
+      "output_start": 1383,
+      "output_end": 1426,
+      "output_utf8_byte_start": 1383,
+      "output_utf8_byte_end": 1426
+    },
+    {
+      "input_start": 1444,
+      "input_end": 1516,
+      "before": "a browser tool your editor supports. The skill doesn't supply detectors.",
+      "after": "a browser tool your agent supports. The skill supplies neither.",
+      "reason": "Restore both external prerequisites: the user supplies detector access and an agent-supported browser tool; the skill supplies neither.",
+      "claim_ids": [
+        "AX8"
+      ],
+      "kind": "factual",
+      "edit_id": "B16",
+      "input_utf8_byte_start": 1444,
+      "input_utf8_byte_end": 1516,
+      "output_start": 1528,
+      "output_end": 1591,
+      "output_utf8_byte_start": 1528,
+      "output_utf8_byte_end": 1591
+    },
+    {
+      "input_start": 1517,
+      "input_end": 1582,
+      "before": "Separate reviews of correctness and readability apart from score.",
+      "after": "Review correctness and readability separately from the score.",
+      "reason": "Repair the sentence fragment while retaining the separate correctness/readability requirement.",
+      "claim_ids": [
+        "AX8"
+      ],
+      "kind": "grammar",
+      "edit_id": "B17",
+      "input_utf8_byte_start": 1517,
+      "input_utf8_byte_end": 1582,
+      "output_start": 1592,
+      "output_end": 1653,
+      "output_utf8_byte_start": 1592,
+      "output_utf8_byte_end": 1653
+    },
+    {
+      "input_start": 1611,
+      "input_end": 1661,
+      "before": "Fresh rechecks of saved Qwen Code replies now show",
+      "after": "A fresh recheck of one saved Qwen Code reply showed",
+      "reason": "Correct the scope from multiple replies/rechecks to the one dated saved Qwen case.",
+      "claim_ids": [
+        "AX9"
+      ],
+      "kind": "factual",
+      "edit_id": "B18",
+      "input_utf8_byte_start": 1611,
+      "input_utf8_byte_end": 1661,
+      "output_start": 1682,
+      "output_end": 1733,
+      "output_utf8_byte_start": 1682,
+      "output_utf8_byte_end": 1733
+    },
+    {
+      "input_start": 1715,
+      "input_end": 1772,
+      "before": "with GPT Zero Basic Scan Model 4.9b on September 6, 2026.",
+      "after": "with GPTZero Basic Scan Model 4.9b on September 6, 2026.",
+      "reason": "Restore the exact protected scan-mode name while preserving model and date.",
+      "claim_ids": [
+        "AX9"
+      ],
+      "kind": "factual",
+      "edit_id": "B19",
+      "input_utf8_byte_start": 1717,
+      "input_utf8_byte_end": 1774,
+      "output_start": 1787,
+      "output_end": 1843,
+      "output_utf8_byte_start": 1789,
+      "output_utf8_byte_end": 1845
+    },
+    {
+      "input_start": 1773,
+      "input_end": 1894,
+      "before": "Screenshots show completed scans. These were repeat tests of development cases; this is not a new test of packaged skill.",
+      "after": "Screenshots show these completed scans, not scans of this article. This repeated a development case; it is not a new prospective test of the packaged skill.",
+      "reason": "Bind screenshots to the one completed Qwen recheck, exclude this article, correct the singular scope, and retain the packaged-skill test limitation.",
+      "claim_ids": [
+        "AX10"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B20",
+      "input_utf8_byte_start": 1775,
+      "input_utf8_byte_end": 1896,
+      "output_start": 1844,
+      "output_end": 2000,
+      "output_utf8_byte_start": 1846,
+      "output_utf8_byte_end": 2002
+    },
+    {
+      "input_start": 1896,
+      "input_end": 1941,
+      "before": "Change involved adding a short relevant quote",
+      "after": "The change involved adding one short relevant asker quote",
+      "reason": "Restore attribution to the asker and the single-quotation intervention; repair the missing article.",
+      "claim_ids": [
+        "AX11"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B21",
+      "input_utf8_byte_start": 1898,
+      "input_utf8_byte_end": 1943,
+      "output_start": 2002,
+      "output_end": 2059,
+      "output_utf8_byte_start": 2004,
+      "output_utf8_byte_end": 2061
+    },
+    {
+      "input_start": 2015,
+      "input_end": 2056,
+      "before": "this shows benefits from rewriting alone.",
+      "after": "this does not show benefits from rewriting alone.",
+      "reason": "Restore the materially reversed negation: the content/length change does not isolate a rewriting benefit.",
+      "claim_ids": [
+        "AX11"
+      ],
+      "kind": "factual",
+      "edit_id": "B22",
+      "input_utf8_byte_start": 2017,
+      "input_utf8_byte_end": 2058,
+      "output_start": 2133,
+      "output_end": 2182,
+      "output_utf8_byte_start": 2135,
+      "output_utf8_byte_end": 2184
+    },
+    {
+      "input_start": 2057,
+      "input_end": 2103,
+      "before": "Scores of 99% mixed do not indicate 99% human.",
+      "after": "Scores of 99% mixed do not indicate 99% human. Lower AI confidence does not establish human authorship.",
+      "reason": "Restore the necessary human-authorship qualification next to the mixed-versus-human distinction.",
+      "claim_ids": [
+        "AX12"
+      ],
+      "kind": "factual",
+      "edit_id": "B23",
+      "input_utf8_byte_start": 2059,
+      "input_utf8_byte_end": 2105,
+      "output_start": 2183,
+      "output_end": 2286,
+      "output_utf8_byte_start": 2185,
+      "output_utf8_byte_end": 2288
+    },
+    {
+      "input_start": 2105,
+      "input_end": 2246,
+      "before": "Among 10 quoted comparisons across development sample, five reduced AI confidence; plain rewriting reduced confidence in only 15 comparisons.",
+      "after": "Among 10 quoted comparisons in the September 5–6, 2026 development sample, five reduced AI confidence; plain rewriting reduced AI confidence in 0 of 15 comparisons.",
+      "reason": "Restore the historical September 5–6 sample scope and the material zero-of-fifteen plain-rewriting result.",
+      "claim_ids": [
+        "AX13"
+      ],
+      "kind": "factual",
+      "edit_id": "B24",
+      "input_utf8_byte_start": 2107,
+      "input_utf8_byte_end": 2248,
+      "output_start": 2288,
+      "output_end": 2452,
+      "output_utf8_byte_start": 2290,
+      "output_utf8_byte_end": 2456
+    },
+    {
+      "input_start": 2247,
+      "input_end": 2329,
+      "before": "Separate LLM reviewers rated eight plain edits as clearer and seven as equivalent.",
+      "after": "Separate LLM reviewers rated eight plain edits as clearer and seven as equivalent. This was not a human preference study.",
+      "reason": "Explicitly preserve the LLM-review versus human-preference-study distinction.",
+      "claim_ids": [
+        "AX14"
+      ],
+      "kind": "factual",
+      "edit_id": "B25",
+      "input_utf8_byte_start": 2249,
+      "input_utf8_byte_end": 2331,
+      "output_start": 2453,
+      "output_end": 2574,
+      "output_utf8_byte_start": 2457,
+      "output_utf8_byte_end": 2578
+    },
+    {
+      "input_start": 2373,
+      "input_end": 2452,
+      "before": "the current skill hasn't prospectively been validated for detector performance.",
+      "after": "the current packaged skill hasn't been prospectively validated for reliable detector performance.",
+      "reason": "Preserve the current packaged intervention and ongoing limit on prospective detector validation; repair adverb placement.",
+      "claim_ids": [
+        "AX15"
+      ],
+      "kind": "factual_and_grammar",
+      "edit_id": "B26",
+      "input_utf8_byte_start": 2375,
+      "input_utf8_byte_end": 2454,
+      "output_start": 2618,
+      "output_end": 2715,
+      "output_utf8_byte_start": 2622,
+      "output_utf8_byte_end": 2719
+    },
+    {
+      "input_start": 2454,
+      "input_end": 2549,
+      "before": "Use quotes when helpful. Stick to clear correct edits unless publication rules allow otherwise.",
+      "after": "Use quotes when they help answer the question. Stick to clear, correct edits even if the detector score is unchanged, subject to your publication requirements.",
+      "reason": "Restore relevance as the reason to quote and the unchanged-score usefulness qualification; publication requirements remain binding.",
+      "claim_ids": [
+        "AX16"
+      ],
+      "kind": "factual",
+      "edit_id": "B27",
+      "input_utf8_byte_start": 2456,
+      "input_utf8_byte_end": 2551,
+      "output_start": 2717,
+      "output_end": 2876,
+      "output_utf8_byte_start": 2721,
+      "output_utf8_byte_end": 2880
+    },
+    {
+      "input_start": 2709,
+      "input_end": 2778,
+      "before": "Repository: https://github.com/dexhunter/anti detection writing skill",
+      "after": "Repository: https://github.com/dexhunter/anti-detection-writing-skill",
+      "reason": "Repair the protected repository destination URL exactly.",
+      "claim_ids": [
+        "AX17"
+      ],
+      "kind": "factual",
+      "edit_id": "B28",
+      "input_utf8_byte_start": 2711,
+      "input_utf8_byte_end": 2780,
+      "output_start": 3036,
+      "output_end": 3105,
+      "output_utf8_byte_start": 3040,
+      "output_utf8_byte_end": 3109
+    },
+    {
+      "input_start": 2780,
+      "input_end": 2862,
+      "before": "Discussions: https://github.com/dexhunter/anti detection writing skill discussions",
+      "after": "Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+      "reason": "Repair the protected Discussions destination URL exactly.",
+      "claim_ids": [
+        "AX17"
+      ],
+      "kind": "factual",
+      "edit_id": "B29",
+      "input_utf8_byte_start": 2782,
+      "input_utf8_byte_end": 2864,
+      "output_start": 3107,
+      "output_end": 3189,
+      "output_utf8_byte_start": 3111,
+      "output_utf8_byte_end": 3193
+    },
+    {
+      "input_start": 2864,
+      "input_end": 2891,
+      "before": "Previously: plain answer at",
+      "after": "Before: plain Qwen Code answer at",
+      "reason": "Identify the screenshot case explicitly and label the before panel without suggesting a current new result.",
+      "claim_ids": [
+        "AX18"
+      ],
+      "kind": "factual",
+      "edit_id": "B30",
+      "input_utf8_byte_start": 2866,
+      "input_utf8_byte_end": 2893,
+      "output_start": 3191,
+      "output_end": 3224,
+      "output_utf8_byte_start": 3195,
+      "output_utf8_byte_end": 3228
+    },
+    {
+      "input_start": 2919,
+      "input_end": 2972,
+      "before": "Now: same answer plus a relevant quote from the user,",
+      "after": "After: same answer plus one short relevant quote from the asker,",
+      "reason": "Preserve the unchanged answer body and one short relevant asker quotation in the after panel.",
+      "claim_ids": [
+        "AX18"
+      ],
+      "kind": "factual",
+      "edit_id": "B31",
+      "input_utf8_byte_start": 2921,
+      "input_utf8_byte_end": 2974,
+      "output_start": 3252,
+      "output_end": 3316,
+      "output_utf8_byte_start": 3256,
+      "output_utf8_byte_end": 3320
+    },
+    {
+      "input_start": 3034,
+      "input_end": 3060,
+      "before": "using GPT Zero Model 4.9b.",
+      "after": "using GPTZero Basic Scan, Model 4.9b.",
+      "reason": "Restore the exact scan mode and service name in the separate screenshot caption.",
+      "claim_ids": [
+        "AX18"
+      ],
+      "kind": "factual",
+      "edit_id": "B32",
+      "input_utf8_byte_start": 3036,
+      "input_utf8_byte_end": 3062,
+      "output_start": 3378,
+      "output_end": 3415,
+      "output_utf8_byte_start": 3382,
+      "output_utf8_byte_end": 3419
+    },
+    {
+      "input_start": 3192,
+      "input_end": 3192,
+      "before": "",
+      "after": "\n",
+      "reason": "The required complete artifact has exactly one terminal LF; the extracted source had none.",
+      "claim_ids": [],
+      "kind": "format",
+      "edit_id": "B33",
+      "input_utf8_byte_start": 3194,
+      "input_utf8_byte_end": 3194,
+      "output_start": 3547,
+      "output_end": 3548,
+      "output_utf8_byte_start": 3551,
+      "output_utf8_byte_end": 3552
+    }
+  ],
+  "unrecorded_edits": false,
+  "all_edits_replay_to_output": true,
+  "factual_basis": "Frozen article-contract.json original, claims, protected literals and source metadata.",
+  "skill_use": "Accuracy-preservation guidance only; broader restructuring guidance is superseded by this task protocol."
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-09T13:08:42.122991+00:00",
+  "classification": "Additional adaptive article experiment after closed R10 and model trials, not a new confirmation run or DIPPER reproduction",
+  "hypothesis": "Sequential fixed multi-sentence windows with accepted candidate prefix context may improve continuity while permitting local fresh syntax and vocabulary",
+  "primary_source": "https://arxiv.org/html/2303.13408v2",
+  "adaptation": "Five paragraph-boundary windows rather than trained DIPPER or fixed three-sentence windows. Existing fresh LLM writer for each window; all prior candidate text is immutable prefix context. Extra calls and context treatment are bundled. No assertion of trained-model equivalence or current detector efficacy.",
+  "windows": [
+    {
+      "id": 1,
+      "paragraphs_zero_based": [
+        0,
+        7
+      ],
+      "source_words": 128,
+      "max_output_words": 140,
+      "source_sha256": "49e94e5baaea2ae14f9aa03a235cde4b0b2b3896dd75f3b89a627699feada834",
+      "claim_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "paragraphs_zero_based": [
+        8,
+        12
+      ],
+      "source_words": 135,
+      "max_output_words": 140,
+      "source_sha256": "1cd3a8933e958aa615014458ef3c606db1bec53595ceaf3a2dcd5b3fe94b53a2",
+      "claim_ids": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "paragraphs_zero_based": [
+        13,
+        15
+      ],
+      "source_words": 104,
+      "max_output_words": 120,
+      "source_sha256": "316e714c8c9a35e75efa8b579828786a631721de65907d3ee4d648eaed82a59d",
+      "claim_ids": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 4,
+      "paragraphs_zero_based": [
+        16,
+        20
+      ],
+      "source_words": 108,
+      "max_output_words": 125,
+      "source_sha256": "75df303b53615f0091f47d822df88a1d323c791fbd795c50f4c793476bcce8da",
+      "claim_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": 5,
+      "paragraphs_zero_based": [
+        21,
+        21
+      ],
+      "source_words": 66,
+      "max_output_words": 75,
+      "source_sha256": "7b9c36c55f091fe47913fd73d6f2ec4abcde1566438c7ddf3b9e815aa50f118c",
+      "claim_ids": [
+        18
+      ]
+    }
+  ],
+  "writer_calls": 5,
+  "writer_context": "fresh for each window, no full source outside its packet, no scores/references/other arms; only exact source window, claims, invariant operator and cumulative candidate prefix",
+  "selection": "one output per window, no sampling selection, no repairs, stop on incomplete output or unsupported additions; a no-op remains visible",
+  "assembly": "Concatenate each exact window output after removing exactly its single terminal LF, with two LFs between windows and one final LF; no root editing",
+  "maximum_article_words": 600,
+  "review": "One fresh separate masked full-text judge sees source contract and fixed incumbent control. Both must pass all18claims/7literals, relevance, fluency and professional tone; require candidate preference or tie. No post-review repair or gate relaxation.",
+  "scan_cap": {
+    "calls": 2,
+    "words": 1250,
+    "condition": "quality and preference gate pass; reserve whole pair then fresh signed-in Chrome Basic same displayed model; no postscore revision or retries"
+  },
+  "budget_context": {
+    "prior_R10_scans": 4,
+    "prior_R10_words": 1305,
+    "global_word_cap": 3800,
+    "confirmation_words_reserved": 900,
+    "last_observed_vendor_words": null,
+    "vendor_must_be_rechecked_before_scans": true
+  },
+  "holdout_access": false,
+  "publication": "Existing authorization, exact final review and completed fresh AI confidence strictly below100 required; otherwise unpublished",
+  "method_promotion": false,
+  "confirmation_unlocked": false,
+  "overall_writing_stage_limit_minutes": 25,
+  "operator_sha256": "efadd6f5123eeb825ce3a73b147e3c900ec1c2c72335d70eb24771231f51df5d"
+}

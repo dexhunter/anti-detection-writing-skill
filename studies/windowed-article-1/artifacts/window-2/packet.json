@@ -1,0 +1,18 @@
+{
+  "window": 2,
+  "total_windows": 5,
+  "purpose": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "source": "\n“Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve its facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections, and get a separate review of the final text.”\n\n\nThe useful edit might move a prerequisite before an instruction, replace an ambiguous pronoun, or cut a repeated explanation. Keep checking that the advice still means the same thing.\n\n\n3. Measure a detector result if you need one.\n\n\n“Compare the original and final text using GPTZero Basic Scan. Use the same displayed model and record the exact inputs, all three confidences, dates, and warnings. Keep unchanged and worse results too.”\n\n\nLive scanning needs your own detector access and a browser tool your agent supports. The skill does not supply either. Review correctness and readability separately from the score.",
+  "claims": [
+    "AX5: The example editing request asks for smoother readable prose, preservation of facts/code/qualifications, removal of repetition and irrelevant background, explanations of factual corrections and separate review of exact final text.",
+    "AX6: Useful edits may move prerequisites, clarify pronouns or remove repeated explanations, while preserving the meaning of the advice.",
+    "AX7: Optional comparison uses original and final text in GPTZero Basic Scan with the same displayed model; save exact inputs, all three confidences, dates, warnings, unchanged results and worse results.",
+    "AX8: Live scanning needs the user's own detector access and an agent-supported browser tool. The skill supplies neither. Review correctness/readability separately from score."
+  ],
+  "protected": [
+    "$anti-detection-writing",
+    "GPTZero Basic Scan"
+  ],
+  "maximum_words": 140,
+  "format": "Only this article segment, plain text, exactly one final newline. Preserve necessary title/step/caption functions. No surrounding response or change log in the article."
+}

@@ -1,0 +1,45 @@
+{
+  "window": 3,
+  "source_sha256": "316e714c8c9a35e75efa8b579828786a631721de65907d3ee4d648eaed82a59d",
+  "prefix_sha256": "780cbb2a3b548bd93440c2621616ff7ed940be502c01b9ddde7e7cf306d50cdb",
+  "output_sha256": "bf847ebd129b6dae27915954c60653c950002ee74399aa06c2d3aab4103a7068",
+  "output_word_count": 107,
+  "word_count_method": "Whitespace-separated tokens using Python str.split().",
+  "maximum_words": 120,
+  "claim_support": {
+    "AX9": [
+      "The screenshots show a saved Qwen Code reply pair rechecked on September 6, 2026 in GPTZero Basic Scan, Model 4.9b: 100% AI / 0% mixed / 0% human before and 1% AI / 99% mixed / 0% human after."
+    ],
+    "AX10": [
+      "The screenshots show a saved Qwen Code reply pair rechecked on September 6, 2026 in GPTZero Basic Scan, Model 4.9b: 100% AI / 0% mixed / 0% human before and 1% AI / 99% mixed / 0% human after.",
+      "They show a repeated development case, not this article or a new prospective test of the packaged skill."
+    ],
+    "AX11": [
+      "Only a short, relevant quotation from the asker was added; the answer body stayed identical.",
+      "Content and length both changed, so the comparison cannot isolate a rewriting benefit."
+    ],
+    "AX12": [
+      "A 99% mixed result does not mean 99% human, and lower confidence does not establish human authorship."
+    ]
+  },
+  "protected_literal_checks": {
+    "GPTZero Basic Scan": {
+      "present": true,
+      "count": 1
+    },
+    "4.9b": {
+      "present": true,
+      "count": 1
+    },
+    "September 6, 2026": {
+      "present": true,
+      "count": 1
+    }
+  },
+  "continuity": "The prefix ends with instructions for measuring and interpreting detector results. This section follows with the dated development example and doubles as the caption for the existing screenshots, keeping the example separate from this article and prospective packaged-skill evaluation.",
+  "uncertainty": "The supplied claim contract is authoritative; no external verification was performed. The text preserves the comparison limits and the distinction between detector confidence and human authorship.",
+  "model": null,
+  "settings": null,
+  "usage": null,
+  "record_type": "Writer self-check, not independent quality review."
+}

@@ -1,0 +1,19 @@
+{
+  "window": 4,
+  "total_windows": 5,
+  "purpose": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "source": "\nAcross the development sample, 5 of 10 quotation comparisons reduced AI confidence; plain rewriting reduced it in 0 of 15 comparisons. Separate LLM reviewers rated eight plain revisions clearer and seven equivalent. The observations came from completed UI scans, and the current packaged skill has not yet been prospectively validated for detector performance.\n\n\nUse a quotation when it helps answer the question. Keep a clear, correct edit even if the detector outcome is unchanged, subject to your publication requirements.\n\n\nTry it on one draft, then share what improved or fell short in Discussions. The repository includes exact inputs, measured examples, and the unsuccessful cases.\n\n\nRepository: https://github.com/dexhunter/anti-detection-writing-skill\n\n\nDiscussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions",
+  "claims": [
+    "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+    "AX14: Separate LLM reviewers rated eight plain revisions clearer and seven equivalent; this is not a human preference study.",
+    "AX15: Observations are completed UI scans; the current packaged skill has not been prospectively validated for reliable detector performance.",
+    "AX16: Include a quotation only when it helps answer the question. A correct clear edit can remain useful with an unchanged score, subject to the user's publication requirements.",
+    "AX17: Readers can try a draft and share improvements or failures in Discussions. The repository contains exact inputs, measured examples and unsuccessful cases; preserve both destination URLs."
+  ],
+  "protected": [
+    "https://github.com/dexhunter/anti-detection-writing-skill",
+    "https://github.com/dexhunter/anti-detection-writing-skill/discussions"
+  ],
+  "maximum_words": 125,
+  "format": "Only this article segment, plain text, exactly one final newline. Preserve necessary title/step/caption functions. No surrounding response or change log in the article."
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "study": "windowed-article-1",
+  "classification": "Different-model paragraph-window adaptation of DIPPER; not a reproduction, isolated ablation, detector result or confirmation run.",
+  "design": {
+    "source_articles": 1,
+    "source_words": 541,
+    "maximum_article_words": 600,
+    "windows": 5,
+    "window_definition": "Contiguous existing paragraph boundaries; 66–135 source words per window.",
+    "writer_context": "A fresh writer for each window sees only its source passage, assigned claims and protected literals, common purpose and operator, and the exact accepted candidate prefix. No future prose or other arm is supplied.",
+    "outputs_per_window": 1,
+    "alternatives_or_repairs": 0,
+    "prefix": "All earlier candidate outputs are immutable context.",
+    "acceptance": "Writer self-checks and provisional assembly checks precede a separate final full-source review.",
+    "assembly": "Remove exactly the single terminal LF from each output; join with two LFs and add one final LF. No whole-article cleanup.",
+    "control": "Previously fixed incumbent article; not freshly generated as a matched pair.",
+    "final_review": "One fresh independent masked reviewer receives the full case contract and A/B texts without draft detector scores or method identity.",
+    "runtime_model_settings_usage": "Not exposed in the writer traces; retained as null.",
+    "transient_dispatch_error": "One agent-slot error occurred before generation. It did not add a writer output or generation retry."
+  },
+  "window_plan": [
+    {
+      "id": 1,
+      "paragraphs_zero_based": [
+        0,
+        7
+      ],
+      "source_words": 128,
+      "max_output_words": 140,
+      "source_sha256": "49e94e5baaea2ae14f9aa03a235cde4b0b2b3896dd75f3b89a627699feada834",
+      "claim_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "paragraphs_zero_based": [
+        8,
+        12
+      ],
+      "source_words": 135,
+      "max_output_words": 140,
+      "source_sha256": "1cd3a8933e958aa615014458ef3c606db1bec53595ceaf3a2dcd5b3fe94b53a2",
+      "claim_ids": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "paragraphs_zero_based": [
+        13,
+        15
+      ],
+      "source_words": 104,
+      "max_output_words": 120,
+      "source_sha256": "316e714c8c9a35e75efa8b579828786a631721de65907d3ee4d648eaed82a59d",
+      "claim_ids": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 4,
+      "paragraphs_zero_based": [
+        16,
+        20
+      ],
+      "source_words": 108,
+      "max_output_words": 125,
+      "source_sha256": "75df303b53615f0091f47d822df88a1d323c791fbd795c50f4c793476bcce8da",
+      "claim_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": 5,
+      "paragraphs_zero_based": [
+        21,
+        21
+      ],
+      "source_words": 66,
+      "max_output_words": 75,
+      "source_sha256": "7b9c36c55f091fe47913fd73d6f2ec4abcde1566438c7ddf3b9e815aa50f118c",
+      "claim_ids": [
+        18
+      ]
+    }
+  ],
+  "operator": {
+    "path": "artifacts/operator.txt",
+    "sha256": "efadd6f5123eeb825ce3a73b147e3c900ec1c2c72335d70eb24771231f51df5d"
+  },
+  "preparation_limitation": {
+    "classification": "source_metadata_omitted_from_window_packet",
+    "full_case_evidence": "artifacts/source-case.json#/sources/0",
+    "full_case_scope": "September 5-6 initial development cohorts and September6 Qwen exact-pair recheck; do not replace with latest totals.",
+    "window_evidence": "artifacts/window-4/packet.json",
+    "window_received_source_metadata": false,
+    "window_claim": "AX13: In the dated development sample, 5 of 10 quotation comparisons reduced AI confidence, while 0 of 15 plain-rewrite comparisons did. These are development-sample counts, not all subsequent research.",
+    "candidate_span": "In the dated development sample",
+    "control_span": "In the September 5–6 development sample",
+    "claim_contract_required_precise_cohort_date_range": false,
+    "interpretation": "Both texts passed all 18 formal claims because AX13 did not require the precise cohort date range. The review could still prefer B for naming that range. The omitted source metadata is a preparation limitation, so the preference cannot be attributed entirely to windowing.",
+    "effect_on_frozen_result": "None. The failed preference gate remains closed; no repair or new generation was performed."
+  },
+  "identification_limits": [
+    "One already exposed development article and one reviewer.",
+    "Model/settings, call count, batching, prefix use, scope restrictions and evidence availability were not experimentally isolated.",
+    "The control was fixed before this five-call procedure; the comparison is not a matched fresh generation pair.",
+    "No detector effect, causal windowing effect or general writing rule follows from this result."
+  ],
+  "control_provenance_context": {
+    "basis": "Coordinator-supplied verified context; not independently reopened during this export.",
+    "reported_record": "register/stage-manifest.json",
+    "reported_fact": "The fixed control came from a fresh writer that handled two development cases in one batch.",
+    "record_sha256": "66387551084df4c0b7bde37427b8b3f480e13a4bad1cd218aac6a0fd94cc39b2",
+    "record_included": false
+  },
+  "research": {
+    "source_note": "artifacts/research/next-methods-scout.md",
+    "note_access_date": "2026-09-09",
+    "dipper": {
+      "paper": "https://arxiv.org/pdf/2303.13408v2",
+      "inference_code": "https://github.com/martiansideofthemoon/ai-detection-paraphrases/blob/d23f77fce4b9ab7b1fa151f677c873324bfc627a/dipper_paraphrases/paraphrase_minimal.py",
+      "model_card": "https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl",
+      "relationship": "DIPPER uses a trained 11B T5-XXL paraphraser with learned controls. Its released loop defaults to three-sentence windows and appends outputs to the prefix. This trial instead used five paragraph windows and fresh instruction-following writers. DIPPER weights and its learned controls were not exercised."
+    },
+    "gptzero_2026": {
+      "paper": "https://arxiv.org/html/2602.13042v1",
+      "sections": [
+        "3.2",
+        "3.4.2",
+        "Table 1"
+      ],
+      "finding": "The developer paper includes DIPPER-generated text in its detector training augmentation pipeline. It evaluates GPTZero 4.1b; the historical article evidence concerns Basic 4.9b. DIPPER historical bypass results do not establish an expected reduction here."
+    },
+    "evidence_scope": "Research statements summarize the saved source note; no model execution, browser access or new detector scan was performed for the export."
+  },
+  "frozen_protocol": "artifacts/protocol.json",
+  "assembly_record": "artifacts/assembly.json",
+  "original_final_review": "artifacts/quality-review/review.md"
+}

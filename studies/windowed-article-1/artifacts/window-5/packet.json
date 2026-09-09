@@ -1,0 +1,16 @@
+{
+  "window": 5,
+  "total_windows": 5,
+  "purpose": "Edit the published X launch article for readers deciding how to install and use the writing skill and interpret its dated evidence. Return a complete title, body and caption for the existing before/after screenshots, maximum 600 words. Preserve the dated study scope and all useful facts; do not add later studies or imply that the screenshots score this article. Example prompts may be rewritten while preserving their purpose and requirements.",
+  "source": "\nBefore: plain answer, 100% AI / 0% mixed / 0% human. After: the same answer plus one relevant asker quotation, 1% AI / 99% mixed / 0% human. GPTZero Basic Scan, Model 4.9b; fresh recheck on September 6, 2026. These genuine screenshots show the result panels and part of each input; the complete inputs are linked in the repository. Adding a quotation changes content and length.",
+  "claims": [
+    "AX18: Preserve a caption for the two genuine before/after screenshots: same Qwen body plus quotation, native confidence triplets, Basic Scan Model 4.9b, September 6 recheck, visible panels plus partial input, full inputs linked in repository, content/length change. No screenshot score is attributed to the article."
+  ],
+  "protected": [
+    "GPTZero Basic Scan",
+    "4.9b",
+    "September 6, 2026"
+  ],
+  "maximum_words": 75,
+  "format": "Only this article segment, plain text, exactly one final newline. Preserve necessary title/step/caption functions. No surrounding response or change log in the article."
+}

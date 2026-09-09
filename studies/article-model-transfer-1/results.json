@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "study_id": "article-model-transfer-1",
+  "date": "2026-09-09",
+  "status": "closed_unscanned",
+  "scope": "One development article, two separately declared failed local generations, one synthetic runtime probe and one additional adaptive recovery from a selected first draft. Outside the formal skill-method rounds; any later windowed experiment is a separate study.",
+  "source_words": 541,
+  "model": "authormist/authormist-originality",
+  "model_revision": "2866bc928850ef4910d24ef5a9179740fab72e22",
+  "local_generation_attempts": 2,
+  "local_generations_completed_successfully": 0,
+  "local_generation_retries": 0,
+  "custom": {
+    "classification": "custom_generation_failed_time_cap_and_nonviable_bounded_repair",
+    "raw_words": 425,
+    "tokens": 750,
+    "finish_reason": "time_cap",
+    "quality": "failed_nonviable_bounded_repair",
+    "output": "custom/raw.txt",
+    "detector_results": null
+  },
+  "native": {
+    "classification": "native_generation_failed_incomplete_unmeasured",
+    "raw_words": 630,
+    "tokens": 853,
+    "finish_reason": "unknown_after_probability_exception",
+    "EOS_tokens": 0,
+    "output": "native/raw.txt",
+    "detector_results": null
+  },
+  "synthetic_probe": {
+    "language_generations": 0,
+    "model_loads": 0,
+    "shapes": 6,
+    "nonfinite_values": 0,
+    "values_above_0_01_error": 0,
+    "MPS_bug_proven": false,
+    "whole_model_correctness_proven": false,
+    "record": "runtime-check/summary.json"
+  },
+  "recovery": {
+    "classification": "adaptive_artifact_recovery_rejected_before_scanning",
+    "raw_words": 630,
+    "fixed_first_article_words": 479,
+    "removed_tail_words": 151,
+    "additional_local_generations": 0,
+    "B_words": 519,
+    "B_local_ledger_entries": 33,
+    "B_ledger_count_includes_grammar_and_format": true,
+    "C_words": 529,
+    "second_factual_repair": false,
+    "both_reviewed_texts_pass_quality": true,
+    "candidate": "A",
+    "control": "B",
+    "control_words": 538,
+    "preferred": "control",
+    "required_candidate_preference_or_tie": false,
+    "historical_score_exposure_in_B": true,
+    "historical_exposure_details": "The factual editor read the installed skill evidence reference containing old aggregate results, including two historical article-scan summaries. It disclosed the exposure before outputs; the frozen article contract governed repair. It did not see current exact-candidate outcomes. No zero-historical-score-exposure claim.",
+    "post_review_repair": false,
+    "gate_relaxation": false,
+    "outcome": "recovery/outcome.json",
+    "detector_results": null
+  },
+  "detector": {
+    "calls": 0,
+    "charged_words": 0,
+    "results": null,
+    "candidate_results": null,
+    "control_results": null,
+    "note": "Historical confidence numbers inside the retained article are source facts from earlier studies, not measurements of this article or these outputs."
+  },
+  "timing_seconds": {
+    "custom": {
+      "load": 26.273004959104583,
+      "generation": 300.27030700002797,
+      "outer": 331.4993939578999,
+      "configured_generation_cap": 300
+    },
+    "native": {
+      "load": 24.039219292113557,
+      "generation": 135.3094929170329,
+      "inner": 160.08198324986733,
+      "outer": 176.01796170813031,
+      "configured_generation_cap": 300
+    },
+    "synthetic": {
+      "work": 1.1756981671787798,
+      "outer": 2.2128361670766026
+    },
+    "B_full_invocation": null,
+    "C_recorded_invocation_interval": 94.664596,
+    "C_full_invocation": null,
+    "judge_full_invocation": null,
+    "note": "Load, generation and outer times overlap; do not add them. C interval is a saved timestamp difference, not measured full task wall time."
+  },
+  "cost": {
+    "cloud_local_model_generation_cost": 0,
+    "detector_charged_words": 0,
+    "editor_and_judge_model_tokens": null,
+    "editor_and_judge_model_cost": null,
+    "local_compute_energy_cost": null,
+    "note": "Unknown usage and costs remain null; zero cloud generation charges does not imply zero total computational cost."
+  },
+  "publication": false,
+  "method_promoted": false,
+  "confirmation_unlocked": false,
+  "EOS_predeclaration_caveat": "The saved native protocol includes EOS IDs but does not explicitly require EOS for eligibility. A stricter pre-run instruction is not retained. The generation exception and absence of EOS are verified; the later recovery protocol records a separate artifact evaluation.",
+  "independent_export_review": {
+    "status": "passed",
+    "reviewed_original_file_count": 44,
+    "reviewed_original_manifest_sha256": "4977f5a91e2e01b2b90394a29e6be80a4373d8715ef644d2be83917d1436d35b",
+    "note": "Subsequent separate export audit passed all original artifacts and four linked documentation additions. This status update changes only these review notices and their manifest hashes."
+  }
+}

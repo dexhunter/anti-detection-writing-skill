@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-09T12:45:55.467908+00:00",
+  "classification": "Additional adaptive artifact recovery from a failed native run; outside both formal method rounds and both closed local-model trials. Not an EOS-complete generation, paper reproduction or method promotion.",
+  "original_failed_native_trial_unchanged": true,
+  "raw_sha256": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+  "raw_words": 630,
+  "extraction": {
+    "rule": "Take exact bytes before the unique explicit transition into a second draft, after the complete first caption. No choice among alternate first drafts.",
+    "marker": " To paraphrase the text into a more conversational tone:\n\nUsing Anti Detection Writing Skill on Your Next Draft",
+    "first_article_sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+    "first_article_words": 479,
+    "removed_tail_sha256": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e",
+    "first_plus_tail_equals_raw": true
+  },
+  "eligibility_change": "The failed native generation required EOS and remains ineligible under that protocol. This separately declared artifact task may evaluate an identifiable complete first draft despite the later numerical failure. Declared before its edits, independent review or any new scores; it does not excuse factual errors in the first draft.",
+  "method": {
+    "local_model_generations": 0,
+    "stage_b": "One fresh factual/grammar repair pass of the fixed first draft, with full original and all18claims7protectedliterals; bounded local repairs only, no blanket reconstruction. Retain all before/after edits. Stop if complete recovery requires rebuilding the article.",
+    "stage_c": "One separate fresh purpose/fluency pass under the saved r20 movement/continuity restrictions. No second factualrepair, extra samples or wholesale rewrite.",
+    "independent_final_judge": "One separate fresh masked exact text comparison against the fixed538wordR10control; all claims,literals,title/body/caption,professional/readability pass; require candidate preference or tie. No gate relaxation after review.",
+    "final_format": "Fulltitle/body/separatecaption, atmost600whitespacewords, exactlyone finalLF."
+  },
+  "quality_failures_retained": true,
+  "max_detector_calls": 2,
+  "max_detector_words": 1250,
+  "prior_words_spent": 1305,
+  "global_word_cap": 3800,
+  "confirmation_words_reserved": 900,
+  "measurement": "Only after full exact independent qualitypass: reserve fullpair before anyclick, fresh Chrome GPTZeroBasic same displayedmodel, all threeconfidences, exactsubmitted/effectiveeditorbefore/after, timestamps,warnings,privateUI. Zero retries or postscore edits.",
+  "new_method_promoted": false,
+  "confirmation_unlocked": false,
+  "publication": "No automaticpublication. Existing userauthorization and exactscorethreshold below100 plus currentdestinationcheck remain necessary.",
+  "scope_limits": [
+    "Adaptive recovery of a selected existing first draft after a failed generation, not first-pass or unmodified-skill performance.",
+    "Native prompt/sampling/device/runtime changes are bundled and no component causality is isolated.",
+    "A complete first draft still contains material errors that must be repaired and separately reviewed."
+  ]
+}

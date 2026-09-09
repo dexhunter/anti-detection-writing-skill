@@ -1,0 +1,33 @@
+{
+  "model_loaded": false,
+  "text_generated": false,
+  "seed": 19,
+  "kv_lengths": [
+    512,
+    1023,
+    1024,
+    1769,
+    1770,
+    2500
+  ],
+  "q_shape": [
+    1,
+    16,
+    1,
+    128
+  ],
+  "kv_shape": "[1,2,length,128]",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "torch_version": "2.8.0",
+  "attention_parameters": "No mask; is_causal=False; enable_gqa=True.",
+  "reference": "CPU float32 explicit Qwen2 eager expression using the same rounded bfloat16 inputs; CPU bfloat16 SDPA and MPS eager also compared.",
+  "max_MPS_SDPA_absolute_error": 0.000766068696975708,
+  "all_compared_nonfinite_counts": 0,
+  "all_above_0_01_or_nonfinite_counts": 0,
+  "same_input_SDPA_repeat_max_difference": 0.0,
+  "recorded_probe_seconds": 1.1756981671787798,
+  "outer_seconds": 2.2128361670766026,
+  "script_and_raw_tensor_hashes_verified": true,
+  "limitations": "One seeded synthetic one-query attention case per six lengths; no model weights, real activations, full generation, layer accumulation, other masks/seeds/shapes or sampler failure. The 0.01 diagnostic threshold is not a language-quality guarantee. No observed tensor discrepancy at that threshold; neither a whole-model MPS correctness proof nor an MPS bug diagnosis."
+}

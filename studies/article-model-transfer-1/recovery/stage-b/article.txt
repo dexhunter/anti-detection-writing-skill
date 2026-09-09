@@ -1,0 +1,43 @@
+How to Use Anti-Detection Writing Skill on Your Next Draft
+
+Your draft can be accurate but hard to understand. Anti-Detection Writing Skill lets your agent follow a repeatable editing process: understand what the reader needs, keep the facts intact, enhance flow, and review the result. You can also compare results using GPTZero.
+
+Begin with a reply, email, or documentation section.
+
+1. Install the Skill.
+
+Run `npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing`.
+
+Select your agent in the installer. Default installation uses the current project.
+
+2. Provide context and original text.
+
+Tell the agent who is reading and what they need to accomplish. Include the question and any relevant docs and version limits if it's technical. Ask:
+
+"Use $anti-detection-writing to make this text smoother and easier to read for [audience]. Preserve facts, code, and qualifications. Remove repetition and irrelevant background. Explain any factual corrections and get a separate review of the exact final text."
+
+The skill may adjust by moving prerequisites ahead of instructions, replacing vague pronouns, or cutting repeated explanations. Continually check that the advice still means the same thing.
+
+3. Measure Detector Results If Needed.
+
+"Compare original and final text using GPTZero Basic Scan with the same displayed model and record exact inputs, all three confidences, dates, and warnings. Record unchanged and worse results as well."
+
+Live scanning requires access to your own detector and a browser tool your agent supports. The skill supplies neither. Review correctness and readability separately from the score.
+
+Development Examples Show
+
+A fresh recheck of one saved Qwen Code reply showed 100% AI/0% mixed/0% human → 1% AI/99% mixed/0% human with GPTZero Basic Scan Model 4.9b on September 6, 2026. Screenshots show these completed scans, not scans of this article. This repeated a development case; it is not a new prospective test of the packaged skill.
+
+The change involved adding one short relevant asker quote to an otherwise identical answer. Comparison changed content and length; this does not show benefits from rewriting alone. Scores of 99% mixed do not indicate 99% human. Lower AI confidence does not establish human authorship.
+
+Among 10 quoted comparisons in the September 5–6, 2026 development sample, five reduced AI confidence; plain rewriting reduced AI confidence in 0 of 15 comparisons. Separate LLM reviewers rated eight plain edits as clearer and seven as equivalent. This was not a human preference study. Observations come from completed UI scans; the current packaged skill hasn't been prospectively validated for reliable detector performance.
+
+Use quotes when they help answer the question. Stick to clear, correct edits even if the detector score is unchanged, subject to your publication requirements.
+
+Try this on one draft and discuss what worked and what didn't in Discussions. Repository includes exact inputs and measured examples along with failed ones.
+
+Repository: https://github.com/dexhunter/anti-detection-writing-skill
+
+Discussions: https://github.com/dexhunter/anti-detection-writing-skill/discussions
+
+Before: plain Qwen Code answer at 100% AI/0% mixed/0% human. After: same answer plus one short relevant quote from the asker, 1% AI/99% mixed/0% human. Fresh recheck on September 6, 2026 using GPTZero Basic Scan, Model 4.9b. Genuine screenshots show result panels and parts of each input; full inputs linked in repository. Quotes change content and length.

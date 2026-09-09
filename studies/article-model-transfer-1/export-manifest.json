@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "study_id": "article-model-transfer-1",
+  "completed_at": "2026-09-09T13:13:11.710424+00:00",
+  "scope": "Public export of closed failed trials and rejected adaptive recovery. No new generation, detector measurement or publication.",
+  "self_hash_excluded": true,
+  "independent_export_review": "passed for original 44-file snapshot, manifest 4977f5a91e2e01b2b90394a29e6be80a4373d8715ef644d2be83917d1436d35b; subsequent notice updates separately checked",
+  "private_source_paths": "Omitted. Labels and hashes identify private evidence without local paths.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "09033cf363c9b71bced96998387b663960d2d39203e87aa6ca4375ab46b4b049",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        },
+        {
+          "label": "outcome.json",
+          "sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d"
+        },
+        {
+          "label": "verdict.json",
+          "sha256": "0b62a4a323a55edd6d4dbcb237064c60e6fb190999f36fa2410f00a925b25d9f"
+        }
+      ],
+      "transformations": "New concise report of the closed evidence; no new experimental results or publication approval."
+    },
+    {
+      "path": "custom/claim-review.json",
+      "sha256": "619590348a2808821b8e0abed7898e85c0f4a58603811481d3cc1755e896cc4e",
+      "kind": "exact_copy",
+      "private_source_sha256": "619590348a2808821b8e0abed7898e85c0f4a58603811481d3cc1755e896cc4e",
+      "private_sources": [
+        {
+          "label": "claim-map.json",
+          "sha256": "619590348a2808821b8e0abed7898e85c0f4a58603811481d3cc1755e896cc4e"
+        }
+      ]
+    },
+    {
+      "path": "custom/edit-ledger.json",
+      "sha256": "7deead94607e26ba3b31d81b3bae9142c64a7fef72212966a05e22494c939f18",
+      "kind": "exact_copy",
+      "private_source_sha256": "7deead94607e26ba3b31d81b3bae9142c64a7fef72212966a05e22494c939f18",
+      "private_sources": [
+        {
+          "label": "edit-ledger.json",
+          "sha256": "7deead94607e26ba3b31d81b3bae9142c64a7fef72212966a05e22494c939f18"
+        }
+      ]
+    },
+    {
+      "path": "custom/human-prompt.txt",
+      "sha256": "4020b0cb5bbf772603ae44d7701fd71c155dc234c2d008a5826cff1a97bc360a",
+      "kind": "exact_copy",
+      "private_source_sha256": "4020b0cb5bbf772603ae44d7701fd71c155dc234c2d008a5826cff1a97bc360a",
+      "private_sources": [
+        {
+          "label": "article.human.prompt.txt",
+          "sha256": "4020b0cb5bbf772603ae44d7701fd71c155dc234c2d008a5826cff1a97bc360a"
+        }
+      ]
+    },
+    {
+      "path": "custom/machine-prompt.txt",
+      "sha256": "396e2075431d0ac2caef6979ec00598a78eaec112e52f710bc21338c681198fa",
+      "kind": "exact_copy",
+      "private_source_sha256": "396e2075431d0ac2caef6979ec00598a78eaec112e52f710bc21338c681198fa",
+      "private_sources": [
+        {
+          "label": "article.machine.prompt.txt",
+          "sha256": "396e2075431d0ac2caef6979ec00598a78eaec112e52f710bc21338c681198fa"
+        }
+      ]
+    },
+    {
+      "path": "custom/method.json",
+      "sha256": "ae9b611121f9c8e07e77cedcbc01c98b1d1be556c440b47b3553bb43cb383889",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "protocol.json",
+          "sha256": "552b34c16cc62087d05b009d64a0775a356f62feb1670be892789972ea2b696f"
+        },
+        {
+          "label": "validation.json",
+          "sha256": "1e153854aae61dacc9e0b97ff96c743063a62174a71db47b25eabf2fe52bcfad"
+        },
+        {
+          "label": "run.json",
+          "sha256": "d0046943bb5bb4be1987cb8620490cf13a28c961085b3d1c69797f0e333b7c49"
+        },
+        {
+          "label": "generation-attempt.json",
+          "sha256": "d93ff56588c035cc3f132f75962cfe7431af500cedb75481e8dc25e8e9e5105c"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "custom/raw.txt",
+      "sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf",
+      "kind": "exact_copy",
+      "private_source_sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf",
+      "private_sources": [
+        {
+          "label": "continuation.txt",
+          "sha256": "48c08bcbb25bbdc827baab3bc54c899d3759f18cf308976165a298bd671b9faf"
+        }
+      ]
+    },
+    {
+      "path": "custom/result.json",
+      "sha256": "c4965b7a9e701dd7b2401e42991c22d0a0b1be8867be22e5df3fceb51a88817d",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "run.json",
+          "sha256": "d0046943bb5bb4be1987cb8620490cf13a28c961085b3d1c69797f0e333b7c49"
+        },
+        {
+          "label": "generation-attempt.json",
+          "sha256": "d93ff56588c035cc3f132f75962cfe7431af500cedb75481e8dc25e8e9e5105c"
+        },
+        {
+          "label": "status.json",
+          "sha256": "cbadb3798a2815d684f0e6a7d02c9ad52dce6a3a5ced7626c444f107e44b0f22"
+        },
+        {
+          "label": "result.json",
+          "sha256": "0c64ff8940b5e7eb7d64605bd854d49d56865fe37f8959de1d95d2c601e4b7df"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "native/generation-parameters.json",
+      "sha256": "24feb720028a7d0e0c5afa3ad3bc21751dd427c6bb4d46f835cdc563fd05baa8",
+      "kind": "exact_copy",
+      "private_source_sha256": "24feb720028a7d0e0c5afa3ad3bc21751dd427c6bb4d46f835cdc563fd05baa8",
+      "private_sources": [
+        {
+          "label": "actual-generation-parameters.json",
+          "sha256": "24feb720028a7d0e0c5afa3ad3bc21751dd427c6bb4d46f835cdc563fd05baa8"
+        }
+      ]
+    },
+    {
+      "path": "native/inherited-generation-parameters.json",
+      "sha256": "5bedb4a014f5c048ac2c9186b8c9d255180f7738cb2737a408032415820b604a",
+      "kind": "exact_copy",
+      "private_source_sha256": "5bedb4a014f5c048ac2c9186b8c9d255180f7738cb2737a408032415820b604a",
+      "private_sources": [
+        {
+          "label": "actual-inherited-generation-config.json",
+          "sha256": "5bedb4a014f5c048ac2c9186b8c9d255180f7738cb2737a408032415820b604a"
+        }
+      ]
+    },
+    {
+      "path": "native/method.json",
+      "sha256": "ffec83956ec92db0b6bef252bfa59b6dedb0e2b50f6efdf68fd00bf2bf13f631",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "protocol.json",
+          "sha256": "62fbb91a134633bedf431823ee25ee3d03b00fff204ce14f1412ce928c9b1add"
+        },
+        {
+          "label": "execution-result.json",
+          "sha256": "98bfc3f1f431204a6123a6ecda2be83ae4e2a2fcb80ebc7ea8e5e76c9dba32ef"
+        },
+        {
+          "label": "execution-attempt.json",
+          "sha256": "c3aef03b5a396f77b391385cc22b82c8f48a817d595d34a7a7f53b377b114f17"
+        },
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "native/model-config.json",
+      "sha256": "42218808cb144be7074eab047f3963f970b7009a8f2022e022ec59cfb5cbb656",
+      "kind": "sanitized_record",
+      "private_source_sha256": "6a80a3702797c1893dfd2d92d61a3b77a5c6da0bd11ad5878f23f25a439dc262",
+      "private_sources": [
+        {
+          "label": "actual-model-config.json",
+          "sha256": "6a80a3702797c1893dfd2d92d61a3b77a5c6da0bd11ad5878f23f25a439dc262"
+        }
+      ],
+      "transformations": "Replaced the local cached-model path with its public model identifier; all configuration values retained."
+    },
+    {
+      "path": "native/outcome.json",
+      "sha256": "3ed24737d1d6c9f0944c0c9e5b882616722811f5ff746cbb8028102d3b821085",
+      "kind": "sanitized_record",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "outcome.json",
+          "sha256": "2d0af6dd52c7bc79c0375d79b1813764550fcc33064eef84f0a0c9a512b86fec"
+        },
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        }
+      ],
+      "transformations": "Changed raw output reference to its public location; retained the worker-reported gate under reported_quality_gate and added the process audit EOS provenance qualification."
+    },
+    {
+      "path": "native/prompt.txt",
+      "sha256": "15dabe7ec9dcdd9899bf6bcb22f26d1049c229d26e2d3feeffc9e1b039119f6e",
+      "kind": "exact_copy",
+      "private_source_sha256": "15dabe7ec9dcdd9899bf6bcb22f26d1049c229d26e2d3feeffc9e1b039119f6e",
+      "private_sources": [
+        {
+          "label": "exact-prompt.txt",
+          "sha256": "15dabe7ec9dcdd9899bf6bcb22f26d1049c229d26e2d3feeffc9e1b039119f6e"
+        }
+      ]
+    },
+    {
+      "path": "native/raw.txt",
+      "sha256": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+      "kind": "exact_copy",
+      "private_source_sha256": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391",
+      "private_sources": [
+        {
+          "label": "raw-continuation.txt",
+          "sha256": "90b45bd3803d2383f73581a7b421e58482ed40c2329d127ecd2412b8b96a3391"
+        }
+      ]
+    },
+    {
+      "path": "process-audit.json",
+      "sha256": "0dadb3689f0190b738d943ab1595d2413a4459b52567edbdb70d5cc8dc04df16",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        },
+        {
+          "label": "outcome.json",
+          "sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d"
+        },
+        {
+          "label": "verdict.json",
+          "sha256": "0b62a4a323a55edd6d4dbcb237064c60e6fb190999f36fa2410f00a925b25d9f"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "quality/A.txt",
+      "sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+      "kind": "exact_copy",
+      "private_source_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+      "private_sources": [
+        {
+          "label": "A.txt",
+          "sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f"
+        }
+      ]
+    },
+    {
+      "path": "quality/B.txt",
+      "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+      "kind": "exact_copy",
+      "private_source_sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514",
+      "private_sources": [
+        {
+          "label": "B.txt",
+          "sha256": "6a79ade61d31d7382f75ae2a57bfc6c37de39ff035e7fe7531522c125a150514"
+        }
+      ]
+    },
+    {
+      "path": "quality/arm-mapping.json",
+      "sha256": "18c6cc031cd4b5d78d93eb39adcd757b3c1dea7f53075617dee5cb44c3961f2a",
+      "kind": "exact_copy",
+      "private_source_sha256": "18c6cc031cd4b5d78d93eb39adcd757b3c1dea7f53075617dee5cb44c3961f2a",
+      "private_sources": [
+        {
+          "label": "private-mapping.json",
+          "sha256": "18c6cc031cd4b5d78d93eb39adcd757b3c1dea7f53075617dee5cb44c3961f2a"
+        }
+      ]
+    },
+    {
+      "path": "quality/case.json",
+      "sha256": "5eedd0e7c96028e322b04ff3dcc3bff2e3c48f1e59d999924c59bf2e4d68fbf1",
+      "kind": "sanitized_record",
+      "private_source_sha256": "b1aa702e9186c973382675e179d35348966edd574ea6bc5bc578ab3ab2dc0a28",
+      "private_sources": [
+        {
+          "label": "case.json",
+          "sha256": "b1aa702e9186c973382675e179d35348966edd574ea6bc5bc578ab3ab2dc0a28"
+        }
+      ],
+      "transformations": "Removed browser/account verification fields; parsed source-note JSON strings. Full source text and contract preserved."
+    },
+    {
+      "path": "quality/packet-manifest.json",
+      "sha256": "ceb947a3ba4bd5ad1cac0e4553d2feb64c37972c7d6c3eb9899a913220e96d8a",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "hashes.json",
+          "sha256": "9e219cffe39aeb2bc55644d1af0b022aad1d15f1a1f45da1256d2692eb2337aa"
+        },
+        {
+          "label": "private-mapping.json",
+          "sha256": "18c6cc031cd4b5d78d93eb39adcd757b3c1dea7f53075617dee5cb44c3961f2a"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "quality/review.md",
+      "sha256": "3c5d028cae11c77108e43a49bb2846fbbc41dbce4a8f3afc0abac7148236cdce",
+      "kind": "sanitized_record",
+      "private_source_sha256": "6552919b3318d1da7978e0d8cc3b3076d7467af4f58417be7216818ce2ac8c13",
+      "private_sources": [
+        {
+          "label": "review.md",
+          "sha256": "6552919b3318d1da7978e0d8cc3b3076d7467af4f58417be7216818ce2ac8c13"
+        }
+      ],
+      "transformations": "Replaced private task identity and prepended an export-integrity note. Original review text and all findings retained."
+    },
+    {
+      "path": "quality/verdict.json",
+      "sha256": "09c68a3ceba93b7b901baccfe0be858fa6f066d296442cc5b9feef11eb8df721",
+      "kind": "sanitized_record",
+      "private_source_sha256": "0b62a4a323a55edd6d4dbcb237064c60e6fb190999f36fa2410f00a925b25d9f",
+      "private_sources": [
+        {
+          "label": "verdict.json",
+          "sha256": "0b62a4a323a55edd6d4dbcb237064c60e6fb190999f36fa2410f00a925b25d9f"
+        }
+      ],
+      "transformations": "Replaced local reviewer identity and absolute input paths; added an explicit original-versus-exported packet hash note. Verdict, preference reasons and every article span remain unchanged."
+    },
+    {
+      "path": "recovery/first-article-exact.txt",
+      "sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+      "kind": "exact_copy",
+      "private_source_sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583",
+      "private_sources": [
+        {
+          "label": "first-article-exact.txt",
+          "sha256": "070b525f802ec275257b1bcf8ee2fc5e8fa3d0ec4517f89cd16030200e74b583"
+        }
+      ]
+    },
+    {
+      "path": "recovery/outcome.json",
+      "sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d",
+      "kind": "exact_copy",
+      "private_source_sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d",
+      "private_sources": [
+        {
+          "label": "outcome.json",
+          "sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d"
+        }
+      ]
+    },
+    {
+      "path": "recovery/protocol.json",
+      "sha256": "0672d25c4f8a03a9de8b35a756b0f420c2626c2fc44e9207e37193ccec096ed9",
+      "kind": "exact_copy",
+      "private_source_sha256": "0672d25c4f8a03a9de8b35a756b0f420c2626c2fc44e9207e37193ccec096ed9",
+      "private_sources": [
+        {
+          "label": "protocol.json",
+          "sha256": "0672d25c4f8a03a9de8b35a756b0f420c2626c2fc44e9207e37193ccec096ed9"
+        }
+      ]
+    },
+    {
+      "path": "recovery/removed-tail-exact.txt",
+      "sha256": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e",
+      "kind": "exact_copy",
+      "private_source_sha256": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e",
+      "private_sources": [
+        {
+          "label": "removed-tail-exact.txt",
+          "sha256": "8af9c562d6db52eccb73ff8b035bfae8e9d250e19580e6ac365089ad1898ff1e"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-b/article.txt",
+      "sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+      "kind": "exact_copy",
+      "private_source_sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f",
+      "private_sources": [
+        {
+          "label": "article.txt",
+          "sha256": "c430b7b6aa3f92842d9832d4fb267e18098ba723db3ace6ca985cf408c44602f"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-b/claim-map.json",
+      "sha256": "686bb554ce86cbb5ef30d89ccdb153c450e7d4d6fb1a150cc60da992f4461542",
+      "kind": "exact_copy",
+      "private_source_sha256": "686bb554ce86cbb5ef30d89ccdb153c450e7d4d6fb1a150cc60da992f4461542",
+      "private_sources": [
+        {
+          "label": "claim-map.json",
+          "sha256": "686bb554ce86cbb5ef30d89ccdb153c450e7d4d6fb1a150cc60da992f4461542"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-b/edit-ledger.json",
+      "sha256": "1e80254c4952475f1cb57348f5e75460482e3e87c6fedb1feebd281b51688f19",
+      "kind": "exact_copy",
+      "private_source_sha256": "1e80254c4952475f1cb57348f5e75460482e3e87c6fedb1feebd281b51688f19",
+      "private_sources": [
+        {
+          "label": "edit-ledger.json",
+          "sha256": "1e80254c4952475f1cb57348f5e75460482e3e87c6fedb1feebd281b51688f19"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-b/status.json",
+      "sha256": "d241ba29bb42196fb3e1f8dfcbeeb1c5f3cf8f7bde87e11973cc0eb5df58ffc0",
+      "kind": "sanitized_record",
+      "private_source_sha256": "37a17912df4321789839c8b9a1d9078e21c613427129d5aa5aa8a6c1142333e3",
+      "private_sources": [
+        {
+          "label": "status.json",
+          "sha256": "37a17912df4321789839c8b9a1d9078e21c613427129d5aa5aa8a6c1142333e3"
+        }
+      ],
+      "transformations": "Removed the private task identity, local skill paths and workspace-only write-scope check. Historical-score exposure, chronology, hashes, all result fields and unavailable usage remain."
+    },
+    {
+      "path": "recovery/stage-c/article.txt",
+      "sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+      "kind": "exact_copy",
+      "private_source_sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f",
+      "private_sources": [
+        {
+          "label": "article.txt",
+          "sha256": "f9409c735fa600a98d0709a38bf0c2983d8383c35e399c290cfd62ed94e7620f"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-c/claim-map.json",
+      "sha256": "6b839fd76f340cc920bf1e11740c819d70001a3b018493cdbb0a00d7d301cac6",
+      "kind": "exact_copy",
+      "private_source_sha256": "6b839fd76f340cc920bf1e11740c819d70001a3b018493cdbb0a00d7d301cac6",
+      "private_sources": [
+        {
+          "label": "claim-map.json",
+          "sha256": "6b839fd76f340cc920bf1e11740c819d70001a3b018493cdbb0a00d7d301cac6"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-c/invocation.json",
+      "sha256": "a07ff5311b6bc9ffb7397e5725f0473941ff73f0694c5b9aef1a83aebeec8e17",
+      "kind": "exact_copy",
+      "private_source_sha256": "a07ff5311b6bc9ffb7397e5725f0473941ff73f0694c5b9aef1a83aebeec8e17",
+      "private_sources": [
+        {
+          "label": "invocation.json",
+          "sha256": "a07ff5311b6bc9ffb7397e5725f0473941ff73f0694c5b9aef1a83aebeec8e17"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-c/operation-ledger.json",
+      "sha256": "d4cb722c958a9198df6d69dcb61173004076003b4334560cd183e27af9047679",
+      "kind": "exact_copy",
+      "private_source_sha256": "d4cb722c958a9198df6d69dcb61173004076003b4334560cd183e27af9047679",
+      "private_sources": [
+        {
+          "label": "operation-ledger.json",
+          "sha256": "d4cb722c958a9198df6d69dcb61173004076003b4334560cd183e27af9047679"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-c/reader-purpose-plan.md",
+      "sha256": "cca74edd23982662987020a84ac6b24308df6cea27d8524b466609ac25a4604d",
+      "kind": "exact_copy",
+      "private_source_sha256": "cca74edd23982662987020a84ac6b24308df6cea27d8524b466609ac25a4604d",
+      "private_sources": [
+        {
+          "label": "reader-purpose-plan.md",
+          "sha256": "cca74edd23982662987020a84ac6b24308df6cea27d8524b466609ac25a4604d"
+        }
+      ]
+    },
+    {
+      "path": "recovery/stage-c/status.json",
+      "sha256": "89d8ab9ed4f9bfa8a628aaf249a314b4f25e5af1c073283a912ba9cb5a354681",
+      "kind": "exact_copy",
+      "private_source_sha256": "89d8ab9ed4f9bfa8a628aaf249a314b4f25e5af1c073283a912ba9cb5a354681",
+      "private_sources": [
+        {
+          "label": "status.json",
+          "sha256": "89d8ab9ed4f9bfa8a628aaf249a314b4f25e5af1c073283a912ba9cb5a354681"
+        }
+      ]
+    },
+    {
+      "path": "results.json",
+      "sha256": "09f06f9a024bdd72d340d82d8b9d826d287f7f95b978c8492293ce8fd03255a2",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        },
+        {
+          "label": "outcome.json",
+          "sha256": "b4666f11fe388af899b28a5a9b367cb4cb7ff2d7efaa5d6e4c781f52f92c751d"
+        },
+        {
+          "label": "status.json",
+          "sha256": "37a17912df4321789839c8b9a1d9078e21c613427129d5aa5aa8a6c1142333e3"
+        },
+        {
+          "label": "verdict.json",
+          "sha256": "0b62a4a323a55edd6d4dbcb237064c60e6fb190999f36fa2410f00a925b25d9f"
+        },
+        {
+          "label": "run.json",
+          "sha256": "d0046943bb5bb4be1987cb8620490cf13a28c961085b3d1c69797f0e333b7c49"
+        },
+        {
+          "label": "execution-result.json",
+          "sha256": "98bfc3f1f431204a6123a6ecda2be83ae4e2a2fcb80ebc7ea8e5e76c9dba32ef"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "runtime-check/protocol.json",
+      "sha256": "d95e4f274ef92edb65092722820ef80dec02e1a5882b889d5e035c614f304b55",
+      "kind": "sanitized_record",
+      "private_source_sha256": "599d14e273b03946ff1f81d033658c0b2c6015e9623a382da02fe88fd19be338",
+      "private_sources": [
+        {
+          "label": "protocol.json",
+          "sha256": "599d14e273b03946ff1f81d033658c0b2c6015e9623a382da02fe88fd19be338"
+        }
+      ],
+      "transformations": "Replaced local model-config path and internal authorization phrasing; retained all shapes, settings, thresholds, source issue, commit and hashes."
+    },
+    {
+      "path": "runtime-check/result.json",
+      "sha256": "0c64ff8940b5e7eb7d64605bd854d49d56865fe37f8959de1d95d2c601e4b7df",
+      "kind": "exact_copy",
+      "private_source_sha256": "0c64ff8940b5e7eb7d64605bd854d49d56865fe37f8959de1d95d2c601e4b7df",
+      "private_sources": [
+        {
+          "label": "result.json",
+          "sha256": "0c64ff8940b5e7eb7d64605bd854d49d56865fe37f8959de1d95d2c601e4b7df"
+        }
+      ]
+    },
+    {
+      "path": "runtime-check/summary.json",
+      "sha256": "ff45095671907cc3e7e8fbe094ec54be0d1503803053de154495c2ff0aff66d5",
+      "kind": "assembled_public_summary",
+      "private_source_sha256": null,
+      "private_sources": [
+        {
+          "label": "result.json",
+          "sha256": "0c64ff8940b5e7eb7d64605bd854d49d56865fe37f8959de1d95d2c601e4b7df"
+        },
+        {
+          "label": "execution.json",
+          "sha256": "34572841f1279a46a39a84da756e2de40d2e624ff83f35434842feedb7862689"
+        },
+        {
+          "label": "article-recovery-process-audit.json",
+          "sha256": "90a90a302794c2c80e1d77f91d81dc4b286d148f3e41a828411665fcab828af9"
+        }
+      ],
+      "transformations": "Selected recorded facts and explicit audit qualifications; not an exact source copy."
+    },
+    {
+      "path": "sources/article-case.json",
+      "sha256": "79589af0cc3e11525296d4c03d7a27c8d6e51000cdb39a71be0fa56694149bfe",
+      "kind": "sanitized_record",
+      "private_source_sha256": "18ce51c4b6e9a514d4af970f90b449d6c14d4c58a75afbf3edbb6cba5b2f737e",
+      "private_sources": [
+        {
+          "label": "article-case.json",
+          "sha256": "18ce51c4b6e9a514d4af970f90b449d6c14d4c58a75afbf3edbb6cba5b2f737e"
+        }
+      ],
+      "transformations": "Removed browser/account verification fields; parsed source-note JSON strings into objects. Original text, claim meanings and protected literals unchanged."
+    },
+    {
+      "path": "sources/original.txt",
+      "sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0",
+      "kind": "exact_copy",
+      "private_source_sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0",
+      "private_sources": [
+        {
+          "label": "original-article.txt",
+          "sha256": "95a107521ca93c6e55ff528e7b5d414676806844a66349147d2d03dd8c6aa3a0"
+        }
+      ]
+    }
+  ],
+  "embedded_hash_policy": "Hashes inside retained records refer to the original source artifacts unless explicitly labeled as export hashes. When metadata is sanitized, match its original hash through private_sources in this manifest; the sha256 field always describes the exported file bytes."
+}

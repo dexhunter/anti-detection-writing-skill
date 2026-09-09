@@ -1,0 +1,59 @@
+ How to Use Anti Detection Writing Skill on Your Next Draft
+
+Your draft can be accurate but hard to understand. Anti Detection Writing Skill lets your editor follow a repeatable editing process: understand what the reader needs, keep the facts intact, enhance flow, and review the result. You can also compare against GPT Zero.
+
+Begin with a reply, email, or document section.
+
+1. Install the Skill.
+
+Run `npx skills add dexhunter/anti detection writing skill --skill anti detection writing`.
+
+Select the editor during installation. Default installation uses current project.
+
+2. Provide context and original text.
+
+Tell the editor who is reading and what they need to accomplish. Include a question and any relevant docs and version limits if it's technical. Ask:
+
+"Use anti detection writing skill to make this text smoother and easier to read for [audience]. Preserve facts and qualifications. Remove repetition and irrelevant background. Correct any facts and get separate review of final text."
+
+The skill may adjust by moving prerequisites ahead of instructions or replacing vague pronouns. Continually check that the advice remains clear and true.
+
+3. Measure Detector Results If Needed.
+
+"Compare original and final text using GPT Zero Basic Scan with same display model and record exact inputs, all three scores, dates, and warnings. Record unchanged and worse results as well."
+
+Live scanning requires access to your own detector and a browser tool your editor supports. The skill doesn't supply detectors. Separate reviews of correctness and readability apart from score.
+
+Development Examples Show
+
+Fresh rechecks of saved Qwen Code replies now show 100% AI/0% mixed/0% human → 1% AI/99% mixed/0% human with GPT Zero Basic Scan Model 4.9b on September 6, 2026. Screenshots show completed scans. These were repeat tests of development cases; this is not a new test of packaged skill.
+
+Change involved adding a short relevant quote to an otherwise identical answer. Comparison changed content and length; this shows benefits from rewriting alone. Scores of 99% mixed do not indicate 99% human.
+
+Among 10 quoted comparisons across development sample, five reduced AI confidence; plain rewriting reduced confidence in only 15 comparisons. Separate LLM reviewers rated eight plain edits as clearer and seven as equivalent. Observations come from completed UI scans; the current skill hasn't prospectively been validated for detector performance.
+
+Use quotes when helpful. Stick to clear correct edits unless publication rules allow otherwise.
+
+Try this on one draft and discuss what worked and what didn't in Discussions. Repository includes exact inputs and measured examples along with failed ones.
+
+Repository: https://github.com/dexhunter/anti detection writing skill
+
+Discussions: https://github.com/dexhunter/anti detection writing skill discussions
+
+Previously: plain answer at 100% AI/0% mixed/0% human. Now: same answer plus a relevant quote from the user, 1% AI/99% mixed/0% human. Fresh recheck on September 6, 2026 using GPT Zero Model 4.9b. Genuine screenshots show result panels and parts of each input; full inputs linked in repository. Quotes change content and length. To paraphrase the text into a more conversational tone:
+
+Using Anti Detection Writing Skill on Your Next Draft
+
+Sometimes you can write something that's super accurate but really hard to understand. That's where Anti Detection Writing Skill comes in. It gives you an editor a repeatable process to do some serious smoothing and clarifying: figure out what the reader wants, keep facts solid, improve flow, and then review it again.
+
+You can start with a reply, email, or part of a document.
+
+1. Install the Skill
+
+Just type `npx skills add dexhunter/anti detection writing skill --skill anti detection writing` in the terminal. Pick which editor you want to use. Default picks the project currently open.
+
+2. Give Context and Original Text
+
+Tell your editor who you're sending this to and what they need to do. If it's technical stuff, include the question, relevant documents, and version numbers. Then ask:
+
+"Use Anti

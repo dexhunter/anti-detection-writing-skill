@@ -1,0 +1,2 @@
+
+Before: plain answer, 100% AI / 0% mixed / 0% human. After: the same answer plus one relevant asker quotation, 1% AI / 99% mixed / 0% human. GPTZero Basic Scan, Model 4.9b; fresh recheck on September 6, 2026. These genuine screenshots show the result panels and part of each input; the complete inputs are linked in the repository. Adding a quotation changes content and length.

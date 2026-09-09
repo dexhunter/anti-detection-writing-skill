@@ -48,3 +48,4 @@ Review case-insensitive whole words and phrases in the explanatory prose, includ
 For each useful edit, identify the reading problem first: vague action, unnecessary setup, repetition or mismatched register. Revise the sentence enough to solve that problem. Do not replace one conspicuous word with an obscure synonym, invent a mechanism, or delete a qualification to clear the list. Compare the result with the claim inventory and retain a clear original when the proposed edit adds nothing.
 
 If a vocabulary-only hypothesis finds no applicable matches, record a no-op. Do not label an unrelated structural rewrite as a vocabulary intervention. A requested detector comparison still follows [measurement.md](measurement.md): fix exact inputs, check meaning independently, and compare completed scans. A zero-match result is not a detector pass and does not justify rescanning unchanged text.
+

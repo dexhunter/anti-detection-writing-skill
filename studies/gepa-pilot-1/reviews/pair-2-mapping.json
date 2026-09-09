@@ -1,0 +1,10 @@
+{
+  "A": {
+    "arm": "candidate-2-writer",
+    "sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7"
+  },
+  "B": {
+    "arm": "baseline-writer-clean",
+    "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7"
+  }
+}

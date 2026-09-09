@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "completed_no_improvement",
+  "scope": "prose_only",
+  "gepa": {
+    "status": "completed",
+    "proposals": 2,
+    "accepted": 0,
+    "best_index": 0,
+    "utilities": {
+      "baseline": 0.0,
+      "candidate-1": -1.0,
+      "candidate-2": -1.0
+    },
+    "quality_note": "Both candidates passed factual and clarity review but lost a slight preference to the incumbent. Negative utilities are quality rejection values, not detector scores.",
+    "fresh_scans": 1,
+    "word_credits": 122,
+    "cache_hits": 2
+  },
+  "diagnostic": {
+    "status": "completed_no_improvement",
+    "declared_before_candidate_scans": true,
+    "selection": "Both unchanged candidate outputs, without a new writer call or repair.",
+    "changed_criterion": "Allows the existing slight relative-preference losses for measurement only; substantive quality reviews still pass.",
+    "baseline": "seed",
+    "baseline_reuse": true,
+    "baseline_is_new_replicate": false,
+    "new_scans": 2,
+    "word_credits": 255,
+    "comparisons": 2,
+    "reductions": 0,
+    "ai_confidence_decrease_points": {
+      "candidate-1": 0.0,
+      "candidate-2": 0.0
+    },
+    "changes_gepa_acceptance": false
+  },
+  "observations": [
+    {
+      "id": "seed",
+      "phase": "gepa_seed",
+      "case": "gepa-dev-http",
+      "arm": "baseline",
+      "status": "complete",
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T16:54:20.787Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "f730c006ce808ecc5a4ffe5ba94089106d8f91dd1cb4787c599768f2cc863c65",
+      "scan_scope": "prose_only",
+      "words_charged": 122,
+      "full_message": {
+        "path": "outputs/baseline.txt",
+        "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7"
+      },
+      "detector_input": {
+        "path": "outputs/baseline.txt",
+        "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7"
+      },
+      "code_ranges": [],
+      "review": "reviews/baseline.json",
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/baseline/submitted.txt",
+          "sha256": "11e8a53ae684a7b288e4cd5e9738b4a2e463465605635045879128d7798ee78e"
+        },
+        "editor_before": {
+          "path": "measurements/baseline/editor-before.txt",
+          "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f"
+        },
+        "editor_after": {
+          "path": "measurements/baseline/editor-after.txt",
+          "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f"
+        }
+      },
+      "private_visible_result_sha256": "1e67a16cbe62fceec98018bba101c6c4ab514e40fc73a3fdd08a8d31ed37c890",
+      "private_screenshot_sha256": "6bd9a7cab2c32b1111c5d8b18acaf0ef03d0f9203c231a5c610355ccce331f07"
+    },
+    {
+      "id": "diagnostic-1",
+      "phase": "post_run_adaptive_diagnostic",
+      "case": "gepa-dev-http",
+      "arm": "candidate-1",
+      "status": "complete",
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T17:15:21.592Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "3205a598ac4ebd5f3126c6d4e124e4d2f16a720a21c78e363ea82bb3b16b8859",
+      "scan_scope": "prose_only",
+      "words_charged": 124,
+      "full_message": {
+        "path": "outputs/candidate-1.txt",
+        "sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7"
+      },
+      "detector_input": {
+        "path": "outputs/candidate-1.txt",
+        "sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7"
+      },
+      "code_ranges": [],
+      "review": "reviews/pair-1.json",
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/candidate-1/submitted.txt",
+          "sha256": "db9fb94fc433730967ce995d270a4ef31f99258fa3663edacd8f61df348c2a66"
+        },
+        "editor_before": {
+          "path": "measurements/candidate-1/editor-before.txt",
+          "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7"
+        },
+        "editor_after": {
+          "path": "measurements/candidate-1/editor-after.txt",
+          "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7"
+        }
+      },
+      "private_visible_result_sha256": "5b8f7b5e7a0ac19a7bce9332a1a0333c14246533c7bd50a0ebededf1c7aea47e",
+      "private_screenshot_sha256": "60a7157c079b5f9dca9f50ef4ddc7ff33f5884dc2fa302b84b998b07ab98db21"
+    },
+    {
+      "id": "diagnostic-2",
+      "phase": "post_run_adaptive_diagnostic",
+      "case": "gepa-dev-http",
+      "arm": "candidate-2",
+      "status": "complete",
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-09T17:16:46.422Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "61bee2928e77141d688341ae06301d7756bd7872674a7a2f15b552c2ddf12a04",
+      "scan_scope": "prose_only",
+      "words_charged": 131,
+      "full_message": {
+        "path": "outputs/candidate-2.txt",
+        "sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7"
+      },
+      "detector_input": {
+        "path": "outputs/candidate-2.txt",
+        "sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7"
+      },
+      "code_ranges": [],
+      "review": "reviews/pair-2.json",
+      "entry_transform": "gptzero_code_block_v1",
+      "representations": {
+        "submitted": {
+          "path": "measurements/candidate-2/submitted.txt",
+          "sha256": "9dd4cd4b4855bf4060c63ae534164324294b6a32fb14d62bae1a5938e133da6e"
+        },
+        "editor_before": {
+          "path": "measurements/candidate-2/editor-before.txt",
+          "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf"
+        },
+        "editor_after": {
+          "path": "measurements/candidate-2/editor-after.txt",
+          "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf"
+        }
+      },
+      "private_visible_result_sha256": "153d1e039b89881f2f76d7292830967f15bc58093996695f1aa5ef8cbd9fd0e5",
+      "private_screenshot_sha256": "0f5234f96e7796a440d7aec64d8c20d4323c350b10b4866d3e6a859bb05c2892"
+    }
+  ],
+  "accounting": {
+    "total_completed_scans": 3,
+    "free_word_credits_used": 377,
+    "allowance_before": 1160,
+    "allowance_after": 783,
+    "confirmation_word_reserve": 650,
+    "purchases": 0,
+    "writer_dispatches": 4,
+    "discarded_writer_dispatches_without_output": 1,
+    "completed_writer_outputs": 3,
+    "reflection_responses": 3,
+    "reflection_note": "Proposal 1 had one coordinator-requested activation repair before dispatch; proposal 2 had one response.",
+    "answer_quality_reviews": 3,
+    "model_token_costs": null,
+    "model_settings": "Fresh agents inherited settings; exact backend model and sampling details unexposed."
+  },
+  "confirmation": {
+    "cases": 2,
+    "released": false,
+    "scans": 0,
+    "sealed_file_sha256": "1d5bae9b0ba397a6d084a59675912eea9bec04bd234edd079d3accc02af8e943"
+  },
+  "writing_policy_promoted": false,
+  "public_reply_or_article_changed": false,
+  "limits": [
+    "One reused development case, shared across training and validation.",
+    "Shared seed receipt is one observation, not two independent baseline scans.",
+    "Candidate 1 dispatch wording differs from the recovered baseline operator; candidate 2 differs only in skill/output paths.",
+    "Writer-packet exposure, discarded call and symmetric filtering were recorded before the retained seed output.",
+    "Maintainer-observed UI results; native receipt validation checks consistency but does not authenticate the service.",
+    "No generalization, causal editing rule or impossibility claim is supported."
+  ]
+}

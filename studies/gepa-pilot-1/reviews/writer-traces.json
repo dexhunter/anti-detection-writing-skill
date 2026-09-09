@@ -1,0 +1,317 @@
+{
+  "baseline": {
+    "case_id": "gepa-dev-http",
+    "answer_file": "<study>/baseline-writer-clean/answer.txt",
+    "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+    "word_count": 122,
+    "word_count_method": "whitespace_split",
+    "encoding": "UTF-8",
+    "terminal_lf_count": 1,
+    "selfcheck_only": true,
+    "claim_checks": [
+      {
+        "id": "DTC1",
+        "status": "preserved",
+        "evidence": "An ETag lets your client validate a stored response",
+        "note": "GET scope is explicit in the mechanism paragraph."
+      },
+      {
+        "id": "DTC2",
+        "status": "preserved",
+        "evidence": "The server supplies an ETag with the JSON response. On a later conditional GET, the client sends that value in If-None-Match."
+      },
+      {
+        "id": "DTC3",
+        "status": "preserved",
+        "evidence": "If the tag matches the selected representation, an otherwise successful GET returns 304 Not Modified with no response body, allowing the client to reuse its stored body."
+      },
+      {
+        "id": "DTC4",
+        "status": "preserved",
+        "evidence": "If it does not match, a successful GET returns 200 OK with the current JSON."
+      },
+      {
+        "id": "DTC5",
+        "status": "preserved",
+        "evidence": "that validation still sends a request"
+      },
+      {
+        "id": "DTC6",
+        "status": "preserved",
+        "evidence": "To allow reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules."
+      },
+      {
+        "id": "DTC7",
+        "status": "preserved",
+        "evidence": "The cached response can then be reused while fresh. This does not guarantee that the underlying data will remain unchanged for 60 seconds."
+      }
+    ],
+    "protected_string_checks": [
+      {
+        "value": "ETag",
+        "preserved": true
+      },
+      {
+        "value": "GET",
+        "preserved": true
+      },
+      {
+        "value": "If-None-Match",
+        "preserved": true
+      },
+      {
+        "value": "304 Not Modified",
+        "preserved": true
+      },
+      {
+        "value": "200 OK",
+        "preserved": true
+      },
+      {
+        "value": "Cache-Control: max-age=60",
+        "preserved": true
+      },
+      {
+        "value": "60 seconds",
+        "preserved": true
+      }
+    ],
+    "removed_claims": [],
+    "added_claims": [],
+    "code_exclusions": [],
+    "phrase_review": "No listed stock expression required an edit. The reply leads with validation and its request requirement; technical conditions and freshness qualifications remain intact.",
+    "source_basis": "Only the supplied development case and the two authorized ordinary-writing files were read. No external verification was performed."
+  },
+  "candidate_1": {
+    "case_id": "gepa-dev-http",
+    "role": "writer",
+    "applied_skill": "anti-detection-writing (supplied candidate-1-writer-skill)",
+    "input_paths_read": [
+      "<study>/candidate-1-writer-skill/SKILL.md",
+      "<study>/candidate-1-writer-skill/references/phrase-review.md",
+      "<study>/development-case.json"
+    ],
+    "baseline": {
+      "provenance": "development-case.json original field",
+      "text_source": "sources/development.json#/original"
+    },
+    "claim_inventory_mapping": [
+      {
+        "id": "DTC1",
+        "status": "preserved",
+        "answer_sentence": 1,
+        "evidence": "The server includes an ETag with its JSON response so the client can validate a stored copy",
+        "scope": "Stored response; conditional GET.",
+        "time_scope": "General mechanism, not a dated observation."
+      },
+      {
+        "id": "DTC2",
+        "status": "preserved",
+        "answer_sentence": 1,
+        "evidence": "on a later conditional GET, the client sends that tag in If-None-Match",
+        "scope": "Server supplies ETag; client echoes that value in the described conditional GET.",
+        "time_scope": "Later request follows the initial response."
+      },
+      {
+        "id": "DTC3",
+        "status": "preserved",
+        "answer_sentence": 2,
+        "evidence": "For an otherwise successful GET, a tag matching the selected representation leads to 304 Not Modified with no response body, so the client reuses its stored body",
+        "scope": "Matching selected representation; otherwise successful GET.",
+        "time_scope": "Conditional behavior at validation."
+      },
+      {
+        "id": "DTC4",
+        "status": "preserved",
+        "answer_sentence": 2,
+        "evidence": "a nonmatching tag leads to 200 OK with the current JSON",
+        "scope": "The introductory otherwise-successful-GET qualification governs both matching and nonmatching branches.",
+        "time_scope": "Current JSON at the successful GET."
+      },
+      {
+        "id": "DTC5",
+        "status": "preserved",
+        "answer_sentence": 3,
+        "evidence": "validation still sends a request",
+        "scope": "Described conditional validation.",
+        "time_scope": "General limitation remains applicable."
+      },
+      {
+        "id": "DTC6",
+        "status": "preserved",
+        "answer_sentences": [
+          4,
+          5
+        ],
+        "evidence": "To allow reuse without validation, configure a freshness policy such as Cache-Control: max-age=60, subject to the other caching rules. The client can then reuse the cached response while it is fresh.",
+        "scope": "Illustrative freshness policy; other caching rules apply; reuse is permitted while fresh.",
+        "time_scope": "Freshness interval."
+      },
+      {
+        "id": "DTC7",
+        "status": "preserved",
+        "answer_sentence": 6,
+        "evidence": "This permission does not guarantee that the underlying data stays unchanged for 60 seconds.",
+        "scope": "Permission to reuse is not a guarantee about origin data.",
+        "time_scope": "Illustrative 60-second interval; limitation is current."
+      }
+    ],
+    "protected_literal_checks": [
+      {
+        "literal": "ETag",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      },
+      {
+        "literal": "GET",
+        "present_byte_for_byte": true,
+        "occurrences": 2
+      },
+      {
+        "literal": "If-None-Match",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      },
+      {
+        "literal": "304 Not Modified",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      },
+      {
+        "literal": "200 OK",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      },
+      {
+        "literal": "Cache-Control: max-age=60",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      },
+      {
+        "literal": "60 seconds",
+        "present_byte_for_byte": true,
+        "occurrences": 1
+      }
+    ],
+    "scope_cuts": [],
+    "added_facts": [],
+    "corrections": [],
+    "structural_edit": "Rebuilt from the claim inventory: the first sentence groups validation purpose with server/client actions; the second groups the two response branches under their shared GET qualification; the second paragraph moves from the remaining request to qualified fresh reuse and its data-change limitation.",
+    "phrase_review": "Used the list contextually. No vocabulary-only intervention or detector benefit is claimed.",
+    "full_message_sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+    "word_count": 124,
+    "word_count_method": "Whitespace-delimited tokens (Ruby String#split).",
+    "encoding": "UTF-8",
+    "terminal_newlines": 1,
+    "code_exclusions": [],
+    "review_limitations": [
+      "Writer self-check only; separate independent review is pending and is not claimed.",
+      "Read only the three authorized input files. Did not browse, read earlier answers, or inspect linked evaluation resources.",
+      "Technical claims rely on the supplied case and source excerpts; no independent source verification, request execution, or deployment testing was performed.",
+      "No detector scan, detector score, measured improvement, or publication is claimed."
+    ]
+  },
+  "candidate_2": {
+    "case_id": "gepa-dev-http",
+    "answer_path": "<study>/candidate-2-writer/answer.txt",
+    "answer_sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7",
+    "word_count": 131,
+    "word_count_method": "Whitespace-delimited tokens: len(answer.split())",
+    "encoding": "UTF-8",
+    "terminal_lf_count": 1,
+    "review_kind": "Writer self-check; not independent review",
+    "source_basis": "Supplied development-case.json facts and source excerpts only; no new source verification performed.",
+    "claim_checks": [
+      {
+        "claim_id": "DTC1",
+        "source_claim": "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+        "status": "preserved",
+        "answer_evidence": "An ETag lets the client validate its stored JSON response and avoid downloading an unchanged body.",
+        "check": "Stored response validation remains scoped to the described GET flow."
+      },
+      {
+        "claim_id": "DTC2",
+        "source_claim": "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+        "status": "preserved",
+        "answer_evidence": "The server sends an ETag with the JSON response. On a later conditional GET, the client sends that value in If-None-Match.",
+        "check": "Server supplies the tag and client echoes that value."
+      },
+      {
+        "claim_id": "DTC3",
+        "source_claim": "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+        "status": "preserved",
+        "answer_evidence": "If the tag matches the selected representation, an otherwise successful GET returns 304 Not Modified with no response body, allowing the client to reuse its stored body.",
+        "check": "Preserves selected-representation match, otherwise-successful GET qualification, absent response body, and stored-body reuse."
+      },
+      {
+        "claim_id": "DTC4",
+        "source_claim": "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+        "status": "preserved",
+        "answer_evidence": "If the tag does not match, a successful GET returns 200 OK with the current JSON.",
+        "check": "The 200 outcome remains conditional on a successful GET."
+      },
+      {
+        "claim_id": "DTC5",
+        "source_claim": "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+        "status": "preserved",
+        "answer_evidence": "Validation still requires a request.",
+        "check": "States the request limitation directly in the opening."
+      },
+      {
+        "claim_id": "DTC6",
+        "source_claim": "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+        "status": "preserved",
+        "answer_evidence": "To reuse a cached response without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60. Subject to the other caching rules, the client can reuse the cached response while it is fresh.",
+        "check": "Retains the illustrative policy, other caching rules, and reuse permission only while fresh."
+      },
+      {
+        "claim_id": "DTC7",
+        "source_claim": "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval.",
+        "status": "preserved",
+        "answer_evidence": "Freshness does not guarantee that the underlying data remains unchanged for 60 seconds.",
+        "check": "Retains the non-guarantee across the illustrative freshness interval."
+      }
+    ],
+    "protected_strings": [
+      {
+        "text": "ETag",
+        "preserved_exactly": true
+      },
+      {
+        "text": "GET",
+        "preserved_exactly": true
+      },
+      {
+        "text": "If-None-Match",
+        "preserved_exactly": true
+      },
+      {
+        "text": "304 Not Modified",
+        "preserved_exactly": true
+      },
+      {
+        "text": "200 OK",
+        "preserved_exactly": true
+      },
+      {
+        "text": "Cache-Control: max-age=60",
+        "preserved_exactly": true
+      },
+      {
+        "text": "60 seconds",
+        "preserved_exactly": true
+      }
+    ],
+    "scope_cuts": [],
+    "unsupported_additions": [],
+    "code_blocks": [],
+    "standalone_commands": [],
+    "phrase_review": "No stock phrase required replacement. Restructuring places the request limitation in the opening and keeps each GET branch separate.",
+    "constraints": {
+      "within_170_words": true,
+      "no_added_quotations": true,
+      "no_invented_experience": true,
+      "no_padding": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "original": {
+    "candidate_component": "writing_policy",
+    "candidate_canonical_sha256": "14bfbb08586b8a8c894c76de116efa40c939c850c8d7301dd62e1d5394ed74f7",
+    "policy_path": "proposal-1/v1-firstproposal/policy.txt",
+    "policy_sha256": "09485ec5e3902700fb0347a944e96b87c26bf7fa0388280844494f3c662b39fe"
+  },
+  "executed": {
+    "candidate_component": "writing_policy",
+    "candidate_canonical_sha256": "74c9be1ba04ca64e16c2d26162dd3074e9c9ab78b6ed59387eac783df3d3f976",
+    "policy_path": "proposal-1/policy.txt",
+    "policy_sha256": "61cfdb646a011e0b63510b19d78b2c62b2b6656d1ab9dd4c2482c9c8906608f4"
+  }
+}

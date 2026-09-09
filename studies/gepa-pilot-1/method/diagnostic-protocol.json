@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T17:13:49.856757+00:00",
+  "status": "frozen_before_either_candidate_scan",
+  "type": "additional_adaptive_measurement_diagnostic",
+  "relation_to_gepa": "GEPA run remains quality_rejected for both proposals; these observations never rewrite engine utilities or acceptance. No new proposal, writer call, text repair or selection among drafts.",
+  "gate": "Both existing exact full messages passed separate factual, relevance, clarity and professional-tone review. Relative preference loss is retained and allowed for this diagnostic only.",
+  "selection": "Both GEPA-generated policies and their only writer outputs; no candidate subset selection",
+  "scope": "prose_only",
+  "code_exclusions": [],
+  "baseline": "Reuse the exact completed seed receipt and identical seed prose from this same session/model as a shared comparison; not a fresh replicate or a new baseline scan.",
+  "baseline_sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+  "candidates": [
+    {
+      "id": "1",
+      "full_and_prose_sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+      "max_words": 170
+    },
+    {
+      "id": "2",
+      "full_and_prose_sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7",
+      "max_words": 170
+    }
+  ],
+  "max_new_scans": 2,
+  "max_new_word_credits": 340,
+  "overall_word_ceiling_unchanged": 510,
+  "words_already_used": 122,
+  "confirmation_reserve_unchanged": 650,
+  "live_allowance_before": 1038,
+  "overall_deadline_unchanged": "2026-09-09T17:47:19.117486+00:00",
+  "no_promotion_from_diagnostic": true,
+  "confirmation_condition": "If a scored candidate improves, keep strict quality non-regression and original 2-case confirmation requirements before promotion. Report adaptive selection and shared baseline."
+}

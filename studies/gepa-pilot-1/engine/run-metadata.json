@@ -1,0 +1,68 @@
+{
+  "status": "completed",
+  "upstream_sha": "0632cdb5dcc052e690eab439e1b4a7e3e9cfe407",
+  "scope": "single-development-case; no confirmation evaluation",
+  "best_candidate": {
+    "policy_path": "method/incumbent-policy.txt",
+    "candidate_canonical_sha256": "8a39325c5d2119e8a5d39bb16add0270fdbb69e81b4dc0ac4e7bba6871da46d1",
+    "policy_sha256": "44ad3208ab2887a5f732ec1aa7e93200a2b66a1ce2a6df630f4128921cb67001"
+  },
+  "best_index": 0,
+  "gepa_result": {
+    "candidates": [
+      {
+        "policy_path": "method/incumbent-policy.txt",
+        "candidate_canonical_sha256": "8a39325c5d2119e8a5d39bb16add0270fdbb69e81b4dc0ac4e7bba6871da46d1",
+        "policy_sha256": "44ad3208ab2887a5f732ec1aa7e93200a2b66a1ce2a6df630f4128921cb67001"
+      }
+    ],
+    "parents": [
+      [
+        null
+      ]
+    ],
+    "val_aggregate_scores": [
+      0.0
+    ],
+    "val_subscores": [
+      {
+        "0": 0.0
+      }
+    ],
+    "best_outputs_valset": {
+      "0": [
+        [
+          0,
+          {
+            "prose_sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+            "full_message_path": "outputs/baseline.txt",
+            "prose_path": "outputs/baseline.txt"
+          }
+        ]
+      ]
+    },
+    "per_val_instance_best_candidates": {
+      "0": [
+        0
+      ]
+    },
+    "val_aggregate_subscores": null,
+    "per_objective_best_candidates": null,
+    "objective_pareto_front": null,
+    "discovery_eval_counts": [
+      0
+    ],
+    "total_metric_calls": 1,
+    "num_full_val_evals": 1,
+    "run_dir": "<study>/engine-run/gepa",
+    "seed": 0,
+    "_str_candidate_key": null,
+    "best_idx": 0,
+    "validation_schema_version": 2
+  },
+  "accounting": {
+    "unique_evaluations": 3,
+    "scans": 1,
+    "scan_words": 122
+  }
+}

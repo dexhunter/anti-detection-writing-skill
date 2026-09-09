@@ -1,0 +1,26 @@
+{
+  "scope": "Previously exposed development history only; no new holdout material",
+  "prior_methods": [
+    {
+      "method": "short reference card and mini-FAQ on same HTTP case",
+      "result": "fresh same-case baseline and both variants passed separate review and stayedAI100/Mixed0/Human0 Basic4.9b",
+      "source": "https://github.com/dexhunter/anti-detection-writing-skill/tree/357f15b262b75b58c7197872f45571e9431d67b3/studies/technical-format-1"
+    },
+    {
+      "method": "three synthetic paired editing demonstrations with short diagnosis",
+      "result": "HTTP andarticle candidates both preferred forclarity butallfour fresh prose scans stayed100/0/0",
+      "source": "https://github.com/dexhunter/anti-detection-writing-skill/tree/357f15b262b75b58c7197872f45571e9431d67b3/studies/paired-editing-examples-1"
+    },
+    {
+      "method": "model-assisted AuthorMist plus source repair and fluency edit",
+      "result": "business development dropped100to0 andrepeated;HTTP stayed100;confirmation readabilityregression blockedpromotion",
+      "source": "https://github.com/dexhunter/anti-detection-writing-skill/tree/357f15b262b75b58c7197872f45571e9431d67b3/studies/model-assisted-1"
+    },
+    {
+      "method": "vocabulary watchlists",
+      "result": "none of33entries inlatestfourfailedtexts;no justifiededit/noscans",
+      "source": "https://github.com/dexhunter/anti-detection-writing-skill/blob/357f15b262b75b58c7197872f45571e9431d67b3/skills/anti-detection-writing/references/phrase-review.md"
+    }
+  ],
+  "reflection_constraint": "100% is a document classification confidence, not proof of a cause. Use actual quality/source/trace feedback to propose a distinct reusable policy; acknowledge reuse of earlier mechanisms. Do not bake the target answer or its facts into the skill. No quotations, fictitious experience, mistakes, obfuscation, irrelevantpadding or factweakening."
+}

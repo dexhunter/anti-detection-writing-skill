@@ -1,0 +1,56 @@
+{
+  "protocol": {
+    "schema_version": 1,
+    "created_at": "2026-09-09T16:47:19.117486+00:00",
+    "method": "actual upstream GEPA core with custom adapter and externally executed reflection/writing/quality/Chrome evaluation callbacks",
+    "incumbent_commit": "357f15b262b75b58c7197872f45571e9431d67b3",
+    "gepa_commit": "0632cdb5dcc052e690eab439e1b4a7e3e9cfe407",
+    "scope": "prose_only",
+    "search_cases": [
+      "gepa-dev-http"
+    ],
+    "search_split": "same single reused case in trainset and valset; neither is held out",
+    "max_proposals": 2,
+    "max_unique_development_scans": 3,
+    "max_development_word_credits": 510,
+    "confirmation_word_reserve": 650,
+    "live_free_allowance_before": 1160,
+    "max_total_word_credits": 1160,
+    "max_runtime_minutes": 60,
+    "target_utility": "1 - GPTZero AI confidence/100 if independent factual review passes and readability is not worse than incumbent; quality rejection utility=-1 without detector scan",
+    "unavailable_measurement": "stop; never impute a score",
+    "candidate_publication": "none unless separate requested publication requirements met; no public reply is part of this experiment",
+    "prompt_scope": "Only frozen SKILL.md Write and review section may change; all other bytes and referenced resources remain fixed",
+    "writers": "fresh isolated agent per new policy, same inherited model/settings when exposed; no detector scores or method history",
+    "reflection": "full development feedback including archived failures and current loop outcomes; never holdout contents",
+    "quality": "separate agent checks exact full/prose bytes and claims, scores withheld; reject factual or readability regression before scans",
+    "cache": "reuse exact candidate/case output and validated native receipt for GEPA parent reevaluations; these are cache hits, not fresh scans",
+    "confirmation": "if best positive search gain, freeze policy then compare freshly generated incumbent/candidate on two preselected independent cases; quality non-regression and at least 5 mean percentage-point gain, no per-case detector regression; otherwise do not promote",
+    "limitations": [
+      "single exposed search case",
+      "at most two reflective proposals",
+      "agent-driven external workers, not autonomous browser execution",
+      "cached evaluations not independent replicates"
+    ]
+  },
+  "writer_packet_amendment": {
+    "created_at": "2026-09-09T16:48:50.589801+00:00",
+    "stage": "before baseline output and any scan",
+    "reason": "First fresh writer followed ordinary phrase-review reference and found archived target detector results. No output written; writer discarded.",
+    "writer_packet": "Both arms receive complete frozen SKILL.md plus identical phrase-review ordinary-editing view ending before Applicability section. Measurement/research references are not exposed to output writers.",
+    "unchanged_source": "Complete18-file incumbent remains frozen. This affects role packets for both arms, not optimized text.",
+    "original_reference_sha256": "efb101d4330cb05d773558b05f0b7acb60e247451aede6f6b93b2908018be465",
+    "writer_reference_sha256": "a20514c2c757c275456992f215f8f9073a48655faf32a23853d708234cbe87ae",
+    "exposed_agent": "discarded_initial_writer",
+    "output": null,
+    "calls_consumed": 1,
+    "detector_scans_consumed": 0
+  },
+  "operator_audit": {
+    "status": "dispatch_wording_difference_retained",
+    "noted_before_candidate_1_scan": true,
+    "description": "Baseline and candidate 1 were both fresh isolated writers with the same case, skill wrapper, ordinary phrase reference, factual requirements, word limit and inherited settings. The coordinator dispatch wording was not byte-identical: candidate 1 expanded artifact metadata instructions and used different phrasing for scope restrictions. Exact operators are retained. Treat this as a bundled pilot, not an isolated causal policy comparison.",
+    "future_dispatch": "Use recovered baseline operator with only skill/output paths substituted for candidate 2 and any common confirmation pair.",
+    "model_and_sampling_details": "Inherited by fresh agents; exact backend identifiers and sampling settings are unexposed. No model override used."
+  }
+}

@@ -1,5 +1,7 @@
 # When the skill may not help
 
+The [GEPA pilot](../studies/gepa-pilot-1/README.md) tested two prompt revisions on the reused HTTP explanation. Separate reviewers passed their facts and clarity but slightly preferred the incumbent, so the optimizer retained it. A declared follow-up diagnostic measured both revisions anyway: the shared baseline and both candidates stayed at 100% AI / 0% mixed / 0% human in Basic 4.9b. Changing the optimizer did not produce a reduction in this small trial; its three scans consumed 377 word credits, and neither writing policy was adopted.
+
 The skill aims to improve readability and reduce detector scores. Those outcomes can differ. This page records cases that do not qualify for the [score-reduction showcase](case-studies.md), with practical guidance for deciding what to do next. Historical measurements used GPTZero Basic Scan, Model 4.9b; all primary results remain in the [dataset](../studies/results.json).
 
 ## Clearer prose can receive the same score

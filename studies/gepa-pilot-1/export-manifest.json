@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "archive_scope": "Completed GEPA pilot and separately declared adaptive diagnostic, with exact prose, policies, representations and allowlisted observations.",
+  "captured_at": "2026-09-09T17:16:06.101373+00:00",
+  "source_path_convention": "Source paths are relative to the private pilot directory. <study> replaces that private absolute root inside sanitized metadata.",
+  "artifacts": [
+    {
+      "path": "method/incumbent-manifest.json",
+      "sha256": "46e5c4e18c497dcb13478694c0bdd2413b7e0458ae7b54c9ccb6e5aae2501922",
+      "bytes": 1837,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "incumbent-manifest.json",
+          "sha256": "46e5c4e18c497dcb13478694c0bdd2413b7e0458ae7b54c9ccb6e5aae2501922"
+        }
+      ]
+    },
+    {
+      "path": "method/incumbent-policy.txt",
+      "sha256": "44ad3208ab2887a5f732ec1aa7e93200a2b66a1ce2a6df630f4128921cb67001",
+      "bytes": 4636,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "writing-policy.txt",
+          "sha256": "44ad3208ab2887a5f732ec1aa7e93200a2b66a1ce2a6df630f4128921cb67001"
+        }
+      ]
+    },
+    {
+      "path": "method/writer-skill.txt",
+      "sha256": "2373aa3c83f842f9577ce92c2eda7fefcbb232faaded1de73a774b3458fb35b2",
+      "bytes": 10822,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "writer-base/SKILL.md",
+          "sha256": "2373aa3c83f842f9577ce92c2eda7fefcbb232faaded1de73a774b3458fb35b2"
+        }
+      ]
+    },
+    {
+      "path": "method/phrase-review.txt",
+      "sha256": "a20514c2c757c275456992f215f8f9073a48655faf32a23853d708234cbe87ae",
+      "bytes": 7052,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "writer-base/references/phrase-review.md",
+          "sha256": "a20514c2c757c275456992f215f8f9073a48655faf32a23853d708234cbe87ae"
+        }
+      ]
+    },
+    {
+      "path": "runner.py",
+      "sha256": "90df947518ac863e07cc5c8b0c2e0f4f2d9abee6b1641a5a640c669c8369eb29",
+      "bytes": 16286,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "runner-executed.py",
+          "sha256": "90df947518ac863e07cc5c8b0c2e0f4f2d9abee6b1641a5a640c669c8369eb29"
+        }
+      ]
+    },
+    {
+      "path": "sources/development.json",
+      "sha256": "3b5c75e88932b029128774bdc7a73fb1aa04bb2bf32feffd4a332df98da3f310",
+      "bytes": 3421,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "development-case.json",
+          "sha256": "3b5c75e88932b029128774bdc7a73fb1aa04bb2bf32feffd4a332df98da3f310"
+        }
+      ]
+    },
+    {
+      "path": "sources/development-history.json",
+      "sha256": "36178e2517d01d40a66a529bdfec5629589d7304d0c5c3f33fd57fa422422aaf",
+      "bytes": 1907,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "development-history.json",
+          "sha256": "36178e2517d01d40a66a529bdfec5629589d7304d0c5c3f33fd57fa422422aaf"
+        }
+      ]
+    },
+    {
+      "path": "reviews/pair-1-mapping.json",
+      "sha256": "b910ce20f068183bfd1afeb68ed4514d5d4fb19509981dc2cf3e752bca7fe372",
+      "bytes": 262,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "review-1-mapping.json",
+          "sha256": "b910ce20f068183bfd1afeb68ed4514d5d4fb19509981dc2cf3e752bca7fe372"
+        }
+      ]
+    },
+    {
+      "path": "outputs/baseline.txt",
+      "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+      "bytes": 759,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "baseline-writer-clean/answer.txt",
+          "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7"
+        }
+      ]
+    },
+    {
+      "path": "outputs/candidate-1.txt",
+      "sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+      "bytes": 758,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "candidate-1-writer/answer.txt",
+          "sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7"
+        }
+      ]
+    },
+    {
+      "path": "proposal-1/policy.txt",
+      "sha256": "61cfdb646a011e0b63510b19d78b2c62b2b6656d1ab9dd4c2482c9c8906608f4",
+      "bytes": 5447,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-1/policy.txt",
+          "sha256": "61cfdb646a011e0b63510b19d78b2c62b2b6656d1ab9dd4c2482c9c8906608f4"
+        }
+      ]
+    },
+    {
+      "path": "proposal-1/reflection.txt",
+      "sha256": "c6ae1a305502de7ee5ebfb29ad72f8ec4b753db594530174dca017e6b5849ceb",
+      "bytes": 4205,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-1/reflection.md",
+          "sha256": "c6ae1a305502de7ee5ebfb29ad72f8ec4b753db594530174dca017e6b5849ceb"
+        }
+      ]
+    },
+    {
+      "path": "proposal-1/v1-firstproposal/policy.txt",
+      "sha256": "09485ec5e3902700fb0347a944e96b87c26bf7fa0388280844494f3c662b39fe",
+      "bytes": 5411,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-1/v1-firstproposal/policy.txt",
+          "sha256": "09485ec5e3902700fb0347a944e96b87c26bf7fa0388280844494f3c662b39fe"
+        }
+      ]
+    },
+    {
+      "path": "proposal-1/v1-firstproposal/reflection.txt",
+      "sha256": "750a8f2db06bb0b1d01056b7c98f6e4317f264473f3d28e55cf1db78f0a8c909",
+      "bytes": 3398,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-1/v1-firstproposal/reflection.md",
+          "sha256": "750a8f2db06bb0b1d01056b7c98f6e4317f264473f3d28e55cf1db78f0a8c909"
+        }
+      ]
+    },
+    {
+      "path": "engine/events.jsonl",
+      "sha256": "ad2f0721d8c7036394f7035f5c02c6d817ec3dfcfcae08150802d6539964c0f0",
+      "bytes": 2815,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "engine-run/events.jsonl",
+          "sha256": "ad2f0721d8c7036394f7035f5c02c6d817ec3dfcfcae08150802d6539964c0f0"
+        }
+      ]
+    },
+    {
+      "path": "proposal-2/policy.txt",
+      "sha256": "8d4503b68814a781bd3c3c413e58fdddc89d7f983c70fc364dcfc0695ccfa777",
+      "bytes": 5237,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-2/policy.txt",
+          "sha256": "8d4503b68814a781bd3c3c413e58fdddc89d7f983c70fc364dcfc0695ccfa777"
+        }
+      ]
+    },
+    {
+      "path": "proposal-2/reflection.txt",
+      "sha256": "662b459bab7e9e74d5513cab20245ba020bb74c65a7b0c55d02a27b04a83331d",
+      "bytes": 5628,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "proposal-2/reflection.md",
+          "sha256": "662b459bab7e9e74d5513cab20245ba020bb74c65a7b0c55d02a27b04a83331d"
+        }
+      ]
+    },
+    {
+      "path": "outputs/candidate-2.txt",
+      "sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7",
+      "bytes": 822,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "candidate-2-writer/answer.txt",
+          "sha256": "0b66f5117879f73ed113802756b1132b9d7f856fbbea84a098622786a25ab5c7"
+        }
+      ]
+    },
+    {
+      "path": "reviews/pair-2-mapping.json",
+      "sha256": "2f1f941b64d8eecf1004f636cc7e4b93cafc5820dc4d5e8493e85b9127a0fcfa",
+      "bytes": 262,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "review-2-mapping.json",
+          "sha256": "2f1f941b64d8eecf1004f636cc7e4b93cafc5820dc4d5e8493e85b9127a0fcfa"
+        }
+      ]
+    },
+    {
+      "path": "method/diagnostic-protocol.json",
+      "sha256": "00e7dd801854d611d6770e9d96ca7141b0d3f5e3791dd657fb86807cfc7f1530",
+      "bytes": 1861,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "diagnostic-protocol.json",
+          "sha256": "00e7dd801854d611d6770e9d96ca7141b0d3f5e3791dd657fb86807cfc7f1530"
+        }
+      ]
+    },
+    {
+      "path": "method/protocol.json",
+      "sha256": "f94d4f05291d75b68deb3fdccc9545468a4e42a6325b6a08f49394bbd778d784",
+      "bytes": 4247,
+      "status": "sanitized",
+      "transform": "combined_metadata_and_role_identifier_substitution",
+      "sources": [
+        {
+          "path": "protocol.json",
+          "sha256": "5e110b1e42ea3c95855449667b9ff12ab73b5cdc394ae98853a97074606169e4"
+        },
+        {
+          "path": "writer-packet-amendment.json",
+          "sha256": "53d84dd24712cd4259e3d525a8c244df3d9f22c39959eb63663737261f787400"
+        },
+        {
+          "path": "operator-audit.json",
+          "sha256": "e42f6dbd56af9d0522c3889167a88394dafdd6fadaa85de7ad6c0d8c9c57959c"
+        }
+      ],
+      "notes": "All protocol, amendment and audit fields are retained; an agent identifier is replaced by its role."
+    },
+    {
+      "path": "method/operators.json",
+      "sha256": "ee80a9f05f185eb47f4453140f6eed0bc1547d1df98ccaddca53690bda585421",
+      "bytes": 2438,
+      "status": "sanitized",
+      "transform": "combined_metadata_and_private_root_substitution",
+      "sources": [
+        {
+          "path": "baseline-writer-clean/operator.txt",
+          "sha256": "0c911407032f77a4327615b664792d3a002f25a8084a3045a14e2856abaf9664"
+        },
+        {
+          "path": "candidate-1-writer/operator.txt",
+          "sha256": "1de3159e42ddf650c8ecc0cd12ddc2f4c3bd3be1dc8227ed6b38ca9910f47089"
+        },
+        {
+          "path": "candidate-2-writer/operator.txt",
+          "sha256": "3776e11f5292ff37851e01684da3fff73fa4e8e8d045096d7902f00b9c2637b4"
+        }
+      ],
+      "notes": "Operator text is unchanged apart from replacing the private root with <study>. Original role-packet paths are archival labels, not public archive paths."
+    },
+    {
+      "path": "reviews/baseline.json",
+      "sha256": "ad2cfaf4d58ecefc74f3015f572605214e8c0d2ee8cb22eb21463c26c857a91b",
+      "bytes": 4110,
+      "status": "sanitized",
+      "transform": "role_identifier_substitution",
+      "sources": [
+        {
+          "path": "baseline-quality.json",
+          "sha256": "cfd8a6b1f0451f95ea74e2ad81d9757642858011943c26ab2e535ab280bc6755"
+        }
+      ]
+    },
+    {
+      "path": "reviews/pair-1.json",
+      "sha256": "fc9ebe0711ec212267e0be275501e2ead946adc447ee0edd2eba964dee622f8e",
+      "bytes": 8280,
+      "status": "sanitized",
+      "transform": "private_root_substitution",
+      "sources": [
+        {
+          "path": "review-1.json",
+          "sha256": "fcc2c826e91835281a382854a304a74dde331971875346ae6eb12b6fad802dc8"
+        }
+      ]
+    },
+    {
+      "path": "reviews/pair-2.json",
+      "sha256": "28e21f40e1ee6aa96a83cdca66c4dd19f1ea0f4272d2d07910315b7f0934c798",
+      "bytes": 8873,
+      "status": "sanitized",
+      "transform": "private_root_substitution",
+      "sources": [
+        {
+          "path": "review-2.json",
+          "sha256": "ba1556a4c06f3487a679d61564ae6f61a358dd46c96c47104208eb28ba207bed"
+        }
+      ]
+    },
+    {
+      "path": "reviews/writer-traces.json",
+      "sha256": "01ff2d2f592b06f1b2a8be34cea2572c8d7d97f820b3034b21d441fbebde4abf",
+      "bytes": 13142,
+      "status": "sanitized",
+      "transform": "combined_metadata_private_root_substitution_and_source_deduplication",
+      "sources": [
+        {
+          "path": "baseline-writer-clean/trace.json",
+          "sha256": "e22a90902708155a4b7d4c2d016167b6986deafd22c665f1d42f4d1ca72527e2"
+        },
+        {
+          "path": "candidate-1-writer/trace.json",
+          "sha256": "fdccd76d3d15c94b2933a83d7093acf9c06d09a7c0fc9ba4265f4b907fba1f32"
+        },
+        {
+          "path": "candidate-2-writer/trace.json",
+          "sha256": "e6f2e9564781bb7637908e1985e498d83bf92c989ef5e67d47284f48c8e651f3"
+        },
+        {
+          "path": "development-case.json",
+          "sha256": "3b5c75e88932b029128774bdc7a73fb1aa04bb2bf32feffd4a332df98da3f310"
+        }
+      ],
+      "notes": "Writer self-checks are retained separately from independent reviews. The duplicated original answer is replaced by an exact source-field reference."
+    },
+    {
+      "path": "proposal-1/candidate-associations.json",
+      "sha256": "5e57283507c7e2dffccd09a1676880df1fa44b5712544ba5592544c76493d838",
+      "bytes": 620,
+      "status": "sanitized",
+      "transform": "candidate_json_replaced_by_exact_policy_associations",
+      "sources": [
+        {
+          "path": "proposal-1/candidate.json",
+          "sha256": "abc55c50933bc2cb45ce02df49ded6d654f0560b6ec3da0ec6e0ac130c2491b4"
+        },
+        {
+          "path": "proposal-1/policy.txt",
+          "sha256": "61cfdb646a011e0b63510b19d78b2c62b2b6656d1ab9dd4c2482c9c8906608f4"
+        },
+        {
+          "path": "proposal-1/v1-firstproposal/candidate.json",
+          "sha256": "1046b1b5e3cb3e23d2aad83df7a401f2c4852f048658394c3130c51b03eb76b6"
+        },
+        {
+          "path": "proposal-1/v1-firstproposal/policy.txt",
+          "sha256": "09485ec5e3902700fb0347a944e96b87c26bf7fa0388280844494f3c662b39fe"
+        }
+      ],
+      "notes": "Each private candidate JSON contains only writing_policy; that string exactly equals its exported policy file, including newlines. Canonical hashes use sorted compact UTF-8 JSON, matching GEPA job identities."
+    },
+    {
+      "path": "proposal-2/candidate-associations.json",
+      "sha256": "ca028f3cbfbd7f7378ab6bf4225bba7be3b3b86b5157684a2771a62a67a932f7",
+      "bytes": 275,
+      "status": "sanitized",
+      "transform": "candidate_json_replaced_by_exact_policy_association",
+      "sources": [
+        {
+          "path": "proposal-2/candidate.json",
+          "sha256": "5d46ec506f6883fad82afa7e8bb5d9b24c519c9f0380da718ee2744a1e47084a"
+        },
+        {
+          "path": "proposal-2/policy.txt",
+          "sha256": "8d4503b68814a781bd3c3c413e58fdddc89d7f983c70fc364dcfc0695ccfa777"
+        }
+      ],
+      "notes": "The private candidate JSON contains only writing_policy; that string exactly equals its exported policy file, including newlines."
+    },
+    {
+      "path": "engine/run-metadata.json",
+      "sha256": "6bdec15ae521f6044ad05289276f2e8592bebe546101ef65681bd0a048d5a314",
+      "bytes": 1773,
+      "status": "sanitized",
+      "transform": "private_root_substitution_and_exact_policy_output_associations",
+      "sources": [
+        {
+          "path": "engine-run/result.json",
+          "sha256": "75d540d59c5c74473eabe59eeb16433edc2c4061019ece236257d0be35811eac"
+        },
+        {
+          "path": "writing-policy.txt",
+          "sha256": "44ad3208ab2887a5f732ec1aa7e93200a2b66a1ce2a6df630f4128921cb67001"
+        },
+        {
+          "path": "baseline-writer-clean/answer.txt",
+          "sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7"
+        }
+      ],
+      "notes": "All engine metadata is retained; duplicate policy and output strings are replaced with verified exact file associations. Completed GEPA metadata is archived separately from the adaptive diagnostic; diagnostic observations cannot change the engine record."
+    },
+    {
+      "path": "measurements/baseline/submitted.txt",
+      "sha256": "11e8a53ae684a7b288e4cd5e9738b4a2e463465605635045879128d7798ee78e",
+      "bytes": 758,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/seed/submitted.txt",
+          "sha256": "11e8a53ae684a7b288e4cd5e9738b4a2e463465605635045879128d7798ee78e"
+        }
+      ]
+    },
+    {
+      "path": "measurements/baseline/editor-before.txt",
+      "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f",
+      "bytes": 761,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/seed/editor-before.txt",
+          "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f"
+        }
+      ]
+    },
+    {
+      "path": "measurements/baseline/editor-after.txt",
+      "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f",
+      "bytes": 761,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/seed/editor-after.txt",
+          "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-1/submitted.txt",
+      "sha256": "db9fb94fc433730967ce995d270a4ef31f99258fa3663edacd8f61df348c2a66",
+      "bytes": 757,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-1/submitted.txt",
+          "sha256": "db9fb94fc433730967ce995d270a4ef31f99258fa3663edacd8f61df348c2a66"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-1/editor-before.txt",
+      "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7",
+      "bytes": 760,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-1/editor-before.txt",
+          "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-1/editor-after.txt",
+      "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7",
+      "bytes": 760,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-1/editor-after.txt",
+          "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-2/submitted.txt",
+      "sha256": "9dd4cd4b4855bf4060c63ae534164324294b6a32fb14d62bae1a5938e133da6e",
+      "bytes": 821,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-2/submitted.txt",
+          "sha256": "9dd4cd4b4855bf4060c63ae534164324294b6a32fb14d62bae1a5938e133da6e"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-2/editor-before.txt",
+      "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf",
+      "bytes": 824,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-2/editor-before.txt",
+          "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf"
+        }
+      ]
+    },
+    {
+      "path": "measurements/candidate-2/editor-after.txt",
+      "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf",
+      "bytes": 824,
+      "status": "exact",
+      "transform": "exact_copy",
+      "sources": [
+        {
+          "path": "scans/diagnostic-2/editor-after.txt",
+          "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf"
+        }
+      ]
+    },
+    {
+      "path": "results.json",
+      "sha256": "8992af07ef60187e7e3ff9a5fda7d2e4b02b5e319e9214004a532b6ae01b273c",
+      "bytes": 8724,
+      "status": "sanitized",
+      "transform": "allowlisted_native_metrics_and_coordinator_summary",
+      "sources": [
+        {
+          "path": "scans/seed/receipt.json",
+          "sha256": "f730c006ce808ecc5a4ffe5ba94089106d8f91dd1cb4787c599768f2cc863c65"
+        },
+        {
+          "path": "scans/diagnostic-1/receipt.json",
+          "sha256": "3205a598ac4ebd5f3126c6d4e124e4d2f16a720a21c78e363ea82bb3b16b8859"
+        },
+        {
+          "path": "scans/diagnostic-2/receipt.json",
+          "sha256": "61bee2928e77141d688341ae06301d7756bd7872674a7a2f15b552c2ddf12a04"
+        },
+        {
+          "path": "engine-run/result.json",
+          "sha256": "75d540d59c5c74473eabe59eeb16433edc2c4061019ece236257d0be35811eac"
+        },
+        {
+          "path": "diagnostic-attempts.json",
+          "sha256": "413067167199718067b02d6a60b4b19e32159b3608604fa0f8f7a59380ff8627"
+        },
+        {
+          "path": "diagnostic-protocol.json",
+          "sha256": "00e7dd801854d611d6770e9d96ca7141b0d3f5e3791dd657fb86807cfc7f1530"
+        }
+      ],
+      "notes": "Account UI and document identifiers remain private. Full diagnostic outcomes do not overwrite GEPA utilities."
+    },
+    {
+      "path": "README.md",
+      "sha256": "93af3ec3e31082cd46a3c7baddfa96f44dde46434151803d762d7c006d4f298c",
+      "bytes": 7285,
+      "status": "exact",
+      "transform": "exact_copy_of_coordinator_report",
+      "sources": [
+        {
+          "path": "public-report.md",
+          "sha256": "93af3ec3e31082cd46a3c7baddfa96f44dde46434151803d762d7c006d4f298c"
+        }
+      ],
+      "notes": "Coordinator-authored final explanation, reviewed against underlying artifacts; not a vendor report."
+    }
+  ],
+  "engine_snapshot": {
+    "path": "engine/events.jsonl",
+    "completed_engine_metadata": "engine/run-metadata.json",
+    "diagnostic_measurements_included": false,
+    "event_count": 18,
+    "last_event": {
+      "accepted": false,
+      "iteration": 2,
+      "kind": "iteration_ended",
+      "time_unix": 1788974030.491893
+    }
+  },
+  "byte_fidelity_checks": {
+    "all_exact_artifacts_equal_source_bytes": true,
+    "seed_policy_equals_frozen_skill_write_and_review_section": true,
+    "frozen_skill_matches_incumbent_manifest": true,
+    "ordinary_phrase_reference_matches_packet_amendment": true,
+    "candidate_json_strings_equal_exported_policy_bytes": true,
+    "output_hashes_match_independent_reviews_and_mask_mapping": true,
+    "runner_is_exact_executed_snapshot": true,
+    "code_exclusions": [],
+    "prose_equals_full_message_for_all_three_archived_outputs": true,
+    "diagnostic_protocol_hashes_match_archived_outputs": true
+  },
+  "runner_limits": [
+    "Archival source inspection only; this export did not execute the runner or upstream GEPA.",
+    "External workers provide writing, quality review and browser measurements. The runner checks receipt-file existence, response identity and numeric values; it does not authenticate native results or enforce substantive quality and content-access rules.",
+    "The runner rejects over-budget supplied scan counts after an external scan; operators must honor the budget before spending.",
+    "The deadline is checked while waiting for a missing response. It does not interrupt external work or reject an already-present late response.",
+    "Persisted evaluations and responses may be reused; cache hits are not independent replicates. Full restart equivalence was not tested by this export.",
+    "The upstream guard checks the pinned HEAD and unstaged tracked differences. It does not reject staged-only or untracked source changes."
+  ],
+  "notes": [
+    "Frozen policies, the full writer skill and its ordinary phrase-reference view are archived as text, not additional installable skills.",
+    "Each candidate writer skill is reconstructable by replacing the incumbent Write and review section with its proposal policy and retaining the same phrase reference. This export did not read either candidate writer's separate runtime tree.",
+    "The full incumbent file manifest is retained; only the permitted ordinary writer packet is copied.",
+    "Public specification, research and repository links are retained. runner.py retains its safe technical example/default paths.",
+    "The manifest is generated provenance metadata and is excluded from its own artifact list; every payload artifact has source and public SHA-256 hashes.",
+    "The post-run diagnostic is recorded in results.json and does not change the completed engine metadata."
+  ],
+  "omitted": [
+    "Raw account/browser UI, detector document URLs, screenshots, personal private paths and agent identifiers.",
+    "Unreleased confirmation content and full runtime job trees.",
+    "Duplicate candidate JSON policy strings and duplicate source-answer text."
+  ],
+  "completed_export_at": "2026-09-09T17:25:48.319571+00:00",
+  "diagnostic_results_path": "results.json"
+}

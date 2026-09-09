@@ -1,0 +1,179 @@
+{
+  "source_id": "gepa-dev-http",
+  "review_scope": "Independent anonymous pair evaluation of the complete A and B messages against the supplied question, claims, protected strings, original answer, and source excerpts.",
+  "variants": {
+    "A": {
+      "pass": true,
+      "claims": {
+        "DTC1": {
+          "pass": true,
+          "evidence": "The opening explicitly says the client can validate a stored copy using the ETag."
+        },
+        "DTC2": {
+          "pass": true,
+          "evidence": "The server includes the ETag with its JSON response; the client sends that tag in If-None-Match on a later conditional GET."
+        },
+        "DTC3": {
+          "pass": true,
+          "evidence": "An otherwise successful GET with a tag matching the selected representation leads to 304 Not Modified, no response body, and stored-body reuse."
+        },
+        "DTC4": {
+          "pass": true,
+          "evidence": "The same otherwise-successful-GET qualification governs the semicolon-linked nonmatching outcome, 200 OK with the current JSON."
+        },
+        "DTC5": {
+          "pass": true,
+          "evidence": "It explicitly states that validation still sends a request."
+        },
+        "DTC6": {
+          "pass": true,
+          "evidence": "It presents Cache-Control: max-age=60 as an example freshness policy, retains the other-caching-rules qualification, and permits cached reuse while fresh without validation."
+        },
+        "DTC7": {
+          "pass": true,
+          "evidence": "It explicitly denies a guarantee that underlying data stays unchanged for 60 seconds."
+        }
+      },
+      "protected_strings": {
+        "ETag": {
+          "present_exactly": true
+        },
+        "GET": {
+          "present_exactly": true
+        },
+        "If-None-Match": {
+          "present_exactly": true
+        },
+        "304 Not Modified": {
+          "present_exactly": true
+        },
+        "200 OK": {
+          "present_exactly": true
+        },
+        "Cache-Control: max-age=60": {
+          "present_exactly": true
+        },
+        "60 seconds": {
+          "present_exactly": true
+        }
+      },
+      "actor_scope_pass": true,
+      "actor_scope_reason": "Correctly distinguishes the server supplying the validator from the client sending If-None-Match and reusing its cached body.",
+      "conditional_scope_pass": true,
+      "conditional_scope_reason": "Preserves selected-representation matching and successful-GET scope for the 304/200 outcomes; freshness permission remains subject to other caching rules.",
+      "correctness_pass": true,
+      "relevance_pass": true,
+      "clarity_pass": true,
+      "professional_tone_pass": true,
+      "readability_pass": true,
+      "full_sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+      "prose_sha256": "c4fca62bf5203aa26380567311a0c7fc14175700ae118294d9d912c2a7360dc7",
+      "hash_scope": "Exact UTF-8 file bytes, including the single final LF; no normalization or trimming.",
+      "byte_count": 758,
+      "trailing_newline_count": 1,
+      "word_count": 124,
+      "word_count_method": "Whitespace-separated tokens, including inline identifiers and numerals.",
+      "maximum_words": 170,
+      "within_word_limit": true,
+      "prose_scope": "prose_only",
+      "excluded_standalone_code_ranges": [],
+      "code_exclusion_reason": "The complete message has no fenced code block or standalone command/code line. Header examples and protocol identifiers occur inside prose and remain included.",
+      "materially_worse": false,
+      "necessary_corrections": []
+    },
+    "B": {
+      "pass": true,
+      "claims": {
+        "DTC1": {
+          "pass": true,
+          "evidence": "The opening explicitly says an ETag lets the client validate a stored response."
+        },
+        "DTC2": {
+          "pass": true,
+          "evidence": "The server supplies the ETag with its JSON response; the client sends that value in If-None-Match on a later conditional GET."
+        },
+        "DTC3": {
+          "pass": true,
+          "evidence": "A tag matching the selected representation results in 304 Not Modified for an otherwise successful GET, with no response body and permission to reuse the stored body."
+        },
+        "DTC4": {
+          "pass": true,
+          "evidence": "The nonmatching outcome is explicitly qualified as a successful GET returning 200 OK with the current JSON."
+        },
+        "DTC5": {
+          "pass": true,
+          "evidence": "The opening explicitly states that this validation still sends a request."
+        },
+        "DTC6": {
+          "pass": true,
+          "evidence": "It presents Cache-Control: max-age=60 as an example of an appropriate freshness policy, retains the other-caching-rules qualification, and permits cached reuse while fresh without validation."
+        },
+        "DTC7": {
+          "pass": true,
+          "evidence": "It explicitly denies a guarantee that underlying data remains unchanged for 60 seconds."
+        }
+      },
+      "protected_strings": {
+        "ETag": {
+          "present_exactly": true
+        },
+        "GET": {
+          "present_exactly": true
+        },
+        "If-None-Match": {
+          "present_exactly": true
+        },
+        "304 Not Modified": {
+          "present_exactly": true
+        },
+        "200 OK": {
+          "present_exactly": true
+        },
+        "Cache-Control: max-age=60": {
+          "present_exactly": true
+        },
+        "60 seconds": {
+          "present_exactly": true
+        }
+      },
+      "actor_scope_pass": true,
+      "actor_scope_reason": "Correctly distinguishes the server supplying the validator from the client sending If-None-Match and reusing its cached body.",
+      "conditional_scope_pass": true,
+      "conditional_scope_reason": "Preserves selected-representation matching and successful-GET scope for the 304/200 outcomes; freshness permission remains subject to other caching rules.",
+      "correctness_pass": true,
+      "relevance_pass": true,
+      "clarity_pass": true,
+      "professional_tone_pass": true,
+      "readability_pass": true,
+      "full_sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+      "prose_sha256": "77cbcc6846c6d0938b692d316c4ddf2b8e190fba51deab6be77a386bab1e62b7",
+      "hash_scope": "Exact UTF-8 file bytes, including the single final LF; no normalization or trimming.",
+      "byte_count": 759,
+      "trailing_newline_count": 1,
+      "word_count": 122,
+      "word_count_method": "Whitespace-separated tokens, including inline identifiers and numerals.",
+      "maximum_words": 170,
+      "within_word_limit": true,
+      "prose_scope": "prose_only",
+      "excluded_standalone_code_ranges": [],
+      "code_exclusion_reason": "The complete message has no fenced code block or standalone command/code line. Header examples and protocol identifiers occur inside prose and remain included.",
+      "materially_worse": false,
+      "necessary_corrections": []
+    }
+  },
+  "preference": "B",
+  "preference_strength": "small",
+  "preference_reason": "B answers the request-elimination question immediately, then gives the server/client sequence and the two conditional outcomes in separate sentences. A is also clear, but its opening paragraph compresses more information into a colon and a semicolon. This is a small presentation preference, not a material readability difference.",
+  "either_materially_worse": false,
+  "necessary_corrections": [],
+  "source_evidence_limits": [
+    "Only the three specified packet files were read; no detector results, method identities, or other trial files were inspected.",
+    "The source packet supplies the original answer, seven claim requirements, seven protected strings, and embedded RFC 9110/9111 source metadata with short excerpts. The cited RFC documents were not independently opened or reverified in this review.",
+    "The verdict concerns the ordinary successful GET and caching explanation requested by the packet; it makes no claim about an exercised client/server implementation or excluded HTTP cases."
+  ],
+  "files_read": [
+    "<study>/review-1-packet/source.json",
+    "<study>/review-1-packet/A.txt",
+    "<study>/review-1-packet/B.txt"
+  ]
+}

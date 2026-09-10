@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "model_id": "danibor/oculus-v2.0-multilingual",
+  "revision": "e6b41a2159c78d480738317c3ea6a680073a7b32",
+  "files": {
+    ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "README.md": "2d07768f88e600a515e46eba70bbb595f65ff8accee1ea629b82648c33cf61a7",
+    "config.json": "1b388f52ef289ce1338fcba26cc1d2b4c9465214b65b6f0c6e8b3d64a915aea5",
+    "model.safetensors": "315bc3b95d61eac260b95cf87f5218fea3b745389b2743473a2de170d1ac0056",
+    "special_tokens_map.json": "b70b72bbc44ed96ae896e1b26d2d269d40a58709c9de1428c9bbfa872fe7f7ce",
+    "tokenizer.json": "9313554f1d10f9e6addc02ea82c727f7e646d9cfb153d2cb62560b9268dd4ca4",
+    "tokenizer_config.json": "700dba386cc05b6b14e74add7fe9293a6cb3ab16f3aa2eb177c76e288592bf01"
+  },
+  "source_adapter_sha256": "ba19a4bbe7f76855ca815b75d1cd3e0d80cdd7c99f41f1e114ba840b57d81c0f",
+  "adaptation": "Pinned Oculus model/revision, 512-token limit, fast tokenizer.json requirement, publisher pooled dtype cast. Publisher card has invalid repository identifier and formatting typo; neither affects inference math."
+}

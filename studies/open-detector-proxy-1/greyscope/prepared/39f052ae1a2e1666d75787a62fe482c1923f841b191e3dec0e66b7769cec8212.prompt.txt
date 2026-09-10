@@ -1,0 +1,13 @@
+You are an expert AI-text detector. Classify the passage below.
+0 = no AI involvement (entirely human-written)
+1 = lightly AI-edited
+2 = moderately AI-edited
+3 = heavily AI-edited or fully AI-generated
+Respond with a single digit (0, 1, 2, or 3) and nothing else.
+
+Passage:
+"""
+atlas help-centre migration. all 180 articles have been copied. the content team has checked 60 without finding missing sections. the remaining articles have not yet been reviewed, so the content check is still incomplete. search currently omits titles containing apostrophes. nia is due to deliver the fix on 10 september. after delivery, omar will test it. i recommend opening the pilot to five volunteer support agents on 11 september if that test passes. the existing help centre will remain available during the pilot, and customer-facing links will not change. please confirm by 9 september whether the support team can provide those five agents. we will review pilot feedback on 14 september before deciding whether to schedule the full rollout. a full rollout date has therefore not been committed.
+"""
+
+Answer: 

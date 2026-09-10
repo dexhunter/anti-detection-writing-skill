@@ -1,0 +1,42 @@
+{
+  "status": "PASS_WITH_MINOR_WORDING_CORRECTION",
+  "reviewed_at_utc": "2026-09-10T10:13:16.532826+00:00",
+  "review_scope": "Public report and newly added local-detector/autoresearch guidance; no model reruns or export execution",
+  "prior_context": "Reviewer previously surveyed these models, audited archives and runtime arithmetic, and has seen all study scores. This is not a fresh blind writing-quality review.",
+  "files": [
+    {
+      "path": "studies/open-detector-proxy-1/README.md",
+      "sha256": "86519060759ebed75b813fe9ebc12d1da51c1ef7ac887cda1a7146aae68d9e87"
+    },
+    {
+      "path": "skills/anti-detection-writing/references/local-detector.md",
+      "sha256": "8d4ad27d9e693cd7a5cdcdadd1c6b08be361169130843b86126f7f6f576ccea4"
+    },
+    {
+      "path": "skills/anti-detection-writing/references/autoresearch.md",
+      "sha256": "71a477b48f7998bab7d7a7052b248ab10fe2ff1690a4f5446bd098ac4b4b0cf3"
+    }
+  ],
+  "verified_claims": [
+    "Main table and all10 paired values match audited native results and historical targets.",
+    "Recognized and misleading counts at0.01 and zero-drop sensitivities are correct.",
+    "Three recurring topics, reused business case, shared baselines and outcome-selected corpus are clearly qualified.",
+    "Technical counterexample remains prominent; quotation content addition is separated from rewriting.",
+    "Oculus and Greyscope score semantics remain distinct from GPTZero document confidence.",
+    "All18 input/token ranges, human-control scores and limitations, inference timing and parity descriptions match retained evidence.",
+    "No new writing improvement, model identity, accuracy estimate, authorship proof or automatic-selector adoption is claimed.",
+    "New reference guidance requires prospective comparison and preserves quality and endpoint confirmation."
+  ],
+  "findings": [
+    {
+      "severity": "minor_source_precision",
+      "path": "studies/open-detector-proxy-1/README.md",
+      "text": "Its author-specified Unicode, lowercase and whitespace normalization changed bytes on every input",
+      "finding": "Collectively the author preprocessing changed every input, but Unicode normalization itself changed none of18. The wording can imply all three transformations changed every input.",
+      "recommended_replacement": "Its author preprocessing lowercased and normalized whitespace on every input; Unicode normalization left these texts unchanged. Raw, cleaned and prompted versions are retained separately.",
+      "needs_new_model_run": false
+    }
+  ],
+  "pending_validation": "Root is independently adding/running export checks and offline reproduction tests; this wording review does not certify those unfinished checks.",
+  "existing_caveat_retained": "Available-only analyzer denominators remain a future-run caveat; all10 snapshot pairs are available, so no current arithmetic correction is needed."
+}

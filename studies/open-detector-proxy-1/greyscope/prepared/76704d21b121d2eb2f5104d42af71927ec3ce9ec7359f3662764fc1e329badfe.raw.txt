@@ -1,0 +1,7 @@
+ETag enables receiving applications to validate whether cached representations may be reused. Still, this validation includes sending a request.
+
+A server sends an ETag with the JSON response and the client includes that tag value in the If-None-Match header for future conditional GET requests. For an otherwise successful GET, if the cached ETag matches the selected representation's tag, the server returns 304 Not Modified with no response body and the client can reuse its cached body. If the ETag does not match, the server returns 200 OK with the current JSON if the GET otherwise succeeds.
+
+An application may employ a freshness policy such as Cache-Control: max-age=60, in which case the cached response may be reused while fresh without a validation request, subject to other caching rules. However, reuse under this freshness policy is not a guarantee that the underlying data will remain unchanged for 60 seconds.
+
+

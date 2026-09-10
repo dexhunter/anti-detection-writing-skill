@@ -1,0 +1,7 @@
+A per-chat override takes precedence for supported generation parameters such as temperature. If the chat leaves a parameter unset, Open WebUI uses your user-level default, then the selected model's setting in the Admin Panel. Ollama or llama-server supplies its default when the parameter is omitted from the request.
+
+So a model setting of temperature=0.2 and a chat override of 0.8 sends 0.8. Changing these settings affects API requests; it doesn't rewrite the Ollama Modelfile or llama-server startup arguments.
+
+You can see the two merges in the source: the [frontend puts chat values over user settings](https://github.com/open-webui/open-webui/blob/0a7c15832fb30b1903753e83f81dc7d27e5b0944/src/lib/components/chat/Chat.svelte#L3554-L3558), then the [backend fills model defaults where the request lacks a value](https://github.com/open-webui/open-webui/blob/v0.11.3/backend/open_webui/utils/payload.py#L69-L82).
+
+For the odd behavior you're seeing, compare the outgoing request with the server's supported API fields. System prompts, streaming controls, and server-only options have separate handling, so this precedence isn't a rule for every control. A UI field cannot override an option that the server only accepts at startup.

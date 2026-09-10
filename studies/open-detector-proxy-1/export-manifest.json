@@ -1,0 +1,1101 @@
+{
+  "study": "studies/open-detector-proxy-1",
+  "exporter": "explicit allowlist",
+  "exporter_sha256": "dd270a536e072c77dbd94b7910ac44ca5e9c8950434b258ba0aaec298fd31e33",
+  "historical_hash_policy": "Original source hashes remain unchanged inside archived results. This manifest maps source hashes to sanitized public files.",
+  "scope": "Selected exposed prose, two historical controls and completed local results; no model weights, accounts, full source books or sealed confirmation cases",
+  "files": [
+    {
+      "source_ref": "protocol.md",
+      "public_path": "protocol.md",
+      "source_sha256": "66937d554e280b7cfd7d255dcca3164c6b3804888442e528281b98043f7a913d",
+      "public_sha256": "66937d554e280b7cfd7d255dcca3164c6b3804888442e528281b98043f7a913d",
+      "source_bytes": 2797,
+      "public_bytes": 2797,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "corpus.json",
+      "public_path": "corpus.json",
+      "source_sha256": "e8eb6c230ec77354160235d594f9230feb7bd6e5f25a4b74dc79870f85c7a99b",
+      "public_sha256": "e8eb6c230ec77354160235d594f9230feb7bd6e5f25a4b74dc79870f85c7a99b",
+      "source_bytes": 6851,
+      "public_bytes": 6851,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "targets.json",
+      "public_path": "targets.json",
+      "source_sha256": "dd0c8f9b22c81c1a224a3be83edeb3b36e72b288c9d387be1a1495f20cdd9015",
+      "public_sha256": "dd0c8f9b22c81c1a224a3be83edeb3b36e72b288c9d387be1a1495f20cdd9015",
+      "source_bytes": 24901,
+      "public_bytes": 24901,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "manifest.json",
+      "public_path": "manifest.json",
+      "source_sha256": "431d04b2cdfde7b69fe9b0f58126692de60bae17265bd3116efb5bd46f3f69ba",
+      "public_sha256": "431d04b2cdfde7b69fe9b0f58126692de60bae17265bd3116efb5bd46f3f69ba",
+      "source_bytes": 2893,
+      "public_bytes": 2893,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "selection.md",
+      "public_path": "selection.md",
+      "source_sha256": "b6d289ca5417fa133fda53c749649b769ba60df9aace9f8ad371e93af8114923",
+      "public_sha256": "b6d289ca5417fa133fda53c749649b769ba60df9aace9f8ad371e93af8114923",
+      "source_bytes": 3344,
+      "public_bytes": 3344,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inference-manifest.json",
+      "public_path": "inference-manifest.json",
+      "source_sha256": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57",
+      "public_sha256": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57",
+      "source_bytes": 7398,
+      "public_bytes": 7398,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "analysis.json",
+      "public_path": "analysis.json",
+      "source_sha256": "470db175b6e05bb50ef5ef14f2bdefbb8c6b18519db7779358ebb3545842e179",
+      "public_sha256": "470db175b6e05bb50ef5ef14f2bdefbb8c6b18519db7779358ebb3545842e179",
+      "source_bytes": 11964,
+      "public_bytes": 11964,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "analyze.py",
+      "public_path": "analyze.py",
+      "source_sha256": "6b73a0a1fb31425fbfd5fe3960991d77bef3357ffdfdb1c747c93fd51a5f2999",
+      "public_sha256": "6b73a0a1fb31425fbfd5fe3960991d77bef3357ffdfdb1c747c93fd51a5f2999",
+      "source_bytes": 5606,
+      "public_bytes": 5606,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "test_analyze.py",
+      "public_path": "test_analyze.py",
+      "source_sha256": "c9261b1feef91f693e4981d969424de991cdac0ba8770716380b6609707d7e66",
+      "public_sha256": "c9261b1feef91f693e4981d969424de991cdac0ba8770716380b6609707d7e66",
+      "source_bytes": 7694,
+      "public_bytes": 7694,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/runner.py",
+      "public_path": "oculus/runner.py",
+      "source_sha256": "abdcaf669298f6ed1dd682b5830b087649fd7771584beb2ea0771faf5d1069ad",
+      "public_sha256": "abdcaf669298f6ed1dd682b5830b087649fd7771584beb2ea0771faf5d1069ad",
+      "source_bytes": 11457,
+      "public_bytes": 11457,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/test_runner.py",
+      "public_path": "oculus/test_runner.py",
+      "source_sha256": "dcfb18549c1669f4993e5a0d0687a7501e9a8d17b53266edc5c87a9079122173",
+      "public_sha256": "dcfb18549c1669f4993e5a0d0687a7501e9a8d17b53266edc5c87a9079122173",
+      "source_bytes": 10641,
+      "public_bytes": 10641,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/model-manifest.json",
+      "public_path": "oculus/model-manifest.json",
+      "source_sha256": "e6dcf3354693d8e27d133ed5c51e7c6ba32f0a3d1814ac6aba2f7e28ddc86310",
+      "public_sha256": "e6dcf3354693d8e27d133ed5c51e7c6ba32f0a3d1814ac6aba2f7e28ddc86310",
+      "source_bytes": 1117,
+      "public_bytes": 1117,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/results.json",
+      "public_path": "oculus/results.json",
+      "source_sha256": "8b8fb31abde54fd39d448e933e3566de403bb6b831b700ad7ed83871e4297877",
+      "public_sha256": "8b8fb31abde54fd39d448e933e3566de403bb6b831b700ad7ed83871e4297877",
+      "source_bytes": 13341,
+      "public_bytes": 13341,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/publisher-parity.py",
+      "public_path": "oculus/publisher-parity.py",
+      "source_sha256": "fb363f2ac0277b72880c94be0f143046669fd423a4b534d7839272c528a0235f",
+      "public_sha256": "fb363f2ac0277b72880c94be0f143046669fd423a4b534d7839272c528a0235f",
+      "source_bytes": 3396,
+      "public_bytes": 3396,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/publisher-parity.json",
+      "public_path": "oculus/publisher-parity.json",
+      "source_sha256": "11a49013d1f4c0e461cecd1e38827b82724276c6e579ce3bf694ac2f05bc3f13",
+      "public_sha256": "11a49013d1f4c0e461cecd1e38827b82724276c6e579ce3bf694ac2f05bc3f13",
+      "source_bytes": 952,
+      "public_bytes": 952,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/metadata-erratum.md",
+      "public_path": "oculus/metadata-erratum.md",
+      "source_sha256": "fd1d7b9c3a4244c936f7f5a822cbda93c17a8ed3ee07eabcd21b63b19bb1efcb",
+      "public_sha256": "fd1d7b9c3a4244c936f7f5a822cbda93c17a8ed3ee07eabcd21b63b19bb1efcb",
+      "source_bytes": 436,
+      "public_bytes": 436,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "oculus/LICENSE-2.0.txt",
+      "public_path": "oculus/LICENSE-2.0.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "public_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_bytes": 11358,
+      "public_bytes": 11358,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/runner.py",
+      "public_path": "greyscope/runner.py",
+      "source_sha256": "92123aba9eb2e38de2eaae7ed4282320ef376fdec8fd81003f97c5228e14a241",
+      "public_sha256": "92123aba9eb2e38de2eaae7ed4282320ef376fdec8fd81003f97c5228e14a241",
+      "source_bytes": 13532,
+      "public_bytes": 13532,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/test_runner.py",
+      "public_path": "greyscope/test_runner.py",
+      "source_sha256": "e39eb0b22033fb95e8ee97f6fc970caec9511cf046bf1270acb8799f12051867",
+      "public_sha256": "e39eb0b22033fb95e8ee97f6fc970caec9511cf046bf1270acb8799f12051867",
+      "source_bytes": 5448,
+      "public_bytes": 5448,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/manifest.json",
+      "public_path": "greyscope/manifest.json",
+      "source_sha256": "9187c9e964ab2b279d45c45dbc975194616fd3445a021952a8a9fa46f83441a2",
+      "public_sha256": "9187c9e964ab2b279d45c45dbc975194616fd3445a021952a8a9fa46f83441a2",
+      "source_bytes": 4750,
+      "public_bytes": 4750,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/results.json",
+      "public_path": "greyscope/results.json",
+      "source_sha256": "6e673a37c223b2109278155937cb4a20f91412041bc32cb026e7ea7358d8e45f",
+      "public_sha256": "81f89b5a8ea3189314ae52b4e6844c52157520054855b232d96376d77d8c688e",
+      "source_bytes": 105264,
+      "public_bytes": 100738,
+      "status": "sanitized",
+      "changes": [
+        {
+          "reason": "private path replaced with relative study reference or public source",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source_ref": "greyscope/runtime-validation.json",
+      "public_path": "greyscope/runtime-validation.json",
+      "source_sha256": "24a62caf63d28891dcae318a9465e991fcfea50ba93cbeaac08e76eed3c5ea24",
+      "public_sha256": "24a62caf63d28891dcae318a9465e991fcfea50ba93cbeaac08e76eed3c5ea24",
+      "source_bytes": 1494,
+      "public_bytes": 1494,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/human-controls.json",
+      "public_path": "review/human-controls.json",
+      "source_sha256": "389dde5e5966aa58d5e0a2c2e5dee3847cdc153203330016c093105c66e810eb",
+      "public_sha256": "90971fdaf1edf8ea8c2fe92ba8840fe11b67be670f0ae043d0b03004283624a3",
+      "source_bytes": 3877,
+      "public_bytes": 3753,
+      "status": "sanitized",
+      "changes": [
+        {
+          "reason": "private path replaced with relative study reference or public source",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source_ref": "review/human-control-01.txt",
+      "public_path": "review/human-control-01.txt",
+      "source_sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "public_sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "source_bytes": 861,
+      "public_bytes": 861,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/human-control-02.txt",
+      "public_path": "review/human-control-02.txt",
+      "source_sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "public_sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "source_bytes": 753,
+      "public_bytes": 753,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/control-selection-rule.md",
+      "public_path": "review/control-selection-rule.md",
+      "source_sha256": "1f571a7fa8cf5c89ae3d79ab2e88f6280ec7c8f7f31cf034bfabde5505a2c494",
+      "public_sha256": "1f571a7fa8cf5c89ae3d79ab2e88f6280ec7c8f7f31cf034bfabde5505a2c494",
+      "source_bytes": 1090,
+      "public_bytes": 1090,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/archive-review.md",
+      "public_path": "review/archive-review.md",
+      "source_sha256": "3be681b10ee148f291182d8a44d465f33e0575ae969d748a8c2600d792bdbf96",
+      "public_sha256": "3be681b10ee148f291182d8a44d465f33e0575ae969d748a8c2600d792bdbf96",
+      "source_bytes": 4252,
+      "public_bytes": 4252,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/archive-audit.json",
+      "public_path": "review/archive-audit.json",
+      "source_sha256": "9830f97c0bf91962347e80cc6a67482c56c3d4a637884e04326d2f9dbbee200a",
+      "public_sha256": "9830f97c0bf91962347e80cc6a67482c56c3d4a637884e04326d2f9dbbee200a",
+      "source_bytes": 28830,
+      "public_bytes": 28830,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/oculus-source-review.json",
+      "public_path": "review/oculus-source-review.json",
+      "source_sha256": "b3140cae90376ab0e038678603bba613003ea71a9ccec1a763302371e866f784",
+      "public_sha256": "b3140cae90376ab0e038678603bba613003ea71a9ccec1a763302371e866f784",
+      "source_bytes": 2444,
+      "public_bytes": 2444,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/oculus-runtime-review.json",
+      "public_path": "review/oculus-runtime-review.json",
+      "source_sha256": "6951c2d7582ec3f40ec3f7ee78bb71af96b9d8024c820f4bf5d3b665778bbd46",
+      "public_sha256": "6951c2d7582ec3f40ec3f7ee78bb71af96b9d8024c820f4bf5d3b665778bbd46",
+      "source_bytes": 5461,
+      "public_bytes": 5461,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/final-review.json",
+      "public_path": "review/final-review.json",
+      "source_sha256": "ac2a0e9ccb6f9d8512499c30d989cb0597706ec7d52acf21fafebfe7e095bfde",
+      "public_sha256": "ac2a0e9ccb6f9d8512499c30d989cb0597706ec7d52acf21fafebfe7e095bfde",
+      "source_bytes": 43343,
+      "public_bytes": 43343,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/final-review.md",
+      "public_path": "review/final-review.md",
+      "source_sha256": "0d60c01d68a967bd1d5a8599155f0e1d0db8ccc75fb5677c27dd995c15ef6833",
+      "public_sha256": "0d60c01d68a967bd1d5a8599155f0e1d0db8ccc75fb5677c27dd995c15ef6833",
+      "source_bytes": 3341,
+      "public_bytes": 3341,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/public-wording-review.json",
+      "public_path": "review/public-wording-review.json",
+      "source_sha256": "4268c430a5ec8520530c8f4e146d353229609f7f1b229265131d1f38ba78a70a",
+      "public_sha256": "4268c430a5ec8520530c8f4e146d353229609f7f1b229265131d1f38ba78a70a",
+      "source_bytes": 2905,
+      "public_bytes": 2905,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/public-wording-review.md",
+      "public_path": "review/public-wording-review.md",
+      "source_sha256": "76a0653a0f8f90cebceecc82518120f61ee12ce0b3568641ff21093fbe4c7919",
+      "public_sha256": "76a0653a0f8f90cebceecc82518120f61ee12ce0b3568641ff21093fbe4c7919",
+      "source_bytes": 1713,
+      "public_bytes": 1713,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "review/wording-resolution.json",
+      "public_path": "review/wording-resolution.json",
+      "source_sha256": "14e6a560b0ac81a60cc930ad46415781ebf451fd5cd3c39acb688b367fff64af",
+      "public_sha256": "72e8f462c9dd60ad7165f074e23fb39e6cf2d2e0dcee590bf3339ebf50bb6af6",
+      "source_bytes": 1376,
+      "public_bytes": 1435,
+      "status": "sanitized",
+      "changes": [
+        {
+          "reason": "private path replaced with relative study reference or public source",
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/tree/101ea152fb52b4b8a3fa7d767e0fa8a43c46da8b"
+        }
+      ]
+    },
+    {
+      "source_ref": "inputs/input-001.txt",
+      "public_path": "inputs/input-001.txt",
+      "source_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "public_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "source_bytes": 1238,
+      "public_bytes": 1238,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-002.txt",
+      "public_path": "inputs/input-002.txt",
+      "source_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "public_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "source_bytes": 1326,
+      "public_bytes": 1326,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-003.txt",
+      "public_path": "inputs/input-003.txt",
+      "source_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "public_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "source_bytes": 842,
+      "public_bytes": 842,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-004.txt",
+      "public_path": "inputs/input-004.txt",
+      "source_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "public_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "source_bytes": 765,
+      "public_bytes": 765,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-005.txt",
+      "public_path": "inputs/input-005.txt",
+      "source_sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "public_sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "source_bytes": 761,
+      "public_bytes": 761,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-006.txt",
+      "public_path": "inputs/input-006.txt",
+      "source_sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "public_sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "source_bytes": 812,
+      "public_bytes": 812,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-007.txt",
+      "public_path": "inputs/input-007.txt",
+      "source_sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "public_sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "source_bytes": 766,
+      "public_bytes": 766,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-008.txt",
+      "public_path": "inputs/input-008.txt",
+      "source_sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "public_sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "source_bytes": 768,
+      "public_bytes": 768,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-009.txt",
+      "public_path": "inputs/input-009.txt",
+      "source_sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "public_sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "source_bytes": 928,
+      "public_bytes": 928,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-010.txt",
+      "public_path": "inputs/input-010.txt",
+      "source_sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "public_sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "source_bytes": 940,
+      "public_bytes": 940,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-011.txt",
+      "public_path": "inputs/input-011.txt",
+      "source_sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "public_sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "source_bytes": 788,
+      "public_bytes": 788,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-012.txt",
+      "public_path": "inputs/input-012.txt",
+      "source_sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "public_sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "source_bytes": 936,
+      "public_bytes": 936,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-013.txt",
+      "public_path": "inputs/input-013.txt",
+      "source_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "public_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "source_bytes": 707,
+      "public_bytes": 707,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-014.txt",
+      "public_path": "inputs/input-014.txt",
+      "source_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "public_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "source_bytes": 713,
+      "public_bytes": 713,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-015.txt",
+      "public_path": "inputs/input-015.txt",
+      "source_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "public_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "source_bytes": 747,
+      "public_bytes": 747,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "inputs/input-016.txt",
+      "public_path": "inputs/input-016.txt",
+      "source_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "public_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "source_bytes": 736,
+      "public_bytes": 736,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.raw.txt",
+      "public_path": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.raw.txt",
+      "source_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "public_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "source_bytes": 1238,
+      "public_bytes": 1238,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.cleaned.txt",
+      "public_path": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.cleaned.txt",
+      "source_sha256": "a3ff08f66941aa5b7252d78f534f87c5825ae5aa04a2e20e4230a957c38b134f",
+      "public_sha256": "a3ff08f66941aa5b7252d78f534f87c5825ae5aa04a2e20e4230a957c38b134f",
+      "source_bytes": 1235,
+      "public_bytes": 1235,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.prompt.txt",
+      "public_path": "greyscope/prepared/7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1.prompt.txt",
+      "source_sha256": "5cad8ef6c97b2b1b75462c10c639d8e9fdebad31ec212409c933ce0a545ca4f5",
+      "public_sha256": "5cad8ef6c97b2b1b75462c10c639d8e9fdebad31ec212409c933ce0a545ca4f5",
+      "source_bytes": 1527,
+      "public_bytes": 1527,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.raw.txt",
+      "public_path": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.raw.txt",
+      "source_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "public_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "source_bytes": 1326,
+      "public_bytes": 1326,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.cleaned.txt",
+      "public_path": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.cleaned.txt",
+      "source_sha256": "7a4e1dc04ed2bf8d8694961dbc3ebc87270eef5609d3a4c690258dd7c2a5d276",
+      "public_sha256": "7a4e1dc04ed2bf8d8694961dbc3ebc87270eef5609d3a4c690258dd7c2a5d276",
+      "source_bytes": 1322,
+      "public_bytes": 1322,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.prompt.txt",
+      "public_path": "greyscope/prepared/7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f.prompt.txt",
+      "source_sha256": "e5609d81832334a08332c7413a70daa5cc6f62379f79d13d1472234312576304",
+      "public_sha256": "e5609d81832334a08332c7413a70daa5cc6f62379f79d13d1472234312576304",
+      "source_bytes": 1614,
+      "public_bytes": 1614,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.raw.txt",
+      "public_path": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.raw.txt",
+      "source_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "public_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "source_bytes": 842,
+      "public_bytes": 842,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.cleaned.txt",
+      "public_path": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.cleaned.txt",
+      "source_sha256": "3ccaac8bdd1c433baa2de64bcbebe7edf3c96b4b3ed828e9c6b05d5cdf226cbc",
+      "public_sha256": "3ccaac8bdd1c433baa2de64bcbebe7edf3c96b4b3ed828e9c6b05d5cdf226cbc",
+      "source_bytes": 837,
+      "public_bytes": 837,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.prompt.txt",
+      "public_path": "greyscope/prepared/08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31.prompt.txt",
+      "source_sha256": "d6e45a5ecceadc6f0a659f9bd041df737b2cac2f1416ce676082586dec942e12",
+      "public_sha256": "d6e45a5ecceadc6f0a659f9bd041df737b2cac2f1416ce676082586dec942e12",
+      "source_bytes": 1129,
+      "public_bytes": 1129,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.raw.txt",
+      "public_path": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.raw.txt",
+      "source_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "public_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "source_bytes": 765,
+      "public_bytes": 765,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.cleaned.txt",
+      "public_path": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.cleaned.txt",
+      "source_sha256": "42ba47f02c63e4e70699d05505c954f94fcf3e9283ff11193fe79938b1875e07",
+      "public_sha256": "42ba47f02c63e4e70699d05505c954f94fcf3e9283ff11193fe79938b1875e07",
+      "source_bytes": 760,
+      "public_bytes": 760,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.prompt.txt",
+      "public_path": "greyscope/prepared/e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10.prompt.txt",
+      "source_sha256": "80d79620c36486fac561a33dd549af394c9906fc40341dfb68b44d19a8543b78",
+      "public_sha256": "80d79620c36486fac561a33dd549af394c9906fc40341dfb68b44d19a8543b78",
+      "source_bytes": 1052,
+      "public_bytes": 1052,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.raw.txt",
+      "public_path": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.raw.txt",
+      "source_sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "public_sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "source_bytes": 761,
+      "public_bytes": 761,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.cleaned.txt",
+      "public_path": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.cleaned.txt",
+      "source_sha256": "0701102f4e999acad135f06262d0e6613a8004a0966e6f1491f8fd6023278dc3",
+      "public_sha256": "0701102f4e999acad135f06262d0e6613a8004a0966e6f1491f8fd6023278dc3",
+      "source_bytes": 757,
+      "public_bytes": 757,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.prompt.txt",
+      "public_path": "greyscope/prepared/8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8.prompt.txt",
+      "source_sha256": "236d4011de0be79952d8797b3e514de9354f56cf94feec3ca3cecc4791f7d6c7",
+      "public_sha256": "236d4011de0be79952d8797b3e514de9354f56cf94feec3ca3cecc4791f7d6c7",
+      "source_bytes": 1049,
+      "public_bytes": 1049,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.raw.txt",
+      "public_path": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.raw.txt",
+      "source_sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "public_sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "source_bytes": 812,
+      "public_bytes": 812,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.cleaned.txt",
+      "public_path": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.cleaned.txt",
+      "source_sha256": "c28d39a7e2696008a8e217a459385812825722518a494ed05eb33ac1c601bcd8",
+      "public_sha256": "c28d39a7e2696008a8e217a459385812825722518a494ed05eb33ac1c601bcd8",
+      "source_bytes": 806,
+      "public_bytes": 806,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.prompt.txt",
+      "public_path": "greyscope/prepared/39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212.prompt.txt",
+      "source_sha256": "beecbc2168dd54d9decfa2edba229abc9255f53628441faa1d847d3696df9b1d",
+      "public_sha256": "beecbc2168dd54d9decfa2edba229abc9255f53628441faa1d847d3696df9b1d",
+      "source_bytes": 1098,
+      "public_bytes": 1098,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.raw.txt",
+      "public_path": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.raw.txt",
+      "source_sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "public_sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "source_bytes": 766,
+      "public_bytes": 766,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.cleaned.txt",
+      "public_path": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.cleaned.txt",
+      "source_sha256": "0f79c964b1f549655465e1222cd6b5fc09592170f141615f484361c777d5e26c",
+      "public_sha256": "0f79c964b1f549655465e1222cd6b5fc09592170f141615f484361c777d5e26c",
+      "source_bytes": 762,
+      "public_bytes": 762,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.prompt.txt",
+      "public_path": "greyscope/prepared/c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047.prompt.txt",
+      "source_sha256": "1bf26c3f3bb91393077646b1eeee1a90f90b1d3d9ba392da8fa7c9fbae7aefbf",
+      "public_sha256": "1bf26c3f3bb91393077646b1eeee1a90f90b1d3d9ba392da8fa7c9fbae7aefbf",
+      "source_bytes": 1054,
+      "public_bytes": 1054,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.raw.txt",
+      "public_path": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.raw.txt",
+      "source_sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "public_sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "source_bytes": 768,
+      "public_bytes": 768,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.cleaned.txt",
+      "public_path": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.cleaned.txt",
+      "source_sha256": "0a16f2716d1897fb867d553453487884dcc2f213b4739ff6810c3457d5a62998",
+      "public_sha256": "0a16f2716d1897fb867d553453487884dcc2f213b4739ff6810c3457d5a62998",
+      "source_bytes": 763,
+      "public_bytes": 763,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.prompt.txt",
+      "public_path": "greyscope/prepared/de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104.prompt.txt",
+      "source_sha256": "90b44cfa9bc7ace4ffc270af474e30086c340dc897df5575f9d618053fabe5a8",
+      "public_sha256": "90b44cfa9bc7ace4ffc270af474e30086c340dc897df5575f9d618053fabe5a8",
+      "source_bytes": 1055,
+      "public_bytes": 1055,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.raw.txt",
+      "public_path": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.raw.txt",
+      "source_sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "public_sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "source_bytes": 928,
+      "public_bytes": 928,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.cleaned.txt",
+      "public_path": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.cleaned.txt",
+      "source_sha256": "710a4838c198ac09859226362503515627b7068e5ab5c53fa0f420516ddf7255",
+      "public_sha256": "710a4838c198ac09859226362503515627b7068e5ab5c53fa0f420516ddf7255",
+      "source_bytes": 923,
+      "public_bytes": 923,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.prompt.txt",
+      "public_path": "greyscope/prepared/76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe.prompt.txt",
+      "source_sha256": "1ffd08b636155cc2ad6017ce29eb044be6eb0f6fd16c57e1868735106825bccf",
+      "public_sha256": "1ffd08b636155cc2ad6017ce29eb044be6eb0f6fd16c57e1868735106825bccf",
+      "source_bytes": 1215,
+      "public_bytes": 1215,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.raw.txt",
+      "public_path": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.raw.txt",
+      "source_sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "public_sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "source_bytes": 940,
+      "public_bytes": 940,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.cleaned.txt",
+      "public_path": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.cleaned.txt",
+      "source_sha256": "f51f3be78c3a36b7da4e01e5e4d99c3ee4f16de8d4086789373629e338e43473",
+      "public_sha256": "f51f3be78c3a36b7da4e01e5e4d99c3ee4f16de8d4086789373629e338e43473",
+      "source_bytes": 934,
+      "public_bytes": 934,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.prompt.txt",
+      "public_path": "greyscope/prepared/fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4.prompt.txt",
+      "source_sha256": "f2888033ef5c33fcf50df7f2aa38a9bfb5b7f0b407246e717e61efe382313e5b",
+      "public_sha256": "f2888033ef5c33fcf50df7f2aa38a9bfb5b7f0b407246e717e61efe382313e5b",
+      "source_bytes": 1226,
+      "public_bytes": 1226,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.raw.txt",
+      "public_path": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.raw.txt",
+      "source_sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "public_sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "source_bytes": 788,
+      "public_bytes": 788,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.cleaned.txt",
+      "public_path": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.cleaned.txt",
+      "source_sha256": "87f74d1549e8c8403f488626f5c6114a4c1436f32bff21514f04e03d66edfb1d",
+      "public_sha256": "87f74d1549e8c8403f488626f5c6114a4c1436f32bff21514f04e03d66edfb1d",
+      "source_bytes": 782,
+      "public_bytes": 782,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.prompt.txt",
+      "public_path": "greyscope/prepared/dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad.prompt.txt",
+      "source_sha256": "92ccfae4444c09f1ff0ff0fd1b24ba64170bb0aeb23f3cbc631969537295f04a",
+      "public_sha256": "92ccfae4444c09f1ff0ff0fd1b24ba64170bb0aeb23f3cbc631969537295f04a",
+      "source_bytes": 1074,
+      "public_bytes": 1074,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.raw.txt",
+      "public_path": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.raw.txt",
+      "source_sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "public_sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "source_bytes": 936,
+      "public_bytes": 936,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.cleaned.txt",
+      "public_path": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.cleaned.txt",
+      "source_sha256": "6c9d29eeb2ab6a90c89c4bd19e6489749b08a8b8e043e6dda246bd5b6138765e",
+      "public_sha256": "6c9d29eeb2ab6a90c89c4bd19e6489749b08a8b8e043e6dda246bd5b6138765e",
+      "source_bytes": 930,
+      "public_bytes": 930,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.prompt.txt",
+      "public_path": "greyscope/prepared/8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a.prompt.txt",
+      "source_sha256": "e7bdcf97ef320adee1e4bd6f4119e3a7245788cd88993e2e45b010ea64407573",
+      "public_sha256": "e7bdcf97ef320adee1e4bd6f4119e3a7245788cd88993e2e45b010ea64407573",
+      "source_bytes": 1222,
+      "public_bytes": 1222,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.raw.txt",
+      "public_path": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.raw.txt",
+      "source_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "public_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "source_bytes": 707,
+      "public_bytes": 707,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.cleaned.txt",
+      "public_path": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.cleaned.txt",
+      "source_sha256": "76eb5d44f70bf4f35f77914d2ec8024233a6a90e96879c27e1d3606f5681355d",
+      "public_sha256": "76eb5d44f70bf4f35f77914d2ec8024233a6a90e96879c27e1d3606f5681355d",
+      "source_bytes": 703,
+      "public_bytes": 703,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.prompt.txt",
+      "public_path": "greyscope/prepared/3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c.prompt.txt",
+      "source_sha256": "5cf0760d82c811ff77a5c5493ceffdc00b43a81d1a1292bacf114c94f2ebf5c6",
+      "public_sha256": "5cf0760d82c811ff77a5c5493ceffdc00b43a81d1a1292bacf114c94f2ebf5c6",
+      "source_bytes": 995,
+      "public_bytes": 995,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.raw.txt",
+      "public_path": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.raw.txt",
+      "source_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "public_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "source_bytes": 713,
+      "public_bytes": 713,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.cleaned.txt",
+      "public_path": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.cleaned.txt",
+      "source_sha256": "275da83e21f79d8d6fa2abc4ebb94ed6fe15e0bb1cf8ae9d404ee73977765edf",
+      "public_sha256": "275da83e21f79d8d6fa2abc4ebb94ed6fe15e0bb1cf8ae9d404ee73977765edf",
+      "source_bytes": 708,
+      "public_bytes": 708,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.prompt.txt",
+      "public_path": "greyscope/prepared/53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20.prompt.txt",
+      "source_sha256": "4046d7f4c0478f2e416f76a7a116b5e0bf2c4bbede7e461cc5add07a906cdefb",
+      "public_sha256": "4046d7f4c0478f2e416f76a7a116b5e0bf2c4bbede7e461cc5add07a906cdefb",
+      "source_bytes": 1000,
+      "public_bytes": 1000,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.raw.txt",
+      "public_path": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.raw.txt",
+      "source_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "public_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "source_bytes": 747,
+      "public_bytes": 747,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.cleaned.txt",
+      "public_path": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.cleaned.txt",
+      "source_sha256": "88a2d258afd26b255ea544834c948e6a56315f8057858b8aa12934a257ee3d02",
+      "public_sha256": "88a2d258afd26b255ea544834c948e6a56315f8057858b8aa12934a257ee3d02",
+      "source_bytes": 743,
+      "public_bytes": 743,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.prompt.txt",
+      "public_path": "greyscope/prepared/8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2.prompt.txt",
+      "source_sha256": "cdbea7827e037d57451089b0bedabc5dfbc19cedbbe89cd9c594c5a9443e9656",
+      "public_sha256": "cdbea7827e037d57451089b0bedabc5dfbc19cedbbe89cd9c594c5a9443e9656",
+      "source_bytes": 1035,
+      "public_bytes": 1035,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.raw.txt",
+      "public_path": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.raw.txt",
+      "source_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "public_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "source_bytes": 736,
+      "public_bytes": 736,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.cleaned.txt",
+      "public_path": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.cleaned.txt",
+      "source_sha256": "e4bc0eedf65bdd56b79cd22e66736762d135e0d35b56339a21c9fddcf92ef90f",
+      "public_sha256": "e4bc0eedf65bdd56b79cd22e66736762d135e0d35b56339a21c9fddcf92ef90f",
+      "source_bytes": 731,
+      "public_bytes": 731,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.prompt.txt",
+      "public_path": "greyscope/prepared/f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3.prompt.txt",
+      "source_sha256": "23a17f1f6cd25f9ec41c87c521007de78062bf5f7929d9b70202e58f10085861",
+      "public_sha256": "23a17f1f6cd25f9ec41c87c521007de78062bf5f7929d9b70202e58f10085861",
+      "source_bytes": 1023,
+      "public_bytes": 1023,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.raw.txt",
+      "public_path": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.raw.txt",
+      "source_sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "public_sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "source_bytes": 861,
+      "public_bytes": 861,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.cleaned.txt",
+      "public_path": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.cleaned.txt",
+      "source_sha256": "4d46baa5eaf496f2b3d1f06ff4141dc497f8b41ec0a14be0e9cf3daa7b56d17b",
+      "public_sha256": "4d46baa5eaf496f2b3d1f06ff4141dc497f8b41ec0a14be0e9cf3daa7b56d17b",
+      "source_bytes": 849,
+      "public_bytes": 849,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.prompt.txt",
+      "public_path": "greyscope/prepared/9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9.prompt.txt",
+      "source_sha256": "2cbc49f3cecef599dc9ce46514ba808576b519d86734d11fd2d4669212eb70e0",
+      "public_sha256": "2cbc49f3cecef599dc9ce46514ba808576b519d86734d11fd2d4669212eb70e0",
+      "source_bytes": 1141,
+      "public_bytes": 1141,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.raw.txt",
+      "public_path": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.raw.txt",
+      "source_sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "public_sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "source_bytes": 753,
+      "public_bytes": 753,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.cleaned.txt",
+      "public_path": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.cleaned.txt",
+      "source_sha256": "a5e881b012eebea8bfec96ed13a7e885ee3ad9a2de62de3e04f387af087ae721",
+      "public_sha256": "a5e881b012eebea8bfec96ed13a7e885ee3ad9a2de62de3e04f387af087ae721",
+      "source_bytes": 743,
+      "public_bytes": 743,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.prompt.txt",
+      "public_path": "greyscope/prepared/be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142.prompt.txt",
+      "source_sha256": "28151395de895eb608f786b9777249b95e095ae1d013062bc53144eedd140932",
+      "public_sha256": "28151395de895eb608f786b9777249b95e095ae1d013062bc53144eedd140932",
+      "source_bytes": 1035,
+      "public_bytes": 1035,
+      "status": "exact",
+      "changes": []
+    },
+    {
+      "source_ref": null,
+      "public_path": "README.md",
+      "source_sha256": null,
+      "public_sha256": "86519060759ebed75b813fe9ebc12d1da51c1ef7ac887cda1a7146aae68d9e87",
+      "public_bytes": 9896,
+      "status": "derived",
+      "changes": []
+    },
+    {
+      "source_ref": null,
+      "public_path": "check_export.py",
+      "source_sha256": null,
+      "public_sha256": "41351aff43d5a2d8a6e4e8019be3a9c5504b13910f9173b14c5093280fb9234c",
+      "public_bytes": 2090,
+      "status": "derived",
+      "changes": []
+    },
+    {
+      "source_ref": null,
+      "public_path": "validation.json",
+      "source_sha256": null,
+      "public_sha256": "d0e64f5e4e373fffb6a31fc1829575be0e58bfdc3937ae3aa875dc115b8b0561",
+      "public_bytes": 1443,
+      "status": "derived",
+      "changes": []
+    }
+  ]
+}

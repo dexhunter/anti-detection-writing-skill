@@ -12,6 +12,8 @@ Default to one on-demand bounded round unless the user requests recurring execut
 
 For local detector diagnostics, use the separate [local detector CLI](local-detector.md). It can exercise a pinned open model without commercial scan credits, but its output is not a browser receipt and cannot satisfy this controller's GPTZero conditions. The initial Desklib diagnostic disagreed with known Pangram classifications; do not assume that optimizing its score improves the commercial endpoint.
 
+Before adopting another local detector for candidate selection, freeze comparable archived successes and unchanged cases before reading its scores, then count both recognized reductions and misleading decreases on unchanged commercial outcomes. Keep source inputs and native preprocessing separate, and reject full inputs that exceed the supported token limit. The [Oculus/Greyscope diagnostic](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/open-detector-proxy-1) found Greyscope more promising on a narrow dependent sample, but it also rewarded a technical revision whose GPTZero score stayed at 100%. Such counterexamples remain development evidence. Require a prospective comparison before introducing an automatic local-score selector; historical agreement does not establish transfer, writing quality or a new GPTZero improvement.
+
 From the skill directory, initialize a private run:
 
 ```sh

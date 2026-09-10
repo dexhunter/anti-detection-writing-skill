@@ -1,0 +1,47 @@
+{
+  "status": "SOURCE_REVIEW_PASS_WITH_PENDING_RUNTIME_PARITY",
+  "reviewed_at_utc": "2026-09-10T10:04:50.140366+00:00",
+  "local_model_outputs_seen": false,
+  "review_type": "source-level independent audit with prior survey context; no execution by reviewer",
+  "artifacts": [
+    {
+      "path": "protocol.md",
+      "sha256": "66937d554e280b7cfd7d255dcca3164c6b3804888442e528281b98043f7a913d"
+    },
+    {
+      "path": "inference-manifest.json",
+      "sha256": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57"
+    },
+    {
+      "path": "oculus/runner.py",
+      "sha256": "abdcaf669298f6ed1dd682b5830b087649fd7771584beb2ea0771faf5d1069ad"
+    },
+    {
+      "path": "oculus/model-manifest.json",
+      "sha256": "e6dcf3354693d8e27d133ed5c51e7c6ba32f0a3d1814ac6aba2f7e28ddc86310"
+    },
+    {
+      "path": "oculus/model/README.md",
+      "sha256": "2d07768f88e600a515e46eba70bbb595f65ff8accee1ea629b82648c33cf61a7"
+    },
+    {
+      "path": "oculus/model/config.json",
+      "sha256": "1b388f52ef289ce1338fcba26cc1d2b4c9465214b65b6f0c6e8b3d64a915aea5"
+    }
+  ],
+  "verified_semantics": [
+    "Original UTF-8 decoded from verified raw bytes; no stripping or normalization before tokenization.",
+    "Tokens include special tokens, no truncation, over-512 inputs become retained failed records.",
+    "Fixed 512-token padding and attention-mask-weighted mean match publisher usage for all eligible inputs.",
+    "Single linear classifier, pooled dtype cast and sigmoid direction match pinned publisher README.",
+    "State dictionary loaded strictly; float32 eval/inference mode; package versions recorded.",
+    "Manifest locks exact model revision and every loader file; output includes script and input-manifest SHA.",
+    "Input manifest preserves all 16 corpus entries and exactly two separately frozen controls.",
+    "Protocol freezes 0.01 local reduction and 5 percentage-point historical reduction, plus zero-threshold sensitivity and failures in denominators."
+  ],
+  "qualifications": [
+    "Run publisher-tokenization and forward-entrypoint parity before interpreting final values. Reviewer has not run the model or seen outputs.",
+    "Raw README has valid prob:.4f formatting. Earlier web-extracted space was a rendering artifact; missing-v repository identifier remains an actual card error.",
+    "Historical controls are familiar out-of-domain texts; no accuracy/generalization estimate follows."
+  ]
+}

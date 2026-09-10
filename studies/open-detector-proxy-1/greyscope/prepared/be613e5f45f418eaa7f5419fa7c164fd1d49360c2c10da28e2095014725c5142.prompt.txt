@@ -1,0 +1,13 @@
+You are an expert AI-text detector. Classify the passage below.
+0 = no AI involvement (entirely human-written)
+1 = lightly AI-edited
+2 = moderately AI-edited
+3 = heavily AI-edited or fully AI-generated
+Respond with a single digit (0, 1, 2, or 3) and nothing else.
+
+Passage:
+"""
+there was nothing so _very_ remarkable in that; nor did alice think it so _very_ much out of the way to hear the rabbit say to itself, “oh dear! oh dear! i shall be late!” (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the rabbit actually _took a watch out of its waistcoat-pocket_, and looked at it, and then hurried on, alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.
+"""
+
+Answer: 

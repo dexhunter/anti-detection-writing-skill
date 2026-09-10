@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-09-10T10:14:58.294905+00:00",
+  "final_readme_path": "https://github.com/dexhunter/anti-detection-writing-skill/tree/101ea152fb52b4b8a3fa7d767e0fa8a43c46da8b/studies/open-detector-proxy-1/README.md",
+  "final_readme_sha256": "86519060759ebed75b813fe9ebc12d1da51c1ef7ac887cda1a7146aae68d9e87",
+  "original_review_sha256": "4268c430a5ec8520530c8f4e146d353229609f7f1b229265131d1f38ba78a70a",
+  "original_reviewed_readme_sha256": "86519060759ebed75b813fe9ebc12d1da51c1ef7ac887cda1a7146aae68d9e87",
+  "correction_resolved": true,
+  "no_other_substantive_changes": true,
+  "byte_comparison": "Final README is byte-identical to the README hash saved with the original conditional review.",
+  "review_timing_note": "The original conditional review artifact hash was captured after the root had already applied the correction; its prose condition was therefore already resolved at that hashed snapshot. This check confirms the approved sentence directly and preserves the original review unchanged.",
+  "initial_check_note": "An initial reverse-substitution test failed because it assumed the original recorded hash preceded the edit. Direct hash comparison showed the recorded snapshot already contained the correction; no file changed during resolution.",
+  "original_conditional_review_unchanged": true,
+  "scope": "Exact wording-resolution check only; no runtime, metrics or tests rerun."
+}

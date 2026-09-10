@@ -1,0 +1,38 @@
+{
+  "input_count": 18,
+  "count_ok": 18,
+  "count_error": 0,
+  "count_unavailable": 0,
+  "model_load_seconds": 1.79487070790492,
+  "prepare_seconds": 0.053833333076909184,
+  "total_seconds": 21.539086292032152,
+  "peak_mlx_memory_bytes": 3055759208,
+  "peak_process_rss_bytes": 2043379712,
+  "author_entrypoint_parity": {
+    "id": "input-001",
+    "native_outputs_equal": true,
+    "all_token_ids_equal": true,
+    "raw_logits_equal": true,
+    "runtime_seconds": 1.3948874999769032
+  },
+  "corpus_sha256": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57",
+  "manifest_sha256": "9187c9e964ab2b279d45c45dbc975194616fd3445a021952a8a9fa46f83441a2",
+  "model_weights_sha256": "2573ee84f7db2c889cd8c94a542cbe4fc63ab7e4d70d26efb2aa48fb045b8b36",
+  "artifact_manifest_sha256": "3fbc4ccade90e3e7705a9294d1b17e1a0a5ec3a7a9abb341dc9ea770013bf909",
+  "inference_forward_seconds": 18.221482418244705,
+  "full_prompt_token_range": [
+    235,
+    409
+  ],
+  "meaningful_removed_content_count": 0,
+  "results_sha256": "6e673a37c223b2109278155937cb4a20f91412041bc32cb026e7ea7358d8e45f",
+  "validations": [
+    "18 IDs and hashes retained",
+    "18 finite three-logit outputs",
+    "4 full-precision bucket probabilities sum to one",
+    "native rounded author AI involvement matches full precision",
+    "all full prompt token counts equal submitted counts",
+    "all raw cleaned and prompt file hashes rechecked",
+    "author entrypoint tokens logits and native result parity passed"
+  ]
+}

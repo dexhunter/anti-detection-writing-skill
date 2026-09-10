@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "frozen_at": "2026-09-10T10:03:15.671333+00:00",
+  "local_outputs_seen": false,
+  "records": [
+    {
+      "id": "input-001",
+      "path": "inputs/input-001.txt",
+      "sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 1238,
+      "characters": 1238,
+      "whitespace_words": 156,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-002",
+      "path": "inputs/input-002.txt",
+      "sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 1326,
+      "characters": 1326,
+      "whitespace_words": 172,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-003",
+      "path": "inputs/input-003.txt",
+      "sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 842,
+      "characters": 842,
+      "whitespace_words": 129,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-004",
+      "path": "inputs/input-004.txt",
+      "sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 765,
+      "characters": 765,
+      "whitespace_words": 119,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-005",
+      "path": "inputs/input-005.txt",
+      "sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 761,
+      "characters": 761,
+      "whitespace_words": 124,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-006",
+      "path": "inputs/input-006.txt",
+      "sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 812,
+      "characters": 812,
+      "whitespace_words": 128,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-007",
+      "path": "inputs/input-007.txt",
+      "sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 766,
+      "characters": 766,
+      "whitespace_words": 124,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-008",
+      "path": "inputs/input-008.txt",
+      "sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 768,
+      "characters": 768,
+      "whitespace_words": 123,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-009",
+      "path": "inputs/input-009.txt",
+      "sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 928,
+      "characters": 928,
+      "whitespace_words": 147,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-010",
+      "path": "inputs/input-010.txt",
+      "sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 940,
+      "characters": 940,
+      "whitespace_words": 150,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-011",
+      "path": "inputs/input-011.txt",
+      "sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 788,
+      "characters": 786,
+      "whitespace_words": 124,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-012",
+      "path": "inputs/input-012.txt",
+      "sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 936,
+      "characters": 936,
+      "whitespace_words": 148,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-013",
+      "path": "inputs/input-013.txt",
+      "sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 707,
+      "characters": 707,
+      "whitespace_words": 113,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-014",
+      "path": "inputs/input-014.txt",
+      "sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 713,
+      "characters": 713,
+      "whitespace_words": 114,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-015",
+      "path": "inputs/input-015.txt",
+      "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 747,
+      "characters": 747,
+      "whitespace_words": 123,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "input-016",
+      "path": "inputs/input-016.txt",
+      "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "origin": "AI-origin",
+      "origin_qualification": "AI-written explanatory body; quoted arm may also contain attributed asker prose",
+      "bytes": 736,
+      "characters": 736,
+      "whitespace_words": 119,
+      "token_count_status": "not_counted"
+    },
+    {
+      "id": "human-control-01",
+      "path": "review/human-control-01.txt",
+      "sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "origin": "historical_human",
+      "author": "Charles Darwin",
+      "year": 1859
+    },
+    {
+      "id": "human-control-02",
+      "path": "review/human-control-02.txt",
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "origin": "historical_human",
+      "author": "Lewis Carroll",
+      "year": 1865
+    }
+  ]
+}

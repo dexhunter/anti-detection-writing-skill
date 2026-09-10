@@ -1,0 +1,1875 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-09-10T10:10:03.098941+00:00",
+  "review_type": "Independent artifact, publisher-parity, complete-token replay and arithmetic review; prior survey/research context disclosed; no new model inference by reviewer",
+  "checks": [
+    {
+      "check": "greyscope_manifest",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact_manifest",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/inference.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/corn.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/preprocess.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/mlx_inference.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/greyscope/mlx_model.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/uv.lock",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:author-source/pyproject.toml",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:runner.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/.gitattributes",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/README.md",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/calibration.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/config.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/greyscope_mlx_export.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/mlx_model.py",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/model.safetensors",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/model.safetensors.index.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/tokenizer.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_artifact:model/tokenizer_config.json",
+      "passed": true
+    },
+    {
+      "check": "greyscope_calibration",
+      "passed": true
+    },
+    {
+      "check": "greyscope_input_manifest",
+      "passed": true
+    },
+    {
+      "check": "greyscope_all_records",
+      "passed": true
+    },
+    {
+      "check": "greyscope_total_status",
+      "passed": true
+    },
+    {
+      "check": "greyscope_publisher_entrypoint_parity",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-001",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-001",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-001",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-002",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-002",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-002",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-003",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-003",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-003",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-004",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-004",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-004",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-005",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-005",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-005",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-006",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-006",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-006",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-007",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-007",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-007",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-008",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-008",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-008",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-009",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-009",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-009",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-010",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-010",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-010",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-011",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-011",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-011",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-012",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-012",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-012",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-013",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-013",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-013",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-014",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-014",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-014",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-015",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-015",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-015",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:input-016",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:input-016",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:input-016",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "oculus:original:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "oculus:token_replay:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "oculus:probability:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-001:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-001:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-001:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-001:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-001",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-002:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-002:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-002:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-002:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-002",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-003:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-003:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-003:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-003:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-003",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-004:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-004:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-004:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-004:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-004",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-005:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-005:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-005:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-005:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-005",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-006:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-006:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-006:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-006:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-006",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-007:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-007:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-007:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-007:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-007",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-008:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-008:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-008:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-008:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-008",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-009:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-009:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-009:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-009:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-009",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-010:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-010:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-010:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-010:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-010",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-011:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-011:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-011:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-011:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-011",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-012:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-012:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-012:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-012:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-012",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-013:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-013:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-013:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-013:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-013",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-014:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-014:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-014:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-014:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-014",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-015:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-015:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-015:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-015:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-015",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-016:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-016:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-016:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:input-016:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:input-016",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-01:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-01:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-01:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-01:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "greyscope:original:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_raw:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_cleaned:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:saved_prompt:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:raw_copy:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:no_content_removed:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:clean_coverage:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:full_prompt:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-02:raw_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-02:cleaned_text",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-02:raw_text_with_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_count:human-control-02:full_model_prompt",
+      "passed": true
+    },
+    {
+      "check": "greyscope:token_replay:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:corn_cumulative:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:bucket_probabilities:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:scalar_score:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "greyscope:native_labels:human-control-02",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-001",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-002",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:control-tech",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:control-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r01-technical",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r01-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r10-technical",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r10-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r20-technical",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:r20-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:verify-baseline-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:verify-candidate-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:drift-mid-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:drift-end-business",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:drift-mid-technical",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:drift-end-technical",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-017",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-018",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-019",
+      "passed": true
+    },
+    {
+      "check": "repeat_metric_consistency:obs-020",
+      "passed": true
+    },
+    {
+      "check": "frozen_analysis_thresholds",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-01",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-01",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-01",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-02",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-02",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-02",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-03",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-03",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-03",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-04",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-04",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-04",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-05",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-05",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-05",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-06",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-06",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-06",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-07",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-07",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-07",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-08",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-08",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-08",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-09",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-09",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-09",
+      "passed": true
+    },
+    {
+      "check": "analysis_gptzero:pair-10",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:oculus:pair-10",
+      "passed": true
+    },
+    {
+      "check": "analysis_pair:greyscope:pair-10",
+      "passed": true
+    },
+    {
+      "check": "analysis_summary:oculus",
+      "passed": true
+    },
+    {
+      "check": "analysis_summary:greyscope",
+      "passed": true
+    },
+    {
+      "check": "analysis_source:inference-manifest.json",
+      "passed": true
+    },
+    {
+      "check": "analysis_source:targets.json",
+      "passed": true
+    },
+    {
+      "check": "analysis_source:protocol.md",
+      "passed": true
+    },
+    {
+      "check": "analysis_source:oculus/results.json",
+      "passed": true
+    },
+    {
+      "check": "analysis_source:greyscope/results.json",
+      "passed": true
+    },
+    {
+      "check": "human_control_arithmetic:human-control-01",
+      "passed": true
+    },
+    {
+      "check": "human_control_arithmetic:human-control-02",
+      "passed": true
+    }
+  ],
+  "check_count": 446,
+  "summaries": {
+    "oculus": {
+      "recognized_reductions": 2,
+      "misleading_reductions_on_ties": 4,
+      "recognized_reductions_any_drop": 3,
+      "misleading_reductions_on_ties_any_drop": 4
+    },
+    "greyscope": {
+      "recognized_reductions": 3,
+      "misleading_reductions_on_ties": 2,
+      "recognized_reductions_any_drop": 3,
+      "misleading_reductions_on_ties_any_drop": 3
+    }
+  },
+  "artifacts": [
+    {
+      "path": "protocol.md",
+      "sha256": "66937d554e280b7cfd7d255dcca3164c6b3804888442e528281b98043f7a913d"
+    },
+    {
+      "path": "inference-manifest.json",
+      "sha256": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57"
+    },
+    {
+      "path": "targets.json",
+      "sha256": "dd0c8f9b22c81c1a224a3be83edeb3b36e72b288c9d387be1a1495f20cdd9015"
+    },
+    {
+      "path": "analysis.json",
+      "sha256": "470db175b6e05bb50ef5ef14f2bdefbb8c6b18519db7779358ebb3545842e179"
+    },
+    {
+      "path": "analyze.py",
+      "sha256": "6b73a0a1fb31425fbfd5fe3960991d77bef3357ffdfdb1c747c93fd51a5f2999"
+    },
+    {
+      "path": "oculus/results.json",
+      "sha256": "8b8fb31abde54fd39d448e933e3566de403bb6b831b700ad7ed83871e4297877"
+    },
+    {
+      "path": "oculus/publisher-parity.py",
+      "sha256": "fb363f2ac0277b72880c94be0f143046669fd423a4b534d7839272c528a0235f"
+    },
+    {
+      "path": "oculus/publisher-parity.json",
+      "sha256": "11a49013d1f4c0e461cecd1e38827b82724276c6e579ce3bf694ac2f05bc3f13"
+    },
+    {
+      "path": "oculus/metadata-erratum.md",
+      "sha256": "fd1d7b9c3a4244c936f7f5a822cbda93c17a8ed3ee07eabcd21b63b19bb1efcb"
+    },
+    {
+      "path": "greyscope/results.json",
+      "sha256": "6e673a37c223b2109278155937cb4a20f91412041bc32cb026e7ea7358d8e45f"
+    },
+    {
+      "path": "greyscope/runner.py",
+      "sha256": "92123aba9eb2e38de2eaae7ed4282320ef376fdec8fd81003f97c5228e14a241"
+    },
+    {
+      "path": "greyscope/test_runner.py",
+      "sha256": "e39eb0b22033fb95e8ee97f6fc970caec9511cf046bf1270acb8799f12051867"
+    },
+    {
+      "path": "greyscope/manifest.json",
+      "sha256": "9187c9e964ab2b279d45c45dbc975194616fd3445a021952a8a9fa46f83441a2"
+    }
+  ],
+  "conclusion": "Greyscope is the more promising diagnostic on these selected dependent observations; neither is an adopted selector or a substitute for GPTZero. No writing-skill or new GPTZero improvement is established.",
+  "qualifications": [
+    "Two business reductions reuse the same topic; quotation reduction is content addition; seven historical ties provide essential negative outcomes.",
+    "Greyscope falsely suggests an improvement on r20 technical: 0.4751939652 to 0.2845640155 while GPTZero remains 100 to 100.",
+    "Both historical human controls are familiar out-of-domain sanity checks, not a human false-positive benchmark.",
+    "Oculus parity compares publisher CPU versus measured MPS on one input; Greyscope parity compares author entrypoint with shared loaded model on one input. Neither validates every forward pass independently.",
+    "Analyzer historical_reduction_pairs/tie_pairs are counted among available pairs. All actual pairs are available, so current denominators are correct; a future failed run must retain full historical denominators or distinguish available-only counts.",
+    "Crossover displayed word counts retain the earlier public-source qualification; source association hashes and detector confidences were verified."
+  ],
+  "review_markdown_sha256": "0d60c01d68a967bd1d5a8599155f0e1d0db8ccc75fb5677c27dd995c15ef6833",
+  "saved_greyscope_tests": {
+    "count": 6,
+    "status": "passed",
+    "log_sha256": "f8ca14b02679bb2bba3e61e9f0caa3192db232d9244d323e5864c2f5f81b3ef6"
+  }
+}

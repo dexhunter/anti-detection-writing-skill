@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-09-10T10:07:19.669491+00:00",
+  "review_scope": "Saved runtime and independent arithmetic review; reviewer did not execute model",
+  "checks": [
+    {
+      "check": "input_manifest",
+      "passed": true
+    },
+    {
+      "check": "script_hash",
+      "passed": true
+    },
+    {
+      "check": "model_manifest",
+      "passed": true
+    },
+    {
+      "check": "18_unique_inputs",
+      "passed": true
+    },
+    {
+      "check": "freeze_before_run",
+      "passed": true
+    },
+    {
+      "check": "input-001:record",
+      "passed": true
+    },
+    {
+      "check": "input-002:record",
+      "passed": true
+    },
+    {
+      "check": "input-003:record",
+      "passed": true
+    },
+    {
+      "check": "input-004:record",
+      "passed": true
+    },
+    {
+      "check": "input-005:record",
+      "passed": true
+    },
+    {
+      "check": "input-006:record",
+      "passed": true
+    },
+    {
+      "check": "input-007:record",
+      "passed": true
+    },
+    {
+      "check": "input-008:record",
+      "passed": true
+    },
+    {
+      "check": "input-009:record",
+      "passed": true
+    },
+    {
+      "check": "input-010:record",
+      "passed": true
+    },
+    {
+      "check": "input-011:record",
+      "passed": true
+    },
+    {
+      "check": "input-012:record",
+      "passed": true
+    },
+    {
+      "check": "input-013:record",
+      "passed": true
+    },
+    {
+      "check": "input-014:record",
+      "passed": true
+    },
+    {
+      "check": "input-015:record",
+      "passed": true
+    },
+    {
+      "check": "input-016:record",
+      "passed": true
+    },
+    {
+      "check": "human-control-01:record",
+      "passed": true
+    },
+    {
+      "check": "human-control-02:record",
+      "passed": true
+    },
+    {
+      "check": "success_failure_totals",
+      "passed": true
+    },
+    {
+      "check": "runtime_no_truncation",
+      "passed": true
+    },
+    {
+      "check": "parity_script_hash",
+      "passed": true
+    },
+    {
+      "check": "parity_same_input_and_tokens",
+      "passed": true
+    },
+    {
+      "check": "parity_math",
+      "passed": true
+    },
+    {
+      "check": "parity_clean_weight_loading",
+      "passed": true
+    }
+  ],
+  "pair_arithmetic": [
+    {
+      "id": "pair-01",
+      "local_baseline_minus_candidate": 0.004724832854307678,
+      "gptzero_reduction_pp": 7,
+      "historical_reduction": true,
+      "meaningful_local_reduction": false,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-02",
+      "local_baseline_minus_candidate": -0.27079049848452064,
+      "gptzero_reduction_pp": 0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": false,
+      "zero_threshold_local_reduction": false
+    },
+    {
+      "id": "pair-03",
+      "local_baseline_minus_candidate": 0.09231211373936066,
+      "gptzero_reduction_pp": 0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-04",
+      "local_baseline_minus_candidate": 0.08445422693365533,
+      "gptzero_reduction_pp": 0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-05",
+      "local_baseline_minus_candidate": 0.05833837004157136,
+      "gptzero_reduction_pp": 0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-06",
+      "local_baseline_minus_candidate": 0.14981497515252779,
+      "gptzero_reduction_pp": 0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-07",
+      "local_baseline_minus_candidate": 0.13941755087648192,
+      "gptzero_reduction_pp": 100,
+      "historical_reduction": true,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-08",
+      "local_baseline_minus_candidate": 0.18680325768609785,
+      "gptzero_reduction_pp": 100,
+      "historical_reduction": true,
+      "meaningful_local_reduction": true,
+      "zero_threshold_local_reduction": true
+    },
+    {
+      "id": "pair-09",
+      "local_baseline_minus_candidate": -0.005285995100774196,
+      "gptzero_reduction_pp": 0.0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": false,
+      "zero_threshold_local_reduction": false
+    },
+    {
+      "id": "pair-10",
+      "local_baseline_minus_candidate": -0.03232991003738163,
+      "gptzero_reduction_pp": 0.0,
+      "historical_reduction": false,
+      "meaningful_local_reduction": false,
+      "zero_threshold_local_reduction": false
+    }
+  ],
+  "summary": {
+    "recognized_reductions": 2,
+    "historical_reductions": 3,
+    "misleading_reductions_on_ties": 4,
+    "historical_ties": 7,
+    "zero_threshold_recognized": 3,
+    "zero_threshold_misleading": 4
+  },
+  "human_controls": {
+    "human-control-01": 0.007779616010157308,
+    "human-control-02": 0.01801261161585445
+  },
+  "parity_limit": "One public input, cross-device CPU/MPS check; does not establish equality on every input or model accuracy.",
+  "metadata_erratum": "Confirmed pinned raw README formatting is valid; retaining erroneous frozen adaptation note with explicit erratum preserves measurement provenance."
+}

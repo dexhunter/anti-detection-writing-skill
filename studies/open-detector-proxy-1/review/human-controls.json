@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "controls": [
+    {
+      "id": "human-control-01",
+      "path": "review/human-control-01.txt",
+      "author": "Charles Darwin",
+      "title": "On the Origin of Species By Means of Natural Selection",
+      "original_publication_year": 1859,
+      "genre": "scientific/expository",
+      "source_url": "https://www.gutenberg.org/cache/epub/1228/pg1228.txt",
+      "catalogue_url": "https://www.gutenberg.org/ebooks/1228",
+      "public_domain_basis": "Project Gutenberg catalogue explicitly marks the work Public domain in the USA; original publication predates 1920. This is an exact paragraph from its primary-text transcription.",
+      "source_sha256": "ededa9c0bf8761efed092c303b46c1c92de956838cba6249a33bedfd6d7363b4",
+      "sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "bytes": 861,
+      "whitespace_words": 157,
+      "body_paragraph_number": 2,
+      "prior_body_paragraphs": [
+        {
+          "body_paragraph_number": 1,
+          "whitespace_words": 183,
+          "opening": "When on board H.M.S. ‘Beagle,’ as naturalist, I was much struck with\r\ncertain facts in the distribut"
+        }
+      ],
+      "transformations": "None; byte-identical substring, internal CRLF retained, no terminal paragraph-separator newline added.",
+      "selection_rule": "First complete prose paragraph of 100–160 whitespace-delimited words from start of body; rule frozen before source retrieval and any local model outputs.",
+      "role": "historical_human_negative_control",
+      "not_representative_of": "Modern technical discussion replies, business prose, or aggregate human false-positive rates",
+      "source_retrieved_at_utc": "2026-09-10T10:00:23.369684+00:00",
+      "local_model_outputs_seen": false
+    },
+    {
+      "id": "human-control-02",
+      "path": "review/human-control-02.txt",
+      "author": "Lewis Carroll",
+      "title": "Alice’s Adventures in Wonderland",
+      "original_publication_year": 1865,
+      "genre": "fiction",
+      "source_url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "catalogue_url": "https://www.gutenberg.org/ebooks/11",
+      "public_domain_basis": "Project Gutenberg catalogue explicitly marks the work Public domain in the USA; original publication predates 1920. This is an exact paragraph from its primary-text transcription.",
+      "source_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "bytes": 753,
+      "whitespace_words": 141,
+      "body_paragraph_number": 3,
+      "prior_body_paragraphs": [
+        {
+          "body_paragraph_number": 1,
+          "whitespace_words": 57,
+          "opening": "Alice was beginning to get very tired of sitting by her sister on the\r\nbank, and of having nothing t"
+        },
+        {
+          "body_paragraph_number": 2,
+          "whitespace_words": 55,
+          "opening": "So she was considering in her own mind (as well as she could, for the\r\nhot day made her feel very sl"
+        }
+      ],
+      "transformations": "None; byte-identical substring, internal CRLF retained, no terminal paragraph-separator newline added.",
+      "selection_rule": "First complete prose paragraph of 100–160 whitespace-delimited words from start of body; rule frozen before source retrieval and any local model outputs.",
+      "role": "historical_human_negative_control",
+      "not_representative_of": "Modern technical discussion replies, business prose, or aggregate human false-positive rates",
+      "source_retrieved_at_utc": "2026-09-10T10:00:23.370760+00:00",
+      "local_model_outputs_seen": false
+    }
+  ]
+}

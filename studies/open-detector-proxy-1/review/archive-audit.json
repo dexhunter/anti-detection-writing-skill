@@ -1,0 +1,1353 @@
+{
+  "status": "PASS_WITH_METADATA_QUALIFICATION",
+  "reviewed_at_utc": "2026-09-10T10:02:22.929306+00:00",
+  "review_type": "independent archival metric and scope audit; reuse of research context, not fresh blind writing quality review",
+  "local_model_outputs_seen": false,
+  "private_holdout_files_opened": false,
+  "manifest_sha256": "431d04b2cdfde7b69fe9b0f58126692de60bae17265bd3116efb5bd46f3f69ba",
+  "checks": [
+    {
+      "check": "freeze:corpus.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:targets.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:selection.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-001.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-002.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-003.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-004.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-005.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-006.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-007.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-008.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-009.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-010.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-011.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-012.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-013.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-014.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-015.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze:inputs/input-016.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "archive_head",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-001",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-001",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-001",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-002",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-002",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-002",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-003",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-003",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-003",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-004",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-004",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-004",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-005",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-005",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-005",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-006",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-006",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-006",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-007",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-007",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-007",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-008",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-008",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-008",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-009",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-009",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-009",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-010",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-010",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-010",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-011",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-011",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-011",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-012",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-012",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-012",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-013",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-013",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-013",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-014",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-014",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-014",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-015",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-015",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-015",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "input:input-016",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tracked_source:input-016",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no_fence:input-016",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-001:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-001:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-001:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-001:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-001:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-001:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-001:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-001",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-002:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-002:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-002:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-002:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-002:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-002:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-002:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-002",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-tech:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-tech:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-tech:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-tech:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-tech:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-tech:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-tech:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:control-tech",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:control-tech",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:control-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:control-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:control-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:control-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-technical:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-technical:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-technical:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-technical:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-technical:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-technical:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-technical:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r01-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r01-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r01-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r01-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r01-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r01-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-technical:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-technical:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-technical:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-technical:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-technical:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-technical:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-technical:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r10-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r10-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r10-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r10-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r10-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r10-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-technical:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-technical:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-technical:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-technical:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-technical:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-technical:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-technical:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r20-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r20-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:r20-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:r20-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:r20-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:r20-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-baseline-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-baseline-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-baseline-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-baseline-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-baseline-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-baseline-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-baseline-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:verify-baseline-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:verify-baseline-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-candidate-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-candidate-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:verify-candidate-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-candidate-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-candidate-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-candidate-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:verify-candidate-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:verify-candidate-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:verify-candidate-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:drift-mid-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:drift-mid-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-business:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-business:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-business:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-business:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-business:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-business:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-business:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:drift-end-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:drift-end-business",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-technical:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-technical:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-mid-technical:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-technical:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-technical:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-technical:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-mid-technical:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:drift-mid-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:drift-mid-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-technical:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-technical:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:drift-end-technical:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-technical:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-technical:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-technical:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:drift-end-technical:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:drift-end-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "answer_submission_editor:drift-end-technical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-017:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-017:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-017:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-017:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-017:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-017:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-017:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-017",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "crossover_scope:parent",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-018:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-018:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-018:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-018:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-018:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-018:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-018:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-018",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "crossover_scope:hybrid",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-019:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-019:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-019:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-019:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-019:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-019:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-019:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-019",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "paired_scope:baseline",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-020:ai",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-020:mixed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metric:obs-020:human",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-020:model",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-020:mode",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-020:observed_at",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "metadata:obs-020:short_text_warning",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "warnings:obs-020",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "paired_scope:candidate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "seven_ties_three_reductions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "quote_body_identical",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "pair_outcomes": [
+    {
+      "pair": "pair-01",
+      "baseline_ai": 100,
+      "candidate_ai": 93,
+      "candidate_minus_baseline_pp": -7,
+      "outcome": "reduction",
+      "mechanism": "fixed_body_quotation_content_addition",
+      "case": "open-webui-20233"
+    },
+    {
+      "pair": "pair-02",
+      "baseline_ai": 100,
+      "candidate_ai": 100,
+      "candidate_minus_baseline_pp": 0,
+      "outcome": "tie",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01"
+    },
+    {
+      "pair": "pair-03",
+      "baseline_ai": 100,
+      "candidate_ai": 100,
+      "candidate_minus_baseline_pp": 0,
+      "outcome": "tie",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-business-01"
+    },
+    {
+      "pair": "pair-04",
+      "baseline_ai": 100,
+      "candidate_ai": 100,
+      "candidate_minus_baseline_pp": 0,
+      "outcome": "tie",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01"
+    },
+    {
+      "pair": "pair-05",
+      "baseline_ai": 100,
+      "candidate_ai": 100,
+      "candidate_minus_baseline_pp": 0,
+      "outcome": "tie",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-business-01"
+    },
+    {
+      "pair": "pair-06",
+      "baseline_ai": 100,
+      "candidate_ai": 100,
+      "candidate_minus_baseline_pp": 0,
+      "outcome": "tie",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01"
+    },
+    {
+      "pair": "pair-07",
+      "baseline_ai": 100,
+      "candidate_ai": 0,
+      "candidate_minus_baseline_pp": -100,
+      "outcome": "reduction",
+      "mechanism": "adaptive_rewriting",
+      "case": "wm4-dev-business-01"
+    },
+    {
+      "pair": "pair-08",
+      "baseline_ai": 100,
+      "candidate_ai": 0,
+      "candidate_minus_baseline_pp": -100,
+      "outcome": "reduction",
+      "mechanism": "adaptive_rewriting_verification",
+      "case": "wm4-dev-business-01"
+    },
+    {
+      "pair": "pair-09",
+      "baseline_ai": 100.0,
+      "candidate_ai": 100.0,
+      "candidate_minus_baseline_pp": 0.0,
+      "outcome": "tie",
+      "mechanism": "exact_sentence_crossover",
+      "case": "cross-dev-http"
+    },
+    {
+      "pair": "pair-10",
+      "baseline_ai": 100.0,
+      "candidate_ai": 100.0,
+      "candidate_minus_baseline_pp": 0.0,
+      "outcome": "tie",
+      "mechanism": "paired_example_rewriting",
+      "case": "http"
+    }
+  ],
+  "outcome_counts": {
+    "reduction": 3,
+    "tie": 7
+  },
+  "observations": 20,
+  "unique_inputs": 16,
+  "repeated_control_observations": 4,
+  "qualifications": [
+    "Crossover displayed_words 113/114 are hardcoded and not separately present in public per-arm service receipts; local word counts and aggregate charge agree.",
+    "This is archival reuse audit, not fresh blind quality review or authentication of GPTZero."
+  ]
+}

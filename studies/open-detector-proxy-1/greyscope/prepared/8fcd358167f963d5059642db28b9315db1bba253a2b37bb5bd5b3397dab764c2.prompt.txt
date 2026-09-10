@@ -1,0 +1,13 @@
+You are an expert AI-text detector. Classify the passage below.
+0 = no AI involvement (entirely human-written)
+1 = lightly AI-edited
+2 = moderately AI-edited
+3 = heavily AI-edited or fully AI-generated
+Respond with a single digit (0, 1, 2, or 3) and nothing else.
+
+Passage:
+"""
+an etag lets the client check whether it can reuse a stored response. the server sends the etag with the json; on a later conditional get, the client sends that value in if-none-match. if the tag matches the selected representation, an otherwise successful get returns 304 not modified with no response body, and the client reuses its stored body. if the tag does not match, a successful get returns 200 ok with the current json. validation still requires a request. to allow reuse without validation, set an appropriate freshness policy, such as cache-control: max-age=60. subject to the other caching rules, the client can reuse the response while it is fresh. this does not guarantee that the underlying data stays unchanged for 60 seconds.
+"""
+
+Answer: 

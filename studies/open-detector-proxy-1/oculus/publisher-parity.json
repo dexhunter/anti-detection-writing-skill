@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "input_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+  "token_ids_sha256": "1a2fe128ad373ccd83cd5e605a2f9454dcaca19da1171470b289873e7dced4c8",
+  "full_token_count": 332,
+  "publisher_device": "cpu",
+  "batch_device": "mps",
+  "dtype": "float32",
+  "reference_logit": -2.53641939163208,
+  "reference_probability": 0.0733441561460495,
+  "batch_logit": -2.5364320278167725,
+  "batch_probability": 0.0733432984508218,
+  "absolute_probability_difference": 8.57695227701738e-07,
+  "tolerance_frozen_before_reference_run": 0.0001,
+  "loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "source": "Pinned Oculus README publisher class, local path substituted and input length checked before full padding",
+  "script_sha256": "fb363f2ac0277b72880c94be0f143046669fd423a4b534d7839272c528a0235f",
+  "elapsed_seconds": 1.402264874894172
+}

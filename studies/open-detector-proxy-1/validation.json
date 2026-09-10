@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "date": "2026-09-10",
+  "checks": [
+    {"command": "uvx ruff check --fix .", "result": "passed; no source rewrites"},
+    {"command": "uv run --no-project python -m unittest discover -s tests -v", "result": "108 passed"},
+    {"command": "uv run --no-project python -m unittest discover -s studies/open-detector-proxy-1 -p test_analyze.py -v", "result": "9 passed"},
+    {"command": "uv run --no-project python -m unittest discover -s studies/open-detector-proxy-1/oculus -p test_runner.py -v", "result": "15 passed"},
+    {"scope": "Greyscope author's locked Mac environment", "result": "6 wrapper tests passed; exact publisher-entrypoint replay passed"},
+    {"command": "uv run --no-project python scripts/check_studies.py", "result": "consistent_public_artifacts"},
+    {"command": "uv run --no-project python studies/open-detector-proxy-1/check_export.py", "result": "passed; exact public hashes, 18 inputs and 10 paired comparisons"}
+  ],
+  "retained_check_failure": "The first export check compared fresh Python tuples against archived JSON arrays and failed. The checker now serializes the fresh result to its JSON representation before comparison. No model, input, score or analysis value changed.",
+  "scope": "Offline tests and evidence consistency, plus two actual publisher parity forwards. These do not authenticate historical commercial service observations or establish general detector accuracy."
+}

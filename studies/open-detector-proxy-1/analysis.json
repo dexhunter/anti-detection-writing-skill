@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "local_drop_threshold": 0.01,
+  "gptzero_drop_threshold_percentage_points": 5.0,
+  "native_units": {
+    "oculus": "sigmoid AI probability 0–1",
+    "greyscope": "calibrated ordinal AI involvement 0–1",
+    "gptzero": "document confidence percent"
+  },
+  "commercial_scans_this_study": 0,
+  "unique_inputs": 18,
+  "pairs": [
+    {
+      "id": "pair-01",
+      "baseline": "input-001",
+      "candidate": "input-002",
+      "mechanism_group": "fixed_body_quotation_content_addition",
+      "case": "open-webui-20233",
+      "intervention": "Add one fixed attributed asker quotation, unchanged explanatory body",
+      "phase": "historical_preselected_quotation_cohort",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        93,
+        7,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 7,
+      "gptzero_meaningful_drop": true,
+      "oculus": {
+        "baseline": 0.0733432984508218,
+        "candidate": 0.06861846559651412,
+        "drop": 0.004724832854307678,
+        "meaningful_drop": false,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.6862905582478008,
+        "candidate": 0.6741135859201375,
+        "drop": 0.012176972327663349,
+        "meaningful_drop": true,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-02",
+      "baseline": "input-003",
+      "candidate": "input-005",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Lossless split-and-rephrase",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.17307316470481587,
+        "candidate": 0.4438636631893365,
+        "drop": -0.27079049848452064,
+        "meaningful_drop": false,
+        "any_drop": false
+      },
+      "greyscope": {
+        "baseline": 0.47519396518947343,
+        "candidate": 0.5307016454371424,
+        "drop": -0.055507680247668945,
+        "meaningful_drop": false,
+        "any_drop": false
+      }
+    },
+    {
+      "id": "pair-03",
+      "baseline": "input-004",
+      "candidate": "input-006",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-business-01",
+      "intervention": "Lossless split-and-rephrase",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.1488747763616597,
+        "candidate": 0.05656266262229903,
+        "drop": 0.09231211373936066,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.39185097279038406,
+        "candidate": 0.38673622508468747,
+        "drop": 0.005114747705696587,
+        "meaningful_drop": false,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-04",
+      "baseline": "input-003",
+      "candidate": "input-007",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Minimal Write and review instruction ablation",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.17307316470481587,
+        "candidate": 0.08861893777116055,
+        "drop": 0.08445422693365533,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.47519396518947343,
+        "candidate": 0.46164037696880067,
+        "drop": 0.013553588220672763,
+        "meaningful_drop": true,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-05",
+      "baseline": "input-004",
+      "candidate": "input-008",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-business-01",
+      "intervention": "Minimal Write and review instruction ablation",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.1488747763616597,
+        "candidate": 0.09053640632008833,
+        "drop": 0.05833837004157136,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.39185097279038406,
+        "candidate": 0.41558172493978907,
+        "drop": -0.02373075214940501,
+        "meaningful_drop": false,
+        "any_drop": false
+      }
+    },
+    {
+      "id": "pair-06",
+      "baseline": "input-003",
+      "candidate": "input-009",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Bounded factual repair followed by purpose and fluency restoration",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_ai_drop_percentage_points": 0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.17307316470481587,
+        "candidate": 0.0232581895522881,
+        "drop": 0.14981497515252779,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.47519396518947343,
+        "candidate": 0.2845640154809376,
+        "drop": 0.1906299497085358,
+        "meaningful_drop": true,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-07",
+      "baseline": "input-004",
+      "candidate": "input-010",
+      "mechanism_group": "adaptive_rewriting",
+      "case": "wm4-dev-business-01",
+      "intervention": "Bounded factual repair followed by purpose and fluency restoration",
+      "phase": "screening_selected_after_prior_GPTZero_results_before_local_scores",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        0,
+        0,
+        100
+      ],
+      "gptzero_ai_drop_percentage_points": 100,
+      "gptzero_meaningful_drop": true,
+      "oculus": {
+        "baseline": 0.1488747763616597,
+        "candidate": 0.009457225485177778,
+        "drop": 0.13941755087648192,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.39185097279038406,
+        "candidate": 0.002058637218590554,
+        "drop": 0.3897923355717935,
+        "meaningful_drop": true,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-08",
+      "baseline": "input-011",
+      "candidate": "input-012",
+      "mechanism_group": "adaptive_rewriting_verification",
+      "case": "wm4-dev-business-01",
+      "intervention": "Fresh generation of selected r20 pipeline on reused business case; final bytes differ from screening",
+      "phase": "verification_same_case_not_unseen_or_exact_repeat",
+      "gptzero_baseline": [
+        100,
+        0,
+        0
+      ],
+      "gptzero_candidate": [
+        0,
+        0,
+        100
+      ],
+      "gptzero_ai_drop_percentage_points": 100,
+      "gptzero_meaningful_drop": true,
+      "oculus": {
+        "baseline": 0.20515430235301813,
+        "candidate": 0.018351044666920266,
+        "drop": 0.18680325768609785,
+        "meaningful_drop": true,
+        "any_drop": true
+      },
+      "greyscope": {
+        "baseline": 0.3652950309933599,
+        "candidate": 0.003130761733344889,
+        "drop": 0.36216426926001505,
+        "meaningful_drop": true,
+        "any_drop": true
+      }
+    },
+    {
+      "id": "pair-09",
+      "baseline": "input-013",
+      "candidate": "input-014",
+      "mechanism_group": "exact_sentence_crossover",
+      "case": "cross-dev-http",
+      "intervention": "Selected exact sentence crossover hybrid versus selected parent",
+      "phase": "exposed_development",
+      "gptzero_baseline": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "gptzero_candidate": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "gptzero_ai_drop_percentage_points": 0.0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.05117470436900794,
+        "candidate": 0.05646069946978213,
+        "drop": -0.005285995100774196,
+        "meaningful_drop": false,
+        "any_drop": false
+      },
+      "greyscope": {
+        "baseline": 0.47166263442864637,
+        "candidate": 0.49794005772705224,
+        "drop": -0.026277423298405878,
+        "meaningful_drop": false,
+        "any_drop": false
+      }
+    },
+    {
+      "id": "pair-10",
+      "baseline": "input-015",
+      "candidate": "input-016",
+      "mechanism_group": "paired_example_rewriting",
+      "case": "http",
+      "intervention": "Paired editing examples prompt versus incumbent",
+      "phase": "exposed_development",
+      "gptzero_baseline": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "gptzero_candidate": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "gptzero_ai_drop_percentage_points": 0.0,
+      "gptzero_meaningful_drop": false,
+      "oculus": {
+        "baseline": 0.10156157445255144,
+        "candidate": 0.13389148448993307,
+        "drop": -0.03232991003738163,
+        "meaningful_drop": false,
+        "any_drop": false
+      },
+      "greyscope": {
+        "baseline": 0.45345449549322514,
+        "candidate": 0.49552535964275635,
+        "drop": -0.042070864149531206,
+        "meaningful_drop": false,
+        "any_drop": false
+      }
+    }
+  ],
+  "summaries": {
+    "oculus": {
+      "available_pairs": 10,
+      "unavailable_pairs": 0,
+      "historical_reduction_pairs": 3,
+      "historical_tie_pairs": 7,
+      "recognized_reductions": 2,
+      "misleading_reductions_on_ties": 4,
+      "recognized_reductions_any_drop": 3,
+      "misleading_reductions_on_ties_any_drop": 4,
+      "interpretation": "Counts describe dependent selected historical observations, not independent accuracy or future success rates"
+    },
+    "greyscope": {
+      "available_pairs": 10,
+      "unavailable_pairs": 0,
+      "historical_reduction_pairs": 3,
+      "historical_tie_pairs": 7,
+      "recognized_reductions": 3,
+      "misleading_reductions_on_ties": 2,
+      "recognized_reductions_any_drop": 3,
+      "misleading_reductions_on_ties_any_drop": 3,
+      "interpretation": "Counts describe dependent selected historical observations, not independent accuracy or future success rates"
+    }
+  },
+  "historical_human_controls": [
+    {
+      "id": "human-control-01",
+      "oculus": 0.007779616010157308,
+      "greyscope": 0.008684440186847378,
+      "gptzero": null
+    },
+    {
+      "id": "human-control-02",
+      "oculus": 0.01801261161585445,
+      "greyscope": 0.0012226754805038527,
+      "gptzero": null
+    }
+  ],
+  "source_hashes": {
+    "inference-manifest.json": "1bd30b323add2642f29b38efe9b0776a79650fe0b93dbec56725a658d395fa57",
+    "targets.json": "dd0c8f9b22c81c1a224a3be83edeb3b36e72b288c9d387be1a1495f20cdd9015",
+    "protocol.md": "66937d554e280b7cfd7d255dcca3164c6b3804888442e528281b98043f7a913d",
+    "oculus/results.json": "8b8fb31abde54fd39d448e933e3566de403bb6b831b700ad7ed83871e4297877",
+    "greyscope/results.json": "6e673a37c223b2109278155937cb4a20f91412041bc32cb026e7ea7358d8e45f"
+  }
+}

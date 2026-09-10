@@ -1,0 +1,51 @@
+{
+  "frozen_at": "2026-09-10T17:30:57.100914+00:00",
+  "review_sha256": "d12c453aec749bf8ec7bbe1b7d57bec4560b83a540c4f33e8c10bf2c0d765c7c",
+  "scan_scope": "prose_only",
+  "cases": [
+    {
+      "case_id": "prospective-python-default-list",
+      "baseline": {
+        "case_id": "prospective-python-default-list",
+        "id": "X",
+        "arm": "baseline",
+        "path": "quality-inputs/python-A.txt",
+        "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6"
+      },
+      "candidate": {
+        "case_id": "prospective-python-default-list",
+        "id": "Y",
+        "arm": "candidate",
+        "path": "adaptive-writer/python.txt",
+        "sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265"
+      },
+      "all_factual_pass": true,
+      "quality_preference": "baseline",
+      "eligible": false,
+      "state": "quality_preference_rejected",
+      "reason": "X has a modest but meaningful advantage in explanation order: cause, fix and empty-list rationale, then preserved behavior. Y is also acceptable, but splits the conditional fix from its empty-list rationale and moves back to the cause after introducing the fix. The preference is for easier reading, not a factual difference."
+    },
+    {
+      "case_id": "prospective-dns-negative-cache",
+      "baseline": {
+        "case_id": "prospective-dns-negative-cache",
+        "id": "Y",
+        "arm": "baseline",
+        "path": "quality-inputs/dns-B.txt",
+        "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3"
+      },
+      "candidate": {
+        "case_id": "prospective-dns-negative-cache",
+        "id": "X",
+        "arm": "candidate",
+        "path": "adaptive-writer/dns.txt",
+        "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9"
+      },
+      "all_factual_pass": true,
+      "quality_preference": "candidate",
+      "eligible": true,
+      "state": "ready",
+      "reason": "X has a modest but meaningful advantage in flow: it answers the cause, remaining lifetime, and proposed TTL change in the order asked, then gives the comparison. Y is also acceptable and its formula is slightly easier to parse, but its early diagnostic instruction interrupts that explanation. Both preserve the necessary uncertainty and scope."
+    }
+  ]
+}

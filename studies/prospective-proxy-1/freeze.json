@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T17:03:20.405030+00:00",
+  "status": "FROZEN",
+  "local_scores_seen": false,
+  "drafts_seen": false,
+  "model": "yaoandy107/greyscope-v2-qwen3.5-4b-mlx-4bit",
+  "model_revision": "59b6ec7a24cae161c4cbc85e594c586541d8f710",
+  "quality_label_seed": "prospective-proxy-1",
+  "commercial_scan_limit": 4,
+  "commercial_word_limit": 540,
+  "files": {
+    "protocol.md": "790eee6f85f1066925e19f00cdf165626ebd5ee0c3826d0578f28bf9831fecb9",
+    "writer-operator.md": "c7b9c201878445d03525cf9000c7db9d8db679f3d2fec0ada752d1dc3da846b7",
+    "sources/cases.json": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+    "sources/manifest.json": "c302b5d3caa31808b83776cee1b50426c690ba35222e2ed6f3a28cb1ea462f3e"
+  },
+  "incumbent_skill_sha256": "2373aa3c83f842f9577ce92c2eda7fefcbb232faaded1de73a774b3458fb35b2",
+  "original_files_sha256": {
+    "protocol.md": "01d6e5de5a6646c330043c913d7b72bb91c850599e7fc130d0bbdf01cf1b4255",
+    "writer-operator.md": "c7b9c201878445d03525cf9000c7db9d8db679f3d2fec0ada752d1dc3da846b7",
+    "sources/cases.json": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+    "sources/manifest.json": "c302b5d3caa31808b83776cee1b50426c690ba35222e2ed6f3a28cb1ea462f3e"
+  },
+  "export_note": "Live account allowance omitted. Original frozen source artifact hashes are retained separately; files hashes refer to the public copies."
+}

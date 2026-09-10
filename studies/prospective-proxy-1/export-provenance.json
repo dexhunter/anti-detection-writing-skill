@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-10T17:24:22.641852+00:00",
+  "source_scope": "prospective-proxy-1 private study artifacts; explicit allowlist only",
+  "original_inference_manifest_sha256": "c41f973fce3fc9c9aa51539c6f8c89b1947f697a47e87a09f20db096ecf61841",
+  "public_inference_manifest_sha256": "c41f973fce3fc9c9aa51539c6f8c89b1947f697a47e87a09f20db096ecf61841",
+  "manifest_path_adaptation": "none needed: quality-inputs paths already relative and preserved",
+  "gptzero_baseline_status": "summary and evidence pending separate finalization; not included in this export step",
+  "artifacts": [
+    {
+      "path": "quality-inputs/python-A.txt",
+      "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+      "bytes": 731,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/python-A.txt",
+      "source_artifact_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+      "source_bytes": 731
+    },
+    {
+      "path": "quality-inputs/python-B.txt",
+      "sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+      "bytes": 761,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/python-B.txt",
+      "source_artifact_sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+      "source_bytes": 761
+    },
+    {
+      "path": "quality-inputs/python-C.txt",
+      "sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+      "bytes": 752,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/python-C.txt",
+      "source_artifact_sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+      "source_bytes": 752
+    },
+    {
+      "path": "quality-inputs/dns-A.txt",
+      "sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+      "bytes": 792,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/dns-A.txt",
+      "source_artifact_sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+      "source_bytes": 792
+    },
+    {
+      "path": "quality-inputs/dns-B.txt",
+      "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+      "bytes": 813,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/dns-B.txt",
+      "source_artifact_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+      "source_bytes": 813
+    },
+    {
+      "path": "quality-inputs/dns-C.txt",
+      "sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+      "bytes": 772,
+      "transformation": "exact copy",
+      "source_artifact": "quality-inputs/dns-C.txt",
+      "source_artifact_sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+      "source_bytes": 772
+    },
+    {
+      "path": "sources/cases.json",
+      "sha256": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+      "bytes": 15260,
+      "transformation": "exact copy",
+      "source_artifact": "sources/cases.json",
+      "source_artifact_sha256": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+      "source_bytes": 15260
+    },
+    {
+      "path": "sources/novelty-audit.json",
+      "sha256": "6b1848d4a33d8d6d812e11126ce8a56dbb38a4de49dca1f1994139a82bba2bc3",
+      "bytes": 2924,
+      "transformation": "exact copy",
+      "source_artifact": "sources/novelty-audit.json",
+      "source_artifact_sha256": "6b1848d4a33d8d6d812e11126ce8a56dbb38a4de49dca1f1994139a82bba2bc3",
+      "source_bytes": 2924
+    },
+    {
+      "path": "sources/selection.md",
+      "sha256": "6432e0342d5e6c84b484bc37e15b2051a593885278bf79cdb205bdd0ccad131b",
+      "bytes": 2165,
+      "transformation": "exact copy",
+      "source_artifact": "sources/selection.md",
+      "source_artifact_sha256": "6432e0342d5e6c84b484bc37e15b2051a593885278bf79cdb205bdd0ccad131b",
+      "source_bytes": 2165
+    },
+    {
+      "path": "sources/manifest.json",
+      "sha256": "c302b5d3caa31808b83776cee1b50426c690ba35222e2ed6f3a28cb1ea462f3e",
+      "bytes": 498,
+      "transformation": "exact copy",
+      "source_artifact": "sources/manifest.json",
+      "source_artifact_sha256": "c302b5d3caa31808b83776cee1b50426c690ba35222e2ed6f3a28cb1ea462f3e",
+      "source_bytes": 498
+    },
+    {
+      "path": "quality/review.json",
+      "sha256": "326a6a7b269e7c3dd27e595d9ff1b587ea1a0651e2676346c0e01def8b1f3269",
+      "bytes": 21989,
+      "transformation": "exact copy",
+      "source_artifact": "quality/review.json",
+      "source_artifact_sha256": "326a6a7b269e7c3dd27e595d9ff1b587ea1a0651e2676346c0e01def8b1f3269",
+      "source_bytes": 21989
+    },
+    {
+      "path": "quality/packet.json",
+      "sha256": "2cf2df1d92e7060ab7609358b2b6eec93314caa1163491ca23f236c25b53453e",
+      "bytes": 21108,
+      "transformation": "exact copy",
+      "source_artifact": "quality/packet.json",
+      "source_artifact_sha256": "2cf2df1d92e7060ab7609358b2b6eec93314caa1163491ca23f236c25b53453e",
+      "source_bytes": 21108
+    },
+    {
+      "path": "quality-mapping.json",
+      "sha256": "3abb0d657c39a4fe91e2b286806eae421511a6296dcf2d590c6fdfa19f340deb",
+      "bytes": 1112,
+      "transformation": "exact copy",
+      "source_artifact": "quality-mapping.json",
+      "source_artifact_sha256": "3abb0d657c39a4fe91e2b286806eae421511a6296dcf2d590c6fdfa19f340deb",
+      "source_bytes": 1112
+    },
+    {
+      "path": "inference-manifest.json",
+      "sha256": "c41f973fce3fc9c9aa51539c6f8c89b1947f697a47e87a09f20db096ecf61841",
+      "bytes": 1566,
+      "transformation": "exact copy",
+      "source_artifact": "inference-manifest.json",
+      "source_artifact_sha256": "c41f973fce3fc9c9aa51539c6f8c89b1947f697a47e87a09f20db096ecf61841",
+      "source_bytes": 1566
+    },
+    {
+      "path": "quality-gate.json",
+      "sha256": "22e563a15ffc628dbe4769b3d78bb7b4e2beb419031fb78a1faf990aee989060",
+      "bytes": 867,
+      "transformation": "exact copy",
+      "source_artifact": "quality-gate.json",
+      "source_artifact_sha256": "22e563a15ffc628dbe4769b3d78bb7b4e2beb419031fb78a1faf990aee989060",
+      "source_bytes": 867
+    },
+    {
+      "path": "selection.json",
+      "sha256": "65bf353d9dead3817886cb3a4513eaefe8b03a923ee58ca910580fd96ce2b473",
+      "bytes": 1187,
+      "transformation": "exact copy",
+      "source_artifact": "selection.json",
+      "source_artifact_sha256": "65bf353d9dead3817886cb3a4513eaefe8b03a923ee58ca910580fd96ce2b473",
+      "source_bytes": 1187
+    },
+    {
+      "path": "selection_rule.py",
+      "sha256": "86742834d3ca8b4bb8fad95825cb872b1a0a15196f7dc00e648a224ed627b1c8",
+      "bytes": 7148,
+      "transformation": "exact copy",
+      "source_artifact": "selection_rule.py",
+      "source_artifact_sha256": "86742834d3ca8b4bb8fad95825cb872b1a0a15196f7dc00e648a224ed627b1c8",
+      "source_bytes": 7148
+    },
+    {
+      "path": "test_selection_rule.py",
+      "sha256": "a45e4d5952f37a5ad1ac7e5fc8d433ee568b1312e24a0041fe9f95ef9bcf46b7",
+      "bytes": 14047,
+      "transformation": "exact copy",
+      "source_artifact": "test_selection_rule.py",
+      "source_artifact_sha256": "a45e4d5952f37a5ad1ac7e5fc8d433ee568b1312e24a0041fe9f95ef9bcf46b7",
+      "source_bytes": 14047
+    },
+    {
+      "path": "selection-rule-review.json",
+      "sha256": "6672e42875be7a6b4a6654ec2857df720529e357441a61c0275867b8c9fdd87e",
+      "bytes": 5030,
+      "transformation": "exact copy",
+      "source_artifact": "selection-rule-review.json",
+      "source_artifact_sha256": "6672e42875be7a6b4a6654ec2857df720529e357441a61c0275867b8c9fdd87e",
+      "source_bytes": 5030
+    },
+    {
+      "path": "writer-operator.md",
+      "sha256": "c7b9c201878445d03525cf9000c7db9d8db679f3d2fec0ada752d1dc3da846b7",
+      "bytes": 1790,
+      "transformation": "exact copy",
+      "source_artifact": "writer-operator.md",
+      "source_artifact_sha256": "c7b9c201878445d03525cf9000c7db9d8db679f3d2fec0ada752d1dc3da846b7",
+      "source_bytes": 1790
+    },
+    {
+      "path": "protocol.md",
+      "sha256": "790eee6f85f1066925e19f00cdf165626ebd5ee0c3826d0578f28bf9831fecb9",
+      "bytes": 5428,
+      "transformation": "Removed live account allowance and its comparison with the experiment budget; retained all selection, ordering, stop and study-budget rules.",
+      "source_artifact": "protocol.md",
+      "source_artifact_sha256": "01d6e5de5a6646c330043c913d7b72bb91c850599e7fc130d0bbdf01cf1b4255",
+      "source_bytes": 5521
+    },
+    {
+      "path": "baseline-addendum.md",
+      "sha256": "89325152e0cf4ed8729a2f0c84b0fe5d48c0eb13373ce2992be4f3713db05c87",
+      "bytes": 1381,
+      "transformation": "Removed only the live account allowance; retained the separately frozen baseline design and study cap.",
+      "source_artifact": "baseline-addendum.md",
+      "source_artifact_sha256": "704ccb845122697f54dc7aeedda2925bee7ff1db003bd617cb5d6f33d1dbc809",
+      "source_bytes": 1415
+    },
+    {
+      "path": "freeze.json",
+      "sha256": "084102fc728f435817b60bcccd5abe8edef02a20b5693ebab687aae15b79ccc3",
+      "bytes": 1431,
+      "transformation": "Removed account allowance field; public protocol hash updated with original frozen hashes retained.",
+      "source_artifact": "freeze.json",
+      "source_artifact_sha256": "a68104cb237668500ae8c93ffa87c6171867e534603c1713304d60305ef29958",
+      "source_bytes": 899
+    },
+    {
+      "path": "baseline-freeze.json",
+      "sha256": "aef35ab4e2a4758cd67d2be66231d185c2cd75d206ec75465efb85d705fa95f6",
+      "bytes": 656,
+      "transformation": "Rebound addendum hash to sanitized public copy; retained original hash and all freeze facts.",
+      "source_artifact": "baseline-freeze.json",
+      "source_artifact_sha256": "01c9fccd5f08fb70e92bf74ebdadd7d275f134152ebb2e3af5205a6b1b630f05",
+      "source_bytes": 421
+    },
+    {
+      "path": "greyscope/results.json",
+      "sha256": "292ca7f88b327750bc534f68d954e523c44a64fff524874bb8ec2fd5b6650d0b",
+      "bytes": 34271,
+      "transformation": "Allowlisted header and records; input paths rewritten relative; preparation artifact paths omitted; every native result and its hashes retained.",
+      "source_artifact": "greyscope/results.json",
+      "source_artifact_sha256": "9f652303536b4ccf696fe555f679ebbdc3bd91784528b5dc2523e03030030982",
+      "source_bytes": 38157
+    },
+    {
+      "path": "greyscope/manifest.json",
+      "sha256": "0cf8d25a6d466200c4d90d1a18dc443a3a31ee262346a3e0d739699e1a9996e3",
+      "bytes": 5526,
+      "transformation": "Removed local output_root; retained public model/source pins, runtime versions and complete artifact hash inventory.",
+      "source_artifact": "greyscope/manifest.json",
+      "source_artifact_sha256": "6978de18bd30224214bde6094674e47b79bfb4267bc3847447a929d7b44ef442",
+      "source_bytes": 5384
+    },
+    {
+      "path": "greyscope/native-results.csv",
+      "sha256": "37373862c94019de0cfab3bbc59fb4c8e83d014a64ad6e1f0c3486accfd9971f",
+      "bytes": 944,
+      "transformation": "Table derived from all six exported native records, exact inputs and frozen quality groups; no commercial metrics. Public CSV uses LF line endings; previous export used CRLF. Values are unchanged.",
+      "previous_export_sha256": "0c6f81654a9c8eccf089b7672e70738079dc335cb28d0c04db879cc96c7361b6"
+    },
+    {
+      "path": "EXPORT.md",
+      "sha256": "61ef81648adbc68c757aefa58c875ed08de15c45f423b8ead3db24b290e82265",
+      "bytes": 2741,
+      "transformation": "Public export and reproducibility notes; no new detector or quality conclusions."
+    }
+  ]
+}

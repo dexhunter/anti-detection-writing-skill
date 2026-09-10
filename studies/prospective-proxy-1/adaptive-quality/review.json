@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "review_type": "independent neutral-labelled writing quality review",
+  "reviewer": "/root/state_quality",
+  "created_at_utc": "2026-09-10T17:29:24.856494+00:00",
+  "status": "COMPLETE",
+  "packet_sha256": "e2914971b4543dda35b44ad8c737ad4a20acbc03730dc0c2a2ff2d3a8eb7a8f5",
+  "source_cases_sha256": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+  "byte_convention": "exact UTF8 with one terminal LF; full prose; no independent code",
+  "scope": "prose_only",
+  "blinding": {
+    "neutral_labels_only": true,
+    "other_study_files_read": false,
+    "earlier_reviews_read": false,
+    "candidate_policy_or_writer_files_read": false,
+    "detector_or_local_selector_results_read": false,
+    "arm_mapping_read": false,
+    "numerical_quality_scores_assigned": false
+  },
+  "source_verification": [
+    {
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+      "status": "opened and relevant section inspected",
+      "relevant_location": "4.9.1: default evaluation and None branch"
+    },
+    {
+      "url": "https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects",
+      "status": "opened and relevant sections inspected",
+      "relevant_location": "Shared defaults and shared list references"
+    },
+    {
+      "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing",
+      "status": "opened and relevant section inspected",
+      "relevant_location": "None and empty lists are false"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc2308.html",
+      "status": "opened and relevant sections inspected",
+      "relevant_location": "Sections 3, 5, 6: minimum TTL, countdown, expiration, caps, and returned SOA TTL"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html",
+      "status": "opened and relevant section inspected",
+      "relevant_location": "SOA negative caching duration and retained nonexistence after recreation"
+    },
+    {
+      "url": "https://repost.aws/knowledge-center/route-53-troubleshoot-nxdomain-responses",
+      "status": "direct open returned an internal error; official article relevant content retrieved in web search",
+      "relevant_location": "Negative-caching scenario and direct authoritative query check"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "prospective-python-default-list",
+      "answers": [
+        {
+          "answer_id": "X",
+          "full_message_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "prose_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "declared_hashes_match": true,
+          "one_terminal_LF_verified": true,
+          "independent_code_exclusions": [],
+          "exclusion_ranges": [],
+          "independent_code_present": false,
+          "inline_identifiers_retained_in_prose": true,
+          "protected_inline_identifiers": {
+            "items": true,
+            "items=[]": true,
+            "items=None": true,
+            "None": true,
+            "items is None": true,
+            "if not items": true,
+            "append": true
+          },
+          "word_count_whitespace": 122,
+          "factual_pass": true,
+          "all_six_claims_pass": true,
+          "qualifications_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "claim_id": "PY1",
+              "pass": true,
+              "evidence_excerpt": "Python creates the default list when the function definition is evaluated, rather than on each call.",
+              "finding": "Correct definition-time allocation; it does not imply a new default per invocation.",
+              "source_ids": [
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY2",
+              "pass": true,
+              "evidence_excerpt": "Calls that omit items reuse that list, so an append leaves values for later calls.",
+              "finding": "Correctly connects shared default identity with retained mutations.",
+              "source_ids": [
+                "py-tutorial",
+                "py-faq"
+              ]
+            },
+            {
+              "claim_id": "PY3",
+              "pass": true,
+              "evidence_excerpt": "Use items=None, then create a fresh list inside the function only when items is None.",
+              "finding": "Correct default and conditional allocation; the next sentence explicitly equates omission and explicit None.",
+              "source_ids": [
+                "py-tutorial",
+                "py-faq"
+              ]
+            },
+            {
+              "claim_id": "PY4",
+              "pass": true,
+              "evidence_excerpt": "Avoid if not items: an empty caller-supplied list is also false, but must stay the same object.",
+              "finding": "Correctly rejects truthiness because it would replace a caller-provided empty list.",
+              "source_ids": [
+                "py-truth",
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY5",
+              "pass": true,
+              "evidence_excerpt": "After that check, append the supplied value to items and return items.",
+              "finding": "Correct operation order; the following sentence explicitly preserves in-place mutation even for an empty supplied list.",
+              "source_ids": [
+                "py-faq",
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY6",
+              "pass": true,
+              "evidence_excerpt": "it neither copies a supplied list nor prevents accumulated state when that list is passed again.",
+              "finding": "Explicitly limits isolation to lists created for None and preserves intentional accumulation in a reused supplied list.",
+              "source_ids": [
+                "py-faq"
+              ]
+            }
+          ],
+          "qualification_findings": [
+            "Omission and explicit None are deliberately treated alike.",
+            "A supplied empty list remains the same object and is intentionally mutated.",
+            "Reusing an explicit list can still accumulate values; no copying or universal isolation is promised.",
+            "The explanation remains within the supplied ordinary-function and list-or-None scenario."
+          ],
+          "relevance": "Directly addresses the synthetic question and stays within its scope.",
+          "readability": "Clear causal sequence: definition-time sharing, the None fix and empty-list condition, then the preserved mutation contract. The condition and its reason stay together.",
+          "tone": "Professional, concise, and direct; no fabricated experience, tests, or guarantees.",
+          "required_changes": []
+        },
+        {
+          "answer_id": "Y",
+          "full_message_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+          "prose_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+          "declared_hashes_match": true,
+          "one_terminal_LF_verified": true,
+          "independent_code_exclusions": [],
+          "exclusion_ranges": [],
+          "independent_code_present": false,
+          "inline_identifiers_retained_in_prose": true,
+          "protected_inline_identifiers": {
+            "items": true,
+            "items=[]": true,
+            "items=None": true,
+            "None": true,
+            "items is None": true,
+            "if not items": true,
+            "append": true
+          },
+          "word_count_whitespace": 120,
+          "factual_pass": true,
+          "all_six_claims_pass": true,
+          "qualifications_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "claim_id": "PY1",
+              "pass": true,
+              "evidence_excerpt": "Python creates the default list when it evaluates the function definition, not on each call.",
+              "finding": "Correct definition-time allocation; it does not imply a new default per invocation.",
+              "source_ids": [
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY2",
+              "pass": true,
+              "evidence_excerpt": "Calls omitting items reuse that list, so each append leaves values for later calls.",
+              "finding": "Correctly connects shared default identity with retained mutations.",
+              "source_ids": [
+                "py-tutorial",
+                "py-faq"
+              ]
+            },
+            {
+              "claim_id": "PY3",
+              "pass": true,
+              "evidence_excerpt": "use items=None and create a fresh list only when items is None, giving omission and explicit None the same meaning.",
+              "finding": "Correct default and conditional allocation, with the API-specific None interpretation explicit.",
+              "source_ids": [
+                "py-tutorial",
+                "py-faq"
+              ]
+            },
+            {
+              "claim_id": "PY4",
+              "pass": true,
+              "evidence_excerpt": "Avoid if not items: an empty list is false, so that check would replace the caller's object.",
+              "finding": "Correctly rejects truthiness because it would replace a caller-provided empty list.",
+              "source_ids": [
+                "py-truth",
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY5",
+              "pass": true,
+              "evidence_excerpt": "After conditional initialization, append to items and return it.",
+              "finding": "Correct operation order; the following sentence explicitly preserves intentional in-place mutation including an empty supplied list.",
+              "source_ids": [
+                "py-faq",
+                "py-tutorial"
+              ]
+            },
+            {
+              "claim_id": "PY6",
+              "pass": true,
+              "evidence_excerpt": "it neither copies supplied lists nor prevents accumulation when the same list is passed again.",
+              "finding": "Explicitly limits the new-list isolation and preserves intentional accumulation in a reused supplied list.",
+              "source_ids": [
+                "py-faq"
+              ]
+            }
+          ],
+          "qualification_findings": [
+            "The list-or-None input scope is explicit.",
+            "Omission and explicit None are deliberately treated alike.",
+            "A supplied empty list is intentionally mutated and must not be replaced.",
+            "Reusing an explicit list can still accumulate values; no copying or universal isolation is promised."
+          ],
+          "relevance": "Directly addresses the synthetic question and stays within its scope.",
+          "readability": "Clear and compact, with the requested fix first. Its order returns from the fix to the original cause, and the empty-list reason arrives after the mutation instructions, requiring slightly more cross-reference.",
+          "tone": "Professional, concise, and direct; no fabricated experience, tests, or guarantees.",
+          "required_changes": []
+        }
+      ],
+      "preference": "X",
+      "preference_reason": "X has a modest but meaningful advantage in explanation order: cause, fix and empty-list rationale, then preserved behavior. Y is also acceptable, but splits the conditional fix from its empty-list rationale and moves back to the cause after introducing the fix. The preference is for easier reading, not a factual difference."
+    },
+    {
+      "case_id": "prospective-dns-negative-cache",
+      "answers": [
+        {
+          "answer_id": "X",
+          "full_message_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+          "prose_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+          "declared_hashes_match": true,
+          "one_terminal_LF_verified": true,
+          "independent_code_exclusions": [],
+          "exclusion_ranges": [],
+          "independent_code_present": false,
+          "inline_identifiers_retained_in_prose": true,
+          "protected_inline_identifiers": {
+            "NXDOMAIN": true,
+            "SOA": true,
+            "SOA.MINIMUM": true,
+            "A": true,
+            "TTL": true
+          },
+          "word_count_whitespace": 119,
+          "factual_pass": true,
+          "all_six_claims_pass": true,
+          "qualifications_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "claim_id": "DNS1",
+              "pass": true,
+              "evidence_excerpt": "This resolver can still reuse its earlier NXDOMAIN entry after record creation.",
+              "finding": "Correctly identifies reuse of the prior negative entry despite the authoritative update.",
+              "source_ids": [
+                "dns-aws-soa",
+                "dns-aws-troubleshooting"
+              ]
+            },
+            {
+              "claim_id": "DNS2",
+              "pass": true,
+              "evidence_excerpt": "Its original negative TTL uses the SOA values when cached: min(600, 300), from SOA TTL and SOA.MINIMUM, is 300 seconds.",
+              "finding": "Correct minimum rule, original caching-time values, and arithmetic.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-soa"
+              ]
+            },
+            {
+              "claim_id": "DNS3",
+              "pass": true,
+              "evidence_excerpt": "After 120 seconds, at most 180 remain; earlier eviction or a resolver cap can shorten that. Creation does not restart the countdown.",
+              "finding": "Correct remaining lifetime, upper-bound qualification, and unchanged countdown after creation.",
+              "source_ids": [
+                "dns-rfc2308"
+              ]
+            },
+            {
+              "claim_id": "DNS4",
+              "pass": true,
+              "evidence_excerpt": "The new A record's TTL of 60 governs positive caching; lowering it cannot shorten that negative entry.",
+              "finding": "Correctly separates the positive TTL from the existing negative lifetime.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-soa"
+              ]
+            },
+            {
+              "claim_id": "DNS5",
+              "pass": true,
+              "evidence_excerpt": "Under your ordinary caching assumptions, expiration ends reuse: a subsequent query needs current information for a fresh answer.",
+              "finding": "Correctly conditions expiration behavior on the supplied assumptions; the next sentence recognizes independent resolver cache states.",
+              "source_ids": [
+                "dns-rfc2308"
+              ]
+            },
+            {
+              "claim_id": "DNS6",
+              "pass": true,
+              "evidence_excerpt": "Compare this resolver's response and remaining SOA TTL with direct authoritative responses. Your reported success at every authoritative server supports negative caching here.",
+              "finding": "Correct comparison and evidence attribution; it does not claim the reviewer performed DNS queries.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-troubleshooting"
+              ]
+            }
+          ],
+          "qualification_findings": [
+            "Uses the original caching-time SOA values.",
+            "Treats 180 seconds as an upper bound and allows earlier eviction or a resolver cap.",
+            "Creating the record does not restart the countdown.",
+            "Expiration behavior is explicitly limited to the stated ordinary caching assumptions.",
+            "Other resolver cache states can differ, so worldwide visibility is not promised.",
+            "Authoritative success is attributed to the user report, not to reviewer testing."
+          ],
+          "relevance": "Directly addresses the synthetic question and stays within its scope.",
+          "readability": "Answers why the resolver can disagree, how much lifetime remains, and why the A TTL cannot fix it before offering the diagnostic comparison. This follows the question in a continuous explanation.",
+          "tone": "Professional, concise, and direct; no fabricated experience, tests, or guarantees.",
+          "required_changes": []
+        },
+        {
+          "answer_id": "Y",
+          "full_message_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "prose_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "declared_hashes_match": true,
+          "one_terminal_LF_verified": true,
+          "independent_code_exclusions": [],
+          "exclusion_ranges": [],
+          "independent_code_present": false,
+          "inline_identifiers_retained_in_prose": true,
+          "protected_inline_identifiers": {
+            "NXDOMAIN": true,
+            "SOA": true,
+            "SOA.MINIMUM": true,
+            "A": true,
+            "TTL": true
+          },
+          "word_count_whitespace": 124,
+          "factual_pass": true,
+          "all_six_claims_pass": true,
+          "qualifications_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "claim_id": "DNS1",
+              "pass": true,
+              "evidence_excerpt": "Successful authoritative replies do not remove the NXDOMAIN already cached by this recursive resolver.",
+              "finding": "Correctly explains why authoritative success does not invalidate this prior negative entry.",
+              "source_ids": [
+                "dns-aws-soa",
+                "dns-aws-troubleshooting"
+              ]
+            },
+            {
+              "claim_id": "DNS2",
+              "pass": true,
+              "evidence_excerpt": "The cached response used the smaller SOA value at that time: min(SOA TTL 600, SOA.MINIMUM 300) gives 300 seconds.",
+              "finding": "Correct minimum rule, original caching-time values, and arithmetic.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-soa"
+              ]
+            },
+            {
+              "claim_id": "DNS3",
+              "pass": true,
+              "evidence_excerpt": "After 120 seconds, the original entry has at most 180 seconds left, and creating the A record does not restart that period. Eviction or a resolver cap may end it sooner.",
+              "finding": "Correct remaining lifetime, upper-bound qualification, and unchanged countdown after creation.",
+              "source_ids": [
+                "dns-rfc2308"
+              ]
+            },
+            {
+              "claim_id": "DNS4",
+              "pass": true,
+              "evidence_excerpt": "The A record's TTL of 60 controls positive caching; lowering it leaves this negative countdown unchanged.",
+              "finding": "Correctly separates the positive TTL from the existing negative lifetime.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-soa"
+              ]
+            },
+            {
+              "claim_id": "DNS5",
+              "pass": true,
+              "evidence_excerpt": "Under the stated assumptions, the expired entry cannot answer later queries. The resolver needs current information for a fresh answer, without any promise of immediate worldwide visibility.",
+              "finding": "Correct expiration behavior and explicit limitation on worldwide visibility.",
+              "source_ids": [
+                "dns-rfc2308"
+              ]
+            },
+            {
+              "claim_id": "DNS6",
+              "pass": true,
+              "evidence_excerpt": "Check its response and remaining SOA TTL against direct authoritative replies; your reported results support negative caching.",
+              "finding": "Correct comparison and attribution to the question; it does not claim the reviewer performed DNS queries.",
+              "source_ids": [
+                "dns-rfc2308",
+                "dns-aws-troubleshooting"
+              ]
+            }
+          ],
+          "qualification_findings": [
+            "Uses the original caching-time SOA values.",
+            "Treats 180 seconds as an upper bound and allows earlier eviction or a resolver cap.",
+            "Creating the record does not restart the countdown.",
+            "Expiration behavior is explicitly limited to the stated assumptions.",
+            "Explicitly avoids a promise of immediate worldwide visibility.",
+            "Authoritative success is attributed to the user report, not to reviewer testing."
+          ],
+          "relevance": "Directly addresses the synthetic question and stays within its scope.",
+          "readability": "Clear sentences and an especially explicit TTL formula. Moving the diagnostic comparison into the opening interrupts the requested explanation before the lifetime calculation; the final worldwide-visibility clause is accurate but adds weight to the closing sentence.",
+          "tone": "Professional, concise, and direct; no fabricated experience, tests, or guarantees.",
+          "required_changes": []
+        }
+      ],
+      "preference": "X",
+      "preference_reason": "X has a modest but meaningful advantage in flow: it answers the cause, remaining lifetime, and proposed TTL change in the order asked, then gives the comparison. Y is also acceptable and its formula is slightly easier to parse, but its early diagnostic instruction interrupts that explanation. Both preserve the necessary uncertainty and scope."
+    }
+  ],
+  "publication_performed": false,
+  "tests_or_dns_queries_performed": false
+}

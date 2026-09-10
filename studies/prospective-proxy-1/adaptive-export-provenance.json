@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "note": "The exact adaptive-freeze.json retains original private artifact hashes. Consult this mapping for sanitized public protocol bytes. No raw scans or account captures exported.",
+  "files": [
+    {
+      "path": "adaptive-operator.md",
+      "source_sha256": "5ef632747e6a3cfe4dc7ddc8a6909764dbee74eacc12fa57a269e9ad2e4355d4",
+      "export_sha256": "5ef632747e6a3cfe4dc7ddc8a6909764dbee74eacc12fa57a269e9ad2e4355d4",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-candidate-SKILL.md",
+      "source_sha256": "436d2e372b12abcf41e45948202656a30d06f5c42637e65aa42893570affd36e",
+      "export_sha256": "436d2e372b12abcf41e45948202656a30d06f5c42637e65aa42893570affd36e",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-freeze.json",
+      "source_sha256": "6356dd0b8436d502a6c78665a399332e733c6f9b34eb192f1a7b5155ab810557",
+      "export_sha256": "6356dd0b8436d502a6c78665a399332e733c6f9b34eb192f1a7b5155ab810557",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-mapping.json",
+      "source_sha256": "39e5c77ff1d624c9e9258d33222232c8f5dc91cb4df528dc4729ddf7e899e443",
+      "export_sha256": "39e5c77ff1d624c9e9258d33222232c8f5dc91cb4df528dc4729ddf7e899e443",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-gate.json",
+      "source_sha256": "91e0e4989eb3d73372246d9f7e368ff77432e4fde651ea5047c5d3a32a1e07ce",
+      "export_sha256": "91e0e4989eb3d73372246d9f7e368ff77432e4fde651ea5047c5d3a32a1e07ce",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-writer/python.txt",
+      "source_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+      "export_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-writer/dns.txt",
+      "source_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+      "export_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-writer/self-check.json",
+      "source_sha256": "b9888e37dbe84d8f95b474e49da11b61d6cdba88ce98d0df999ffd120b914e16",
+      "export_sha256": "b9888e37dbe84d8f95b474e49da11b61d6cdba88ce98d0df999ffd120b914e16",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-quality/packet.json",
+      "source_sha256": "e2914971b4543dda35b44ad8c737ad4a20acbc03730dc0c2a2ff2d3a8eb7a8f5",
+      "export_sha256": "e2914971b4543dda35b44ad8c737ad4a20acbc03730dc0c2a2ff2d3a8eb7a8f5",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-quality/review.json",
+      "source_sha256": "d12c453aec749bf8ec7bbe1b7d57bec4560b83a540c4f33e8c10bf2c0d765c7c",
+      "export_sha256": "d12c453aec749bf8ec7bbe1b7d57bec4560b83a540c4f33e8c10bf2c0d765c7c",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-quality/review.md",
+      "source_sha256": "0ef171603ebf3884fec52cb1d690d768d1bb3d11d54db6df20f08e8581e21d69",
+      "export_sha256": "0ef171603ebf3884fec52cb1d690d768d1bb3d11d54db6df20f08e8581e21d69",
+      "transformation": "none"
+    },
+    {
+      "path": "adaptive-protocol.md",
+      "source_sha256": "0a641c219dbf15e4b84f558d531d2f5fb08fdd9c026b0782ce7a3038fa3529e3",
+      "export_sha256": "163396699fe2fd36d4db77a0d3536c4fa15b3a25a3b209e8a21ed2e9684b29c0",
+      "transformation": "removed live remaining account allowance; added private-account note"
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_writing_quality",
+  "reviewed_at_date": "2026-09-10",
+  "detector_scores_withheld": true,
+  "fresh_context": true,
+  "packet_sha256": "2cf2df1d92e7060ab7609358b2b6eec93314caa1163491ca23f236c25b53453e",
+  "packet_hash_verified": true,
+  "input_hashes_verified": true,
+  "scope": "prose_only",
+  "inputs_preserved": true,
+  "review_basis": "Exact packet answers and matching input-file SHA256 values; independent inspection of the permitted primary sources. No answer was rewritten.",
+  "independence": {
+    "read_only_inputs": [
+      "quality/packet.json",
+      "quality-inputs/python-A.txt",
+      "quality-inputs/python-B.txt",
+      "quality-inputs/python-C.txt",
+      "quality-inputs/dns-A.txt",
+      "quality-inputs/dns-B.txt",
+      "quality-inputs/dns-C.txt"
+    ],
+    "other_study_material_inspected": false,
+    "detector_calls_made": false,
+    "publication_performed": false,
+    "ranking_basis": "Correctness, usefulness for the stated reader, logical flow, precision, readability, professional tone, and necessary qualifications."
+  },
+  "source_checks": [
+    {
+      "id": "py-tutorial",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+      "status": "opened_and_relevant_passage_inspected",
+      "location": "4.9.1, default evaluation and None initialization example"
+    },
+    {
+      "id": "py-faq",
+      "url": "https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects",
+      "status": "opened_and_relevant_passages_inspected",
+      "location": "Shared defaults; changing a list through another name"
+    },
+    {
+      "id": "py-truth",
+      "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing",
+      "status": "opened_and_relevant_passage_inspected",
+      "location": "Truth Value Testing and Comparisons"
+    },
+    {
+      "id": "dns-rfc2308",
+      "url": "https://www.rfc-editor.org/rfc/rfc2308.html",
+      "status": "opened_and_relevant_passages_inspected",
+      "location": "Sections 3, 5, and 6"
+    },
+    {
+      "id": "dns-aws-soa",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html",
+      "status": "opened_and_relevant_passage_inspected",
+      "location": "SOA minimum, negative cache duration, and record recreation"
+    },
+    {
+      "id": "dns-aws-troubleshooting",
+      "url": "https://repost.aws/knowledge-center/route-53-troubleshoot-nxdomain-responses",
+      "status": "direct_open_failed_internal_error",
+      "location": "Not independently retrieved in this review"
+    }
+  ],
+  "evidence_limitations": [
+    "These are synthetic questions. No user repository, Python helper, DNS server, or resolver was exercised; the authoritative results are supplied scenario facts.",
+    "The AWS troubleshooting page returned an internal error on direct open. Its packet notes were available, but successful independent retrieval is not claimed. The accessible RFC and AWS SOA documentation support the material DNS rules; comparison with authoritative results follows from those rules and the scenario.",
+    "The preferences are one independent editorial judgment about these exact answers, not measured reader performance."
+  ],
+  "cases": [
+    {
+      "id": "prospective-python-default-list",
+      "answers": [
+        {
+          "id": "python-A",
+          "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "PY1",
+              "pass": true,
+              "finding": "Paragraph 1 correctly locates list creation at evaluation of the function definition."
+            },
+            {
+              "id": "PY2",
+              "pass": true,
+              "finding": "Paragraph 1 links omitted arguments, shared object reuse, and retained appended values."
+            },
+            {
+              "id": "PY3",
+              "pass": true,
+              "finding": "Paragraph 2 specifies items=None and fresh initialization only for items is None, including explicit None."
+            },
+            {
+              "id": "PY4",
+              "pass": true,
+              "finding": "Paragraph 2 rejects if not items because an empty supplied list must retain its identity."
+            },
+            {
+              "id": "PY5",
+              "pass": true,
+              "finding": "Paragraph 3 explicitly appends and returns items while preserving in-place mutation of empty supplied lists."
+            },
+            {
+              "id": "PY6",
+              "pass": true,
+              "finding": "The ending explicitly excludes copying supplied lists and preserves accumulation when one is reused."
+            }
+          ],
+          "practical_relevance": "Pass. Directly answers both the cause and the requested behavior without unrelated API changes.",
+          "readability_verdict": "Strongest overall flow: cause, precise condition, then resulting behavior. The identity warning sits next to the initialization it qualifies, and the last paragraph connects the fix to the caller contract.",
+          "tone_verdict": "Pass. Concise, calm, and professional; no invented experience, unnecessary quotations, or padding.",
+          "qualifications_pass": true,
+          "qualifications_finding": "Omitted and explicit None are equivalent only within this requested API; supplied-list identity and intentional accumulation are retained.",
+          "nonblocking_defects": [],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        },
+        {
+          "id": "python-B",
+          "sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "PY1",
+              "pass": true,
+              "finding": "Paragraph 3 correctly explains definition-time creation of the default list."
+            },
+            {
+              "id": "PY2",
+              "pass": true,
+              "finding": "Paragraph 3 explicitly describes sharing across omitted-argument calls and mutation of that object."
+            },
+            {
+              "id": "PY3",
+              "pass": true,
+              "finding": "The opening gives items=None and initialization only if items is None, covering both omission and None."
+            },
+            {
+              "id": "PY4",
+              "pass": true,
+              "finding": "Paragraph 2 correctly ties if not items to replacement of an empty caller-supplied list."
+            },
+            {
+              "id": "PY5",
+              "pass": true,
+              "finding": "The opening preserves append, return, and the caller's empty list object."
+            },
+            {
+              "id": "PY6",
+              "pass": true,
+              "finding": "The closing sentence explicitly preserves supplied lists and intentional accumulation."
+            }
+          ],
+          "practical_relevance": "Pass. Its opening provides the complete practical sequence immediately.",
+          "readability_verdict": "Clear and useful, with an especially direct opening. Ranked below python-A because the explanation returns to the root cause only after the implementation and identity warning, making the final paragraph carry both cause and the remaining caveat.",
+          "tone_verdict": "Pass. Direct and professional. The phrase in-place contract is appropriate for the stated developer reader.",
+          "qualifications_pass": true,
+          "qualifications_finding": "The intended treatment of None and empty supplied lists is explicit; no claim of isolation for reused supplied lists.",
+          "nonblocking_defects": [
+            "Discard the supplied object is understandable here as replacing the local reference, but is slightly less precise than describing preservation of the same object. It does not imply a factual failure in context."
+          ],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        },
+        {
+          "id": "python-C",
+          "sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "PY1",
+              "pass": true,
+              "finding": "Paragraph 3 places list creation at evaluation of the function definition."
+            },
+            {
+              "id": "PY2",
+              "pass": true,
+              "finding": "Paragraph 3 explains sharing and mutations persisting into later omitted-argument calls."
+            },
+            {
+              "id": "PY3",
+              "pass": true,
+              "finding": "Paragraph 1 supplies items=None and the items is None branch for both omission and explicit None."
+            },
+            {
+              "id": "PY4",
+              "pass": true,
+              "finding": "Paragraph 2 correctly rejects truthiness-based replacement of empty supplied lists."
+            },
+            {
+              "id": "PY5",
+              "pass": true,
+              "finding": "Paragraph 1 directs append and return while mutating the supplied list in place; the empty-list requirement is explicit."
+            },
+            {
+              "id": "PY6",
+              "pass": true,
+              "finding": "The ending preserves caller-supplied lists and accumulation when the same one is repeatedly passed."
+            }
+          ],
+          "practical_relevance": "Pass. Covers the complete requested behavior in compact prose.",
+          "readability_verdict": "Readable and concise, but the first paragraph is denser and the condition wording is less exact than the other answers. The short separate warning helps scanning, while the root cause is deferred to the last paragraph.",
+          "tone_verdict": "Pass. Natural, professional, and appropriately addressed to the reader.",
+          "qualifications_pass": true,
+          "qualifications_finding": "Its broad statement about removing shared default state is correctly limited by the preceding None branch and following supplied-list caveat.",
+          "nonblocking_defects": [
+            "The condition items is None should create a fresh list attributes the action to the condition rather than its branch. The intended implementation is clear, so this is a wording weakness rather than a technical rejection."
+          ],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        }
+      ],
+      "preference_groups": [
+        [
+          "python-A"
+        ],
+        [
+          "python-B"
+        ],
+        [
+          "python-C"
+        ]
+      ],
+      "quality_only_choice": "python-A",
+      "reason": "All three are acceptable and preserve all six claims. Python-A has the clearest connected explanation from cause to fix to preserved behavior. Python-B gives the most immediately actionable opening but delays the cause and compresses it with the final caveat. Python-C remains sound, but its condition-as-actor wording and denser opening create a meaningful readability disadvantage. These are editorial differences, not factual failures."
+    },
+    {
+      "id": "prospective-dns-negative-cache",
+      "answers": [
+        {
+          "id": "dns-A",
+          "sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "DNS1",
+              "pass": true,
+              "finding": "The opening and final paragraph explain the retained cached NXDOMAIN despite reported authoritative success."
+            },
+            {
+              "id": "DNS2",
+              "pass": true,
+              "finding": "Paragraph 2 correctly uses the original SOA values and min(600, 300) = 300 seconds."
+            },
+            {
+              "id": "DNS3",
+              "pass": true,
+              "finding": "Paragraph 2 gives at most 180 seconds, allows earlier eviction or caps, and rejects a creation-time reset."
+            },
+            {
+              "id": "DNS4",
+              "pass": true,
+              "finding": "Paragraph 1 separates the new A record's 60-second positive TTL from the existing negative countdown."
+            },
+            {
+              "id": "DNS5",
+              "pass": true,
+              "finding": "The ending prohibits reuse after expiration under the assumptions and requires current information without a worldwide guarantee."
+            },
+            {
+              "id": "DNS6",
+              "pass": true,
+              "finding": "The final paragraph requests recursive SOA-TTL comparison with authoritative replies and attributes success to the reader's report."
+            }
+          ],
+          "practical_relevance": "Pass. Directly answers whether lowering the A TTL would help and provides the correct timing and diagnostic comparison.",
+          "readability_verdict": "Clear overall, but the opening answers the last subquestion before explaining the underlying symptom. The final paragraph combines the diagnostic comparison, interpretation, expiration rule, and scope caveat, making it the densest ending.",
+          "tone_verdict": "Pass. Professional and measured; reported authoritative results are not represented as tests performed by the author.",
+          "qualifications_pass": true,
+          "qualifications_finding": "Original-entry timing, earlier removal, ordinary caching assumptions, and resolver-specific scope are retained.",
+          "protected_values_pass": true,
+          "nonblocking_defects": [
+            "Its TTL of 60 follows a sentence ending in cached NXDOMAIN. The intended A-record referent is recoverable from the number and positive-answer wording, but repeating the explicit referent in the other answers is easier to read."
+          ],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "arithmetic_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        },
+        {
+          "id": "dns-B",
+          "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "DNS1",
+              "pass": true,
+              "finding": "The opening directly explains why successful authoritative replies do not invalidate the resolver's cached NXDOMAIN."
+            },
+            {
+              "id": "DNS2",
+              "pass": true,
+              "finding": "Paragraph 2 labels both original SOA inputs and correctly calculates a 300-second negative TTL."
+            },
+            {
+              "id": "DNS3",
+              "pass": true,
+              "finding": "Paragraph 2 gives at most 180 seconds after 120, no restart, and possible earlier eviction or caps."
+            },
+            {
+              "id": "DNS4",
+              "pass": true,
+              "finding": "Paragraph 3 explicitly identifies the A record's 60-second positive TTL and its lack of effect on this negative entry."
+            },
+            {
+              "id": "DNS5",
+              "pass": true,
+              "finding": "Paragraph 3 disallows expired-entry reuse under the stated assumptions and avoids a worldwide visibility promise."
+            },
+            {
+              "id": "DNS6",
+              "pass": true,
+              "finding": "Paragraph 1 requests the remaining SOA TTL and direct-authoritative comparison, correctly using reported results as evidence."
+            }
+          ],
+          "practical_relevance": "Pass. Explains the observed mismatch immediately and identifies the relevant comparison.",
+          "readability_verdict": "Preferred. It connects the reported symptom to the cache in the opening, labels each numeric SOA input, and keeps the original duration, elapsed time, remaining bound, and early-removal caveat in one paragraph. The last paragraph clearly names the A-record TTL before addressing expiration.",
+          "tone_verdict": "Pass. Calm, precise, and professional with no invented tests, authorship claims, or padding.",
+          "qualifications_pass": true,
+          "qualifications_finding": "All requested timing and scope limitations are explicit or directly retained through the stated assumptions.",
+          "protected_values_pass": true,
+          "nonblocking_defects": [],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "arithmetic_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        },
+        {
+          "id": "dns-C",
+          "sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+          "factual_pass": true,
+          "acceptable": true,
+          "claim_findings": [
+            {
+              "id": "DNS1",
+              "pass": true,
+              "finding": "The first sentence explicitly states that the earlier NXDOMAIN can remain after creation."
+            },
+            {
+              "id": "DNS2",
+              "pass": true,
+              "finding": "Paragraph 1 correctly calculates min(600, 300) = 300 using the cached-time SOA values."
+            },
+            {
+              "id": "DNS3",
+              "pass": true,
+              "finding": "Paragraph 2 gives the 180-second maximum after 120, no restart, and possible earlier removal."
+            },
+            {
+              "id": "DNS4",
+              "pass": true,
+              "finding": "Paragraph 2 identifies the A TTL as 60 and states that lowering it cannot shorten the existing negative entry."
+            },
+            {
+              "id": "DNS5",
+              "pass": true,
+              "finding": "The ending limits expired-entry reuse under the assumptions and requires fresh information without a worldwide guarantee."
+            },
+            {
+              "id": "DNS6",
+              "pass": true,
+              "finding": "The final paragraph requests recursive SOA-TTL comparison and properly attributes authoritative success to the report."
+            }
+          ],
+          "practical_relevance": "Pass. Answers all parts in a compact sequence and includes the relevant diagnostic check.",
+          "readability_verdict": "Strong and concise, with an explicit opening cause. Ranked below dns-B because the formula labels follow the arithmetic and the original lifetime is separated from the remaining-time calculation; dns-B makes the numerical reasoning easier to inspect in one place.",
+          "tone_verdict": "Pass. Professional and appropriately qualified.",
+          "qualifications_pass": true,
+          "qualifications_finding": "Earlier caps or eviction, original-entry timing, the stated assumptions, and the limit on worldwide conclusions are preserved.",
+          "protected_values_pass": true,
+          "nonblocking_defects": [
+            "The final sentence compresses expiration, obtaining current information, and worldwide scope into one clause chain. It is understandable but less direct than dns-B's separate sentences."
+          ],
+          "code_review": {
+            "full_message_reviewed": true,
+            "inline_identifiers_reviewed": true,
+            "inline_semantics_pass": true,
+            "arithmetic_pass": true,
+            "independent_code_present": false,
+            "standalone_commands_present": false,
+            "exclusion_ranges": [],
+            "all_text_is_prose": true
+          },
+          "exclusion_ranges": []
+        }
+      ],
+      "preference_groups": [
+        [
+          "dns-B"
+        ],
+        [
+          "dns-C"
+        ],
+        [
+          "dns-A"
+        ]
+      ],
+      "quality_only_choice": "dns-B",
+      "reason": "All three pass all six claims. DNS-B most clearly connects the observed authoritative/recursive disagreement to the cache and groups the numerical reasoning with explicit labels and bounds. DNS-C is nearly as clear and more compact, but its calculation is split across paragraphs and its ending is more compressed. DNS-A has a recoverable pronoun ambiguity and defers the main causal explanation while prioritizing the TTL change. The ordering reflects meaningful differences in ease of reading, with no factual rejection."
+    }
+  ]
+}

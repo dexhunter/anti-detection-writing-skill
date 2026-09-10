@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "closed_at": "2026-09-10T17:33:08.992965+00:00",
+  "design": "adaptive development; one additional policy applied to two new outputs; same-session baseline receipts reused as predeclared",
+  "scan_scope": "prose_only",
+  "policy_sha256": "436d2e372b12abcf41e45948202656a30d06f5c42637e65aa42893570affd36e",
+  "review_sha256": "d12c453aec749bf8ec7bbe1b7d57bec4560b83a540c4f33e8c10bf2c0d765c7c",
+  "planned_cases": 2,
+  "quality_rejected_cases": 1,
+  "complete_pairs": 1,
+  "reductions": 0,
+  "ties": 1,
+  "development_mean_drop_percentage_points": null,
+  "development_mean_unavailable_reason": "All planned cases required; Python candidate lost quality comparison and was not scanned.",
+  "outcome": "not_supported",
+  "confirmation_opened": false,
+  "writing_policy_promoted": false,
+  "local_selection_used_for_adaptive_candidates": false,
+  "cases": [
+    {
+      "case_id": "prospective-python-default-list",
+      "baseline": {
+        "case_id": "prospective-python-default-list",
+        "id": "X",
+        "arm": "baseline",
+        "path": "quality-inputs/python-A.txt",
+        "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6"
+      },
+      "candidate": {
+        "case_id": "prospective-python-default-list",
+        "id": "Y",
+        "arm": "candidate",
+        "path": "adaptive-writer/python.txt",
+        "sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265"
+      },
+      "all_factual_pass": true,
+      "quality_preference": "baseline",
+      "eligible": false,
+      "state": "quality_preference_rejected_unscanned",
+      "reason": "X has a modest but meaningful advantage in explanation order: cause, fix and empty-list rationale, then preserved behavior. Y is also acceptable, but splits the conditional fix from its empty-list rationale and moves back to the cause after introducing the fix. The preference is for easier reading, not a factual difference.",
+      "baseline_measurement": {
+        "detector": "gptzero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "observed_at": "2026-09-10T17:20:16.847Z",
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0,
+        "ai_assisted": null,
+        "input_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+        "unit": "document_confidence_percent",
+        "label": null,
+        "short_text_warning": false,
+        "warnings": [],
+        "artifact_sha256": "570f39082e875101c8fd272f168209a9b774621343d022d1360b4ff7afa2e3ac"
+      },
+      "candidate_measurement": null,
+      "ai_confidence_drop_percentage_points": null,
+      "candidate_strictly_under_100": null,
+      "code_exclusions": []
+    },
+    {
+      "case_id": "prospective-dns-negative-cache",
+      "baseline": {
+        "case_id": "prospective-dns-negative-cache",
+        "id": "Y",
+        "arm": "baseline",
+        "path": "quality-inputs/dns-B.txt",
+        "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3"
+      },
+      "candidate": {
+        "case_id": "prospective-dns-negative-cache",
+        "id": "X",
+        "arm": "candidate",
+        "path": "adaptive-writer/dns.txt",
+        "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9"
+      },
+      "all_factual_pass": true,
+      "quality_preference": "candidate",
+      "eligible": true,
+      "state": "measured_unchanged",
+      "reason": "X has a modest but meaningful advantage in flow: it answers the cause, remaining lifetime, and proposed TTL change in the order asked, then gives the comparison. Y is also acceptable and its formula is slightly easier to parse, but its early diagnostic instruction interrupts that explanation. Both preserve the necessary uncertainty and scope.",
+      "baseline_measurement": {
+        "detector": "gptzero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "observed_at": "2026-09-10T17:22:15.234Z",
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0,
+        "ai_assisted": null,
+        "input_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+        "unit": "document_confidence_percent",
+        "label": null,
+        "short_text_warning": false,
+        "warnings": [],
+        "artifact_sha256": "90d5389ff4362f9bb84ab08721cc5a8935d030f92537f34afa299b8956f97b24"
+      },
+      "candidate_measurement": {
+        "detector": "gptzero",
+        "mode": "Basic Scan",
+        "model": "4.9b",
+        "observed_at": "2026-09-10T17:31:54.372Z",
+        "ai": 100.0,
+        "mixed": 0.0,
+        "human": 0.0,
+        "ai_assisted": null,
+        "input_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+        "unit": "document_confidence_percent",
+        "label": null,
+        "short_text_warning": false,
+        "warnings": [],
+        "artifact_sha256": "42faeee86c2bbb3bd28a4a72494abb72c77b6289a9895c0b12230a6c6c226761"
+      },
+      "ai_confidence_drop_percentage_points": 0.0,
+      "candidate_strictly_under_100": false,
+      "code_exclusions": []
+    }
+  ],
+  "consumption": {
+    "prior_baseline_scans": 2,
+    "prior_baseline_word_credits": 246,
+    "additional_candidate_scans": 1,
+    "additional_candidate_word_credits": 119,
+    "total_new_scans_this_round": 3,
+    "total_observed_word_credits_this_round": 365,
+    "paid_credits_purchased": false
+  },
+  "evidence_limits": [
+    "Fresh UI observations checked against exact saved inputs and native receipts; not independent service authentication.",
+    "Neutral-label quality reviews are LLM judgments on a shared filesystem.",
+    "Adaptive continuation follows observed failed baselines; not an untouched validation.",
+    "Original baseline came from selecting among three sequential answers; candidate came from one new output, so the workflow does not isolate a causal skill effect.",
+    "All eight unique texts are synthetic technical answers; no new Discussion answers were posted."
+  ]
+}

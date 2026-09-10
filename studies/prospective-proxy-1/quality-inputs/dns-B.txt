@@ -1,0 +1,5 @@
+Successful authoritative replies do not remove the NXDOMAIN already cached by this recursive resolver. Check its response and remaining SOA TTL against direct authoritative replies; your reported results support negative caching.
+
+The cached response used the smaller SOA value at that time: min(SOA TTL 600, SOA.MINIMUM 300) gives 300 seconds. After 120 seconds, the original entry has at most 180 seconds left, and creating the A record does not restart that period. Eviction or a resolver cap may end it sooner.
+
+The A record's TTL of 60 controls positive caching; lowering it leaves this negative countdown unchanged. Under the stated assumptions, the expired entry cannot answer later queries. The resolver needs current information for a fresh answer, without any promise of immediate worldwide visibility.

@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-09-10T17:23:27.852027+00:00",
+  "mode": "adaptive development; reused same-session baselines",
+  "files": {
+    "adaptive-protocol.md": "0a641c219dbf15e4b84f558d531d2f5fb08fdd9c026b0782ce7a3038fa3529e3",
+    "adaptive-operator.md": "5ef632747e6a3cfe4dc7ddc8a6909764dbee74eacc12fa57a269e9ad2e4355d4",
+    "adaptive-candidate-SKILL.md": "436d2e372b12abcf41e45948202656a30d06f5c42637e65aa42893570affd36e",
+    "sources/cases.json": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+    "scans/python-A/receipt.json": "570f39082e875101c8fd272f168209a9b774621343d022d1360b4ff7afa2e3ac",
+    "scans/dns-B/receipt.json": "90d5389ff4362f9bb84ab08721cc5a8935d030f92537f34afa299b8956f97b24"
+  },
+  "candidate_outputs_exist": false
+}

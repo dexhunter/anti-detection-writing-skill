@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "prospective-python-default-list",
+    "id": "X",
+    "arm": "baseline",
+    "path": "quality-inputs/python-A.txt",
+    "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6"
+  },
+  {
+    "case_id": "prospective-python-default-list",
+    "id": "Y",
+    "arm": "candidate",
+    "path": "adaptive-writer/python.txt",
+    "sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265"
+  },
+  {
+    "case_id": "prospective-dns-negative-cache",
+    "id": "X",
+    "arm": "candidate",
+    "path": "adaptive-writer/dns.txt",
+    "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9"
+  },
+  {
+    "case_id": "prospective-dns-negative-cache",
+    "id": "Y",
+    "arm": "baseline",
+    "path": "quality-inputs/dns-B.txt",
+    "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3"
+  }
+]

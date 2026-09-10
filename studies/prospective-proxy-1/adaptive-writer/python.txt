@@ -1,0 +1,5 @@
+For this API accepting lists or None, use items=None and create a fresh list only when items is None, giving omission and explicit None the same meaning.
+
+With items=[], Python creates the default list when it evaluates the function definition, not on each call. Calls omitting items reuse that list, so each append leaves values for later calls.
+
+After conditional initialization, append to items and return it. This preserves intentional in-place mutation of a supplied list, including an empty one. Avoid if not items: an empty list is false, so that check would replace the caller's object. The fix separates newly created lists across calls; it neither copies supplied lists nor prevents accumulation when the same list is passed again.

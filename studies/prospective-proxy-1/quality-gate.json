@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "review_sha256": "326a6a7b269e7c3dd27e595d9ff1b587ea1a0651e2676346c0e01def8b1f3269",
+  "manifest_sha256": "c41f973fce3fc9c9aa51539c6f8c89b1947f697a47e87a09f20db096ecf61841",
+  "cases": [
+    {
+      "id": "prospective-python-default-list",
+      "all_input_ids": [
+        "python-A",
+        "python-B",
+        "python-C"
+      ],
+      "eligible_ids": [
+        "python-A"
+      ],
+      "control_id": "python-A",
+      "state": "quality_ready"
+    },
+    {
+      "id": "prospective-dns-negative-cache",
+      "all_input_ids": [
+        "dns-A",
+        "dns-B",
+        "dns-C"
+      ],
+      "eligible_ids": [
+        "dns-B"
+      ],
+      "control_id": "dns-B",
+      "state": "quality_ready"
+    }
+  ],
+  "rule": "Best quality group only; quality control lexicographic ID; local minimum within same group; required decrease 0.01"
+}

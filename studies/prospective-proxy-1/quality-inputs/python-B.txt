@@ -1,0 +1,5 @@
+Set the default to items=None and initialize a new list only if items is None. Both omission and explicit None then request a fresh list. Next, append the value to items and return items, preserving the caller's list object even when it starts empty.
+
+The identity check matters: if not items also matches an empty list, so using it for initialization would discard the supplied object and break your in-place contract.
+
+The retained state comes from items=[] being evaluated when the function definition runs. It creates one default list, shared by calls that omit items, and appending changes that shared object. The None pattern separates the lists created by default; it does not copy supplied lists or stop intentional accumulation when callers reuse one.

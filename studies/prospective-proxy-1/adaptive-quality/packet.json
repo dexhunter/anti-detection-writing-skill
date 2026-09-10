@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "byte_convention": "exact UTF8 with one terminal LF; full prose; no independent code",
+  "cases": [
+    {
+      "id": "prospective-python-default-list",
+      "answers": [
+        {
+          "id": "X",
+          "text": "With items=[], Python creates the default list when the function definition is evaluated, rather than on each call. Calls that omit items reuse that list, so an append leaves values for later calls.\n\nUse items=None, then create a fresh list inside the function only when items is None. This deliberately handles omission and explicit None alike. Avoid if not items: an empty caller-supplied list is also false, but must stay the same object.\n\nAfter that check, append the supplied value to items and return items. A supplied list, even an empty one, is therefore mutated in place. The change gives separate lists to calls using None; it neither copies a supplied list nor prevents accumulated state when that list is passed again.\n",
+          "full_message_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "prose_sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "exclusion_ranges": []
+        },
+        {
+          "id": "Y",
+          "text": "For this API accepting lists or None, use items=None and create a fresh list only when items is None, giving omission and explicit None the same meaning.\n\nWith items=[], Python creates the default list when it evaluates the function definition, not on each call. Calls omitting items reuse that list, so each append leaves values for later calls.\n\nAfter conditional initialization, append to items and return it. This preserves intentional in-place mutation of a supplied list, including an empty one. Avoid if not items: an empty list is false, so that check would replace the caller's object. The fix separates newly created lists across calls; it neither copies supplied lists nor prevents accumulation when the same list is passed again.\n",
+          "full_message_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+          "prose_sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+          "exclusion_ranges": []
+        }
+      ]
+    },
+    {
+      "id": "prospective-dns-negative-cache",
+      "answers": [
+        {
+          "id": "X",
+          "text": "This resolver can still reuse its earlier NXDOMAIN entry after record creation. Its original negative TTL uses the SOA values when cached: min(600, 300), from SOA TTL and SOA.MINIMUM, is 300 seconds. After 120 seconds, at most 180 remain; earlier eviction or a resolver cap can shorten that. Creation does not restart the countdown.\n\nThe new A record's TTL of 60 governs positive caching; lowering it cannot shorten that negative entry. Under your ordinary caching assumptions, expiration ends reuse: a subsequent query needs current information for a fresh answer. Other resolvers can have different cache states.\n\nCompare this resolver's response and remaining SOA TTL with direct authoritative responses. Your reported success at every authoritative server supports negative caching here.\n",
+          "full_message_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+          "prose_sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+          "exclusion_ranges": []
+        },
+        {
+          "id": "Y",
+          "text": "Successful authoritative replies do not remove the NXDOMAIN already cached by this recursive resolver. Check its response and remaining SOA TTL against direct authoritative replies; your reported results support negative caching.\n\nThe cached response used the smaller SOA value at that time: min(SOA TTL 600, SOA.MINIMUM 300) gives 300 seconds. After 120 seconds, the original entry has at most 180 seconds left, and creating the A record does not restart that period. Eviction or a resolver cap may end it sooner.\n\nThe A record's TTL of 60 controls positive caching; lowering it leaves this negative countdown unchanged. Under the stated assumptions, the expired entry cannot answer later queries. The resolver needs current information for a fresh answer, without any promise of immediate worldwide visibility.\n",
+          "full_message_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "prose_sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "exclusion_ranges": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+The resolver can retain its earlier NXDOMAIN after the authoritative name is created. Its original negative TTL used the SOA values when cached: min(600, 300) = 300 seconds, from the SOA TTL and SOA.MINIMUM.
+
+After 120 seconds, at most 180 seconds remain. Creation does not restart that countdown; eviction or a resolver cap can shorten it. The new A record's TTL of 60 controls positive caching, so lowering it cannot shorten this existing negative entry.
+
+Compare the recursive reply and remaining SOA TTL with direct authoritative replies. Your reported authoritative success supports negative caching. Under the stated assumptions, expiration prevents reuse of this entry and requires current information for a fresh answer, without guaranteeing worldwide visibility.

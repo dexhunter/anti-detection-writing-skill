@@ -1,0 +1,5 @@
+This resolver can still reuse its earlier NXDOMAIN entry after record creation. Its original negative TTL uses the SOA values when cached: min(600, 300), from SOA TTL and SOA.MINIMUM, is 300 seconds. After 120 seconds, at most 180 remain; earlier eviction or a resolver cap can shorten that. Creation does not restart the countdown.
+
+The new A record's TTL of 60 governs positive caching; lowering it cannot shorten that negative entry. Under your ordinary caching assumptions, expiration ends reuse: a subsequent query needs current information for a fresh answer. Other resolvers can have different cache states.
+
+Compare this resolver's response and remaining SOA TTL with direct authoritative responses. Your reported success at every authoritative server supports negative caching here.

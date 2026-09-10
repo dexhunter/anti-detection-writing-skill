@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "frozen_at": "2026-09-10T17:01:29.200543+00:00",
+  "files": [
+    {
+      "path": "cases.json",
+      "sha256": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797"
+    },
+    {
+      "path": "novelty-audit.json",
+      "sha256": "6b1848d4a33d8d6d812e11126ce8a56dbb38a4de49dca1f1994139a82bba2bc3"
+    },
+    {
+      "path": "selection.md",
+      "sha256": "6432e0342d5e6c84b484bc37e15b2051a593885278bf79cdb205bdd0ccad131b"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Your helper needs to distinguish None from a supplied list, including an empty one. Use items=None as the default. Inside the function, the condition items is None should create a fresh list; omission and explicit None intentionally follow that same branch. Then append the value to items and return it, mutating a supplied list in place.
+
+Avoid if not items, because empty lists also test false and would be replaced.
+
+With items=[], the list is created when the function definition is evaluated. Omitted-argument calls share it, so mutations remain visible on later calls. Changing the default removes that shared default state. It does not copy caller-supplied lists: passing the same list repeatedly still accumulates values, as your API requires.

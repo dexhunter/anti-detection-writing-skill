@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-10T17:18:18.733504+00:00",
+  "status": "pass_after_fixes",
+  "scope": "Independent synthetic offline tests of selection_rule.py only",
+  "restrictions_observed": {
+    "real_drafts_read": false,
+    "actual_quality_reviews_read": false,
+    "actual_model_results_read": false,
+    "private_holdouts_read": false,
+    "detector_calls": 0
+  },
+  "test_file": "test_selection_rule.py",
+  "tests_added": 26,
+  "initial_run": {
+    "tests": 21,
+    "failures": 5,
+    "errors": 0
+  },
+  "expanded_pre_fix_run": {
+    "tests": 26,
+    "failures": 11,
+    "errors": 2
+  },
+  "findings": [
+    {
+      "id": "SR1",
+      "priority": 2,
+      "title": "Duplicate frozen inputs and review cases accepted",
+      "detail": "A seven-row manifest with six unique IDs passes; appending a second review of case-a yields duplicate planned cases instead of rejection.",
+      "tests": [
+        "test_duplicate_input_manifest_rows_rejected",
+        "test_duplicate_quality_case_rejected"
+      ],
+      "status": "resolved",
+      "verified_fix": "Checks exact six manifest rows and IDs; requires exactly two unique review case IDs matching the manifest case set."
+    },
+    {
+      "id": "SR2",
+      "priority": 2,
+      "title": "Case-level short circuits bypass score validation",
+      "detail": "NaN on a status-ok row is accepted when a sibling fails or the whole case is quality-rejected. Failed and unavailable rows also accept numeric values, and unknown statuses are treated as unavailable.",
+      "tests": [
+        "test_nonfinite_successful_record_rejected_even_when_another_record_failed",
+        "test_nonfinite_successful_record_rejected_in_quality_rejected_case",
+        "test_failed_or_unavailable_record_requires_null_score",
+        "test_unknown_local_status_rejected"
+      ],
+      "status": "resolved",
+      "verified_fix": "Validates every row status and score before any case-level skip; non-ok scores must be null and unknown statuses are rejected."
+    },
+    {
+      "id": "SR3",
+      "priority": 2,
+      "title": "Decimal 0.01 boundary rounds below dispatch threshold",
+      "detail": "Saved JSON values 0.03 and 0.02 subtract to a float slightly below 0.01; the selector marks this below_local_threshold. Use Decimal on saved decimal values for the threshold comparison.",
+      "tests": [
+        "test_one_percent_boundary_and_below_threshold"
+      ],
+      "status": "resolved",
+      "verified_fix": "Compares Decimal(str(before)) - Decimal(str(after)) against Decimal(\"0.01\"), then emits the delta as float."
+    },
+    {
+      "id": "SR4",
+      "priority": 2,
+      "title": "Quality gate uses only factual verdict",
+      "detail": "Answers with acceptable=false or qualifications_pass=false remain in the passing set. A correct preference list excluding those answers is rejected; an unsafe preference list including them is accepted. Missing acceptable verdict also passes.",
+      "tests": [
+        "test_all_quality_verdict_fields_must_pass_for_eligibility",
+        "test_preference_group_cannot_include_unacceptable_or_unqualified_answer",
+        "test_missing_quality_verdict_is_not_implicitly_passing"
+      ],
+      "status": "resolved",
+      "verified_fix": "Requires explicit boolean factual_pass, acceptable and qualifications_pass; only their conjunction enters the passing set."
+    }
+  ],
+  "passing_contracts": [
+    "Lexicographic quality-control tie break",
+    "Inferior ranked text cannot win on a low local score",
+    "Equal local score produces no-op",
+    "A failed alternative marks the whole quality-ready case unavailable",
+    "All quality-rejected planned cases retained",
+    "Missing, duplicate and unexpected local record IDs rejected",
+    "Quality review and input manifest exact bytes frozen between phases",
+    "Actual input hashes and local manifest/input hashes verified before selection"
+  ],
+  "focused_ruff": {
+    "command": "uvx ruff check selection_rule.py test_selection_rule.py",
+    "exit_code": 0,
+    "result": "All checks passed!"
+  },
+  "review_receipt_state": "Independent post-fix inspection, all 26 synthetic tests and focused Ruff passed.",
+  "unresolved_findings": [],
+  "reviewed_artifacts": {
+    "selection_rule.py": "86742834d3ca8b4bb8fad95825cb872b1a0a15196f7dc00e648a224ed627b1c8",
+    "test_selection_rule.py": "a45e4d5952f37a5ad1ac7e5fc8d433ee568b1312e24a0041fe9f95ef9bcf46b7"
+  },
+  "final_run": {
+    "runner": "uv run --no-project python -m unittest discover",
+    "test_pattern": "test_selection_rule.py",
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "duration_seconds_reported": 0.25,
+    "result": "OK",
+    "fixtures": "Temporary synthetic six-input/two-case packets only; no real prospective content or metrics."
+  },
+  "assessment": "No unresolved actionable findings in the bounded selection-rule review. Checks support this two-case/six-output selector contract, not detector validity, prose quality, or future GPTZero agreement."
+}

@@ -1,0 +1,5 @@
+With items=[], Python creates the default list when the function definition is evaluated, rather than on each call. Calls that omit items reuse that list, so an append leaves values for later calls.
+
+Use items=None, then create a fresh list inside the function only when items is None. This deliberately handles omission and explicit None alike. Avoid if not items: an empty caller-supplied list is also false, but must stay the same object.
+
+After that check, append the supplied value to items and return items. A supplied list, even an empty one, is therefore mutated in place. The change gives separate lists to calls using None; it neither copies a supplied list nor prevents accumulated state when that list is passed again.

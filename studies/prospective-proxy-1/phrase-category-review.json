@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-10",
+  "scope": "Eight saved study answers; illustrative phrase matches only, not exhaustive semantic pattern detection",
+  "patterns": {
+    "empty_commentary": "\\b(?:it is worth noting that|it\\x27s worth noting that|it is important to note that|it\\x27s important to note that)\\b",
+    "overblown_importance": "\\b(?:groundbreaking|revolutionary|game[ -]changing|pivotal|transformative)\\b",
+    "dressed_up_verbs": "\\b(?:utiliz(?:e|es|ed|ing)|leverag(?:e|es|ed|ing)|facilitat(?:e|es|ed|ing))\\b"
+  },
+  "results": [
+    {
+      "path": "quality-inputs/dns-A.txt",
+      "sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "quality-inputs/dns-B.txt",
+      "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "quality-inputs/dns-C.txt",
+      "sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "quality-inputs/python-A.txt",
+      "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "quality-inputs/python-B.txt",
+      "sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "quality-inputs/python-C.txt",
+      "sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "adaptive-writer/python.txt",
+      "sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    },
+    {
+      "path": "adaptive-writer/dns.txt",
+      "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+      "literal_matches": {
+        "empty_commentary": [],
+        "overblown_importance": [],
+        "dressed_up_verbs": []
+      }
+    }
+  ],
+  "literal_match_count": 0,
+  "manual_context_review": "No removable empty commentary, unsupported significance claims or unnecessarily elaborate verbs identified in these eight short technical replies. Explicit scope conditions, in-place mutation terminology and expiration qualifications preserve required meaning.",
+  "disposition": "no justified phrase-only edit; no additional detector scan",
+  "limitation": "Zero matches in these examples do not establish absence of every pattern, a detector pass or a score reduction."
+}

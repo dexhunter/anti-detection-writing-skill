@@ -21,6 +21,18 @@ The initial ten entries are short excerpts from [GPTZero's October 7, 2024 artic
 | “Tragically” | Keep it when it expresses the author's intended tone; remove it when it imposes unsupported emotion. |
 | “Impacting” | Name the actual effect if it is known. Preserve a precise physical or domain-specific meaning. |
 
+## GPTZero pattern categories
+
+Checked September 10, 2026 in the signed-in [GPTZero app](https://app.gptzero.me/), under Basic Scan → AI Patterns. The preview lists the three categories and multipliers below; it directs users to Advanced Scan for text-specific findings. A visible preview label is not evidence that the current answer contains that pattern. The preview does not supply its dataset, denominator or calculation method, so keep these as vendor-reported associations, not probabilities, detector weights or expected score reductions. The examples and editing advice are ours, not excerpts from a GPTZero pattern definition.
+
+| Category | Reported multiplier | Review for | Useful edit |
+| --- | ---: | --- | --- |
+| Empty commentary | 5.7× | Setup or evaluation that adds no fact: “It is worth noting that the cache may expire.” | State the useful fact directly: “The cache may expire.” Retain warnings, conditions and uncertainty. |
+| Overblown importance | 5.3× | Unsupported claims of significance: “This is a groundbreaking improvement to the workflow.” | Name the supported change: “The workflow now records failed scans.” Do not invent impact, a comparison or a measured result. |
+| Dressed-up verbs | 4.3× | An elaborate verb where a plain one has the same meaning: “Utilize the existing list.” | “Use the existing list.” Review “leverage” and “facilitate” in context; preserve distinctions such as enabling an action versus performing it, and literal technical meanings. |
+
+Check the whole sentence, not just a keyword. “Under the stated caching assumptions” supplies a real qualification; it is not empty commentary. “Critical” can denote an actual severity, and “leverage” can have a precise domain meaning. Preserve these uses when supported. Do not manufacture a pattern match to explain an unchanged score.
+
 ## Additional words and constructions
 
 Checked September 9, 2026. **Corpus observation** identifies usage differences in a particular research dataset. **Editorial heuristic** identifies a possible reading problem without a measured frequency or detector benefit here. Neither is a reason to rewrite an otherwise useful sentence.

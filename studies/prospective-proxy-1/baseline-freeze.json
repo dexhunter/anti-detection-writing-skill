@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-09-10T17:18:07.533432+00:00",
+  "addendum_sha256": "89325152e0cf4ed8729a2f0c84b0fe5d48c0eb13373ce2992be4f3713db05c87",
+  "quality_gate_sha256": "22e563a15ffc628dbe4769b3d78bb7b4e2beb419031fb78a1faf990aee989060",
+  "local_results_exist": false,
+  "input_ids": [
+    "python-A",
+    "dns-B"
+  ],
+  "scan_scope": "prose_only",
+  "code_exclusions": [],
+  "maximum_scans": 2,
+  "maximum_credits": 270,
+  "original_addendum_sha256": "704ccb845122697f54dc7aeedda2925bee7ff1db003bd617cb5d6f33d1dbc809",
+  "export_note": "Addendum hash refers to the public copy with live account allowance removed; original frozen addendum hash retained."
+}

@@ -1,0 +1,5 @@
+Lowering the new A record's TTL will not clear the cached NXDOMAIN. Its TTL of 60 applies to positive answers; the existing negative entry has its own countdown.
+
+That countdown began with the smaller of the original SOA TTL and SOA.MINIMUM: min(600, 300) = 300 seconds. With 120 seconds elapsed, at most 180 seconds remain, possibly less with eviction or a resolver cap. Creating the name does not reset this timer.
+
+Compare the recursive reply's remaining SOA TTL with direct authoritative responses. The authoritative success you report supports an older negative entry as the cause. Under your caching assumptions, expiration stops that entry answering queries; the resolver must obtain current information. This concerns that resolver, not a guarantee of immediate worldwide visibility.

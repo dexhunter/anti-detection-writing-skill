@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "purpose": "Compare complete answers for correctness, relevance, readability, professional tone and qualifications; no detector measurements supplied",
+  "sources": [
+    {
+      "id": "py-tutorial",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+      "title": "Python tutorial: Default Argument Values",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "displayed_version": "Python 3.14.7",
+      "relevant_location": "Section 4.9.1; function-definition timing and mutable-list example",
+      "fact_notes": [
+        "Default expressions run when the function definition is evaluated.",
+        "Omitted arguments reuse the stored default object; mutations persist.",
+        "The tutorial uses None and an identity check to create a list within the call."
+      ],
+      "evidence_type": "official documentation opened and relevant passage inspected"
+    },
+    {
+      "id": "py-faq",
+      "url": "https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects",
+      "title": "Python Programming FAQ: shared defaults",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "displayed_version": "Python 3.14.7",
+      "relevant_location": "Shared defaults; same-page section on changing a list through another name",
+      "fact_notes": [
+        "Mutable defaults can retain state between calls.",
+        "None is the documented fresh-object sentinel pattern.",
+        "Mutation through a reference affects the same list seen by its other references."
+      ],
+      "evidence_type": "official documentation opened and relevant passages inspected"
+    },
+    {
+      "id": "py-truth",
+      "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing",
+      "title": "Python Built-in Types: Truth Value Testing",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "displayed_version": "Python 3.14.7",
+      "relevant_location": "Truth Value Testing and Comparisons",
+      "fact_notes": [
+        "Both None and an empty list test false.",
+        "The is operator tests object identity."
+      ],
+      "evidence_type": "official documentation opened and relevant passage inspected"
+    },
+    {
+      "id": "dns-rfc2308",
+      "url": "https://www.rfc-editor.org/rfc/rfc2308.html",
+      "title": "RFC 2308: Negative Caching of DNS Queries",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "publication_date": "1998-03",
+      "relevant_location": "Sections 3, 5 and 6",
+      "fact_notes": [
+        "Authoritative negative answers carry SOA information.",
+        "Negative TTL is the smaller of the SOA record TTL and SOA.MINIMUM.",
+        "The cached TTL counts down; ordinary RFC 2308 reuse ends at expiration.",
+        "A cached negative response carries the remaining SOA TTL."
+      ],
+      "evidence_type": "primary standards document opened and relevant sections inspected"
+    },
+    {
+      "id": "dns-aws-soa",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html",
+      "title": "Amazon Route 53: NS and SOA records",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "relevant_location": "The start of authority (SOA) record",
+      "fact_notes": [
+        "Negative caching records nonexistence.",
+        "Its duration uses the lesser of the SOA TTL and minimum field.",
+        "Recreating a record can leave users receiving the previously cached negative response."
+      ],
+      "evidence_type": "authoritative provider documentation opened and relevant passage inspected"
+    },
+    {
+      "id": "dns-aws-troubleshooting",
+      "url": "https://repost.aws/knowledge-center/route-53-troubleshoot-nxdomain-responses",
+      "title": "AWS official: Troubleshoot NXDOMAIN responses",
+      "retrieved_at": "2026-09-10T17:01:29.200543+00:00",
+      "relevant_location": "Check whether the issue results from negative caching",
+      "fact_notes": [
+        "The example queries a missing name, caches NXDOMAIN, creates the record, and still receives NXDOMAIN through the resolver.",
+        "A query directly to the authoritative name server is the documented check."
+      ],
+      "evidence_type": "AWS OFFICIAL article content returned in web search; two subsequent direct opens returned internal errors; no claim of successful direct-open retrieval"
+    }
+  ],
+  "cases": [
+    {
+      "id": "prospective-python-default-list",
+      "topic": "Python mutable default arguments",
+      "origin": "new synthetic question",
+      "reader": "A Python developer fixing unintended retained state while preserving an intentional in-place list API.",
+      "question": "My Python helper has an optional items=[] parameter, appends the supplied value, and returns items. Calls that omit items keep earlier values. I want a fresh list when items is omitted or None, but a caller-supplied list, including an empty one, must be appended to in place. Why does the state carry over, and what default and condition preserve that behavior? Explain in prose; no complete function is needed.",
+      "required_claims": [
+        {
+          "id": "PY1",
+          "claim": "The list default is created when that function definition is evaluated, not anew on each call.",
+          "source_ids": [
+            "py-tutorial"
+          ],
+          "limiting_condition": null,
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "PY2",
+          "claim": "Calls omitting items share that default list, so appending leaves state visible to later omitted-argument calls.",
+          "source_ids": [
+            "py-tutorial",
+            "py-faq"
+          ],
+          "limiting_condition": null,
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "PY3",
+          "claim": "Use items=None and create a fresh list inside the function only when items is None.",
+          "source_ids": [
+            "py-tutorial",
+            "py-faq"
+          ],
+          "limiting_condition": "This API deliberately treats omitted and explicit None the same.",
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "PY4",
+          "claim": "Use the identity check items is None, not a general truthiness check such as if not items.",
+          "source_ids": [
+            "py-truth",
+            "py-tutorial"
+          ],
+          "limiting_condition": "An empty supplied list is false but must remain the caller's object.",
+          "evidence_kind": "inference from documented truth-value and identity rules"
+        },
+        {
+          "id": "PY5",
+          "claim": "After the conditional initialization, append to and return items; a supplied list is mutated in place, including when initially empty.",
+          "source_ids": [
+            "py-faq",
+            "py-tutorial"
+          ],
+          "limiting_condition": "In-place mutation is the explicit caller contract, not a side effect to remove.",
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "PY6",
+          "claim": "This fix separates default-created lists across calls; it does not make a copy of an explicitly supplied list or prevent its intentional accumulated state.",
+          "source_ids": [
+            "py-faq"
+          ],
+          "limiting_condition": "Do not promise isolation for calls that pass the same list.",
+          "evidence_kind": "inference from the None branch and documented shared references"
+        }
+      ],
+      "limiting_conditions": [
+        "Ordinary Python function calls; the function definition is not rerun between the described calls.",
+        "items is either None or a built-in list.",
+        "Explicitly supplied lists must be mutated; list copying would change the requested API.",
+        "None does not represent meaningful list contents in this API."
+      ],
+      "protected_inline_identifiers": [
+        "items",
+        "items=[]",
+        "items=None",
+        "None",
+        "items is None",
+        "if not items",
+        "append"
+      ],
+      "protected_span_policy": "Preserve spelling and semantics when used; required initialization and test must be described. These are inline identifiers, not removable detector exclusions.",
+      "independent_code_required": false,
+      "scope": "prose_only",
+      "target_answer_words": {
+        "minimum": 110,
+        "maximum": 130,
+        "policy": "Natural compact explanation; no padding to reach a detector minimum."
+      },
+      "source_ids": [
+        "py-tutorial",
+        "py-faq",
+        "py-truth"
+      ],
+      "source_urls": [
+        "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+        "https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects",
+        "https://docs.python.org/3/library/stdtypes.html#truth-value-testing"
+      ],
+      "retrieval_date": "2026-09-10",
+      "excluded_scope": [
+        "Dataclasses and class attributes",
+        "Thread safety",
+        "Custom sentinel design",
+        "CPython internals",
+        "Complete code examples"
+      ],
+      "answers": [
+        {
+          "id": "python-A",
+          "path": "quality-inputs/python-A.txt",
+          "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+          "text": "With items=[], Python creates the default list when the function definition is evaluated, rather than on each call. Calls that omit items reuse that list, so an append leaves values for later calls.\n\nUse items=None, then create a fresh list inside the function only when items is None. This deliberately handles omission and explicit None alike. Avoid if not items: an empty caller-supplied list is also false, but must stay the same object.\n\nAfter that check, append the supplied value to items and return items. A supplied list, even an empty one, is therefore mutated in place. The change gives separate lists to calls using None; it neither copies a supplied list nor prevents accumulated state when that list is passed again.\n",
+          "whitespace_words": 122
+        },
+        {
+          "id": "python-B",
+          "path": "quality-inputs/python-B.txt",
+          "sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+          "text": "Set the default to items=None and initialize a new list only if items is None. Both omission and explicit None then request a fresh list. Next, append the value to items and return items, preserving the caller's list object even when it starts empty.\n\nThe identity check matters: if not items also matches an empty list, so using it for initialization would discard the supplied object and break your in-place contract.\n\nThe retained state comes from items=[] being evaluated when the function definition runs. It creates one default list, shared by calls that omit items, and appending changes that shared object. The None pattern separates the lists created by default; it does not copy supplied lists or stop intentional accumulation when callers reuse one.\n",
+          "whitespace_words": 124
+        },
+        {
+          "id": "python-C",
+          "path": "quality-inputs/python-C.txt",
+          "sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+          "text": "Your helper needs to distinguish None from a supplied list, including an empty one. Use items=None as the default. Inside the function, the condition items is None should create a fresh list; omission and explicit None intentionally follow that same branch. Then append the value to items and return it, mutating a supplied list in place.\n\nAvoid if not items, because empty lists also test false and would be replaced.\n\nWith items=[], the list is created when the function definition is evaluated. Omitted-argument calls share it, so mutations remain visible on later calls. Changing the default removes that shared default state. It does not copy caller-supplied lists: passing the same list repeatedly still accumulates values, as your API requires.\n",
+          "whitespace_words": 119
+        }
+      ]
+    },
+    {
+      "id": "prospective-dns-negative-cache",
+      "topic": "DNS negative caching after creating a name",
+      "origin": "new synthetic question",
+      "reader": "A developer diagnosing why one recursive resolver still reports a newly created DNS name as missing.",
+      "question": "A recursive resolver cached NXDOMAIN for a previously absent name 120 seconds ago. At that time the zone SOA record TTL was 600 seconds and SOA.MINIMUM was 300 seconds. I have now created an A record with TTL 60; direct queries to every authoritative server return it, but that resolver still returns NXDOMAIN. Assume reachable servers and ordinary RFC 2308 caching without serving expired data. Why can this happen, how much of the original negative-cache lifetime remains, and would lowering the new A record TTL fix that cached response?",
+      "required_claims": [
+        {
+          "id": "DNS1",
+          "claim": "The resolver can retain the earlier NXDOMAIN as a negative cache entry after the authoritative name has been created.",
+          "source_ids": [
+            "dns-aws-soa",
+            "dns-aws-troubleshooting"
+          ],
+          "limiting_condition": null,
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "DNS2",
+          "claim": "The original negative TTL is min(SOA TTL, SOA.MINIMUM): min(600, 300) = 300 seconds.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-soa"
+          ],
+          "limiting_condition": "Use the zone values at the time the negative response was cached.",
+          "evidence_kind": "source rule applied to supplied synthetic numbers"
+        },
+        {
+          "id": "DNS3",
+          "claim": "After 120 seconds, that original entry has at most 180 seconds remaining; record creation does not restart that countdown.",
+          "source_ids": [
+            "dns-rfc2308"
+          ],
+          "limiting_condition": "A resolver may evict or cap entries sooner, so 180 seconds is not a guaranteed delay.",
+          "evidence_kind": "arithmetic and inference from the original TTL countdown"
+        },
+        {
+          "id": "DNS4",
+          "claim": "The new A record TTL of 60 controls caching of its positive answer; reducing it does not shorten the existing negative entry.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-soa"
+          ],
+          "limiting_condition": "Do not substitute the new positive TTL for the cached negative TTL.",
+          "evidence_kind": "inference from separately cached answer lifetimes"
+        },
+        {
+          "id": "DNS5",
+          "claim": "Under the stated ordinary caching assumptions, the expired negative entry cannot answer subsequent queries; the resolver must obtain current information for a fresh answer.",
+          "source_ids": [
+            "dns-rfc2308"
+          ],
+          "limiting_condition": "This is not a promise of immediate worldwide visibility; the example excludes serving expired data.",
+          "evidence_kind": "source-grounded"
+        },
+        {
+          "id": "DNS6",
+          "claim": "Compare the recursive response and its remaining SOA TTL with direct authoritative responses; the supplied authoritative success supports negative caching as the explanation.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-troubleshooting"
+          ],
+          "limiting_condition": "Authoritative availability is supplied scenario evidence, not a test performed in this study.",
+          "evidence_kind": "source-grounded"
+        }
+      ],
+      "limiting_conditions": [
+        "The original response was NXDOMAIN for this exact name, not NODATA or SERVFAIL.",
+        "The synthetic 600-second value is the zone SOA record TTL before reduction for the negative response; SOA.MINIMUM is 300.",
+        "Exactly 120 seconds have elapsed since the described resolver cached that original response.",
+        "All authoritative servers now serve the A record and are reachable.",
+        "No serve-stale behavior, DNSSEC aggressive synthesis, split-horizon DNS, or delegation mismatch is in scope.",
+        "Independent resolvers may have different cache states; this case concerns the one specified entry."
+      ],
+      "protected_inline_identifiers": [
+        "NXDOMAIN",
+        "SOA",
+        "SOA.MINIMUM",
+        "A",
+        "TTL"
+      ],
+      "protected_values": {
+        "zone_SOA_TTL_seconds": 600,
+        "SOA_MINIMUM_seconds": 300,
+        "elapsed_since_negative_cached_seconds": 120,
+        "new_A_TTL_seconds": 60,
+        "calculated_original_negative_TTL_seconds": 300,
+        "maximum_remaining_original_entry_seconds": 180
+      },
+      "protected_span_policy": "Keep protocol identifiers and given numbers exact. No independent command line is required.",
+      "independent_code_required": false,
+      "scope": "prose_only",
+      "target_answer_words": {
+        "minimum": 110,
+        "maximum": 130,
+        "policy": "Natural compact explanation; no padding to reach a detector minimum."
+      },
+      "source_ids": [
+        "dns-rfc2308",
+        "dns-aws-soa",
+        "dns-aws-troubleshooting"
+      ],
+      "source_urls": [
+        "https://www.rfc-editor.org/rfc/rfc2308.html",
+        "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html",
+        "https://repost.aws/knowledge-center/route-53-troubleshoot-nxdomain-responses"
+      ],
+      "retrieval_date": "2026-09-10",
+      "excluded_scope": [
+        "OS/browser cache flush instructions",
+        "Public resolver administration",
+        "Provider changes or DNS mutations",
+        "DNSSEC denial proofs",
+        "Resolver failure retry policies"
+      ],
+      "answers": [
+        {
+          "id": "dns-A",
+          "path": "quality-inputs/dns-A.txt",
+          "sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+          "text": "Lowering the new A record's TTL will not clear the cached NXDOMAIN. Its TTL of 60 applies to positive answers; the existing negative entry has its own countdown.\n\nThat countdown began with the smaller of the original SOA TTL and SOA.MINIMUM: min(600, 300) = 300 seconds. With 120 seconds elapsed, at most 180 seconds remain, possibly less with eviction or a resolver cap. Creating the name does not reset this timer.\n\nCompare the recursive reply's remaining SOA TTL with direct authoritative responses. The authoritative success you report supports an older negative entry as the cause. Under your caching assumptions, expiration stops that entry answering queries; the resolver must obtain current information. This concerns that resolver, not a guarantee of immediate worldwide visibility.\n",
+          "whitespace_words": 122
+        },
+        {
+          "id": "dns-B",
+          "path": "quality-inputs/dns-B.txt",
+          "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+          "text": "Successful authoritative replies do not remove the NXDOMAIN already cached by this recursive resolver. Check its response and remaining SOA TTL against direct authoritative replies; your reported results support negative caching.\n\nThe cached response used the smaller SOA value at that time: min(SOA TTL 600, SOA.MINIMUM 300) gives 300 seconds. After 120 seconds, the original entry has at most 180 seconds left, and creating the A record does not restart that period. Eviction or a resolver cap may end it sooner.\n\nThe A record's TTL of 60 controls positive caching; lowering it leaves this negative countdown unchanged. Under the stated assumptions, the expired entry cannot answer later queries. The resolver needs current information for a fresh answer, without any promise of immediate worldwide visibility.\n",
+          "whitespace_words": 124
+        },
+        {
+          "id": "dns-C",
+          "path": "quality-inputs/dns-C.txt",
+          "sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+          "text": "The resolver can retain its earlier NXDOMAIN after the authoritative name is created. Its original negative TTL used the SOA values when cached: min(600, 300) = 300 seconds, from the SOA TTL and SOA.MINIMUM.\n\nAfter 120 seconds, at most 180 seconds remain. Creation does not restart that countdown; eviction or a resolver cap can shorten it. The new A record's TTL of 60 controls positive caching, so lowering it cannot shorten this existing negative entry.\n\nCompare the recursive reply and remaining SOA TTL with direct authoritative replies. Your reported authoritative success supports negative caching. Under the stated assumptions, expiration prevents reuse of this entry and requires current information for a fresh answer, without guaranteeing worldwide visibility.\n",
+          "whitespace_words": 116
+        }
+      ]
+    }
+  ]
+}

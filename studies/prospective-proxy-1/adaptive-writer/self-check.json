@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "status": "first_pass_complete",
+  "scope": "prose_only",
+  "policy_sha256": "436d2e372b12abcf41e45948202656a30d06f5c42637e65aa42893570affd36e",
+  "policy_hash_association": "SHA-256 of supplied adaptive-candidate-SKILL.md; only permitted sections were read into context.",
+  "operator_sha256": "5ef632747e6a3cfe4dc7ddc8a6909764dbee74eacc12fa57a269e9ad2e4355d4",
+  "fact_packet_sha256": "d8a42c7a044ab923e7fefb20d0eb7de5d841285a777dfe09f430bd310e7d2797",
+  "actual_exposed_model_settings": {
+    "model_id": "unavailable",
+    "reasoning_effort": "unavailable",
+    "temperature": "unavailable",
+    "seed": "unavailable",
+    "note": "No exact active model identifier or generation settings were exposed to this writer."
+  },
+  "provenance": {
+    "source_evidence": "Supplied frozen fact packet and its source inventory; no external sources fetched by this writer.",
+    "tests_performed": false,
+    "firsthand_observations_claimed": false,
+    "detector_called": false,
+    "detector_results_read": false,
+    "independent_review": "Not performed by this writer; the coverage assessment is a writer self-check.",
+    "publication": "Local synthetic replies only; no destination or publication.",
+    "independent_code_blocks": [],
+    "standalone_commands": []
+  },
+  "answers": [
+    {
+      "case_id": "prospective-python-default-list",
+      "path": "adaptive-writer/python.txt",
+      "sha256": "253090539fc17b5936797a2e3cb6b4b911d4234afe751dc08994135011de7265",
+      "word_count": 120,
+      "word_count_method": "Whitespace-delimited: len(text.split()).",
+      "ends_with_exactly_one_lf": true,
+      "per_claim_coverage": [
+        {
+          "claim_id": "PY1",
+          "status": "preserved",
+          "exact_supporting_text": "Python creates the default list when it evaluates the function definition, not on each call.",
+          "source_ids": [
+            "py-tutorial"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": null
+        },
+        {
+          "claim_id": "PY2",
+          "status": "preserved",
+          "exact_supporting_text": "Calls omitting items reuse that list, so each append leaves values for later calls.",
+          "source_ids": [
+            "py-tutorial",
+            "py-faq"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": null
+        },
+        {
+          "claim_id": "PY3",
+          "status": "preserved",
+          "exact_supporting_text": "use items=None and create a fresh list only when items is None, giving omission and explicit None the same meaning.",
+          "source_ids": [
+            "py-tutorial",
+            "py-faq"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": "This API deliberately treats omitted and explicit None the same."
+        },
+        {
+          "claim_id": "PY4",
+          "status": "preserved",
+          "exact_supporting_text": "Avoid if not items: an empty list is false, so that check would replace the caller's object.",
+          "source_ids": [
+            "py-truth",
+            "py-tutorial"
+          ],
+          "evidence_kind": "inference from documented truth-value and identity rules",
+          "limiting_condition": "An empty supplied list is false but must remain the caller's object."
+        },
+        {
+          "claim_id": "PY5",
+          "status": "preserved",
+          "exact_supporting_text": "After conditional initialization, append to items and return it. This preserves intentional in-place mutation of a supplied list, including an empty one.",
+          "source_ids": [
+            "py-faq",
+            "py-tutorial"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": "In-place mutation is the explicit caller contract, not a side effect to remove."
+        },
+        {
+          "claim_id": "PY6",
+          "status": "preserved",
+          "exact_supporting_text": "The fix separates newly created lists across calls; it neither copies supplied lists nor prevents accumulation when the same list is passed again.",
+          "source_ids": [
+            "py-faq"
+          ],
+          "evidence_kind": "inference from the None branch and documented shared references",
+          "limiting_condition": "Do not promise isolation for calls that pass the same list."
+        }
+      ],
+      "limiting_conditions": [
+        {
+          "condition": "Ordinary calls without reevaluating the function definition between calls.",
+          "status": "preserved",
+          "basis": "Default creation is explicitly tied to evaluation of the function definition; the described later calls reuse it."
+        },
+        {
+          "condition": "items is None or a built-in list.",
+          "status": "preserved",
+          "basis": "The opening scopes the reply to the supplied API accepting lists or None; no custom object behavior is claimed."
+        },
+        {
+          "condition": "Caller-supplied lists must be mutated; copying would change the API.",
+          "status": "preserved",
+          "basis": "Intentional in-place mutation, including empty lists, is explicit; the reply says supplied lists are not copied."
+        },
+        {
+          "condition": "None has no separate meaningful list-content role in this API.",
+          "status": "preserved",
+          "basis": "The reply deliberately gives omission and explicit None the same meaning."
+        }
+      ],
+      "required_claims_removed_or_corrected": [],
+      "scope_cuts": "No required claims cut. Source background outside the supplied question and excluded scope is omitted.",
+      "concerns": []
+    },
+    {
+      "case_id": "prospective-dns-negative-cache",
+      "path": "adaptive-writer/dns.txt",
+      "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+      "word_count": 119,
+      "word_count_method": "Whitespace-delimited: len(text.split()).",
+      "ends_with_exactly_one_lf": true,
+      "per_claim_coverage": [
+        {
+          "claim_id": "DNS1",
+          "status": "preserved",
+          "exact_supporting_text": "This resolver can still reuse its earlier NXDOMAIN entry after record creation.",
+          "source_ids": [
+            "dns-aws-soa",
+            "dns-aws-troubleshooting"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": null
+        },
+        {
+          "claim_id": "DNS2",
+          "status": "preserved",
+          "exact_supporting_text": "Its original negative TTL uses the SOA values when cached: min(600, 300), from SOA TTL and SOA.MINIMUM, is 300 seconds.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-soa"
+          ],
+          "evidence_kind": "source rule applied to supplied synthetic numbers",
+          "limiting_condition": "Use the zone values at the time the negative response was cached."
+        },
+        {
+          "claim_id": "DNS3",
+          "status": "preserved",
+          "exact_supporting_text": "After 120 seconds, at most 180 remain; earlier eviction or a resolver cap can shorten that. Creation does not restart the countdown.",
+          "source_ids": [
+            "dns-rfc2308"
+          ],
+          "evidence_kind": "arithmetic and inference from the original TTL countdown",
+          "limiting_condition": "A resolver may evict or cap entries sooner, so 180 seconds is not a guaranteed delay."
+        },
+        {
+          "claim_id": "DNS4",
+          "status": "preserved",
+          "exact_supporting_text": "The new A record's TTL of 60 governs positive caching; lowering it cannot shorten that negative entry.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-soa"
+          ],
+          "evidence_kind": "inference from separately cached answer lifetimes",
+          "limiting_condition": "Do not substitute the new positive TTL for the cached negative TTL."
+        },
+        {
+          "claim_id": "DNS5",
+          "status": "preserved",
+          "exact_supporting_text": "Under your ordinary caching assumptions, expiration ends reuse: a subsequent query needs current information for a fresh answer. Other resolvers can have different cache states.",
+          "source_ids": [
+            "dns-rfc2308"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": "This is not a promise of immediate worldwide visibility; the example excludes serving expired data."
+        },
+        {
+          "claim_id": "DNS6",
+          "status": "preserved",
+          "exact_supporting_text": "Compare this resolver's response and remaining SOA TTL with direct authoritative responses. Your reported success at every authoritative server supports negative caching here.",
+          "source_ids": [
+            "dns-rfc2308",
+            "dns-aws-troubleshooting"
+          ],
+          "evidence_kind": "source-grounded",
+          "limiting_condition": "Authoritative availability is supplied scenario evidence, not a test performed in this study."
+        }
+      ],
+      "limiting_conditions": [
+        {
+          "condition": "The original entry is NXDOMAIN for the specified name, not NODATA or SERVFAIL.",
+          "status": "preserved",
+          "basis": "The reply consistently addresses this resolver and its earlier NXDOMAIN entry."
+        },
+        {
+          "condition": "600 is the zone SOA TTL before negative-response reduction; SOA.MINIMUM is 300.",
+          "status": "preserved",
+          "basis": "The original TTL calculation explicitly uses SOA values at caching time and identifies their order."
+        },
+        {
+          "condition": "Exactly 120 seconds have elapsed.",
+          "status": "preserved",
+          "basis": "The reply states 120 elapsed and at most 180 remaining."
+        },
+        {
+          "condition": "All authoritative servers serve the record and are reachable.",
+          "status": "preserved",
+          "basis": "The supplied success at every authoritative server is attributed to the question; ordinary assumptions are retained."
+        },
+        {
+          "condition": "Ordinary caching excludes serving expired data, aggressive DNSSEC synthesis, split-horizon DNS and delegation mismatch.",
+          "status": "preserved",
+          "basis": "The expiration claim is explicitly scoped to the question's ordinary caching assumptions; excluded mechanisms are not introduced."
+        },
+        {
+          "condition": "Independent resolvers may differ; this is one specified entry.",
+          "status": "preserved",
+          "basis": "This resolver and that negative entry remain the subjects; different cache states at other resolvers are explicit."
+        }
+      ],
+      "required_claims_removed_or_corrected": [],
+      "scope_cuts": "No required claims cut. Source background outside the supplied question and excluded scope is omitted.",
+      "concerns": []
+    }
+  ],
+  "concerns": []
+}

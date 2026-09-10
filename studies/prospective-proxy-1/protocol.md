@@ -1,0 +1,27 @@
+# Prospective local-selection diagnostic
+
+Frozen September 10, 2026, before any draft, local score or new GPTZero result. Continue the completed historical proxy comparison with two new synthetic technical questions: Python mutable defaults and DNS negative caching. Use the separate frozen source packet, not sealed confirmation cases from earlier studies.
+
+This tests whether a local detector's choice differs usefully from a quality-only choice among acceptable prose drafts. It is a prospective diagnostic, not a validation of general detector accuracy, a full controller round or a default writing-policy promotion.
+
+## Generation and independent quality gate
+
+Use one fresh writer context that has read only the incumbent's purpose/facts and writing/review instructions, with no linked detector research or historical outcomes. Produce exactly three complete presentations for each question from the same fact-only packet. They are sequential alternatives from the same writer, not independent model samples. Use the same natural 110–130-word target and maximum 130 words for all; never add filler to meet a minimum or omit a claim to fit a ceiling. If a full answer needs more space or naturally fewer words, preserve it and mark the budget/length issue for review. No post-score editing, quote additions, deliberate errors or fabricated experience.
+
+Assign neutral labels using a frozen deterministic seed before a separate fresh reviewer sees the texts. That reviewer gets the full source evidence and six answers, without detector scores or writer labels. Review each required claim, scope, relevance, readability and professional tone. Rank each case into ordered preference groups; use a shared top group only when there is no meaningful readability preference between its members. Return exact full-message hashes and explicit empty code exclusions, or identify a real exclusion. No code is planned; inline identifiers and values stay in prose.
+
+The quality-only control is the lexicographically first neutral ID in the reviewer's best acceptable group. Only other members of that same group may replace it. A factually failed text or one with a meaningful readability disadvantage is ineligible. Retain all six outputs and all rejections. Do not repair or reselect after seeing scores.
+
+## Local ranking and commercial confirmation
+
+Before local inference, freeze exact full-message and prose hashes, the review, groups and rule. Score all six complete prose inputs with the same pinned Greyscope MLX 4-bit pipeline already exercised; retain failed or over-limit inputs as null, with no truncation. Preserve source bytes, normalized text, calibrated prompt, native outputs, versions and file hashes. A local unavailable result makes that case unavailable for selection; it must not silently shrink the eligible set.
+
+The candidate is the member of the best acceptable group with the lowest full-precision calibrated AI involvement, ties broken by neutral ID. If it is the quality-only control, record a no-op and make no duplicate commercial scan. Require a local decrease of at least 0.01 to dispatch a distinct pair; smaller variation is retained as a no-dispatch result. This is a frozen diagnostic selection rule, not an adopted automatic selector.
+
+Use fresh GPTZero Basic scans in the signed-in Chrome, with prose_only declared for both arms. All explanatory prose and inline identifiers remain included; reviewed independent code, if any, is excluded and retained separately. Record exact submitted/editor bytes, full-message/prose association, native AI/mixed/human confidences, displayed model, mode, completed fresh state, warnings and actual credit changes. Preserve all attempts, including uncertain or failed ones. The input must match its reviewed prose under an explicitly recorded entry transform; no semantic normalization may hide a content change.
+
+Maximum four commercial scans and 540 words for this entire diagnostic, at most two paired comparisons. Reserve both displayed editor word counts before dispatching either arm, and reserve every eligible planned pair before the first scan. If the selected set cannot fit, retain it unscanned; do not shrink answers, replace candidates, purchase credits or change the criterion. The experimental round budget cannot be reset by a new directory. Do not open earlier sealed confirmation cases.
+
+Case order is Python then DNS. For a dispatched Python pair scan control then candidate; for DNS scan candidate then control. No reruns or additional candidates after scores. Stop new dispatch on a service failure until the original outcome is reconciled. An expired login may be restored within the same prepared run. The active work budget is 45 minutes from protocol freeze, excluding a user sign-in handoff; no recurring background job is created.
+
+Report every planned case, no-op, rejection and unavailable comparison. The endpoint of interest is a fresh GPTZero AI-confidence decrease of at least five percentage points, with the user's strictly-below-100 target reported separately. Local AI involvement and GPTZero confidence retain distinct units. A lower score on a synthetic case is not authorship proof or a general writing-method improvement. Independently audit final arithmetic and receipts before publishing any research conclusion. Preserve the incumbent writing instructions unless a supported, appropriately limited lesson follows.

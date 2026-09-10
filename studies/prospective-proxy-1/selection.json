@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "prospective local-selection diagnostic",
+  "cases": [
+    {
+      "id": "prospective-python-default-list",
+      "all_input_ids": [
+        "python-A",
+        "python-B",
+        "python-C"
+      ],
+      "eligible_ids": [
+        "python-A"
+      ],
+      "control_id": "python-A",
+      "state": "no_op",
+      "candidate_id": "python-A",
+      "local_drop": 0.0,
+      "dispatch": false,
+      "control_score": 0.7425891111547134,
+      "candidate_score": 0.7425891111547134
+    },
+    {
+      "id": "prospective-dns-negative-cache",
+      "all_input_ids": [
+        "dns-A",
+        "dns-B",
+        "dns-C"
+      ],
+      "eligible_ids": [
+        "dns-B"
+      ],
+      "control_id": "dns-B",
+      "state": "no_op",
+      "candidate_id": "dns-B",
+      "local_drop": 0.0,
+      "dispatch": false,
+      "control_score": 0.6244661442468921,
+      "candidate_score": 0.6244661442468921
+    }
+  ],
+  "gptzero_results": null,
+  "commercial_scans_so_far": 0,
+  "quality_gate_sha256": "22e563a15ffc628dbe4769b3d78bb7b4e2beb419031fb78a1faf990aee989060",
+  "local_results_sha256": "9f652303536b4ccf696fe555f679ebbdc3bd91784528b5dc2523e03030030982"
+}

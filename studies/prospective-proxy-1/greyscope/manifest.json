@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "source_revision": "e052f07b5e5bddacce41fe4d5fcc3250081385da",
+  "source_url": "https://github.com/yaoandy107/greyscope",
+  "model_id": "yaoandy107/greyscope-v2-qwen3.5-4b-mlx-4bit",
+  "model_revision": "59b6ec7a24cae161c4cbc85e594c586541d8f710",
+  "artifacts": {
+    "author-source/greyscope/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "author-source/greyscope/inference.py": {
+      "sha256": "2b92cd1f765fefabb4640feb2d0de6a5fe7960fce3a9072cab7bb9a5fdffa908",
+      "bytes": 8671
+    },
+    "author-source/greyscope/corn.py": {
+      "sha256": "049821d5ef8fc86cada86e1d6c057080365756cad637b8b9fe94dd759aa3c1fd",
+      "bytes": 3565
+    },
+    "author-source/greyscope/preprocess.py": {
+      "sha256": "61e03805f49fe98f66c42aa913093ac81283e83b1d1aadc88f4dc899a52f9548",
+      "bytes": 4772
+    },
+    "author-source/greyscope/mlx_inference.py": {
+      "sha256": "c2e53777d158170cc0e51e80356856b87efdea0c118216d6e969f2a81fa9dc70",
+      "bytes": 2368
+    },
+    "author-source/greyscope/mlx_model.py": {
+      "sha256": "3d537a83cf00586d186c2d7736e1ee582c1b48bc0d9f8cb7b4f9698f829e07bd",
+      "bytes": 2450
+    },
+    "author-source/uv.lock": {
+      "sha256": "95d0d77a23d0cf277d2d54f23ddd8d32b6ab448dd467f15d73f63ee735f159e0",
+      "bytes": 864231
+    },
+    "author-source/pyproject.toml": {
+      "sha256": "2563888365bd48ef61a31cc4614d998fca407b6badcc76253be7f60ba51cd651",
+      "bytes": 3474
+    },
+    "runner.py": {
+      "sha256": "ba4bfaa90a5efb9a187bc7edebded9a3a0084813a2fb495dbe67690a65dee0c9",
+      "bytes": 16929
+    },
+    "test_runner.py": {
+      "sha256": "e39eb0b22033fb95e8ee97f6fc970caec9511cf046bf1270acb8799f12051867",
+      "bytes": 5448
+    },
+    "test_prospective_gate.py": {
+      "sha256": "a5f04f11a2e3aabe37ab24d7b6abcdb23be19f6227a65a2196e1b371d1c1e0c5",
+      "bytes": 2095
+    },
+    "reuse-pins.json": {
+      "sha256": "8d773ad8b9568aae7b2dd280c30e66ece06910f7e86ad78894322a8aada1e0bc",
+      "bytes": 4813
+    },
+    "model/.gitattributes": {
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "bytes": 1570
+    },
+    "model/README.md": {
+      "sha256": "28e80b020f68179889d690adcb3800af1ce929282acf3b9358ab899032de8a96",
+      "bytes": 1378
+    },
+    "model/calibration.json": {
+      "sha256": "7cdd40c8f7cd1e15fe90cfcccf8d9ef233cf60fec065d6f9c3fb77610c0f809e",
+      "bytes": 1414
+    },
+    "model/config.json": {
+      "sha256": "958a06c16b28f52b5367855bfb3825e8ba40e30662ae7d733d6b5acd7d1e1783",
+      "bytes": 2710
+    },
+    "model/greyscope_mlx_export.json": {
+      "sha256": "7254a988ed076c6b4e604fcce486d19870a69a3e0fc6d087350c1c69937107f9",
+      "bytes": 185
+    },
+    "model/mlx_model.py": {
+      "sha256": "f53afc589ec9df9bbd8d7daf7f32267b8da15839eca5459a2e54ecce82d50fef",
+      "bytes": 2521
+    },
+    "model/model.safetensors": {
+      "sha256": "2573ee84f7db2c889cd8c94a542cbe4fc63ab7e4d70d26efb2aa48fb045b8b36",
+      "bytes": 2372879957
+    },
+    "model/model.safetensors.index.json": {
+      "sha256": "c10b76d5bca98c4449ad464c2f77b33648443bd9a4bfe945fd5008a27a394c1a",
+      "bytes": 59833
+    },
+    "model/tokenizer.json": {
+      "sha256": "4ee378335b781c530a9c70c965ff5c81b55c56970781e1d477abca5c6d270b2b",
+      "bytes": 19989611
+    },
+    "model/tokenizer_config.json": {
+      "sha256": "ce96f3327ea088f844868203f1f4de2e1fb41b48e37220ef22bce7d7f3f57f90",
+      "bytes": 1335
+    }
+  },
+  "versions": {
+    "Jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.20.0",
+    "annotated-doc": "0.0.4",
+    "antlr4-python3-runtime": "4.9.3",
+    "anyio": "4.13.0",
+    "certifi": "2026.5.20",
+    "click": "8.4.1",
+    "emoji": "2.15.0",
+    "filelock": "3.29.0",
+    "fsspec": "2025.9.0",
+    "greyscope": "0.1.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.5.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.16.1",
+    "hydra-core": "1.3.2",
+    "idna": "3.16",
+    "joblib": "1.5.3",
+    "markdown-it-py": "4.2.0",
+    "mdurl": "0.1.2",
+    "mlx": "0.32.0",
+    "mlx-lm": "0.31.3",
+    "mlx-metal": "0.32.0",
+    "mpmath": "1.3.0",
+    "networkx": "3.6.1",
+    "numpy": "2.4.6",
+    "omegaconf": "2.3.0",
+    "packaging": "26.2",
+    "pandas": "3.0.3",
+    "protobuf": "6.33.6",
+    "python-dateutil": "2.9.0.post0",
+    "regex": "2026.5.9",
+    "rich": "15.0.0",
+    "safetensors": "0.7.0",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "sentencepiece": "0.2.1",
+    "setuptools": "81.0.0",
+    "shellingham": "1.5.4",
+    "six": "1.17.0",
+    "sympy": "1.14.0",
+    "threadpoolctl": "3.6.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.12.0",
+    "tqdm": "4.67.3",
+    "transformers": "5.5.0",
+    "typer": "0.25.1",
+    "typing_extensions": "4.15.0"
+  },
+  "python": "3.12.0 (main, Oct  2 2023, 20:56:14) [Clang 16.0.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "score_semantics": "calibrated AI involvement; not GPTZero confidence",
+  "artifact_manifest_sha256": "0366ce19a0e327ca16666d3dc80cf1c72ee8d11b855afaaa951525932de0e3f2",
+  "reuse_pins_sha256": "8d773ad8b9568aae7b2dd280c30e66ece06910f7e86ad78894322a8aada1e0bc",
+  "expected_input_count": 6,
+  "original_manifest_sha256": "6978de18bd30224214bde6094674e47b79bfb4267bc3847447a929d7b44ef442",
+  "export_note": "Artifact hash inventory only; weights, runtime environments and author source are not bundled. Local output_root omitted."
+}

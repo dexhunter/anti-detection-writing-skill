@@ -14,6 +14,8 @@ For local detector diagnostics, use the separate [local detector CLI](local-dete
 
 Before adopting another local detector for candidate selection, freeze comparable archived successes and unchanged cases before reading its scores, then count both recognized reductions and misleading decreases on unchanged commercial outcomes. Keep source inputs and native preprocessing separate, and reject full inputs that exceed the supported token limit. The [Oculus/Greyscope diagnostic](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/open-detector-proxy-1) found Greyscope more promising on a narrow dependent sample, but it also rewarded a technical revision whose GPTZero score stayed at 100%. Such counterexamples remain development evidence. Require a prospective comparison before introducing an automatic local-score selector; historical agreement does not establish transfer, writing quality or a new GPTZero improvement.
 
+For a prospective selector test, freeze the independent quality ranking before local scores. Define which answers may replace the quality-only control. If the best acceptable group contains only the control, record a selector no-op; do not broaden the group after seeing that outcome. Any separately requested scan of that answer is a baseline observation, not a successful selection comparison. Validate every local record, including failed and ineligible alternatives, before selection; unavailable scores stay null. The [prospective diagnostic](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/prospective-proxy-1) supplies the tested selection rule and retains both singleton cases.
+
 From the skill directory, initialize a private run:
 
 ```sh

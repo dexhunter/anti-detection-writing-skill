@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T17:07:53.259241+00:00",
+  "drafts": 6,
+  "records": [
+    {
+      "id": "python-A",
+      "path": "quality-inputs/python-A.txt",
+      "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+      "case_id": "prospective-python-default-list",
+      "scope": "prose_only"
+    },
+    {
+      "id": "python-B",
+      "path": "quality-inputs/python-B.txt",
+      "sha256": "e1d8c7d53261ad94682c0a582224eaae72313cb6dc72bdb50d344880ffcb6d4e",
+      "case_id": "prospective-python-default-list",
+      "scope": "prose_only"
+    },
+    {
+      "id": "python-C",
+      "path": "quality-inputs/python-C.txt",
+      "sha256": "4350e9ad80caa7a4ec5c4664d9e9a6aa86fb67f423c6f50aa0ee5bd7b87cf265",
+      "case_id": "prospective-python-default-list",
+      "scope": "prose_only"
+    },
+    {
+      "id": "dns-A",
+      "path": "quality-inputs/dns-A.txt",
+      "sha256": "7f09cee22e8cc2dc0a1c763f518ac5dd5b91d60654430bcdf8da3df862fff44d",
+      "case_id": "prospective-dns-negative-cache",
+      "scope": "prose_only"
+    },
+    {
+      "id": "dns-B",
+      "path": "quality-inputs/dns-B.txt",
+      "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+      "case_id": "prospective-dns-negative-cache",
+      "scope": "prose_only"
+    },
+    {
+      "id": "dns-C",
+      "path": "quality-inputs/dns-C.txt",
+      "sha256": "82f51a811e63faf5c4231268e4f0fc2e257ff60d39bb5aafb4a1a2ca535dee73",
+      "case_id": "prospective-dns-negative-cache",
+      "scope": "prose_only"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "detector": "gptzero",
+  "mode": "Basic Scan",
+  "model": "4.9b",
+  "observed_at": "2026-09-10T08:32:04.956Z",
+  "ai": 100.0,
+  "mixed": 0.0,
+  "human": 0.0,
+  "ai_assisted": null,
+  "input_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+  "unit": "document_confidence_percent",
+  "label": null,
+  "short_text_warning": false,
+  "warnings": [],
+  "artifact_sha256": "805d53c5590d5746cc19a8c41c3ae738ac4c1c93063e907605f54475701ccaac"
+}

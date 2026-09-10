@@ -1,0 +1,17 @@
+{
+  "reserved_at": "2026-09-10T08:31:42.072409+00:00",
+  "scope": "prose_only",
+  "allowance_before": 783,
+  "order": [
+    "parent",
+    "hybrid"
+  ],
+  "parent_quoted_words": 113,
+  "hybrid_quoted_words": 114,
+  "total_reserved_words": 227,
+  "confirmation_reserve": 500,
+  "remaining_after_expected": 556,
+  "fresh_quality_review_sha256": "9d8aa531a3f455566abe5f89971f00cfdae388a34954c7f2d8dda9b0efcc4c9e",
+  "max_attempts": 2,
+  "deadline": "2026-09-10T08:58:17.323646+00:00"
+}

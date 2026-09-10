@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-10T08:30:54.058079+00:00",
+  "scope": "prose_only",
+  "review_sha256": "9d8aa531a3f455566abe5f89971f00cfdae388a34954c7f2d8dda9b0efcc4c9e",
+  "quality_gate": "pass; hybrid slightly preferred",
+  "arms": {
+    "hybrid": {
+      "full_message_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "prose_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "code_ranges": []
+    },
+    "parent": {
+      "full_message_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "prose_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "code_ranges": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-10T08:24:32.569344+00:00",
+  "protocol_sha256": "a4989eddc8574d2784cc2cbc78ae6fee1ba480a089a7d648f6d4d1be3107d9c6",
+  "development_case_sha256": "4ebcd2a04ce045f0041c380ec1f522f147198334b8f8154e055fb5610b881135",
+  "common_selection_rubric_sha256": "4cd2d5474384fc5f9414dd369c2e569262349d80459f33627e100965918fb539",
+  "parent_a_sha256": "6c6a035afea21bed5f71fe3098465531343d4b649dd7904fe02ed44a113fa5bb",
+  "parent_b_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+  "confirmation_cases_sha256": "85f04e1fc2ee064ab9ecd3965fe47c0dd967f67c5fcf247a597f2c8486a40ee4",
+  "confirmation_manifest_sha256": "1a5fa989f2cb03f53693f58834a448f996a9ff43ea2b98e0e1e80998926f2f67",
+  "confirmation_contents_opened_by_coordinator": false,
+  "scores_available_to_writers": false,
+  "exact_backend_model": "unexposed",
+  "generation": "same inherited settings, fresh agent per complete parent; no resampling",
+  "proposal_to_protocol_refinement": "assembly permits no added newline or other byte; frozen protocol supersedes proposal allowance of one predeclared seam newline"
+}

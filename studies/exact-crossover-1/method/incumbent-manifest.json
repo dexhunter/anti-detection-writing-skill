@@ -1,0 +1,20 @@
+{
+  "SKILL.md": "2373aa3c83f842f9577ce92c2eda7fefcbb232faaded1de73a774b3458fb35b2",
+  "agents/openai.yaml": "1a655d0a68dbbc03bb4224ac22f530431a912c2f419f1fc11d51fc6983693e43",
+  "references/autoresearch.md": "bac96da8fb69c8b0c910786033ff8db62e25f4998cabb52860caf574d9fbe563",
+  "references/autoresearch/config.json": "888803e2e2fa873bd025095dda119373331dd7716c826cdfbb393c301e97505f",
+  "references/autoresearch/receipt-contract.md": "16f6f83c360009802ae57765d7032c94dbb4ddbcd1002eda893eb464bf7e5f0f",
+  "references/autoresearch/roles.md": "d4cdfe1eaeb284ead66f671668e9c789cb7272aefc6c009ea3033fa641c0c7b4",
+  "references/autoresearch/writer-prompt.md": "05657d62d807fa56679d1be6f3f56cc2206fd655f044da356c769c8b6086423d",
+  "references/detector-research.md": "13c4442b6cd18ec87ed92723028fe58c7a0f77740945b05bc36efa06348b8be8",
+  "references/evidence.md": "508ad2af6fb652263c0a0ab3af8dcd44a3b4481aa67220443b1e6d4fd91f92f9",
+  "references/local-detector-model.json": "f7b738815a267bb0e7a8f3739a1607427032df2c685d145a4074bbaab8e1f02b",
+  "references/local-detector.md": "142e71548d10c63113e275fbcf71dd4c6f7791d4d91f440c7609ce9347a92790",
+  "references/measurement.md": "a53e2eb4be2547bfa27937447354c099c6782e7a3a110f07c17abff4a721e94f",
+  "references/phrase-review.md": "59f47223f99b51b16124806019a0b498eb31406a542dace1f222e310d8eebf37",
+  "references/receipt-format.md": "bca29d72853bdf41624765ec2ab96e6d83cbb7951ac39ae2b2c39156118e14c4",
+  "scripts/autoresearch.py": "041c0d3ae63bcbc10637cc9a7c065a10b629ceaaec0685c8f62e47508b969ae3",
+  "scripts/detector_receipts.py": "dba29a00e0fa5d34c615c7578707323ca097ea425be69c476a199d1991b4362b",
+  "scripts/local_detector.py": "ba19a4bbe7f76855ca815b75d1cd3e0d80cdd7c99f41f1e114ba840b57d81c0f",
+  "scripts/validate_receipt.py": "3cb2d27c558a1d3eb0b3b160ee135fdd97c3404b1a80b9898ee3641ba80dd780"
+}

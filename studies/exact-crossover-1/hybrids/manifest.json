@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "role": "research diagnostic; not a factual validator or promoter",
+  "assembly": "exact reciprocal byte concatenation; no inserted bytes",
+  "range_convention": "zero-based UTF-8 bytes, start inclusive, end exclusive",
+  "word_count": "Python str.split() over the complete UTF-8 input text",
+  "max_words": 140,
+  "parents": {
+    "A": {
+      "path": "parents/a/answer.txt",
+      "sha256": "6c6a035afea21bed5f71fe3098465531343d4b649dd7904fe02ed44a113fa5bb",
+      "bytes": 762
+    },
+    "B": {
+      "path": "parents/b/answer.txt",
+      "sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "bytes": 705
+    }
+  },
+  "review": {
+    "path": "reviews/boundary-review.json",
+    "sha256": "7eb1d78a060d7060754d25ae0256d9cc46b613dc6de2717c988989443cf6069f"
+  },
+  "required_claim_ids": [
+    "DTC1",
+    "DTC2",
+    "DTC3",
+    "DTC4",
+    "DTC5",
+    "DTC6",
+    "DTC7"
+  ],
+  "selected_seam_index": 1,
+  "selected_seam": {
+    "a_offset": 211,
+    "b_offset": 205,
+    "reciprocal_children": [
+      {
+        "direction": "A_prefix_B_suffix",
+        "sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+        "byte_length": 711,
+        "word_count": 114,
+        "word_limit_pass": true,
+        "assembly": "unchanged prefix bytes plus unchanged suffix bytes; zero inserted bytes",
+        "source_prefix_byte_range": [
+          0,
+          211
+        ],
+        "source_suffix_byte_range": [
+          205,
+          705
+        ],
+        "prefix_ends_with_whitespace": true,
+        "suffix_begins_with_nonwhitespace": true,
+        "joined_word_spacing_pass": true,
+        "join_context": "he ETag with the JSON; the client includes that value in If-None-Match on a later conditional GET.\n\nIf the tag matches the selected representation, an otherwise successful GET returns 304 Not Modified with no response body, allowing reuse o",
+        "protected_strings": {
+          "ETag": {
+            "present": true,
+            "count": 2,
+            "byte_offsets": [
+              3,
+              114
+            ]
+          },
+          "GET": {
+            "present": true,
+            "count": 3,
+            "byte_offsets": [
+              205,
+              283,
+              405
+            ]
+          },
+          "If-None-Match": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              168
+            ]
+          },
+          "304 Not Modified": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              295
+            ]
+          },
+          "200 OK": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              417
+            ]
+          },
+          "Cache-Control: max-age=60": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              528
+            ]
+          },
+          "60 seconds": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              699
+            ]
+          }
+        },
+        "missing_claim_units": [],
+        "duplicated_claim_units": [],
+        "all_required_claim_units_exactly_once": true,
+        "all_claims_and_qualifications_pass": true,
+        "actor_and_reference_resolution_pass": true,
+        "no_duplicate_partial_claim_pass": true,
+        "scope_preservation_pass": true
+      },
+      {
+        "direction": "B_prefix_A_suffix",
+        "sha256": "1cc784739b8bdb2737571bf510673c676bdd7a5a43a39eff025e1d70a4452b10",
+        "byte_length": 756,
+        "word_count": 121,
+        "word_limit_pass": true,
+        "assembly": "unchanged prefix bytes plus unchanged suffix bytes; zero inserted bytes",
+        "source_prefix_byte_range": [
+          0,
+          205
+        ],
+        "source_suffix_byte_range": [
+          211,
+          762
+        ],
+        "prefix_ends_with_whitespace": true,
+        "suffix_begins_with_nonwhitespace": true,
+        "joined_word_spacing_pass": true,
+        "join_context": "n ETag with its response. On a later conditional GET, the client sends that value in If-None-Match. For an otherwise successful GET, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, ",
+        "protected_strings": {
+          "ETag": {
+            "present": true,
+            "count": 2,
+            "byte_offsets": [
+              3,
+              107
+            ]
+          },
+          "GET": {
+            "present": true,
+            "count": 3,
+            "byte_offsets": [
+              154,
+              233,
+              428
+            ]
+          },
+          "If-None-Match": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              190
+            ]
+          },
+          "304 Not Modified": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              305
+            ]
+          },
+          "200 OK": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              440
+            ]
+          },
+          "Cache-Control: max-age=60": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              557
+            ]
+          },
+          "60 seconds": {
+            "present": true,
+            "count": 1,
+            "byte_offsets": [
+              744
+            ]
+          }
+        },
+        "missing_claim_units": [],
+        "duplicated_claim_units": [],
+        "all_required_claim_units_exactly_once": true,
+        "all_claims_and_qualifications_pass": true,
+        "actor_and_reference_resolution_pass": true,
+        "no_duplicate_partial_claim_pass": true,
+        "scope_preservation_pass": true
+      }
+    ],
+    "prefix_claim_ids": [
+      "DTC1",
+      "DTC2",
+      "DTC5"
+    ],
+    "suffix_claim_ids": [
+      "DTC3",
+      "DTC4",
+      "DTC6",
+      "DTC7"
+    ],
+    "source_review_pass": true,
+    "reason": "Both prefixes complete DTC1, DTC2 and DTC5. Each transferred suffix opens with the complete selected-representation matching branch DTC3 and expressly retains otherwise successful GET. The tag refers to the ETag already introduced by either prefix. Both suffixes then retain DTC4, DTC6 and DTC7 without claim fragments or duplicated conditions. Parent A's existing paragraph break remains with its prefix; the reciprocal join uses parent B's existing space.",
+    "boundary_validation": {
+      "a_after_sentence": 2,
+      "b_after_sentence": 3,
+      "a_prefix_owns_trailing_whitespace": "\n\n",
+      "b_prefix_owns_trailing_whitespace": " ",
+      "utf8_byte_offsets_verified": true,
+      "all_existing_sentence_ending_whitespace_in_prefix": true,
+      "zero_added_or_edited_bytes": true
+    }
+  },
+  "selection_key": [
+    1,
+    211,
+    205
+  ],
+  "children": {
+    "A": {
+      "file": "child-a.txt",
+      "sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "bytes": 711,
+      "words": 114,
+      "final_lf": true,
+      "spans": [
+        {
+          "parent": "A",
+          "source_start": 0,
+          "source_end": 211,
+          "child_start": 0,
+          "child_end": 211
+        },
+        {
+          "parent": "B",
+          "source_start": 205,
+          "source_end": 705,
+          "child_start": 211,
+          "child_end": 711
+        }
+      ]
+    },
+    "B": {
+      "file": "child-b.txt",
+      "sha256": "1cc784739b8bdb2737571bf510673c676bdd7a5a43a39eff025e1d70a4452b10",
+      "bytes": 756,
+      "words": 121,
+      "final_lf": true,
+      "spans": [
+        {
+          "parent": "B",
+          "source_start": 0,
+          "source_end": 205,
+          "child_start": 0,
+          "child_end": 205
+        },
+        {
+          "parent": "A",
+          "source_start": 211,
+          "source_end": 762,
+          "child_start": 205,
+          "child_end": 756
+        }
+      ]
+    }
+  }
+}

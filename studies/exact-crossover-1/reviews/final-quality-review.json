@@ -1,0 +1,113 @@
+{
+  "reviewer": "crossover_final_quality",
+  "detector_scores_withheld": true,
+  "answers": {
+    "X": {
+      "sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "full_message_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "prose_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "word_count": 114,
+      "claims": [
+        {
+          "id": "DTC1",
+          "pass": true,
+          "reason": "Explicitly states that an ETag lets the client validate stored content."
+        },
+        {
+          "id": "DTC2",
+          "pass": true,
+          "reason": "Server supplies the ETag; a later conditional GET sends that value in If-None-Match."
+        },
+        {
+          "id": "DTC3",
+          "pass": true,
+          "reason": "Matching the selected representation yields 304 Not Modified, no body, and stored-body reuse; otherwise-successful GET scope is explicit."
+        },
+        {
+          "id": "DTC4",
+          "pass": true,
+          "reason": "Nonmatch yields 200 OK with current JSON within an explicitly successful GET."
+        },
+        {
+          "id": "DTC5",
+          "pass": true,
+          "reason": "Explicitly states that validation still sends a request."
+        },
+        {
+          "id": "DTC6",
+          "pass": true,
+          "reason": "Freshness policy permits reuse without validation; Cache-Control: max-age=60 is illustrative and other caching rules apply."
+        },
+        {
+          "id": "DTC7",
+          "pass": true,
+          "reason": "Allows reuse while fresh and explicitly denies any guarantee of unchanged underlying data for 60 seconds."
+        }
+      ],
+      "protected_pass": true,
+      "correctness_pass": true,
+      "readability_pass": true,
+      "relevance_pass": true,
+      "tone_pass": true,
+      "code_exclusions": [],
+      "code_ranges_approved": true,
+      "objections": []
+    },
+    "Y": {
+      "sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "full_message_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "prose_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "word_count": 113,
+      "claims": [
+        {
+          "id": "DTC1",
+          "pass": true,
+          "reason": "Explicitly states that an ETag lets the client validate stored content."
+        },
+        {
+          "id": "DTC2",
+          "pass": true,
+          "reason": "Server supplies the ETag; a later conditional GET sends that value in If-None-Match."
+        },
+        {
+          "id": "DTC3",
+          "pass": true,
+          "reason": "Matching the selected representation yields 304 Not Modified, no body, and stored-body reuse; otherwise-successful GET scope is explicit."
+        },
+        {
+          "id": "DTC4",
+          "pass": true,
+          "reason": "Nonmatch yields 200 OK with current JSON within an explicitly successful GET."
+        },
+        {
+          "id": "DTC5",
+          "pass": true,
+          "reason": "Explicitly states that validation still sends a request."
+        },
+        {
+          "id": "DTC6",
+          "pass": true,
+          "reason": "Freshness policy permits reuse without validation; Cache-Control: max-age=60 is illustrative and other caching rules apply."
+        },
+        {
+          "id": "DTC7",
+          "pass": true,
+          "reason": "Allows reuse while fresh and explicitly denies any guarantee of unchanged underlying data for 60 seconds."
+        }
+      ],
+      "protected_pass": true,
+      "correctness_pass": true,
+      "readability_pass": true,
+      "relevance_pass": true,
+      "tone_pass": true,
+      "code_exclusions": [],
+      "code_ranges_approved": true,
+      "objections": []
+    }
+  },
+  "preference": "X",
+  "reason": "Both pass all seven claims, protected strings, prerequisites, negation, successful-GET scope, freshness interval, and the 140-word limit. Both are clear, relevant, and professional. Slight preference for X: its paragraph breaks separate the exchange mechanism, conditional outcomes, and freshness policy, making the explanation easier to scan. Both contain only explanatory prose with inline protocol identifiers; full-message and prose bytes, including the final newline, are identical and no code is excluded.",
+  "limitations": [
+    "Review is limited to the supplied source packet; external sources were not independently checked."
+  ]
+}

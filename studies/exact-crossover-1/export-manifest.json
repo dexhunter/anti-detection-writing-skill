@@ -1,0 +1,582 @@
+{
+  "study": "studies/exact-crossover-1",
+  "exporter": "explicit private allowlist",
+  "exporter_sha256": "43b70f6ba761bc094dcedbbd70d1a801639782d01d61ab3c273b61a3a471d049",
+  "scope": "development artifacts only; no confirmation contents or private UI",
+  "historical_hash_policy": "Retained source-artifact hashes are not rewritten after sanitization.",
+  "all_included_artifacts_confirmed_complete": true,
+  "files": [
+    {
+      "source_ref": "protocol.json",
+      "public_path": "method/protocol.json",
+      "source_sha256": "a4989eddc8574d2784cc2cbc78ae6fee1ba480a089a7d648f6d4d1be3107d9c6",
+      "public_sha256": "a4989eddc8574d2784cc2cbc78ae6fee1ba480a089a7d648f6d4d1be3107d9c6",
+      "status": "exact",
+      "source_bytes": 2635,
+      "public_bytes": 2635,
+      "changes": []
+    },
+    {
+      "source_ref": "generation-manifest.json",
+      "public_path": "method/generation-manifest.json",
+      "source_sha256": "c7442342500adbfeb259bc367773a6b511908b34bbfcf469cb10143506f6154f",
+      "public_sha256": "c7442342500adbfeb259bc367773a6b511908b34bbfcf469cb10143506f6154f",
+      "status": "exact",
+      "source_bytes": 1116,
+      "public_bytes": 1116,
+      "changes": []
+    },
+    {
+      "source_ref": "incumbent-manifest.json",
+      "public_path": "method/incumbent-manifest.json",
+      "source_sha256": "e5d5839bb4d21d22076b457a2efba8a3c0f3c653a5950deabf42934b06e7d7b0",
+      "public_sha256": "e5d5839bb4d21d22076b457a2efba8a3c0f3c653a5950deabf42934b06e7d7b0",
+      "status": "exact",
+      "source_bytes": 1837,
+      "public_bytes": 1837,
+      "changes": []
+    },
+    {
+      "source_ref": "proposal.md",
+      "public_path": "method/proposal.md",
+      "source_sha256": "5d95ff9442631eaf39acdf956a125761aca07cc00769886c033b86e59be43817",
+      "public_sha256": "cd8ab868a6ac5118309ab817e0f8b7ac9089a9c414274e0815056911164fe828",
+      "status": "sanitized",
+      "source_bytes": 9439,
+      "public_bytes": 9498,
+      "changes": [
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/tree/4c3a7edc3683d1a59dbfc0f0658339a1d1785887",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "writer-operator.txt",
+      "public_path": "method/writer-operator.txt",
+      "source_sha256": "c80a5e3b1221b1dd216396fe4b53566790e3fd8a16cef5829f75814d484245a7",
+      "public_sha256": "c80a5e3b1221b1dd216396fe4b53566790e3fd8a16cef5829f75814d484245a7",
+      "status": "exact",
+      "source_bytes": 836,
+      "public_bytes": 836,
+      "changes": []
+    },
+    {
+      "source_ref": "selection-rubric.txt",
+      "public_path": "method/selection-rubric.txt",
+      "source_sha256": "4cd2d5474384fc5f9414dd369c2e569262349d80459f33627e100965918fb539",
+      "public_sha256": "4cd2d5474384fc5f9414dd369c2e569262349d80459f33627e100965918fb539",
+      "status": "exact",
+      "source_bytes": 1280,
+      "public_bytes": 1280,
+      "changes": []
+    },
+    {
+      "source_ref": "development-case.json",
+      "public_path": "source/development-case.json",
+      "source_sha256": "4ebcd2a04ce045f0041c380ec1f522f147198334b8f8154e055fb5610b881135",
+      "public_sha256": "4ebcd2a04ce045f0041c380ec1f522f147198334b8f8154e055fb5610b881135",
+      "status": "exact",
+      "source_bytes": 3422,
+      "public_bytes": 3422,
+      "changes": []
+    },
+    {
+      "source_ref": "parent-a/answer.txt",
+      "public_path": "parents/a/answer.txt",
+      "source_sha256": "6c6a035afea21bed5f71fe3098465531343d4b649dd7904fe02ed44a113fa5bb",
+      "public_sha256": "6c6a035afea21bed5f71fe3098465531343d4b649dd7904fe02ed44a113fa5bb",
+      "status": "exact",
+      "source_bytes": 762,
+      "public_bytes": 762,
+      "changes": []
+    },
+    {
+      "source_ref": "parent-a/trace.json",
+      "public_path": "parents/a/trace.json",
+      "source_sha256": "c138711bf8042f7a1bc3a27f19d4d9c4f86c60a67c8599fb44f35f22fa994a84",
+      "public_sha256": "3fa9868c2017af661ed7177fbec8eedebc2ccda816d3f3af9e01ff2134503f78",
+      "status": "sanitized",
+      "source_bytes": 4685,
+      "public_bytes": 4760,
+      "changes": [
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/references/phrase-review.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "source/development-case.json",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "parent-a/operator.txt",
+      "public_path": "parents/a/operator.txt",
+      "source_sha256": "4aee7f226c74525cd8981b669e8083b08f20a7649873d3b6212c95b6448ccbcc",
+      "public_sha256": "dbcf4fefbfca53284922c431f5cf2c5221cd635bea35bd3725bcbcaa53e04dba",
+      "status": "sanitized",
+      "source_bytes": 1109,
+      "public_bytes": 1125,
+      "changes": [
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/references/phrase-review.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "source/development-case.json",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "parents/a",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "parent-b/answer.txt",
+      "public_path": "parents/b/answer.txt",
+      "source_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "public_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "status": "exact",
+      "source_bytes": 705,
+      "public_bytes": 705,
+      "changes": []
+    },
+    {
+      "source_ref": "parent-b/trace.json",
+      "public_path": "parents/b/trace.json",
+      "source_sha256": "3ad4a4efbe54eaf5ffec0551541ff960351a746cfc58118a690b93347e60bc69",
+      "public_sha256": "0e6fe147253d9e7a74433a507cff11a6850f33eca8f461c795635e05ea51bf34",
+      "status": "sanitized",
+      "source_bytes": 4404,
+      "public_bytes": 4603,
+      "changes": [
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/references/phrase-review.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "source/development-case.json",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "parent-b/operator.txt",
+      "public_path": "parents/b/operator.txt",
+      "source_sha256": "cc35930980939daa4bdf0a32bf3f2498a04f403bf0d3cf74e4822cc0fb6161ab",
+      "public_sha256": "5b66cba0af4d72fa7d0e1ce247a1508c18cf9d72fc4b0972fb7b63311dd573b0",
+      "status": "sanitized",
+      "source_bytes": 1109,
+      "public_bytes": 1125,
+      "changes": [
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/references/phrase-review.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "source/development-case.json",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "parents/b",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "boundary-review.json",
+      "public_path": "reviews/boundary-review.json",
+      "source_sha256": "7eb1d78a060d7060754d25ae0256d9cc46b613dc6de2717c988989443cf6069f",
+      "public_sha256": "e278de1c6a5423b3e43925ba5854ff551faf0817d3d0ea5925c9962d3b49325b",
+      "status": "sanitized",
+      "source_bytes": 271794,
+      "public_bytes": 271780,
+      "changes": [
+        {
+          "replacement": "boundary-reviewer",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "parent-selection.json",
+      "public_path": "reviews/parent-selection.json",
+      "source_sha256": "b50d356763cfa64c30e1f6619738719f5a093464da2d1a1e1861bdadc1bed942",
+      "public_sha256": "9fd3398f1b8d5f8a587277532c00d8adc4b085b051d0510b17ed3649f60ed8ae",
+      "status": "sanitized",
+      "source_bytes": 9813,
+      "public_bytes": 9695,
+      "changes": [
+        {
+          "replacement": "parents/a/answer.txt",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "parents/b/answer.txt",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "hybrid-selection.json",
+      "public_path": "reviews/hybrid-selection.json",
+      "source_sha256": "538ad14eb1bf02f96dddd9abdf93eb51f240e0d87bfdc2199d7edaa04e94ab5e",
+      "public_sha256": "eef2fb9311b53ead018d22e5693f55047a20485bcdc35069b9fb0bfcf76e46f7",
+      "status": "sanitized",
+      "source_bytes": 10508,
+      "public_bytes": 10388,
+      "changes": [
+        {
+          "replacement": "hybrids/child-a.txt",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "hybrids/child-b.txt",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "hybrids/child-a.txt",
+      "public_path": "hybrids/child-a.txt",
+      "source_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "public_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "status": "exact",
+      "source_bytes": 711,
+      "public_bytes": 711,
+      "changes": []
+    },
+    {
+      "source_ref": "hybrids/child-b.txt",
+      "public_path": "hybrids/child-b.txt",
+      "source_sha256": "1cc784739b8bdb2737571bf510673c676bdd7a5a43a39eff025e1d70a4452b10",
+      "public_sha256": "1cc784739b8bdb2737571bf510673c676bdd7a5a43a39eff025e1d70a4452b10",
+      "status": "exact",
+      "source_bytes": 756,
+      "public_bytes": 756,
+      "changes": []
+    },
+    {
+      "source_ref": "hybrids/manifest.json",
+      "public_path": "hybrids/manifest.json",
+      "source_sha256": "b3aef04c549aceb6ac66ceeeccc5e1bfdc9ba5eac8d23b887c23c7b0e8111858",
+      "public_sha256": "1c7b1e0e4cd70dd34ac579943904ada05a34cb425954d987da20a13b4c3c997e",
+      "status": "sanitized",
+      "source_bytes": 8180,
+      "public_bytes": 8010,
+      "changes": [
+        {
+          "replacement": "reviews/boundary-review.json",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "parents/a/answer.txt",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "parents/b/answer.txt",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "final-review-mapping.json",
+      "public_path": "method/final-review-mapping.json",
+      "source_sha256": "6fadc3d158e93797aae542220ac8dff3fecdd904c6630216f8ba5bb808356aba",
+      "public_sha256": "d11a30cab0e462beca6060e18f1b4b4e75bfaf102e34224921f19612939d62ef",
+      "status": "sanitized",
+      "source_bytes": 519,
+      "public_bytes": 400,
+      "changes": [
+        {
+          "replacement": "parents/b/answer.txt",
+          "reason": "local path or routing label"
+        },
+        {
+          "replacement": "hybrids/child-a.txt",
+          "reason": "local path or routing label"
+        }
+      ]
+    },
+    {
+      "source_ref": "final-quality-review.json",
+      "public_path": "reviews/final-quality-review.json",
+      "source_sha256": "9d8aa531a3f455566abe5f89971f00cfdae388a34954c7f2d8dda9b0efcc4c9e",
+      "public_sha256": "9d8aa531a3f455566abe5f89971f00cfdae388a34954c7f2d8dda9b0efcc4c9e",
+      "status": "exact",
+      "source_bytes": 4523,
+      "public_bytes": 4523,
+      "changes": []
+    },
+    {
+      "source_ref": "measurement-associations.json",
+      "public_path": "method/measurement-associations.json",
+      "source_sha256": "743bbb90f050e387481f7d02a6e8592e4ba0d10ab7a0f92bb71b4f54f4ad94e3",
+      "public_sha256": "743bbb90f050e387481f7d02a6e8592e4ba0d10ab7a0f92bb71b4f54f4ad94e3",
+      "status": "exact",
+      "source_bytes": 704,
+      "public_bytes": 704,
+      "changes": []
+    },
+    {
+      "source_ref": "reservation.json",
+      "public_path": "method/reservation.json",
+      "source_sha256": "0c5c56799e2bb1e6d441b014006948fc10ca60835730fe7e85b1e1580c58723b",
+      "public_sha256": "0c5c56799e2bb1e6d441b014006948fc10ca60835730fe7e85b1e1580c58723b",
+      "status": "exact",
+      "source_bytes": 482,
+      "public_bytes": 482,
+      "changes": []
+    },
+    {
+      "source_ref": "results.json",
+      "public_path": "results.json",
+      "source_sha256": "72e9a09137067fbdbd63a4cc19ff1aafb4b907cfd7624dfd0e7da8ff2262de04",
+      "public_sha256": "72e9a09137067fbdbd63a4cc19ff1aafb4b907cfd7624dfd0e7da8ff2262de04",
+      "status": "exact",
+      "source_bytes": 1860,
+      "public_bytes": 1860,
+      "changes": []
+    },
+    {
+      "source_ref": "final-review-packet/source.json",
+      "public_path": "reviews/final-packet/source.json",
+      "source_sha256": "4ebcd2a04ce045f0041c380ec1f522f147198334b8f8154e055fb5610b881135",
+      "public_sha256": "4ebcd2a04ce045f0041c380ec1f522f147198334b8f8154e055fb5610b881135",
+      "status": "exact",
+      "source_bytes": 3422,
+      "public_bytes": 3422,
+      "changes": []
+    },
+    {
+      "source_ref": "final-review-packet/X.txt",
+      "public_path": "reviews/final-packet/X.txt",
+      "source_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "public_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "status": "exact",
+      "source_bytes": 711,
+      "public_bytes": 711,
+      "changes": []
+    },
+    {
+      "source_ref": "final-review-packet/Y.txt",
+      "public_path": "reviews/final-packet/Y.txt",
+      "source_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "public_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "status": "exact",
+      "source_bytes": 705,
+      "public_bytes": 705,
+      "changes": []
+    },
+    {
+      "source_ref": "tool/crossover.py",
+      "public_path": "tool/crossover.py",
+      "source_sha256": "ea46eddcc41a25d198e95df6594f0513c5a5b8d27884aa3abf52eca466a975eb",
+      "public_sha256": "ea46eddcc41a25d198e95df6594f0513c5a5b8d27884aa3abf52eca466a975eb",
+      "status": "exact",
+      "source_bytes": 8201,
+      "public_bytes": 8201,
+      "changes": []
+    },
+    {
+      "source_ref": "tool/test_crossover.py",
+      "public_path": "tool/test_crossover.py",
+      "source_sha256": "a9910414457f54922497b58e3f9e05b8d234d4d0dccef14dbcf911b6b6482dbd",
+      "public_sha256": "a9910414457f54922497b58e3f9e05b8d234d4d0dccef14dbcf911b6b6482dbd",
+      "status": "exact",
+      "source_bytes": 7003,
+      "public_bytes": 7003,
+      "changes": []
+    },
+    {
+      "source_ref": "tool/README.md",
+      "public_path": "tool/README.md",
+      "source_sha256": "f664a3fb8929e61541cae85ea4eb798f4f7851879baded18aec5abd1cf2eac04",
+      "public_sha256": "f664a3fb8929e61541cae85ea4eb798f4f7851879baded18aec5abd1cf2eac04",
+      "status": "exact",
+      "source_bytes": 1692,
+      "public_bytes": 1692,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/parent/answer.txt",
+      "public_path": "observations/parent/answer.txt",
+      "source_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "public_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "status": "exact",
+      "source_bytes": 705,
+      "public_bytes": 705,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/parent/submitted.txt",
+      "public_path": "observations/parent/submitted.txt",
+      "source_sha256": "e7073fa533816af261dd65e27999c5e05220ae1a35c7fa6388154e52fc6bef02",
+      "public_sha256": "e7073fa533816af261dd65e27999c5e05220ae1a35c7fa6388154e52fc6bef02",
+      "status": "exact",
+      "source_bytes": 704,
+      "public_bytes": 704,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/parent/editor-before.txt",
+      "public_path": "observations/parent/editor-before.txt",
+      "source_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "public_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "status": "exact",
+      "source_bytes": 707,
+      "public_bytes": 707,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/parent/editor-after.txt",
+      "public_path": "observations/parent/editor-after.txt",
+      "source_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "public_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "status": "exact",
+      "source_bytes": 707,
+      "public_bytes": 707,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/parent/validated.json",
+      "public_path": "observations/parent/metrics.json",
+      "source_sha256": "826bb24604b995d80f4897482d46b624f846aa451b1341ff5b1c5fa4b298b9b6",
+      "public_sha256": "826bb24604b995d80f4897482d46b624f846aa451b1341ff5b1c5fa4b298b9b6",
+      "status": "exact",
+      "source_bytes": 468,
+      "public_bytes": 468,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/hybrid/answer.txt",
+      "public_path": "observations/hybrid/answer.txt",
+      "source_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "public_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "status": "exact",
+      "source_bytes": 711,
+      "public_bytes": 711,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/hybrid/submitted.txt",
+      "public_path": "observations/hybrid/submitted.txt",
+      "source_sha256": "7813990fdf730cdc9503cf98308368c7f3f16fe2fc94ef3ee9d9496da9b1791f",
+      "public_sha256": "7813990fdf730cdc9503cf98308368c7f3f16fe2fc94ef3ee9d9496da9b1791f",
+      "status": "exact",
+      "source_bytes": 710,
+      "public_bytes": 710,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/hybrid/editor-before.txt",
+      "public_path": "observations/hybrid/editor-before.txt",
+      "source_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "public_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "status": "exact",
+      "source_bytes": 713,
+      "public_bytes": 713,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/hybrid/editor-after.txt",
+      "public_path": "observations/hybrid/editor-after.txt",
+      "source_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "public_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "status": "exact",
+      "source_bytes": 713,
+      "public_bytes": 713,
+      "changes": []
+    },
+    {
+      "source_ref": "scans/hybrid/validated.json",
+      "public_path": "observations/hybrid/metrics.json",
+      "source_sha256": "a5bd1eade0466ae6ae4eb9d75b66eb6ee56a25dc679adb0d40a937910ad2c793",
+      "public_sha256": "a5bd1eade0466ae6ae4eb9d75b66eb6ee56a25dc679adb0d40a937910ad2c793",
+      "status": "exact",
+      "source_bytes": 468,
+      "public_bytes": 468,
+      "changes": []
+    },
+    {
+      "public_path": "observations/parent/private-evidence-hashes.json",
+      "status": "derived_hash_only",
+      "source_ref": null,
+      "source_sha256": null,
+      "private_sources": [
+        {
+          "source_ref": "scans/parent/receipt.json",
+          "source_sha256": "805d53c5590d5746cc19a8c41c3ae738ac4c1c93063e907605f54475701ccaac",
+          "content_exported": false
+        },
+        {
+          "source_ref": "scans/parent/result-ui.txt",
+          "source_sha256": "80f4271b8af63378bf207879ea2a5615adbf3f44a7cb9b94f8d14c4bbbde9705",
+          "content_exported": false
+        },
+        {
+          "source_ref": "scans/parent/result.png",
+          "source_sha256": "fc1f3d0263fa5021240d69cec13b810214e390072e9cb6288120ecc5af8bb084",
+          "content_exported": false
+        }
+      ],
+      "public_sha256": "a8dc134fa90c7e491d479f0c2bf131441f6ddd0e16aeaf3a3456b4e8a937c6e7",
+      "public_bytes": 331
+    },
+    {
+      "public_path": "observations/hybrid/private-evidence-hashes.json",
+      "status": "derived_hash_only",
+      "source_ref": null,
+      "source_sha256": null,
+      "private_sources": [
+        {
+          "source_ref": "scans/hybrid/receipt.json",
+          "source_sha256": "ba42a265f4422768fa4c2353f13ca92765996f047fc7fa569ef6efd4976b9413",
+          "content_exported": false
+        },
+        {
+          "source_ref": "scans/hybrid/result-ui.txt",
+          "source_sha256": "344e2c5dcbf3f0f2033a8d6b9086d2591a4535c45a5c7447518a7ad8edd7ba05",
+          "content_exported": false
+        },
+        {
+          "source_ref": "scans/hybrid/result.png",
+          "source_sha256": "2e93e26385cf1b8cf02b3c1dbaa8eb2b299866112e4bceec5d73693a9d093677",
+          "content_exported": false
+        }
+      ],
+      "public_sha256": "b230933e47a2fe7244db2423ce0921f8f6d72c75df8eb9390c3254b8b014eb54",
+      "public_bytes": 331
+    },
+    {
+      "public_path": "README.md",
+      "status": "derived",
+      "source_ref": null,
+      "source_sha256": null,
+      "public_sha256": "8543105aafaba5b4f02cf43804cacb32bec791c2b63c6757e9ade1496b340b99",
+      "public_bytes": 5717
+    }
+  ]
+}

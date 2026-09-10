@@ -1,0 +1,28 @@
+{
+  "id": "cross-dev-http",
+  "split": "development",
+  "question": "Our app repeatedly fetches the same JSON. How do ETag and If-None-Match avoid downloading an unchanged body, and can an ETag also eliminate the request? Explain the ordinary successful GET case. Keep all seven claims and protected strings; maximum 140 words. Code stays independent; this case has no standalone code.",
+  "original": "Use an ETag to let the client check whether its stored response can be reused. The server sends an ETag with the JSON response, and a later conditional GET includes that value in If-None-Match. If the tag matches the selected representation, the server returns 304 Not Modified without a response body, allowing the client to reuse its stored body. If it does not match, a successful GET returns 200 OK with the current JSON.\n\nThis validation still involves a request. To permit reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to the other caching rules. The cached response can then be reused while fresh; this does not promise that the underlying data will remain unchanged for 60 seconds.",
+  "claims": [
+    "DTC1: ETag enables stored-response validation. Strength: recommendation_supported_by_specification. Scope: Stored response; GET.",
+    "DTC2: Server supplies the ETag; client echoes it in If-None-Match. Strength: mechanism. Scope: Described conditional GET.",
+    "DTC3: A matching tag produces 304, no body, and stored-body reuse. Strength: conditional_requirement. Scope: Selected representation; otherwise successful GET.",
+    "DTC4: A nonmatching tag permits 200 with current JSON. Strength: conditional_behavior. Scope: Successful GET, not every possible response.",
+    "DTC5: Validation still sends a request. Strength: categorical_within_scope. Scope: Described conditional validation.",
+    "DTC6: Freshness can permit reuse without validation; max-age=60 is illustrative. Strength: qualified_recommendation. Scope: Other caching rules apply.",
+    "DTC7: Fresh reuse does not guarantee unchanged origin data for 60 seconds. Strength: permission_and_non_guarantee. Scope: Illustrative freshness interval."
+  ],
+  "protected": [
+    "ETag",
+    "GET",
+    "If-None-Match",
+    "304 Not Modified",
+    "200 OK",
+    "Cache-Control: max-age=60",
+    "60 seconds"
+  ],
+  "sources": [
+    "{\"id\": \"http-semantics\", \"kind\": \"authoritative_specification\", \"quotes\": [{\"section\": \"8.8.3\", \"text\": \"An entity tag is an opaque validator\"}, {\"section\": \"6.4\", \"text\": \"304 (Not Modified) responses do not include content.\"}], \"sections\": [\"8.8.3\", \"13.1.2\", \"15.3.1\", \"15.4.5\"], \"title\": \"RFC 9110: HTTP Semantics\", \"url\": \"https://www.rfc-editor.org/rfc/rfc9110.html\", \"verification\": \"Read current RFC Editor document with web tool.\", \"verified_at\": \"2026-09-07\"}",
+    "{\"id\": \"http-caching\", \"kind\": \"authoritative_specification\", \"quotes\": [{\"section\": \"4.2\", \"text\": \"without contacting the origin server\"}, {\"section\": \"4.2\", \"text\": \"not likely to change in a semantically significant way\"}], \"sections\": [\"4\", \"4.2\", \"4.3\", \"5.2.2.1\"], \"title\": \"RFC 9111: HTTP Caching\", \"url\": \"https://www.rfc-editor.org/rfc/rfc9111.html\", \"verification\": \"Read current RFC Editor document with web tool.\", \"verified_at\": \"2026-09-07\"}"
+  ]
+}

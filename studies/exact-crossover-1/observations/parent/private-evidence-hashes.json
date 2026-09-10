@@ -1,0 +1,6 @@
+{
+  "scope": "private evidence hashes only; content excluded",
+  "receipt_sha256": "805d53c5590d5746cc19a8c41c3ae738ac4c1c93063e907605f54475701ccaac",
+  "ui_text_sha256": "80f4271b8af63378bf207879ea2a5615adbf3f44a7cb9b94f8d14c4bbbde9705",
+  "screenshot_sha256": "fc1f3d0263fa5021240d69cec13b810214e390072e9cb6288120ecc5af8bb084"
+}

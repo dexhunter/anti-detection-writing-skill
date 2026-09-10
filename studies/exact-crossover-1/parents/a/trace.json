@@ -1,0 +1,141 @@
+{
+  "case_id": "cross-dev-http",
+  "skill_variant": "incumbent",
+  "claims": [
+    {
+      "id": "DTC1",
+      "status": "preserved",
+      "evidence": "An ETag lets the client validate a stored response",
+      "scope": "Stored response; GET."
+    },
+    {
+      "id": "DTC2",
+      "status": "preserved",
+      "evidence": "The server supplies the ETag with the JSON; the client includes that value in If-None-Match on a later conditional GET.",
+      "scope": "Described conditional GET; server and client roles unchanged."
+    },
+    {
+      "id": "DTC3",
+      "status": "preserved",
+      "evidence": "For an otherwise successful GET, if the tag matches the selected representation, the server returns 304 Not Modified with no response body, so the client can reuse its stored body.",
+      "scope": "Selected representation; otherwise successful GET; reuse is permitted."
+    },
+    {
+      "id": "DTC4",
+      "status": "preserved",
+      "evidence": "If the tag does not match, the successful GET returns 200 OK with the current JSON.",
+      "scope": "Successful GET only, not every possible response."
+    },
+    {
+      "id": "DTC5",
+      "status": "preserved",
+      "evidence": "validation still sends a request",
+      "scope": "Described conditional validation."
+    },
+    {
+      "id": "DTC6",
+      "status": "preserved",
+      "evidence": "To allow reuse without validation, configure an appropriate freshness policy, such as Cache-Control: max-age=60, subject to other caching rules. The cached response can be reused while fresh.",
+      "scope": "Illustrative freshness policy; other caching rules continue to apply."
+    },
+    {
+      "id": "DTC7",
+      "status": "preserved",
+      "evidence": "That permission does not guarantee the underlying data will remain unchanged for 60 seconds.",
+      "scope": "Illustrative freshness interval; current non-guarantee preserved."
+    }
+  ],
+  "protected_values": [
+    {
+      "value": "ETag",
+      "preserved": true
+    },
+    {
+      "value": "GET",
+      "preserved": true
+    },
+    {
+      "value": "If-None-Match",
+      "preserved": true
+    },
+    {
+      "value": "304 Not Modified",
+      "preserved": true
+    },
+    {
+      "value": "200 OK",
+      "preserved": true
+    },
+    {
+      "value": "Cache-Control: max-age=60",
+      "preserved": true
+    },
+    {
+      "value": "60 seconds",
+      "preserved": true
+    }
+  ],
+  "sources_used": [
+    {
+      "path": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/SKILL.md",
+      "use": "Frozen writing procedure."
+    },
+    {
+      "path": "source/development-case.json",
+      "use": "Complete question, original, required claims, protected strings, and supplied source metadata."
+    },
+    {
+      "path": "https://github.com/dexhunter/anti-detection-writing-skill/blob/4c3a7edc3683d1a59dbfc0f0658339a1d1785887/skills/anti-detection-writing/references/phrase-review.md",
+      "use": "Contextual phrase review; no applicable stock phrase required removal."
+    }
+  ],
+  "source_evidence": [
+    {
+      "id": "http-semantics",
+      "title": "RFC 9110: HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "sections": [
+        "8.8.3",
+        "13.1.2",
+        "15.3.1",
+        "15.4.5"
+      ],
+      "verification": "Relied only on supplied case; source metadata reports verification on 2026-09-07. Not independently inspected this run."
+    },
+    {
+      "id": "http-caching",
+      "title": "RFC 9111: HTTP Caching",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "sections": [
+        "4",
+        "4.2",
+        "4.3",
+        "5.2.2.1"
+      ],
+      "verification": "Relied only on supplied case; source metadata reports verification on 2026-09-07. Not independently inspected this run."
+    }
+  ],
+  "scope_cuts": [
+
+  ],
+  "editing_notes": "Moved validation's request requirement to the opening to answer both parts directly. Retained every required claim and qualification. Vocabulary review found no applicable stock-phrase edits; this is a structural edit, not a vocabulary intervention.",
+  "code": {
+    "present": false,
+    "exclusions": [
+
+    ],
+    "changes": [
+
+    ]
+  },
+  "word_count": 122,
+  "word_count_method": "Whitespace-separated tokens in trimmed answer.",
+  "encoding": "UTF-8",
+  "final_newline": "Exactly one LF",
+  "self_review_limits": [
+    "Self-review only; separate reviewer pending.",
+    "No browser, external source verification, tests, detector scan, score inspection, or publication.",
+    "No claims about human authorship or detector performance."
+  ],
+  "sha256": "6c6a035afea21bed5f71fe3098465531343d4b649dd7904fe02ed44a113fa5bb"
+}

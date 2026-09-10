@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "completed_at": "2026-09-10T08:33:50.754840+00:00",
+  "status": "no_development_reduction",
+  "scope": "prose_only",
+  "case_id": "cross-dev-http",
+  "quality_gate": "pass; hybrid slightly preferred",
+  "parent_selection": "B",
+  "hybrid_selection": "A",
+  "outputs_generated": {
+    "complete_parents": 2,
+    "exact_hybrids": 2
+  },
+  "scans": {
+    "parent": {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-10T08:32:04.956Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "805d53c5590d5746cc19a8c41c3ae738ac4c1c93063e907605f54475701ccaac"
+    },
+    "hybrid": {
+      "detector": "gptzero",
+      "mode": "Basic Scan",
+      "model": "4.9b",
+      "observed_at": "2026-09-10T08:33:50.418Z",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "ai_assisted": null,
+      "input_sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "unit": "document_confidence_percent",
+      "label": null,
+      "short_text_warning": false,
+      "warnings": [],
+      "artifact_sha256": "ba42a265f4422768fa4c2353f13ca92765996f047fc7fa569ef6efd4976b9413"
+    }
+  },
+  "ai_reduction_percentage_points": 0.0,
+  "allowance_before": 783,
+  "allowance_after": 556,
+  "actual_free_word_credits": 227,
+  "purchases": 0,
+  "confirmation": {
+    "cases": 2,
+    "opened": false,
+    "scans": 0,
+    "reason": "No development reduction"
+  },
+  "production_policy_changed": false,
+  "new_gepa_execution": false,
+  "new_prompt_policy": false,
+  "default_adoption": false
+}

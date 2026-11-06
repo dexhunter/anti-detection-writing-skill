@@ -1,11 +1,11 @@
 ---
 name: anti-detection-writing
-description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability, including short private retailer and customer-service emails. Preserve meaning and factual accuracy. Run a detector only when the user explicitly asks. A seller's AI or spam claim is not a scan or a baseline, and it does not promise human classification or inbox delivery.
+description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability, including short private retailer and customer-service emails. Preserve every supplied fact and qualification. Run a detector only when the user explicitly asks. A seller's AI or spam claim is not a scan or a baseline, and it does not promise human classification, a lower score, or inbox delivery.
 ---
 
 # Anti-detection writing
 
-Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. For a short private retailer or customer-service email, answer the latest question first with the necessary facts, one clear ask, and ordinary words. When the user explicitly requests detector testing, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship, inbox delivery, or permission to publish.
+Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. For a short private retailer or customer-service email, answer the latest question first, preserve every supplied fact and qualification, make one clear ask, and use ordinary words. When the user explicitly requests detector testing, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship, inbox delivery, or permission to publish. A lower score is a comparison between comparable scans, not a property of one result or of an unmeasured edit.
 
 ## Establish the purpose and facts
 
@@ -13,11 +13,25 @@ Make AI-written prose easier and more natural to read while preserving its meani
 2. Treat supplied facts as the starting point for a self-contained edit. Verify substantive factual corrections against relevant sources; for technical advice, inspect official documentation or implementation and record the version when it matters. Distinguish source inspection, local tests, and deployment verification. Flag unsupported claims instead of adding invented evidence.
 3. Inventory the substantive claims, commands, code, conditions, uncertainty, and reported symptoms. Record each claim's time scope: a dated observation and a limitation that still applies are different facts. For each claim record whether it is preserved, corrected, or removed, and why. Identify what the reader needs to understand, decide, or do.
 
+## Private retailer and customer-service email
+
+Use this section for a short private email or message to a retailer, marketplace seller, or customer-service desk. Where it is more specific than Write and review, it governs that email. Public discussion replies, articles, and documentation stay with Write and review.
+
+Put the facts first. Open with the answer to the latest question, then the other supplied facts and qualifications, then one clear ask. Use ordinary words. Keep every supplied fact and qualification, including limits, dates, conditions, and uncertainty. Concision is wording and order. It does not omit a supplied fact, and the linked-evidence scope cut does not apply to this email. Keep the user's sign-off immediately after the ask, including the closing and name they supplied. When they supplied no sign-off, leave the email without an added name, title, or contact detail.
+
+Write one email. Do not prepare a follow-up, a second wording, or a copy for another recipient unless the user asks for that separate email.
+
+When the supplied draft already answers the latest question, keeps every supplied fact and qualification, uses one clear ask and ordinary words, and keeps the user's sign-off, leave that draft unchanged and say so. Still apply a requested factual correction or a sign-off the user asked to add. When the user explicitly requests a measured alternative, keep the original as the control and allow another framing only if it still contains every supplied fact and qualification. That request does not run a scan.
+
+Never invent an experience, an injury, storage or carrying details, a cause, a date, slang, a typo, or a deliberate writing error. Keep an unknown fact unknown. When the email cannot proceed without a missing fact, ask for that fact in the one ask.
+
+Do not copy a public asker quotation, or any other quoted line, into private mail to humanize it or to seek a lower score. Do not add, remove, or alter a fact or qualification to chase a detector score. A seller's claim that the text is AI-written, or a report that spam filtering held it, does not ask for a detector scan. It establishes no baseline, model, score, or reason for filtering. Do not promise a human classification, a lower detector score, or inbox delivery. This section records no detector measurement. A lower score requires a comparable scan the user explicitly requested.
+
 ## Write and review
 
 - Separate the source inventory from the answer inventory. For a direct question, keep the conclusion, necessary support, and qualifications that change the reader's decision; leave other background in the linked evidence. Record scope cuts rather than carrying every source fact into the reply.
 - Rebuild the text around the reader's purpose rather than retaining the original sentence order. Put the main point where the format calls for it, connect each sentence to the next, and keep the detail needed to understand or act on it. After moving evidence, check paragraph density: a paragraph that combines the intervention, results, screenshot explanation and limitations may need a break even when every sentence is accurate.
-- For a procedure or causal explanation, map each action to its component, prerequisite, and limiting condition. Arrange the answer in that dependency order. Place a prerequisite before the action that needs it and keep an exception beside the claim it limits. Replace an ambiguous pronoun with the existing component name. Keep unspecified actors unnamed, including in intermediate fact tables: “All 180 articles have been copied” does not establish that a migration team copied them. Preserve passive voice when naming an actor would add an unsupported fact. For ordinary polishing, leave already clear passages intact. When the user explicitly requests a measured alternative, retain the original as a control and allow a different reader-appropriate framing that preserves the facts and practical meaning.
+- For a procedure or causal explanation, map each action to its component, prerequisite, and limiting condition. Arrange the answer in that dependency order. Place a prerequisite before the action that needs it and keep an exception beside the claim it limits. Replace an ambiguous pronoun with the existing component name. Keep unspecified actors unnamed, including in intermediate fact tables: “All 180 articles have been copied” does not establish that a migration team copied them. Preserve passive voice when naming an actor would add an unsupported fact. For ordinary polishing, leave already clear passages intact. When the user explicitly requests a measured alternative, retain the original as a control and allow a different reader-appropriate framing that preserves every supplied fact, qualification, and the practical meaning.
 - Prefer concrete nouns and verbs. Remove generic reassurance, repeated summaries, rhetorical contrasts, and irrelevant background. Use lists only where they make steps or comparisons easier to follow. After factual repair, check for stiff noun phrases and overloaded steps; moving unchanged sentences may leave those problems intact.
 - For vocabulary cleanup, use the [phrase review list](references/phrase-review.md). Avoid stock phrases when they add no meaning; review matches in context rather than banning words or swapping synonyms mechanically. Preserve precise terminology, intended tone, uncertainty and protected spans. An absent phrase needs no edit, and a cleaner vocabulary is not evidence of a lower detector score.
 - Preserve operational qualifications and exact code unless evidence supports a correction. Record deliberate scope cuts; do not call an answer fully claim-preserving when useful details were removed.
@@ -26,20 +40,6 @@ Make AI-written prose easier and more natural to read while preserving its meani
 - A short, exact asker quotation can identify the concern being answered in a public discussion reply. Include it only when it helps that reader. Verify context and attribution; do not pad or rotate quotations to hunt for a detector score. Do not import that technique into private mail to humanize it.
 - Compare the finished answer directly with the claim inventory. Check who acts, negation, cause and effect, scope, certainty, numbers, units, and prerequisites. Keep an ongoing limitation current; changing “has not been validated” to “had not been validated at that point” narrows the claim unless the evidence supports that change. Match protected code, commands, identifiers, URLs, and exact quotations byte-for-byte unless a verified correction is recorded. Account for every cut or correction and remove unsupported additions. This writer self-check does not replace separate review.
 - When a separate reviewer is requested or available, give them the reader's purpose, relevant context and sources, baseline, final text, and claim inventory without detector scores. Request a verdict on correctness, relevance, readability, tone, and necessary qualifications, tied to the final file's SHA-256. Resolve factual objections even if an incorrect version has a lower score. If no separate reviewer is available, say so; a self-check is not independent review.
-
-## Private retailer and customer-service email
-
-Use this section for a short private email or message to a retailer, marketplace seller, or customer-service desk. Public discussion replies, articles, and documentation stay with the earlier sections.
-
-Put the facts first. Open with the answer to the latest question, then only the brief facts that answer needs, then one clear ask. Use ordinary words. Keep the user's sign-off immediately after the ask, including the closing and name they supplied. When they supplied no sign-off, leave the email without an added name, title, or contact detail.
-
-Write one email. Do not prepare a follow-up, a second wording, or a copy for another recipient unless the user asks for that separate email.
-
-When the supplied draft already answers the latest question with the necessary facts, one clear ask, ordinary words, and the user's sign-off, leave that draft unchanged and say so. Still apply a requested factual correction or a sign-off the user asked to add. Do not otherwise restyle a clear draft.
-
-Never invent an experience, an injury, storage or carrying details, a cause, a date, slang, a typo, or a deliberate writing error. Keep an unknown fact unknown. When the email cannot proceed without a missing fact, ask for that fact in the one ask.
-
-Do not copy a public asker quotation, or any other quoted line, into private mail to humanize it or to seek a lower score. A seller's claim that the text is AI-written, or a report that spam filtering held it, does not ask for a detector scan. It establishes no baseline, model, score, or reason for filtering. Do not promise a human classification or inbox delivery. This section is a writing rule; it records no detector measurement.
 
 ## Measure only when requested
 

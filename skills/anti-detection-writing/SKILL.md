@@ -1,15 +1,15 @@
 ---
 name: anti-detection-writing
-description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability. Preserve meaning and factual accuracy; when requested, test revisions with GPTZero or another detector and work toward lower AI-detection scores.
+description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability, including short private retailer and customer-service emails. Preserve meaning and factual accuracy. Run a detector only when the user explicitly asks. A seller's AI or spam claim is not a scan or a baseline, and it does not promise human classification or inbox delivery.
 ---
 
 # Anti-detection writing
 
-Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. When detector testing is requested, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship or permission to publish.
+Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. For a short private retailer or customer-service email, answer the latest question first with the necessary facts, one clear ask, and ordinary words. When the user explicitly requests detector testing, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship, inbox delivery, or permission to publish.
 
 ## Establish the purpose and facts
 
-1. Save the original text. Identify its reader, purpose, format, and requested tone or length from the supplied context. For a discussion reply, also read the question and existing replies. For public participation, respect the destination's rules, explicit objections to AI-assisted work, and disclosure requirements.
+1. Save the original text. Identify its reader, purpose, format, and requested tone or length from the supplied context. For a discussion reply, also read the question and existing replies. For a private retailer or customer-service email, follow Private retailer and customer-service email. For public participation, respect the destination's rules, explicit objections to AI-assisted work, and disclosure requirements.
 2. Treat supplied facts as the starting point for a self-contained edit. Verify substantive factual corrections against relevant sources; for technical advice, inspect official documentation or implementation and record the version when it matters. Distinguish source inspection, local tests, and deployment verification. Flag unsupported claims instead of adding invented evidence.
 3. Inventory the substantive claims, commands, code, conditions, uncertainty, and reported symptoms. Record each claim's time scope: a dated observation and a limitation that still applies are different facts. For each claim record whether it is preserved, corrected, or removed, and why. Identify what the reader needs to understand, decide, or do.
 
@@ -22,14 +22,30 @@ Make AI-written prose easier and more natural to read while preserving its meani
 - For vocabulary cleanup, use the [phrase review list](references/phrase-review.md). Avoid stock phrases when they add no meaning; review matches in context rather than banning words or swapping synonyms mechanically. Preserve precise terminology, intended tone, uncertainty and protected spans. An absent phrase needs no edit, and a cleaner vocabulary is not evidence of a lower detector score.
 - Preserve operational qualifications and exact code unless evidence supports a correction. Record deliberate scope cuts; do not call an answer fully claim-preserving when useful details were removed.
 - Polish the explanatory message independently of its code. Keep code blocks and standalone commands fixed during prose experiments; assess their correctness separately, and record any necessary technical correction. Keep inline identifiers and values where they are part of an explanation. The full message, including its code, still needs a consistency review.
-- Match the requested register. If an authentic writing sample is supplied, identify its register, paragraph openings, and transitions before drafting; preserve useful habits during cleanup without importing the sample's facts, opinions, or personal history. Vary sentence length when it improves pacing; do not force informality or strip useful structure. Never invent personal experience, tests, certainty, identity, quotations, typos, or invisible characters to make text appear human-written.
-- A short, exact asker quotation can identify the concern being answered. Include it only when it helps the reader. Verify context and attribution; do not pad or rotate quotations to hunt for a detector score.
+- Match the requested register. If an authentic writing sample is supplied, identify its register, paragraph openings, and transitions before drafting; preserve useful habits during cleanup without importing the sample's facts, opinions, or personal history. Vary sentence length when it improves pacing; do not force informality or strip useful structure. Never invent personal experience, injuries, storage or carrying details, causes, dates, tests, certainty, identity, quotations, typos, slang, deliberate errors, or invisible characters to make text appear human-written.
+- A short, exact asker quotation can identify the concern being answered in a public discussion reply. Include it only when it helps that reader. Verify context and attribution; do not pad or rotate quotations to hunt for a detector score. Do not import that technique into private mail to humanize it.
 - Compare the finished answer directly with the claim inventory. Check who acts, negation, cause and effect, scope, certainty, numbers, units, and prerequisites. Keep an ongoing limitation current; changing “has not been validated” to “had not been validated at that point” narrows the claim unless the evidence supports that change. Match protected code, commands, identifiers, URLs, and exact quotations byte-for-byte unless a verified correction is recorded. Account for every cut or correction and remove unsupported additions. This writer self-check does not replace separate review.
 - When a separate reviewer is requested or available, give them the reader's purpose, relevant context and sources, baseline, final text, and claim inventory without detector scores. Request a verdict on correctness, relevance, readability, tone, and necessary qualifications, tied to the final file's SHA-256. Resolve factual objections even if an incorrect version has a lower score. If no separate reviewer is available, say so; a self-check is not independent review.
+
+## Private retailer and customer-service email
+
+Use this section for a short private email or message to a retailer, marketplace seller, or customer-service desk. Public discussion replies, articles, and documentation stay with the earlier sections.
+
+Put the facts first. Open with the answer to the latest question, then only the brief facts that answer needs, then one clear ask. Use ordinary words. Keep the user's sign-off immediately after the ask, including the closing and name they supplied. When they supplied no sign-off, leave the email without an added name, title, or contact detail.
+
+Write one email. Do not prepare a follow-up, a second wording, or a copy for another recipient unless the user asks for that separate email.
+
+When the supplied draft already answers the latest question with the necessary facts, one clear ask, ordinary words, and the user's sign-off, leave that draft unchanged and say so. Still apply a requested factual correction or a sign-off the user asked to add. Do not otherwise restyle a clear draft.
+
+Never invent an experience, an injury, storage or carrying details, a cause, a date, slang, a typo, or a deliberate writing error. Keep an unknown fact unknown. When the email cannot proceed without a missing fact, ask for that fact in the one ask.
+
+Do not copy a public asker quotation, or any other quoted line, into private mail to humanize it or to seek a lower score. A seller's claim that the text is AI-written, or a report that spam filtering held it, does not ask for a detector scan. It establishes no baseline, model, score, or reason for filtering. Do not promise a human classification or inbox delivery. This section is a writing rule; it records no detector measurement.
 
 ## Measure only when requested
 
 Read [measurement instructions](references/measurement.md) before live scanning and [evidence limits](references/evidence.md) before interpreting results. Use the user's requested service, mode, and supported browser tools. This skill supplies no browser controls and does not authorize subscriptions, paid scans, public posting, or new account access.
+
+Run a scan only when the user explicitly asks for a detector measurement. A seller's claim that a message is AI-written, or a report that spam filtering held it, is not that request and does not establish a baseline, a displayed model, a score, or why a filter acted. Do not promise that any revision will be classified as human-written or delivered to an inbox.
 
 When explaining detector mechanisms or planning another batch after unchanged results, read [detector research](references/detector-research.md).
 
@@ -37,7 +53,7 @@ When the user explicitly asks for an autoresearch workflow to improve this skill
 
 For a comparison, select cases and candidates before seeing scores. Record fresh baseline and candidate scans using the same service, mode, and displayed model. Retain failures and unchanged results. Compare a fixed body with a relevant quotation separately from prose rewriting; track content and length changes. Distinguish first-pass trials from adaptive iterations. Record an unchanged candidate as a no-op. Comparing it with a separately rewritten baseline measures preservation versus that rewrite, not a benefit from edits the candidate did not make.
 
-By default, the detector target is the message's prose. Declare `prose_only` before testing, exclude only independently identified code blocks or standalone command lines, and retain all explanatory prose, qualifications and inline identifiers. Save the full reviewed message, exact prose input and code-range mapping separately. Use the same scope for both arms; keep earlier whole-message scores under their original scope. An explicit whole-message request uses `full_text` instead.
+When a scan runs, the detector target is the message's prose unless the user explicitly requests the whole message. Declare `prose_only` before testing, exclude only independently identified code blocks or standalone command lines, and retain all explanatory prose, qualifications and inline identifiers. Save the full reviewed message, exact prose input and code-range mapping separately. Use the same scope for both arms; keep earlier whole-message scores under their original scope. An explicit whole-message request uses `full_text` instead.
 
 Confirm the effective editor text, completed scan, fresh-result indicator, model, native result labels and metrics, timestamp, and warnings. Save exact inputs and private visible evidence. A stale displayed number is not a result for changed text. Never pad short prose, add code back merely to reach a detector minimum, or drop difficult explanatory passages to lower a score.
 
@@ -45,7 +61,7 @@ The optional checker in `scripts/validate_receipt.py` checks strict plain-text r
 
 ## Publish and report
 
-Honor existing user authorization; do not invent authorization or ask again for an already authorized action. For a public reply, refresh the discussion before posting and reassess if context changed. Match the full final body to the reviewed version and the declared detector input to its scan and requested threshold. A prose-only result describes the prose, not the complete message or its code. Under `prose_only`, changing only code requires renewed full-message review and an updated prose mapping; if the measured prose bytes stay identical, its receipt still describes those bytes. Under `full_text`, a code change also requires a new scan. Update the owned answer when editing, then independently read back its author, exact body, and URL. Do not post a duplicate or claim an answer was accepted without checking.
+Honor existing user authorization; do not invent authorization or ask again for an already authorized action. Return one private retailer or customer-service email to the user. Do not post that email, and do not send it unless the user has explicitly authorized the send. For a public reply, refresh the discussion before posting and reassess if context changed. Match the full final body to the reviewed version and the declared detector input to its scan and requested threshold. A prose-only result describes the prose, not the complete message or its code. Under `prose_only`, changing only code requires renewed full-message review and an updated prose mapping; if the measured prose bytes stay identical, its receipt still describes those bytes. Under `full_text`, a code change also requires a new scan. Update the owned answer when editing, then independently read back its author, exact body, and URL. Do not post a duplicate or claim an answer was accepted without checking.
 
 Report the actual quality findings, scores and warnings when measured, and edit or keep decisions. Missing required review or measurement leaves a candidate unpublished. A detector threshold applies only if requested. A successful local receipt check never authorizes publication.
 

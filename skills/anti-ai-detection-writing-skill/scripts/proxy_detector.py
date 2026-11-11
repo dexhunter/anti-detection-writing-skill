@@ -728,9 +728,11 @@ def score_one_causal(model_id, model_dir, texts, scores):
     features = {feature: ensure_metric(scores, f"{slug(model_id)}__{feature}", direction, model_id)
                 for feature, direction in CAUSAL_FEATURES.items()}
     done = set(features["log_perplexity"]["by_sha"])
-    for sha, text in texts:
+    for count, (sha, text) in enumerate(texts, start=1):
         if sha in done:
             continue
+        if count % 25 == 0:
+            print(f"  {model_id} {count}/{len(texts)}", flush=True)
         result = score_causal_text(model, tokenizer, text, torch)
         status = result["status"]
         for feature, metric in features.items():
@@ -757,9 +759,11 @@ def score_one_binocular(name, performer_id, observer_id, paths, texts, scores, t
     observer_tok = tokenizers.get(observer_id) or AutoTokenizer.from_pretrained(
         paths[observer_id], local_files_only=True)
     done = set(metric["by_sha"])
-    for sha, text in texts:
+    for count, (sha, text) in enumerate(texts, start=1):
         if sha in done:
             continue
+        if count % 25 == 0:
+            print(f"  {name} {count}/{len(texts)}", flush=True)
         performer_ids = performer_tok.encode(text, add_special_tokens=False)
         observer_ids = observer_tok.encode(text, add_special_tokens=False)
         if performer_ids != observer_ids or len(performer_ids) < 2:

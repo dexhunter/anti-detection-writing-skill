@@ -2,7 +2,7 @@
 
 November 11, 2026. **No metric here is a validated substitute for GPTZero, and none is accurate enough to choose which short email to scan.** The run asks whether free small models, scored on CPU, rank the archived Basic 4.9b results. It does not demonstrate a writing improvement.
 
-The join, the scores, and the summary are [corpus.json](corpus.json), [scores.json](scores.json), and [report.json](report.json). The literature note, the training-cost estimate, and the short-email scans that are **not** in this correlation are in [detector literature and proxy](../../docs/detector-literature-and-proxy.md). Those Model 5.0b email scans have no text and no receipt in `studies/`. They are not mixed into the numbers below.
+The join, the scores, and the summary are [corpus.json](corpus.json), [scores.json](scores.json), and [report.json](report.json). The literature note and the training-cost estimate are in [detector literature and proxy](../../docs/detector-literature-and-proxy.md). A maintainer report of Model 5.0b email scans is in that note. It has no text and no receipt here, mixed was not reported, and it is not mixed into the numbers below.
 
 ## What was scored
 
@@ -10,7 +10,9 @@ The join, the scores, and the summary are [corpus.json](corpus.json), [scores.js
 
 The ten pairs are the ones frozen in [open-detector-proxy-1](../open-detector-proxy-1/README.md). Three fall by at least five GPTZero points: 100 to 93, and 100 to 0 twice on the same business case. The other seven are exact ties at 100. "Drops caught" means the proxy's oriented score decreased by any amount. A move of a few thousandths counts. The five-point bar and a zero margin give the same counts, because every archived reduction is at least 7 points.
 
-Six texts exceed 512 tokens and are unscored for the three RoBERTa classifiers and for Oculus. All six are 100% AI. Desklib's 768-token limit covers every text. Nothing was truncated. Torch was 2.8.0+cpu, float32, four threads. `TrustSafeAI/RADAR-Vicuna-7B` and `Qwen/Qwen2.5-1.5B` were on disk and were not loaded.
+Six texts exceed 512 tokens and are unscored for the three RoBERTa classifiers and for Oculus. All six are 100% AI. Desklib's 768-token limit covers every joined text. Nothing was truncated. Torch was 2.8.0+cpu, float32, four threads.
+
+Six `prior_gptzero` objects in `studies/pangram-transfer-1/results.json` have no hash of their own. Two parent inputs are already in the 108. Four others are not: the kubernetes-probe-roles and postgresql-snapshot-scope original and direct editor files, 164 to 181 words, each Basic 4.9b at 100% AI. The literature note lists them. They are outside this correlation.
 
 ## Agreement with the archived scores
 
@@ -47,7 +49,7 @@ The strongest overall Spearman is 0.155. GPT-2 curvature's 0.800, and GPT-2 medi
 
 The Darwin and Carroll controls have no GPTZero label. GPT-2 curvature scores them at 0.450 and 1.587, both more machine-like than the ceiling median of −0.616. Qwen Binoculars scores Carroll at 0.928, more machine-like than every labelled text. Desklib scores the same paragraphs at 0.016 and 0.026, which is the human side of its own 0.5 line and also where most of the 100% AI texts sit.
 
-Oculus on the ten pairs and both controls matches the September 10 printed figures to 0.000001. Desklib was scored without padding to 768. A three-text check against the skill's padded scorer, a short sentence, the Carroll paragraph, and one business answer, differed by less than 0.000003 in the logit. Fakespot was scored on raw text; its card's cleaning step was not applied. The OpenAI detector checkpoint warns that its pooler tensors are unused by the sequence-classification class; the classification head was scored.
+Oculus on the ten pairs and both controls, 22 probabilities, is within 0.000002 of the full-precision values in [oculus/results.json](../open-detector-proxy-1/oculus/results.json). Desklib was scored without padding to 768. [desklib-pad-parity.json](desklib-pad-parity.json) compares that logit with the skill's padded scorer on a four-word sentence, the Carroll paragraph, and one business answer. The largest absolute difference is 2.38×10⁻⁶. Fakespot was scored on raw text; its card's cleaning step was not applied. For the OpenAI detector, `scores.json` records label 0 as Fake, label 1 as Real, and `ai_index` 0.
 
 ## Snapshots
 

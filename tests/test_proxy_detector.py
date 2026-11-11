@@ -77,6 +77,31 @@ class ProxyCorpusTests(unittest.TestCase):
         self.assertEqual({record["ai"] for record in python_copies}, {91})
         self.assertEqual(len({record["stripped_sha256"] for record in python_copies}), 1)
         self.assertEqual(len(proxy.human_control_records(ROOT)), 2)
+        outside_join = (
+            "studies/workflow-retest-1/inputs/kubernetes-probe-roles/original-effective.txt",
+            "studies/workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt",
+            "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/original-effective.txt",
+            "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt",
+        )
+        joined = {record["path"] for record in records}
+        for path in outside_join:
+            self.assertTrue((ROOT / path).is_file())
+            self.assertNotIn(path, joined)
+
+    def test_desklib_pad_parity_file_matches_its_texts(self):
+        payload = json.loads((ROOT / "studies/detector-proxy-1/desklib-pad-parity.json").read_text(encoding="utf-8"))
+        comparisons = payload["comparisons"]
+        self.assertEqual(len(comparisons), 3)
+        self.assertEqual(payload["revision"], "5fdea974cd4287c61674951ec78803aa274e2fb7")
+        largest = 0.0
+        for row in comparisons:
+            text = row["text"] if row["text"] is not None else (ROOT / row["path"]).read_text(encoding="utf-8")
+            self.assertEqual(proxy.digest(text.encode("utf-8")), row["sha256"])
+            delta = abs(row["logit_delta_unpadded_minus_padded"])
+            self.assertAlmostEqual(delta, abs(row["unpadded_logit"] - row["padded_logit"]))
+            largest = max(largest, delta)
+        self.assertLess(largest, 0.000003)
+        self.assertAlmostEqual(largest, 2.384185791015625e-06)
 
     def test_control_rows_omit_metrics_that_did_not_score_the_text(self):
         rows = proxy.control_score_rows(

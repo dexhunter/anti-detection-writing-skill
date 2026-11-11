@@ -78,6 +78,16 @@ class ProxyCorpusTests(unittest.TestCase):
         self.assertEqual(len({record["stripped_sha256"] for record in python_copies}), 1)
         self.assertEqual(len(proxy.human_control_records(ROOT)), 2)
 
+    def test_control_rows_omit_metrics_that_did_not_score_the_text(self):
+        rows = proxy.control_score_rows(
+            [{"id": "h", "path": "h.txt", "sha256": "abc", "whitespace_words": 10,
+              "origin": "public_domain_human"}],
+            {"scored": {"by_sha": {"abc": 0.2}}, "missing": {"by_sha": {}}},
+        )
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["scores"], {"scored": 0.2})
+        self.assertEqual(rows[0]["origin"], "public_domain_human")
+
     def test_summary_separates_a_useful_proxy_from_a_flat_one(self):
         records = [
             {"sha256": "a", "stripped_sha256": "a", "ai": 100, "whitespace_words": 120},
@@ -97,6 +107,41 @@ class ProxyCorpusTests(unittest.TestCase):
         flat = proxy.summarize_metric(records, {"a": 0.2, "b": 0.05, "c": 0.8}, pairs, True)
         self.assertEqual(flat["archived_pairs_at_5_points"]["reductions_recognized"], 0)
         self.assertEqual(flat["archived_pairs_at_5_points"]["ties_with_a_proxy_decrease"], 1)
+
+
+class ProxyReportLockTests(unittest.TestCase):
+    def test_committed_report_matches_a_fresh_summary(self):
+        study = ROOT / "studies/detector-proxy-1"
+        scores = json.loads((study / "scores.json").read_text(encoding="utf-8"))
+        report = json.loads((study / "report.json").read_text(encoding="utf-8"))
+        committed_corpus = json.loads((study / "corpus.json").read_text(encoding="utf-8"))
+        corpus = proxy.load_gptzero_corpus(ROOT)
+        pairs = proxy.load_archived_pairs(ROOT, corpus["records"])
+        self.assertEqual([record["sha256"] for record in committed_corpus["records"]],
+                         [record["sha256"] for record in corpus["records"]])
+        directions = {name: metric["higher_is_ai"] for name, metric in scores["metrics"].items()}
+        values = {name: metric["by_sha"] for name, metric in scores["metrics"].items()}
+        fresh = proxy.summarize(corpus["records"], values, directions, pairs)
+        self.assertEqual(report["metrics"], fresh)
+        self.assertEqual(report["corpus"]["unique_stripped_texts"], 103)
+        self.assertEqual(report["torch"], "2.8.0+cpu")
+        controls = proxy.control_score_rows(proxy.human_control_records(ROOT), scores["metrics"])
+        self.assertEqual(report["human_controls"], controls)
+        hc3 = fresh["classifier__hc3_roberta"]
+        self.assertEqual(hc3["n"], 97)
+        self.assertAlmostEqual(hc3["spearman_oriented_vs_ai_percent"], 0.15514145946178115)
+        self.assertEqual(hc3["archived_pairs_at_5_points"]["reductions_recognized"], 1)
+        curvature = fresh["openai-community__gpt2__curvature"]
+        self.assertEqual(curvature["archived_pairs_at_5_points"]["reductions_recognized"], 0)
+        self.assertAlmostEqual(curvature["spearman_below_ceiling"], 0.8000946913656627)
+        oculus = fresh["oculus__ai_probability"]
+        self.assertEqual(oculus["archived_pairs_at_5_points"]["reductions_recognized"], 3)
+        self.assertEqual(oculus["archived_pairs_at_5_points"]["ties_with_a_proxy_decrease"], 4)
+        desklib = fresh["desklib__ai_probability"]
+        self.assertAlmostEqual(desklib["spearman_oriented_vs_ai_percent"], -0.03498782711014332)
+        qwen = fresh["binoculars__qwen2.5_0.5b"]
+        self.assertEqual(qwen["archived_pairs_at_5_points"]["reductions_recognized"], 3)
+        self.assertEqual(qwen["archived_pairs_at_5_points"]["ties_with_a_proxy_decrease"], 3)
 
 
 class ProxyCommandTests(unittest.TestCase):

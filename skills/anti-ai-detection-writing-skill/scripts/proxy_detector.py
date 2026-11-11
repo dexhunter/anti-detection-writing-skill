@@ -508,6 +508,21 @@ def summarize(records, metric_values, metric_directions, pairs):
     return report
 
 
+def control_score_rows(controls, metrics):
+    """Scores for the public-domain controls. They are not part of the correlation."""
+    rows = []
+    for control in controls:
+        values = {}
+        for name, metric in metrics.items():
+            value = metric.get("by_sha", {}).get(control["sha256"])
+            if value is not None:
+                values[name] = value
+        rows.append({"id": control["id"], "path": control["path"], "sha256": control["sha256"],
+                     "whitespace_words": control["whitespace_words"], "origin": control.get("origin"),
+                     "scores": values})
+    return rows
+
+
 def read_text(root, record):
     return (Path(root) / record["path"]).read_text(encoding="utf-8")
 
@@ -877,10 +892,13 @@ def report_command(root, scores_path, output):
     directions = {name: metric["higher_is_ai"] for name, metric in scores["metrics"].items()}
     values = {name: metric["by_sha"] for name, metric in scores["metrics"].items()}
     summary = summarize(corpus["records"], values, directions, pairs)
-    labelled = [record for record in corpus["records"]]
+    labelled = list(corpus["records"])
+    controls = human_control_records(root)
     payload = {
         "schema_version": 1,
+        "torch": scores.get("torch"),
         "corpus": {"records": len(labelled), "conflicts": len(corpus["conflicts"]),
+                   "unique_stripped_texts": len({record["stripped_sha256"] for record in labelled}),
                    "below_ceiling": sum(record["ai"] < 100 for record in labelled),
                    "at_ceiling": sum(record["ai"] >= 100 for record in labelled),
                    "words_at_most_130": sum(record["whitespace_words"] <= SHORT_WORDS for record in labelled),
@@ -890,6 +908,7 @@ def report_command(root, scores_path, output):
                    "models": sorted({record["model"] for record in labelled})},
         "pairs": len(pairs),
         "metrics": summary,
+        "human_controls": control_score_rows(controls, scores["metrics"]),
         "status_counts": {name: metric.get("status_counts") for name, metric in scores["metrics"].items()},
     }
     write_json(output, payload)

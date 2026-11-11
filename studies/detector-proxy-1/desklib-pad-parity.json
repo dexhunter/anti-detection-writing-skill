@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "model_id": "desklib/ai-text-detector-v1.01",
+  "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+  "device": "cpu",
+  "dtype": "float32",
+  "padded_scorer": "skills/anti-ai-detection-writing-skill/scripts/local_detector.py DesklibBackend, pad to 768",
+  "unpadded_scorer": "skills/anti-ai-detection-writing-skill/scripts/proxy_detector.py MeanPoolDetector",
+  "note": "Three texts only. Not a replay of the archive: 112 files, 107 stripped texts.",
+  "comparisons": [
+    {
+      "label": "synthetic sentence",
+      "path": null,
+      "text": "Please refund the order.",
+      "sha256": "0cc3e0265c37cd2ad02c700374b15c83026c614ac58a330648588ff9d7520454",
+      "tokens_including_special": 7,
+      "padded_logit": 0.8254755735397339,
+      "unpadded_logit": 0.8254749774932861,
+      "logit_delta_unpadded_minus_padded": -5.960464477539062e-07
+    },
+    {
+      "label": "carroll control",
+      "path": "studies/open-detector-proxy-1/review/human-control-02.txt",
+      "text": null,
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "tokens_including_special": 176,
+      "padded_logit": -3.6196510791778564,
+      "unpadded_logit": -3.6196513175964355,
+      "logit_delta_unpadded_minus_padded": -2.384185791015625e-07
+    },
+    {
+      "label": "business answer",
+      "path": "studies/model-assisted-1/measurements/r20-business/effective.txt",
+      "text": null,
+      "sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "tokens_including_special": 168,
+      "padded_logit": -4.419746398925781,
+      "unpadded_logit": -4.419748783111572,
+      "logit_delta_unpadded_minus_padded": -2.384185791015625e-06
+    }
+  ]
+}

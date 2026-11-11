@@ -1,0 +1,2716 @@
+{
+  "schema_version": 1,
+  "service": "GPTZero",
+  "unit": "document_confidence_percent",
+  "records": [
+    {
+      "id": "00c6f823a23ff79d",
+      "sha256": "00c6f823a23ff79deb1662b4a307d615d5271c77b15d453b93ca7e07a7af1050",
+      "stripped_sha256": "69c5793b40b7d27a17c3d4d4d0d4df8595f65e5ad01e250a1ed747666a6d8e91",
+      "path": "studies/model-assisted-1/measurements/r18-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 130,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "067e25750584cb75",
+      "sha256": "067e25750584cb75362a86a33b2f86ed85256c05bb485ddf1268dd98d7be4401",
+      "stripped_sha256": "e1f4ddea67900068f05f4e43af60d6dfe0570a7b763a029dfd1cc095f8a0fe97",
+      "path": "studies/unseen-transfer-1/measurements/fastapi-16297/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 150,
+      "whitespace_words": 150,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "072c744cc84d2572",
+      "sha256": "072c744cc84d257280602abda66026231f7d89e8d953479de9ed2e14166603aa",
+      "stripped_sha256": "072c744cc84d257280602abda66026231f7d89e8d953479de9ed2e14166603aa",
+      "path": "studies/inputs/quote-transfer-2/datasets-7351/quoted.txt",
+      "ai": 67,
+      "mixed": 33,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 127,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "08021151db427012",
+      "sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "stripped_sha256": "0e8692d8b79e8fba0ae70517413f9fc3c8c31efa715467987453c1e4fd0a79ec",
+      "path": "studies/model-assisted-1/measurements/control-tech/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 129,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 6
+    },
+    {
+      "id": "0b902823e4fe1ae4",
+      "sha256": "0b902823e4fe1ae450fe099cf495f571afc0150fccf4a48bc555a6417ec96df4",
+      "stripped_sha256": "7611c070352f26c5742b2f772837a0b251f20fc287c737eb3944a072f8c1f48c",
+      "path": "studies/autoresearch-controls-1/measurements/python-baseline-effective.txt",
+      "ai": 91.0,
+      "mixed": 9.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 129,
+      "whitespace_words": 129,
+      "evidence": [
+        "studies/autoresearch-controls-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "0bef0d08122cc4b9",
+      "sha256": "0bef0d08122cc4b9a5d4300a53c311c508a3a830e3c0dd4d26bafe9de17e0758",
+      "stripped_sha256": "b07b4a763325ad67a7eb93c9c89060120deeec4c1c155dd078261d187afe7757",
+      "path": "studies/autoresearch-controls-1/measurements/python-original-effective.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 134,
+      "whitespace_words": 134,
+      "evidence": [
+        "studies/autoresearch-controls-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "0eba8af8caf37705",
+      "sha256": "0eba8af8caf3770516ecdbf136b0b6050ac064b212ae791df7a64a2f298500b5",
+      "stripped_sha256": "0eba8af8caf3770516ecdbf136b0b6050ac064b212ae791df7a64a2f298500b5",
+      "path": "studies/inputs/quote-transfer-2/datasets-7351/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 113,
+      "whitespace_words": 113,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "12822fe151daf0af",
+      "sha256": "12822fe151daf0afa40c7813e13eae9e87dbe48a2bf9c7fdcad1af41d331c742",
+      "stripped_sha256": "12822fe151daf0afa40c7813e13eae9e87dbe48a2bf9c7fdcad1af41d331c742",
+      "path": "studies/inputs/plain-pilot/datasets-6430/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 161,
+      "whitespace_words": 161,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "136767f5b333ba44",
+      "sha256": "136767f5b333ba44e6ad796b00504574ef3329423252aebf194c5eb83a7e7c71",
+      "stripped_sha256": "136767f5b333ba44e6ad796b00504574ef3329423252aebf194c5eb83a7e7c71",
+      "path": "studies/inputs/quote-transfer-1/datasets-7131/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 175,
+      "whitespace_words": 175,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "15a52f6647261fe8",
+      "sha256": "15a52f6647261fe87de3227cd3bd5faf2f7218de1886ed82abe62e105e76147b",
+      "stripped_sha256": "15a52f6647261fe87de3227cd3bd5faf2f7218de1886ed82abe62e105e76147b",
+      "path": "studies/inputs/quote-transfer-2/poetry-10430/quoted.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 118,
+      "whitespace_words": 118,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "16a57cffc425fd16",
+      "sha256": "16a57cffc425fd165412fb078153ea90428ac6358af072fda296d0a7fafea4f8",
+      "stripped_sha256": "16a57cffc425fd165412fb078153ea90428ac6358af072fda296d0a7fafea4f8",
+      "path": "studies/inputs/new-answers/mattpocock-553/final.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 136,
+      "whitespace_words": 136,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "19aef67702f036ad",
+      "sha256": "19aef67702f036ad1c80795e46c4de506bc1bccb6f67870b4b7b9ec36e249af9",
+      "stripped_sha256": "19aef67702f036ad1c80795e46c4de506bc1bccb6f67870b4b7b9ec36e249af9",
+      "path": "studies/inputs/quote-transfer-1/open-webui-19736/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 120,
+      "whitespace_words": 120,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "19e66968b29698f1",
+      "sha256": "19e66968b29698f1beb68bc2354a79b4978b8a047b26cba3ef0870894be3c48d",
+      "stripped_sha256": "ee63e85660f92e92e4445e15bd16b722073f23a19ada7d4117ba1d419ce331bd",
+      "path": "studies/unseen-transfer-1/measurements/pytest-14190/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 135,
+      "whitespace_words": 135,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "1b462f98192664cb",
+      "sha256": "1b462f98192664cb574bcbb5db9c70b55f70bd46ada8a18abb08252abb33de3f",
+      "stripped_sha256": "b5afe67824843b9f65aff0a9de360475acf2d4246948bb01a4414cfc1fe31d54",
+      "path": "studies/model-assisted-1/measurements/r12-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 121,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "1b59443016e7896d",
+      "sha256": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
+      "stripped_sha256": "a50b19c98b7284e69a13e95edd930596a5b8f231faa8d38e1591ca92cf1537f2",
+      "path": "studies/local-tools-1/authormist/inputs/wm4-dev-technical-01.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 123,
+      "evidence": [
+        "studies/writing-methods-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "1f414c1780565f15",
+      "sha256": "1f414c1780565f15321c1d8997fdb5eea47a086e6da67d5f50777f7537f8f6c6",
+      "stripped_sha256": "87866a12d2971951e686d7a5bb4957d278ce8a5a792be3e8e60fef260ed10115",
+      "path": "studies/reader-reconstruction-1/inputs/article/scans/candidate-final/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 540,
+      "evidence": [
+        "studies/reader-reconstruction-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "206c9569bbbd3d0c",
+      "sha256": "206c9569bbbd3d0ccc00f91c6ab3618b8f2c860097c81ce02b147e30398b51a6",
+      "stripped_sha256": "206c9569bbbd3d0ccc00f91c6ab3618b8f2c860097c81ce02b147e30398b51a6",
+      "path": "studies/inputs/quote-transfer-1/adk-2194/quoted.txt",
+      "ai": 40,
+      "mixed": 60,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 184,
+      "whitespace_words": 184,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "211f47dc65ea26f4",
+      "sha256": "211f47dc65ea26f41b669f43a76cd0da79ea36f3a22413bda71c6232a51295ab",
+      "stripped_sha256": "476bbe3592e7b73fd83c0597b774f3c3d8a373e371e5c326185ad58094db74c7",
+      "path": "studies/model-assisted-1/measurements/r21-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 121,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "23a9f3b2df01628a",
+      "sha256": "23a9f3b2df01628a9c75ea68d0c39bb20ae2352815c47d132f7d51e21f1b2869",
+      "stripped_sha256": "23a9f3b2df01628a9c75ea68d0c39bb20ae2352815c47d132f7d51e21f1b2869",
+      "path": "studies/inputs/plain-pilot/open-webui-23056/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 156,
+      "whitespace_words": 156,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2613183d4e56666f",
+      "sha256": "2613183d4e56666f40324ffbf745909a6e64f32f77ceb70a92e4f2bc68af8b43",
+      "stripped_sha256": "6361ada5d92266b3d8e74f9794cea9ec288503d9cfc96ad1cc17971074358f34",
+      "path": "studies/paired-editing-examples-1/measurements/article-candidate/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 558,
+      "whitespace_words": 558,
+      "evidence": [
+        "studies/paired-editing-examples-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "27493de434f0f5b2",
+      "sha256": "27493de434f0f5b2bd86de9bf6daaeb34b5b7402485fc1fb912936b3ebd1c418",
+      "stripped_sha256": "0b8174ee8aadc8df2ea985b894e9239f6f702645e00a813c0e9c733b83159078",
+      "path": "studies/model-assisted-1/measurements/r12-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "276b464c0efcbca4",
+      "sha256": "276b464c0efcbca4c71f9894fc2f6631f36769c053f2d670912daf6c1584672c",
+      "stripped_sha256": "276b464c0efcbca4c71f9894fc2f6631f36769c053f2d670912daf6c1584672c",
+      "path": "studies/inputs/quote-transfer-1/adk-2194/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 166,
+      "whitespace_words": 166,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2871e4df1be53434",
+      "sha256": "2871e4df1be53434fb2c501fdf76ca78196f9e2f623ab506a7acae76d1f82431",
+      "stripped_sha256": "0decd3b7e83899e8ce6bcc1bc079d09fa63996f9dc78cbbc385dc17e36dc7787",
+      "path": "studies/unseen-transfer-1/measurements/pydantic-13585/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 144,
+      "whitespace_words": 144,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "2905d46473f148b0",
+      "sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+      "stripped_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "path": "studies/requested-alternatives-1/inputs/kubernetes-probe-roles/original-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 164,
+      "whitespace_words": 164,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2a4db0a9ebaff71c",
+      "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
+      "stripped_sha256": "ae39ec1a5b003cd7d73759cd374b75f740ef36fe5b6d9815f39e766eac9774f2",
+      "path": "studies/local-tools-1/detector/texts/technical-baseline.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 120,
+      "evidence": [
+        "studies/writing-methods-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2b46742d8ed623be",
+      "sha256": "2b46742d8ed623be6e74c982c58d8c70f154b825a5715c3b418a659f7019d9b8",
+      "stripped_sha256": "2b46742d8ed623be6e74c982c58d8c70f154b825a5715c3b418a659f7019d9b8",
+      "path": "studies/inputs/new-answers/mattpocock-287/final.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 126,
+      "whitespace_words": 126,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2e95d560e213920f",
+      "sha256": "2e95d560e213920ff4ebc817006ae0619de7d5080cf9addb637d74caa7a5693f",
+      "stripped_sha256": "2e95d560e213920ff4ebc817006ae0619de7d5080cf9addb637d74caa7a5693f",
+      "path": "studies/inputs/plain-pilot/poetry-10095/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 188,
+      "whitespace_words": 188,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "2e9ee4d52a05b7cb",
+      "sha256": "2e9ee4d52a05b7cb12afed26db5ac8b99c680581633b3831cf43b7b10bc0f535",
+      "stripped_sha256": "2e9ee4d52a05b7cb12afed26db5ac8b99c680581633b3831cf43b7b10bc0f535",
+      "path": "studies/inputs/quote-transfer-1/qwen-1298/quoted.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 138,
+      "whitespace_words": 138,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "333986c9c22706e7",
+      "sha256": "333986c9c22706e7f501d1acf474381a76026ae756b521476d3b0622fb50a983",
+      "stripped_sha256": "d49ee3a51a57062f1a90707c14eabebdb6828f52d4fc2ae1b8b580b99e2dbb58",
+      "path": "studies/model-assisted-1/measurements/verify-candidate-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 139,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "39f052ae1a2e1666",
+      "sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "stripped_sha256": "c0b190f444d5557eea1bbbcbb10bd29d0f3c81a6d7942fb5e617884138dfa395",
+      "path": "studies/model-assisted-1/measurements/r01-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 128,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "3c5e1b5de368af65",
+      "sha256": "3c5e1b5de368af658b6fd1f635ab35e17ce6c6fac06f81bd8b938d829969c0a3",
+      "stripped_sha256": "0df4f3946f7bb1f6f414d9adba1a18cb51b16ab28e14822d3ec0ec942de49f77",
+      "path": "studies/prospective-proxy-1/quality-inputs/dns-B.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/prospective-proxy-1/adaptive-results.json",
+        "studies/prospective-proxy-1/baselines.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "3cf3bd1a7fe7b87d",
+      "sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "stripped_sha256": "e7073fa533816af261dd65e27999c5e05220ae1a35c7fa6388154e52fc6bef02",
+      "path": "studies/exact-crossover-1/observations/parent/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 113,
+      "whitespace_words": 113,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "451d513ea7f436b7",
+      "sha256": "451d513ea7f436b75cd5abdba01940eaf6a481c9ad758f8d29bc6515a03e53ee",
+      "stripped_sha256": "d0054a3d928ca634c1ac3a2484ba9de030ff0c4864c76a070a7a7dc56f9a8519",
+      "path": "studies/autoresearch-controls-1/measurements/python-candidate-effective.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 125,
+      "whitespace_words": 125,
+      "evidence": [
+        "studies/autoresearch-controls-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "4a5e1060b6cc5c2f",
+      "sha256": "4a5e1060b6cc5c2f65be1fabafa91374bdd355c750b0e460fa7d8c48b6bd77a9",
+      "stripped_sha256": "d12ece3c3e7166b7baddd813b7cd30986e00ba070d4ce04ecfd972cf9b8cc2f8",
+      "path": "studies/prospective-proxy-1/adaptive-writer/dns.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 119,
+      "evidence": [
+        "studies/prospective-proxy-1/adaptive-results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "4d66a058fbe21f14",
+      "sha256": "4d66a058fbe21f1482550653065f1fa4c57210198c3d682e9fe900df387c57a6",
+      "stripped_sha256": "4d66a058fbe21f1482550653065f1fa4c57210198c3d682e9fe900df387c57a6",
+      "path": "studies/inputs/quote-transfer-1/poetry-9928/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 153,
+      "whitespace_words": 153,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "52ac78a1a877e5d9",
+      "sha256": "52ac78a1a877e5d911d71a58ce28474d69e01877dee4404cff486da267ba695a",
+      "stripped_sha256": "0347e5168c248051b9f2a6f63a31357c2e1600cc6f15fb5f5c56799923c3799f",
+      "path": "studies/autoresearch-controls-1/measurements/github-baseline-effective.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 133,
+      "whitespace_words": 133,
+      "evidence": [
+        "studies/autoresearch-controls-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "534a7ce68137540c",
+      "sha256": "534a7ce68137540cf16dc4a60f4bcd44721b45ebb6d6c213f691ad50be64186b",
+      "stripped_sha256": "945cbe7173312e09f1388c06b5f1974a484402a80b8cfaa54750feb5ed034bbb",
+      "path": "studies/unseen-transfer-1/measurements/fastapi-7077/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 126,
+      "whitespace_words": 126,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "53c7dd81af7757d3",
+      "sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "stripped_sha256": "7813990fdf730cdc9503cf98308368c7f3f16fe2fc94ef3ee9d9496da9b1791f",
+      "path": "studies/exact-crossover-1/observations/hybrid/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 114,
+      "whitespace_words": 114,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "561ce4c9f106b888",
+      "sha256": "561ce4c9f106b888bd36057aec55da39c04a840d85f0e6328b6666fec2fbc993",
+      "stripped_sha256": "561ce4c9f106b888bd36057aec55da39c04a840d85f0e6328b6666fec2fbc993",
+      "path": "studies/inputs/plain-pilot/poetry-10095/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 161,
+      "whitespace_words": 161,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "57f26919140f592a",
+      "sha256": "57f26919140f592aa890a3fd7b21f0c4310f3eb3248e2c9bb4e9eb12810e8e07",
+      "stripped_sha256": "d0054a3d928ca634c1ac3a2484ba9de030ff0c4864c76a070a7a7dc56f9a8519",
+      "path": "studies/autoresearch-controls-1/inputs/python-candidate.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 125,
+      "whitespace_words": 125,
+      "evidence": [
+        "studies/repeatability-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "5c1da01f8e2975a7",
+      "sha256": "5c1da01f8e2975a7be4de99b80e94f5e79e354f5f6a94d50925f05f3e11e70ea",
+      "stripped_sha256": "1acf0c261e5693b0c0765ada66fbf9b46064f5f738358d338cf22bd4e53153c3",
+      "path": "studies/register-and-selection-1/measurements/repair-article-baseline/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 538,
+      "whitespace_words": 538,
+      "evidence": [
+        "studies/register-and-selection-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "5fb75dfbe8a534fd",
+      "sha256": "5fb75dfbe8a534fdaae3308377fd593f1d2d1e2a84893e1bd1307249288254da",
+      "stripped_sha256": "5fb75dfbe8a534fdaae3308377fd593f1d2d1e2a84893e1bd1307249288254da",
+      "path": "studies/inputs/quote-transfer-2/adk-1956/quoted.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": true,
+      "displayed_words": 84,
+      "whitespace_words": 84,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "6044afc323be77ee",
+      "sha256": "6044afc323be77ee379fc5b37a4b8cce5401e9eacf7f4b1a08d8d3553785c279",
+      "stripped_sha256": "6044afc323be77ee379fc5b37a4b8cce5401e9eacf7f4b1a08d8d3553785c279",
+      "path": "studies/inputs/quote-transfer-2/adk-1956/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": true,
+      "displayed_words": 82,
+      "whitespace_words": 82,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "628e8fed9ed0cb4c",
+      "sha256": "628e8fed9ed0cb4caabb205b7e27df34a64f19df865fb9abd930fe28f7830dec",
+      "stripped_sha256": "f18cf10f02d551e684f06ccba1df1986db0f6d93396c01db19b5ba9a2ce857ba",
+      "path": "studies/register-and-selection-1/measurements/repair-etag-candidate/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 124,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/register-and-selection-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "6346880adb5a6b00",
+      "sha256": "6346880adb5a6b000c6463e304c4586f90c92a6e6bde83da4dc360ce3bdebb89",
+      "stripped_sha256": "7611c070352f26c5742b2f772837a0b251f20fc287c737eb3944a072f8c1f48c",
+      "path": "studies/autoresearch-controls-1/inputs/python-baseline.txt",
+      "ai": 91.0,
+      "mixed": 9.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 129,
+      "whitespace_words": 129,
+      "evidence": [
+        "studies/repeatability-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "645dda6437aae401",
+      "sha256": "645dda6437aae4016ea928bbbb60dbed91d07feee9eb19092fdc1f121e6030d7",
+      "stripped_sha256": "db9fb94fc433730967ce995d270a4ef31f99258fa3663edacd8f61df348c2a66",
+      "path": "studies/gepa-pilot-1/measurements/candidate-1/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 124,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/gepa-pilot-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "64c712c3ad3d3e3b",
+      "sha256": "64c712c3ad3d3e3bae0b425203f3221ad9077c4bc0e25f4967c03509e5635127",
+      "stripped_sha256": "64c712c3ad3d3e3bae0b425203f3221ad9077c4bc0e25f4967c03509e5635127",
+      "path": "studies/inputs/new-answers/mattpocock-285/final.txt",
+      "ai": 11,
+      "mixed": 89,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 140,
+      "whitespace_words": 140,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "72ffc5b5a5b092ba",
+      "sha256": "72ffc5b5a5b092ba21ed5416eda45d2492869264cf5ec81523858791db5eee7d",
+      "stripped_sha256": "72ffc5b5a5b092ba21ed5416eda45d2492869264cf5ec81523858791db5eee7d",
+      "path": "studies/inputs/quote-transfer-2/datasets-7351/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 123,
+      "whitespace_words": 123,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "76704d21b121d2eb",
+      "sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "stripped_sha256": "6e2c3b2ebeafe78a0dee6f8760cd8e13560c3eb085020e073c374b836e4d961a",
+      "path": "studies/model-assisted-1/measurements/r20-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 147,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "773d1050ad21a572",
+      "sha256": "773d1050ad21a572b7aad47eb2c0090d5018be4c8d47ee87f785bea7dae925b1",
+      "stripped_sha256": "773d1050ad21a572b7aad47eb2c0090d5018be4c8d47ee87f785bea7dae925b1",
+      "path": "studies/inputs/quote-transfer-1/qwen-1298/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 108,
+      "whitespace_words": 108,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "7a81e91d9b8d2c29",
+      "sha256": "7a81e91d9b8d2c297a5a92ebb27954ec06d51d123eae2463b743fd863b6019f5",
+      "stripped_sha256": "7a81e91d9b8d2c297a5a92ebb27954ec06d51d123eae2463b743fd863b6019f5",
+      "path": "studies/inputs/quote-transfer-2/poetry-10430/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 101,
+      "whitespace_words": 101,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "7d35422871c24a8f",
+      "sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "stripped_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "path": "studies/inputs/quote-transfer-2/open-webui-20233/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 156,
+      "whitespace_words": 156,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json",
+        "studies/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "7dd15f83b4e85e41",
+      "sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "stripped_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "path": "studies/inputs/quote-transfer-2/open-webui-20233/quoted.txt",
+      "ai": 93,
+      "mixed": 7,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 172,
+      "whitespace_words": 172,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json",
+        "studies/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "83ae051eb9e0b9a9",
+      "sha256": "83ae051eb9e0b9a9847f91273066b4565697ba5f61bd452add878d3d9816acac",
+      "stripped_sha256": "83ae051eb9e0b9a9847f91273066b4565697ba5f61bd452add878d3d9816acac",
+      "path": "studies/inputs/new-answers/mattpocock-231/final.txt",
+      "ai": 93,
+      "mixed": 7,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 137,
+      "whitespace_words": 137,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "861da375dbb2c236",
+      "sha256": "861da375dbb2c2362a02b47caab0ef82891cdc7af73de20e18860e68d0e16bcf",
+      "stripped_sha256": "9dd4cd4b4855bf4060c63ae534164324294b6a32fb14d62bae1a5938e133da6e",
+      "path": "studies/gepa-pilot-1/measurements/candidate-2/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 131,
+      "whitespace_words": 131,
+      "evidence": [
+        "studies/gepa-pilot-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "8b4b847c8af24cce",
+      "sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "stripped_sha256": "155f2aac2d6aa61d5cbe9de9560467e54ad30a5868a896723ea81dcb62debf7e",
+      "path": "studies/model-assisted-1/measurements/verify-candidate-business/effective.txt",
+      "ai": 0,
+      "mixed": 0,
+      "human": 100,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 148,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "8ba4b235a84579f8",
+      "sha256": "8ba4b235a84579f84e44b6c1108c2b9e71be1fb2887ab8258172c5651d6d8393",
+      "stripped_sha256": "f983ab0bb2b6bb6b3225e45feb53124811911f9c0049f7d66e6902fa0e63fb74",
+      "path": "studies/unseen-transfer-1/measurements/httpx-3630/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 149,
+      "whitespace_words": 149,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "8d70624a45807dd3",
+      "sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "stripped_sha256": "34727f0eda603f5d177356bc7c55ea1f44bb9ff321826eadb4a72d14f55d1bb4",
+      "path": "studies/model-assisted-1/measurements/r01-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "8f58cd7706725c20",
+      "sha256": "8f58cd7706725c208ddfcea11da9cacaa99913348547f3a9f6cab0812588aae9",
+      "stripped_sha256": "8f58cd7706725c208ddfcea11da9cacaa99913348547f3a9f6cab0812588aae9",
+      "path": "studies/inputs/plain-pilot/datasets-6430/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 171,
+      "whitespace_words": 171,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "8f78a9e24ebfc755",
+      "sha256": "8f78a9e24ebfc75543f1c279433d47fc0c4be68fd796571b74f8238d1f7f53cb",
+      "stripped_sha256": "8f78a9e24ebfc75543f1c279433d47fc0c4be68fd796571b74f8238d1f7f53cb",
+      "path": "studies/inputs/plain-pilot/adk-1513/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 162,
+      "whitespace_words": 162,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "8fcd358167f963d5",
+      "sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "stripped_sha256": "9f0b6b6efa814eed7a68181500baba749432cc8b408c04d5bbc914003480652f",
+      "path": "studies/paired-editing-examples-1/measurements/http-baseline/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 123,
+      "whitespace_words": 123,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json",
+        "studies/paired-editing-examples-1/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "9259723d88704ecc",
+      "sha256": "9259723d88704eccd41c7e6226fa4f7be32d79e2bed4b21c0e4950c77c443c70",
+      "stripped_sha256": "acb43cd115012a1cb38a3defc94019e98a69acaec79205f0f6eb1bfd2b31f1b9",
+      "path": "studies/model-assisted-1/measurements/r21-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 128,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "9473435efe54a319",
+      "sha256": "9473435efe54a3195300f615c3a5532aba6270c4514e439362a6f3d5b0cdf1de",
+      "stripped_sha256": "9473435efe54a3195300f615c3a5532aba6270c4514e439362a6f3d5b0cdf1de",
+      "path": "studies/inputs/quote-transfer-1/poetry-9928/quoted.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 166,
+      "whitespace_words": 166,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "9505317fe71acd12",
+      "sha256": "9505317fe71acd125fb6b5aae3e41de9985bb2a255820cd1723a852d2b88c6f9",
+      "stripped_sha256": "9505317fe71acd125fb6b5aae3e41de9985bb2a255820cd1723a852d2b88c6f9",
+      "path": "studies/inputs/plain-pilot/adk-1513/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 148,
+      "whitespace_words": 148,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a3aaf4a1728d9579",
+      "sha256": "a3aaf4a1728d9579a976c27406fee8d4f8becbf995b0539823734e528e09dfbd",
+      "stripped_sha256": "0c928d2a8f152ac89f937949cb3e02f7d5a29ebff375742e3bfc675176577378",
+      "path": "studies/model-assisted-1/measurements/r16-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 129,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a5dccb78802e5380",
+      "sha256": "a5dccb78802e5380bf3ac382a379a5dc49ea694c402b9ab1d2716b1d915770aa",
+      "stripped_sha256": "e7073fa533816af261dd65e27999c5e05220ae1a35c7fa6388154e52fc6bef02",
+      "path": "studies/exact-crossover-1/observations/parent/answer.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 113,
+      "evidence": [
+        "studies/exact-crossover-1/observations/parent/metrics.json",
+        "studies/exact-crossover-1/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "a5e694379fe62d14",
+      "sha256": "a5e694379fe62d14499d0fd6bb2cde2ef288ea6d7238f1b0447048e3448a99c2",
+      "stripped_sha256": "a5e694379fe62d14499d0fd6bb2cde2ef288ea6d7238f1b0447048e3448a99c2",
+      "path": "studies/inputs/quote-transfer-1/open-webui-19736/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 130,
+      "whitespace_words": 130,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a6958996578f452a",
+      "sha256": "a6958996578f452ae61767ab3ddb3487c252b828404605e63cd4bf0ae2dd8a83",
+      "stripped_sha256": "43d97b205bd22f3b5a4553fee3efe621cfa73bf26609455b9d94f81d45a9bb0f",
+      "path": "studies/model-assisted-1/measurements/r16-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 142,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a794e2ac6d5f38e2",
+      "sha256": "a794e2ac6d5f38e27d3528620d1422f1b20dc6126ca027ba4b7254f8c6815031",
+      "stripped_sha256": "a794e2ac6d5f38e27d3528620d1422f1b20dc6126ca027ba4b7254f8c6815031",
+      "path": "studies/inputs/quote-transfer-2/poetry-10430/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 107,
+      "whitespace_words": 107,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a7ea1018ffa4111d",
+      "sha256": "a7ea1018ffa4111d8931b52c9f7aed04b26d38c599229591bd52c9252507baa8",
+      "stripped_sha256": "a7ea1018ffa4111d8931b52c9f7aed04b26d38c599229591bd52c9252507baa8",
+      "path": "studies/inputs/quote-transfer-1/qwen-1298/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 127,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a8dda6a6d609a4ef",
+      "sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+      "stripped_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "path": "studies/requested-alternatives-1/inputs/postgresql-snapshot-scope/original-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 180,
+      "whitespace_words": 180,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "a96fa910e0412217",
+      "sha256": "a96fa910e04122172a03c60a6184605fe88de49c2bd81f63d7093a051e17f7e0",
+      "stripped_sha256": "8d8a996391f276cbe2edd04a648ec7060342de597d8d5515f155613c62278d4c",
+      "path": "studies/unseen-transfer-1/measurements/httpx-3630/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 143,
+      "whitespace_words": 143,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "b44a2334915fa297",
+      "sha256": "b44a2334915fa297d232bc861d6931ade6b9fffc4d0fdc1317db114266983718",
+      "stripped_sha256": "b44a2334915fa297d232bc861d6931ade6b9fffc4d0fdc1317db114266983718",
+      "path": "studies/inputs/plain-pilot/qwen-1251/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": true,
+      "displayed_words": 99,
+      "whitespace_words": 99,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "b7e74c7c330cd751",
+      "sha256": "b7e74c7c330cd7510d216f7df793861785d178f00e381cd0882c54594e849c9d",
+      "stripped_sha256": "05fd80dbdf1548ef818ce7ca87d785f619a1af423dad07816c1fd011b187806a",
+      "path": "studies/unseen-transfer-1/measurements/pytest-14190/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 140,
+      "whitespace_words": 140,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "b7e9c0c32589c7a9",
+      "sha256": "b7e9c0c32589c7a9b9d05854fe3d7bada4b14569e3a615982a037f7ddcc959fc",
+      "stripped_sha256": "61b8450f30f6d0dc82c9727db9ac71f3c003d11c1107ac72c1378e54ba10bca1",
+      "path": "studies/model-assisted-1/measurements/verify-baseline-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 133,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "b93e8a083f58986d",
+      "sha256": "b93e8a083f58986d61fde4650876d7a9f9e80905570d9991b8070970f9c99d75",
+      "stripped_sha256": "b93e8a083f58986d61fde4650876d7a9f9e80905570d9991b8070970f9c99d75",
+      "path": "studies/inputs/quote-transfer-1/datasets-7131/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 164,
+      "whitespace_words": 164,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "bbea88e64abbfe34",
+      "sha256": "bbea88e64abbfe34abbbe1ff01c4c4a4052028665ee59bfe4c53bc7dc0afef88",
+      "stripped_sha256": "2a861837160bdcb2d9350f06ae6f3ecea347f3d8ff11378fdbf8b49944f83632",
+      "path": "studies/paired-editing-examples-1/measurements/article-baseline/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 574,
+      "whitespace_words": 574,
+      "evidence": [
+        "studies/paired-editing-examples-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "bd2dee8a7956586a",
+      "sha256": "bd2dee8a7956586a2d7078df1a181a2c7ae1a99f904c6a371c53be7c1aacb287",
+      "stripped_sha256": "4f789122fc69a879821d91b0c66410acfcc54ef13ff1a587ab63ae370824cd05",
+      "path": "studies/unseen-transfer-1/measurements/pydantic-13585/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 145,
+      "whitespace_words": 145,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "bf73ca33f4653b40",
+      "sha256": "bf73ca33f4653b400850fbcf4df7e3282e6a81053b984291919806798c3012ef",
+      "stripped_sha256": "da31cbe3bcea5c03c0a09e0cf759e0e132356b96f0496de31b30e359d10b5fee",
+      "path": "studies/register-and-selection-1/measurements/repair-article-candidate/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 516,
+      "whitespace_words": 516,
+      "evidence": [
+        "studies/register-and-selection-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "c462bc3bda8cd8c4",
+      "sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "stripped_sha256": "6c341ff55e70dbca8de090a37cea720b052fe80ce39ceb1c356ce0826c418d42",
+      "path": "studies/model-assisted-1/measurements/r10-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "c63366ab64353570",
+      "sha256": "c63366ab64353570bded9cd8337730661399ebfdd4f5a0fd07bd21a685adb42d",
+      "stripped_sha256": "9b210324bd58f7ffced0a55b0c9f44732d313a7d730aa0aa2b0792123a7a51f7",
+      "path": "studies/unseen-transfer-1/measurements/fastapi-16297/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 149,
+      "whitespace_words": 149,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "c68bfd3d00ab7cca",
+      "sha256": "c68bfd3d00ab7cca58851663a200c95728fb5b30283f9cb7790bfaffdc0e8083",
+      "stripped_sha256": "583c74d3ff4d12230b672fb49effdb45d2dcfe8373b491e45b031852f860b42f",
+      "path": "studies/register-and-selection-1/measurements/repair-etag-baseline/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 127,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/register-and-selection-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "c8890dbac9417c63",
+      "sha256": "c8890dbac9417c6332075b94abc7cb9e731884fbdc2f02b26c002aa36c40cc37",
+      "stripped_sha256": "c8890dbac9417c6332075b94abc7cb9e731884fbdc2f02b26c002aa36c40cc37",
+      "path": "studies/inputs/quote-transfer-2/adk-1956/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": true,
+      "displayed_words": 78,
+      "whitespace_words": 78,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "cabeebb008b446e2",
+      "sha256": "cabeebb008b446e2d860eb052ddb577054d85a0beb9e2fe9b604a33a2178e780",
+      "stripped_sha256": "cabeebb008b446e2d860eb052ddb577054d85a0beb9e2fe9b604a33a2178e780",
+      "path": "studies/inputs/quote-transfer-2/qwen-1942/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 139,
+      "whitespace_words": 139,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "cbaabd388472aafc",
+      "sha256": "cbaabd388472aafce6d067dc1783dac8ac3275fe2f61779c5e35b16ef1b12f24",
+      "stripped_sha256": "cbaabd388472aafce6d067dc1783dac8ac3275fe2f61779c5e35b16ef1b12f24",
+      "path": "studies/inputs/quote-transfer-1/datasets-7131/quoted.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 186,
+      "whitespace_words": 186,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "cbe13a0bedf94ed4",
+      "sha256": "cbe13a0bedf94ed44ed400ef407c60b18d05f88944ba754152a4451b8df7b6a6",
+      "stripped_sha256": "cb124e7db86deda81dab462aca970ef3482c560c1dcb523e84e247a667c2e718",
+      "path": "studies/prospective-proxy-1/quality-inputs/python-A.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 122,
+      "evidence": [
+        "studies/prospective-proxy-1/adaptive-results.json",
+        "studies/prospective-proxy-1/baselines.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "cdc7680ac99fe05d",
+      "sha256": "cdc7680ac99fe05d199f0c7d3d118ddb3b218690ce5634c5150650687c642d9a",
+      "stripped_sha256": "4824492981dc47bf510a4c7962a0b35ca178712f8724b3b19bee6c24b105290e",
+      "path": "studies/unseen-transfer-1/measurements/httpx-3164/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 144,
+      "whitespace_words": 144,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "cfaab839929c0767",
+      "sha256": "cfaab839929c07674981d155f3da6052de3486557c37c65b4703d4e55903443e",
+      "stripped_sha256": "cfaab839929c07674981d155f3da6052de3486557c37c65b4703d4e55903443e",
+      "path": "studies/inputs/plain-pilot/qwen-1251/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": true,
+      "displayed_words": 90,
+      "whitespace_words": 90,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "d39e147d4ed21f25",
+      "sha256": "d39e147d4ed21f25fd689d11565337002462142b533f4f9959a5b616d6bd67be",
+      "stripped_sha256": "0b0da4930d31394a8a87c9c3b14e77f365d9e9380f372ca14545f62d6ec66caa",
+      "path": "studies/reader-reconstruction-1/inputs/article/scans/incumbent-control/editor-after.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 538,
+      "evidence": [
+        "studies/reader-reconstruction-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "d6de333023aae269",
+      "sha256": "d6de333023aae269e7084d9085fa780f41b8fa4f35116c657db7f4faf26ab975",
+      "stripped_sha256": "7813990fdf730cdc9503cf98308368c7f3f16fe2fc94ef3ee9d9496da9b1791f",
+      "path": "studies/exact-crossover-1/hybrids/child-a.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 114,
+      "evidence": [
+        "studies/exact-crossover-1/observations/hybrid/metrics.json",
+        "studies/exact-crossover-1/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "d701e77704b76b0f",
+      "sha256": "d701e77704b76b0f3a1f749ce1c2f05b39c73a9768879c9c850bb8659317861d",
+      "stripped_sha256": "8dfdb24b71418ffbf1a024c5782792d38ead9ae5cb3e2d916676a2bb4ff1dd5f",
+      "path": "studies/unseen-transfer-1/measurements/fastapi-7077/current-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 133,
+      "whitespace_words": 133,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "daeb2a2e3ab01ac3",
+      "sha256": "daeb2a2e3ab01ac3cc32f587711e363d9a85e3c774188238e6c716d232ffbaa8",
+      "stripped_sha256": "0dba961f16c2dae47cc190b2fdb66cb9005ad9ee03ea1db037ea563b0d7c0515",
+      "path": "studies/technical-format-1/measurements/mini-faq/answer.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 134,
+      "whitespace_words": 134,
+      "evidence": [
+        "studies/technical-format-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "daff08ed123d9300",
+      "sha256": "daff08ed123d93003fbb2c6fb0e8c8b732e7c610aa075a4d0eebfe10030d9ad6",
+      "stripped_sha256": "b3eee06c04ff36149841ce8714f4d43500bddb509a45b0b8cecb41f546224c6a",
+      "path": "studies/model-assisted-1/measurements/r18-technical/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 129,
+      "evidence": [
+        "studies/model-assisted-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "ddc2f491fd5204d8",
+      "sha256": "ddc2f491fd5204d8a4a20ae660945ec890b6f0e1bab9473df5299e0cd67e33af",
+      "stripped_sha256": "ddc2f491fd5204d8a4a20ae660945ec890b6f0e1bab9473df5299e0cd67e33af",
+      "path": "studies/inputs/quote-transfer-1/poetry-9928/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 150,
+      "whitespace_words": 150,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "de35aa9a0834390f",
+      "sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "stripped_sha256": "850321e8e5adc8b3221a3f43a747b406bdc4e71ad1f53c97067adc4bc6443c24",
+      "path": "studies/model-assisted-1/measurements/r10-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 123,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "deb98d1854302999",
+      "sha256": "deb98d1854302999db6dde1b09371a7ccbd96b5bdadd547e1f5787a5ed96e303",
+      "stripped_sha256": "deb98d1854302999db6dde1b09371a7ccbd96b5bdadd547e1f5787a5ed96e303",
+      "path": "studies/inputs/plain-pilot/open-webui-23056/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 155,
+      "whitespace_words": 155,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "df2239b87bd51f04",
+      "sha256": "df2239b87bd51f04bb476cabdf9e434f88e477d84dd56c48a35afc0a3cd1993a",
+      "stripped_sha256": "df2239b87bd51f04bb476cabdf9e434f88e477d84dd56c48a35afc0a3cd1993a",
+      "path": "studies/inputs/quote-transfer-1/open-webui-19736/quoted.txt",
+      "ai": 93,
+      "mixed": 7,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 139,
+      "whitespace_words": 139,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "dfb1293189cfb58d",
+      "sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "stripped_sha256": "4c210ebcb428718993fba5c809193a57588a3f3f0dc3b874e3494fef745b1cf6",
+      "path": "studies/model-assisted-1/measurements/verify-baseline-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 124,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "e012a3045b83fd08",
+      "sha256": "e012a3045b83fd083232e2c71aa0e11f3ff6458ed16799d6f6362dfa77325769",
+      "stripped_sha256": "61b8450f30f6d0dc82c9727db9ac71f3c003d11c1107ac72c1378e54ba10bca1",
+      "path": "studies/model-assisted-1/answers/verification/baseline/wm4-dev-technical-01.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 133,
+      "whitespace_words": 133,
+      "evidence": [
+        "studies/technical-format-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "e15c8664191956f0",
+      "sha256": "e15c8664191956f0b0e0d6227a2fcb3d794220d61ab99b3bfc01f7e1731e8792",
+      "stripped_sha256": "e15c8664191956f0b0e0d6227a2fcb3d794220d61ab99b3bfc01f7e1731e8792",
+      "path": "studies/inputs/quote-transfer-2/qwen-1942/quoted.txt",
+      "ai": 1,
+      "mixed": 99,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 148,
+      "whitespace_words": 148,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json",
+        "studies/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "e6f9c2c7d6cf2d55",
+      "sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "stripped_sha256": "747439ff7c63ef294d9ea0622cde1813a5e07de33958775ef41d57cead76fc93",
+      "path": "studies/model-assisted-1/measurements/control-business/effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 119,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 6
+    },
+    {
+      "id": "e8558e023c1a3471",
+      "sha256": "e8558e023c1a3471d4a0436787f9f10e7b0ecde2f46007c7c6fd84c98735bbba",
+      "stripped_sha256": "5ecf16fb00328bd4ddc1e91c8cd58dd7052a2361b300242401417e0c32d33c30",
+      "path": "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 178,
+      "whitespace_words": 178,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "ec6178646643eaac",
+      "sha256": "ec6178646643eaacac084f8b06222898121d7ef4d0fde4c8ea07c162bfaac326",
+      "stripped_sha256": "b8d3d7deef80958b864feab1bdee01e521f07a471f06a9ab29c84fb7aee956a2",
+      "path": "studies/autoresearch-controls-1/measurements/github-candidate-effective.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 138,
+      "whitespace_words": 138,
+      "evidence": [
+        "studies/autoresearch-controls-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "edf9021c9e91a589",
+      "sha256": "edf9021c9e91a589aedbe64b0ddb21e75d656b6bec908e08b4bcd31200d50094",
+      "stripped_sha256": "ed03fceec94627a5d24dd9eb2c8668b3379db7633c49164bd8ac856eb37274fc",
+      "path": "studies/unseen-transfer-1/measurements/httpx-3164/revised-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 146,
+      "whitespace_words": 146,
+      "evidence": [
+        "studies/unseen-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "f105149fe2ed40b7",
+      "sha256": "f105149fe2ed40b78cb7ba728824f03b2fb14a3d0199e02f077d163da023a966",
+      "stripped_sha256": "a7394870c63b62bcc81f2b856e1d884508dc1e9f48b24458ab4892a2d95f588d",
+      "path": "studies/workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 181,
+      "whitespace_words": 181,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "f123c677c9f122a4",
+      "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "stripped_sha256": "2beba61ab8c037973892d5a94cc8936a04dba7c533a276db1dd6d3d031209dfc",
+      "path": "studies/paired-editing-examples-1/measurements/http-candidate/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 119,
+      "whitespace_words": 119,
+      "evidence": [
+        "studies/open-detector-proxy-1/targets.json",
+        "studies/paired-editing-examples-1/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "f17f121c50ecb3cc",
+      "sha256": "f17f121c50ecb3cc782d5e002f9b4fd290dae3dfae889c9a09625e71739052bc",
+      "stripped_sha256": "f17f121c50ecb3cc782d5e002f9b4fd290dae3dfae889c9a09625e71739052bc",
+      "path": "studies/inputs/quote-transfer-2/qwen-1942/plain.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 127,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json",
+        "studies/results.json"
+      ],
+      "observations": 2
+    },
+    {
+      "id": "f74140439df45831",
+      "sha256": "f74140439df45831a6a52e765a184f17695b45468aacb2e1e46cfb9dbb78f0a8",
+      "stripped_sha256": "f74140439df45831a6a52e765a184f17695b45468aacb2e1e46cfb9dbb78f0a8",
+      "path": "studies/inputs/quote-transfer-2/open-webui-20233/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 131,
+      "whitespace_words": 131,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "fb0407b4f94b8d23",
+      "sha256": "fb0407b4f94b8d231f7f6be90201443c93644f36cb5018a44973a34f91d4b0b5",
+      "stripped_sha256": "fb0407b4f94b8d231f7f6be90201443c93644f36cb5018a44973a34f91d4b0b5",
+      "path": "studies/inputs/quote-transfer-1/adk-2194/baseline.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 162,
+      "whitespace_words": 162,
+      "evidence": [
+        "studies/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "fc938f9094810a93",
+      "sha256": "fc938f9094810a93937457af46a0f44c72d1c4acb4195723a129c4484545837f",
+      "stripped_sha256": "11e8a53ae684a7b288e4cd5e9738b4a2e463465605635045879128d7798ee78e",
+      "path": "studies/gepa-pilot-1/measurements/baseline/editor-after.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 122,
+      "whitespace_words": 122,
+      "evidence": [
+        "studies/gepa-pilot-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "fc9d84c07478b90a",
+      "sha256": "fc9d84c07478b90a5f53ed3d1ae0019a1c54f62ef21608525a10f64bfb0d5de0",
+      "stripped_sha256": "88fcbc8eaee9a680e3f4f2ecf4b8d805fc8925978fe21bb624a3bcbf0b3b2a4e",
+      "path": "studies/technical-format-1/measurements/reference-card/answer.txt",
+      "ai": 100.0,
+      "mixed": 0.0,
+      "human": 0.0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 127,
+      "whitespace_words": 127,
+      "evidence": [
+        "studies/technical-format-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
+      "id": "fd4c7b0b66280e1a",
+      "sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "stripped_sha256": "6df46823d22a3d94680e73a05eb8ead511f6d371e46293028e69b7eef261d4e4",
+      "path": "studies/model-assisted-1/measurements/r20-business/effective.txt",
+      "ai": 0,
+      "mixed": 0,
+      "human": 100,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": null,
+      "whitespace_words": 150,
+      "evidence": [
+        "studies/model-assisted-1/results.json",
+        "studies/open-detector-proxy-1/targets.json"
+      ],
+      "observations": 2
+    }
+  ],
+  "conflicts": [],
+  "unbound_score_objects": 0,
+  "raw_hits": 141,
+  "pairs": [
+    {
+      "id": "pair-01",
+      "case": "open-webui-20233",
+      "intervention": "Add one fixed attributed asker quotation, unchanged explanatory body",
+      "baseline_sha256": "7d35422871c24a8f65bac08c5d42bca771e2d79073e4dd818fdd0006a85b33a1",
+      "candidate_sha256": "7dd15f83b4e85e41e03f958f2651a1c7b9088a93c9298d73e361a4edd1c6b22f",
+      "baseline_ai": 100,
+      "candidate_ai": 93
+    },
+    {
+      "id": "pair-02",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Lossless split-and-rephrase",
+      "baseline_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "candidate_sha256": "8d70624a45807dd3120d4976420e2371200d52fde6f148c85e674759d5a7d8b8",
+      "baseline_ai": 100,
+      "candidate_ai": 100
+    },
+    {
+      "id": "pair-03",
+      "case": "wm4-dev-business-01",
+      "intervention": "Lossless split-and-rephrase",
+      "baseline_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "candidate_sha256": "39f052ae1a2e1666d75787a62fe482c1923f841b191e3dec0e66b7769cec8212",
+      "baseline_ai": 100,
+      "candidate_ai": 100
+    },
+    {
+      "id": "pair-04",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Minimal Write and review instruction ablation",
+      "baseline_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "candidate_sha256": "c462bc3bda8cd8c42360c9ad6750832689bea94ed9b5155b739730c3bb2f3047",
+      "baseline_ai": 100,
+      "candidate_ai": 100
+    },
+    {
+      "id": "pair-05",
+      "case": "wm4-dev-business-01",
+      "intervention": "Minimal Write and review instruction ablation",
+      "baseline_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "candidate_sha256": "de35aa9a0834390fa939e13d72a94cbb4879206d364b883a0a39952621173104",
+      "baseline_ai": 100,
+      "candidate_ai": 100
+    },
+    {
+      "id": "pair-06",
+      "case": "wm4-dev-technical-01",
+      "intervention": "Bounded factual repair followed by purpose and fluency restoration",
+      "baseline_sha256": "08021151db4270125f0cb85853e2b8f82299a7e887970c7af5eb73f7ad0e4a31",
+      "candidate_sha256": "76704d21b121d2eb2f5104d42af71927ec3ce9ec7359f3662764fc1e329badfe",
+      "baseline_ai": 100,
+      "candidate_ai": 100
+    },
+    {
+      "id": "pair-07",
+      "case": "wm4-dev-business-01",
+      "intervention": "Bounded factual repair followed by purpose and fluency restoration",
+      "baseline_sha256": "e6f9c2c7d6cf2d557bc7085bf4513b74c546f231b9fdc9b9e9ef176cbf04ea10",
+      "candidate_sha256": "fd4c7b0b66280e1a988ea7c51ce42cc790484c25b0de7318f2a4d6cc1b5194e4",
+      "baseline_ai": 100,
+      "candidate_ai": 0
+    },
+    {
+      "id": "pair-08",
+      "case": "wm4-dev-business-01",
+      "intervention": "Fresh generation of selected r20 pipeline on reused business case; final bytes differ from screening",
+      "baseline_sha256": "dfb1293189cfb58d2f7afe649b24026063519ba9b0967903ee3d070be2cf3dad",
+      "candidate_sha256": "8b4b847c8af24cce4489a53d590a52968146c68332ef1917bde6214a58af682a",
+      "baseline_ai": 100,
+      "candidate_ai": 0
+    },
+    {
+      "id": "pair-09",
+      "case": "cross-dev-http",
+      "intervention": "Selected exact sentence crossover hybrid versus selected parent",
+      "baseline_sha256": "3cf3bd1a7fe7b87da298ce7413b954488872a631b8aa08f3858b341f0a046d0c",
+      "candidate_sha256": "53c7dd81af7757d37a5f33cddd35b1cfdb6b32e424a31ea4bfcaa32206d83c20",
+      "baseline_ai": 100.0,
+      "candidate_ai": 100.0
+    },
+    {
+      "id": "pair-10",
+      "case": "http",
+      "intervention": "Paired editing examples prompt versus incumbent",
+      "baseline_sha256": "8fcd358167f963d5059642db28b9315db1bba253a2b37bb5bd5b3397dab764c2",
+      "candidate_sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
+      "baseline_ai": 100.0,
+      "candidate_ai": 100.0
+    }
+  ],
+  "human_controls": [
+    {
+      "id": "human-9fd572ef474c",
+      "sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "path": "studies/open-detector-proxy-1/review/human-control-01.txt",
+      "ai": null,
+      "origin": "public_domain_human",
+      "whitespace_words": 157
+    },
+    {
+      "id": "human-be613e5f45f4",
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "path": "studies/open-detector-proxy-1/review/human-control-02.txt",
+      "ai": null,
+      "origin": "public_domain_human",
+      "whitespace_words": 141
+    }
+  ]
+}

@@ -1,0 +1,7198 @@
+{
+  "schema_version": 1,
+  "torch": "2.8.0+cpu",
+  "corpus": {
+    "records": 112,
+    "conflicts": 0,
+    "unique_stripped_texts": 107,
+    "below_ceiling": 11,
+    "at_ceiling": 101,
+    "words_at_most_130": 52,
+    "words_under_100": 5,
+    "under_100_words_below_ceiling": 0,
+    "models": [
+      "4.9b"
+    ]
+  },
+  "pairs": 10,
+  "metrics": {
+    "distilbert__distilgpt2__log_perplexity": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.07104541184884591,
+      "spearman_below_ceiling": 0.6523849021904634,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.3,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.23199140493358883,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              4.1972246170043945,
+              4.207429885864258
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.097798824310303
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.613526821136475
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.400677680969238
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.727811336517334
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.179563999176025
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.491794109344482
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.57008171081543,
+              4.454293251037598
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              4.421894073486328,
+              4.418028354644775
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              4.071694850921631,
+              4.137897968292236
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              4.1972246170043945,
+              4.207429885864258
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.097798824310303
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.613526821136475
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.400677680969238
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.727811336517334
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.497483730316162,
+              4.179563999176025
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.768314838409424,
+              4.491794109344482
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.57008171081543,
+              4.454293251037598
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              4.421894073486328,
+              4.418028354644775
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              4.071694850921631,
+              4.137897968292236
+            ]
+          }
+        ]
+      }
+    },
+    "distilbert__distilgpt2__curvature": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": 0.06296501478848426,
+      "spearman_below_ceiling": -0.1846372364689991,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.0987530980460547,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -3.849264621734619,
+              -3.7798306941986084
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -1.3516658544540405
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -4.699618816375732
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -2.39167857170105
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -3.331299304962158
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -2.229414463043213
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -2.7348239421844482
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.9346625804901123,
+              -2.6087424755096436
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.239670991897583,
+              -2.1937434673309326
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.2315783500671387,
+              -1.649816632270813
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -3.849264621734619,
+              -3.7798306941986084
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -1.3516658544540405
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -4.699618816375732
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -2.39167857170105
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -3.331299304962158
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2554500102996826,
+              -2.229414463043213
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -3.3239591121673584,
+              -2.7348239421844482
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.9346625804901123,
+              -2.6087424755096436
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.239670991897583,
+              -2.1937434673309326
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.2315783500671387,
+              -1.649816632270813
+            ]
+          }
+        ]
+      }
+    },
+    "distilbert__distilgpt2__burstiness": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.10651961599019347,
+      "spearman_below_ceiling": -0.6831577749352966,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.3,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.03370145409508216,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.2322581361193683,
+              1.1273828839008837
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              0.6877501132041761
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              1.094968684113524
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              0.99794761708911
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              0.8255882961989578
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              1.036348331853229
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              0.7851121393899253
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.7940729875016265,
+              0.8430739343328925
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9739148941123799,
+              0.8686810596074497
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9829424389961421,
+              1.1873999101998245
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.2322581361193683,
+              1.1273828839008837
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              0.6877501132041761
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              1.094968684113524
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              0.99794761708911
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              0.8255882961989578
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7472822999651318,
+              1.036348331853229
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.6864910698296295,
+              0.7851121393899253
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.7940729875016265,
+              0.8430739343328925
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9739148941123799,
+              0.8686810596074497
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9829424389961421,
+              1.1873999101998245
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2__log_perplexity": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.012416456467302397,
+      "spearman_below_ceiling": 0.5539117094069973,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.21145703057798063,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.845043182373047,
+              3.837627649307251
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.5221009254455566
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.227507591247559
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.8377575874328613
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.412809371948242
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.59171199798584
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.198646545410156
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.333948135375977,
+              4.228281021118164
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.8560984134674072,
+              3.7688639163970947
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.503429651260376,
+              3.534278392791748
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.845043182373047,
+              3.837627649307251
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.5221009254455566
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.227507591247559
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.8377575874328613
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.412809371948242
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.95334792137146,
+              3.59171199798584
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.457895755767822,
+              4.198646545410156
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.333948135375977,
+              4.228281021118164
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.8560984134674072,
+              3.7688639163970947
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.503429651260376,
+              3.534278392791748
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2__curvature": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": 0.061868874490980226,
+      "spearman_below_ceiling": 0.8000946913656627,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.6,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.001724260442073971,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -1.1976838111877441,
+              -0.5737268924713135
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              1.6451716423034668
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -1.9152082204818726
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              -0.09083670377731323
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -1.1715364456176758
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              0.07322657853364944
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -0.8801339268684387
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.9368042945861816,
+              -1.152245283126831
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.06382627785205841,
+              0.1108974888920784
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.082879900932312,
+              0.9173988103866577
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -1.1976838111877441,
+              -0.5737268924713135
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              1.6451716423034668
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -1.9152082204818726
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              -0.09083670377731323
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -1.1715364456176758
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -0.2065315991640091,
+              0.07322657853364944
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.2167813777923584,
+              -0.8801339268684387
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.9368042945861816,
+              -1.152245283126831
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.06382627785205841,
+              0.1108974888920784
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.082879900932312,
+              0.9173988103866577
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2__burstiness": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.13724064539015182,
+      "spearman_below_ceiling": -0.541602560309064,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.1,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.03793372972562736,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.1843769231577381,
+              1.0961497974514316
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              0.5280207427085223
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              1.2828336460328538
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              0.7926372447912713
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              1.1009927660947185
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              1.0332674708797225
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              0.6768700921588147
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8805986608884305,
+              0.7139509204497094
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9549660505718538,
+              0.8617567933826882
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.7789284050064639,
+              1.0542543474179495
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.1843769231577381,
+              1.0961497974514316
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              0.5280207427085223
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              1.2828336460328538
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              0.7926372447912713
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              1.1009927660947185
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.7321766322780412,
+              1.0332674708797225
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8723347637887527,
+              0.6768700921588147
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8805986608884305,
+              0.7139509204497094
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.9549660505718538,
+              0.8617567933826882
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.7789284050064639,
+              1.0542543474179495
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2-medium__log_perplexity": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.017169631208691596,
+      "spearman_below_ceiling": 0.5539117094069973,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.1887281429324601,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.568575143814087,
+              3.567061424255371
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.2856175899505615
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              3.908985137939453
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.5826923847198486
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              4.139568328857422
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.2754502296447754
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              3.913964033126831
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.095222473144531,
+              3.9099009037017822
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.6199796199798584,
+              3.5672388076782227
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.199632167816162,
+              3.2885348796844482
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.568575143814087,
+              3.567061424255371
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.2856175899505615
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              3.908985137939453
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.5826923847198486
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              4.139568328857422
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.673917531967163,
+              3.2754502296447754
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.164156913757324,
+              3.913964033126831
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              4.095222473144531,
+              3.9099009037017822
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.6199796199798584,
+              3.5672388076782227
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.199632167816162,
+              3.2885348796844482
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2-medium__curvature": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.055282332349340914,
+      "spearman_below_ceiling": 0.726239796778063,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.12273599328581085,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -0.6007866859436035,
+              -0.31036457419395447
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              0.42836055159568787
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.7638869285583496
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              -0.7519670128822327
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.34558960795402527
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              0.1498240977525711
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.6473120450973511
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.3645414113998413,
+              -0.6448529362678528
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.3571125268936157,
+              -1.1402989625930786
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.17929960787296295,
+              -0.15887662768363953
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -0.6007866859436035,
+              -0.31036457419395447
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              0.42836055159568787
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.7638869285583496
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              -0.7519670128822327
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.34558960795402527
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.041012167930603,
+              0.1498240977525711
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.3479000329971313,
+              -0.6473120450973511
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.3645414113998413,
+              -0.6448529362678528
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.3571125268936157,
+              -1.1402989625930786
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.17929960787296295,
+              -0.15887662768363953
+            ]
+          }
+        ]
+      }
+    },
+    "openai-community__gpt2-medium__burstiness": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.15705847395476025,
+      "spearman_below_ceiling": -0.541602560309064,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.2,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.01395083448587122,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.1718704487457,
+              1.0487338763878669
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              0.4769857750503462
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              1.2152343920880107
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              0.8474605311353334
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              1.0789129997891453
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              1.2138607965762596
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              0.7452646180656196
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9574859663924713,
+              0.7852494427354201
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.0181293728455556,
+              0.883037011232363
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.7233185510755579,
+              1.068589564015472
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.1718704487457,
+              1.0487338763878669
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              0.4769857750503462
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              1.2152343920880107
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              0.8474605311353334
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              1.0789129997891453
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8233552902852124,
+              1.2138607965762596
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9205013342966633,
+              0.7452646180656196
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9574859663924713,
+              0.7852494427354201
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.0181293728455556,
+              0.883037011232363
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.7233185510755579,
+              1.068589564015472
+            ]
+          }
+        ]
+      }
+    },
+    "HuggingFaceTB__SmolLM2-360M__log_perplexity": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": 0.021001272071648196,
+      "spearman_below_ceiling": 0.5539117094069973,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.17462055749730943,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.130923271179199,
+              3.159123420715332
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              2.782444715499878
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.5782406330108643
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              3.139583110809326
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.789151430130005
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              2.751103401184082
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.6574628353118896
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.665414810180664,
+              3.6844518184661865
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.010044813156128,
+              2.972351551055908
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              2.7469513416290283,
+              2.8167083263397217
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.130923271179199,
+              3.159123420715332
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              2.782444715499878
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.5782406330108643
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              3.139583110809326
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.789151430130005
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.196535348892212,
+              2.751103401184082
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.77998685836792,
+              3.6574628353118896
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.665414810180664,
+              3.6844518184661865
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.010044813156128,
+              2.972351551055908
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              2.7469513416290283,
+              2.8167083263397217
+            ]
+          }
+        ]
+      }
+    },
+    "HuggingFaceTB__SmolLM2-360M__curvature": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.06092793989931747,
+      "spearman_below_ceiling": 0.03692744729379982,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.4,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.08104024077747664,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -1.7180484533309937,
+              -2.069483757019043
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -1.200066089630127
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.7831720113754272
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -2.5162301063537598
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.5932968854904175
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -0.9598038792610168
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.467470645904541
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.104977607727051,
+              -1.4529918432235718
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.2097055912017822,
+              -1.9894686937332153
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -0.9887977242469788,
+              -1.6692028045654297
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -1.7180484533309937,
+              -2.069483757019043
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -1.200066089630127
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.7831720113754272
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -2.5162301063537598
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.5932968854904175
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.617182731628418,
+              -0.9598038792610168
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -1.6415284872055054,
+              -1.467470645904541
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.104977607727051,
+              -1.4529918432235718
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.2097055912017822,
+              -1.9894686937332153
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -0.9887977242469788,
+              -1.6692028045654297
+            ]
+          }
+        ]
+      }
+    },
+    "HuggingFaceTB__SmolLM2-360M__burstiness": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.19160144386106012,
+      "spearman_below_ceiling": -0.7754763931697962,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.2,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.07900247843684377,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.3465414852831539,
+              1.3054854807261007
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.0123791212751239
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              1.1249820040054872
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.2811034471471576
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              0.7462877595555353
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.507383297305646
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              0.7346511610450966
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0674464090321372,
+              0.7547621685358158
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.3470201397977075,
+              1.3012091896355389
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.254597875337239,
+              1.3388873982221343
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.3465414852831539,
+              1.3054854807261007
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.0123791212751239
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              1.1249820040054872
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.2811034471471576
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              0.7462877595555353
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1924728498808934,
+              1.507383297305646
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9700336876504904,
+              0.7346511610450966
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0674464090321372,
+              0.7547621685358158
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.3470201397977075,
+              1.3012091896355389
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.254597875337239,
+              1.3388873982221343
+            ]
+          }
+        ]
+      }
+    },
+    "Qwen__Qwen2.5-0.5B__log_perplexity": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": 0.025453735757969914,
+      "spearman_below_ceiling": 0.5292934112111307,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.2790166897174244,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.5816164016723633,
+              3.5643789768218994
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              2.9240803718566895
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.7804455757141113
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              3.3606350421905518
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.9490444660186768
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              2.85479736328125
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.8476760387420654
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.8474209308624268,
+              3.9207923412323
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.2355430126190186,
+              3.2098631858825684
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              2.9508297443389893,
+              3.0166571140289307
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              3.5816164016723633,
+              3.5643789768218994
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              2.9240803718566895
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.7804455757141113
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              3.3606350421905518
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.9490444660186768
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              3.41725492477417,
+              2.85479736328125
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.9894158840179443,
+              3.8476760387420654
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              3.8474209308624268,
+              3.9207923412323
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              3.2355430126190186,
+              3.2098631858825684
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              2.9508297443389893,
+              3.0166571140289307
+            ]
+          }
+        ]
+      }
+    },
+    "Qwen__Qwen2.5-0.5B__curvature": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.03487278203121259,
+      "spearman_below_ceiling": 0.135400640077266,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.2,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.10000710564029032,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -3.562747001647949,
+              -3.7903270721435547
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -0.9798123240470886
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -1.8778681755065918
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -3.222811698913574
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -1.4831252098083496
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -0.7780745029449463
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -2.2489943504333496
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.249932050704956,
+              -2.2276864051818848
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.636721134185791,
+              -2.600661039352417
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.7444599866867065,
+              -1.9913581609725952
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 2,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              -3.562747001647949,
+              -3.7903270721435547
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -0.9798123240470886
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -1.8778681755065918
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -3.222811698913574
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -1.4831252098083496
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              -2.915717124938965,
+              -0.7780745029449463
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.3352744579315186,
+              -2.2489943504333496
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              -2.249932050704956,
+              -2.2276864051818848
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -2.636721134185791,
+              -2.600661039352417
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              -1.7444599866867065,
+              -1.9913581609725952
+            ]
+          }
+        ]
+      }
+    },
+    "Qwen__Qwen2.5-0.5B__burstiness": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.10908051013657458,
+      "spearman_below_ceiling": -0.5662208585049305,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.4,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.025080151884712305,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.5175309865331956,
+              1.376411517576037
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              0.8741088993714584
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              1.444896582912311
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              1.338481635411031
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              0.7213052180867224
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              1.300772652163875
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              0.736247768068605
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8102689959255541,
+              0.7334372416929992
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.3618367069984698,
+              1.2094262722353692
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.2407912170455369,
+              1.3224110985984623
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.5175309865331956,
+              1.376411517576037
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              0.8741088993714584
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              1.444896582912311
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              1.338481635411031
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              0.7213052180867224
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.910751014084486,
+              1.300772652163875
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8421373839453116,
+              0.736247768068605
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.8102689959255541,
+              0.7334372416929992
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.3618367069984698,
+              1.2094262722353692
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.2407912170455369,
+              1.3224110985984623
+            ]
+          }
+        ]
+      }
+    },
+    "binoculars__gpt2_distilgpt2": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": 0.07061859615778239,
+      "spearman_below_ceiling": 0.41851106932973126,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.6,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.09483432431406841,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.9333087341180545,
+              0.9213697737482794
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8155452393925793
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9747845589177951
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8614919454972366
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9658422026590705
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8166010880691619
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9260462875905254
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9323808201941156,
+              0.9346027214242757
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8793783105174275,
+              0.825497705668646
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8034268547417576,
+              0.7987068609259648
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.9333087341180545,
+              0.9213697737482794
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8155452393925793
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9747845589177951
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8614919454972366
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9658422026590705
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8506395875859217,
+              0.8166010880691619
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.958780445807112,
+              0.9260462875905254
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9323808201941156,
+              0.9346027214242757
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8793783105174275,
+              0.825497705668646
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8034268547417576,
+              0.7987068609259648
+            ]
+          }
+        ]
+      }
+    },
+    "binoculars__gpt2medium_gpt2": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": 0.05282814212572567,
+      "spearman_below_ceiling": 0.3938927711338647,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.005956536072619173,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.872396482364612,
+              0.8566175796995237
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.7451496179053764
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.9472426182777031
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.8252577773657656
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.919397961043504
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.807645209348678
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.8848609791430445
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9418030613437742,
+              0.8904648182159376
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8076248238291875,
+              0.8105700515062856
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.743297394615584,
+              0.7743786607655758
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 0,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.872396482364612,
+              0.8566175796995237
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.7451496179053764
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.9472426182777031
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.8252577773657656
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.919397961043504
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.8229298140548764,
+              0.807645209348678
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9464232784794144,
+              0.8848609791430445
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.9418030613437742,
+              0.8904648182159376
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.8076248238291875,
+              0.8105700515062856
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.743297394615584,
+              0.7743786607655758
+            ]
+          }
+        ]
+      }
+    },
+    "binoculars__smollm2_360m": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.11332926633397962,
+      "spearman_below_ceiling": 0.1723280873710658,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.3,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.13935159390943275,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.047928595644194,
+              1.0525316103978761
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.056906148066559
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.0463094361041967
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.1596155840914018
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.0537009793663143
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.0551027605574064
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.04429172058981
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0560351465598332,
+              1.044581734969514
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1261709923183094,
+              1.1096883831195083
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.046072721594266,
+              1.0988491558194273
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.047928595644194,
+              1.0525316103978761
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.056906148066559
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.0463094361041967
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.1596155840914018
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.0537009793663143
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1557623388332912,
+              1.0551027605574064
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0304101689101866,
+              1.04429172058981
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0560351465598332,
+              1.044581734969514
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1261709923183094,
+              1.1096883831195083
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.046072721594266,
+              1.0988491558194273
+            ]
+          }
+        ]
+      }
+    },
+    "binoculars__qwen2.5_0.5b": {
+      "n": 107,
+      "higher_is_ai": false,
+      "spearman_oriented_vs_ai_percent": -0.08362677437860466,
+      "spearman_below_ceiling": -0.135400640077266,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.3,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.13010328790194509,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 3,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.145410799452585,
+              1.1487003153251207
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.0848735584078195
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.0638360363056014
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.215251401462178
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.036606426198757
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.0425332530698408
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.1004904360041046
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0853351409286023,
+              1.1046338814811716
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1858686439678334,
+              1.1910555880323874
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1159825229343106,
+              1.1450802676741334
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 3,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              1.145410799452585,
+              1.1487003153251207
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.0848735584078195
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.0638360363056014
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.215251401462178
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.036606426198757
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              1.1757160795988644,
+              1.0425332530698408
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0918988789628732,
+              1.1004904360041046
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              1.0853351409286023,
+              1.1046338814811716
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1858686439678334,
+              1.1910555880323874
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              1.1159825229343106,
+              1.1450802676741334
+            ]
+          }
+        ]
+      }
+    },
+    "classifier__openai_roberta": {
+      "n": 101,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.008394877201421755,
+      "spearman_below_ceiling": 0.5846845821518305,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 91,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.03730672592850955,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.2138262838125229,
+              0.09273313730955124
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.00036319048376753926
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00020452427270356566
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.0006005570176057518
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00016930820129346102
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.00020842032972723246
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00019905630324501544
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00016897516616154462,
+              0.00016919072368182242
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.0012401615967974067,
+              0.00030497481930069625
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.00024255222524516284,
+              0.0004159023519605398
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 3,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.2138262838125229,
+              0.09273313730955124
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.00036319048376753926
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00020452427270356566
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.0006005570176057518
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00016930820129346102
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.00017940631369128823,
+              0.00020842032972723246
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00021431848290376365,
+              0.00019905630324501544
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00016897516616154462,
+              0.00016919072368182242
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.0012401615967974067,
+              0.00030497481930069625
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.00024255222524516284,
+              0.0004159023519605398
+            ]
+          }
+        ]
+      }
+    },
+    "classifier__hc3_roberta": {
+      "n": 101,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": 0.13078926488640746,
+      "spearman_below_ceiling": -0.12924606552829937,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 91,
+      "ceiling_median_separation": 0.8,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.07006767432791501,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.0008790933643467724,
+              0.0005036266520619392
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.9255579113960266
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0008993028895929456
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.04678850620985031
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0004987820866517723
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.3696185052394867
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0006680048536509275
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00041747375507839024,
+              0.0004961952799931169
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.007980093359947205,
+              0.0051519847474992275
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.03198632225394249,
+              0.1762693226337433
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 1,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.0008790933643467724,
+              0.0005036266520619392
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.9255579113960266
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0008993028895929456
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.04678850620985031
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0004987820866517723
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.017856447026133537,
+              0.3696185052394867
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.0003521704056765884,
+              0.0006680048536509275
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.00041747375507839024,
+              0.0004961952799931169
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.007980093359947205,
+              0.0051519847474992275
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.03198632225394249,
+              0.1762693226337433
+            ]
+          }
+        ]
+      }
+    },
+    "classifier__fakespot_roberta": {
+      "n": 101,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": 0.11118997996099977,
+      "spearman_below_ceiling": -0.19079181101796572,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 91,
+      "ceiling_median_separation": 0.6,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.14138935625006563,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.01658213511109352,
+              0.008237060159444809
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.7811486721038818
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.013989938423037529
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.06658570468425751
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.019167207181453705
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.49027690291404724
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.013275698758661747
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.008488710038363934,
+              0.01171115878969431
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.34970957040786743,
+              0.09541525691747665
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.16879267990589142,
+              0.20088881254196167
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 2,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.01658213511109352,
+              0.008237060159444809
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.7811486721038818
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.013989938423037529
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.06658570468425751
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.019167207181453705
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.09709732234477997,
+              0.49027690291404724
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.05920971557497978,
+              0.013275698758661747
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.008488710038363934,
+              0.01171115878969431
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.34970957040786743,
+              0.09541525691747665
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.16879267990589142,
+              0.20088881254196167
+            ]
+          }
+        ]
+      }
+    },
+    "desklib__ai_probability": {
+      "n": 107,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.03411615421523635,
+      "spearman_below_ceiling": 0.23387383286073218,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 97,
+      "ceiling_median_separation": 0.5,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": -0.006740290819016432,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.00859049951621507,
+              0.01976157745268149
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.3010878751173941
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.05059174566358453
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.09817720558208727
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.03640557634699373
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.029714849928615037
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.011894083737632477
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.010836599152669567,
+              0.014808409582815135
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.10035624148389943,
+              0.07360397476543715
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.09066507346667142,
+              0.28775737083579744
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 1,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 5,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.00859049951621507,
+              0.01976157745268149
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.3010878751173941
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.05059174566358453
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.09817720558208727
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.03640557634699373
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.2421187760455978,
+              0.029714849928615037
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.07163537678650059,
+              0.011894083737632477
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.010836599152669567,
+              0.014808409582815135
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.10035624148389943,
+              0.07360397476543715
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.09066507346667142,
+              0.28775737083579744
+            ]
+          }
+        ]
+      }
+    },
+    "oculus__ai_probability": {
+      "n": 101,
+      "higher_is_ai": true,
+      "spearman_oriented_vs_ai_percent": -0.0596407139329923,
+      "spearman_below_ceiling": 0.46774766572146437,
+      "n_below_ceiling": 10,
+      "n_at_ceiling": 91,
+      "ceiling_median_separation": 0.4,
+      "short_words_at_most": 130,
+      "n_short": 48,
+      "n_short_below_ceiling": 2,
+      "spearman_short": 0.06301388161033968,
+      "n_under_100_words": 5,
+      "n_under_100_words_below_ceiling": 0,
+      "archived_pairs_at_5_points": {
+        "gptzero_margin_points": 5,
+        "reductions_recognized": 3,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.07334336326642571,
+              0.06861880081841516
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.44386486232604
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.05656267534510916
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.088619284380218
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.0905366615270808
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.023258243714485195
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.009457221018270191
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.20515517710867037,
+              0.018350988832784226
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.051174820135308996,
+              0.05646061056112263
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.10156214008232142,
+              0.13389225863874826
+            ]
+          }
+        ]
+      },
+      "archived_pairs_any_decrease": {
+        "gptzero_margin_points": 0,
+        "reductions_recognized": 3,
+        "reductions": 3,
+        "ties_with_a_proxy_decrease": 4,
+        "exact_ties": 7,
+        "pairs": [
+          {
+            "id": "pair-01",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              93
+            ],
+            "proxy_raw": [
+              0.07334336326642571,
+              0.06861880081841516
+            ]
+          },
+          {
+            "id": "pair-02",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.44386486232604
+            ]
+          },
+          {
+            "id": "pair-03",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.05656267534510916
+            ]
+          },
+          {
+            "id": "pair-04",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.088619284380218
+            ]
+          },
+          {
+            "id": "pair-05",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.0905366615270808
+            ]
+          },
+          {
+            "id": "pair-06",
+            "gptzero": "flat",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              100
+            ],
+            "proxy_raw": [
+              0.17307306233826525,
+              0.023258243714485195
+            ]
+          },
+          {
+            "id": "pair-07",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.14887483678221983,
+              0.009457221018270191
+            ]
+          },
+          {
+            "id": "pair-08",
+            "gptzero": "lower",
+            "proxy": "lower",
+            "gptzero_ai": [
+              100,
+              0
+            ],
+            "proxy_raw": [
+              0.20515517710867037,
+              0.018350988832784226
+            ]
+          },
+          {
+            "id": "pair-09",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.051174820135308996,
+              0.05646061056112263
+            ]
+          },
+          {
+            "id": "pair-10",
+            "gptzero": "flat",
+            "proxy": "higher",
+            "gptzero_ai": [
+              100.0,
+              100.0
+            ],
+            "proxy_raw": [
+              0.10156214008232142,
+              0.13389225863874826
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "human_controls": [
+    {
+      "id": "human-9fd572ef474c",
+      "path": "studies/open-detector-proxy-1/review/human-control-01.txt",
+      "sha256": "9fd572ef474c2ef1d2b64c06099b95195c29970e340e7290d5c758010002f1e9",
+      "whitespace_words": 157,
+      "origin": "public_domain_human",
+      "scores": {
+        "distilbert__distilgpt2__log_perplexity": 3.743436098098755,
+        "distilbert__distilgpt2__curvature": 0.8149636387825012,
+        "distilbert__distilgpt2__burstiness": 0.7061965030511345,
+        "openai-community__gpt2__log_perplexity": 3.489894390106201,
+        "openai-community__gpt2__curvature": 0.44998911023139954,
+        "openai-community__gpt2__burstiness": 0.5756287793548237,
+        "openai-community__gpt2-medium__log_perplexity": 3.0360589027404785,
+        "openai-community__gpt2-medium__curvature": 1.559609055519104,
+        "openai-community__gpt2-medium__burstiness": 0.742575170423136,
+        "HuggingFaceTB__SmolLM2-360M__log_perplexity": 2.3755526542663574,
+        "HuggingFaceTB__SmolLM2-360M__curvature": 0.8374517560005188,
+        "HuggingFaceTB__SmolLM2-360M__burstiness": 0.4989530368251025,
+        "Qwen__Qwen2.5-0.5B__log_perplexity": 2.5956883430480957,
+        "Qwen__Qwen2.5-0.5B__curvature": 0.4010216295719147,
+        "Qwen__Qwen2.5-0.5B__burstiness": 0.4096199799683907,
+        "binoculars__gpt2_distilgpt2": 0.7888709089288376,
+        "binoculars__gpt2medium_gpt2": 0.7239322725035952,
+        "binoculars__smollm2_360m": 0.9620091120534003,
+        "binoculars__qwen2.5_0.5b": 0.986986613763424,
+        "classifier__openai_roberta": 0.039153892546892166,
+        "classifier__hc3_roberta": 0.0003498937585391104,
+        "classifier__fakespot_roberta": 0.006016680039465427,
+        "desklib__ai_probability": 0.01584313056216617,
+        "oculus__ai_probability": 0.007779627052417031
+      }
+    },
+    {
+      "id": "human-be613e5f45f4",
+      "path": "studies/open-detector-proxy-1/review/human-control-02.txt",
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
+      "whitespace_words": 141,
+      "origin": "public_domain_human",
+      "scores": {
+        "distilbert__distilgpt2__log_perplexity": 3.9889328479766846,
+        "distilbert__distilgpt2__curvature": 0.6230259537696838,
+        "distilbert__distilgpt2__burstiness": 0.5450126249922665,
+        "openai-community__gpt2__log_perplexity": 3.713510274887085,
+        "openai-community__gpt2__curvature": 1.5871299505233765,
+        "openai-community__gpt2__burstiness": 0.912842511500127,
+        "openai-community__gpt2-medium__log_perplexity": 3.0646495819091797,
+        "openai-community__gpt2-medium__curvature": 1.876568078994751,
+        "openai-community__gpt2-medium__burstiness": 0.8138786899884419,
+        "HuggingFaceTB__SmolLM2-360M__log_perplexity": 2.274304151535034,
+        "HuggingFaceTB__SmolLM2-360M__curvature": 2.3611369132995605,
+        "HuggingFaceTB__SmolLM2-360M__burstiness": 0.7282457879470814,
+        "Qwen__Qwen2.5-0.5B__log_perplexity": 2.6539132595062256,
+        "Qwen__Qwen2.5-0.5B__curvature": 1.3598241806030273,
+        "Qwen__Qwen2.5-0.5B__burstiness": 0.6136900612768827,
+        "binoculars__gpt2_distilgpt2": 0.7967652507103858,
+        "binoculars__gpt2medium_gpt2": 0.6669135626962167,
+        "binoculars__smollm2_360m": 0.8745939171081237,
+        "binoculars__qwen2.5_0.5b": 0.927888149574935,
+        "classifier__openai_roberta": 0.0003312985354568809,
+        "classifier__hc3_roberta": 0.00030057280673645437,
+        "classifier__fakespot_roberta": 0.049610912799835205,
+        "desklib__ai_probability": 0.026092934432096006,
+        "oculus__ai_probability": 0.018012679090944325
+      }
+    }
+  ],
+  "status_counts": {
+    "distilbert__distilgpt2__log_perplexity": {
+      "complete": 114
+    },
+    "distilbert__distilgpt2__curvature": {
+      "complete": 114
+    },
+    "distilbert__distilgpt2__burstiness": {
+      "complete": 114
+    },
+    "openai-community__gpt2__log_perplexity": {
+      "complete": 114
+    },
+    "openai-community__gpt2__curvature": {
+      "complete": 114
+    },
+    "openai-community__gpt2__burstiness": {
+      "complete": 114
+    },
+    "openai-community__gpt2-medium__log_perplexity": {
+      "complete": 114
+    },
+    "openai-community__gpt2-medium__curvature": {
+      "complete": 114
+    },
+    "openai-community__gpt2-medium__burstiness": {
+      "complete": 114
+    },
+    "HuggingFaceTB__SmolLM2-360M__log_perplexity": {
+      "complete": 114
+    },
+    "HuggingFaceTB__SmolLM2-360M__curvature": {
+      "complete": 114
+    },
+    "HuggingFaceTB__SmolLM2-360M__burstiness": {
+      "complete": 114
+    },
+    "Qwen__Qwen2.5-0.5B__log_perplexity": {
+      "complete": 114
+    },
+    "Qwen__Qwen2.5-0.5B__curvature": {
+      "complete": 114
+    },
+    "Qwen__Qwen2.5-0.5B__burstiness": {
+      "complete": 114
+    },
+    "binoculars__gpt2_distilgpt2": {
+      "complete": 114
+    },
+    "binoculars__gpt2medium_gpt2": {
+      "complete": 114
+    },
+    "binoculars__smollm2_360m": {
+      "complete": 114
+    },
+    "binoculars__qwen2.5_0.5b": {
+      "complete": 114
+    },
+    "classifier__openai_roberta": {
+      "complete": 108,
+      "over_length": 6
+    },
+    "classifier__hc3_roberta": {
+      "complete": 108,
+      "over_length": 6
+    },
+    "classifier__fakespot_roberta": {
+      "complete": 108,
+      "over_length": 6
+    },
+    "desklib__ai_probability": {
+      "complete": 114
+    },
+    "oculus__ai_probability": {
+      "complete": 108,
+      "over_length": 6
+    }
+  }
+}

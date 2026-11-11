@@ -6,7 +6,7 @@
   "dtype": "float32",
   "padded_scorer": "skills/anti-ai-detection-writing-skill/scripts/local_detector.py DesklibBackend, pad to 768",
   "unpadded_scorer": "skills/anti-ai-detection-writing-skill/scripts/proxy_detector.py MeanPoolDetector",
-  "note": "Three texts only. Not a replay of the 103-text archive.",
+  "note": "Three texts only. Not a replay of the archive: 112 files, 107 stripped texts.",
   "comparisons": [
     {
       "label": "synthetic sentence",
@@ -22,7 +22,7 @@
       "label": "carroll control",
       "path": "studies/open-detector-proxy-1/review/human-control-02.txt",
       "text": null,
-      "sha256": "95fda77292270b350163f38f43ae27d6e88b482f47c707c01bd06861efd9e3f2",
+      "sha256": "be613e5f45f418eaa7f5419fa7c164fd1d49360c2c10da28e2095014725c5142",
       "tokens_including_special": 176,
       "padded_logit": -3.6196510791778564,
       "unpadded_logit": -3.6196513175964355,

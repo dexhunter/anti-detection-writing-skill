@@ -101,8 +101,11 @@ class ProxyCorpusTests(unittest.TestCase):
         self.assertEqual(payload["revision"], "5fdea974cd4287c61674951ec78803aa274e2fb7")
         largest = 0.0
         for row in comparisons:
-            text = row["text"] if row["text"] is not None else (ROOT / row["path"]).read_text(encoding="utf-8")
-            self.assertEqual(proxy.digest(text.encode("utf-8")), row["sha256"])
+            if row["text"] is not None:
+                raw = row["text"].encode("utf-8")
+            else:
+                raw = (ROOT / row["path"]).read_bytes()
+            self.assertEqual(proxy.digest(raw), row["sha256"])
             delta = abs(row["logit_delta_unpadded_minus_padded"])
             self.assertAlmostEqual(delta, abs(row["unpadded_logit"] - row["padded_logit"]))
             largest = max(largest, delta)

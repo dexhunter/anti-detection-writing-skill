@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-SCRIPT = Path(__file__).resolve().parents[1] / "skills/anti-detection-writing/scripts/detector_receipts.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "skills/anti-ai-detection-writing-skill/scripts/detector_receipts.py"
 SPEC = importlib.util.spec_from_file_location("detector_receipts_tested", SCRIPT)
 adapter = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(adapter)

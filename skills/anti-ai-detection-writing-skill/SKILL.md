@@ -1,9 +1,9 @@
 ---
-name: anti-detection-writing
+name: anti-ai-detection-writing-skill
 description: Polish AI-written replies, emails, articles, and documentation for smoother flow and better human readability, including short private retailer and customer-service emails. Preserve every supplied fact and qualification. Run a detector only when the user explicitly asks. A seller's AI or spam claim is not a scan or a baseline, and it does not promise human classification, a lower score, or inbox delivery.
 ---
 
-# Anti-detection writing
+# Anti-AI Detection Writing Skill
 
 Make AI-written prose easier and more natural to read while preserving its meaning. Improve flow, specificity, and tone for the intended audience. For a short private retailer or customer-service email, answer the latest question first, preserve every supplied fact and qualification, make one clear ask, and use ordinary words. When the user explicitly requests detector testing, work toward lower scores through useful edits and measure the outcome; never trade accuracy or readability for a score. Detector results do not establish human authorship, inbox delivery, or permission to publish. A lower score is a comparison between comparable scans, not a property of one result or of an unmeasured edit.
 

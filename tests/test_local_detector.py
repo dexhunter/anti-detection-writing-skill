@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-SCRIPT = Path(__file__).resolve().parents[1] / "skills/anti-detection-writing/scripts/local_detector.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "skills/anti-ai-detection-writing-skill/scripts/local_detector.py"
 SPEC = importlib.util.spec_from_file_location("local_detector", SCRIPT)
 detector = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(detector)

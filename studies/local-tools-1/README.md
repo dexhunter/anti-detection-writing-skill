@@ -4,7 +4,7 @@ September 7, 2026. This work adds an exercised local detector CLI and tests a re
 
 ## A working scorer, with a weak proxy for these cases
 
-The [local detector CLI](../../skills/anti-detection-writing/references/local-detector.md) loads a fixed Desklib model from a verified local snapshot. It checks exact file hashes, scores complete inputs serially, rejects more than 768 tokens rather than truncating, and records raw logits, sigmoid probabilities, runtime and failures. Model weights are downloaded separately and are not included in this repository.
+The [local detector CLI](../../skills/anti-ai-detection-writing-skill/references/local-detector.md) loads a fixed Desklib model from a verified local snapshot. It checks exact file hashes, scores complete inputs serially, rejects more than 768 tokens rather than truncating, and records raw logits, sigmoid probabilities, runtime and failures. Model weights are downloaded separately and are not included in this repository.
 
 Before reading local scores, we selected eight existing, quality-passing development texts: three technical versions, three business versions and the last article pair. Every text was AI-origin. They are reused development examples, not unseen evaluation data or a representative accuracy benchmark. The [selection plan](detector/plan.json), [exact inputs](detector/manifest.json) and [full results](detector/results.json) are retained.
 

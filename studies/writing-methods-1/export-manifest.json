@@ -3,7 +3,7 @@
   "note": "Local study preparation. Answer bytes unchanged; raw browser/account artifacts and held-out contents omitted. Metadata paths/allowances normalized. No publication or efficacy claim.",
   "files": {
     "results.json": "3210932a4d2a239eefe595bae3f30a8f117d8739bb67707bd21f649e28a33f76",
-    "README.md": "e9aefa78e7a86ce8aab3e859cb2f6ae1db93bb066e1d24e169d1e78901fdcfda",
+    "README.md": "d4769f4e2e9f9bb2099468ef83093327e34d90ccf222830a64bdadd3f2b07c2d",
     "methods/proposal-1-relation-map.md": "ed1be65040a6a3c95f8549009c34f27beef12806efdc48f0ecc505fe33275e66",
     "methods/proposal-2-core-expansion.md": "c827968d717e740bfd582d1ea60c2849bf38080068c29dd129102042be4282c4",
     "methods/proposal-3-topic-continuity.md": "99f1e089722d6cc283e83d92e4dea3c445e2ff0b918f0aaecf9a4508022ecc5e",
@@ -16,7 +16,7 @@
     "sources/development-relations.json": "b04b9cc98c65bea6157eaad5d8377bff38cb251ad094063f88aded95a8bcbc90",
     "frozen/judge-operator.txt": "a63b122dcece9462377a91af0a7a6b73b346cf40c09f2e49faa069e4d7b3e261",
     "frozen/generation-provenance.json": "ad54f9e34bad025029c7cd23b1918cbee8a2e2fc7f49c222014222b81a1d5649",
-    "frozen/SKILL.md": "22fcf2ac709b81a8ac5d96ce52667c9d0965eb2af9ae5249cea3671476ce5d17",
+    "frozen/SKILL.txt": "22fcf2ac709b81a8ac5d96ce52667c9d0965eb2af9ae5249cea3671476ce5d17",
     "frozen/protocol.json": "d5557db54018cd125cbd35aeb5ea3d512e4638475e8165899c1ba52a66a990e2",
     "frozen/operator.txt": "f2646d5790db10b0314a36b3b98813ce2b223b3650e3e33fdd6f391ca0110193",
     "reviews/wm4-dev-technical-01-masked.json": "0e3240c945ebf3b8c30fb2c7aef674cbabd968239831e91a78068cc90f38438e",

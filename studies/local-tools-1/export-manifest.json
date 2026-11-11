@@ -2,7 +2,7 @@
   "schema_version": 1,
   "scope": "Exact final study files except this manifest; model weights and private reference script are excluded.",
   "files": {
-    "README.md": "89abf0ddd73ed543d16c65c77d75687a77483892d3cb72a5b3a086476ff04f55",
+    "README.md": "874f6d5c833b6345ed7314a668c6f3c7826ef505bc1c56749ef235d586558b37",
     "authormist/inputs/wm4-dev-business-01.txt": "0906232069825c0d8d2c447209375f52ae57faa640ab420cc56d94a84a673a84",
     "authormist/inputs/wm4-dev-technical-01.txt": "1b59443016e7896da4dcf5215b2360e1318058da194dd8385fbc41010a0e4442",
     "authormist/outcome.json": "529941a392a85864eb7355d7c0e044955d9603cd7c792f056cdc3bf8dfe38ede",

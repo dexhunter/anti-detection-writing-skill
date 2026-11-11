@@ -1,6 +1,8 @@
 """Packaged skill boundaries. These checks do not measure a detector."""
 
+import hashlib
 import importlib.util
+import json
 from pathlib import Path
 import unittest
 
@@ -58,6 +60,35 @@ class SkillContract(unittest.TestCase):
         self.assertIn("If it is a private retailer or customer-service email", prompt)
         self.assertIn("only if I explicitly ask", prompt)
         self.assertNotIn("measure detector-score changes", prompt)
+
+    def test_only_the_packaged_skill_is_discoverable(self):
+        discovered = sorted(ROOT.rglob("SKILL.md"))
+        self.assertEqual(discovered, [SKILL])
+        snapshots = [
+            ROOT / "studies/reader-dialogue-1/frozen/skill/SKILL.txt",
+            ROOT / "studies/writing-methods-1/frozen/SKILL.txt",
+        ]
+        for path in snapshots:
+            header = path.read_text(encoding="utf-8").split("---", 2)[1]
+            self.assertIn("\nname: anti-detection-writing\n", header)
+
+    def test_study_readme_manifests_match_the_renamed_links(self):
+        local_readme = (ROOT / "studies/local-tools-1/README.md").read_bytes()
+        local = json.loads((ROOT / "studies/local-tools-1/export-manifest.json").read_text())
+        self.assertEqual(local["files"]["README.md"], hashlib.sha256(local_readme).hexdigest())
+        proxy_readme = (ROOT / "studies/prospective-proxy-1/README.md").read_bytes()
+        proxy = json.loads((ROOT / "studies/prospective-proxy-1/artifact-manifest.json").read_text())
+        entry = next(item for item in proxy["files"] if item["path"] == "README.md")
+        self.assertEqual(entry["sha256"], hashlib.sha256(proxy_readme).hexdigest())
+        self.assertEqual(entry["bytes"], len(proxy_readme))
+        methods_readme = (ROOT / "studies/writing-methods-1/README.md").read_bytes()
+        methods = json.loads((ROOT / "studies/writing-methods-1/export-manifest.json").read_text())
+        self.assertEqual(methods["files"]["README.md"], hashlib.sha256(methods_readme).hexdigest())
+        snapshot = (ROOT / "studies/writing-methods-1/frozen/SKILL.txt").read_bytes()
+        self.assertEqual(methods["files"]["frozen/SKILL.txt"], hashlib.sha256(snapshot).hexdigest())
+        dialogue = json.loads((ROOT / "studies/reader-dialogue-1/export-manifest.json").read_text())
+        snapshot = (ROOT / "studies/reader-dialogue-1/frozen/skill/SKILL.txt").read_bytes()
+        self.assertEqual(dialogue["exact_copies"]["frozen/skill/SKILL.txt"], hashlib.sha256(snapshot).hexdigest())
 
 
 if __name__ == "__main__":

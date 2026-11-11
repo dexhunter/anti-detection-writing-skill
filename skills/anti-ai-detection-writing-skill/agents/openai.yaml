@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-AI Detection Writing Skill"
+  short_description: "Polish prose and retailer mail; scan only if asked"
+  default_prompt: "Use $anti-ai-detection-writing-skill to make this text smoother and easier to read for its reader. Preserve every supplied fact and qualification. If it is a private retailer or customer-service email, answer the latest question first, use one clear ask and ordinary words, and keep the sign-off I supply. Leave a clear complete draft unchanged unless I explicitly ask for a measured alternative that preserves those facts. Do not invent experience, injury, storage or carrying details, causes, dates, slang, errors, or invisible characters. Run a detector only if I explicitly ask. Do not promise a human classification, a lower score, or inbox delivery."

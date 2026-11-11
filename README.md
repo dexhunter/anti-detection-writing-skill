@@ -1,4 +1,4 @@
-# Anti-Detection Writing Skill
+# Anti-AI Detection Writing Skill
 
 Polish AI-written text for smoother flow, clearer meaning, and a natural voice. Use it for replies, emails, articles, and documentation. When requested, test the edits with GPTZero and work toward lower AI-detection scores while preserving facts, qualifications, and the writer's intended meaning.
 
@@ -9,16 +9,16 @@ Polish AI-written text for smoother flow, clearer meaning, and a natural voice. 
 Install from GitHub:
 
 ```sh
-npx skills add dexhunter/anti-detection-writing-skill --skill anti-detection-writing
+npx skills add dexhunter/anti-detection-writing-skill --skill anti-ai-detection-writing-skill
 ```
 
-From a local checkout, use `npx skills add . --skill anti-detection-writing`.
+From a local checkout, use `npx skills add . --skill anti-ai-detection-writing-skill`.
 
-The [skills CLI](https://github.com/vercel-labs/skills#source-formats) supports local paths and named skill selection. This installs into the current project by default; review its prompts before replacing an existing skill. Alternatively, copy `skills/anti-detection-writing/` into your agent's supported skill directory.
+The [skills CLI](https://github.com/vercel-labs/skills#source-formats) supports local paths and named skill selection. This installs into the current project by default; review its prompts before replacing an existing skill. Alternatively, copy `skills/anti-ai-detection-writing-skill/` into your agent's supported skill directory.
 
 Example request:
 
-> Use $anti-detection-writing to make this text smoother and easier to read. Preserve its facts and qualifications, remove formulaic wording, and match the intended audience. Get a separate review of the final text.
+> Use $anti-ai-detection-writing-skill to make this text smoother and easier to read. Preserve its facts and qualifications, remove formulaic wording, and match the intended audience. Get a separate review of the final text.
 
 For a requested measurement, add:
 
@@ -26,10 +26,10 @@ For a requested measurement, add:
 
 ## What you get
 
-- [`anti-detection-writing`](skills/anti-detection-writing/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
+- [`anti-ai-detection-writing-skill`](skills/anti-ai-detection-writing-skill/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
 - A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
 - An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
-- An optional [local detector diagnostic](skills/anti-detection-writing/references/local-detector.md) with pinned model verification and full-text checks. Its scores are not a validated substitute for GPTZero or Pangram.
+- An optional [local detector diagnostic](skills/anti-ai-detection-writing-skill/references/local-detector.md) with pinned model verification and full-text checks. Its scores are not a validated substitute for GPTZero or Pangram.
 
 The editing workflow draws on [other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately. Its 12 completed measurements all scored 100% AI / 0% mixed / 0% human, giving six tied pairs; this completes the older frozen comparison, not a test of later literature-informed instructions.
 

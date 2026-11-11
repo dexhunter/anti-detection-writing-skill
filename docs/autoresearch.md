@@ -4,9 +4,9 @@ The workflow coordinates a skill improver, a separate preference selector, fresh
 
 The supplied configuration measures prose independently of code. Review the complete message and its code for correctness, then scan the exact prose after approved code exclusions. Keep inline technical names and all explanatory sentences. Results identify their scope; earlier whole-message scores remain historical whole-message measurements.
 
-> Use the anti-detection-writing skill's bounded autoresearch workflow. Run one round within the existing free detector allowance, compare the current skill with a proposed skill change, and reserve fresh cases for confirmation. Preserve all failures and stop at the recorded budget.
+> Use the Anti-AI Detection Writing Skill's bounded autoresearch workflow. Run one round within the existing free detector allowance, compare the current skill with a proposed skill change, and reserve fresh cases for confirmation. Preserve all failures and stop at the recorded budget.
 
-Read the [workflow and commands](../skills/anti-detection-writing/references/autoresearch.md), [role packets](../skills/anti-detection-writing/references/autoresearch/roles.md), [default limits](../skills/anti-detection-writing/references/autoresearch/config.json) and [native receipt contract](../skills/anti-detection-writing/references/autoresearch/receipt-contract.md).
+Read the [workflow and commands](../skills/anti-ai-detection-writing-skill/references/autoresearch.md), [role packets](../skills/anti-ai-detection-writing-skill/references/autoresearch/roles.md), [default limits](../skills/anti-ai-detection-writing-skill/references/autoresearch/config.json) and [native receipt contract](../skills/anti-ai-detection-writing-skill/references/autoresearch/receipt-contract.md).
 
 ```mermaid
 flowchart LR

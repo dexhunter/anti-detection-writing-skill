@@ -5,9 +5,9 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills/anti-detection-writing/SKILL.md"
-YAML = ROOT / "skills/anti-detection-writing/agents/openai.yaml"
-SCRIPT = ROOT / "skills/anti-detection-writing/scripts/autoresearch.py"
+SKILL = ROOT / "skills/anti-ai-detection-writing-skill/SKILL.md"
+YAML = ROOT / "skills/anti-ai-detection-writing-skill/agents/openai.yaml"
+SCRIPT = ROOT / "skills/anti-ai-detection-writing-skill/scripts/autoresearch.py"
 
 
 def load_controller():

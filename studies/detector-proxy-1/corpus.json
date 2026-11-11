@@ -534,6 +534,29 @@
       "observations": 2
     },
     {
+      "id": "2905d46473f148b0",
+      "sha256": "2905d46473f148b0d7c2e5bd167c4506f65b9904d84ba0e97f4f69dbe2688716",
+      "stripped_sha256": "d2db37cdbaa23c23bf6d83517e9b23f67de2b08113cb70d21d0ae9792a6b202c",
+      "path": "studies/requested-alternatives-1/inputs/kubernetes-probe-roles/original-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 164,
+      "whitespace_words": 164,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
       "id": "2a4db0a9ebaff71c",
       "sha256": "2a4db0a9ebaff71c11e5612c40e42fe8d4556b84566b818666bc1ebe1ec84951",
       "stripped_sha256": "ae39ec1a5b003cd7d73759cd374b75f740ef36fe5b6d9815f39e766eac9774f2",
@@ -1601,6 +1624,29 @@
       "observations": 1
     },
     {
+      "id": "a8dda6a6d609a4ef",
+      "sha256": "a8dda6a6d609a4ef0e47c31d6992064978657d9c11de6f637dd96ed349cbe923",
+      "stripped_sha256": "b4c4dbd774e2f50f35c306f7a2598ffef776a4d6338cc1ad497b51dd7cd901dd",
+      "path": "studies/requested-alternatives-1/inputs/postgresql-snapshot-scope/original-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 180,
+      "whitespace_words": 180,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
       "id": "a96fa910e0412217",
       "sha256": "a96fa910e04122172a03c60a6184605fe88de49c2bd81f63d7093a051e17f7e0",
       "stripped_sha256": "8d8a996391f276cbe2edd04a648ec7060342de597d8d5515f155613c62278d4c",
@@ -2268,9 +2314,10 @@
       "displayed_words": 148,
       "whitespace_words": 148,
       "evidence": [
+        "studies/pangram-transfer-1/results.json",
         "studies/results.json"
       ],
-      "observations": 1
+      "observations": 2
     },
     {
       "id": "e6f9c2c7d6cf2d55",
@@ -2295,6 +2342,29 @@
         "studies/open-detector-proxy-1/targets.json"
       ],
       "observations": 6
+    },
+    {
+      "id": "e8558e023c1a3471",
+      "sha256": "e8558e023c1a3471d4a0436787f9f10e7b0ecde2f46007c7c6fd84c98735bbba",
+      "stripped_sha256": "5ecf16fb00328bd4ddc1e91c8cd58dd7052a2361b300242401417e0c32d33c30",
+      "path": "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 178,
+      "whitespace_words": 178,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
     },
     {
       "id": "ec6178646643eaac",
@@ -2343,6 +2413,29 @@
       "observations": 1
     },
     {
+      "id": "f105149fe2ed40b7",
+      "sha256": "f105149fe2ed40b78cb7ba728824f03b2fb14a3d0199e02f077d163da023a966",
+      "stripped_sha256": "a7394870c63b62bcc81f2b856e1d884508dc1e9f48b24458ab4892a2d95f588d",
+      "path": "studies/workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt",
+      "ai": 100,
+      "mixed": 0,
+      "human": 0,
+      "model": "4.9b",
+      "models": [
+        "4.9b"
+      ],
+      "modes": [
+        "Basic Scan"
+      ],
+      "short_text_warning": false,
+      "displayed_words": 181,
+      "whitespace_words": 181,
+      "evidence": [
+        "studies/pangram-transfer-1/results.json"
+      ],
+      "observations": 1
+    },
+    {
       "id": "f123c677c9f122a4",
       "sha256": "f123c677c9f122a47c117e23f6b64225ad16ddbcf43bf3aae266d2241d88f1a3",
       "stripped_sha256": "2beba61ab8c037973892d5a94cc8936a04dba7c533a276db1dd6d3d031209dfc",
@@ -2385,9 +2478,10 @@
       "displayed_words": 127,
       "whitespace_words": 127,
       "evidence": [
+        "studies/pangram-transfer-1/results.json",
         "studies/results.json"
       ],
-      "observations": 1
+      "observations": 2
     },
     {
       "id": "f74140439df45831",
@@ -2507,8 +2601,8 @@
     }
   ],
   "conflicts": [],
-  "unbound_score_objects": 6,
-  "raw_hits": 135,
+  "unbound_score_objects": 0,
+  "raw_hits": 141,
   "pairs": [
     {
       "id": "pair-01",

@@ -183,6 +183,21 @@ def choose_binding(obj, root, json_file, index):
     return {"sha256": resolved[0][1], "path": resolved[0][2]}
 
 
+def parent_input_binding(ancestors, index):
+    """Bind a hashless score object to its parent's input_sha256.
+
+    Used when the score object itself names no file. The rendered hash on the
+    same record can be a different text, so this looks only at input_sha256.
+    """
+    for ancestor in ancestors:
+        if not isinstance(ancestor, dict):
+            continue
+        sha = ancestor.get("input_sha256")
+        if isinstance(sha, str) and SHA256.fullmatch(sha) and sha in index:
+            return {"sha256": sha, "path": min(index[sha])}
+    return None
+
+
 def collect_hits(root, index):
     hits = []
     unbound = []
@@ -204,6 +219,8 @@ def collect_hits(root, index):
                     numbers = [value for value in (ai, mixed, human) if value is not None]
                     if is_number(ai) and is_number(human) and all(is_number(value) for value in numbers):
                         binding = choose_binding(obj, root, source, index)
+                        if binding is None:
+                            binding = parent_input_binding(ancestors, index)
                         if binding is None:
                             unbound.append(evidence)
                         else:
@@ -817,13 +834,16 @@ def score_one_classifier(name, model_id, model_dir, max_tokens, texts, scores):
     metric["ai_index"] = ai_index
     metric["preprocessing"] = "raw text; no publisher cleaning"
     done = set(metric["by_sha"])
+    unscored = metric.setdefault("unscored", {})
     for sha, text in texts:
-        if sha in done:
+        if sha in done or sha in unscored:
             continue
         result = score_classifier_text(model, tokenizer, text, torch, ai_index, max_tokens)
         add_status(metric, result["status"])
         if result["status"] == "complete":
             metric["by_sha"][sha] = result["ai_probability"]
+        else:
+            unscored[sha] = result["status"]
     release(model)
 
 
@@ -833,13 +853,16 @@ def score_one_mean_pool(name, model_id, model_dir, max_tokens, texts, scores):
     metric["max_tokens"] = max_tokens
     detector = MeanPoolDetector(model_dir, max_tokens)
     done = set(metric["by_sha"])
+    unscored = metric.setdefault("unscored", {})
     for sha, text in texts:
-        if sha in done:
+        if sha in done or sha in unscored:
             continue
         result = detector.score(text)
         add_status(metric, result["status"])
         if result["status"] == "complete":
             metric["by_sha"][sha] = result["ai_probability"]
+        else:
+            unscored[sha] = result["status"]
     release(detector)
 
 

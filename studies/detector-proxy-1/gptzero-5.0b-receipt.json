@@ -1,0 +1,83 @@
+{
+ "detector": "GPTZero",
+ "model": "5.0b",
+ "date": "2026-11-11",
+ "plan": "free",
+ "scan_mode_note": "original and v1-v4 were scanned before the free Basic option disappeared; v5-v10 used 'Advanced AI Scan' after the free advanced review was used, which displays only the overall score. Modes therefore differ between the two groups.",
+ "values_note": "Only the displayed overall classification was recorded. For the 100% texts the mixed and human values were not separately recorded. v5 showed 3% AI / 97% human.",
+ "redaction": "Texts withheld: they contain a real retailer contact name and order number. sha256 is of the exact scanned text file for v1-v10; the original's text and hash are not included.",
+ "records": [
+  {
+   "id": "original",
+   "words": 85,
+   "strategy": "real chaser as written",
+   "ai_pct": 100
+  },
+  {
+   "id": "v1",
+   "words": 103,
+   "sha256": "1e90f4cdb306a6c69e2cfa16dc0311019dbd7c06c309258c649dc5f9a14b2c5f",
+   "ai_pct": 100,
+   "strategy": "casual-polite"
+  },
+  {
+   "id": "v2",
+   "words": 107,
+   "sha256": "6a4670c92cdda547cd2a83651e75b0adcc1bf32437955567b0fe9023bf7112f0",
+   "ai_pct": 100,
+   "strategy": "recap"
+  },
+  {
+   "id": "v3",
+   "words": 105,
+   "sha256": "41bb27d640b141ae85c44ad3eb5c4f30004b61063adc3671cde4ea35878f5a26",
+   "ai_pct": 100,
+   "strategy": "me again"
+  },
+  {
+   "id": "v4",
+   "words": 91,
+   "sha256": "cf20af853d4fabae88edfc43bcd0adc6d6574455a09964454ad77d4016e110c7",
+   "ai_pct": 100,
+   "strategy": "choppy fragments"
+  },
+  {
+   "id": "v5",
+   "words": 124,
+   "sha256": "d40d1e483b6082bfb003b7fba07bfab38081985fac9b43198fe3c04965691574",
+   "ai_pct": 3,
+   "human_pct": 97,
+   "strategy": "formal, passive, nominalised"
+  },
+  {
+   "id": "v6",
+   "words": 123,
+   "sha256": "a2e09e657ce60e262bf2f7af8bb8bf2f12de90ab1233c6f6e0112cfee37c7bb2",
+   "ai_pct": 100
+  },
+  {
+   "id": "v7",
+   "words": 119,
+   "sha256": "664324e204cf16e3347df0562d3294e6c54393119cca74423d32bc1db6ef02da",
+   "ai_pct": 100
+  },
+  {
+   "id": "v8",
+   "words": 115,
+   "sha256": "a99564846a4d693a8b54063088bca5605a310b8535214625ba2ad8ed98631b23",
+   "ai_pct": 100
+  },
+  {
+   "id": "v9",
+   "words": 116,
+   "sha256": "578312c96d27e5f37daa0da55a3c7bfac892fcc755148b2f47ce0186cc373528",
+   "ai_pct": 100
+  },
+  {
+   "id": "v10",
+   "words": 119,
+   "sha256": "97ce99bcbc312961b200d7d17b734a9e27655c3a2bfa38aebb8498696e3a61a5",
+   "ai_pct": 100
+  }
+ ]
+}

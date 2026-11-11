@@ -72,15 +72,15 @@ The pattern across the evasion papers is that a detector evaluated on clean in-d
 
 ## What the archived GPTZero scans can support
 
-`scripts/proxy_detector.py corpus` walks `studies/` and keeps a GPTZero observation only when the AI, mixed, and human figures sit on an object marked GPTZero and a file in `studies/` hashes to a checksum stored with that object. Exact repeats collapse. Conflicting scores for the same bytes would be reported and excluded; there are none.
+`scripts/proxy_detector.py corpus` walks `studies/` and keeps a GPTZero observation only when the AI, mixed, and human figures sit on an object marked GPTZero and a file in `studies/` matches a checksum. The checksum is the one stored on that object, or, when the score object has none, the parent record's `input_sha256`. A rendered hash on the same record is not used, because it can name a different text. Exact repeats collapse. Conflicting scores for the same bytes would be reported and excluded; there are none.
 
-The run used for this note found **108** files with distinct checksums, all Basic Scan, Model **4.9b**. Five pairs differ only by trailing newlines, so correlations use **103** texts. **97** are 100% AI. **11** are below the ceiling: 0, 0, 1, 11, 40, 67, 91, 91, 93, 93, and 93. The two 91s are the same Python answer; the editor copy has two extra trailing newlines. Five texts are under 100 words, and all five are 100% AI. Fifty-two texts are 130 words or shorter, and only those two 91s and the 67 are below the ceiling inside that band. The two 0% texts are the business answers from the model-assisted study (148 and 150 words), not short emails.
+The run used for this note found **112** files with distinct checksums, all Basic Scan, Model **4.9b**. Five pairs differ only by trailing newlines, so correlations use **107** texts. **101** are 100% AI. **11** are below the ceiling: 0, 0, 1, 11, 40, 67, 91, 91, 93, 93, and 93. The two 91s are the same Python answer; the editor copy has two extra trailing newlines. Five texts are under 100 words, and all five are 100% AI. Fifty-two texts are 130 words or shorter, and only those two 91s and the 67 are below the ceiling inside that band. The two 0% texts are the business answers from the model-assisted study (148 and 150 words), not short emails.
 
-Six GPTZero score objects in `studies/pangram-transfer-1/results.json` carry no hash of their own, so this join does not add them. The hash sits on the enclosing record as `input_sha256`. Two of those inputs are already in the 108: the `qwen-1942` plain text at 100% AI and the quoted text at 1% AI. The other four are not, by full hash or by stripped hash: `studies/workflow-retest-1/inputs/kubernetes-probe-roles/original-effective.txt` (164 words), `studies/workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt` (181 words), `studies/workflow-retest-1/inputs/postgresql-snapshot-scope/original-effective.txt` (180 words), and `studies/workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt` (178 words). Each file matches the hash on its record. Each recorded score is Basic Scan, Model 4.9b, 100% AI, and the recorded word count matches the file. They are archived scans outside this correlation. Pangram proportions are a different unit and are not mixed in.
+Six score objects in `studies/pangram-transfer-1/results.json` have no hash of their own. The join uses the parent `input_sha256`. Two of those inputs were already present: the `qwen-1942` plain text at 100% AI and the quoted text at 1% AI. The other four are new to the correlation. They are the kubernetes-probe-roles and postgresql-snapshot-scope original and direct editor files, at 164, 181, 180, and 178 words. Each recorded score is Basic Scan, Model 4.9b, 100% AI, 0% mixed, and 0% human, and the recorded word count matches the file. The two originals are byte-identical to copies under `studies/requested-alternatives-1/inputs/`, so the join keeps one path. Pangram proportions are a different unit and are not mixed in.
 
 The ten pairs frozen in [open-detector-proxy-1](../studies/open-detector-proxy-1/README.md) all resolve onto this set. Three of them fall by at least five GPTZero points: 100 to 93 (a quotation added), and 100 to 0 twice on the same business case. The other seven are exact ties at 100. That five-point bar is the one that study declared before its own local scores.
 
-The September 7 Desklib diagnostic, recorded in [local-detector.md](../skills/anti-ai-detection-writing-skill/references/local-detector.md), scored eight AI-origin development texts between 0.0123 and 0.1861, all below the card's 0.5 line, including seven that Pangram had called 100% AI. That was already a class disagreement. The proxy run below asks the same question against the 108 GPTZero texts, with the model files kept outside the repository.
+The September 7 Desklib diagnostic, recorded in [local-detector.md](../skills/anti-ai-detection-writing-skill/references/local-detector.md), scored eight AI-origin development texts between 0.0123 and 0.1861, all below the card's 0.5 line, including seven that Pangram had called 100% AI. That was already a class disagreement. The proxy run below asks the same question against the 112 GPTZero texts, with the model files kept outside the repository.
 
 ## The optional proxy
 
@@ -116,7 +116,7 @@ python3 skills/anti-ai-detection-writing-skill/scripts/proxy_detector.py report 
 
 ## Proxy evaluation
 
-One CPU run, torch 2.8.0+cpu, float32, no truncation. The report is [studies/detector-proxy-1/report.json](../studies/detector-proxy-1/report.json). Correlations count a text once after stripping trailing newlines: 108 files, 103 texts. Six texts are longer than 512 tokens. They are left unscored for the three RoBERTa classifiers and for Oculus, and all six are 100% AI, so those four metrics have n=97 and still include all 10 unique below-ceiling texts. Every other metric scores all 103. The two public-domain controls are scored and kept out of the correlations.
+One CPU run, torch 2.8.0+cpu, float32, no truncation. The report is [studies/detector-proxy-1/report.json](../studies/detector-proxy-1/report.json). Correlations count a text once after stripping trailing newlines: 112 files, 107 texts. Six texts are longer than 512 tokens. They are left unscored for the three RoBERTa classifiers and for Oculus, and all six are 100% AI, so those four metrics have n=101 and still include all 10 unique below-ceiling texts. Every other metric scores all 107. The two public-domain controls are scored and kept out of the correlations.
 
 The comparisons below were declared before the scores were read. Spearman uses the oriented score against GPTZero AI percent. "Below median" is the share of the 10 below-ceiling texts that fall under the median oriented score of the ceiling texts. "Drops caught" counts how many of the three archived reductions of at least five points the proxy also lowered. "Ties lowered" counts how many of the seven exact 100-to-100 pairs it lowered. A decrease of any size counts, including a few thousandths. The five-point bar and a zero margin give the same two counts, because the three reductions are 7, 100, and 100 points. Figures are rounded to three decimals from the report.
 
@@ -124,42 +124,42 @@ These are not a second GPTZero scan and not an accuracy claim about human writin
 
 | Metric | n | Spearman | Spearman under 100 | Below median | Drops caught | Ties lowered |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `classifier__hc3_roberta` | 97 | 0.155 | −0.129 | 0.800 | 1/3 | 1/7 |
-| `classifier__fakespot_roberta` | 97 | 0.102 | −0.191 | 0.600 | 2/3 | 4/7 |
-| `binoculars__gpt2_distilgpt2` | 103 | 0.077 | 0.419 | 0.600 | 1/3 | 3/7 |
-| `openai-community__gpt2__curvature` | 103 | 0.070 | 0.800 | 0.600 | 0/3 | 1/7 |
-| `binoculars__gpt2medium_gpt2` | 103 | 0.067 | 0.394 | 0.600 | 0/3 | 4/7 |
-| `distilbert__distilgpt2__curvature` | 103 | 0.063 | −0.185 | 0.500 | 0/3 | 4/7 |
-| `Qwen__Qwen2.5-0.5B__log_perplexity` | 103 | 0.023 | 0.529 | 0.500 | 1/3 | 1/7 |
-| `HuggingFaceTB__SmolLM2-360M__log_perplexity` | 103 | 0.015 | 0.554 | 0.500 | 2/3 | 2/7 |
-| `classifier__openai_roberta` | 97 | 0.003 | 0.585 | 0.500 | 2/3 | 3/7 |
-| `openai-community__gpt2__log_perplexity` | 103 | −0.016 | 0.554 | 0.500 | 0/3 | 1/7 |
-| `openai-community__gpt2-medium__log_perplexity` | 103 | −0.018 | 0.554 | 0.500 | 0/3 | 1/7 |
-| `Qwen__Qwen2.5-0.5B__curvature` | 103 | −0.028 | 0.135 | 0.200 | 1/3 | 2/7 |
-| `desklib__ai_probability` | 103 | −0.035 | 0.234 | 0.500 | 1/3 | 5/7 |
-| `openai-community__gpt2-medium__curvature` | 103 | −0.046 | 0.726 | 0.500 | 0/3 | 1/7 |
-| `HuggingFaceTB__SmolLM2-360M__curvature` | 103 | −0.053 | 0.037 | 0.400 | 1/3 | 2/7 |
-| `oculus__ai_probability` | 97 | −0.076 | 0.468 | 0.400 | 3/3 | 4/7 |
-| `binoculars__qwen2.5_0.5b` | 103 | −0.077 | −0.135 | 0.300 | 3/3 | 3/7 |
-| `distilbert__distilgpt2__log_perplexity` | 103 | −0.091 | 0.652 | 0.200 | 1/3 | 1/7 |
-| `distilbert__distilgpt2__burstiness` | 103 | −0.092 | −0.683 | 0.300 | 2/3 | 5/7 |
-| `Qwen__Qwen2.5-0.5B__burstiness` | 103 | −0.100 | −0.566 | 0.400 | 0/3 | 4/7 |
-| `binoculars__smollm2_360m` | 103 | −0.104 | 0.172 | 0.300 | 2/3 | 4/7 |
-| `openai-community__gpt2__burstiness` | 103 | −0.125 | −0.542 | 0.300 | 0/3 | 5/7 |
-| `openai-community__gpt2-medium__burstiness` | 103 | −0.146 | −0.542 | 0.200 | 0/3 | 5/7 |
-| `HuggingFaceTB__SmolLM2-360M__burstiness` | 103 | −0.186 | −0.775 | 0.200 | 0/3 | 4/7 |
+| `classifier__hc3_roberta` | 101 | 0.131 | −0.129 | 0.800 | 1/3 | 1/7 |
+| `classifier__fakespot_roberta` | 101 | 0.111 | −0.191 | 0.600 | 2/3 | 4/7 |
+| `binoculars__gpt2_distilgpt2` | 107 | 0.071 | 0.419 | 0.600 | 1/3 | 3/7 |
+| `distilbert__distilgpt2__curvature` | 107 | 0.063 | −0.185 | 0.500 | 0/3 | 4/7 |
+| `openai-community__gpt2__curvature` | 107 | 0.062 | 0.800 | 0.600 | 0/3 | 1/7 |
+| `binoculars__gpt2medium_gpt2` | 107 | 0.053 | 0.394 | 0.500 | 0/3 | 4/7 |
+| `Qwen__Qwen2.5-0.5B__log_perplexity` | 107 | 0.025 | 0.529 | 0.500 | 1/3 | 1/7 |
+| `HuggingFaceTB__SmolLM2-360M__log_perplexity` | 107 | 0.021 | 0.554 | 0.500 | 2/3 | 2/7 |
+| `classifier__openai_roberta` | 101 | −0.008 | 0.585 | 0.500 | 2/3 | 3/7 |
+| `openai-community__gpt2__log_perplexity` | 107 | −0.012 | 0.554 | 0.500 | 0/3 | 1/7 |
+| `openai-community__gpt2-medium__log_perplexity` | 107 | −0.017 | 0.554 | 0.500 | 0/3 | 1/7 |
+| `desklib__ai_probability` | 107 | −0.034 | 0.234 | 0.500 | 1/3 | 5/7 |
+| `Qwen__Qwen2.5-0.5B__curvature` | 107 | −0.035 | 0.135 | 0.200 | 1/3 | 2/7 |
+| `openai-community__gpt2-medium__curvature` | 107 | −0.055 | 0.726 | 0.500 | 0/3 | 1/7 |
+| `oculus__ai_probability` | 101 | −0.060 | 0.468 | 0.400 | 3/3 | 4/7 |
+| `HuggingFaceTB__SmolLM2-360M__curvature` | 107 | −0.061 | 0.037 | 0.400 | 1/3 | 2/7 |
+| `distilbert__distilgpt2__log_perplexity` | 107 | −0.071 | 0.652 | 0.300 | 1/3 | 1/7 |
+| `binoculars__qwen2.5_0.5b` | 107 | −0.084 | −0.135 | 0.300 | 3/3 | 3/7 |
+| `distilbert__distilgpt2__burstiness` | 107 | −0.107 | −0.683 | 0.300 | 2/3 | 5/7 |
+| `Qwen__Qwen2.5-0.5B__burstiness` | 107 | −0.109 | −0.566 | 0.400 | 0/3 | 4/7 |
+| `binoculars__smollm2_360m` | 107 | −0.113 | 0.172 | 0.300 | 2/3 | 4/7 |
+| `openai-community__gpt2__burstiness` | 107 | −0.137 | −0.542 | 0.100 | 0/3 | 5/7 |
+| `openai-community__gpt2-medium__burstiness` | 107 | −0.157 | −0.542 | 0.200 | 0/3 | 5/7 |
+| `HuggingFaceTB__SmolLM2-360M__burstiness` | 107 | −0.192 | −0.775 | 0.200 | 0/3 | 4/7 |
 
-The strongest overall Spearman is **0.155**, HC3 RoBERTa. That is not a ranking to spend a scan on. HC3's probabilities sit near zero: the median on the 87 ceiling texts it scored is 0.0018, and 5 of those 87 reach 0.5. The drop it catches is the quotation pair, 0.00088 to 0.00050. On both business pairs, where GPTZero fell from 100 to 0, HC3's score went up. Fakespot, scored on the raw text because its card's cleaning step was not applied, is the next Spearman at 0.102 and lowers 4 of the 7 ties.
+The strongest overall Spearman is **0.131**, HC3 RoBERTa, on 101 texts. That is not a ranking to spend a scan on. HC3's probabilities sit near zero: the median on the 91 ceiling texts it scored is 0.0018, and 5 of those 91 reach 0.5. The drop it catches is the quotation pair, 0.00088 to 0.00050. On both business pairs, where GPTZero fell from 100 to 0, HC3's score went up. Fakespot, scored on the raw text because its card's cleaning step was not applied, is the next Spearman at 0.111 and lowers 4 of the 7 ties.
 
-GPT-2 curvature has Spearman 0.800 on the 10 below-ceiling texts, and GPT-2 medium curvature has 0.726. Both catch **0 of 3** paired drops. On every archived reduction the curvature moved the wrong way: the candidate scored more machine-like after an edit that GPTZero scored as less AI. Overall Spearman is 0.070 and −0.046. The Darwin and Carroll controls score 0.450 and 1.587, both on the machine side of the ceiling-text median (−0.616). Cross-section among ten dependent documents is not a paired ranking, and it does not put those paragraphs on the human side of the AI texts.
+GPT-2 curvature has Spearman 0.800 on the 10 below-ceiling texts, and GPT-2 medium curvature has 0.726. Both catch **0 of 3** paired drops. On every archived reduction the curvature moved the wrong way: the candidate scored more machine-like after an edit that GPTZero scored as less AI. Overall Spearman is 0.062 and −0.055. The Darwin and Carroll controls score 0.450 and 1.587, both on the machine side of the ceiling-text median (−0.623). Cross-section among ten dependent documents is not a paired ranking, and it does not put those paragraphs on the human side of the AI texts.
 
-Qwen2.5-0.5B Binoculars catches 3 of 3 drops and also lowers 3 of 7 ties. The three catches are raw moves of +0.003, +0.009, and +0.019. Labelled texts on that metric span 0.974 to 1.272. Overall Spearman is −0.077. Carroll scores 0.928, more machine-like than every labelled text, and Darwin scores 0.987. The Falcon-7B ratio in Hans et al. is not what this 0.5B pair is doing. Sentence burstiness is at or below zero on every model in the table. Log perplexity is not: Qwen2.5-0.5B is +0.023 and SmolLM2-360M is +0.015, and the other three log-perplexity rows are below zero. GPTZero's support page says it stopped using those features in autumn 2023.
+Qwen2.5-0.5B Binoculars catches 3 of 3 drops and also lowers 3 of 7 ties. The three catches are raw moves of +0.003, +0.009, and +0.019. Labelled texts on that metric span 0.974 to 1.272. Overall Spearman is −0.084. Carroll scores 0.928, more machine-like than every labelled text, and Darwin scores 0.987. The Falcon-7B ratio in Hans et al. is not what this 0.5B pair is doing. Sentence burstiness is at or below zero on every model in the table. Log perplexity is not: Qwen2.5-0.5B is +0.025 and SmolLM2-360M is +0.021, and the other three log-perplexity rows are below zero. GPTZero's support page says it stopped using those features in autumn 2023.
 
-Oculus catches 3 of 3 and lowers 4 of 7 ties, including pair 06, the technical edit whose GPTZero score stayed at 100 (0.173 to 0.023). On the ten pairs and both controls, these 22 probabilities are within 0.000002 of the full-precision values in [oculus/results.json](../studies/open-detector-proxy-1/oculus/results.json). On the wider set, 2 of 87 ceiling texts are at or above 0.5. Spearman is −0.076. Catching the drops by also moving the ties is the same failure that study already recorded.
+Oculus catches 3 of 3 and lowers 4 of 7 ties, including pair 06, the technical edit whose GPTZero score stayed at 100 (0.173 to 0.023). On the ten pairs and both controls, these 22 probabilities are within 0.000002 of the full-precision values in [oculus/results.json](../studies/open-detector-proxy-1/oculus/results.json). On the wider set, 3 of 91 ceiling texts are at or above 0.5. Spearman is −0.060. Catching the drops by also moving the ties is the same failure that study already recorded.
 
-Desklib, the skill's pinned local detector, has Spearman **−0.035**. The median probability on the 93 ceiling texts is 0.054. Four of those 93 are at or above 0.5, and so is one below-ceiling text (0.961 on a quotation GPTZero scored at 93%). The September 7 note that eight development texts all fell under 0.5 still describes those eight. This run does not pad to 768. [desklib-pad-parity.json](../studies/detector-proxy-1/desklib-pad-parity.json) compares the unpadded logit with the skill's padded scorer on three texts: a four-word sentence, the Carroll paragraph, and one business answer. The largest absolute difference in that file is 2.38×10⁻⁶, on the business answer. The archive does not make Desklib a GPTZero ranker.
+Desklib, the skill's pinned local detector, has Spearman **−0.034**. The median probability on the 97 ceiling texts is 0.054. Four of those 97 are at or above 0.5, and so is one below-ceiling text (0.961 on a quotation GPTZero scored at 93%). The September 7 note that eight development texts all fell under 0.5 still describes those eight. This run does not pad to 768. [desklib-pad-parity.json](../studies/detector-proxy-1/desklib-pad-parity.json) compares the unpadded logit with the skill's padded scorer on three texts: a four-word sentence, the Carroll paragraph, and one business answer. The largest absolute difference in that file is 2.38×10⁻⁶, on the business answer. The archive does not make Desklib a GPTZero ranker.
 
-The OpenAI GPT-2 detector's median on its 87 ceiling texts is 0.0002. Two of them exceed 0.5. `scores.json` records the head that was scored: label 0 is Fake, label 1 is Real, and the metric uses index 0. A GPT-2-versus-WebText detector calling later prose Real is the limit stated on its own card.
+The OpenAI GPT-2 detector's median on its 91 ceiling texts is 0.0002. Two of them exceed 0.5. `scores.json` records the head that was scored: label 0 is Fake, label 1 is Real, and the metric uses index 0. A GPT-2-versus-WebText detector calling later prose Real is the limit stated on its own card.
 
 No metric both ranks the AI percents and catches the paired drops without also moving the ties. None of the five texts under 100 words leaves 100% AI, so this run cannot say how a proxy would order a short firm email. The Model 5.0b email report below is not in this correlation.
 
@@ -169,9 +169,9 @@ Not done here. No cloud account was used and no instance was started. The prices
 
 ### What the labels would have to be
 
-A model that mimics GPTZero has to be trained on GPTZero labels, and the label has to name the displayed model. The 108 archived texts are Basic 4.9b. The emails that motivated this note were scored on 5.0b. A 4.9b mimic is a different task. The labels also have to keep AI, mixed, and human apart: the archived 1% AI text was 99% mixed and 0% human, so an "AI percent only" target throws away the result that mattered.
+A model that mimics GPTZero has to be trained on GPTZero labels, and the label has to name the displayed model. The 112 joined texts are Basic 4.9b. The emails in the redacted receipt below were scored on 5.0b. A 4.9b mimic is a different task. The labels also have to keep AI, mixed, and human apart: the archived 1% AI text was 99% mixed and 0% human, so an "AI percent only" target throws away the result that mattered.
 
-The joined archive is a poor training set for the email problem. Ninety-seven of the 108 files are 100% AI. The eleven that are not are two business answers at 0% (148 and 150 words), two copies of the Python baseline at 91 (the same paragraph; the Python candidate is 100% AI), five quotation texts (1, 40, 67, 93, and 93), and two unpaired `mattpocock/skills` answers with no baseline and no unquoted control: `mattpocock-285/final.txt` at 11% and `mattpocock-231/final.txt` at 93%. Five of those eleven files are quotation texts. None of the five texts under 100 words leaves the ceiling. Fitting a classifier to that set teaches it to say 100, with a few memorised exceptions.
+The joined archive is a poor training set for the email problem. One hundred and one of the 112 files are 100% AI. The eleven that are not are two business answers at 0% (148 and 150 words), two copies of the Python baseline at 91 (the same paragraph; the Python candidate is 100% AI), five quotation texts (1, 40, 67, 93, and 93), and two unpaired `mattpocock/skills` answers with no baseline and no unquoted control: `mattpocock-285/final.txt` at 11% and `mattpocock-231/final.txt` at 93%. Five of those eleven files are quotation texts. None of the five texts under 100 words leaves the ceiling. Fitting a classifier to that set teaches it to say 100, with a few memorised exceptions.
 
 Do not train on private retailer or customer mail, even when a score already exists. Use public-domain prose and synthetic emails written for the experiment, with no real order, name, or account detail.
 
@@ -208,8 +208,8 @@ The practical budget for a first mimic, if calibration shows that scores vary, i
 
 ## What to do with a short firm email
 
-**Maintainer report, not an archived scan.** The maintainer reported that, on Model 5.0b, four style-only rewrites of an 85–110 word firm UK retailer email stayed at 100% AI: casual wording, a recap, a "me again" opening, and chopped fragments. On one ~120-word refund chaser, 9 of 10 fact-identical rewrites stayed at 100% AI. No text and no receipt are in `studies/`. Mixed was not reported, so these are not three-way confidences. The skill does not use this report as a reason to scan again or to skip a scan. In the joined 4.9b set, which does have files and scores, all five texts under 100 words are 100% AI. Published short-text work (MPU; the length discussion in Chakraborty et al.) says short machine text is hard to separate, which fits a ceiling, not a recipe for beating it.
+**Redacted receipt, not a method.** [gptzero-5.0b-receipt.json](../studies/detector-proxy-1/gptzero-5.0b-receipt.json) records free-plan GPTZero Model 5.0b scans from 11 November 2026. The texts are withheld. The original has no hash in the receipt. v1–v10 record the sha256 of the scanned file. The receipt says the scan modes differ. The original and v1–v4 were scanned before the free Basic option disappeared. v5–v10 used Advanced AI Scan, after the free advanced review was used, and that mode displays only the overall score. Only the displayed overall classification was recorded. For every 100% text, mixed and human were not recorded.
 
-**One report, not a method.** The wording reported at 3% AI and 97% human was formal, passive, and nominalised. Mixed was not reported. It was one scan of one wording. Do not copy it. Nominalising a refund chaser hides the ask, which the retailer section tells the writer to put first and in ordinary words. A single unaudited scan can also be noise.
+The original is 85 words, the real chaser as written, at 100% AI. v1–v4 are 103, 107, 105, and 91 words, with strategies casual-polite, recap, "me again", and choppy fragments, each at 100% AI. v5 is 124 words, formal, passive, and nominalised, recorded as 3% AI and 97% human. Mixed is not a field on that row. v6–v10 are 123, 119, 115, 116, and 119 words, each at 100% AI. That is one Advanced AI Scan of one nominalised wording, not a method, and not a reason to copy it. The skill does not use this receipt as a reason to scan again or to skip a scan. In the joined 4.9b set, all five texts under 100 words are 100% AI. Published short-text work (MPU; the length discussion in Chakraborty et al.) says short machine text is hard to separate, which fits a ceiling, not a recipe for beating it.
 
 **What the writer should do.** Keep every fact, qualification, and uncertainty. Leave a draft unchanged when it already answers the question in ordinary words with one ask. If a measured alternative is explicitly requested, one predeclared comparison is the whole experiment: same facts, same ask, and the result reported whether it moves or not, including mixed and human. The offline proxy does not rank the archived 4.9b pairs well enough to choose which wording to scan. That comparison is the evaluation above and [detector-proxy-1](../studies/detector-proxy-1/README.md).

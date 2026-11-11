@@ -54,7 +54,7 @@ class ProxyCorpusTests(unittest.TestCase):
     def test_archived_gptzero_corpus_is_hash_exact_and_saturated(self):
         corpus = proxy.load_gptzero_corpus(ROOT)
         records = corpus["records"]
-        self.assertEqual(len(records), 108)
+        self.assertEqual(len(records), 112)
         self.assertEqual(corpus["conflicts"], [])
         self.assertEqual({record["model"] for record in records}, {"4.9b"})
         self.assertTrue(all(record["modes"] == ["Basic Scan"] for record in records))
@@ -77,16 +77,22 @@ class ProxyCorpusTests(unittest.TestCase):
         self.assertEqual({record["ai"] for record in python_copies}, {91})
         self.assertEqual(len({record["stripped_sha256"] for record in python_copies}), 1)
         self.assertEqual(len(proxy.human_control_records(ROOT)), 2)
-        outside_join = (
+        parent_bound = (
             "studies/workflow-retest-1/inputs/kubernetes-probe-roles/original-effective.txt",
             "studies/workflow-retest-1/inputs/kubernetes-probe-roles/direct-effective.txt",
             "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/original-effective.txt",
             "studies/workflow-retest-1/inputs/postgresql-snapshot-scope/direct-effective.txt",
         )
-        joined = {record["path"] for record in records}
-        for path in outside_join:
-            self.assertTrue((ROOT / path).is_file())
-            self.assertNotIn(path, joined)
+        by_sha = {record["sha256"]: record for record in records}
+        for path in parent_bound:
+            raw = (ROOT / path).read_bytes()
+            record = by_sha[proxy.digest(raw)]
+            self.assertEqual(record["ai"], 100)
+            self.assertEqual(record["mixed"], 0)
+            self.assertEqual(record["human"], 0)
+            self.assertEqual(record["model"], "4.9b")
+            self.assertGreaterEqual(record["whitespace_words"], 164)
+        self.assertEqual(corpus["unbound_score_objects"], 0)
 
     def test_desklib_pad_parity_file_matches_its_texts(self):
         payload = json.loads((ROOT / "studies/detector-proxy-1/desklib-pad-parity.json").read_text(encoding="utf-8"))
@@ -148,13 +154,13 @@ class ProxyReportLockTests(unittest.TestCase):
         values = {name: metric["by_sha"] for name, metric in scores["metrics"].items()}
         fresh = proxy.summarize(corpus["records"], values, directions, pairs)
         self.assertEqual(report["metrics"], fresh)
-        self.assertEqual(report["corpus"]["unique_stripped_texts"], 103)
+        self.assertEqual(report["corpus"]["unique_stripped_texts"], 107)
         self.assertEqual(report["torch"], "2.8.0+cpu")
         controls = proxy.control_score_rows(proxy.human_control_records(ROOT), scores["metrics"])
         self.assertEqual(report["human_controls"], controls)
         hc3 = fresh["classifier__hc3_roberta"]
-        self.assertEqual(hc3["n"], 97)
-        self.assertAlmostEqual(hc3["spearman_oriented_vs_ai_percent"], 0.15514145946178115)
+        self.assertEqual(hc3["n"], 101)
+        self.assertAlmostEqual(hc3["spearman_oriented_vs_ai_percent"], 0.13078926488640746)
         self.assertEqual(hc3["archived_pairs_at_5_points"]["reductions_recognized"], 1)
         curvature = fresh["openai-community__gpt2__curvature"]
         self.assertEqual(curvature["archived_pairs_at_5_points"]["reductions_recognized"], 0)
@@ -163,7 +169,7 @@ class ProxyReportLockTests(unittest.TestCase):
         self.assertEqual(oculus["archived_pairs_at_5_points"]["reductions_recognized"], 3)
         self.assertEqual(oculus["archived_pairs_at_5_points"]["ties_with_a_proxy_decrease"], 4)
         desklib = fresh["desklib__ai_probability"]
-        self.assertAlmostEqual(desklib["spearman_oriented_vs_ai_percent"], -0.03498782711014332)
+        self.assertAlmostEqual(desklib["spearman_oriented_vs_ai_percent"], -0.03411615421523635)
         qwen = fresh["binoculars__qwen2.5_0.5b"]
         self.assertEqual(qwen["archived_pairs_at_5_points"]["reductions_recognized"], 3)
         self.assertEqual(qwen["archived_pairs_at_5_points"]["ties_with_a_proxy_decrease"], 3)
@@ -176,7 +182,8 @@ class ProxyCommandTests(unittest.TestCase):
             output = Path(directory) / "corpus.json"
             self.assertEqual(proxy.main(["corpus", "--root", str(ROOT), "--output", str(output)]), 0)
             payload = json.loads(output.read_text(encoding="utf-8"))
-        self.assertEqual(len(payload["records"]), 108)
+        self.assertEqual(len(payload["records"]), 112)
+        self.assertEqual(payload["unbound_score_objects"], 0)
         self.assertEqual(len(payload["pairs"]), 10)
         self.assertEqual(payload["service"], "GPTZero")
 

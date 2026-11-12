@@ -52,9 +52,9 @@ Use this when the user has asked for a diagnostic scan of a short email that kee
 
 Check a bolted-on recap or date sentence, and the sign-off or signature block, before rewriting the rest of a flagged draft.
 
-For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, every row that included Helen scored 100% AI. The date folds that left that name out scored 31% and 17%, so a probe that puts this name in every arm cannot tell the name apart from the edit being tested.
+For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the kettle email below, every row that included Helen scored 100% AI. The date folds that left that name out scored 31% and 17%, so a probe that puts this name in every arm cannot tell the name apart from the edit being tested. Three other emails with plain sender names still scored 100% AI. Avoiding that name is not a way to pass GPTZero. A real sender's name stays as supplied.
 
-**Preliminary.** The scans below are the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. The first five texts run 118–139 words. Later rows do not have a separate word count. The tables are repeated here so the procedure and that run stay together.
+**Preliminary.** The Advanced tables below are the November 12, 2026 kettle email in [evidence limits](evidence.md): free-plan GPTZero Model 5.0b, one scan per text. The first five texts run 118–139 words. The stage 7 and 8 rows have no separate word count. Stage 9 is a later Basic batch, including one rescan. The tables are repeated here so the procedure and that run stay together.
 
 | Variant | Added to the deletions-only control | AI | Flag recorded |
 | --- | --- | ---: | --- |
@@ -88,9 +88,20 @@ The date fold inside those two all-facts rows was not quoted separately from "da
 | Helen | 100% | Flag |
 | Helen Cartwright | 100% | Flag |
 
-**Observed in this test.** Folding the dates into an existing sentence did not reproduce the standalone date sentence's 100% result. Helen, as a first name or a full name in the sign-off, and as a full name in the first sentence, scored 100% AI. Sue Hall, on the fact-complete draft, scored 13% AI. First name alone in the body was not scanned. A displayed label is not a finding about authorship.
+**Observed on the kettle email.** Folding the dates into an existing sentence did not reproduce the standalone date sentence's 100% result on this email. Helen, as a first name or a full name in the sign-off, and as a full name in the first sentence, scored 100% AI. Sue Hall, on the fact-complete draft, scored 13% AI. First name alone in the body was not scanned. A displayed label is not a finding about authorship. Date folding and avoiding Helen removed those triggers on this email. They are not a way to pass GPTZero.
 
 **Hypothesis, not a result.** GPTZero may treat stock LLM-style persona names as an AI signal. A formal-letter interaction is a separate hypothesis. The body-only full name also scored 100%, and Sue Hall in the sign-off scored 13%, so these rows do not isolate the sign-off or the letter genre. Do not send the control, and do not change a real sender's name to chase the Sue Hall result.
+
+**Stage 9.** Basic scans, not Advanced. GPTZero Model 5.0b, 12 November 2026, uploaded .txt, one scan per text. The Sue Hall row rescans the stage 8 text. The other three emails are new. Each uses deletion-only base-model text, facts folded into existing sentences, no standalone recap sentence, and a plain sender name. Those three texts are 112–133 words.
+
+| Text | AI | Label recorded |
+| --- | ---: | --- |
+| Sue Hall kettle email, rescan of the stage 8 text | 13% | highly confident ... entirely human |
+| Return request, signed Kate Ward | 100% | Possible AI Paraphrasing |
+| Damaged lamp, signed Ann Price | 100% | Possible AI Paraphrasing |
+| Faulty blender, signed Ian Brooks | 100% | highly confident this text was AI generated |
+
+**Observed.** The Basic rescan matched the Advanced Sue Hall result for this text: 13% AI and the same quoted label. The return, the lamp, and the blender each scored 100% AI. The low score holds for the kettle email. The same recipe did not produce it on the other three.
 
 ## Retesting a skill revision
 

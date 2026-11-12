@@ -40,6 +40,30 @@ Before claiming that an approach works beyond its development cases, freeze the 
 
 When an isolated decrease drives the next experiment, a bounded repeat of the exact fixed inputs can check an unresolved measurement assumption before another rewrite. Freeze the repeated inputs, order and complete pair budget before scanning, and retain earlier and new observations separately. Matching scores do not distinguish deterministic scoring from caching, establish a success rate, or validate a new skill. Repeating an edit without its original does not repeat the original-to-edit comparison.
 
+## Restore one fact at a time
+
+Use this when the user has asked for a diagnostic scan of a short email that keeps every fact and scores as AI. A deletions-only control, plus variants that each add one fact back, locates a candidate trigger sentence. The deletions-only text is a measurement arm. The email you return still contains every fact, uncertainty, and qualification.
+
+1. Freeze the fact-complete draft and the deletions-only control before looking at scores.
+2. Each variant restores exactly one fact to the control, in one sentence or one signature line, and changes nothing else.
+3. Scan the control and each variant once, on the same service, mode, and displayed model. Record the AI result and any flag the UI shows. Do not repeat a text to chase a different number.
+4. Compare each variant with the control. A large jump marks that added sentence or line as the first candidate trigger. A smaller move stays in the record. The mark locates the sentence. It does not explain the model.
+5. In the email you return, work that fact into a sentence that is already there. Do not leave it as a standalone "Please note..." sentence or a reminder sentence that only lists facts. Do not drop the fact.
+
+Check a bolted-on recap or date sentence, and the sign-off or signature block, before rewriting the rest of a flagged draft.
+
+**Preliminary. The only run of this procedure** is the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, 118–139 words. The same table is repeated here so the procedure and that run stay together.
+
+| Variant | Added to the deletions-only control | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Control | None | 4% | None recorded |
+| Date sentence, directly after the salutation | Please note the order date was 28 October 2026 and the delivery date was 31 October 2026. | 100% | Possible AI Paraphrasing |
+| Bare name, after Yours sincerely | Helen Cartwright. | 100% | Possible AI Paraphrasing |
+| Fault sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
+| Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
+
+On this email, the date sentence and the bare name are the two arms at 100%. The fault sentence (21%) and the refund sentence (1%) were also added as their own sentences, so an added sentence is not itself the observation. Earlier context, outside this Advanced batch: the raw base-model text passed as human; versions with all facts restored scored 100% AI; this deletions-only control also scored 4% on a Basic scan, so the scan level does not account for the 4%. Why the bare name moves the score is unknown. A formal-letter interaction is a hypothesis, not a finding. Do not send the control.
+
 ## Retesting a skill revision
 
 Use this workflow when the user asks to improve the skill through repeated tests; ordinary polishing does not require a comparative experiment.

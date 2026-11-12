@@ -79,3 +79,25 @@ A separate follow-up on the same date checked all 23 additional entries against 
 A [bounded pilot](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/gepa-pilot-1) ran the pinned upstream GEPA optimizer with separate reflection, writing, quality-review and Chrome callbacks. It proposed two reusable changes to the writing section on one exposed HTTP case. Both outputs preserved all seven claims, but separate masked reviewers slightly preferred the incumbent. GEPA rejected both under the frozen no-preference-loss rule and kept its seed; the rejection utilities were not detector scores.
 
 After that run closed, a separately declared diagnostic scanned both unchanged, factually acceptable outputs while retaining their preference losses. The shared seed and both candidates all scored 100% AI / 0% mixed / 0% human in GPTZero Basic 4.9b, without short-text warnings. These three prose-only scans used 377 free word credits; the baseline receipt was reused for comparison, not counted as another scan. Both proposals, the adaptive change of scan criteria, a discarded exposed writer, and a dispatch-wording difference are retained. No policy was promoted and two confirmation cases stayed sealed. This trial demonstrates no detector-score improvement or general impossibility.
+
+## Single-fact restorations on one synthetic complaint
+
+**Preliminary.** November 12, 2026. One synthetic complaint about a faulty kettle, scanned on a free GPTZero account, Model 5.0b, Advanced scan. The texts run 118–139 words. Each text was scanned once. There are no repeats. Mixed and human confidences were not recorded. This section records that batch only. It does not state a success rate for any other email, genre, or detector version.
+
+The control is a base-model-written email with only deletions. It is not a fact-complete draft. Each other row adds one fact back to that control and changes nothing else.
+
+| Variant | Added to the deletions-only control | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Control | None | 4% | None recorded |
+| Date sentence, directly after the salutation | Please note the order date was 28 October 2026 and the delivery date was 31 October 2026. | 100% | Possible AI Paraphrasing |
+| Bare name, after Yours sincerely | Helen Cartwright. | 100% | Possible AI Paraphrasing |
+| Fault sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
+| Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
+
+**Observed.** The control scored 4% AI. The date sentence and the bare name each scored 100% AI and were flagged Possible AI Paraphrasing. The fault sentence scored 21% AI. The refund sentence scored 1% AI. The fault and refund rows are also sentences added on their own, so these five scans do not show that every added sentence reaches 100%.
+
+Earlier observations on this same synthetic email sit outside the table. The raw base-model text passed as human. Versions with all facts restored scored 100% AI. The stage 4 deletions-only control also scored 4% on a Basic scan. That Basic result matches this Advanced control, so the scan level does not account for the control's 4%. Those earlier passes were not repeated in this Advanced batch, and the full-restoration scans are not given a mode here.
+
+**Hypothesis, not a result.** This batch does not show why the bare name line moves the score. An interaction with the formal-letter genre is a hypothesis. The flag Possible AI Paraphrasing is the label the UI displayed. It is not an account of the mechanism. Nothing here shows that weaving a fact into an existing sentence will score as human on another email.
+
+The control scored 4% with facts removed. A score is not a reason to send that draft. The writing rule remains: keep every fact, uncertainty, and qualification, and change placement or phrasing instead. One-fact restoration, as a way to find a candidate sentence, is in the [measurement instructions](measurement.md). The redacted November 11 retailer receipt stays a separate record.

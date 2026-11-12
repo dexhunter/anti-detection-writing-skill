@@ -82,7 +82,7 @@ After that run closed, a separately declared diagnostic scanned both unchanged, 
 
 ## Single-fact restorations on one synthetic complaint
 
-**Preliminary.** November 12, 2026. One synthetic complaint about a faulty kettle, scanned on a free GPTZero account, Model 5.0b, Advanced scan. The texts run 118–139 words. Each text was scanned once. There are no repeats. Mixed and human confidences were not recorded. This section records that batch only. It does not state a success rate for any other email, genre, or detector version.
+**Preliminary.** November 12, 2026. One synthetic complaint about a faulty kettle, scanned on a free GPTZero account, Model 5.0b, Advanced scan. The first five texts run 118–139 words. Each text was scanned once. There are no repeats. Mixed and human confidences were not recorded. The first table records that batch. Later tables in this section are same-day passes under the same limits. None of them states a success rate for any other email, genre, or detector version.
 
 The control is a base-model-written email with only deletions. It is not a fact-complete draft. Each other row adds one fact back to that control and changes nothing else.
 
@@ -91,12 +91,12 @@ The control is a base-model-written email with only deletions. It is not a fact-
 | Control | None | 4% | None recorded |
 | Date sentence, directly after the salutation | Please note the order date was 28 October 2026 and the delivery date was 31 October 2026. | 100% | Possible AI Paraphrasing |
 | Bare name, after Yours sincerely | Helen Cartwright. | 100% | Possible AI Paraphrasing |
-| Fault sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
+| Fault qualifiers sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
 | Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
 
-**Observed.** The control scored 4% AI. The date sentence and the bare name each scored 100% AI and were flagged Possible AI Paraphrasing. The fault sentence scored 21% AI. The refund sentence scored 1% AI. The fault and refund rows are also sentences added on their own, so these five scans do not show that every added sentence reaches 100%.
+**Observed.** The control scored 4% AI. The date sentence and the bare name each scored 100% AI and were flagged Possible AI Paraphrasing. The fault qualifiers sentence scored 21% AI. The refund sentence scored 1% AI. Those two rows are also sentences added on their own, so these five scans do not show that every added sentence reaches 100%.
 
-Earlier observations on this same synthetic email sit outside the table. The raw base-model text passed as human. Versions with all facts restored scored 100% AI. The stage 4 deletions-only control also scored 4% on a Basic scan. That Basic result matches this Advanced control, so the scan level does not account for the control's 4%. Those earlier passes were not repeated in this Advanced batch, and the full-restoration scans are not given a mode here.
+Earlier observations on this same synthetic email sit outside the table. The raw base-model text passed as human. Versions with all facts restored scored 100% AI. The same deletions-only control also scored 4% on an earlier Basic scan. That Basic result matches this Advanced control, so the scan level does not account for the control's 4%. Those earlier passes were not repeated in this Advanced batch, and the full-restoration scans are not given a mode here.
 
 Two later passes on the same day use the same preliminary limits: one synthetic kettle email, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. Mixed and human confidences were not recorded. A "paraphrasing flag" below is the Possible AI Paraphrasing label. A bare "flag" means a flag was reported and the UI string was not quoted again. Quoted labels are copied as given.
 

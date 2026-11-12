@@ -52,7 +52,7 @@ Use this when the user has asked for a diagnostic scan of a short email that kee
 
 Check a bolted-on recap or date sentence, and the sign-off or signature block, before rewriting the rest of a flagged draft.
 
-For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, that name alone scored 100% AI and can confound every other change in the experiment.
+For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, every row that included Helen scored 100% AI, including rows that also folded the other facts, so those rows do not separate the name from the other change.
 
 **Preliminary.** The scans below are the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. The first five texts run 118–139 words. Later rows do not have a separate word count. The tables are repeated here so the procedure and that run stay together.
 
@@ -61,10 +61,10 @@ For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwri
 | Control | None | 4% | None recorded |
 | Date sentence, directly after the salutation | Please note the order date was 28 October 2026 and the delivery date was 31 October 2026. | 100% | Possible AI Paraphrasing |
 | Bare name, after Yours sincerely | Helen Cartwright. | 100% | Possible AI Paraphrasing |
-| Fault sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
+| Fault qualifiers sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
 | Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
 
-On this email, the date sentence and the bare name are the two arms at 100%. The fault sentence (21%) and the refund sentence (1%) were also added as their own sentences, so an added sentence is not itself the observation. Earlier context, outside this Advanced batch: the raw base-model text passed as human; versions with all facts restored scored 100% AI; this deletions-only control also scored 4% on a Basic scan, so the scan level does not account for the 4%.
+On this email, the date sentence and the bare name are the two arms at 100%. The fault qualifiers sentence (21%) and the refund sentence (1%) were also added as their own sentences, so an added sentence is not itself the observation. Earlier context, outside this Advanced batch: the raw base-model text passed as human; versions with all facts restored scored 100% AI; this deletions-only control also scored 4% on a Basic scan, so the scan level does not account for the 4%.
 
 **Stage 7, same preliminary limits.** The first four rows each change only the 4% control. The last two restore dates, fault, and refund together, each with one name form. A paraphrasing flag is the Possible AI Paraphrasing label. A bare flag means a flag was reported and the UI string was not quoted again.
 

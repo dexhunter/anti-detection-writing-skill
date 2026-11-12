@@ -79,3 +79,62 @@ A separate follow-up on the same date checked all 23 additional entries against 
 A [bounded pilot](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/gepa-pilot-1) ran the pinned upstream GEPA optimizer with separate reflection, writing, quality-review and Chrome callbacks. It proposed two reusable changes to the writing section on one exposed HTTP case. Both outputs preserved all seven claims, but separate masked reviewers slightly preferred the incumbent. GEPA rejected both under the frozen no-preference-loss rule and kept its seed; the rejection utilities were not detector scores.
 
 After that run closed, a separately declared diagnostic scanned both unchanged, factually acceptable outputs while retaining their preference losses. The shared seed and both candidates all scored 100% AI / 0% mixed / 0% human in GPTZero Basic 4.9b, without short-text warnings. These three prose-only scans used 377 free word credits; the baseline receipt was reused for comparison, not counted as another scan. Both proposals, the adaptive change of scan criteria, a discarded exposed writer, and a dispatch-wording difference are retained. No policy was promoted and two confirmation cases stayed sealed. This trial demonstrates no detector-score improvement or general impossibility.
+
+## Single-fact restorations on one synthetic complaint
+
+**Preliminary.** November 12, 2026. The first table is one synthetic complaint about a faulty kettle, on a free GPTZero account, Model 5.0b, Advanced scan. The first five texts run 118–139 words. Each of those five was scanned once. Mixed and human confidences were not recorded. Stages 7 and 8 stay on that email, model, and Advanced mode, one scan per text. Stage 9 is a Basic batch: one rescan of the Sue Hall text, plus three other emails. None of this is a success rate for another email, genre, or detector version.
+
+The control is a base-model-written email with only deletions. It is not a fact-complete draft. Each other row adds one fact back to that control and changes nothing else.
+
+| Variant | Added to the deletions-only control | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Control | None | 4% | None recorded |
+| Date sentence, directly after the salutation | Please note the order date was 28 October 2026 and the delivery date was 31 October 2026. | 100% | Possible AI Paraphrasing |
+| Bare name, after Yours sincerely | Helen Cartwright. | 100% | Possible AI Paraphrasing |
+| Fault qualifiers sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
+| Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
+
+**Observed.** The control scored 4% AI. The date sentence and the bare name each scored 100% AI and were flagged Possible AI Paraphrasing. The fault qualifiers sentence scored 21% AI. The refund sentence scored 1% AI. Those two rows are also sentences added on their own, so these five scans do not show that every added sentence reaches 100%.
+
+Earlier observations on this same synthetic email sit outside the table. The raw base-model text passed as human. Versions with all facts restored scored 100% AI. The same deletions-only control also scored 4% on an earlier Basic scan. That Basic result matches this Advanced control, so the scan level does not account for the control's 4%. Those earlier passes were not repeated in this Advanced batch, and the full-restoration scans are not given a mode here.
+
+Two later passes on the same day use the same preliminary limits: one synthetic kettle email, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. Mixed and human confidences were not recorded. A "paraphrasing flag" below is the Possible AI Paraphrasing label. A bare "flag" means a flag was reported and the UI string was not quoted again. Quoted labels are copied as given.
+
+**Stage 7.** Each of the first four rows is one change to the 4% control. The last two rows restore the dates, the fault, and the refund together, each with one of the two name forms.
+
+| Variant | Change | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Dates folded into the existing first sentence | on 31 October 2026, which I ordered on 28 October 2026 | 31% | None recorded |
+| Dates folded into the existing order-number sentence | via your website on 28 October 2026, and it was delivered on 31 October 2026 | 17% | None recorded |
+| Sign-off | Ms Helen Cartwright | 100% | Paraphrasing flag |
+| First sentence, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+| All facts: dates folded, fault and refund folded, sign-off name | Ms Helen Cartwright | 100% | Flag |
+| All facts: dates folded, fault and refund folded, body name, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+
+The date fold inside those two all-facts rows was not quoted separately from "dates folded."
+
+**Stage 8.** All facts are present. The dates sit in the order-number sentence. The fault and refund facts are folded in. Only the sign-off changes.
+
+| Sign-off | AI | Flag recorded |
+| --- | ---: | --- |
+| No name | 52% | uncertain |
+| Sue Hall | 13% | highly confident ... entirely human |
+| Helen | 100% | Flag |
+| Helen Cartwright | 100% | Flag |
+
+**Observed on the kettle email.** Folding the dates into an existing sentence did not reproduce the standalone date sentence's 100% result on this email: the first-sentence fold scored 31% AI, and the order-number fold scored 17% AI. The persona name Helen scored 100% AI as a first name alone in the sign-off (Helen), as a full name in the sign-off (Helen Cartwright, Ms Helen Cartwright, and the earlier bare Helen Cartwright.), and as a full name in the first sentence (My name is Helen Cartwright and ..., with no sign-off name). The two all-facts rows that used those name forms also scored 100% AI. On the stage 8 fact-complete body, Sue Hall scored 13% AI and no name scored 52% AI. First name alone in the body was not scanned. A displayed label is not a finding about who wrote the text. These rows say what removed two triggers on this email. They do not say that the same placement passes a detector.
+
+**Hypothesis, not a result.** These scans do not show why Helen moves the score. One hypothesis is that GPTZero treats stock LLM-style persona names as an AI signal. An interaction with the formal-letter genre remains a separate hypothesis. The body-only Helen Cartwright row also scored 100%, and the Sue Hall sign-off scored 13% on the fact-complete draft, so these rows do not isolate the sign-off block or the letter genre. Neither hypothesis was tested beyond the names in the tables.
+
+**Stage 9.** A different mode, still 12 November 2026, free-plan GPTZero Model 5.0b. Basic scans of uploaded .txt files, one scan per text. The Sue Hall row is a rescan of the stage 8 text. The other three emails use the same recipe and were not scanned before: deletion-only base-model text, facts folded into existing sentences, no standalone recap sentence, and a plain sender name. Those three texts are 112–133 words.
+
+| Text | AI | Label recorded |
+| --- | ---: | --- |
+| Sue Hall kettle email, rescan of the stage 8 text | 13% | highly confident ... entirely human |
+| Return request, signed Kate Ward | 100% | Possible AI Paraphrasing |
+| Damaged lamp, signed Ann Price | 100% | Possible AI Paraphrasing |
+| Faulty blender, signed Ian Brooks | 100% | highly confident this text was AI generated |
+
+**Observed.** The Basic rescan matched the Advanced Sue Hall result on this one text: 13% AI and the same quoted label. The return, the lamp, and the blender each scored 100% AI. The return and the lamp carried Possible AI Paraphrasing. The blender carried the separate label quoted above. Date folding and a plain sender name removed specific triggers on the kettle email. The same recipe scored 100% AI on these three other emails. The low score holds for one email.
+
+The control scored 4% with facts removed. A score is not a reason to send that draft, or to replace a real sender's name. The sender's own name is a fact. The writing rule remains: keep every fact, uncertainty, and qualification, and change placement or phrasing instead. Date folding and avoiding a stock persona name are notes about two triggers on the kettle email. They are not a way to pass GPTZero. One-fact restoration is in the [measurement instructions](measurement.md). The redacted November 11 retailer receipt stays a separate record.

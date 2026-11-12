@@ -101,7 +101,7 @@ The date fold inside those two all-facts rows was not quoted separately from "da
 | Damaged lamp, signed Ann Price | 100% | Possible AI Paraphrasing |
 | Faulty blender, signed Ian Brooks | 100% | highly confident this text was AI generated |
 
-**Observed.** The Basic rescan matched the Advanced Sue Hall result for this text: 13% AI and the same quoted label. The return, the lamp, and the blender each scored 100% AI. The low score holds for the kettle email. The same recipe did not produce it on the other three.
+**Observed.** The Basic rescan matched the Advanced Sue Hall result for this text: 13% AI and the same quoted label. The return, the lamp, and the blender each scored 100% AI. The return and the lamp carried Possible AI Paraphrasing. The blender carried the label quoted above. The low score holds for the kettle email. The same recipe did not produce it on the other three.
 
 ## Retesting a skill revision
 

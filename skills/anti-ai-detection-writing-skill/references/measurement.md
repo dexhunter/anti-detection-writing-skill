@@ -48,11 +48,13 @@ Use this when the user has asked for a diagnostic scan of a short email that kee
 2. Each variant restores exactly one fact to the control, in one sentence or one signature line, and changes nothing else.
 3. Scan the control and each variant once, on the same service, mode, and displayed model. Record the AI result and any flag the UI shows. Do not repeat a text to chase a different number.
 4. Compare each variant with the control. A large jump marks that added sentence or line as the first candidate trigger. A smaller move stays in the record. The mark locates the sentence. It does not explain the model.
-5. In the email you return, work that fact into a sentence that is already there. Do not leave it as a standalone "Please note..." sentence or a reminder sentence that only lists facts. Do not drop the fact.
+5. In the email you return, work that fact into a sentence that is already there. Do not leave it as a standalone "Please note..." sentence or a reminder sentence that only lists facts. Do not drop the fact. A real sender's name is one of those facts: never replace it with a different name to lower a score.
 
 Check a bolted-on recap or date sentence, and the sign-off or signature block, before rewriting the rest of a flagged draft.
 
-**Preliminary. The only run of this procedure** is the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, 118–139 words. The same table is repeated here so the procedure and that run stay together.
+For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, that name alone scored 100% AI and can confound every other change in the experiment.
+
+**Preliminary.** The scans below are the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. The first five texts run 118–139 words. Later rows do not have a separate word count. The tables are repeated here so the procedure and that run stay together.
 
 | Variant | Added to the deletions-only control | AI | Flag recorded |
 | --- | --- | ---: | --- |
@@ -62,7 +64,33 @@ Check a bolted-on recap or date sentence, and the sign-off or signature block, b
 | Fault sentence | The handle came loose during ordinary use the first time the kettle was boiled. | 21% | None recorded |
 | Refund sentence | Under the Act I have the right to a full refund to the original debit card, so £34.99, within 14 days. | 1% | None recorded |
 
-On this email, the date sentence and the bare name are the two arms at 100%. The fault sentence (21%) and the refund sentence (1%) were also added as their own sentences, so an added sentence is not itself the observation. Earlier context, outside this Advanced batch: the raw base-model text passed as human; versions with all facts restored scored 100% AI; this deletions-only control also scored 4% on a Basic scan, so the scan level does not account for the 4%. Why the bare name moves the score is unknown. A formal-letter interaction is a hypothesis, not a finding. Do not send the control.
+On this email, the date sentence and the bare name are the two arms at 100%. The fault sentence (21%) and the refund sentence (1%) were also added as their own sentences, so an added sentence is not itself the observation. Earlier context, outside this Advanced batch: the raw base-model text passed as human; versions with all facts restored scored 100% AI; this deletions-only control also scored 4% on a Basic scan, so the scan level does not account for the 4%.
+
+**Stage 7, same preliminary limits.** The first four rows each change only the 4% control. The last two restore dates, fault, and refund together, each with one name form. A paraphrasing flag is the Possible AI Paraphrasing label. A bare flag means a flag was reported and the UI string was not quoted again.
+
+| Variant | Change | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Dates folded into the existing first sentence | on 31 October 2026, which I ordered on 28 October 2026 | 31% | None recorded |
+| Dates folded into the existing order-number sentence | via your website on 28 October 2026, and it was delivered on 31 October 2026 | 17% | None recorded |
+| Sign-off | Ms Helen Cartwright | 100% | Paraphrasing flag |
+| First sentence, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+| All facts: dates folded, fault and refund folded, sign-off name | Ms Helen Cartwright | 100% | Flag |
+| All facts: dates folded, fault and refund folded, body name, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+
+The date fold inside those two all-facts rows was not quoted separately from "dates folded."
+
+**Stage 8.** All facts are present, the dates sit in the order-number sentence, and the fault and refund facts are folded in. Only the sign-off changes.
+
+| Sign-off | AI | Flag recorded |
+| --- | ---: | --- |
+| No name | 52% | uncertain |
+| Sue Hall | 13% | highly confident ... entirely human |
+| Helen | 100% | Flag |
+| Helen Cartwright | 100% | Flag |
+
+**Observed in this test.** Folding the dates into an existing sentence did not reproduce the standalone date sentence's 100% result. Helen, as a first name or a full name in the sign-off, and as a full name in the first sentence, scored 100% AI. Sue Hall, on the fact-complete draft, scored 13% AI. First name alone in the body was not scanned. A displayed label is not a finding about authorship.
+
+**Hypothesis, not a result.** GPTZero may treat stock LLM-style persona names as an AI signal. A formal-letter interaction is a separate hypothesis. The body-only full name also scored 100%, and Sue Hall in the sign-off scored 13%, so these rows do not isolate the sign-off or the letter genre. Do not send the control, and do not change a real sender's name to chase the Sue Hall result.
 
 ## Retesting a skill revision
 

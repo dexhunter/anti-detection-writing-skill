@@ -98,6 +98,32 @@ The control is a base-model-written email with only deletions. It is not a fact-
 
 Earlier observations on this same synthetic email sit outside the table. The raw base-model text passed as human. Versions with all facts restored scored 100% AI. The stage 4 deletions-only control also scored 4% on a Basic scan. That Basic result matches this Advanced control, so the scan level does not account for the control's 4%. Those earlier passes were not repeated in this Advanced batch, and the full-restoration scans are not given a mode here.
 
-**Hypothesis, not a result.** This batch does not show why the bare name line moves the score. An interaction with the formal-letter genre is a hypothesis. The flag Possible AI Paraphrasing is the label the UI displayed. It is not an account of the mechanism. Nothing here shows that weaving a fact into an existing sentence will score as human on another email.
+Two later passes on the same day use the same preliminary limits: one synthetic kettle email, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. Mixed and human confidences were not recorded. A "paraphrasing flag" below is the Possible AI Paraphrasing label. A bare "flag" means a flag was reported and the UI string was not quoted again. Quoted labels are copied as given.
 
-The control scored 4% with facts removed. A score is not a reason to send that draft. The writing rule remains: keep every fact, uncertainty, and qualification, and change placement or phrasing instead. One-fact restoration, as a way to find a candidate sentence, is in the [measurement instructions](measurement.md). The redacted November 11 retailer receipt stays a separate record.
+**Stage 7.** Each of the first four rows is one change to the 4% control. The last two rows restore the dates, the fault, and the refund together, each with one of the two name forms.
+
+| Variant | Change | AI | Flag recorded |
+| --- | --- | ---: | --- |
+| Dates folded into the existing first sentence | on 31 October 2026, which I ordered on 28 October 2026 | 31% | None recorded |
+| Dates folded into the existing order-number sentence | via your website on 28 October 2026, and it was delivered on 31 October 2026 | 17% | None recorded |
+| Sign-off | Ms Helen Cartwright | 100% | Paraphrasing flag |
+| First sentence, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+| All facts: dates folded, fault and refund folded, sign-off name | Ms Helen Cartwright | 100% | Flag |
+| All facts: dates folded, fault and refund folded, body name, no sign-off name | My name is Helen Cartwright and ... | 100% | Flag |
+
+The date fold inside those two all-facts rows was not quoted separately from "dates folded."
+
+**Stage 8.** All facts are present. The dates sit in the order-number sentence. The fault and refund facts are folded in. Only the sign-off changes.
+
+| Sign-off | AI | Flag recorded |
+| --- | ---: | --- |
+| No name | 52% | uncertain |
+| Sue Hall | 13% | highly confident ... entirely human |
+| Helen | 100% | Flag |
+| Helen Cartwright | 100% | Flag |
+
+**Observed in this test.** Folding the dates into an existing sentence did not reproduce the standalone date sentence's 100% result: the first-sentence fold scored 31% AI, and the order-number fold scored 17% AI. The persona name Helen scored 100% AI as a first name alone in the sign-off (Helen), as a full name in the sign-off (Helen Cartwright, Ms Helen Cartwright, and the earlier bare Helen Cartwright.), and as a full name in the first sentence (My name is Helen Cartwright and ..., with no sign-off name). The two all-facts rows that used those name forms also scored 100% AI. On the stage 8 fact-complete body, Sue Hall scored 13% AI and no name scored 52% AI. First name alone in the body was not scanned. A displayed label is not a finding about who wrote the text.
+
+**Hypothesis, not a result.** These scans do not show why Helen moves the score. One hypothesis is that GPTZero treats stock LLM-style persona names as an AI signal. An interaction with the formal-letter genre remains a separate hypothesis. The body-only Helen Cartwright row also scored 100%, and the Sue Hall sign-off scored 13% on the fact-complete draft, so these rows do not isolate the sign-off block or the letter genre. Neither hypothesis was tested beyond the names in the tables.
+
+The control scored 4% with facts removed. A score is not a reason to send that draft, or to replace a real sender's name. The sender's own name is a fact. The writing rule remains: keep every fact, uncertainty, and qualification, and change placement or phrasing instead. One-fact restoration, and the limit on stock persona names in a synthetic probe, are in the [measurement instructions](measurement.md). The redacted November 11 retailer receipt stays a separate record.

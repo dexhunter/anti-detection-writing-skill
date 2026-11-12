@@ -52,7 +52,7 @@ Use this when the user has asked for a diagnostic scan of a short email that kee
 
 Check a bolted-on recap or date sentence, and the sign-off or signature block, before rewriting the rest of a flagged draft.
 
-For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, every row that included Helen scored 100% AI, including rows that also folded the other facts, so those rows do not separate the name from the other change.
+For a synthetic probe, do not use a stock LLM persona name such as Helen Cartwright. On the only email below, every row that included Helen scored 100% AI. The date folds that left that name out scored 31% and 17%, so a probe that puts this name in every arm cannot tell the name apart from the edit being tested.
 
 **Preliminary.** The scans below are the November 12, 2026 batch in [evidence limits](evidence.md): one synthetic kettle complaint, free-plan GPTZero Model 5.0b, Advanced scans, one scan per text, no repeats. The first five texts run 118–139 words. Later rows do not have a separate word count. The tables are repeated here so the procedure and that run stay together.
 

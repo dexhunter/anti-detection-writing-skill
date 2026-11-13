@@ -40,6 +40,14 @@ Before claiming that an approach works beyond its development cases, freeze the 
 
 When an isolated decrease drives the next experiment, a bounded repeat of the exact fixed inputs can check an unresolved measurement assumption before another rewrite. Freeze the repeated inputs, order and complete pair budget before scanning, and retain earlier and new observations separately. Matching scores do not distinguish deterministic scoring from caching, establish a success rate, or validate a new skill. Repeating an edit without its original does not repeat the original-to-edit comparison.
 
+## Change one thing from a human-scoring text
+
+Use this when a known human-scoring version of the same email already exists and the user has asked for a scan. Start from that version. Change one thing, run `scripts/check_facts.py` on the fact-complete source and the candidate, and scan only if every extracted number, date, price, order ID, and capitalised name is still there. Do not run a whole-text polish or rewrite over fact-dense text. The checker does not judge a detector score.
+
+On 13 November 2026 this procedure was the Stage 16 ladder: free-plan GPTZero Model 5.0b, one synthetic pot complaint, one scan per text. A bracketed parenthetical scored 100% AI. A photos fact folded into the middle of an existing sentence scored 7% AI. The same fact on the first sentence, or as its own final sentence, scored 100% AI. Twelve whole-text versions scored 100% AI, and a rescan of the earlier human-scoring control stayed at 3% AI. The [Stage 16 report](../../../docs/reports/stage-16-pot-handle.md) keeps those rows apart from the placement hypothesis. They are not a way to pass GPTZero.
+
+Every session also scans a known-human control and a known-AI control on the same service, mode, and displayed model. Log the model version, the scan mode, the word count, and the credits. A planned noise rescan, stated before scanning, is a proposed experiment. Repeating a text after seeing the score, to chase a different number, is not.
+
 ## Restore one fact at a time
 
 Use this when the user has asked for a diagnostic scan of a short email that keeps every fact and scores as AI. A deletions-only control, plus variants that each add one fact back, locates a candidate trigger sentence. The deletions-only text is a measurement arm. The email you return still contains every fact, uncertainty, and qualification.

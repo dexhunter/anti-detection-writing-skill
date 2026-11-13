@@ -4,6 +4,10 @@ The [GEPA pilot](../studies/gepa-pilot-1/README.md) tested two prompt revisions 
 
 The skill aims to improve readability and reduce detector scores. Those outcomes can differ. This page records cases that do not qualify for the [score-reduction showcase](case-studies.md), with practical guidance for deciding what to do next. Historical measurements used GPTZero Basic Scan, Model 4.9b; all primary results remain in the [dataset](../studies/results.json).
 
+## A full rewrite of a fact-dense email stayed at 100%
+
+On 13 November 2026, free-plan GPTZero Model 5.0b scored a synthetic pot-handle complaint and 11 fresh rewrites at 100% AI. A rescan of a previously human-scoring email stayed at 3% AI. The [Stage 16 report](reports/stage-16-pot-handle.md) keeps the ladder and the combination scores separate from the hypotheses. The lowest fact-complete text in that batch was 7% AI on one email. That is not a method for passing GPTZero, and it is not a reason to remove a fact.
+
 ## Clearer prose can receive the same score
 
 All 15 baseline-to-plain-rewrite comparisons stayed at 100% AI confidence. Separate LLM reviewers rated eight revisions improved and seven equivalent, with all passing technical review. These results support some readability improvements, but no detector benefit from plain rewriting in this sample.

@@ -1,6 +1,6 @@
 # GPTZero experiment results
 
-This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, and Stages 1–15. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times are in Europe/London. The last scan in the log is 13 Nov 2026, about 03:56 Europe/London.
+This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, and Stages 1–15. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times are in Europe/London. The last scan in this log is 13 Nov 2026, about 03:56 Europe/London. Stage 16, later the same day, is a separate note: [stage-16-pot-handle.md](stage-16-pot-handle.md). Those scans are not among the 114 rows below.
 
 Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (114 scans; accounts redacted; no source-text bodies, no document URLs, no credentials).
 

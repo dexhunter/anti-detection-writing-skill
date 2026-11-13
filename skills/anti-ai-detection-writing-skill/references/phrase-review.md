@@ -6,6 +6,8 @@ Use this list to find wording that may deserve an edit. Prioritize generic openi
 
 The initial ten entries are short excerpts from [GPTZero's October 7, 2024 article](https://gptzero.me/news/most-common-ai-vocabulary/), checked September 9, 2026. Its reported frequency differences describe associations in its data, not the probability that a particular passage has a given author. The linked [vocabulary FAQ](https://gptzero.me/ai-vocabulary) says changing flagged wording may or may not change the detector score. These dated lists do not establish the features or weights used by Basic Scan Model 4.9b. The editing suggestions here are our own contextual guidance.
 
+**[evidence]** Checked 13 November 2026. This list is a reading aid. It is not a detector lever. Synonym substitution barely moved the trained classifiers in [Attacking Only Half the Data](https://arxiv.org/html/2610.18151v1), and [GPTZero's release notes](https://gptzero.me/news/ai-detection-model-api-updates) say Model 3.14b increased robustness against word swapping. That sentence is a vendor claim. Invisible characters are stripped by ordinary cleanup and remain forbidden. Do not swap a listed word, or insert an invisible character, to seek a lower score. Use a plainer word when the sentence is easier to read that way. The [literature update](../../../docs/literature-update-2026-11-13.md) records what does and does not transfer to Model 5.0b. Stage 16 did not test a synonym swap.
+
 ## Initial GPTZero list
 
 | Expression to review | Edit when useful; preserve when necessary |

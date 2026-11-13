@@ -29,6 +29,7 @@ For a requested measurement, add:
 - [`anti-ai-detection-writing-skill`](skills/anti-ai-detection-writing-skill/SKILL.md): identify the reader and purpose, preserve claims, improve flow and wording, review, and measure detector results when requested.
 - A [showcase of measured reductions](docs/case-studies.md), a separate [limitations guide](docs/when-it-may-not-help.md), and [44 exact editor inputs](studies/results.json) with the full results.
 - An optional local receipt checker for new scans. It checks saved evidence consistency, not human authorship or the authenticity of a detector service.
+- An optional fact checker, `scripts/check_facts.py` inside the skill. It compares numbers, dates, prices, order IDs, and capitalised names before a scan. It does not judge a detector score.
 - An optional [local detector diagnostic](skills/anti-ai-detection-writing-skill/references/local-detector.md) with pinned model verification and full-text checks. Its scores are not a validated substitute for GPTZero or Pangram. A separate [literature review and small-model proxy](docs/detector-literature-and-proxy.md) checks cheaper offline scores against the archived GPTZero results. The strongest Spearman correlation in that run is 0.131, so the scores are not a way to choose a scan.
 
 The editing workflow draws on [other writing skills](docs/related-skills.md): put prerequisites and exceptions beside the claims they qualify, then reconcile the finished text against its original facts. The [unseen-question trial](studies/unseen-transfer-1/README.md) reports readability review separately. Its 12 completed measurements all scored 100% AI / 0% mixed / 0% human, giving six tied pairs; this completes the older frozen comparison, not a test of later literature-informed instructions.
@@ -68,6 +69,8 @@ Reports and guides in this repository. Results are experimental; none of these d
 ### Reports
 
 - [GPTZero experiment results](docs/reports/gptzero-results.md): every logged Model 5.0b scan from the 2026 calibration batch, Wood to Water tests, and Stages 1–15 (114 scans), with findings kept separate from hypotheses. Companion data: [docs/reports/data/gptzero-scans.csv](docs/reports/data/gptzero-scans.csv).
+- [Stage 16 pot-handle scans](docs/reports/stage-16-pot-handle.md): one free-plan Model 5.0b session on 13 November 2026. Whole-text rewrites scored 100% AI. The lowest fact-complete text was 7% AI on one email. Not in the 114-row CSV, and not a way to pass GPTZero.
+- [Literature update, 13 November 2026](docs/literature-update-2026-11-13.md): papers and GPTZero release notes opened that day, and what does and does not transfer to Model 5.0b on a short email. Vendor notes are labelled as vendor claims.
 - [Hugging Face humanizer survey](docs/reports/huggingface-humanizer-survey.md): a desk survey of model cards. None of these models were run by us.
 - [Showcase: measured score reductions](docs/case-studies.md): earlier maintainer-observed Basic Scan, Model 4.9b quotation comparisons.
 - [When the skill may not help](docs/when-it-may-not-help.md): unchanged scores, rejected edits, and untested formats.

@@ -94,6 +94,26 @@ class SkillContract(unittest.TestCase):
         self.assertIn("If it is a private retailer or customer-service email", prompt)
         self.assertIn("only if I explicitly ask", prompt)
         self.assertNotIn("measure detector-score changes", prompt)
+        self.assertIn("scripts/check_facts.py", prompt)
+        self.assertIn("change as little as possible", prompt)
+
+    def test_stage_16_rules_stay_labelled_and_do_not_promise_a_bypass(self):
+        text = SKILL.read_text(encoding="utf-8")
+        _, _, rest = text.partition("## Private retailer and customer-service email\n")
+        email, _, _ = rest.partition("\n## ")
+        self.assertIn("**[evidence + our scans]**", email)
+        self.assertIn("**[our scans; mechanism hypothesis]**", email)
+        self.assertIn("**[hypothesis]** Prefer plain first person", email)
+        self.assertIn("scripts/check_facts.py", email)
+        self.assertIn("not a way to pass GPTZero", email)
+        self.assertNotIn("reliably defeats", email.lower())
+        measure = text.split("## Measure only when requested\n", 1)[1]
+        self.assertIn("known-human control and a known-AI control", measure)
+        self.assertIn("**Proposed experiments**", measure)
+        self.assertIn("An unrun experiment is not a finding.", measure)
+        write = text.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
+        self.assertIn("are not detector levers", write)
+        self.assertNotIn("retailer", write.lower())
 
     def test_only_the_packaged_skill_is_discoverable(self):
         discovered = sorted(ROOT.rglob("SKILL.md"))

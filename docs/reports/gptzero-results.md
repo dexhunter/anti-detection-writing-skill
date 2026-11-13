@@ -88,7 +88,7 @@ These are recorded as hypotheses, not as findings.
 
 114 scans. Scan level is normalised to basic, advanced, or unknown. Unknown includes logs with no scan-level field, Stage 1 s1-01 (logged as advanced, with the page later showing basic), Stage 10 (no scanType in the URL; the panel showed Advanced Scan and 0 advanced left), calibration scans (the log notes 0 advanced scans left and sentence highlighting, but has no scan-level column), and Wood to Water original plus v1–v4 (scanned before the free Basic option disappeared).
 
-Account and exact timestamps are in the CSV, not repeated here. Every logged use of the gz1 free plan is labelled “free account A” in that file; where the source log had no account field it says “not logged”. Mixed % is almost always 0 when logged, and is “not logged” for Wood to Water texts that scored 100% AI; v5 mixed was 0.
+Exact timestamps are in the CSV and are not repeated in the table below. The account column is “not logged” on every row. The Stage 15 note's “free account A” is only a redacted label in this report; it is not a value in the CSV. Mixed % is 0 wherever it was logged, and is “not logged” for the ten Wood to Water texts that scored 100% AI; v5 mixed was 0.
 
 | Stage | Email | File | Edit | AI % | Human % | Level |
 | --- | --- | --- | --- | ---: | ---: | --- |
@@ -210,9 +210,9 @@ Account and exact timestamps are in the CSV, not repeated here. Every logged use
 
 ## What is in the skill
 
-[PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9), titled “Record a preliminary single-fact placement probe”, was merged on 12 Nov 2026, 16:29 Europe/London, as commit `4be38604419aadcdccb1f4d947bb255ecbed5c0b`. It covers the Stage 6–9 kettle tests. Status below is as of this report (13 Nov 2026, Europe/London).
+[PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9), titled “Record a preliminary single-fact placement probe”, was merged on 12 Nov 2026, 16:29 Europe/London, as commit `4be38604419aadcdccb1f4d947bb255ecbed5c0b`. It covers the Stage 6–9 kettle tests. The skill also includes a preliminary Stage 10–15 note. Status below is as of this report (13 Nov 2026, Europe/London).
 
-Already in PR #9:
+Already in the skill from PR #9:
 
 - Fold dates and other facts into a sentence already in the draft, rather than adding a standalone “Please note…” or date recap.
 - Check the recap and sign-off lines first when a requested scan flags a draft.
@@ -221,12 +221,17 @@ Already in PR #9:
 - A deletions-only control is a measurement arm, not the message to send.
 - State plainly that date folding and avoiding a stock persona name are not a way to pass GPTZero, and that the 13% score holds for one email.
 
-Not yet in the skill (proposed in the accompanying `skill-patch.md`):
+The preliminary Stage 10–15 note says these probes are not a way to pass GPTZero, and it keeps the rule against inventing a fact:
 
-- Deletion-only edits can flip a human-scoring raw sample to 100% AI (jacket and blender; kettle stayed at 4%). Stages 4 and 10.
-- Facts-in-the-prompt generation produced 0 of 160 fact-complete emails, and additive-only editing passed only on the kettle (22%), not the jacket or blender. Stages 11–12.
-- The blender address-slot results, the jacket non-transfer of the address flip, and that human-leaning blender scores so far have depended on invented details (b5, c1 and c2, with no invented details, scored 100%). Stages 13–15.
-- Wood to Water v5 (3% AI, Advanced, nominalised style) is a single development observation, without making it a rule. Proposed in the batch notes; not part of PR #9.
+- Deleting text from a human-scoring raw draft can flip the score to 100% AI: jacket 18% to 100%, blender 1% to 100%; the kettle deletion-only control stayed at 4%.
+- On the blender raw, deleting an invented address flipped 2% to 100%. Adding the countertop and date, the fault details, and the refund line stayed at 5–10% AI. Those three logged scores are 5%, 9%, and 10%. That address deletion did not flip the jacket raw (29% after deletion, 38% after a fact-neutral replacement).
+- Human-leaning blender scores so far depended on invented details. A fact-complete blender with those details removed scored 100% AI, including two later versions where the base model wrote the replacement wording.
+
+Not in the skill:
+
+- Facts-in-the-prompt generation produced 0 of 160 fact-complete emails, and Stage 11 had no scans. In Stage 12 the only additive-only edit, the kettle, scored 22% AI. The jacket and blender edits in that stage also deleted words and scored 100% AI.
+- The Stage 14 blender address-slot contrast is not stated as its own result. b1, with the order number kept in the address slot, scored 39%. b2, with the address deleted and the order number moved to the greeting, scored 100%.
+- Wood to Water v5 (3% AI, Advanced, nominalised style) is a single development observation, without making it a rule. It is recorded in this report and in the [limitations guide](../when-it-may-not-help.md), not in the skill.
 
 ## Gaps in the logs
 

@@ -43,6 +43,7 @@ Most high-download Hub hits for the query “humanizer” are GGUF redistributio
   - DetectGPT on GPT-2 XL text: 70.3% → 4.6%.
   - GPTZero on GPT-2 XL: 13.9% → 1.2%; on OPT-13B: 8.7% → 1.0%; on GPT-3.5 davinci-003: 7.1% → 1.8%.
   - Watermarking was more resilient (GPT-2 XL: 100.0% → 57.2% at the same setting).
+
   These figures are for 2023 detectors and 2023 models. They are not measurements of GPTZero Model 5.0b, and this survey did not re-run them.
 - **Independently backed?** Yes, as a published paper (Krishna et al., 2023) with open models, code and data. That is independent of this skill’s scans. It is not a contemporary evaluation of GPTZero 5.0b, and it is not evidence that DIPPER would score well on our emails today.
 

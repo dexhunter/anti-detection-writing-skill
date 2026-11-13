@@ -61,6 +61,57 @@ See the [full showcase](docs/case-studies.md) for exact inputs, all three confid
 
 Plain rewriting did not reduce scores in the 15-question development sample, even where separate LLM review found clearer prose. Five of ten quotation comparisons also stayed unchanged. Short technical replies, unsupported factual changes, and formats without paired measurements need particular care. The [limitations guide](docs/when-it-may-not-help.md) provides concrete cases and next steps; the [methodology](docs/methodology.md) and complete dataset retain every result.
 
+## Documentation / Reports index
+
+Reports and guides in this repository. Results are experimental; none of these documents is a method for passing a detector.
+
+### Reports
+
+- [GPTZero experiment results](docs/reports/gptzero-results.md): every logged Model 5.0b scan from the 2026 calibration batch, Wood to Water tests, and Stages 1–15 (114 scans), with findings kept separate from hypotheses. Companion data: [docs/reports/data/gptzero-scans.csv](docs/reports/data/gptzero-scans.csv).
+- [Hugging Face humanizer survey](docs/reports/huggingface-humanizer-survey.md): a desk survey of model cards. None of these models were run by us.
+- [Showcase: measured score reductions](docs/case-studies.md): earlier maintainer-observed Basic Scan, Model 4.9b quotation comparisons.
+- [When the skill may not help](docs/when-it-may-not-help.md): unchanged scores, rejected edits, and untested formats.
+- [Methodology and provenance](docs/methodology.md): how historical results were recorded.
+- [Detector literature and an offline proxy](docs/detector-literature-and-proxy.md): literature notes and a small-model proxy that did not predict GPTZero scores well (strongest Spearman 0.131 in that run).
+- [Skill autoresearch](docs/autoresearch.md) and [autoresearch setup validation](docs/autoresearch-validation.md): the bounded improvement workflow and its checks.
+- [Related writing skills](docs/related-skills.md): other writing skills this workflow draws on.
+- [Experimental release checks](docs/release-checks.md): completed offline release checks.
+- [Complete historical dataset](studies/results.json): 44 exact editor inputs with full results.
+
+### Study reports
+
+Each study has its own README and supporting files under `studies/`.
+
+- [article-model-transfer-1](studies/article-model-transfer-1/README.md) — Full-article model transfer and adaptive recovery
+- [autoresearch-controls-1](studies/autoresearch-controls-1/README.md) — Control-boundary instruction experiment
+- [detector-proxy-1](studies/detector-proxy-1/README.md) — Small offline proxies against archived GPTZero scores
+- [exact-crossover-1](studies/exact-crossover-1/README.md) — Exact crossover between complete drafts
+- [gepa-pilot-1](studies/gepa-pilot-1/README.md) — GEPA pilot: two rejected policies, no detector reduction
+- [hip-feasibility-1](studies/hip-feasibility-1/README.md) — Released HIP model: local feasibility pilot
+- [local-tools-1](studies/local-tools-1/README.md) — Local tools and released-model research
+- [model-assisted-1](studies/model-assisted-1/README.md) — Model-assisted rewriting: a development gain that failed confirmation
+- [open-detector-proxy-1](studies/open-detector-proxy-1/README.md) — Oculus and Greyscope as cheaper research feedback
+- [paired-editing-examples-1](studies/paired-editing-examples-1/README.md) — Paired editing examples: preferred prose, unchanged detector scores
+- [pangram-transfer-1](studies/pangram-transfer-1/README.md) — Checking existing answers with Pangram 4
+- [prospective-proxy-1](studies/prospective-proxy-1/README.md) — Prospective Greyscope selection diagnostic
+- [reader-dialogue-1](studies/reader-dialogue-1/README.md) — Reader dialogue before drafting
+- [reader-reconstruction-1](studies/reader-reconstruction-1/README.md) — Reader reconstruction: one negative development round
+- [register-and-selection-1](studies/register-and-selection-1/README.md) — Two rejected methods and an adaptive diagnostic
+- [repeatability-1](studies/repeatability-1/README.md) — Same-input GPTZero repeatability check
+- [requested-alternatives-1](studies/requested-alternatives-1/README.md) — Requested alternatives: four-case pilot
+- [targeted-edit-1](studies/targeted-edit-1/README.md) — Targeted editing comparison
+- [technical-format-1](studies/technical-format-1/README.md) — Technical formats: a small diagnostic with no score reduction
+- [unseen-transfer-1](studies/unseen-transfer-1/README.md) — Unseen-question comparison
+- [windowed-article-1](studies/windowed-article-1/README.md) — Five-window article rewrite
+- [workflow-retest-1](studies/workflow-retest-1/README.md) — Retesting the updated skill on four failed cases
+- [writing-methods-1](studies/writing-methods-1/README.md) — Writing methods: quality screening and a preservation comparison
+
+### Other repo documents
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — how to share a writing or detector result
+- [LICENSE](LICENSE) and [NOTICE](NOTICE) — MIT licence and third-party notices
+- Skill instructions: [SKILL.md](skills/anti-ai-detection-writing-skill/SKILL.md), with references under [skills/anti-ai-detection-writing-skill/references/](skills/anti-ai-detection-writing-skill/references/)
+
 ## Community
 
 [Start here](https://github.com/dexhunter/anti-detection-writing-skill/discussions/1) for installation and your first example. The [reporting guide](https://github.com/dexhunter/anti-detection-writing-skill/discussions/2) explains how to share a useful writing or detector result.

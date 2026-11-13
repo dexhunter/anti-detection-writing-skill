@@ -1,6 +1,6 @@
 # Detector literature and an offline proxy
 
-Checked November 11, 2026. This note summarises published work on how AI-text detectors score a document, and on attacks those papers actually measured. It then describes an optional local proxy and a plan for training one later. Nothing here is a GPTZero result, a promise that a wording will score as human, or a reason to change a fact.
+Checked November 11, 2026. This note summarises published work on how AI-text detectors score a document, and on attacks those papers actually measured. It then describes an optional local proxy and a plan for training one later. Nothing here is a GPTZero result, a promise that a wording will score as human, or a reason to change a fact. A later note, checked 13 November 2026, is the [literature update](literature-update-2026-11-13.md). It does not replace the proxy evaluation below.
 
 The short-email scans in the last section were reported with this task. Their texts and receipts are not in `studies/`. The archived comparison uses only files already in the repository.
 

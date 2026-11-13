@@ -2,6 +2,8 @@
 
 Verified September 6, 2026. Use these findings to assess an editing hypothesis, not to promise a detector outcome. Refresh dated claims when the service changes.
 
+The [13 November 2026 literature update](../../../docs/literature-update-2026-11-13.md) opens the later papers and the GPTZero release notes. Vendor notes are labelled as vendor claims. The update does not add a way to pass GPTZero. The same-day scans are the [Stage 16 report](../../../docs/reports/stage-16-pot-handle.md).
+
 Later dated sections retain the subsequent research and measurements. The September 8 [technical-format diagnostic](https://github.com/dexhunter/anti-detection-writing-skill/tree/main/studies/technical-format-1) compared one freshly scanned baseline with a reference card and mini-FAQ on the same exposed ETag case. All three passed separate quality review and stayed at 100% AI / 0% mixed / 0% human in Basic 4.9b. The three scans used 394 word credits; there was no local model run or repair loop. This supports reporting a bounded no-gain diagnostic, not a new detector-reduction instruction, a measured cost-efficiency gain, or an impossibility claim.
 
 - GPTZero says it stopped using perplexity and burstiness for detection in autumn 2023. Sentence-length variation and unusual vocabulary are not documented controls for its current score. Historical thresholds farther down that support page are not current instructions. [Official support](https://support.gptzero.me/articles/9585228410-how-do-i-interpret-burstiness-or-perplexity)

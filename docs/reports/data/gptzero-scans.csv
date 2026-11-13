@@ -1,0 +1,115 @@
+row,stage_order,stage,email,file,edit,ai_pct,mixed_pct,human_pct,scan_level,account,date_london,notes
+1,0,Calib,Human control (h13),h13,Verbatim public-domain paragraph (The Thirty-Nine Steps),0,0,100,unknown,not logged,"11 Nov 2026, 17:40 Europe/London",
+2,0,Calib,Human control (h01),h01,Verbatim public-domain paragraph (Letters of Jane Austen),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+3,0,Calib,Human control (h07),h07,Verbatim public-domain paragraph (Letters of a Woman Homesteader),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+4,0,Calib,Blender (e07),e07-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+5,0,Calib,Blender (e07),e07-natural,"Natural rewrite, skill style",100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+6,0,Calib,Blender (e07),e07-nominalised,"Formal, passive, nominalised rewrite",100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+7,0,Calib,Human control (h14),h14,Verbatim public-domain paragraph (My Ántonia),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+8,0,Calib,Human control (h12),h12,Verbatim public-domain paragraph (The Diary of a Nobody),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+9,0,Calib,Kettle (e01),e01-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+10,0,Calib,Kettle (e01),e01-natural,"Natural rewrite, skill style",100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+11,0,Calib,Kettle (e01),e01-nominalised,"Formal, passive, nominalised rewrite",100,0,0,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+12,0,Calib,Human control (h15),h15,Verbatim public-domain paragraph (Ethan Frome),0,0,100,unknown,not logged,"11 Nov 2026, 17:41 Europe/London",
+13,0,Calib,Human control (h10),h10,Verbatim public-domain paragraph (Mark Twain's Letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:41 Europe/London",
+14,0,Calib,Double charge (e03),e03-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:42 Europe/London",
+15,0,Calib,Double charge (e03),e03-natural,"Natural rewrite, skill style",100,0,0,unknown,not logged,"11 Nov 2026, 17:42 Europe/London",
+16,0,Calib,Double charge (e03),e03-nominalised,"Formal, passive, nominalised rewrite",100,0,0,unknown,not logged,"11 Nov 2026, 17:42 Europe/London",
+17,0,Calib,Human control (h08),h08,Verbatim public-domain paragraph (Adams letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:42 Europe/London",
+18,0,Calib,Human control (h09),h09,Verbatim public-domain paragraph (Dickens letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:42 Europe/London",
+19,0,Calib,Lamp (e05),e05-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:43 Europe/London",
+20,0,Calib,Lamp (e05),e05-natural,"Natural rewrite, skill style",100,0,0,unknown,not logged,"11 Nov 2026, 17:43 Europe/London",
+21,0,Calib,Lamp (e05),e05-nominalised,"Formal, passive, nominalised rewrite",100,0,0,unknown,not logged,"11 Nov 2026, 17:43 Europe/London",
+22,0,Calib,Human control (h02),h02,Verbatim public-domain paragraph (Darwin letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+23,0,Calib,Human control (h04),h04,Verbatim public-domain paragraph (Vailima Letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+24,0,Calib,Missing delivery (e08),e08-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+25,0,Calib,Missing delivery (e08),e08-natural,"Natural rewrite, skill style",100,0,0,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+26,0,Calib,Missing delivery (e08),e08-nominalised,"Formal, passive, nominalised rewrite",100,0,0,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+27,0,Calib,Human control (h03),h03,Verbatim public-domain paragraph (Keats letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:44 Europe/London",
+28,0,Calib,Human control (h05),h05,Verbatim public-domain paragraph (Lincoln papers),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+29,0,Calib,Human control (h06),h06,Verbatim public-domain paragraph (Chesterfield letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+30,0,Calib,Human control (h11),h11,Verbatim public-domain paragraph (Lady Mary Wortley Montagu letters),0,0,100,unknown,not logged,"11 Nov 2026, 17:45 Europe/London",
+31,0,Calib,Boots not received (e02),e02-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:46 Europe/London",
+32,0,Calib,Jacket (e04),e04-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:46 Europe/London",
+33,0,Calib,Charge after cancellation (e06),e06-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:46 Europe/London",
+34,0,Calib,Pre-sale price (e09),e09-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:46 Europe/London",
+35,0,Calib,Wrong colour (e10),e10-baseline,Plain AI draft (synthetic baseline),100,0,0,unknown,not logged,"11 Nov 2026, 17:46 Europe/London",
+36,1,Wood to Water,Wood to Water chaser,original,Real chaser as written,100,not logged,not logged,unknown,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+37,1,Wood to Water,Wood to Water chaser,v1,Casual-polite rewrite,100,not logged,not logged,unknown,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+38,1,Wood to Water,Wood to Water chaser,v2,Recap rewrite,100,not logged,not logged,unknown,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+39,1,Wood to Water,Wood to Water chaser,v3,Me again rewrite,100,not logged,not logged,unknown,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+40,1,Wood to Water,Wood to Water chaser,v4,Choppy fragments rewrite,100,not logged,not logged,unknown,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+41,1,Wood to Water,Wood to Water chaser,v5,"Formal, passive, nominalised rewrite",3,0,97,advanced,not logged,11 Nov 2026 (time not logged),Advanced. Source text withheld (real retailer contact).
+42,1,Wood to Water,Wood to Water chaser,v6,One long run-on paragraph,100,not logged,not logged,advanced,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+43,1,Wood to Water,Wood to Water chaser,v7,Problem-first order,100,not logged,not logged,advanced,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+44,1,Wood to Water,Wood to Water chaser,v8,Annoyed-customer register,100,not logged,not logged,advanced,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+45,1,Wood to Water,Wood to Water chaser,v9,Labelled reference block between short paragraphs,100,not logged,not logged,advanced,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+46,1,Wood to Water,Wood to Water chaser,v10,Fragments mixed with a terse recap line,100,not logged,not logged,advanced,not logged,11 Nov 2026 (time not logged),Source text withheld (real retailer contact). Mixed/human % not logged for 100% AI texts.
+47,2,Stage 1,Late courier (s1-01),s1-01,Unedited raw OLMo-2-7B base email,0,0,100,unknown,not logged,"11 Nov 2026, 22:40 Europe/London",Logged advanced; page later showed basic
+48,2,Stage 1,Zoom account (s1-02),s1-02,Unedited raw OLMo-2-7B base email,0,0,100,advanced,not logged,"11 Nov 2026, 22:40 Europe/London",
+49,2,Stage 1,Helicopter (s1-03),s1-03,Unedited raw OLMo-2-7B base email,0,0,100,advanced,not logged,"11 Nov 2026, 22:40 Europe/London",
+50,3,Stage 2,Kettle (e01),e01-halo,Stitched HALO-lite candidate (fact-passing),100,0,0,unknown,not logged,not logged,
+51,3,Stage 2,Jacket (e04),e04-halo,Stitched HALO-lite candidate (fact-passing),100,0,0,unknown,not logged,not logged,
+52,3,Stage 2,Lamp (e05),e05-halo,Stitched HALO-lite candidate (fact-passing),100,0,0,unknown,not logged,not logged,
+53,3,Stage 2,Blender (e07),e07-halo,Stitched HALO-lite candidate (fact-passing),100,0,0,unknown,not logged,not logged,
+54,3,Stage 2,Pre-sale price (e09),e09-halo,Stitched HALO-lite candidate (fact-passing),100,0,0,unknown,not logged,not logged,
+55,3,Stage 2,Wrong colour (e10),e10-halo,Stitched HALO-lite candidate (fact-passing),30,0,70,unknown,not logged,not logged,
+56,3,Stage 2,Kettle (e01),e01-baseline,Control (synthetic baseline rescan),100,0,0,unknown,not logged,not logged,
+57,3,Stage 2,Lamp (e05),e05-baseline,Control (synthetic baseline rescan),100,0,0,unknown,not logged,not logged,
+58,4,Stage 3,Kettle (e01),e01-r2,"Fact-conditioned best-of-N sample, deletion-first edits plus fact insertions",100,0,0,basic,not logged,not logged,
+59,4,Stage 3,Wrong colour (e10),e10-r2,"Fact-conditioned best-of-N sample, deletion-first edits plus fact insertions",100,0,0,basic,not logged,not logged,
+60,5,Stage 4,Kettle (e01),e01-raw,Unedited fact-conditioned raw sample,0,0,100,advanced,not logged,"12 Nov 2026, about 09:40 Europe/London",
+61,5,Stage 4,Wrong colour (e10),e10-raw,Unedited fact-conditioned raw sample,100,0,0,basic,not logged,"12 Nov 2026, about 09:42 Europe/London",
+62,5,Stage 4,Blender (e07),e07-raw,Unedited fact-conditioned raw sample,1,0,99,basic,not logged,"12 Nov 2026, about 09:43 Europe/London",
+63,5,Stage 4,Kettle (e01),e01-del,Deletion-only (zero insertions),4,0,96,basic,not logged,"12 Nov 2026, about 09:44 Europe/London",
+64,5,Stage 4,Wrong colour (e10),e10-del,Deletion-only (zero insertions); under-100-words note (99 words),100,0,0,basic,not logged,"12 Nov 2026, about 09:45 Europe/London",
+65,5,Stage 4,Blender (e07),e07-del,Deletion-only (zero insertions); under-100-words note (85 words),100,0,0,basic,not logged,"12 Nov 2026, about 09:46 Europe/London",
+66,5,Stage 4,Kettle (e01),e01-del-adv,Rescan of e01-del on Advanced (one accidental double space in the paste),4,0,96,advanced,not logged,"12 Nov 2026, about 15:46 Europe/London",
+67,6,Stage 5,Kettle (e01),c01,"Model-written fact sentences, then deletion-only agent edits",100,0,0,advanced,not logged,not logged,
+68,6,Stage 5,Blender (e07),c05,"Model-written fact sentences, then deletion-only agent edits",100,0,0,advanced,not logged,not logged,
+69,6,Stage 5,Lamp (e05),c04,"Model-written fact sentences, then deletion-only agent edits",100,0,0,advanced,not logged,not logged,
+70,6,Stage 5,Double charge (e03),c02,"Model-written fact sentences, then deletion-only agent edits",100,0,0,advanced,not logged,not logged,
+71,7,Stage 6,Kettle (e01),v00.txt,None (control: unchanged e01-del),4,0,96,advanced,not logged,"12 Nov 2026, 16:05 Europe/London",
+72,7,Stage 6,Kettle (e01),v01.txt,Standalone order/delivery date sentence after the salutation,100,0,0,advanced,not logged,"12 Nov 2026, 16:05 Europe/London",
+73,7,Stage 6,Kettle (e01),v02.txt,"Fault qualifiers added after ""1 November.""",21,0,79,advanced,not logged,"12 Nov 2026, 16:05 Europe/London",
+74,7,Stage 6,Kettle (e01),v04.txt,"Sign-off name ""Helen Cartwright"" inserted",100,0,0,advanced,not logged,"12 Nov 2026, 16:05 Europe/London",
+75,7,Stage 6,Kettle (e01),v03.txt,"Refund to the original debit card, £34.99, inserted in the ask",1,0,99,advanced,not logged,"12 Nov 2026, 16:05 Europe/London",
+76,8,Stage 7,Kettle (e01),d1.txt,Dates folded into the existing delivery sentence,31,0,69,advanced,not logged,"12 Nov 2026, 16:10 Europe/London",
+77,8,Stage 7,Kettle (e01),d2.txt,Dates folded into the order-number sentence,17,0,83,advanced,not logged,"12 Nov 2026, 16:11 Europe/London",
+78,8,Stage 7,Kettle (e01),n1.txt,"Sign-off ""Ms Helen Cartwright""",100,0,0,advanced,not logged,"12 Nov 2026, 16:12 Europe/London",
+79,8,Stage 7,Kettle (e01),n2.txt,"""My name is Helen Cartwright and …"" in the opening; no sign-off name",100,0,0,advanced,not logged,"12 Nov 2026, 16:12 Europe/London",
+80,8,Stage 7,Kettle (e01),combo-n1.txt,"Folded dates, fault and refund facts, plus ""Ms Helen Cartwright""",100,0,0,advanced,not logged,"12 Nov 2026, 16:12 Europe/London",
+81,8,Stage 7,Kettle (e01),combo-n2.txt,"Folded dates, fault and refund facts, plus the name in the body",100,0,0,advanced,not logged,"12 Nov 2026, 16:13 Europe/London",
+82,9,Stage 8,Kettle (e01),f0.txt,No name anywhere (uploaded as .txt; other Stage 8 scans were pasted),52,0,48,advanced,not logged,"12 Nov 2026, 16:16 Europe/London",
+83,9,Stage 8,Kettle (e01),f1.txt,"Sign-off ""Sue Hall"" on a fact-complete body with dates folded in",13,0,87,advanced,not logged,"12 Nov 2026, 16:17 Europe/London",
+84,9,Stage 8,Kettle (e01),f2.txt,"Sign-off ""Helen"" only",100,0,0,advanced,not logged,"12 Nov 2026, 16:17 Europe/London",
+85,9,Stage 8,Kettle (e01),f3.txt,"Sign-off ""Helen Cartwright""",100,0,0,advanced,not logged,"12 Nov 2026, 16:17 Europe/London",
+86,10,Stage 9,Kettle (e01),stage8/f1.txt,Re-scan of Stage 8 f1 (Sue Hall),13,0,87,basic,not logged,"12 Nov 2026, 16:23 Europe/London",
+87,10,Stage 9,Jacket (e04),stage9/e04.txt,Same f1-style recipe; sign-off Kate Ward,100,0,0,basic,not logged,"12 Nov 2026, 16:23 Europe/London",
+88,10,Stage 9,Lamp (e05),stage9/e05.txt,Same f1-style recipe; sign-off Ann Price,100,0,0,basic,not logged,"12 Nov 2026, 16:23 Europe/London",
+89,10,Stage 9,Blender (e07),stage9/e07.txt,Same f1-style recipe; sign-off Ian Brooks,100,0,0,basic,not logged,"12 Nov 2026, 16:23 Europe/London",
+90,11,Stage 10,Jacket (e04),e04-raw.txt,Unedited raw cut_text,18,0,82,unknown,not logged,"12 Nov 2026, about 16:28 Europe/London (history shows date only)",No scanType in URL; panel Advanced; 0 advanced left
+91,11,Stage 10,Jacket (e04),e04-del.txt,Deletion-only (no facts added),100,0,0,unknown,not logged,"12 Nov 2026, about 16:29 Europe/London (history shows date only)",No scanType in URL; panel Advanced; 0 advanced left
+92,11,Stage 10,Lamp (e05),e05-raw.txt,Unedited raw cut_text (includes 89 words of leaked template advice),100,0,0,unknown,not logged,"12 Nov 2026, about 16:29 Europe/London (history shows date only)",No scanType in URL; panel Advanced; 0 advanced left
+93,11,Stage 10,Lamp (e05),e05-del.txt,Deletion-only (no facts added); under-100-words warning,100,0,0,unknown,not logged,"12 Nov 2026, about 16:30 Europe/London (history shows date only)",No scanType in URL; panel Advanced; 0 advanced left
+94,13,Stage 12,Kettle (e01),e01-add.txt,"Additive-only from e01-raw; Sue Hall; inserted 14 words, deleted 0",22,0,78,basic,not logged,"12 Nov 2026, 16:46 Europe/London",
+95,13,Stage 12,Jacket (e04),e04-add.txt,"Additive-first from e04-raw, but 59 words deleted (invented address, return window, C5 envelope); Kate Ward",100,0,0,basic,not logged,"12 Nov 2026, 16:46 Europe/London",
+96,13,Stage 12,Blender (e07),e07-add.txt,"From e07-raw: facts added, and 9 words deleted (both NC-350W numbers, invented address, ""and was returned""); Ian Brooks",100,0,0,basic,not logged,"12 Nov 2026, 16:46 Europe/London",
+97,14,Stage 13,Blender (e07),v00.txt,None (control: unchanged e07-raw),2,0,98,basic,not logged,"12 Nov 2026, 16:50 Europe/London",
+98,14,Stage 13,Blender (e07),v01.txt,Invented model numbers deleted,3,0,97,basic,not logged,"12 Nov 2026, 16:51 Europe/London",
+99,14,Stage 13,Blender (e07),v02.txt,Invented address deleted,100,0,0,basic,not logged,"12 Nov 2026, 16:52 Europe/London",
+100,14,Stage 13,Blender (e07),v03.txt,"Contradiction fix: ""was returned"" / still-has wording",0,0,100,basic,not logged,"12 Nov 2026, 16:53 Europe/London",
+101,14,Stage 13,Blender (e07),v04.txt,Sign-off Duncan Lidsey → Ian Brooks,40,0,60,basic,not logged,"12 Nov 2026, 16:54 Europe/London",Flagged uncertain
+102,14,Stage 13,Blender (e07),v05.txt,Countertop and 25 October inserted; address kept,5,0,95,basic,not logged,"12 Nov 2026, 16:55 Europe/London",
+103,14,Stage 13,Blender (e07),v06.txt,Fault details inserted (will not start; cause not known),9,0,91,basic,not logged,"12 Nov 2026, 16:56 Europe/London",
+104,14,Stage 13,Blender (e07),v07.txt,Refund to the original payment method inserted,10,0,90,basic,not logged,"12 Nov 2026, 16:57 Europe/London",
+105,15,Stage 14,Blender (e07),b1.txt,"On v00: address replaced in the same slot with "", for order number NB-52044""",39,0,61,advanced,not logged,"12 Nov 2026, 21:28 Europe/London",Panel labelled Advanced; 0 advanced left
+106,15,Stage 14,Blender (e07),b2.txt,On v00: address deleted; order number appended to the greeting,100,0,0,advanced,not logged,"12 Nov 2026, 21:30 Europe/London",Panel labelled Advanced; 0 advanced left
+107,15,Stage 14,Blender (e07),b3.txt,"Address kept, plus the v03/v05/v06/v07 additions; invented address and NC-350W remain",14,0,86,advanced,not logged,"12 Nov 2026, 21:30 Europe/London",Panel labelled Advanced; 0 advanced left
+108,15,Stage 14,Jacket (e04),k1.txt,On e04-raw: invented four-line address block deleted,29,0,71,advanced,not logged,"12 Nov 2026, 21:31 Europe/London",Panel labelled Advanced; 0 advanced left
+109,15,Stage 14,Jacket (e04),k2.txt,On e04-raw: address block replaced with a fact-neutral order-reference of the same shape,38,0,62,advanced,not logged,"12 Nov 2026, 21:31 Europe/London",Panel labelled Advanced; 0 advanced left
+110,15,Stage 14,Blender (e07),b3-rescan,Re-scan of b3 (control),13,0,87,advanced,not logged,"12 Nov 2026, 21:33 Europe/London",Panel labelled Advanced; 0 advanced left
+111,15,Stage 14,Blender (e07),b4.txt,"b3 with the address replaced by "", for order number NB-52044""; NC-350W kept",49,0,51,advanced,not logged,"12 Nov 2026, 21:34 Europe/London",Panel labelled Advanced; 0 advanced left. Uncertain/likely human (parent confirmation; no flags in log).
+112,15,Stage 14,Blender (e07),b5.txt,b4 with invented model number NC-350W also removed; first version with no invented details,100,0,0,advanced,not logged,"12 Nov 2026, 21:35 Europe/London",Panel labelled Advanced; 0 advanced left
+113,16,Stage 15,Blender (e07),c1.txt,"b5 with base-model fill in the s2 slot ("" 2026.""); rest of text is b5 word-for-word; 123 words",100,0,0,advanced,not logged,"13 Nov 2026, about 03:55 Europe/London",Negative. Panel Advanced (0 left). Fact review PASS; no invented details. Base model wrote slots. Highly confident AI generated.
+114,16,Stage 15,Blender (e07),c2.txt,s1 seed 15006 sentences replace b5's first two sentences; 118 words; no invented details,100,0,0,advanced,not logged,"13 Nov 2026, about 03:56 Europe/London",Negative. Panel Advanced (0 left). Fact review PASS; no invented details. Base model wrote slots. Highly confident AI generated.

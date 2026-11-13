@@ -136,6 +136,96 @@ class FactPreservation(unittest.TestCase):
         report = self.facts.compare(text, text)
         self.assertEqual(report["source"]["names"], [])
 
+    def test_a_price_with_commas_matches_the_same_amount(self):
+        report = self.facts.compare("The total was £1,042.75.", "The total was £1042.75.")
+        self.assertEqual(report["result"], "facts_preserved")
+        self.assertEqual(report["source"]["prices"], ["£1042.75"])
+        self.assertEqual(report["source"]["numbers"], [])
+
+    def test_a_day_range_keeps_the_month_and_both_days(self):
+        source = "Delivery is 1–2 November."
+        same = self.facts.compare(source, "Delivery is 1-2 November.")
+        self.assertEqual(same["result"], "facts_preserved")
+        self.assertEqual(same["source"]["dates"], ["0000-11-01", "0000-11-02"])
+        self.assertEqual(same["source"]["numbers"], [])
+        moved = self.facts.compare(source, "Delivery is 1–2 December.")
+        self.assertEqual(moved["result"], "facts_differ")
+        self.assertEqual(moved["candidate"]["dates"], ["0000-12-01", "0000-12-02"])
+
+    def test_a_dated_range_matches_the_two_written_dates(self):
+        source = "Delivery is 1–2 November 2026, order #26672, £42.75."
+        candidate = (
+            "Delivery is 1 November 2026 and 2 November 2026, "
+            "order number 26672, GBP 42.75."
+        )
+        report = self.facts.compare(source, candidate)
+        self.assertEqual(report["result"], "facts_preserved")
+        self.assertEqual(report["source"]["dates"], ["2026-11-01", "2026-11-02"])
+        self.assertEqual(report["source"]["order_ids"], ["26672"])
+        self.assertEqual(report["source"]["prices"], ["£42.75"])
+        self.assertEqual(report["source"]["numbers"], [])
+
+    def test_dropping_one_day_of_a_range_is_a_missing_date(self):
+        report = self.facts.compare(
+            "Delivery is 1 to 2 November 2026.",
+            "Delivery is 2 November 2026.",
+        )
+        self.assertEqual(report["missing"], [{"kind": "date", "value": "2026-11-01"}])
+        self.assertEqual(report["changed"], [])
+        self.assertEqual(report["added"], [])
+
+    def test_a_month_first_range_matches_the_day_first_range(self):
+        report = self.facts.compare(
+            "Delivery is November 1–2, 2026.",
+            "Delivery is 1st–2nd November 2026.",
+        )
+        self.assertEqual(report["result"], "facts_preserved")
+        self.assertEqual(report["source"]["dates"], ["2026-11-01", "2026-11-02"])
+
+    def test_an_impossible_date_is_not_stored_as_a_date(self):
+        report = self.facts.compare("Written on 31/02/2026.", "Written on 31/02/2026.")
+        self.assertEqual(report["source"]["dates"], [])
+        self.assertEqual(report["result"], "facts_preserved")
+        leap = self.facts.compare("Written on 29/02/2024.", "Written on 29 February 2024.")
+        self.assertEqual(leap["result"], "facts_preserved")
+        self.assertEqual(leap["source"]["dates"], ["2024-02-29"])
+
+    def test_order_hash_forms_are_the_same_order_id(self):
+        report = self.facts.compare("The order #26672 arrived.", "The order#26672 arrived.")
+        self.assertEqual(report["result"], "facts_preserved")
+        self.assertEqual(report["source"]["order_ids"], ["26672"])
+        self.assertEqual(report["source"]["numbers"], [])
+        changed = self.facts.compare("The order #26672 arrived.", "The order #26673 arrived.")
+        self.assertEqual(
+            changed["changed"],
+            [{"kind": "order_id", "source": "26672", "candidate": "26673"}],
+        )
+
+    def test_a_two_word_name_at_the_start_is_kept(self):
+        report = self.facts.compare("Harper Quinn wrote on 18 October 2026.", "Harper Quinn wrote on 18 October 2026.")
+        self.assertEqual(report["source"]["names"], ["Harper Quinn"])
+        self.assertEqual(report["source"]["dates"], ["2026-10-18"])
+
+    def test_an_apostrophe_in_a_mid_sentence_name_is_kept(self):
+        report = self.facts.compare(
+            "The pot was bought by O'Brien on 18 October 2026.",
+            "The pot was bought by O'Brien on 18 October 2026.",
+        )
+        self.assertEqual(report["result"], "facts_preserved")
+        self.assertEqual(report["source"]["names"], ["O'Brien"])
+
+    def test_a_hyphenated_name_stays_one_name(self):
+        report = self.facts.compare(
+            "Mary-Jane bought the pot.",
+            "Mary-Jane bought the pot.",
+        )
+        self.assertEqual(report["source"]["names"], ["Mary-Jane"])
+        swapped = self.facts.compare(
+            "Mary-Jane bought the pot.",
+            "Mary Jane bought the pot.",
+        )
+        self.assertEqual(swapped["result"], "facts_differ")
+
     def test_cli_exits_zero_when_preserved_and_one_when_not(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

@@ -4,20 +4,26 @@
 The source is the fact-complete text. The candidate is the text about to be
 scanned. A difference means a fact is missing, changed, or added. This does
 not judge prose, authorship, or a detector score. Numeric dates are read
-day-first, as in UK correspondence.
+day-first, as in UK correspondence. A range such as "1–2 November" is both
+days; with no year the stored year is 0000. A single capitalised word at the
+start of a sentence is not treated as a name.
 """
 
 import argparse
+import itertools
 import json
 import re
 import sys
 from collections import defaultdict
+from datetime import date
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 LIMIT = (
     "Compares extracted numbers, dates, prices, order IDs, and capitalised "
-    "names. It does not judge prose, authorship, or a detector score."
+    "names. A day range such as 1–2 November is both days. A single "
+    "capitalised word at the start of a sentence is not treated as a name. "
+    "It does not judge prose, authorship, or a detector score."
 )
 
 MONTHS = {
@@ -29,7 +35,7 @@ MONTHS = {
 
 PRICE_RE = re.compile(
     r"(?:(?<![A-Za-z])(?P<word>GBP|USD|EUR)|(?P<symbol>[£$€]))"
-    r"\s?(?P<amount>\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+)"
+    r"\s?(?P<amount>\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)"
 )
 WRITTEN_DATE_RE = re.compile(
     r"\b(?P<day>\d{1,2})(?:st|nd|rd|th)?\s+"
@@ -44,23 +50,65 @@ NUMERIC_DATE_RE = re.compile(
     r"\b(?P<day>\d{1,2})[/-](?P<month>\d{1,2})[/-](?P<year>\d{4})\b"
 )
 ORDER_LABEL_RE = re.compile(
-    r"(?i)\b(?:order\s+(?:number|no\.?|#)|reference|ref\.)\s*[:#-]?\s*"
+    r"(?i)\b(?:order(?:\s*#|\s+(?:no\.?|number))|reference|ref\.)\s*[:#-]?\s*"
     r"(?:is\s+)?(?P<value>(?=[A-Z0-9-]*\d)[A-Z0-9][A-Z0-9-]{2,})"
+)
+_RANGE_SEP = r"(?:\s*[-–—]\s*|\s+(?:to|and)\s+)"
+RANGE_RE = re.compile(
+    r"\b(?P<day1>\d{1,2})(?:st|nd|rd|th)?"
+    + _RANGE_SEP
+    + r"(?P<day2>\d{1,2})(?:st|nd|rd|th)?\s+"
+    r"(?P<month>[A-Za-z]{3,9})\.?(?:\s+(?P<year>\d{4}))?\b"
+)
+MONTH_RANGE_RE = re.compile(
+    r"\b(?P<month>[A-Za-z]{3,9})\.?\s+"
+    r"(?P<day1>\d{1,2})(?:st|nd|rd|th)?"
+    + _RANGE_SEP
+    + r"(?P<day2>\d{1,2})(?:st|nd|rd|th)?"
+    r"(?:,?\s+(?P<year>\d{4}))?\b"
 )
 ORDER_CODE_RE = re.compile(r"\b[A-Z]{2,}-\d{3,}[A-Z0-9-]*\b")
 NUMBER_RE = re.compile(r"\b\d{1,3}(?:,\d{3})+(?:\.\d+)?\b|\b\d+\.\d+\b|\b\d+\b")
 WORD_RE = re.compile(r"[A-Za-z][A-Za-z'’]*")
-NAME_WORD_RE = re.compile(r"[A-Z][a-z]+(?:['’][A-Z][a-z]+)?|[A-Z]{2,}")
+NAME_WORD_RE = re.compile(
+    r"[A-Z][a-z]+(?:['’][A-Z][a-z]+)?|[A-Z]['’][A-Z][a-z]+|[A-Z]{2,}"
+)
+NAME_JOIN_RE = re.compile(r"\s*[-–—]\s*")
+
+
+_MONTH_LAST_WITHOUT_YEAR = (0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 
 def _date(day, month, year):
     try:
-        day, month, year = int(day), int(month), int(year)
+        found = date(int(year), int(month), int(day))
+    except (TypeError, ValueError, OverflowError):
+        return None
+    return found.isoformat()
+
+
+def _yearless_date(day, month):
+    try:
+        day, month = int(day), int(month)
     except (TypeError, ValueError):
         return None
-    if not (1 <= day <= 31 and 1 <= month <= 12 and 1000 <= year <= 9999):
+    if not (1 <= month <= 12 and 1 <= day <= _MONTH_LAST_WITHOUT_YEAR[month]):
         return None
-    return f"{year:04d}-{month:02d}-{day:02d}"
+    return f"0000-{month:02d}-{day:02d}"
+
+
+def _range_dates(day1, day2, month_name, year):
+    month = _month_number(month_name or "")
+    if month is None:
+        return []
+    convert = _date if year else _yearless_date
+    if year:
+        dates = [convert(day1, month, year), convert(day2, month, year)]
+    else:
+        dates = [convert(day1, month), convert(day2, month)]
+    if any(item is None for item in dates):
+        return []
+    return dates
 
 
 def _month_number(name):
@@ -85,12 +133,20 @@ def _spans(text):
     found = []
 
     def add(match, kind, canonical):
-        if canonical:
-            found.append((match.start(), match.end(), kind, canonical))
+        values = [canonical] if isinstance(canonical, str) else list(canonical or [])
+        values = [item for item in values if item]
+        if values:
+            found.append((match.start(), match.end(), kind, values))
 
     for match in PRICE_RE.finditer(text):
         prefix = match.group("word") or match.group("symbol")
         add(match, "price", _price(prefix, match.group("amount")))
+    for pattern in (RANGE_RE, MONTH_RANGE_RE):
+        for match in pattern.finditer(text):
+            add(match, "date", _range_dates(
+                match.group("day1"), match.group("day2"),
+                match.group("month"), match.group("year"),
+            ))
     for match in WRITTEN_DATE_RE.finditer(text):
         month = _month_number(match.group("month"))
         add(match, "date", _date(match.group("day"), month, match.group("year")))
@@ -108,10 +164,10 @@ def _spans(text):
     found.sort(key=lambda item: (item[0], -(item[1] - item[0])))
     accepted = []
     cursor = -1
-    for start, end, kind, canonical in found:
+    for start, end, kind, values in found:
         if start < cursor:
             continue
-        accepted.append((start, end, kind, canonical))
+        accepted.extend((start, end, kind, canonical) for canonical in values)
         cursor = end
     return accepted
 
@@ -138,7 +194,8 @@ def _names(text):
     runs = []
     current = []
     for start, end, word in tokens:
-        if current and text[current[-1][1]:start].strip():
+        gap = text[current[-1][1]:start] if current else ""
+        if current and gap.strip() and NAME_JOIN_RE.fullmatch(gap) is None:
             runs.append(current)
             current = []
         current.append((start, end, word))
@@ -148,7 +205,12 @@ def _names(text):
     for run in runs:
         if len(run) == 1 and _sentence_initial(text, run[0][0]):
             continue
-        surface = " ".join(word for _start, _end, word in run)
+        parts = [run[0][2]]
+        for previous, current_word in itertools.pairwise(run):
+            gap = text[previous[1]:current_word[0]]
+            parts.append("-" if NAME_JOIN_RE.fullmatch(gap) else " ")
+            parts.append(current_word[2])
+        surface = "".join(parts)
         names.append((" ".join(surface.casefold().split()), surface))
     return names
 

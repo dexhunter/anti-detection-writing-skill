@@ -218,3 +218,37 @@ These restate the note’s applied rules. None of them authorises dropping a fac
 10. **Do not add DIPPER, a commercial humaniser, synonym lists, or invisible characters as score levers.** Already covered on 13 November. A back-translation update does not reopen them. **[already covered]**
 
 **Proposed experiments, not findings.** Pairwise Basic versus Advanced rescans of the exact c7 and c8 bytes are still not done. A second independent rescan of c7, c7a, or c7b on the same mode is still not done. The c7a and c7b scores above are single Advanced scans. None of those missing scans is a result until the scan exists.
+
+## Short-email edit probes checked 16 November 2026
+
+These are **[our scans]** on synthetic UK consumer-complaint emails (kettle, blender, jacket, lamp, scarf), run on 15–16 November 2026. They are not the 13 November pot-handle ladder in the [Stage 16 report](../../../docs/reports/stage-16-pot-handle.md). Free-plan GPTZero Model 5.0b, Basic, file upload, one free account per probe (three accounts in total), one scan per file unless a row says "replicated". Every scanned edit was fact-checked before scanning, with `scripts/check_facts.py` or an independent reviewer. The natural rewrite in the last row differs from its base only in repeats (a second mention of the order number and a redundant "within 30 days"), which the checker counts; no fact was lost. Some human-scoring bases contain details invented in earlier probes; they are diagnostic bases, not usable emails. Nothing here is a way to pass GPTZero.
+
+### Scan stability
+
+Unchanged bytes rescanned within 2 points across accounts and days: 13→13→13 (kettle), 14/13→14→14 (blender), 29→27→29 (jacket), 22→22 (kettle), and 100 on every 100% base rescanned (six bases). **[our scans]** Treat a single-edit move of 8 points or less on a human-scoring email as noise.
+
+### Results
+
+| Edit (one per file) | Emails | Result (AI %) | Read |
+|---|---|---|---|
+| Sentence rhythm and punctuation only (merge or split sentences; no words added or removed) | 3 at 100% | 100, 100, 100 | No effect |
+| Single-word synonym swaps, first pair | 3 human-scoring | 13→8, 14→8, 27→25 | Small moves towards human |
+| Single-word synonym swaps, second pair | 4 human-scoring | 13→21, 14→15, 27→34, 22→23 | Moves towards AI; not repeatable |
+| First-pair swaps on a 100% email | 1 at 100% | 100 | No effect |
+| Same words, one comma aside put in brackets | 3 human-scoring, 1 at 100% | 13→13, 14→14, 29→29, 100→100 | No effect |
+| Body split into paragraphs, no word changed | 1 at 100% | 100 | No effect |
+| Stock connectives removed or replaced ("Unfortunately", "As such", "therefore", "This is in relation to") | 2 at 100%, 1 human-scoring | 100, 100; 13→11 | No effect |
+| Request moved to the start, no other change | 2 at 100% | 100→8 and 100→54, each **replicated** on a second account (8, 54) | Large drop on these two |
+| Request moved to the start, no other change | 4 more at 100% (base rescans 100) | 100, 100, 100, 100 | No effect |
+| Request moved to the start, human-scoring | 1 | 13→7 | Within noise |
+| Request first plus a natural readability rewrite of the 8% email | 1 | 100 | Drop gone |
+
+**[vendor claim]** GPTZero says its models are "designed to be indifferent to punctuation changes" ([Introducing GPTZero 4o](https://gptzero.me/news/introducing-gptzero-4o)). The bracket and rhythm rows are consistent with that. **[literature, not 5.0b]** Re-wrapping text without changing a word reversed 20–27% of one open detector's decisions on scientific abstracts ([arXiv 2610.13583](https://arxiv.org/abs/2610.13583)); the one paragraph-split row did not show that on 5.0b.
+
+### Rules for the skill
+
+1. **Brackets are not a score lever and not a trigger by themselves.** Do not add a new fact as a bracketed parenthetical; brackets around existing words are a readability choice. **[our scans]**
+2. **Rhythm, punctuation, paragraph breaks, and stock-connective removal are readability edits, not score levers.** None moved a 100% email. **[our scans]**
+3. **Synonym swaps are unpredictable.** The same kind of edit moved human-scoring emails up to 8 points either way, depending on the words. Do not use them to chase a score. **[our scans]**
+4. **Request-first ordering is not a general lever.** It dropped two emails reproducibly and moved four others not at all, and a natural version of the best one went back to 100%. Hypothesis only: the two drops depend on the exact moved wording, not on the order. Keep the request last. **[our scans; mechanism hypothesis]**
+5. **Natural, fact-complete English stays the default.** When a lower score needs awkward wording, report both and keep the natural version. **[our scans]**

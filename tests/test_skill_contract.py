@@ -103,6 +103,7 @@ class SkillContract(unittest.TestCase):
         email, _, _ = rest.partition("\n## ")
         self.assertIn("**[evidence + our scans]**", email)
         self.assertIn("**[our scans; mechanism hypothesis]**", email)
+        self.assertIn("Do not add a new fact as a bracketed parenthetical", email)
         self.assertIn("**[hypothesis]** Prefer plain first person", email)
         self.assertIn("scripts/check_facts.py", email)
         self.assertIn("not a way to pass GPTZero", email)

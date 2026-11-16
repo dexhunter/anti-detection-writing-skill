@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -115,6 +116,43 @@ class SkillContract(unittest.TestCase):
         write = text.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
         self.assertIn("are not detector levers", write)
         self.assertNotIn("retailer", write.lower())
+
+    def test_short_email_probe_note_matches_the_checked_scans(self):
+        skill = SKILL.read_text(encoding="utf-8")
+        research_path = ROOT / "skills/anti-ai-detection-writing-skill/references/detector-research.md"
+        research = research_path.read_text(encoding="utf-8")
+        heading = "## Short-email edit probes checked 16 November 2026"
+        self.assertEqual(research.count(heading), 1)
+        slug = "short-email-edit-probes-checked-16-november-2026"
+        self.assertIn(f"references/detector-research.md#{slug}", skill)
+        stage = (research_path.parent / "../../../docs/reports/stage-16-pot-handle.md").resolve()
+        self.assertTrue(stage.is_file())
+        self.assertIn("../../../docs/reports/stage-16-pot-handle.md", research)
+        section = research.split(heading, 1)[1]
+        for token in (
+            "100, 100, 100",
+            "13→8, 14→8, 27→25",
+            "13→21, 14→15, 27→34, 22→23",
+            "100→100",
+            "13→13, 14→14, 29→29, 100→100",
+            "13→11",
+            "100→8 and 100→54",
+            "13→7",
+            "six bases",
+            "up to 8 points",
+            "**[our scans]**",
+            "**[vendor claim]**",
+            "**[literature, not 5.0b]**",
+            "designed to be indifferent to punctuation changes",
+            "42–58%",
+            "Nothing here is a way to pass GPTZero.",
+        ):
+            self.assertIn(token, section)
+        self.assertNotIn("8 points or less", section)
+        self.assertNotIn("exact moved wording", section)
+        self.assertNotIn("one open detector", section)
+        self.assertNotIn("within 30 days", section)
+        self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
 
     def test_only_the_packaged_skill_is_discoverable(self):
         discovered = sorted(ROOT.rglob("SKILL.md"))

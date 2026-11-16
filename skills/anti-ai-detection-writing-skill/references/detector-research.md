@@ -218,3 +218,37 @@ These restate the note’s applied rules. None of them authorises dropping a fac
 10. **Do not add DIPPER, a commercial humaniser, synonym lists, or invisible characters as score levers.** Already covered on 13 November. A back-translation update does not reopen them. **[already covered]**
 
 **Proposed experiments, not findings.** Pairwise Basic versus Advanced rescans of the exact c7 and c8 bytes are still not done. A second independent rescan of c7, c7a, or c7b on the same mode is still not done. The c7a and c7b scores above are single Advanced scans. None of those missing scans is a result until the scan exists.
+
+## Short-email edit probes checked 16 November 2026
+
+These are **[our scans]** on synthetic UK consumer-complaint emails (kettle, blender, jacket, lamp, scarf), run on 15–16 November 2026. They are not the 13 November pot-handle ladder in the [Stage 16 report](../../../docs/reports/stage-16-pot-handle.md). Free-plan GPTZero Model 5.0b, Basic, file upload. Three free accounts were shared across the probes. One scan per file unless a row says "replicated"; a replicated row was repeated on a second of those accounts. Every scanned edit was fact-checked before scanning, with `scripts/check_facts.py` or an independent reviewer. The natural rewrite in the last row differs from its base only in repeats the checker counts (the order number said twice, and a deadline said twice); no fact was lost. Some human-scoring bases contain details invented in earlier probes; they are diagnostic bases, not usable emails. Nothing here is a way to pass GPTZero.
+
+### Scan stability
+
+Unchanged bytes rescanned within 2 points across accounts and days: 13→13→13 (kettle), 14/13→14→14 (blender), 29→27→29 (jacket), 22→22 (kettle), and 100 on every 100% base rescanned (six bases). **[our scans]** Treat a single-edit move of 2 points or less on a human-scoring email as inside that rescan band. The largest synonym move below is 8 points, which is outside the band.
+
+### Results
+
+| Edit (one per file) | Emails | Result (AI %) | Read |
+|---|---|---|---|
+| Sentence rhythm and punctuation only (merge or split sentences; no words added or removed) | 3 at 100% | 100, 100, 100 | No effect |
+| Single-word synonym swaps, first pair | 3 human-scoring | 13→8, 14→8, 27→25 | Up to 6 points toward human; 27→25 is inside the 2-point band |
+| Single-word synonym swaps, second pair | 4 human-scoring | 13→21, 14→15, 27→34, 22→23 | Up to 8 points toward AI; the 1-point moves are inside the 2-point band |
+| First-pair swaps on a 100% email | 1 at 100% | 100→100 | No effect |
+| Same words, one comma aside put in brackets | 3 human-scoring, 1 at 100% | 13→13, 14→14, 29→29, 100→100 | No effect |
+| Body split into paragraphs, no word changed | 1 at 100% | 100 | No effect |
+| Stock connectives removed or replaced ("Unfortunately", "As such", "therefore", "This is in relation to") | 2 at 100%, 1 human-scoring | 100, 100; 13→11 | 100% emails unchanged; 13→11 is inside the 2-point band |
+| Request moved to the start, no other change | 2 at 100% | 100→8 and 100→54, each **replicated** once (8, 54) | Large drop on these two only |
+| Request moved to the start, no other change | 4 more at 100% (base rescans 100) | 100, 100, 100, 100 | No effect |
+| Request moved to the start, human-scoring | 1 | 13→7 | 6 points; above the 2-point rescan band; one email |
+| Request first plus a natural readability rewrite of the 8% email | 1 | 100 | Drop gone |
+
+**[vendor claim]** GPTZero's [4o announcement](https://gptzero.me/news/introducing-gptzero-4o) says "GPTZero 4o and our models are designed to be indifferent to punctuation changes." That sentence names 4o and the models in that post. It is not a 5.0b measurement. The bracket and rhythm rows are consistent with it. **[literature, not 5.0b]** Re-wrapping the lines of a machine-written arXiv abstract, without changing a word, reversed 42–58% of chatgpt-detector-roberta's correct decisions relative to a placebo; the unconditioned margin was +0.20 to +0.27 ([arXiv 2610.13583](https://arxiv.org/abs/2610.13583), results table). The abstract's "20–27% of correct decisions" does not match that table, so it is not used as a result here. Splitting one email into paragraphs is a different edit. The 100% row above does not test the paper.
+
+### Rules for the skill
+
+1. **Brackets are not a score lever and not a trigger by themselves.** Do not add a new fact as a bracketed parenthetical; brackets around existing words are a readability choice. **[our scans]**
+2. **Rhythm, punctuation, paragraph breaks, and stock-connective removal are readability edits, not score levers.** None moved a 100% email. **[our scans]**
+3. **Synonym swaps are unpredictable.** The same kind of edit moved human-scoring emails by up to 8 points, and the direction was not stable. Do not use them to chase a score. **[our scans]**
+4. **Request-first ordering is not a general lever.** It dropped two emails reproducibly and moved four others not at all, and a natural version of the best one went back to 100%. Those two drops are not a method. Keep the request last. **[our scans]**
+5. **Natural, fact-complete English stays the default.** If a lower score and the natural wording disagree, report both and keep the natural version. **[our scans]**

@@ -6,6 +6,8 @@ This note was checked against commit `de9576eda951a229968267e7e306bfe0a6f12ac8` 
 
 The scans in section (b) are from today’s GPTZero 5.0b work on a private ~700-word professional recommendation letter (not published). They are one letter, not a general pass method.
 
+Section (d) records Stages 22–25 from the same date. Those scans do not change the rules in section (c). Section (d) quotes the supplied scan results. It does not add figures from a newly opened paper.
+
 ## What the 11 and 13 November notes already cover
 
 Do not re-add these as new literature:
@@ -136,3 +138,29 @@ The c7a and c7b scores above are now recorded (same fresh account, Model 5.0b, A
 - A second independent rescan of c7, c7a, or c7b on the same mode before treating a single Advanced scan as stable.
 
 None of those is a result until the scan exists.
+
+---
+
+## (d) Stages 22–25, 16 November 2026 (negative)
+
+All scans below are free-plan GPTZero Model 5.0b Basic scans. No email address, account name, referee, applicant, or letter wording is recorded. Mixed and human percentages were not in the supplied record. These are small samples, single scans, and one detector version. They are not a method for passing a detector. They do not change the rules in section (c): the request stays last, round-trip translation stays an experiment only, and when readability and a lower score conflict, keep natural fact-complete English. The labelled evidence note is in [evidence limits](../skills/anti-ai-detection-writing-skill/references/evidence.md). The per-text rows that were logged are in the [results report](reports/gptzero-results.md).
+
+**[evidence]** Thirty natural fact-complete recommendation-letter variants (Stages 22–23) and six interpretive-versus-plain-record scans of three fully synthetic recommendation paragraphs (Stage 24) all scored 100% AI. Off-the-shelf humanizers moved 1 of 7 emails (Stage 25). That is not a new editing method.
+
+### Stage 22
+
+21 scans of recommendation-letter paragraphs. The texts are not published. No author, subject, referee, applicant, or letter wording is recorded. The arms were recommender voice, uneven sentence length, plain verbs and fewer nominalizations (Reinhart et al., PNAS 2025), a pstack `unslop` rewrite, and a pstack `technical-writing` rewrite, plus controls and two full letters. All 21 scored 100% AI. No per-text row was logged.
+
+### Stage 23
+
+9 scans of recommendation-letter paragraphs, with the same privacy limit. The arms were feature-matching to paragraphs that scored 0% and author-style conditioning on the author's public writing (idea from [arXiv:2505.14608](https://arxiv.org/abs/2505.14608)). All 9 scored 100% AI. Across Stages 22–23, 30 natural fact-complete variants scored 100% AI. No per-text row was logged. The arXiv id is the stated source of the conditioning idea. This note does not extract figures from that paper.
+
+### Stage 24
+
+Three fully synthetic recommendation paragraphs, interpretive framing versus plain-record framing: six scans, all 100% AI. One scan was labelled Possible AI Paraphrasing. The supplied record does not say which paragraph or which framing carried that label. No letter wording is published. The plain-record framing left all three paragraphs at 100% AI.
+
+### Stage 25
+
+Eight open Hugging Face detectors, on 122 edited texts already scored by GPTZero 5.0b, do not track GPTZero. The best was HC3-roberta, Spearman 0.20, AUC 0.61. The other seven coefficients were not in the supplied record.
+
+Smaug-Humanizer and jialinyyzz/humanizer rewrites: e04 scored 47 and 48. The supplied record does not say which model produced which of those two scores. The same-session rescan of the unchanged e04 text was 100. e01 and e07 stayed at 100. The supplied record does not give a separate score per model for e01 or for e07. Step 2 best-of-24 Smaug-Humanizer rewrites of e02, e03, e05, e06, e08, and e09 all scored 100% AI. e05, e06, e08, and e09 were labelled Possible AI Paraphrasing. A fact check for these rewrites was not in the supplied record. The supplied scores cover e01, e02, e03, e04, e05, e06, e07, e08, and e09. The recorded conclusion is that the humanizer route moved 1 of 7 emails; the supplied record does not define that denominator further. AuthorMist was unusable and was not scanned. No LoRA pilot was run. Modal cost was about $0.37.

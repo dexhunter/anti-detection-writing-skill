@@ -1,8 +1,8 @@
 # GPTZero experiment results
 
-This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, and Stages 1–15. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times are in Europe/London. The last scan in this log is 13 Nov 2026, about 03:56 Europe/London. Stage 16, later the same day, is a separate note: [stage-16-pot-handle.md](stage-16-pot-handle.md). Those scans are not among the 114 rows below.
+This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, Stages 1–15, and Stages 22–25. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times for the Stages 1–15 log are in Europe/London. The last scan in that log is 13 Nov 2026, about 03:56 Europe/London. Stage 16, later the same day, is a separate note: [stage-16-pot-handle.md](stage-16-pot-handle.md). Those scans are not in the CSV. Stages 22–25 were scanned on 16 Nov 2026. No clock time was logged for them.
 
-Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (114 scans; accounts redacted; no source-text bodies, no document URLs, no credentials).
+Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (133 scans; accounts redacted; no source-text bodies, no document URLs, no credentials). The first 114 rows are the calibration batch, Wood to Water, and Stages 1–15. Nineteen further rows are the Stage 24 and Stage 25 scans that have a per-text score. Stages 22 and 23 are aggregates in the narrative below (21 scans and 9 scans, all 100% AI) and have no CSV rows. The record for those two stages is the count and the uniform result, not a per-text table.
 
 ## Scope
 
@@ -10,13 +10,15 @@ Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (114 scans; acc
 
 Two comparability notes apply throughout. The Stage 14 and Stage 15 panels were labelled Advanced even though the logged free account had 0 advanced scans left, so those scores may not be exactly comparable with earlier Basic batches. The 14% blender text (b3; 13% on rescan) still contains an invented address and invented model numbers, which a real email cannot use.
 
+Stages 22–25 used Basic view, file upload, one scan per file, on 16 Nov 2026, Model 5.0b, free plan. The account label in this report is free test account C. It is not an email address and it is not a CSV value. Mixed and human percentages, and clock times, were not logged. The Stage 24 engineer record arm is 84 words, so the under-100-words caveat applies to that one text. These are small samples, single scans, and one detector version.
+
 All listed customer-service emails except the Wood to Water chaser are synthetic test scenarios. Wood to Water scores are included, but the source texts are withheld because they contain a real retailer contact name and order number.
 
 ## Progress
 
 | Measure | Value | Note |
 | --- | --- | --- |
-| GPTZero scans in the logs | 114 | Stage 11 had no scans (0 of 160 samples were fact-complete) |
+| GPTZero scans in the CSV | 133 | 114 through Stage 15; 19 per-text rows for Stages 24–25. Stage 11 had no scans (0 of 160 samples were fact-complete). Stages 22–23 (30 scans, all 100% AI) are narrative aggregates and are not rows. Stage 16 is not in the CSV. |
 | Best kettle fact-complete AI % | 13% | Stage 8 f1 and Stage 9 Basic rescan; one email |
 | Best blender with no invented details | 100% | Stage 14 b5 and Stage 15 c1, c2; fact-complete |
 | Wood to Water v5 AI % | 3% | Advanced scan; one email; modes differ from v1–v4 |
@@ -32,7 +34,9 @@ Starting scores below are the Calib synthetic baselines, or the Wood to Water or
 | Wood to Water | 100 | 3 | 3 |
 | Wrong colour | 100 | 30 | 30 |
 
-Kettle 13% is Stage 8 f1 and its Stage 9 Basic rescan (Sue Hall, dates folded in). Stage 12 e01-add later scored 22% on the same scenario. Jacket has no fact-complete result below 100%; the unedited raw scored 18%, and the Stage 14 address tests scored 29% and 38%, but those texts are not fact-complete. Blender 13% in the middle column is b3-rescan, which still has the invented address and both NC-350W model numbers; b4, with the address replaced but the model numbers kept, scored 49%. The first fact-complete blender with no invented details, b5, scored 100%, and Stage 15 c1 and c2 also scored 100%. Lamp never moved off 100%, and its raw text already scored 100% and included leaked template advice. Wood to Water v5 scored 3% on an Advanced scan; the original and v1–v4, all 100%, were scanned before the free Basic option disappeared, so the modes are not the same. Wrong colour 30% is the Stage 2 stitched candidate e10-halo; the later fact-conditioned edit e10-r2 scored 100%.
+**[evidence]** Freshly written or re-polished natural text, record-style framing, author-style conditioning and off-the-shelf humanizer models did not lower GPTZero 5.0b scores on fact-complete texts that already scored 100% (Stages 22–25). The only edits that have kept a score low are minimal single edits to a text that already scores human. These are small samples, single scans, and one detector version. The scan record is [Stages 22–25](#stages-22-25).
+
+Kettle 13% is Stage 8 f1 and its Stage 9 Basic rescan (Sue Hall, dates folded in). Stage 12 e01-add later scored 22% on the same scenario. Jacket has no fact-complete result below 100%; the unedited raw scored 18%, and the Stage 14 address tests scored 29% and 38%, but those texts are not fact-complete. Stage 25 humanizer rewrites of that email scored 47 and 48. That step does not record a fact check, and the same-session baseline rescan was 100. Blender 13% in the middle column is b3-rescan, which still has the invented address and both NC-350W model numbers; b4, with the address replaced but the model numbers kept, scored 49%. The first fact-complete blender with no invented details, b5, scored 100%, and Stage 15 c1 and c2 also scored 100%. Lamp never moved off 100%, and its raw text already scored 100% and included leaked template advice. Wood to Water v5 scored 3% on an Advanced scan; the original and v1–v4, all 100%, were scanned before the free Basic option disappeared, so the modes are not the same. Wrong colour 30% is the Stage 2 stitched candidate e10-halo; the later fact-conditioned edit e10-r2 scored 100%.
 
 ## Confirmed findings
 
@@ -75,6 +79,46 @@ Stage 15 tested whether the clean, fact-complete blender email (b5, 100% AI, no 
 
 Both stayed at 100% AI, like b5. Letting the base model write the replacement text did not rescue the clean blender email. Together with Stages 13–14, the human-leaning blender scores so far need invented specifics (address, model number). Inventing facts is off-limits for the skill; those earlier human-leaning scores are not a usable method.
 
+<a id="stages-22-25"></a>
+
+## Stages 22–25 negative results
+
+Scanned 16 Nov 2026. GPTZero Model 5.0b, free plan, Basic view, file upload, one scan per file, account labelled free test account C. No email address is recorded. Mixed % and human % were not logged. Clock times were not logged. File ids in the CSV for these stages are scan labels; disk filenames were not logged. These are small samples, single scans, and one detector version. They are not a method for passing GPTZero.
+
+### Stage 22
+
+21 scans. The texts are private, credential-dense recommendation-letter paragraphs (not published). No author, subject, or letter wording is recorded. The arms were applied to three paragraphs that already scored 100% AI: recommender voice; uneven sentence length; plain verbs and fewer nominalizations (after Reinhart et al., PNAS 2025); a rewrite with the pstack `unslop` skill; and a rewrite with the pstack `technical-writing` skill. The same session included controls and two full letters. All 21 scans scored 100% AI. Clear negative. Per-text file names and separate scores were not logged, so Stage 22 has no CSV rows.
+
+### Stage 23
+
+9 scans. The texts are private, credential-dense recommendation-letter paragraphs (not published). No author, subject, or letter wording is recorded. The arms feature-matched the 100% paragraphs to the same letter's 0%-scoring paragraphs (shorter sentences, person subjects, split facts) and conditioned on the author's public writing. That conditioning is an idea from arXiv 2505.14608. All 9 scans scored 100% AI. Per-text file names and separate scores were not logged, so Stage 23 has no CSV rows.
+
+Across Stages 22–23, 30 natural, fact-complete variants scored 100% AI. Natural polishing does not move GPTZero on credential-dense paragraphs that already score 100%.
+
+### Stage 24
+
+Fully synthetic, fictional recommendation paragraphs: an engineer, a PhD student, and a food-bank coordinator. I is typical interpretive letter framing. R keeps the same facts and opinions as plain record sentences, with glosses removed.
+
+| Persona | I AI % | R AI % | Note on R |
+| --- | ---: | ---: | --- |
+| Engineer | 100 | 100 | 84 words, under 100, less reliable |
+| PhD student | 100 | 100 | Labelled Possible AI Paraphrasing |
+| Food-bank coordinator | 100 | 100 | |
+
+0 of 3 moved. `check_facts.py` marked two pairs `facts_preserved`. One pair differs only because the checker reads a sentence-initial "Since" followed by a capitalised name as a name. That pair was hand-checked. The record does not say which persona that pair was. These six scores are CSV rows.
+
+### Stage 25
+
+Off-the-shelf humanizer models, on the synthetic calibration emails e01–e09 from earlier stages. The email names in the scan table are the names already used for those ids in this report.
+
+Eight open Hugging Face detectors, scored on 122 texts that GPTZero 5.0b had already scored, do not track GPTZero. The best was HC3-roberta, Spearman 0.20, AUC 0.61. tropa-mini was −0.01 / 0.50. desklib was −0.08 / 0.44. Binoculars (Qwen 1.5B) was −0.18 / 0.38. Some separate public-domain human text from raw AI text perfectly (AUC 1.00). That is a different task. Coefficients for the rest of the eight were not in the record, so they are not filled in.
+
+The humanizers ran on Modal L4 GPUs via llama.cpp (Q8 GGUF): Smaug-Humanizer, jialinyyzz/humanizer, and authormist-originality. AuthorMist was unusable: 0 of 40 outputs were usable, so it has no scan row.
+
+Step 1 scans: e01 Smaug 100; e04 jialin 47; e07 Smaug 100; e01 jialin 100; e04 Smaug 48; e01 baseline control 100. Step 1 does not record a fact check. Step 2: best-of-24 fact-checked Smaug rewrites of e02, e03, e05, e06, e08, and e09, all 100% AI. e05, e06, e08, and e09 were labelled Possible AI Paraphrasing. The same-session e04 baseline rescan was 100, so the e04 drop (47 and 48, from two different models) is real and specific to that one text. Overall, humanizers moved 1 of 7 emails. GPTZero has a paraphrase detector that flags humanizer output. In this batch that label was recorded on the Stage 24 PhD-student record arm and on the step-2 rewrites of e05, e06, e08, and e09.
+
+Because the open detectors do not track GPTZero, training a rephraser (LoRA) against them is unlikely to transfer. No training pilot was run. Total GPU cost was about $0.37.
+
 ## Open hypotheses
 
 These are recorded as hypotheses, not as findings.
@@ -86,9 +130,9 @@ These are recorded as hypotheses, not as findings.
 
 ## Every recorded scan
 
-114 scans. Scan level is normalised to basic, advanced, or unknown. Unknown includes logs with no scan-level field, Stage 1 s1-01 (logged as advanced, with the page later showing basic), Stage 10 (no scanType in the URL; the panel showed Advanced Scan and 0 advanced left), calibration scans (the log notes 0 advanced scans left and sentence highlighting, but has no scan-level column), and Wood to Water original plus v1–v4 (scanned before the free Basic option disappeared).
+133 scans, matching the CSV. Scan level is normalised to basic, advanced, or unknown. Unknown includes logs with no scan-level field, Stage 1 s1-01 (logged as advanced, with the page later showing basic), Stage 10 (no scanType in the URL; the panel showed Advanced Scan and 0 advanced left), calibration scans (the log notes 0 advanced scans left and sentence highlighting, but has no scan-level column), and Wood to Water original plus v1–v4 (scanned before the free Basic option disappeared). Stages 22 and 23 are not in this table.
 
-Exact timestamps are in the CSV and are not repeated in the table below. The account column is “not logged” on every row. The Stage 15 note's “free account A” is only a redacted label in this report; it is not a value in the CSV. Mixed % is 0 wherever it was logged, and is “not logged” for the ten Wood to Water texts that scored 100% AI; v5 mixed was 0.
+Exact timestamps are in the CSV and are not repeated in the table below. The account column is “not logged” on every row. The Stage 15 note's “free account A”, and the Stages 22–25 label “free test account C”, are redacted labels in this report; they are not values in the CSV. Mixed % is 0 wherever it was logged, and is “not logged” for the ten Wood to Water texts that scored 100% AI and for every Stage 24 and Stage 25 row; v5 mixed was 0. Human % for those Stage 24 and Stage 25 rows is “not logged”.
 
 | Stage | Email | File | Edit | AI % | Human % | Level |
 | --- | --- | --- | --- | ---: | ---: | --- |
@@ -206,6 +250,25 @@ Exact timestamps are in the CSV and are not repeated in the table below. The acc
 | Stage 14 | Blender (e07) | `b5.txt` | b4 with invented model number NC-350W also removed; first version with no invented details | 100 | 0 | advanced |
 | Stage 15 | Blender (e07) | `c1.txt` | b5 with base-model fill in the s2 slot (" 2026."); rest of text is b5 word-for-word; 123 words | 100 | 0 | advanced |
 | Stage 15 | Blender (e07) | `c2.txt` | s1 seed 15006 sentences replace b5's first two sentences; 118 words; no invented details | 100 | 0 | advanced |
+| Stage 24 | Fictional recommendation (engineer) | `engineer-I` | Interpretive letter framing (I); fully synthetic | 100 | not logged | basic |
+| Stage 24 | Fictional recommendation (engineer) | `engineer-R` | Plain record sentences; same facts and opinions; glosses removed; 84 words, under 100 | 100 | not logged | basic |
+| Stage 24 | Fictional recommendation (PhD student) | `phd-student-I` | Interpretive letter framing (I); fully synthetic | 100 | not logged | basic |
+| Stage 24 | Fictional recommendation (PhD student) | `phd-student-R` | Plain record sentences; same facts and opinions; glosses removed; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 24 | Fictional recommendation (food-bank coordinator) | `food-bank-I` | Interpretive letter framing (I); fully synthetic | 100 | not logged | basic |
+| Stage 24 | Fictional recommendation (food-bank coordinator) | `food-bank-R` | Plain record sentences; same facts and opinions; glosses removed | 100 | not logged | basic |
+| Stage 25 | Kettle (e01) | `e01-smaug` | Step 1 Smaug-Humanizer rewrite | 100 | not logged | basic |
+| Stage 25 | Jacket (e04) | `e04-jialin` | Step 1 jialinyyzz/humanizer rewrite | 47 | not logged | basic |
+| Stage 25 | Blender (e07) | `e07-smaug` | Step 1 Smaug-Humanizer rewrite | 100 | not logged | basic |
+| Stage 25 | Kettle (e01) | `e01-jialin` | Step 1 jialinyyzz/humanizer rewrite | 100 | not logged | basic |
+| Stage 25 | Jacket (e04) | `e04-smaug` | Step 1 Smaug-Humanizer rewrite | 48 | not logged | basic |
+| Stage 25 | Kettle (e01) | `e01-baseline` | Step 1 baseline control | 100 | not logged | basic |
+| Stage 25 | Boots not received (e02) | `e02-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite | 100 | not logged | basic |
+| Stage 25 | Double charge (e03) | `e03-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite | 100 | not logged | basic |
+| Stage 25 | Lamp (e05) | `e05-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 25 | Charge after cancellation (e06) | `e06-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 25 | Missing delivery (e08) | `e08-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 25 | Pre-sale price (e09) | `e09-smaug` | Step 2 best-of-24 fact-checked Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 25 | Jacket (e04) | `e04-baseline` | Same-session baseline rescan | 100 | not logged | basic |
 
 
 ## What is in the skill
@@ -232,6 +295,7 @@ Not in the skill:
 - Facts-in-the-prompt generation produced 0 of 160 fact-complete emails, and Stage 11 had no scans. In Stage 12 the only additive-only edit, the kettle, scored 22% AI. The jacket and blender edits in that stage also deleted words and scored 100% AI.
 - The Stage 14 blender address-slot contrast is not stated as its own result. b1, with the order number kept in the address slot, scored 39%. b2, with the address deleted and the order number moved to the greeting, scored 100%.
 - Wood to Water v5 (3% AI, Advanced, nominalised style) is a single development observation, without making it a rule. It is recorded in this report and in the [limitations guide](../when-it-may-not-help.md), not in the skill.
+- Stages 22–25 (16 Nov 2026) stay a negative result. They are recorded here and as a labelled note in the [evidence limits](../../skills/anti-ai-detection-writing-skill/references/evidence.md). They are not a new editing method.
 
 ## Gaps in the logs
 
@@ -244,6 +308,10 @@ Not in the skill:
 - The calibration README still says no GPTZero scan was run. The scan-log.csv in the same directory records 35 scans on 11 Nov 2026, and those are the figures used here.
 - The Stage 14 edit-log describes b1, b2, b3, k1 and k2, and was not updated in the file for b4 and b5. Descriptions of b4 and b5 in this report come from the scan log, the later iterations-log note, the parent confirmation, and a direct comparison of the text files (b4 replaces the b3 address with the order-number phrase; b5 also removes both NC-350W mentions).
 - Stage 1 s1-02 and s1-03 carried a Text changed - Scan to update footer. Calibration rows also note that footer after the scan. Those footers are recorded in the logs and are not treated as score changes.
+- Stages 22 and 23 have no per-text CSV rows. The logged result is 21 scans and 9 scans, each at 100% AI. File names, word counts, mixed %, human %, and clock times for those scans were not in the record used here.
+- Stages 24 and 25 have no logged mixed % or human %, and no clock time. The CSV `file` values are scan labels, not logged disk filenames. The only logged word count in Stage 24 is the engineer record arm (84). `check_facts.py` is stage-level for Stage 24: two pairs `facts_preserved`, and one pair differs only because a sentence-initial "Since" plus a capitalised name is read as a name (hand-checked). Which pair was not identified.
+- Stage 25 names four of the eight open-detector correlations (HC3-roberta, tropa-mini, desklib, Binoculars). The other coefficients were not in the record. AuthorMist (authormist-originality) produced 0 of 40 usable outputs and was not scanned. Step 1 does not record a fact check. The recorded summary is that humanizers moved 1 of 7 emails. The per-text scores are the rows above, including the e04 scores of 47 and 48 and the same-session baseline rescan at 100.
+- No email address is published. The Stages 22–25 account label is free test account C.
 
 ## Sources
 
@@ -252,3 +320,4 @@ Not in the skill:
 - `/workspace/calib/scan-log.csv`
 - `/workspace/gptzero-w2w/receipt-5.0b-redacted.json` (scores only; texts withheld)
 - [PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9)
+- Stages 22–25: the 16 Nov 2026 scan results recorded in this note (Model 5.0b, free plan, Basic view, file upload, one scan per file). A scan-log path was not supplied with those results.

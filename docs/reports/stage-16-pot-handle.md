@@ -2,7 +2,7 @@
 
 This is a results record of one free-plan GPTZero session on 13 November 2026, Model 5.0b. Each text was scanned once. It is not a method for passing GPTZero. Human and mixed percentages, per-scan mode, account, and clock time were not logged. Where a figure was not logged, the table says “not logged”. The complaint is a synthetic UK consumer email: a pot handle broke, with an order number, a purchase date, a price, a payment method, refund-request dates, a Consumer Rights Act rejection, and photos available. No personal name, email address, or phone number is recorded here. The earlier human-scoring control is the Wood to Water v5 email from the [Stages 1–15 record](gptzero-results.md). Its source text stays withheld.
 
-The Stages 1–15 CSV is not extended. These scans are not part of its 114 rows.
+Stage 16 scans are not in the CSV. They are not part of its first 114 rows (calibration, Wood to Water, and Stages 1–15).
 
 ## Scope
 

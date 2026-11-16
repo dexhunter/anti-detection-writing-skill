@@ -6,6 +6,8 @@ This note was checked against commit `de9576eda951a229968267e7e306bfe0a6f12ac8` 
 
 The scans in section (b) are from today’s GPTZero 5.0b work on a private ~700-word professional recommendation letter (not published). They are one letter, not a general pass method.
 
+Section (d) records Stages 22–25 from the same date. Those scans do not change the rules in section (c). Section (d) quotes the supplied scan results. It does not add figures from a newly opened paper.
+
 ## What the 11 and 13 November notes already cover
 
 Do not re-add these as new literature:
@@ -136,3 +138,29 @@ The c7a and c7b scores above are now recorded (same fresh account, Model 5.0b, A
 - A second independent rescan of c7, c7a, or c7b on the same mode before treating a single Advanced scan as stable.
 
 None of those is a result until the scan exists.
+
+---
+
+## (d) Stages 22–25, 16 November 2026 (negative)
+
+All scans: free-plan GPTZero Model 5.0b, Basic view, file upload, one scan per file, account labelled free test account C. No email address is recorded. Mixed and human percentages were not logged. These are small samples, single scans, and one detector version. They are not a method for passing a detector, and they do not add a skill rule. The labelled evidence note is in [evidence limits](../skills/anti-ai-detection-writing-skill/references/evidence.md). The per-text rows that were logged are in the [results report](reports/gptzero-results.md).
+
+**[evidence]** Freshly written or re-polished natural text, record-style framing, author-style conditioning and off-the-shelf humanizer models did not lower GPTZero 5.0b scores on fact-complete texts that already scored 100% (Stages 22–25). The only edits that have kept a score low are minimal single edits to a text that already scores human.
+
+### Stage 22
+
+21 scans. The texts are private, credential-dense recommendation-letter paragraphs (not published). No author, subject, or letter wording is recorded. The arms, on three paragraphs that already scored 100% AI, were recommender voice, uneven sentence length, plain verbs and fewer nominalizations (after Reinhart et al., PNAS 2025), a pstack `unslop` rewrite, and a pstack `technical-writing` rewrite, plus same-session controls and two full letters. All 21 scored 100% AI. Clear negative. No per-text row was logged.
+
+### Stage 23
+
+9 scans. The texts are private, credential-dense recommendation-letter paragraphs (not published). No author, subject, or letter wording is recorded. The arms feature-matched the 100% paragraphs to the same letter's 0%-scoring paragraphs (shorter sentences, person subjects, split facts) and conditioned on the author's public writing (idea from [arXiv:2505.14608](https://arxiv.org/abs/2505.14608)). All 9 scored 100% AI. Across Stages 22–23, 30 natural, fact-complete variants scored 100% AI. Natural polishing does not move GPTZero on credential-dense paragraphs that already score 100%. No per-text row was logged. The arXiv id is the stated source of the conditioning idea. This note does not extract figures from that paper.
+
+### Stage 24
+
+Fully synthetic, fictional recommendation paragraphs: an engineer, a PhD student, and a food-bank coordinator. I is typical interpretive letter framing. R keeps the same facts and opinions as plain record sentences, with glosses removed. Scores, I then R: engineer 100 / 100 (R was 84 words, under 100, less reliable); PhD student 100 / 100 (R labelled Possible AI Paraphrasing); food-bank coordinator 100 / 100. 0 of 3 moved. `check_facts.py` marked two pairs `facts_preserved`. One pair differs only because the checker reads a sentence-initial "Since" followed by a capitalised name as a name. That pair was hand-checked. The record does not say which persona that pair was.
+
+### Stage 25
+
+Off-the-shelf humanizer models on the synthetic calibration emails e01–e09. Eight open Hugging Face detectors, on 122 texts already scored by GPTZero 5.0b, do not track GPTZero. The best was HC3-roberta, Spearman 0.20, AUC 0.61. tropa-mini was −0.01 / 0.50. desklib was −0.08 / 0.44. Binoculars (Qwen 1.5B) was −0.18 / 0.38. Some separate public-domain human text from raw AI text perfectly (AUC 1.00). That is a different task.
+
+The humanizers ran on Modal L4 GPUs via llama.cpp (Q8 GGUF): Smaug-Humanizer, jialinyyzz/humanizer, and authormist-originality. AuthorMist was unusable: 0 of 40 outputs were usable, so it was not scanned. Step 1: e01 Smaug 100; e04 jialin 47; e07 Smaug 100; e01 jialin 100; e04 Smaug 48; e01 baseline control 100. Step 2: best-of-24 fact-checked Smaug rewrites of e02, e03, e05, e06, e08, and e09, all 100% AI; e05, e06, e08, and e09 were labelled Possible AI Paraphrasing. The same-session e04 baseline rescan was 100, so the e04 drop (47 and 48, from two different models) is real and specific to that one text. Overall, humanizers moved 1 of 7 emails. GPTZero has a paraphrase detector that flags humanizer output. Because the open detectors do not track GPTZero, training a rephraser (LoRA) against them is unlikely to transfer. No training pilot was run. Total GPU cost was about $0.37.

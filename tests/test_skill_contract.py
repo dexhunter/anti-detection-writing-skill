@@ -1,11 +1,12 @@
 """Packaged skill boundaries. These checks do not measure a detector."""
 
+import csv
 import hashlib
 import importlib.util
 import json
-from pathlib import Path
 import re
 import unittest
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/anti-ai-detection-writing-skill/SKILL.md"
@@ -153,6 +154,123 @@ class SkillContract(unittest.TestCase):
         self.assertNotIn("one open detector", section)
         self.assertNotIn("within 30 days", section)
         self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
+
+    def test_stages_26_31_note_stays_hedged_and_matches_the_supplied_scores(self):
+        skill = SKILL.read_text(encoding="utf-8")
+        write = skill.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
+        self.assertIn("**[our scans; hedged]**", write)
+        self.assertIn("does not lower the score of text that starts AI-written", write)
+        self.assertIn("already human-written", write)
+        self.assertIn("roughly 0.75 or higher", write)
+        self.assertIn("not a tested cutoff", write)
+        self.assertIn("1 − Levenshtein/max_len", write)
+        self.assertIn("8/8", write)
+        self.assertIn("g1 rose to 21% (+19)", write)
+        self.assertIn("0.751", write)
+        self.assertIn("a4, similarity 0.502, scored 100% AI", write)
+        self.assertIn("8 drafts, short business emails", write)
+        self.assertIn("not tested on long documents", write)
+        self.assertIn("not a way to pass GPTZero", write)
+        self.assertIn("public Enron AESLC test-split emails", write)
+        self.assertIn("#stages-26-31-checked-16-17-november-2026", write)
+        self.assertNotIn("retailer", write.lower())
+        self.assertNotIn("customer-service", write.lower())
+        self.assertIn("change as little as possible", skill)
+        self.assertIn("Prefer concrete nouns and verbs.", write)
+        research = (ROOT / "skills/anti-ai-detection-writing-skill/references/detector-research.md").read_text(encoding="utf-8")
+        self.assertEqual(research.count("## Stages 26–31 checked 16–17 November 2026"), 1)
+        self.assertIn('id="stages-26-31-checked-16-17-november-2026"', research)
+        section = research.split("## Stages 26–31 checked 16–17 November 2026", 1)[1]
+        for token in (
+            "about $0.83",
+            "Qwen3-4B-Instruct-2507",
+            "Llama-3.2-3B",
+            "100/100/100",
+            "0/6 moved",
+            "moved only e04",
+            "144 outputs",
+            "2 of 48",
+            "0/48",
+            "2605.19516",
+            "2608.11256",
+            "0.898",
+            "0.701",
+            "0.904",
+            "0.723",
+            "0.654",
+            "0.380",
+            "0.535",
+            "0.400",
+            "0.516",
+            "0.715",
+            "0.502",
+            "0.591",
+            "0.500",
+            "0.740",
+            "0.751",
+            "0.764",
+            "0.655",
+            "8/8 still classed human",
+            "7 at 0–6%",
+            "21% (+19",
+            "b5, c5 0%",
+            "d5 24%",
+            "does not lower the score of text that starts AI-written",
+            "does not name an eighth row",
+        ):
+            self.assertIn(token, section)
+        self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
+        report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
+        self.assertIn("162 scans, matching the CSV", report)
+        self.assertIn('id="stages-26-31"', report)
+        self.assertIn("Stage 27 has no CSV rows", report)
+        csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
+        rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))
+        self.assertEqual(rows[0][0], "row")
+        self.assertEqual(len(rows) - 1, 162)
+        by_file = {row[4]: row for row in rows[1:]}
+        expected = {
+            "e05-qwen3-4b": "100",
+            "e08-qwen3-4b": "100",
+            "e03-qwen3-4b": "100",
+            "e01-llama-3.2-3b": "100",
+            "e02-llama-3.2-3b": "100",
+            "e09-llama-3.2-3b": "100",
+            "a0": "0",
+            "a1": "0",
+            "a2": "6",
+            "b0": "0",
+            "b1": "0",
+            "b2": "0",
+            "c0": "0",
+            "c4": "0",
+            "c5": "0",
+            "b4": "14",
+            "b5": "0",
+            "a5": "100",
+            "a3": "3",
+            "a4": "100",
+            "a5-rescan": "100",
+            "d0": "0",
+            "d4": "0",
+            "d5": "24",
+            "f0": "0",
+            "f1": "0",
+            "g0": "2",
+            "g1": "21",
+            "h0": "0",
+            "h1": "0",
+            "b3": "0",
+        }
+        self.assertEqual(len(expected), 31)
+        for file_id, ai in expected.items():
+            self.assertEqual(by_file[file_id][6], ai, file_id)
+            self.assertEqual(by_file[file_id][7], "not logged", file_id)
+            self.assertEqual(by_file[file_id][8], "not logged", file_id)
+        self.assertIn("Possible AI Paraphrasing", by_file["e01-llama-3.2-3b"][5])
+        self.assertIn("Possible AI Paraphrasing", by_file["e02-llama-3.2-3b"][5])
+        self.assertNotIn("Possible AI Paraphrasing", by_file["e09-llama-3.2-3b"][5])
+        self.assertNotIn("@", "\n".join(",".join(by_file[file_id]) for file_id in expected))
 
     def test_only_the_packaged_skill_is_discoverable(self):
         discovered = sorted(ROOT.rglob("SKILL.md"))

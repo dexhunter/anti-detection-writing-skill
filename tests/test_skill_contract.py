@@ -209,7 +209,7 @@ class SkillContract(unittest.TestCase):
             "7 versus 0–2",
             "6.0 per 100 words versus 2.3",
             "**[existing evidence, kept]**",
-            "Stages 22–23 already scored 100% AI on uneven sentence length",
+            "Stage 22 already scored 100% AI on uneven sentence length",
             "stopped using perplexity and burstiness",
             "**[hypothesis; untested in isolation]**",
             "enclosed CV",
@@ -230,9 +230,16 @@ class SkillContract(unittest.TestCase):
             "32%, 100%, and 7%",
             "docs/reports/2026-11-17-human-vs-ai-letter.md",
             "not a way to pass GPTZero",
+            "11 whole-text rewrites of one synthetic complaint",
+            "rescan of that earlier email stayed at 3% AI",
+            "only a title clause",
+            "with no human writer",
         ):
             self.assertIn(token, section, token)
         self.assertNotIn("word-for-word copying of a human sentence is a technique", section)
+        self.assertNotIn("whole-text rewrites of one human-scoring email", section)
+        self.assertNotIn("had none in the body", section)
+        self.assertNotIn("no separate human writer", section)
         write = skill.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
         self.assertIn("are not detector levers", write)
         self.assertIn("Use a plainer word when it is easier to read.", write)
@@ -240,7 +247,7 @@ class SkillContract(unittest.TestCase):
         self.assertIn("Do not vary it to seek a lower score.", write)
         self.assertIn("Prefer concrete nouns and verbs.", write)
         self.assertIn("They are not detector levers.", write)
-        self.assertIn("Stages 22–23 already scored 100% AI on uneven sentence length.", write)
+        self.assertIn("Stage 22 already scored 100% AI on uneven sentence length.", write)
         self.assertIn("Route that part back to a human", write)
         self.assertNotIn("retailer", write.lower())
         report = (ROOT / "docs/reports/2026-11-17-human-vs-ai-letter.md").read_text(encoding="utf-8")

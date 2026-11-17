@@ -164,11 +164,15 @@ class SkillContract(unittest.TestCase):
         self.assertIn("roughly 0.75 or higher", write)
         self.assertIn("not a tested cutoff", write)
         self.assertIn("1 − Levenshtein/max_len", write)
-        self.assertIn("8/8", write)
+        self.assertIn("8/8 recorded edits", write)
+        self.assertIn("eight edits, not eight drafts", write)
         self.assertIn("g1 rose to 21% (+19)", write)
         self.assertIn("0.751", write)
+        self.assertIn("does not guarantee 0%", write)
         self.assertIn("a4, similarity 0.502, scored 100% AI", write)
-        self.assertIn("8 drafts, short business emails", write)
+        self.assertIn("7 drafts", write)
+        self.assertIn("An eighth draft is not in those rows and is not counted", write)
+        self.assertNotIn("8 drafts", write)
         self.assertIn("not tested on long documents", write)
         self.assertIn("not a way to pass GPTZero", write)
         self.assertIn("public Enron AESLC test-split emails", write)
@@ -210,20 +214,29 @@ class SkillContract(unittest.TestCase):
             "0.751",
             "0.764",
             "0.655",
-            "8/8 still classed human",
-            "7 at 0–6%",
+            "8/8 recorded edits still classed human",
+            "eight edits, not eight drafts",
+            "0–6% AI",
             "21% (+19",
             "b5, c5 0%",
             "d5 24%",
+            "b4 14",
             "does not lower the score of text that starts AI-written",
-            "does not name an eighth row",
+            "does not guarantee 0%",
+            "7 recorded drafts",
+            "An eighth draft is not in those rows and is not counted",
         ):
             self.assertIn(token, section)
+        self.assertNotIn("8 drafts", section)
+        self.assertNotIn("b3, b4, c4, d4 human", section)
         self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
         report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
         self.assertIn("162 scans, matching the CSV", report)
         self.assertIn('id="stages-26-31"', report)
         self.assertIn("Stage 27 has no CSV rows", report)
+        self.assertIn("7 recorded drafts", report)
+        self.assertIn("eight edits, not eight drafts", report)
+        self.assertNotIn("8 drafts", report)
         csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
         rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))
         self.assertEqual(rows[0][0], "row")

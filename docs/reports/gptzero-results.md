@@ -21,7 +21,7 @@ All listed customer-service emails except the Wood to Water chaser are synthetic
 | Measure | Value | Note |
 | --- | --- | --- |
 | GPTZero scans in the CSV | 162 | 114 through Stage 15; 17 per-text rows for Stages 24–25; 31 per-text rows for Stages 26 and 28–31. Stage 11 had no scans (0 of 160 samples were fact-complete). Stages 22–23 (30 scans, all 100% AI) and Stage 27 (6 scans, all 100% AI) are narrative aggregates and are not rows. Stage 16 is not in the CSV. |
-| Human-draft edits at similarity ≥ 0.70 still classed human | 8/8 | Stages 28–31. Seven at 0–6% AI; g1 rose to 21% (+19). Does not lower the score of text that starts AI-written. |
+| Human-draft edits at similarity ≥ 0.70 still classed human | 8/8 | Stages 28–31. Eight recorded edits, not eight drafts. The committed rows name 7 drafts; an eighth draft is not counted. Seven at 0–6% AI; g1 rose to 21% (+19). Does not lower the score of text that starts AI-written, and does not guarantee 0%. |
 | Best kettle fact-complete AI % | 13% | Stage 8 f1 and Stage 9 Basic rescan; one email |
 | Best blender with no invented details | 100% | Stage 14 b5 and Stage 15 c1, c2; fact-complete |
 | Wood to Water v5 AI % | 3% | Advanced scan; one email; modes differ from v1–v4 |
@@ -216,11 +216,11 @@ f0, g0, and h0 are the unedited drafts. These seven scores are CSV rows.
 
 ### Tally
 
-LLM edits of human drafts at ≥0.70 similarity: 8/8 still classed human (a1, a2, a3, b1, b2, f1, g1, h1), 7 at 0–6% but g1 rose to 21% (+19, beyond the ~2-point rescan band) on the most opinion/assessment-style draft. 0.50–0.70: text-dependent (b3, b4, c4, d4 human; a4/a5 100%; d5 24%); below 0.50: b5, c5 0%.
+LLM edits of human drafts at ≥0.70 similarity: 8/8 recorded edits still classed human (a1, a2, a3, b1, b2, f1, g1, h1). That 8/8 is eight edits, not eight drafts. Seven of those eight were 0–6% AI. g1 rose to 21% (+19, beyond the ~2-point rescan band) on the assessment/judgement-style draft. 0.50–0.70 is text-dependent (recorded AI %: b3 0, b4 14, c4 0, d4 0, a4 100, a5 100, d5 24%). Below 0.50: b5, c5 0%.
 
-The suggested workflow, recorded as a hedged skill note and not as a bypass: when a human draft exists, polish it lightly and keep similarity to the draft at roughly ≥0.75 (a conservative margin, not a tested cutoff). Check facts against the draft. Caveats: small sample (8 drafts, short business emails), one upward drift (g1), not tested on long documents, and it does not help text that starts AI-written. It only preserved a human classification when the starting draft was already human-written.
+The suggested workflow, recorded as a hedged skill note and not as a bypass: when a human draft exists, polish it lightly and keep similarity to the draft at roughly ≥0.75 (a conservative margin, not a tested cutoff). Check facts against the draft. Caveats: 7 recorded drafts. An eighth draft is not in the committed rows and is not counted. Lengths were not logged. One upward drift (g1). Not tested on long documents, and it does not help text that starts AI-written. It only preserved a human classification when the starting draft was already human-written. It does not guarantee 0%.
 
-The caveat states a sample of 8 drafts. The supplied record names AESLC test rows 50 (a), 57 (b), 65 (c), 79 (d), 101 (f), 119 (g), and 170 (h). It does not name an eighth row.
+The seven recorded drafts are AESLC test rows 50 (a), 57 (b), 65 (c), 79 (d), 101 (f), 119 (g), and 170 (h). An eighth draft is not in those rows and is not counted.
 
 ## Open hypotheses
 
@@ -410,7 +410,7 @@ Exact timestamps are in the CSV and are not repeated in the table below. The acc
 In the skill from Stages 28–31, as a hedged note only:
 
 - When a human-written draft already exists, polish it lightly and keep similarity to that draft at roughly 0.75 or higher. Similarity is 1 − Levenshtein/max_len. Check facts against the draft.
-- That note only preserved a human classification when the starting draft was already human-written. It does not lower the score of text that starts AI-written. The sample is 8 drafts, short business emails, with one upward drift (g1, to 21%, +19). It was not tested on long documents. Roughly 0.75 is a conservative margin, not a tested cutoff.
+- That note only preserved a human classification when the starting draft was already human-written. It does not lower the score of text that starts AI-written, and it does not guarantee 0%. The committed rows name 7 drafts. An eighth draft is not in those rows and is not counted. Lengths were not logged. There was one upward drift (g1, to 21%, +19). It was not tested on long documents. Roughly 0.75 is a conservative margin, not a tested cutoff.
 - The note does not replace the other writing rules.
 
 Already in the skill from PR #9:
@@ -453,7 +453,7 @@ Not in the skill:
 - No email address, account name, referee, applicant, or recommendation-letter wording is published for Stages 22–25.
 - Stages 26, 28, 29, 30, and 31 have no logged mixed % or human %, and no clock time. The CSV `file` values are scan labels, not logged disk filenames. Stage 26 does not give numeric fact-check pass counts, only the order Qwen3-4B-Instruct-2507 then Llama-3.2-3B, and it does not give a GPTZero score for DIPPER-XXL, Gemma-3-4B, Phi-4-mini, Qwen2.5-3B, the 1.5B ARI model, or gohumanize. A paraphrase label was supplied for e01 and e02 only.
 - Stage 27 has no per-text CSV rows. The supplied result is 6 scans, each at 100% AI, each labelled Possible AI Paraphrasing. The composition is 2 fact-passing pass-1 outputs, the e05 control, and 3 multi-pass outputs. File names for those six scans were not in the supplied record. Fact-check counts are 144 outputs, 2 of 48 first-pass outputs kept every fact, and 0/48 on pass 2 and on pass 3.
-- Stages 28–31 do not publish the Enron email bodies or any writer or subject name. Draft letters in the supplied record are a (row 50), b (row 57), c (row 65), d (row 79), f (row 101), g (row 119), and h (row 170). The caveat says 8 drafts. An eighth row was not named. Unedited drafts have no similarity in the supplied record. The a5 rescan does not give a second similarity; the 0.516 figure is the Stage 29 measurement.
+- Stages 28–31 do not publish the Enron email bodies or any writer or subject name. Draft letters in the committed rows are a (row 50), b (row 57), c (row 65), d (row 79), f (row 101), g (row 119), and h (row 170): 7 recorded drafts. An eighth draft is not in those rows and is not counted. Unedited drafts have no similarity in the supplied record. The a5 rescan does not give a second similarity; the 0.516 figure is the Stage 29 measurement.
 - No email address or account name is published for Stages 26–31.
 
 ## Sources

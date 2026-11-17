@@ -301,6 +301,10 @@ class SkillContract(unittest.TestCase):
             "not supported",
             "one text only",
             "35% AI",
+            "above the 21% g1 rescan",
+            "does not guarantee 0%",
+            "pure Basic mode at 100, 24, and 14",
+            "all below 0.70",
             "about 0.07–0.14",
             "0.600, 0.601, 0.616, 0.609, 0.674, and 0.672",
             "genuinely human-written",
@@ -349,6 +353,10 @@ class SkillContract(unittest.TestCase):
             "Never add errors or typos",
             "one text",
             "genuinely human draft",
+            "does not guarantee 0%",
+            "above the 21% g1 rescan",
+            "Scan mode for this stage was not in the supplied record",
+            "all below 0.70",
         ):
             self.assertIn(token, section, token)
         self.assertNotIn("8 drafts", section)
@@ -385,11 +393,26 @@ class SkillContract(unittest.TestCase):
             self.assertEqual(by_file[file_id][8], "not logged", file_id)
             self.assertEqual(by_file[file_id][10], "not logged", file_id)
             self.assertEqual(by_file[file_id][11], "not logged", file_id)
-        for file_id in ("a5-open", "a5-ctrl", "d5-open", "d5-ctrl", "b4-open", "b4-ctrl"):
+        for file_id in (
+            "a5-open",
+            "a5-ctrl",
+            "d5-open",
+            "d5-ctrl",
+            "b4-open",
+            "b4-ctrl",
+            "g0-rescan",
+            "g1-rescan",
+            "g1-sent-open",
+            "g1-sent-examined",
+            "g1-sent-order",
+            "g1-sent-diligence",
+        ):
             self.assertEqual(by_file[file_id][9], "unknown", file_id)
+        for file_id in ("a5-open", "a5-ctrl", "d5-open", "d5-ctrl", "b4-open", "b4-ctrl"):
             self.assertIn("Labelled human", by_file[file_id][12])
-        for file_id in ("a5-basic", "d5-basic", "b4-basic", "g0-rescan", "g1-rescan"):
+        for file_id in ("a5-basic", "d5-basic", "b4-basic"):
             self.assertEqual(by_file[file_id][9], "basic", file_id)
+        self.assertIn("Scan mode was not in the supplied record", by_file["g0-rescan"][12])
         self.assertIn("0.600", by_file["a5-open"][5])
         self.assertIn("0.601", by_file["a5-ctrl"][5])
         self.assertIn("0.616", by_file["d5-open"][5])

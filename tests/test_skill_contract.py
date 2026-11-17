@@ -190,6 +190,11 @@ class SkillContract(unittest.TestCase):
             "a human chooses the words of the whole document and that AI is used only for fact checks and small fixes",
             intro,
         )
+        self.assertIn(
+            "except for a high-stakes formal letter, where a flagged chunk goes back to a human and AI stays limited to fact checks and small fixes",
+            intro,
+        )
+        self.assertIn("work toward lower scores through useful edits and measure the outcome", intro)
         section, _, _ = after_intro.partition("\n## ")
         for token in (
             "top-level recommendation",

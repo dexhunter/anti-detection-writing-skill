@@ -231,7 +231,7 @@ class SkillContract(unittest.TestCase):
         self.assertNotIn("b3, b4, c4, d4 human", section)
         self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
         report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
-        self.assertIn("162 scans, matching the CSV", report)
+        self.assertIn("177 scans, matching the CSV", report)
         self.assertIn('id="stages-26-31"', report)
         self.assertIn("Stage 27 has no CSV rows", report)
         self.assertIn("7 recorded drafts", report)
@@ -240,7 +240,7 @@ class SkillContract(unittest.TestCase):
         csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
         rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))
         self.assertEqual(rows[0][0], "row")
-        self.assertEqual(len(rows) - 1, 162)
+        self.assertEqual(len(rows) - 1, 177)
         by_file = {row[4]: row for row in rows[1:]}
         expected = {
             "e05-qwen3-4b": "100",
@@ -283,6 +283,122 @@ class SkillContract(unittest.TestCase):
         self.assertIn("Possible AI Paraphrasing", by_file["e01-llama-3.2-3b"][5])
         self.assertIn("Possible AI Paraphrasing", by_file["e02-llama-3.2-3b"][5])
         self.assertNotIn("Possible AI Paraphrasing", by_file["e09-llama-3.2-3b"][5])
+        self.assertNotIn("@", "\n".join(",".join(by_file[file_id]) for file_id in expected))
+
+    def test_stages_32_34_note_stays_hedged_and_matches_the_supplied_scores(self):
+        skill = SKILL.read_text(encoding="utf-8")
+        write = skill.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
+        for token in (
+            "keep at least one of that draft's own sentences word for word",
+            "about 0.70 or higher",
+            "not a tested cutoff",
+            "6/6 reverts",
+            "86–91",
+            "22–24",
+            "14 points",
+            "−5, −2, and 0",
+            "within or near noise",
+            "not supported",
+            "one text only",
+            "35% AI",
+            "about 0.07–0.14",
+            "0.600, 0.601, 0.616, 0.609, 0.674, and 0.672",
+            "genuinely human-written",
+            "does not lower the score of text that starts AI-written",
+            "fresh or polished natural rewrites still score 100% AI",
+            "GPTZero Model 5.0b only",
+            "Never add errors or typos",
+            "does not replace the light-edit note",
+            "not a way to pass GPTZero",
+            "#stages-32-34",
+        ):
+            self.assertIn(token, write, token)
+        self.assertNotIn("8 drafts", write)
+        self.assertNotIn("retailer", write.lower())
+        research = (ROOT / "skills/anti-ai-detection-writing-skill/references/detector-research.md").read_text(encoding="utf-8")
+        self.assertEqual(research.count("## Stages 32–34"), 1)
+        self.assertIn('id="stages-32-34"', research)
+        section = research.split("## Stages 32–34", 1)[1]
+        for token in (
+            "2% AI",
+            "0.751",
+            "21% AI",
+            "until we have examined all",
+            "without examination of all",
+            "too complex and too controversial to skip the due diligence",
+            "35%",
+            "0.600/0.601",
+            "0.616/0.609",
+            "0.674/0.672",
+            "a5-open 9",
+            "a5-ctrl 14",
+            "d5-open 0",
+            "d5-ctrl 2",
+            "b4-open 0",
+            "b4-ctrl 0",
+            "labelled human",
+            "not supported",
+            "−5, −2, and 0",
+            "pure Basic",
+            "a5 100, d5 24, b4 14",
+            "6/6",
+            "86–91",
+            "about 0.07–0.14",
+            "3 short business emails",
+            "fresh or polished natural rewrites still score 100% AI",
+            "Never add errors or typos",
+            "one text",
+            "genuinely human draft",
+        ):
+            self.assertIn(token, section, token)
+        self.assertNotIn("8 drafts", section)
+        self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
+        report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
+        self.assertIn("177 scans, matching the CSV", report)
+        self.assertIn('id="stages-32-34"', report)
+        self.assertNotIn("8 drafts", report)
+        csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
+        rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))
+        self.assertEqual(len(rows) - 1, 177)
+        by_file = {row[4]: row for row in rows[1:]}
+        expected = {
+            "g0-rescan": "2",
+            "g1-rescan": "21",
+            "g1-sent-open": "0",
+            "g1-sent-examined": "1",
+            "g1-sent-order": "14",
+            "g1-sent-diligence": "35",
+            "a5-open": "9",
+            "a5-ctrl": "14",
+            "d5-open": "0",
+            "d5-ctrl": "2",
+            "b4-open": "0",
+            "b4-ctrl": "0",
+            "a5-basic": "100",
+            "d5-basic": "24",
+            "b4-basic": "14",
+        }
+        self.assertEqual(len(expected), 15)
+        for file_id, ai in expected.items():
+            self.assertEqual(by_file[file_id][6], ai, file_id)
+            self.assertEqual(by_file[file_id][7], "not logged", file_id)
+            self.assertEqual(by_file[file_id][8], "not logged", file_id)
+            self.assertEqual(by_file[file_id][10], "not logged", file_id)
+            self.assertEqual(by_file[file_id][11], "not logged", file_id)
+        for file_id in ("a5-open", "a5-ctrl", "d5-open", "d5-ctrl", "b4-open", "b4-ctrl"):
+            self.assertEqual(by_file[file_id][9], "unknown", file_id)
+            self.assertIn("Labelled human", by_file[file_id][12])
+        for file_id in ("a5-basic", "d5-basic", "b4-basic", "g0-rescan", "g1-rescan"):
+            self.assertEqual(by_file[file_id][9], "basic", file_id)
+        self.assertIn("0.600", by_file["a5-open"][5])
+        self.assertIn("0.601", by_file["a5-ctrl"][5])
+        self.assertIn("0.616", by_file["d5-open"][5])
+        self.assertIn("0.609", by_file["d5-ctrl"][5])
+        self.assertIn("0.674", by_file["b4-open"][5])
+        self.assertIn("0.672", by_file["b4-ctrl"][5])
+        self.assertIn("until we have examined all", by_file["g1-sent-examined"][5])
+        self.assertIn("without examination of all", by_file["g1-sent-examined"][5])
+        self.assertIn("too complex and too controversial to skip the due diligence", by_file["g1-sent-diligence"][5])
         self.assertNotIn("@", "\n".join(",".join(by_file[file_id]) for file_id in expected))
 
     def test_only_the_packaged_skill_is_discoverable(self):

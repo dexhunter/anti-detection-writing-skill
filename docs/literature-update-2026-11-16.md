@@ -10,6 +10,8 @@ Section (d) records Stages 22–25 from the same date. Those scans do not change
 
 Section (e) records Stages 26–31. Stages 26–29 were scanned on 16 November 2026. Stages 30–31 were scanned on 17 November 2026. Section (e) quotes the supplied scan results. The arXiv ids in that section are the stated sources of two ideas. Section (e) does not extract figures from those papers, and it does not change the rules in section (c).
 
+Section (f) records Stages 32–34. The supplied record for those stages does not give a calendar date or a clock time. Section (f) quotes the supplied scan results. It does not extract figures from a paper, and it does not change the rules in section (c). The added skill note is hedged and sits beside the light-edit note from section (e).
+
 ## What the 11 and 13 November notes already cover
 
 Do not re-add these as new literature:
@@ -206,3 +208,27 @@ Scans: Qwen3-4B e05, e08, e03 = 100/100/100. Llama-3.2-3B e01, e02, e09 = 100/10
 LLM edits of human drafts at ≥0.70 similarity: 8/8 recorded edits still classed human (a1, a2, a3, b1, b2, f1, g1, h1). That 8/8 is eight edits, not eight drafts. Seven of those eight were 0–6% AI. g1 rose to 21% (+19, beyond the ~2-point rescan band) on the assessment/judgement-style draft. 0.50–0.70 is text-dependent (recorded AI %: b3 0, b4 14, c4 0, d4 0, a4 100, a5 100, d5 24%). Below 0.50: b5, c5 0%.
 
 When a human draft exists, polish it lightly and keep similarity to the draft at roughly ≥0.75 (a conservative margin, not a tested cutoff). Check facts against the draft. Caveats: 7 recorded drafts (AESLC test rows 50, 57, 65, 79, 101, 119, and 170). An eighth draft is not in those rows and is not counted. Lengths were not logged. One upward drift (g1). Not tested on long documents, and it does not help text that starts AI-written. It does not guarantee 0%.
+
+## (f) Stages 32–34
+
+All scans below are free-plan GPTZero Model 5.0b, scores read in Basic view. The supplied record does not give a calendar date or a clock time. % is AI probability. No email address, account name, writer name, or message body is recorded. Mixed and human percentages were not in the supplied record. These are small samples and one detector version. They are not a method for passing a detector. They do not change the rules in section (c). The second hedged human-draft note in the skill is an addition beside the light-edit note from section (e). It does not lower the score of text that starts AI-written. The labelled evidence note is in [evidence limits](../skills/anti-ai-detection-writing-skill/references/evidence.md). The per-text rows are in the [results report](reports/gptzero-results.md).
+
+**[evidence]** Stage 33 is the source of that note. Stage 32 is one text and stays a hunch. Stage 34 checks that the Stage 33 drops are not a scan-mode artifact.
+
+### Stage 32
+
+One text: g, AESLC test row 119. g0, the human draft, rescanned at 2% AI. g1, the LLM polish at similarity 0.751, rescanned at 21% AI. Both repeat the Stage 31 scores. The rescans do not give a second similarity. Reverting exactly one sentence of g1 back to the draft wording: the opening line scored 0%; "until we have examined all" back to "without examination of all" scored 1%; a reordered clause back to the original order scored 14%; "too complex and too controversial to skip the due diligence" back to the original sentence scored 35%. Similarity for those four restorations was not in the supplied record. One text only, so this stage is a hunch.
+
+### Stage 33
+
+Three heavy LLM rewrites that had risen: a5 (similarity 0.516; 100% AI on two earlier scans), d5 (0.500; 24%), and b4 (0.535; 14%). Rows 50 (a), 79 (d), and 57 (b). "-open" restores the draft's first sentence verbatim. "-ctrl" restores a different sentence of similar length. Similarity was matched within 0.01: a 0.600/0.601, d 0.616/0.609, b 0.674/0.672. Results, % AI: a5-open 9, a5-ctrl 14, d5-open 0, d5-ctrl 2, b4-open 0, b4-ctrl 0. All six were labelled human. The opening-line-specific hypothesis is not supported. Open-versus-control gaps were −5, −2, and 0, within or near noise. Most Stage 33 scans were Basic after the free Advanced allowance ran out. Which of the six used a remaining Advanced scan was not in the supplied record.
+
+### Stage 34
+
+The unchanged bases were rescanned in pure Basic mode: a5 100, d5 24, b4 14. Those scores are identical to the earlier scores, so the Stage 33 drops are not a scan-mode artifact.
+
+### Conclusion
+
+Restoring any one sentence of the human draft verbatim inside a heavy LLM rewrite brought all three risen edits back to a human classification (6/6 reverts; drops of 86–91, 22–24, and 14 points), beyond the ~2-point rescan band. Which sentence was restored made little difference. The 6/6 count is the Stage 33 pair on a5, d5, and b4. It does not include the Stage 32 restorations.
+
+Caveats: (1) each revert also raised character similarity by about 0.07–0.14, so keeping a verbatim sentence of the draft and staying closer to the draft are not yet separated; (2) only 3 short business emails; (3) this only applies when the edit starts from a genuinely human draft. It does not lower the score of text that starts AI-written, and fresh or polished natural rewrites still score 100% AI; (4) GPTZero Model 5.0b only. The six Stage 33 similarities are 0.600, 0.601, 0.616, 0.609, 0.674, and 0.672, so about 0.70 was not the measured band. When heavily editing a human draft, keep at least one of the draft's own sentences word for word, and keep the edit at about 0.70 or higher where possible. That 0.70 figure is a margin carried from section (e), not a cutoff tested by these six reverts. Preserve every fact, uncertainty, and qualification. Never add errors or typos.

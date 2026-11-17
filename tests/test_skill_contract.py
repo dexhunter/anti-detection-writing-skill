@@ -289,34 +289,25 @@ class SkillContract(unittest.TestCase):
         skill = SKILL.read_text(encoding="utf-8")
         write = skill.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
         for token in (
-            "keep at least one of that draft's own sentences word for word",
-            "about 0.70 or higher",
-            "not a tested cutoff",
-            "6/6 reverts",
-            "86–91",
-            "22–24",
-            "14 points",
-            "−5, −2, and 0",
-            "within or near noise",
-            "not supported",
-            "one text only",
-            "35% AI",
-            "above the 21% g1 rescan",
+            "writer's own draft",
+            "edit lightly",
+            "phrasing and structure",
+            "rather than polishing every sentence",
+            "Heavy, uniform polishing",
+            "tends to get flagged",
+            "one detector version",
+            "mixed scan modes as already recorded",
             "does not guarantee 0%",
             "pure Basic mode at 100, 24, and 14",
-            "all below 0.70",
-            "about 0.07–0.14",
-            "0.600, 0.601, 0.616, 0.609, 0.674, and 0.672",
-            "genuinely human-written",
             "does not lower the score of text that starts AI-written",
-            "fresh or polished natural rewrites still score 100% AI",
-            "GPTZero Model 5.0b only",
-            "Never add errors or typos",
+            "is not a technique in this skill",
             "does not replace the light-edit note",
             "not a way to pass GPTZero",
             "#stages-32-34",
         ):
             self.assertIn(token, write, token)
+        self.assertNotIn("keep at least one of that draft's own sentences word for word", write)
+        self.assertNotIn("about 0.70 or higher", write)
         self.assertNotIn("8 drafts", write)
         self.assertNotIn("retailer", write.lower())
         research = (ROOT / "skills/anti-ai-detection-writing-skill/references/detector-research.md").read_text(encoding="utf-8")
@@ -357,13 +348,29 @@ class SkillContract(unittest.TestCase):
             "above the 21% g1 rescan",
             "Scan mode for this stage was not in the supplied record",
             "all below 0.70",
+            "not adopted as a technique",
+            "17 November 2026",
+            "Stage 41",
+            "two of the recommender's own public posts",
+            "100% AI on GPTZero Model 5.0b",
+            "No letter text is recorded",
+            "edit lightly",
+            "phrasing and structure",
         ):
             self.assertIn(token, section, token)
+        self.assertNotIn("keep at least one of the draft's own sentences word for word", section)
         self.assertNotIn("8 drafts", section)
         self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
         report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
         self.assertIn("177 scans, matching the CSV", report)
         self.assertIn('id="stages-32-34"', report)
+        self.assertIn("not adopted as a technique", report)
+        self.assertIn("Stage 41", report)
+        self.assertIn("17 November 2026", report)
+        self.assertIn("two of the recommender's own public posts", report)
+        self.assertIn("100% AI on GPTZero Model 5.0b", report)
+        self.assertIn("No letter text is recorded", report)
+        self.assertNotIn("keep at least one of that draft's own sentences word for word", report)
         self.assertNotIn("8 drafts", report)
         csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
         rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))

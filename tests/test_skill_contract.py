@@ -338,9 +338,9 @@ class SkillContract(unittest.TestCase):
             "a5 100, d5 24, b4 14",
             "6/6",
             "86–91",
-            "about 0.07–0.14",
+            "0.084 to 0.139",
             "3 short business emails",
-            "fresh or polished natural rewrites still score 100% AI",
+            "outside the ~2-point rescan band",
             "Never add errors or typos",
             "one text",
             "genuinely human draft",
@@ -359,6 +359,9 @@ class SkillContract(unittest.TestCase):
         ):
             self.assertIn(token, section, token)
         self.assertNotIn("keep at least one of the draft's own sentences word for word", section)
+        self.assertNotIn("about 0.07–0.14", section)
+        self.assertNotIn("fresh or polished natural rewrites still score 100% AI", section)
+        self.assertNotIn("within or near noise", section)
         self.assertNotIn("8 drafts", section)
         self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", section))
         report = (ROOT / "docs/reports/gptzero-results.md").read_text(encoding="utf-8")
@@ -371,6 +374,9 @@ class SkillContract(unittest.TestCase):
         self.assertIn("100% AI on GPTZero Model 5.0b", report)
         self.assertIn("No letter text is recorded", report)
         self.assertNotIn("keep at least one of that draft's own sentences word for word", report)
+        self.assertNotIn("about 0.07–0.14", report)
+        self.assertNotIn("fresh or polished natural rewrites still score 100% AI", report)
+        self.assertNotIn("within or near noise", report)
         self.assertNotIn("8 drafts", report)
         csv_path = ROOT / "docs/reports/data/gptzero-scans.csv"
         rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))

@@ -466,6 +466,117 @@ class SkillContract(unittest.TestCase):
         snapshot = (ROOT / "studies/reader-dialogue-1/frozen/skill/SKILL.txt").read_bytes()
         self.assertEqual(dialogue["exact_copies"]["frozen/skill/SKILL.txt"], hashlib.sha256(snapshot).hexdigest())
 
+    def test_formal_letter_lessons_stay_hedged_to_the_17_november_note(self):
+        skill = SKILL.read_text(encoding="utf-8")
+        intro, _, after_intro = skill.partition("## High-stakes formal writing\n")
+        self.assertIn(
+            "a human chooses the words of the whole document and that AI is used only for fact checks and small fixes",
+            intro,
+        )
+        self.assertIn(
+            "except for a high-stakes formal letter, where a flagged chunk goes back to a human and AI stays limited to fact checks and small fixes",
+            intro,
+        )
+        self.assertIn("work toward lower scores through useful edits and measure the outcome", intro)
+        section, _, _ = after_intro.partition("\n## ")
+        for token in (
+            "top-level recommendation",
+            "A human chooses the words of the whole document.",
+            "**[our scans; n=1]**",
+            "1% AI / 99% mixed",
+            "9 whole-letter rewrites",
+            "about 4% of its 4-grams",
+            "0.90",
+            "does not copy that cut",
+            "Keep every fact, uncertainty, and qualification.",
+            "Never invent a fact, an error, or a typo.",
+            "Do not copy outside text word for word as a technique.",
+            "not detector levers",
+            "type-token ratio 0.608 versus 0.514",
+            "SD 4.3 versus 9.1",
+            "7 versus 0–2",
+            "6.0 per 100 words versus 2.3",
+            "**[existing evidence, kept]**",
+            "Stage 22 already scored 100% AI on uneven sentence length",
+            "stopped using perplexity and burstiness",
+            "**[hypothesis; untested in isolation]**",
+            "enclosed CV",
+            "An unrun test is not a finding.",
+            "**[hypothesis; a tendency, not a rule]**",
+            "one-line definition scored 7%",
+            "not as a trick",
+            "4–6 sentences",
+            "demonstrates leadership",
+            "not a measured score lever",
+            "**[hypothesis; confounded]**",
+            "3 negations and 3–5 approximators",
+            "whole-text polish",
+            "AI Polished",
+            "c7 (15% AI) was a new text, c8, at 100% AI",
+            "route that part back to a human",
+            "53% overall",
+            "32%, 100%, and 7%",
+            "docs/reports/2026-11-17-human-vs-ai-letter.md",
+            "not a way to pass GPTZero",
+            "11 whole-text rewrites of one synthetic complaint",
+            "rescan of that earlier email stayed at 3% AI",
+            "only a title clause",
+            "with no human writer",
+            "older email evidence kept",
+            "not this letter's 0.90 character similarity",
+            "Both figures stay",
+            "Stage 41",
+            "two of the recommender's own public posts",
+            "Those email rows stay",
+        ):
+            self.assertIn(token, section, token)
+        self.assertNotIn("word-for-word copying of a human sentence is a technique", section)
+        self.assertNotIn("whole-text rewrites of one human-scoring email", section)
+        self.assertNotIn("had none in the body", section)
+        self.assertNotIn("no separate human writer", section)
+        write = skill.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
+        self.assertIn("are not detector levers", write)
+        self.assertIn("Use a plainer word when it is easier to read.", write)
+        self.assertIn("Vary sentence length when it improves pacing.", write)
+        self.assertIn("Do not vary it to seek a lower score.", write)
+        self.assertIn("Prefer concrete nouns and verbs.", write)
+        self.assertIn("They are not detector levers.", write)
+        self.assertIn("Stage 22 already scored 100% AI on uneven sentence length.", write)
+        self.assertIn("Route that part back to a human", write)
+        self.assertIn("not this Levenshtein margin", write)
+        self.assertIn("does not license a whole-text polish", write)
+        self.assertIn("This email note stays beside it", write)
+        self.assertNotIn("retailer", write.lower())
+        report = (ROOT / "docs/reports/2026-11-17-human-vs-ai-letter.md").read_text(encoding="utf-8")
+        for token in (
+            "Public-safe summary. It contains no letter text, names or private details.",
+            "n=1",
+            "1% AI / 99% mixed",
+            "100% AI",
+            "Don't optimise surface statistics",
+            "enclosed CV",
+            "claim → dated concrete action",
+            "whole-document score",
+            "route that part back to a human",
+            "never copy outside text word for word",
+        ):
+            self.assertIn(token, report, token)
+        self.assertIsNone(re.search(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", report))
+        research = (ROOT / "skills/anti-ai-detection-writing-skill/references/detector-research.md").read_text(encoding="utf-8")
+        self.assertIn("GPTZero says it stopped using perplexity and burstiness", research)
+        self.assertIn("Those targets stay readability advice. They are not detector levers.", research)
+        self.assertIn("type-token ratio 0.608 versus 0.514", research)
+        phrase = (ROOT / "skills/anti-ai-detection-writing-skill/references/phrase-review.md").read_text(encoding="utf-8")
+        self.assertIn("This list is a reading aid. It is not a detector lever.", phrase)
+        self.assertIn("7 stock evaluative phrases", phrase)
+        self.assertIn("They are not detector levers.", phrase)
+        evidence = (ROOT / "skills/anti-ai-detection-writing-skill/references/evidence.md").read_text(encoding="utf-8")
+        self.assertIn("## Human versus AI letter, 17 November 2026", evidence)
+        self.assertIn("uneven sentence length, plain verbs and fewer nominalizations", evidence)
+        self.assertIn("The 100% rows below stay.", evidence)
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("docs/reports/2026-11-17-human-vs-ai-letter.md", readme)
+
 
 if __name__ == "__main__":
     unittest.main()

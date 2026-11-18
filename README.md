@@ -81,6 +81,7 @@ Reports and guides in this repository. Results are experimental; none of these d
 - [Related writing skills](docs/related-skills.md): other writing skills this workflow draws on.
 - [Experimental release checks](docs/release-checks.md): completed offline release checks.
 - [Complete historical dataset](studies/results.json): 44 exact editor inputs with full results.
+- [Human versus AI letter, 17 November 2026](docs/reports/2026-11-17-human-vs-ai-letter.md): one human-written recommendation letter scored 1% AI on free-plan GPTZero 5.0b Basic; an AI baseline and 9 rewrites scored 100%. Surface statistics pointed the other way. n=1. No letter text or names. Not a way to pass GPTZero.
 
 ### Study reports
 

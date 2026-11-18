@@ -8,6 +8,8 @@ The scans in section (b) are from today’s GPTZero 5.0b work on a private ~700-
 
 Section (d) records Stages 22–25 from the same date. Those scans do not change the rules in section (c). Section (d) quotes the supplied scan results. It does not add figures from a newly opened paper.
 
+Section (e) records Stages 26–31. Stages 26–29 were scanned on 16 November 2026. Stages 30–31 were scanned on 17 November 2026. Section (e) quotes the supplied scan results. The arXiv ids in that section are the stated sources of two ideas. Section (e) does not extract figures from those papers, and it does not change the rules in section (c).
+
 ## What the 11 and 13 November notes already cover
 
 Do not re-add these as new literature:
@@ -164,3 +166,43 @@ Three fully synthetic recommendation paragraphs, interpretive framing versus pla
 Eight open Hugging Face detectors, on 122 edited texts already scored by GPTZero 5.0b, do not track GPTZero. The best was HC3-roberta, Spearman 0.20, AUC 0.61. The other seven coefficients were not in the supplied record.
 
 Smaug-Humanizer and jialinyyzz/humanizer rewrites: e04 scored 47 and 48. The supplied record does not say which model produced which of those two scores. The same-session rescan of the unchanged e04 text was 100. e01 and e07 stayed at 100. The supplied record does not give a separate score per model for e01 or for e07. Step 2 best-of-24 Smaug-Humanizer rewrites of e02, e03, e05, e06, e08, and e09 all scored 100% AI. e05, e06, e08, and e09 were labelled Possible AI Paraphrasing. A fact check for these rewrites was not in the supplied record. The supplied scores cover e01, e02, e03, e04, e05, e06, e07, e08, and e09. The recorded conclusion is that the humanizer route moved 1 of 7 emails; the supplied record does not define that denominator further. AuthorMist was unusable and was not scanned. No LoRA pilot was run. Modal cost was about $0.37.
+
+---
+
+## (e) Stages 26–31, 16–17 November 2026
+
+All scans below are free-plan GPTZero Model 5.0b, scores read in Basic view. % is AI probability. No email address, account name, writer name, or message body is recorded. Mixed and human percentages were not in the supplied record. These are small samples and one detector version. They are not a method for passing a detector. They do not change the rules in section (c): the request stays last, round-trip translation stays an experiment only, and when readability and a lower score conflict, keep natural fact-complete English. The hedged human-draft note in the skill is an addition beside those rules. It does not lower the score of text that starts AI-written. The labelled evidence note is in [evidence limits](../skills/anti-ai-detection-writing-skill/references/evidence.md). The per-text rows that were logged are in the [results report](reports/gptzero-results.md).
+
+**[evidence]** Stages 26–27 closed two humanizer routes. Stages 28–31 preserved a human classification only when the starting draft was already human-written. That is not a way to lower the score of AI-written text.
+
+### Stage 26
+
+16 Nov 2026. Small open instruct models and HF rephrasers, prompted as humanizers, on 8 synthetic calibration emails, 8 samples each, run on Modal (about $0.83). Fact-check pass counts were best for Qwen3-4B-Instruct-2507, then Llama-3.2-3B. The supplied record does not give the pass counts. DIPPER-XXL produced translationese and broke numbers. Gemma-3-4B, Phi-4-mini, Qwen2.5-3B, a 1.5B ARI model, and gohumanize mostly copied input or broke facts. Those models were not given a Stage 26 GPTZero score.
+
+Scans: Qwen3-4B e05, e08, e03 = 100/100/100. Llama-3.2-3B e01, e02, e09 = 100/100/100. e01 and e02 were labelled Possible AI Paraphrasing. 0/6 moved. Together with Stage 25, off-the-shelf HF models moved only e04. Route closed. The scan line's "Qwen3-4B" is the supplied abbreviation of Qwen3-4B-Instruct-2507.
+
+### Stage 27
+
+16 Nov 2026. A base-model humanizer adapter from [arXiv:2605.19516](https://arxiv.org/abs/2605.19516) (Qwen3-4B-Base). 144 outputs. Only 2 of 48 first-pass outputs kept every fact, and 0/48 kept every fact on passes 2 and 3. Six scans (2 fact-passing pass-1 outputs, the e05 control, and 3 multi-pass outputs) were all 100% AI and were labelled Possible AI Paraphrasing, the control included. Route closed. No per-text row was logged: separate file ids for those six scans were not in the supplied record. The arXiv id is the stated source of the adapter. This note does not extract figures from that paper.
+
+### Stage 28
+
+16 Nov. The idea is from [arXiv:2608.11256](https://arxiv.org/abs/2608.11256) (human draft + light LLM edit). Two genuine human emails, Enron AESLC test rows 50 = a and 57 = b. LLM edits were measured by similarity = 1 − Levenshtein/max_len, where Levenshtein is the character edit distance and max_len is the length of the longer text. There is no similarity script in this repo. a0 orig 0%, a1 (0.898) 0%, a2 (0.701) 6%; b0 0%, b1 (0.904) 0%, b2 (0.723) 0%. The arXiv id is the stated source of the idea. This note does not extract figures from that paper. No message body is published.
+
+### Stage 29
+
+16 Nov. Heavier rewrites. New draft c is row 65. c0 0%, c4 (0.654) 0%, c5 (0.380) 0%; b4 (0.535) 14%; b5 (0.400) 0%; a5 (0.516) 100% AI. Similarity alone does not predict the flip.
+
+### Stage 30
+
+17 Nov. A register hypothesis (keep the draft's casual voice) was tested. a3 (0.715) 3%; a4 casual (0.502) 100%; a5 rescan 100% (repeats). New draft d is row 79. d0 0%, d4 keep-register (0.591) 0%, d5 formal (0.500) 24%. The register hypothesis was not supported (a4 casual also flipped).
+
+### Stage 31
+
+17 Nov. Three new drafts: rows 101 (f), 119 (g, an assessment/judgement-style note), and 170 (h). f0 0, f1 (0.740) 0; g0 2, g1 (0.751) 21; h0 0, h1 (0.764) 0; b3 (0.655) 0.
+
+### Tally
+
+LLM edits of human drafts at ≥0.70 similarity: 8/8 recorded edits still classed human (a1, a2, a3, b1, b2, f1, g1, h1). That 8/8 is eight edits, not eight drafts. Seven of those eight were 0–6% AI. g1 rose to 21% (+19, beyond the ~2-point rescan band) on the assessment/judgement-style draft. 0.50–0.70 is text-dependent (recorded AI %: b3 0, b4 14, c4 0, d4 0, a4 100, a5 100, d5 24%). Below 0.50: b5, c5 0%.
+
+When a human draft exists, polish it lightly and keep similarity to the draft at roughly ≥0.75 (a conservative margin, not a tested cutoff). Check facts against the draft. Caveats: 7 recorded drafts (AESLC test rows 50, 57, 65, 79, 101, 119, and 170). An eighth draft is not in those rows and is not counted. Lengths were not logged. One upward drift (g1). Not tested on long documents, and it does not help text that starts AI-written. It does not guarantee 0%.

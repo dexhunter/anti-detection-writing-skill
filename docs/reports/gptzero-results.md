@@ -1,8 +1,8 @@
 # GPTZero experiment results
 
-This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, Stages 1–15, and Stages 22–25. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times for the Stages 1–15 log are in Europe/London. The last scan in that log is 13 Nov 2026, about 03:56 Europe/London. Stage 16, later the same day, is a separate note: [stage-16-pot-handle.md](stage-16-pot-handle.md). Those scans are not in the CSV. Stages 22–25 were scanned on 16 Nov 2026. No clock time was logged for them.
+This is a results record of logged GPTZero Model 5.0b (free plan) scans from the calibration batch, the Wood to Water tests, Stages 1–15, and Stages 22–31. It is not a method for passing GPTZero. Figures are taken from the scan logs and are shown without rounding. Where a log field is missing, the table says “not logged”. Times for the Stages 1–15 log are in Europe/London. The last scan in that log is 13 Nov 2026, about 03:56 Europe/London. Stage 16, later the same day, is a separate note: [stage-16-pot-handle.md](stage-16-pot-handle.md). Those scans are not in the CSV. Stages 22–29 were scanned on 16 Nov 2026, and Stages 30–31 on 17 Nov 2026. No clock time was logged for them.
 
-Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (131 scans; accounts redacted; no source-text bodies, no document URLs, no credentials). The first 114 rows are the calibration batch, Wood to Water, and Stages 1–15. Seventeen further rows are the Stage 24 and Stage 25 scans that have a per-text score. Stages 22 and 23 are aggregates in the narrative below (21 scans and 9 scans, all 100% AI) and have no CSV rows. The record for those two stages is the count and the uniform result, not a per-text table.
+Companion data: [data/gptzero-scans.csv](data/gptzero-scans.csv) (162 scans; accounts redacted; no source-text bodies, no document URLs, no credentials). The first 114 rows are the calibration batch, Wood to Water, and Stages 1–15. Seventeen further rows are the Stage 24 and Stage 25 scans that have a per-text score. Thirty-one further rows are the Stage 26, 28, 29, 30, and 31 scans that have a per-text score. Stages 22 and 23 are aggregates in the narrative below (21 scans and 9 scans, all 100% AI) and have no CSV rows. Stage 27’s six scans are also an aggregate (all 100% AI) and have no CSV rows. The record for those stages is the count and the uniform result, not a per-text table.
 
 ## Scope
 
@@ -12,13 +12,16 @@ Two comparability notes apply throughout. The Stage 14 and Stage 15 panels were 
 
 Stages 22–25 were Basic scans on the free plan, Model 5.0b, on 16 Nov 2026. Mixed and human percentages, and clock times, were not in the supplied record. No email address or account name is published. These are small samples, single scans, and one detector version.
 
+Stages 26–31 were Basic scans on the free plan, Model 5.0b, with the score read in Basic view. Stages 26–29 were 16 Nov 2026. Stages 30–31 were 17 Nov 2026. Mixed and human percentages, and clock times, were not in the supplied record. No email address, account name, writer name, or message body is published. Stage 26 used the existing synthetic calibration emails. Stages 28–31 used public Enron corpus emails from the AESLC test split, named by test-row number. These are small samples and one detector version. They are not a method for passing GPTZero. Light edits in Stages 28–31 preserved a human classification only when the starting draft was already human-written. They do not lower the score of text that starts AI-written.
+
 All listed customer-service emails except the Wood to Water chaser are synthetic test scenarios. Wood to Water scores are included, but the source texts are withheld because they contain a real retailer contact name and order number.
 
 ## Progress
 
 | Measure | Value | Note |
 | --- | --- | --- |
-| GPTZero scans in the CSV | 131 | 114 through Stage 15; 17 per-text rows for Stages 24–25. Stage 11 had no scans (0 of 160 samples were fact-complete). Stages 22–23 (30 scans, all 100% AI) are narrative aggregates and are not rows. Stage 16 is not in the CSV. |
+| GPTZero scans in the CSV | 162 | 114 through Stage 15; 17 per-text rows for Stages 24–25; 31 per-text rows for Stages 26 and 28–31. Stage 11 had no scans (0 of 160 samples were fact-complete). Stages 22–23 (30 scans, all 100% AI) and Stage 27 (6 scans, all 100% AI) are narrative aggregates and are not rows. Stage 16 is not in the CSV. |
+| Human-draft edits at similarity ≥ 0.70 still classed human | 8/8 | Stages 28–31. Eight recorded edits, not eight drafts. The committed rows name 7 drafts; an eighth draft is not counted. Seven at 0–6% AI; g1 rose to 21% (+19). Does not lower the score of text that starts AI-written, and does not guarantee 0%. |
 | Best kettle fact-complete AI % | 13% | Stage 8 f1 and Stage 9 Basic rescan; one email |
 | Best blender with no invented details | 100% | Stage 14 b5 and Stage 15 c1, c2; fact-complete |
 | Wood to Water v5 AI % | 3% | Advanced scan; one email; modes differ from v1–v4 |
@@ -35,6 +38,8 @@ Starting scores below are the Calib synthetic baselines, or the Wood to Water or
 | Wrong colour | 100 | 30 | 30 |
 
 **[evidence]** Stages 22–23: 30 natural fact-complete recommendation-letter variants scored 100% AI. Stage 24: six interpretive-versus-plain-record scans of three fully synthetic recommendation paragraphs, all 100% AI. Stage 25: off-the-shelf humanizers moved 1 of 7 emails. These are small samples, single scans, and one detector version. They do not change the skill rules: keep the request last, keep round-trip translation experiment-only, and when readability and a score conflict, keep natural fact-complete English. The scan record is [Stages 22–25](#stages-22-25).
+
+**[evidence]** Stages 26–27: the off-the-shelf and adapter humanizer routes closed. Stage 26 moved 0/6. Stage 27’s six scans were all 100% AI. Stages 28–31 edited public human drafts. Light edits preserved a human classification only when the draft was already human-written. They do not lower the score of text that starts AI-written. The scan record is [Stages 26–31](#stages-26-31).
 
 Kettle 13% is Stage 8 f1 and its Stage 9 Basic rescan (Sue Hall, dates folded in). Stage 12 e01-add later scored 22% on the same scenario. Jacket has no fact-complete result below 100%; the unedited raw scored 18%, and the Stage 14 address tests scored 29% and 38%, but those texts are not fact-complete. Stage 25 humanizer rewrites of that email scored 47 and 48. A fact check for those rewrites was not in the supplied record, and the same-session rescan of the unchanged email was 100. Blender 13% in the middle column is b3-rescan, which still has the invented address and both NC-350W model numbers; b4, with the address replaced but the model numbers kept, scored 49%. The first fact-complete blender with no invented details, b5, scored 100%, and Stage 15 c1 and c2 also scored 100%. Lamp never moved off 100%, and its raw text already scored 100% and included leaked template advice. Wood to Water v5 scored 3% on an Advanced scan; the original and v1–v4, all 100%, were scanned before the free Basic option disappeared, so the modes are not the same. Wrong colour 30% is the Stage 2 stitched candidate e10-halo; the later fact-conditioned edit e10-r2 scored 100%.
 
@@ -115,6 +120,108 @@ Eight open Hugging Face detectors, scored on 122 edited texts that GPTZero 5.0b 
 
 Smaug-Humanizer and jialinyyzz/humanizer rewrites: e04 scored 47 and 48. The supplied record does not say which model produced which of those two scores. The same-session rescan of the unchanged e04 text was 100. e01 and e07 stayed at 100. The supplied record does not give a separate score per model for e01 or for e07. Step 2 best-of-24 Smaug-Humanizer rewrites of e02, e03, e05, e06, e08, and e09 all scored 100% AI. e05, e06, e08, and e09 were labelled Possible AI Paraphrasing. A fact check for these rewrites was not in the supplied record. The supplied scores cover e01, e02, e03, e04, e05, e06, e07, e08, and e09. The recorded conclusion is that the humanizer route moved 1 of 7 emails; the supplied record does not define that denominator further. AuthorMist was unusable and has no scan row. No LoRA pilot was run. Modal cost was about $0.37.
 
+<a id="stages-26-31"></a>
+
+## Stages 26–31
+
+Scanned 16–17 Nov 2026. GPTZero Model 5.0b, free plan, scores read in Basic view. % below is AI probability. No email address, account name, writer name, or message body is recorded. Mixed % and human % were not in the supplied record. Clock times were not in the supplied record. File ids in the CSV for these stages are scan labels; disk filenames were not logged. These are small samples and one detector version. They are not a method for passing GPTZero. Stages 26–27 do not change the skill rules. The only skill addition from Stages 28–31 is a hedged note: when a human-written draft already exists, polish it lightly and keep similarity to that draft at roughly 0.75 or higher. That note does not lower the score of text that starts AI-written. It does not replace the other rules: keep the request last, keep round-trip translation experiment-only, and when readability and a score conflict, keep natural fact-complete English.
+
+Similarity, where a number is shown, is 1 − Levenshtein/max_len. Levenshtein is the character edit distance, and max_len is the length of the longer text. This repo’s `scripts/` directory holds the study checker only, and the skill scripts check facts, receipts, and detectors. A similarity helper does not fit those jobs, so the formula is recorded in prose. Unedited drafts have no similarity in the supplied record.
+
+### Stage 26
+
+16 Nov 2026. Small open instruct models and HF rephrasers, prompted as humanizers, on 8 synthetic calibration emails, 8 samples each, run on Modal (about $0.83). Fact-check pass counts were best for Qwen3-4B-Instruct-2507, then Llama-3.2-3B. The supplied record does not give the pass counts, only that order. DIPPER-XXL produced translationese and broke numbers. Gemma-3-4B, Phi-4-mini, Qwen2.5-3B, a 1.5B ARI model, and gohumanize mostly copied input or broke facts. Those six models have no GPTZero row in this stage.
+
+The scan line abbreviates Qwen3-4B-Instruct-2507 as Qwen3-4B. Six scans, all 100% AI. 0/6 moved. e01 and e02 were labelled Possible AI Paraphrasing. A label for the other four scans was not in the supplied record.
+
+| Model | Email | AI % | Label |
+| --- | --- | ---: | --- |
+| Qwen3-4B-Instruct-2507 | Lamp (e05) | 100 | not logged |
+| Qwen3-4B-Instruct-2507 | Missing delivery (e08) | 100 | not logged |
+| Qwen3-4B-Instruct-2507 | Double charge (e03) | 100 | not logged |
+| Llama-3.2-3B | Kettle (e01) | 100 | Possible AI Paraphrasing |
+| Llama-3.2-3B | Boots not received (e02) | 100 | Possible AI Paraphrasing |
+| Llama-3.2-3B | Pre-sale price (e09) | 100 | not logged |
+
+Together with Stage 25, off-the-shelf HF models moved only e04. Route closed. These six scores are CSV rows.
+
+### Stage 27
+
+16 Nov 2026. A base-model humanizer adapter from arXiv 2605.19516 (Qwen3-4B-Base). The arXiv id is the stated source of the adapter. This note does not extract figures from that paper.
+
+144 outputs. Only 2 of 48 first-pass outputs kept every fact. 0/48 kept every fact on pass 2, and 0/48 on pass 3. Six scans (2 fact-passing pass-1 outputs, the e05 control, and 3 multi-pass outputs) were all 100% AI and were labelled Possible AI Paraphrasing, the control included. Route closed.
+
+Separate file ids for those six scans were not in the supplied record. Which emails the two fact-passing outputs and the three multi-pass outputs were is not in the supplied record, beyond the e05 control. Stage 27 has no CSV rows.
+
+### Stage 28
+
+16 Nov. The idea is from arXiv 2608.11256 (human draft + light LLM edit). This note does not extract figures from that paper. Two genuine human emails from the public Enron corpus, AESLC test split: row 50 = a, row 57 = b. No message body is published.
+
+| Id | Row | Similarity | AI % |
+| --- | ---: | ---: | ---: |
+| a0 | 50 | not logged | 0 |
+| a1 | 50 | 0.898 | 0 |
+| a2 | 50 | 0.701 | 6 |
+| b0 | 57 | not logged | 0 |
+| b1 | 57 | 0.904 | 0 |
+| b2 | 57 | 0.723 | 0 |
+
+a0 is the unedited draft. These six scores are CSV rows.
+
+### Stage 29
+
+16 Nov. Heavier rewrites. New draft c is AESLC test row 65. Similarity alone does not predict the flip.
+
+| Id | Row | Similarity | AI % | Note |
+| --- | ---: | ---: | ---: | --- |
+| c0 | 65 | not logged | 0 | Unedited draft |
+| c4 | 65 | 0.654 | 0 | |
+| c5 | 65 | 0.380 | 0 | |
+| b4 | 57 | 0.535 | 14 | |
+| b5 | 57 | 0.400 | 0 | |
+| a5 | 50 | 0.516 | 100 | 100% AI |
+
+These six scores are CSV rows.
+
+### Stage 30
+
+17 Nov. A register hypothesis (keep the draft’s casual voice) was tested. It was not supported: a4 casual also flipped. New draft d is AESLC test row 79. The a5 row is a rescan of the Stage 29 text. The supplied record says the 100% result repeats. It does not give a second similarity.
+
+| Id | Row | Similarity | AI % | Note |
+| --- | ---: | ---: | ---: | --- |
+| a3 | 50 | 0.715 | 3 | |
+| a4 | 50 | 0.502 | 100 | Casual register kept |
+| a5 | 50 | 0.516 | 100 | Rescan; repeats |
+| d0 | 79 | not logged | 0 | Unedited draft |
+| d4 | 79 | 0.591 | 0 | Keep-register |
+| d5 | 79 | 0.500 | 24 | Formal register |
+
+These six scores are CSV rows.
+
+### Stage 31
+
+17 Nov. Three new drafts: AESLC test row 101 (f), row 119 (g, an assessment/judgement-style note), and row 170 (h). b3 is a further edit of row 57.
+
+| Id | Row | Similarity | AI % |
+| --- | ---: | ---: | ---: |
+| f0 | 101 | not logged | 0 |
+| f1 | 101 | 0.740 | 0 |
+| g0 | 119 | not logged | 2 |
+| g1 | 119 | 0.751 | 21 |
+| h0 | 170 | not logged | 0 |
+| h1 | 170 | 0.764 | 0 |
+| b3 | 57 | 0.655 | 0 |
+
+f0, g0, and h0 are the unedited drafts. These seven scores are CSV rows.
+
+### Tally
+
+LLM edits of human drafts at ≥0.70 similarity: 8/8 recorded edits still classed human (a1, a2, a3, b1, b2, f1, g1, h1). That 8/8 is eight edits, not eight drafts. Seven of those eight were 0–6% AI. g1 rose to 21% (+19, beyond the ~2-point rescan band) on the assessment/judgement-style draft. 0.50–0.70 is text-dependent (recorded AI %: b3 0, b4 14, c4 0, d4 0, a4 100, a5 100, d5 24%). Below 0.50: b5, c5 0%.
+
+The suggested workflow, recorded as a hedged skill note and not as a bypass: when a human draft exists, polish it lightly and keep similarity to the draft at roughly ≥0.75 (a conservative margin, not a tested cutoff). Check facts against the draft. Caveats: 7 recorded drafts. An eighth draft is not in the committed rows and is not counted. Lengths were not logged. One upward drift (g1). Not tested on long documents, and it does not help text that starts AI-written. It only preserved a human classification when the starting draft was already human-written. It does not guarantee 0%.
+
+The seven recorded drafts are AESLC test rows 50 (a), 57 (b), 65 (c), 79 (d), 101 (f), 119 (g), and 170 (h). An eighth draft is not in those rows and is not counted.
+
 ## Open hypotheses
 
 These are recorded as hypotheses, not as findings.
@@ -126,9 +233,9 @@ These are recorded as hypotheses, not as findings.
 
 ## Every recorded scan
 
-131 scans, matching the CSV. Scan level is normalised to basic, advanced, or unknown. Unknown includes logs with no scan-level field, Stage 1 s1-01 (logged as advanced, with the page later showing basic), Stage 10 (no scanType in the URL; the panel showed Advanced Scan and 0 advanced left), calibration scans (the log notes 0 advanced scans left and sentence highlighting, but has no scan-level column), and Wood to Water original plus v1–v4 (scanned before the free Basic option disappeared). Stages 22 and 23 are not in this table.
+162 scans, matching the CSV. Scan level is normalised to basic, advanced, or unknown. Unknown includes logs with no scan-level field, Stage 1 s1-01 (logged as advanced, with the page later showing basic), Stage 10 (no scanType in the URL; the panel showed Advanced Scan and 0 advanced left), calibration scans (the log notes 0 advanced scans left and sentence highlighting, but has no scan-level column), and Wood to Water original plus v1–v4 (scanned before the free Basic option disappeared). Stages 22, 23, and 27 are not in this table.
 
-Exact timestamps are in the CSV and are not repeated in the table below. The account column is “not logged” on every row. The Stage 15 note's “free account A” is only a redacted label in this report; it is not a value in the CSV. No account name is published for Stages 22–25. Mixed % is 0 wherever it was logged, and is “not logged” for the ten Wood to Water texts that scored 100% AI and for every Stage 24 and Stage 25 row; v5 mixed was 0. Human % for those Stage 24 and Stage 25 rows is “not logged”. One Stage 24 scan was labelled Possible AI Paraphrasing; the supplied record does not say which of the six.
+Exact timestamps are in the CSV and are not repeated in the table below. The account column is “not logged” on every row. The Stage 15 note's “free account A” is only a redacted label in this report; it is not a value in the CSV. No account name is published for Stages 22–31. Mixed % is 0 wherever it was logged, and is “not logged” for the ten Wood to Water texts that scored 100% AI and for every Stage 24, 25, 26, 28, 29, 30, and 31 row; v5 mixed was 0. Human % for those rows is “not logged”. One Stage 24 scan was labelled Possible AI Paraphrasing; the supplied record does not say which of the six. Stage 26 labels Possible AI Paraphrasing on e01 and e02 only. Stage 27’s six scans, which are not rows, were all labelled Possible AI Paraphrasing.
 
 | Stage | Email | File | Edit | AI % | Human % | Level |
 | --- | --- | --- | --- | ---: | ---: | --- |
@@ -263,11 +370,48 @@ Exact timestamps are in the CSV and are not repeated in the table below. The acc
 | Stage 25 | Charge after cancellation (e06) | `e06-smaug` | Step 2 best-of-24 Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
 | Stage 25 | Missing delivery (e08) | `e08-smaug` | Step 2 best-of-24 Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
 | Stage 25 | Pre-sale price (e09) | `e09-smaug` | Step 2 best-of-24 Smaug-Humanizer rewrite; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 26 | Lamp (e05) | `e05-qwen3-4b` | Qwen3-4B-Instruct-2507 prompted as a humanizer; scan line says Qwen3-4B | 100 | not logged | basic |
+| Stage 26 | Missing delivery (e08) | `e08-qwen3-4b` | Qwen3-4B-Instruct-2507 prompted as a humanizer; scan line says Qwen3-4B | 100 | not logged | basic |
+| Stage 26 | Double charge (e03) | `e03-qwen3-4b` | Qwen3-4B-Instruct-2507 prompted as a humanizer; scan line says Qwen3-4B | 100 | not logged | basic |
+| Stage 26 | Kettle (e01) | `e01-llama-3.2-3b` | Llama-3.2-3B prompted as a humanizer; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 26 | Boots not received (e02) | `e02-llama-3.2-3b` | Llama-3.2-3B prompted as a humanizer; Possible AI Paraphrasing | 100 | not logged | basic |
+| Stage 26 | Pre-sale price (e09) | `e09-llama-3.2-3b` | Llama-3.2-3B prompted as a humanizer | 100 | not logged | basic |
+| Stage 28 | Enron AESLC test row 50 (a) | `a0` | Unedited human draft | 0 | not logged | basic |
+| Stage 28 | Enron AESLC test row 50 (a) | `a1` | LLM edit; similarity 0.898 | 0 | not logged | basic |
+| Stage 28 | Enron AESLC test row 50 (a) | `a2` | LLM edit; similarity 0.701 | 6 | not logged | basic |
+| Stage 28 | Enron AESLC test row 57 (b) | `b0` | Unedited human draft | 0 | not logged | basic |
+| Stage 28 | Enron AESLC test row 57 (b) | `b1` | LLM edit; similarity 0.904 | 0 | not logged | basic |
+| Stage 28 | Enron AESLC test row 57 (b) | `b2` | LLM edit; similarity 0.723 | 0 | not logged | basic |
+| Stage 29 | Enron AESLC test row 65 (c) | `c0` | Unedited human draft | 0 | not logged | basic |
+| Stage 29 | Enron AESLC test row 65 (c) | `c4` | Heavier LLM edit; similarity 0.654 | 0 | not logged | basic |
+| Stage 29 | Enron AESLC test row 65 (c) | `c5` | Heavier LLM edit; similarity 0.380 | 0 | not logged | basic |
+| Stage 29 | Enron AESLC test row 57 (b) | `b4` | Heavier LLM edit; similarity 0.535 | 14 | not logged | basic |
+| Stage 29 | Enron AESLC test row 57 (b) | `b5` | Heavier LLM edit; similarity 0.400 | 0 | not logged | basic |
+| Stage 29 | Enron AESLC test row 50 (a) | `a5` | Heavier LLM edit; similarity 0.516 | 100 | not logged | basic |
+| Stage 30 | Enron AESLC test row 50 (a) | `a3` | LLM edit; similarity 0.715 | 3 | not logged | basic |
+| Stage 30 | Enron AESLC test row 50 (a) | `a4` | Casual register kept; similarity 0.502 | 100 | not logged | basic |
+| Stage 30 | Enron AESLC test row 50 (a) | `a5-rescan` | Rescan of a5; 100% repeats. Stage 29 similarity 0.516 | 100 | not logged | basic |
+| Stage 30 | Enron AESLC test row 79 (d) | `d0` | Unedited human draft | 0 | not logged | basic |
+| Stage 30 | Enron AESLC test row 79 (d) | `d4` | Keep-register edit; similarity 0.591 | 0 | not logged | basic |
+| Stage 30 | Enron AESLC test row 79 (d) | `d5` | Formal register; similarity 0.500 | 24 | not logged | basic |
+| Stage 31 | Enron AESLC test row 101 (f) | `f0` | Unedited human draft | 0 | not logged | basic |
+| Stage 31 | Enron AESLC test row 101 (f) | `f1` | LLM edit; similarity 0.740 | 0 | not logged | basic |
+| Stage 31 | Enron AESLC test row 119 (g) | `g0` | Unedited human draft; assessment/judgement-style note | 2 | not logged | basic |
+| Stage 31 | Enron AESLC test row 119 (g) | `g1` | LLM edit; similarity 0.751 | 21 | not logged | basic |
+| Stage 31 | Enron AESLC test row 170 (h) | `h0` | Unedited human draft | 0 | not logged | basic |
+| Stage 31 | Enron AESLC test row 170 (h) | `h1` | LLM edit; similarity 0.764 | 0 | not logged | basic |
+| Stage 31 | Enron AESLC test row 57 (b) | `b3` | LLM edit; similarity 0.655 | 0 | not logged | basic |
 
 
 ## What is in the skill
 
-[PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9), titled “Record a preliminary single-fact placement probe”, was merged on 12 Nov 2026, 16:29 Europe/London, as commit `4be38604419aadcdccb1f4d947bb255ecbed5c0b`. It covers the Stage 6–9 kettle tests. The skill also includes a preliminary Stage 10–15 note. Status for those stages below is as of 13 Nov 2026, Europe/London. The Stages 22–25 bullet is 16 Nov 2026.
+[PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9), titled “Record a preliminary single-fact placement probe”, was merged on 12 Nov 2026, 16:29 Europe/London, as commit `4be38604419aadcdccb1f4d947bb255ecbed5c0b`. It covers the Stage 6–9 kettle tests. The skill also includes a preliminary Stage 10–15 note. Status for those stages below is as of 13 Nov 2026, Europe/London. The Stages 22–25 bullet is 16 Nov 2026. The Stages 26–31 bullet is 16–17 Nov 2026.
+
+In the skill from Stages 28–31, as a hedged note only:
+
+- When a human-written draft already exists, polish it lightly and keep similarity to that draft at roughly 0.75 or higher. Similarity is 1 − Levenshtein/max_len. Check facts against the draft.
+- That note only preserved a human classification when the starting draft was already human-written. It does not lower the score of text that starts AI-written, and it does not guarantee 0%. The committed rows name 7 drafts. An eighth draft is not in those rows and is not counted. Lengths were not logged. There was one upward drift (g1, to 21%, +19). It was not tested on long documents. Roughly 0.75 is a conservative margin, not a tested cutoff.
+- The note does not replace the other writing rules.
 
 Already in the skill from PR #9:
 
@@ -290,6 +434,8 @@ Not in the skill:
 - The Stage 14 blender address-slot contrast is not stated as its own result. b1, with the order number kept in the address slot, scored 39%. b2, with the address deleted and the order number moved to the greeting, scored 100%.
 - Wood to Water v5 (3% AI, Advanced, nominalised style) is a single development observation, without making it a rule. It is recorded in this report and in the [limitations guide](../when-it-may-not-help.md), not in the skill.
 - Stages 22–25 (16 Nov 2026) stay a negative result. They are recorded here and as a labelled note in the [evidence limits](../../skills/anti-ai-detection-writing-skill/references/evidence.md). They do not change the skill: the request stays last, round-trip translation stays an experiment only, and a readability conflict is still resolved by keeping natural fact-complete English. They are not a new editing method.
+- Stages 26–27 (16 Nov 2026) stay a negative result. Off-the-shelf HF humanizers, together with Stage 25, moved only e04, and the adapter route’s six scans were all 100% AI. Those routes are closed. They are not a new editing method.
+- The 0.50–0.70 band, the below-0.50 scores, and the register hypothesis are not rules. Stage 30 did not support keeping a casual voice as a score lever. Matching register stays the readability preference already in the skill.
 
 ## Gaps in the logs
 
@@ -305,6 +451,10 @@ Not in the skill:
 - Stages 22 and 23 have no per-text CSV rows. The supplied result is 21 scans and 9 scans, each at 100% AI. File names, word counts, mixed %, human %, and clock times for those scans were not in the supplied record.
 - Stages 24 and 25 have no logged mixed % or human %, and no clock time. The CSV `file` values are scan labels, not logged disk filenames. Stage 24 does not identify which of the six scans carried the Possible AI Paraphrasing label. Stage 25 does not say which humanizer produced the e04 score of 47 and which produced 48, and it does not give separate per-model scores for e01 or e07. A fact check for the humanizer rewrites was not in the supplied record. The other seven open-detector coefficients, besides HC3-roberta, were not in the supplied record. AuthorMist was unusable and was not scanned. The recorded conclusion is that humanizers moved 1 of 7 emails. The per-text scores that were supplied are the rows above, including the e04 scores of 47 and 48 and the same-session rescan of the unchanged e04 text at 100.
 - No email address, account name, referee, applicant, or recommendation-letter wording is published for Stages 22–25.
+- Stages 26, 28, 29, 30, and 31 have no logged mixed % or human %, and no clock time. The CSV `file` values are scan labels, not logged disk filenames. Stage 26 does not give numeric fact-check pass counts, only the order Qwen3-4B-Instruct-2507 then Llama-3.2-3B, and it does not give a GPTZero score for DIPPER-XXL, Gemma-3-4B, Phi-4-mini, Qwen2.5-3B, the 1.5B ARI model, or gohumanize. A paraphrase label was supplied for e01 and e02 only.
+- Stage 27 has no per-text CSV rows. The supplied result is 6 scans, each at 100% AI, each labelled Possible AI Paraphrasing. The composition is 2 fact-passing pass-1 outputs, the e05 control, and 3 multi-pass outputs. File names for those six scans were not in the supplied record. Fact-check counts are 144 outputs, 2 of 48 first-pass outputs kept every fact, and 0/48 on pass 2 and on pass 3.
+- Stages 28–31 do not publish the Enron email bodies or any writer or subject name. Draft letters in the committed rows are a (row 50), b (row 57), c (row 65), d (row 79), f (row 101), g (row 119), and h (row 170): 7 recorded drafts. An eighth draft is not in those rows and is not counted. Unedited drafts have no similarity in the supplied record. The a5 rescan does not give a second similarity; the 0.516 figure is the Stage 29 measurement.
+- No email address or account name is published for Stages 26–31.
 
 ## Sources
 
@@ -314,3 +464,4 @@ Not in the skill:
 - `/workspace/gptzero-w2w/receipt-5.0b-redacted.json` (scores only; texts withheld)
 - [PR #9](https://github.com/dexhunter/anti-detection-writing-skill/pull/9)
 - Stages 22–25: the 16 Nov 2026 scan results recorded in this note (Model 5.0b, free plan, Basic). A scan-log path was not supplied with those results.
+- Stages 26–31: the 16–17 Nov 2026 scan results recorded in this note (Model 5.0b, free plan, Basic view). A scan-log path was not supplied with those results.

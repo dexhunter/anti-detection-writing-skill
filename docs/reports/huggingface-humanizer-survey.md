@@ -1,8 +1,8 @@
 # Hugging Face survey: existing humanizer and paraphraser models
 
-**Desk survey of model cards.** As of this survey, none of the models below had been run by us. Counts, licences, and detector claims are taken from the cited cards, papers, and pages, not from our own runs. A later session on 16 Nov 2026 ran Smaug-Humanizer and jialinyyzz/humanizer. AuthorMist was unusable and was not scanned. Those GPTZero Model 5.0b scores are Stage 25 in the [results report](gptzero-results.md). They are not part of the card figures below.
+**Desk survey of model cards.** As of this survey, none of the models below had been run by us. Counts, licences, and detector claims are taken from the cited cards, papers, and pages, not from our own runs. A later session on 16 Nov 2026 ran Smaug-Humanizer and jialinyyzz/humanizer. AuthorMist was unusable and was not scanned. Those GPTZero Model 5.0b scores are Stage 25 in the [results report](gptzero-results.md). They are not part of the card figures below. Stage 26, the same day, prompted further open instruct models and HF rephrasers as humanizers, including DIPPER-XXL and gohumanize, which appear below. DIPPER-XXL produced translationese and broke numbers. gohumanize mostly copied input or broke facts. Neither has a Stage 26 GPTZero score. The six Stage 26 scans are Qwen3-4B-Instruct-2507 and Llama-3.2-3B in the results report, not in the card figures below.
 
-Survey date: 13 Nov 2026, Europe/London. Figures are taken from Hugging Face Hub (`hub_repo_details` / `hub_repo_search` / model and dataset cards) and from the cited papers or pages, as of that date. Download and like counts can change and sometimes differed slightly between Hub tools in the same session; the numbers below prefer `hub_repo_details` when both were available. This survey does not evaluate the models on our emails, and it does not endorse them as a way to pass GPTZero. The Stage 25 scores are a separate record.
+Survey date: 13 Nov 2026, Europe/London. Figures are taken from Hugging Face Hub (`hub_repo_details` / `hub_repo_search` / model and dataset cards) and from the cited papers or pages, as of that date. Download and like counts can change and sometimes differed slightly between Hub tools in the same session; the numbers below prefer `hub_repo_details` when both were available. This survey does not evaluate the models on our emails, and it does not endorse them as a way to pass GPTZero. The Stage 25 scores, and the Stage 26 fact-check notes and scans, are a separate record.
 
 Most high-download Hub hits for the query “humanizer” are GGUF redistributions of the same two 12B checkpoints (`jialinyyzz/humanizer` and `abacusai/Smaug-Humanizer`). Those redistributions are omitted here unless they are the canonical weights. A separate cluster of commercial “AI humanizer” websites appears in Hub *datasets* and org pages; those are closed tools, not open weights, and are noted only at the end.
 
@@ -31,7 +31,7 @@ Most high-download Hub hits for the query “humanizer” are GGUF redistributio
 - **Licence:** Apache-2.0 (model); CC-BY-4.0 (dataset).
 - **Downloads / likes (13 Nov 2026):** model 6.4K downloads, 3 likes (`hub_repo_details`). Dataset: 566 downloads (likes not returned as a number in that details call).
 - **Claimed detector results:** the model card states, explicitly, “Educational demo; no claims about AI detectors.”
-- **Independently backed?** There is no detector-score claim on the card to back. The training data and pipeline are published.
+- **Independently backed?** There is no detector-score claim on the card to back. The training data and pipeline are published. Stage 26 later prompted gohumanize as a humanizer. The supplied record says it mostly copied input or broke facts. It was not given a Stage 26 GPTZero score.
 
 ## 4. kalpeshk2011/dipper-paraphraser-xxl
 
@@ -45,7 +45,7 @@ Most high-download Hub hits for the query “humanizer” are GGUF redistributio
   - Watermarking was more resilient (GPT-2 XL: 100.0% → 57.2% at the same setting).
 
   These figures are for 2023 detectors and 2023 models. They are not measurements of GPTZero Model 5.0b, and this survey did not re-run them.
-- **Independently backed?** Yes, as a published paper (Krishna et al., 2023) with open models, code and data. That is independent of this skill’s scans. It is not a contemporary evaluation of GPTZero 5.0b, and it is not evidence that DIPPER would score well on our emails today.
+- **Independently backed?** Yes, as a published paper (Krishna et al., 2023) with open models, code and data. That is independent of this skill’s scans. It is not a contemporary evaluation of GPTZero 5.0b, and it is not evidence that DIPPER would score well on our emails today. Stage 26 later prompted DIPPER-XXL as a humanizer. The supplied record says it produced translationese and broke numbers. It was not given a Stage 26 GPTZero score.
 
 ## 5. contextboxai/vi-humanizer-gemma-4-e2b
 
@@ -78,4 +78,4 @@ A Hub organisation page, [huggingface.co/ai-humanizer](https://huggingface.co/ai
 
 ## Takeaway for this project
 
-Open humanizer weights do already exist on Hugging Face, including two recent 12B Gemma-4 fine-tunes and a well-known 11B paraphraser from 2023. The only GPTZero numbers in this survey that come with a citable paper are DIPPER’s 2023 results, which predate GPTZero Model 5.0b. The current 12B “humanizer” cards report author-run Originality.ai or Pangram checks, or they explicitly make no detector claim. None of these sources replaces a scan of our own synthetic emails on GPTZero 5.0b. Stage 25 is that later scan for Smaug-Humanizer and jialinyyzz/humanizer, and it is recorded in the results report. AuthorMist was unusable and was not scanned.
+Open humanizer weights do already exist on Hugging Face, including two recent 12B Gemma-4 fine-tunes and a well-known 11B paraphraser from 2023. The only GPTZero numbers in this survey that come with a citable paper are DIPPER’s 2023 results, which predate GPTZero Model 5.0b. The current 12B “humanizer” cards report author-run Originality.ai or Pangram checks, or they explicitly make no detector claim. None of these sources replaces a scan of our own synthetic emails on GPTZero 5.0b. Stage 25 is that later scan for Smaug-Humanizer and jialinyyzz/humanizer, and it is recorded in the results report. AuthorMist was unusable and was not scanned. Stage 26 did not add a GPTZero score for DIPPER-XXL or gohumanize. The six Stage 26 scans are a separate record.

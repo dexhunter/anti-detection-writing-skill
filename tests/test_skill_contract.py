@@ -183,6 +183,21 @@ class SkillContract(unittest.TestCase):
         snapshot = (ROOT / "studies/reader-dialogue-1/frozen/skill/SKILL.txt").read_bytes()
         self.assertEqual(dialogue["exact_copies"]["frozen/skill/SKILL.txt"], hashlib.sha256(snapshot).hexdigest())
 
+    def test_edit_pass_returns_a_change_list_and_fact_checklist(self):
+        text = SKILL.read_text(encoding="utf-8")
+        write = text.split("## Write and review\n", 1)[1].split("## Measure only when requested\n", 1)[0]
+        self.assertIn("original phrase, the new phrase, and the reason", write)
+        self.assertIn("fact checklist: every fact, number, date, uncertainty, and qualification", write)
+        self.assertIn("stayed small and fact-driven", write)
+        self.assertIn("It is not a detector result.", write)
+        self.assertIn("third-party humanizer bot", write)
+        self.assertIn("Stages 22–23 scored all 30 natural fact-complete variants at 100% AI", write)
+        self.assertIn("pstack `unslop` rewrite", write)
+        self.assertNotIn("retailer", write.lower())
+        _, _, rest = text.partition("## Private retailer and customer-service email\n")
+        email, _, _ = rest.partition("\n## ")
+        self.assertIn("change list and fact checklist in Write and review", email)
+
 
 if __name__ == "__main__":
     unittest.main()

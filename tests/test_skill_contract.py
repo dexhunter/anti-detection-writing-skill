@@ -522,6 +522,12 @@ class SkillContract(unittest.TestCase):
             "rescan of that earlier email stayed at 3% AI",
             "only a title clause",
             "with no human writer",
+            "older email evidence kept",
+            "not this letter's 0.90 character similarity",
+            "Both figures stay",
+            "Stage 41",
+            "two of the recommender's own public posts",
+            "Those email rows stay",
         ):
             self.assertIn(token, section, token)
         self.assertNotIn("word-for-word copying of a human sentence is a technique", section)
@@ -537,6 +543,9 @@ class SkillContract(unittest.TestCase):
         self.assertIn("They are not detector levers.", write)
         self.assertIn("Stage 22 already scored 100% AI on uneven sentence length.", write)
         self.assertIn("Route that part back to a human", write)
+        self.assertIn("not this Levenshtein margin", write)
+        self.assertIn("does not license a whole-text polish", write)
+        self.assertIn("This email note stays beside it", write)
         self.assertNotIn("retailer", write.lower())
         report = (ROOT / "docs/reports/2026-11-17-human-vs-ai-letter.md").read_text(encoding="utf-8")
         for token in (
